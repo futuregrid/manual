@@ -52,25 +52,28 @@ Print
 
 Comments
 -----------------------------------------------------------------
+
+Simple comment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. runblock:: pycon
 
    >>> # this is a comment
 
-Multiline Comment
------------------------------------------------------------------
-.. runblock:: pycon
+Multiline Comment with "
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
 
-   >>> """ 
-   ... this is a multiline coment 
-   ... """
+   """ 
+   this is a multiline coment 
+   """
 
-Multiline Comment
------------------------------------------------------------------
-.. runblock:: pycon
+Multiline Comment with '
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
 
-   >>> '''
-   ... this is a multiline coment
-   ... '''
+   '''
+   this is a multiline coment
+   '''
 
 Variables
 -----------------------------------------------------------------
@@ -194,3 +197,24 @@ github
 ----------------------------------------------------------------------
 
 todo
+
+Excersises
+==================
+
+her is the task i like you to do to reinforce the learning experience once you are done with the tutorial.
+
+#. write a program that uses loops over both x and y coordinates while x is in 1,2,3,4,5 and y is in 5,4,3,2,1 and prints the x and y coordinate
+
+#. write a program that sums up all values in x and y
+
+#. write a program just like the first task but does not print values where x is equal to 2 and y is equal to 4
+
+#. write a function that takes in a word and returns  it in reverse order
+
+#. provide a program that uses dicts
+
+#. read up on classes we will cover this in more detail  next week.
+
+  #.	we will create an icecream machine that produces icecream in with tiny flavor, medium flavor and large flavor. 
+  #.     in addition the icecream cone will be wrapped into some paper  that has an image on it. Images will be Penguin, Apple, Emperor, King
+

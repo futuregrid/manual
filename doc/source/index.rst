@@ -9,7 +9,9 @@ Contents:
 
    contributing
    python
-
+   openstack
+   eucalyptus
+   india
 
 Indices and tables
 ==================

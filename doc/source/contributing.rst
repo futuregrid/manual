@@ -23,6 +23,9 @@ Autorun
 
 https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default
 
-$ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
-$ cd sphinx-contrib/autorun
-$ python setup.py install
+
+::
+
+    $ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
+    $ cd sphinx-contrib/autorun
+    $ python setup.py install
