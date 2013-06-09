@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Eucalyptus on FutureGrid &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.1/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="India on FutureGrid" href="india.html" />
+    <link rel="prev" title="OpenStack" href="openstack.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#account-creation">Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources-overview">Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-your-setup">Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-deployment">Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-into-the-vm">Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vm-network-info">VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-management">Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status-of-deployments">Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Eucalyptus on FutureGrid</a><ul>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li><a class="reference internal" href="#eucalyptus-3">Eucalyptus 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#account-creation">Account Creation</a></li>
+<li><a class="reference internal" href="#resources-overview">Resources Overview</a></li>
+<li><a class="reference internal" href="#testing-your-setup">Testing Your Setup</a></li>
+<li><a class="reference internal" href="#image-deployment">Image Deployment</a></li>
+<li><a class="reference internal" href="#logging-into-the-vm">Logging Into the VM</a></li>
+<li><a class="reference internal" href="#vm-network-info">VM Network Info</a></li>
+<li><a class="reference internal" href="#image-management">Image Management</a></li>
+<li><a class="reference internal" href="#status-of-deployments">Status of Deployments</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="openstack.html"
+         title="previous chapter">&laquo; OpenStack</a></li>
+  <li><a href="india.html"
+         title="next chapter">India on  FutureGrid &raquo;</a></li>
+            
+            
+              <li>
+  <a href="_sources/eucalyptus.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" style="margin-bottom:-3px;" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="eucalyptus-on-futuregrid">
+<h1>Eucalyptus on FutureGrid<a class="headerlink" href="#eucalyptus-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Eucalyptus is a software platform that implements
+<a class="reference external" href="http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_Service_.28IaaS.29">IaaS-style</a>
+cloud computing. Eucalyptus provides an Amazon Web Services
+(<a class="reference external" href="http://aws.amazon.com/">AWS</a>) complaint EC2 based web service
+interface for interacting with the Cloud service. Additionally,
+Eucalyptus provides services such as the AWS Complaint Walrus and a user
+interface for managing users and images. The aim of this tutorial is to
+give users an introduction of how to interact with Eucalyptus using the
+Eucalyptus EC2 Interface
+(<a class="reference external" href="https://launchpad.net/euca2ools">Euca2ools</a>). A more detailed
+documentation can be found in the <a class="reference external" href="http://www.eucalyptus.com/eucalyptus-cloud/iaas">Eucalyptus
+Website</a>. A detail
+user guide is also available
+<a class="reference external" href="http://www.eucalyptus.com/sites/all/modules/pubdlcnt/pubdlcnt.php?file=/sites/all/files/docs/latest/ug.pdf&amp;nid=296">here</a>.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Users get access to the Eucalyptus features using the Eucalyptus EC2
+Interface, which is only available for GNU/Linux platforms. Therefore,
+the users will require a machine with a GNU/Linux installed on it.</p>
+<div class="section" id="eucalyptus-3">
+<h3>Eucalyptus 3<a class="headerlink" href="#eucalyptus-3" title="Permalink to this headline">¶</a></h3>
+<p>As of May 15, 2012, FutureGrid is using <a class="reference external" href="http://www.eucalyptus.com/eucalyptus-cloud/iaas/features">Eucalyptus version
+3</a> which
+requires <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
+2.0.2</a> and python &gt; 2.4
+(available by modules in india and sierra). Make sure to load &#8220;module
+load euca2ools/2.0.2&#8221; before using Eucalyptus. <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
+2.0.2</a> is part of
+Eucalyptus Enterprise package. However, the source is available
+<a class="reference external" href="http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/">here</a>.</p>
+</div>
+</div>
+<div class="section" id="account-creation">
+<h2>Account Creation<a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h2>
+<p>Eucalyptus 3 is now integrated with our LDAP. Each account is created by
+default for all FutureGrid users with valid portal account and project
+affiliation. There is no need apply for accounts.</p>
+<p>Obtaining Credentials</p>
+<ul class="simple">
+<li>Credentials files are created by default and placed in user&#8217;s home
+directory under <em>.futuregrid</em> folder in india and sierra. To leverage
+LDAP group we created separate credentials for each FutureGrid
+project. For instance, if you are part of FutureGrid project number
+100 and 200, there will be two folders (fg100 and fg200) in
+<em>.futuregrid/eucalyptus</em>. Each project folder contains corresponding
+credentials zip files. So fg100:username and fg200:username in
+Eucalyptus are two different identities however tied to the same LDAP
+user. User can also download the credential file from the Eucalyptus
+dashboard in <a class="reference external" href="https://eucalyptus.india.futuregrid.org:8443">india</a>
+and <a class="reference external" href="https://eucalyptus.sierra.futuregrid.org:8443">sierra</a>. To
+login to the dashboard use your FutureGrid project number (in the
+format of <em>fgnumber)</em>as &#8220;Account&#8221; and your portal user name as
+&#8220;User&#8221;. Then use the FutureGrid portal password. (If you download the
+file from the dashboard by default the system will name the file
+euca2-{username}-x509). We are using a slightly different naming
+scheme. The credential file will be found under the menu tab
+<a class="reference external" href="mailto:username&#37;&#52;&#48;fgnumber">username<span>&#64;</span>fgnumber</a>.)</li>
+</ul>
+<div class="line-block">
+<div class="line">NOTICE: Due to an incompatibility problem introduced during the</div>
+</div>
+<p>upgrade to the Eucalyptus 3.1 system, accessing the dashboard of
+Eucalyptus on india is tempararily unavailable. However, your credential
+will be in place so you can execute the later steps of this manual.
+|  On Sierra, the access is still available so you could download the
+credential zip file. Make sure to put it to Sierra first and then set up
+the environment as the following steps.
+|  Please be reminded that the credential for one cluster should/could
+not be used in another.
+|</p>
+<p><a href="#id1"><span class="problematic" id="id2">|image1|</span></a></p>
+<ul>
+<li><p class="first">Find your credential zip file in cd
+$HOME/.futuregrid/eucalyptus/fgprojectnumber</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ unzip euca3-{username}-{cluster}-fgprojectnumber.zip</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Apply the eucarc file:</p>
+<div class="highlight-python"><pre>source eucarc</pre>
+</div>
+</li>
+<li><p class="first">If you want to add Eucalyptus environment variables to your .bashrc
+then, do this: (if you are planning to switch between different cloud
+platforms, it is probably better to use source.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ cat eucarc &gt;&gt; $HOME/.bashrc
+$ source .bashrc</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Install Euca2tools</p>
+<blockquote>
+<div>Older version of euca2ools is not compatible with Eucalyptus 3.
+<a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools 2.0.2</a>
+is part of the Enterprise project so not available for all users.
+However, the source is available
+<a class="reference external" href="http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/files">here</a>.</div></blockquote>
+</div>
+<div class="section" id="resources-overview">
+<h2>Resources Overview<a class="headerlink" href="#resources-overview" title="Permalink to this headline">¶</a></h2>
+<p>Eucalyptus is available to FutureGrid Users on the India and Sierra
+clusters. As we will see later, when we instantiate a Virtual Machine
+(VM) it is needed to select the type of VM Image that we are going to
+use. In this sense, the information of the VM Image types available in
+each cluster is summarized below:</p>
+<div class="highlight-python"><pre>AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
+AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
+AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
+AVAILABILITYZONE    |- c1.medium    0170 / 0171   1   2048     7
+AVAILABILITYZONE    |- m1.large    0091 / 0094   2   5120    10
+AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
+AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20</pre>
+</div>
+<div class="highlight-python"><pre>AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
+AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
+AVAILABILITYZONE    |- m1.small    0051 / 0056   1    256     4
+AVAILABILITYZONE    |- c1.medium    0037 / 0042   1    512     5
+AVAILABILITYZONE    |- m1.large    0012 / 0014   2   1024    10
+AVAILABILITYZONE    |- m1.xlarge    0012 / 0014   2   1024    12
+AVAILABILITYZONE    |- c1.xlarge    0009 / 0014   4   2048    15</pre>
+</div>
+</div>
+<div class="section" id="testing-your-setup">
+<h2>Testing Your Setup<a class="headerlink" href="#testing-your-setup" title="Permalink to this headline">¶</a></h2>
+<p>Use euca-describe-availability-zones to test the setup.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>ssh sierra.futuregrid.org
+Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
+
+Welcome to Sierra.FutureGrid.Org
+
+torque/2.4.8 version 2.4.8 loaded
+moab version 5.4.0 loaded
+
+$ module load euca2ools/2.0.2
+euca2ools version 2.0.2 loaded
+$ euca-version
+euca2ools 2.0.2
+$ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
+$ euca-describe-availability-zones
+AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/</pre>
+</div>
+</div></blockquote>
+<p>Available Images</p>
+<p>List the existing images using euca-describe-images</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-describe-images
+
+IMAGE    emi-8E1C3B69    euca-centos-2012/euca-centos-2012.1.14-x86_64.img.manifest.xml    available    public
+IMAGE    emi-D21D3F6C    euca3/ubuntu-natty.img.manifest.xml    available    public
+IMAGE    emi-1A413C95    centos/centos.5-3.x86-64.img.manifest.xml    available    public
+IMAGE    eki-9F293A6A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public
+IMAGE    emi-0FA13B83    inca/centos5inca3128800784.img.manifest.xml    available    public
+IMAGE    emi-A9D33917    ubuntu/ubuntu.9-04.x86-64.img.manifest.xml    available    public
+IMAGE    eri-D1513DBA    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public
+IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public
+IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public
+IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="image-deployment">
+<h2>Image Deployment<a class="headerlink" href="#image-deployment" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Before deploying a VM, you need to create at least one key pair. This
+key pair will be injected into the VM, allowing you to SSH into the
+instance. This is done using the euca-add-keypair command:</p>
+<div class="highlight-python"><pre>$ euca-add-keypair userkey   &gt; userkey.pem</pre>
+</div>
+</li>
+<li><p class="first">Fix the permissions on the generated private key:</p>
+<div class="highlight-python"><pre>$ chmod 0600 userkey.pem</pre>
+</div>
+</li>
+<li><p class="first">Now you can start a VM using one of the pre-existing images. You need
+the emi-id of the image you want to start. This was listed in the
+output of euca-describe-images command that you saw earlier. Use the
+euca-run-instances command to start the VM:</p>
+<div class="highlight-python"><pre>$ euca-run-instances -k userkey -n 1   emi-0B951139 -t c1.medium
+
+RESERVATION     r-4E730969      archit    archit-default
+INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255</pre>
+</div>
+</li>
+<li><p class="first">The euca-describe-instances command can be used to check the status
+of the request. The following image was assigned an ip address and is
+starting up, as demonstrated by the &#8220;pending&#8221; status:</p>
+<div class="highlight-python"><pre>$ euca-describe-instances
+
+RESERVATION     r-4E730969      archit    default
+INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0
+          m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
+</div>
+</li>
+<li><p class="first">Once started, the status will change to &#8220;running&#8221;:</p>
+<div class="highlight-python"><pre>$ euca-describe-instances
+
+RESERVATION     r-4E730969      archit    default
+INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0
+          m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
+</div>
+</li>
+<li><p class="first">If you need to delete a deployed VM, you can use the
+euca-terminate-instances command.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-terminate-instances i-4FC40839</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="logging-into-the-vm">
+<h2>Logging Into the VM<a class="headerlink" href="#logging-into-the-vm" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Create rules to allow access to the VM over ssh and to allow ping</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">$ euca-authorize -P tcp -p 22 -s 0.0.0.0/0&nbsp;&nbsp; default</div>
+<div class="line-block">
+<div class="line">$ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default</div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">The ssh private key that was generated earlier can now be used to
+login to the VM.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ssh -i userkey.pem root@149.165.146.153
+
+-bash-3.2# uname -a
+
+ Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="vm-network-info">
+<h2>VM Network Info<a class="headerlink" href="#vm-network-info" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">The VM itself is visible from outside using the VM public IP. The
+internal network will show the VM private IP address.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>-bash-3.2# /sbin/ifconfig
+
+eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40
+        inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="image-management">
+<h2>Image Management<a class="headerlink" href="#image-management" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">We will use the example ubuntu 10 image to test uploading images.
+Download the gzipped tar ball.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Uncompress and untar the archive.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ tar zxf ubuntu-12.04-server-cloudimg-amd64.tar.gz</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Bundle the image with a kernel and a ramdisk using the
+euca-bundle-image command. In this example, we will use the xen
+kernel already registered. euca-describe-images returns the kernel
+and ramdisk IDs that we need.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-bundle-image -i   precise-server-cloudimg-amd64.img --kernel eki-78EF12D2 --ramdisk   eri-5BB61255
+
+Checking image
+Tarring image
+Encrypting image
+Splitting image...
+Part:   precise-server-cloudimg-amd64.img.part.0
+Part:   precise-server-cloudimg-amd64.img.part.1
+Part:   precise-server-cloudimg-amd64.img.part.2
+Part:   precise-server-cloudimg-amd64.img.part.3
+Part:   precise-server-cloudimg-amd64.img.part.4
+Part:   precise-server-cloudimg-amd64.img.part.5
+Part:   precise-server-cloudimg-amd64.img.part.6
+Part:   precise-server-cloudimg-amd64.img.part.7
+Part:   precise-server-cloudimg-amd64.img.part.8
+Part:   precise-server-cloudimg-amd64.img.part.9
+Part:   precise-server-cloudimg-amd64.img.part.10
+Part:   precise-server-cloudimg-amd64.img.part.11
+Part:   precise-server-cloudimg-amd64.img.part.12
+Part:   precise-server-cloudimg-amd64.img.part.13
+Part:   precise-server-cloudimg-amd64.img.part.14
+Part:   precise-server-cloudimg-amd64.img.part.15
+Part:   precise-server-cloudimg-amd64.img.part.16
+Generating manifest   /tmp/precise-server-cloudimg-amd64.img.manifest.xml</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Use the generated manifest file to upload the image to Walrus.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-upload-bundle -b ubuntu-image-bucket   -m /tmp/precise-server-cloudimg-amd64.img.manifest.xml
+
+Checking bucket:   ubuntu-image-bucket
+Creating bucket:   ubuntu-image-bucket
+Uploading manifest   file
+Uploading part:   precise-server-cloudimg-amd64.img.part.0
+Uploading part:   precise-server-cloudimg-amd64.img.part.1
+Uploading part:   precise-server-cloudimg-amd64.img.part.2
+Uploading part:   precise-server-cloudimg-amd64.img.part.3
+Uploading part:   precise-server-cloudimg-amd64.img.part.4
+Uploading part:   precise-server-cloudimg-amd64.img.part.5
+Uploading part:   precise-server-cloudimg-amd64.img.part.6
+Uploading part:   precise-server-cloudimg-amd64.img.part.7
+Uploading part:   precise-server-cloudimg-amd64.img.part.8
+Uploading part:   precise-server-cloudimg-amd64.img.part.9
+Uploading part:   precise-server-cloudimg-amd64.img.part.10
+Uploading part:   precise-server-cloudimg-amd64.img.part.11
+Uploading part:   precise-server-cloudimg-amd64.img.part.12
+Uploading part:   precise-server-cloudimg-amd64.img.part.13
+Uploading part:   precise-server-cloudimg-amd64.img.part.14
+Uploading part:   precise-server-cloudimg-amd64.img.part.15
+Uploading part:   precise-server-cloudimg-amd64.img.part.16
+Uploaded image as   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Register the uploaded image.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
+
+IMAGE   emi-FFC3154F</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">The returned image ID can now be used to start instances with
+euca-run-instances as described earlier. euca-describe-images also
+shows the new image now.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-describe-images
+
+IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml archit available public   x86_64 machine eri-5BB61255 eki-78EF12D2
+IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine
+  ...</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">You can also delete your images</p>
+</li>
+</ul>
+</div>
+<div class="section" id="status-of-deployments">
+<h2>Status of Deployments<a class="headerlink" href="#status-of-deployments" title="Permalink to this headline">¶</a></h2>
+<p>At times you may ask if the Eucalyptus systems on FutureGrid are
+operational. You can find this out by visiting</p>
+<div class="line-block">
+<div class="line">a) The Outage page</div>
+</div>
+<p>at&nbsp;<a class="reference external" href="https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds">https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds</a>
+|  b) The Real Time Status monitor
+at&nbsp;<a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&amp;xsl=table.xsl&amp;resourceIds=FutureGrid">http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&amp;xsl=table.xsl&amp;resourceIds=FutureGrid</a>
+|  c) Our Runtime History
+at&nbsp;<a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml">http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml</a></p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

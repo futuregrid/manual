@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>India on FutureGrid &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.1/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Eucalyptus on FutureGrid" href="eucalyptus.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="eucalyptus.html"
+         title="previous chapter">&laquo; Eucalyptus on FutureGrid</a></li>
+            
+            
+              <li>
+  <a href="_sources/india.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" style="margin-bottom:-3px;" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="india-on-futuregrid">
+<h1>India on  FutureGrid<a class="headerlink" href="#india-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<caption>Specifications of Cloud Hardware in FutureGrid we will use</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td>india.futuregrid.org</td>
+<td>sierra.futuregrid.org</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>Indiana University</td>
+<td>San Diego Supercomputer Center</td>
+</tr>
+<tr class="row-odd"><td>Machine Type</td>
+<td>Cluster</td>
+<td>Cluster</td>
+</tr>
+<tr class="row-even"><td>System Type</td>
+<td>IBM iDataPlex dx 360 M2</td>
+<td>IBM&nbsp;iDataPlex&nbsp;dx&nbsp;340</td>
+</tr>
+<tr class="row-odd"><td>CPU type</td>
+<td>Intel Xeon X5550</td>
+<td>Intel&nbsp;Xeon&nbsp;L5420</td>
+</tr>
+<tr class="row-even"><td>Host Name</td>
+<td>india</td>
+<td>sierra</td>
+</tr>
+<tr class="row-odd"><td>CPU Speed</td>
+<td>2.66GHz</td>
+<td>2.5GHz</td>
+</tr>
+<tr class="row-even"><td>Number of CPUs</td>
+<td>256</td>
+<td>168</td>
+</tr>
+<tr class="row-odd"><td>Number of nodes</td>
+<td>128</td>
+<td>84</td>
+</tr>
+<tr class="row-even"><td>RAM</td>
+<td>24 GB DDR3 1333Mhz</td>
+<td>32 GB&nbsp;DDR2-667</td>
+</tr>
+<tr class="row-odd"><td>Total RAM (GB)</td>
+<td>3072</td>
+<td>2688</td>
+</tr>
+<tr class="row-even"><td>Number of cores</td>
+<td>1024</td>
+<td>672</td>
+</tr>
+<tr class="row-odd"><td>Operating System</td>
+<td>Linux</td>
+<td>Linux</td>
+</tr>
+<tr class="row-even"><td>Tflops</td>
+<td>11</td>
+<td>7</td>
+</tr>
+<tr class="row-odd"><td>Disk Size (TB)</td>
+<td>335</td>
+<td>72</td>
+</tr>
+<tr class="row-even"><td>Hard Drives</td>
+<td>3000 GB Internal 7200 RPM SATA Drive</td>
+<td>160 GB Internal 7200 RPM&nbsp;SATA&nbsp;Drive</td>
+</tr>
+<tr class="row-odd"><td>Primary storage shared by all nodes</td>
+<td>NFS  - shared by all nodes</td>
+<td>ZFS filesystem with 76.8 TB raid2 storage and 5.4 TB of raid0 (for scrch)</td>
+</tr>
+<tr class="row-even"><td>Connection configuration</td>
+<td>Mellanox 4x&nbsp;DDR InfiniBand&nbsp;adapters</td>
+<td>Mellanox&nbsp;4x&nbsp;DDR&nbsp;InfiniBand&nbsp;adapters</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
