@@ -6,13 +6,6 @@ TAG=`cat VERSION.txt`
 all:
 	make -f Makefile force
 
-#####################################################################
-# NOVA CLIENT
-######################################################################
-nova:
-	#pip install --upgrade -e git+https://github.com/openstack/python-novaclient.git#egg=python-novaclient
-	pip install --upgrade -e git://github.com/openstack/python-novaclient.git#egg=python-novaclient
-
 ######################################################################
 # GIT INTERFACES
 ######################################################################
@@ -47,18 +40,9 @@ force:
 	make -f Makefile nova
 	make -f Makefile pip
 	pip install -U dist/*.tar.gz
-	#cp bin/cm $(VIRTUAL_ENV)/bin/cm
-	#chmod a+x $(VIRTUAL_ENV)/bin/cm
 
 install:
 	pip install dist/*.tar.gz
-
-test:
-	make -f Makefile clean	
-	make -f Makefile distall
-	pip install --upgrade dist/*.tar.gz
-	fg-cluster
-	fg-local
 
 ######################################################################
 # PYPI
