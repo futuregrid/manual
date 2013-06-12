@@ -12,6 +12,7 @@ Contents:
 
    fgmanual
    
+   part-2
    contributing
    python
    openstack
