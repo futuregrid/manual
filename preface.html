@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Building the Book &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>Preface &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="Just Enough Python for the Cloud" href="python.html" />
-    <link rel="prev" title="USER MANUAL" href="fgmanual.html" />
+    <link rel="next" title="USER MANUAL" href="fgmanual.html" />
+    <link rel="prev" title="Part 1 - FutureGrid Manual" href="part-1-fg.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -66,10 +66,10 @@
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="part-1-fg.html">Part 1 - FutureGrid Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#citation">Citation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">Acknowledgement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">About this Manual</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#citation">Citation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgement">Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#about-this-manual">About this Manual</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fgmanual.html">USER MANUAL</a><ul>
@@ -236,10 +236,10 @@
 <li class="toctree-l2"><a class="reference internal" href="fgmanual.html#id105">FAQ</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Building the Book</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#virtualenv">Virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#theme">Theme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#autorun">Autorun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">Autorun</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">Just Enough Python for the Cloud</a><ul>
@@ -276,10 +276,10 @@
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Building the Book</a><ul>
-<li><a class="reference internal" href="#virtualenv">Virtualenv</a></li>
-<li><a class="reference internal" href="#theme">Theme</a></li>
-<li><a class="reference internal" href="#autorun">Autorun</a></li>
+<li><a class="reference internal" href="#">Preface</a><ul>
+<li><a class="reference internal" href="#citation">Citation</a></li>
+<li><a class="reference internal" href="#acknowledgement">Acknowledgement</a></li>
+<li><a class="reference internal" href="#about-this-manual">About this Manual</a></li>
 </ul>
 </li>
 </ul>
@@ -288,14 +288,14 @@
             
             
               
+  <li><a href="part-1-fg.html"
+         title="previous chapter">&laquo; Part 1 - FutureGrid Manual</a></li>
   <li><a href="fgmanual.html"
-         title="previous chapter">&laquo; USER MANUAL</a></li>
-  <li><a href="python.html"
-         title="next chapter">Just Enough Python for the Cloud &raquo;</a></li>
+         title="next chapter">USER MANUAL &raquo;</a></li>
             
             
               <li>
-  <a href="_sources/contributing.txt"
+  <a href="_sources/preface.txt"
      rel="nofollow">Source</a></li>
             
           </ul>
@@ -315,30 +315,80 @@
 
 <div class="container">
   
-  <div class="section" id="building-the-book">
-<h1>Building the Book<a class="headerlink" href="#building-the-book" title="Permalink to this headline">¶</a></h1>
-<p>Make sure the is no book directory in your home</p>
-<div class="section" id="virtualenv">
-<h2>Virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
-<p>Use virtual env:</p>
-<div class="highlight-python"><pre>cd
-virtualenv book
-source book/bin/activate</pre>
+  <div class="section" id="preface">
+<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h1>
+<p>FutureGrid is a project led by Indiana University and funded by the
+National Science Foundation (NSF) to develop a high-performance grid
+test bed that will allow scientists to collaboratively develop and test
+innovative approaches to parallel, grid, and cloud computing.
+&nbsp;FutureGrid will provide the infrastructure to researchers that allows
+them to perform their own computational experiments using distributed
+systems. The goal is to make it easier for scientists to conduct such
+experiments in a transparent manner.</p>
+<p>FutureGrid users will be able to deploy their own hardware and software
+configurations on a public/private cloud, and run their experiments.
+They will be able to save their configurations and execute their
+experiments using the provided tools. The FutureGrid test bed is
+composed of a high-speed network connecting distributed clusters of high
+performance computers. FutureGrid will employ virtualization technology
+that will allow the test bed to support a wide range of operating
+systems.</p>
+<p>The NSF awarded $10.1 million to enable joint development of
+FutureGrid through a partnership of Indiana University, Purdue
+University, University of California - San Diego, University of
+Chicago/Argonne National Labs, University of Florida, University of
+Southern California, University of Texas, and the Center for Information
+Services and High Performance Computing at Technische Universität
+Dresden. The principal investigator is Dr. Geoffrey C. Fox, Director of
+the&nbsp;<a class="reference external" href="http://pti.iu.edu/dsc">Digital Science Center</a>&nbsp;at the
+IU&nbsp;<a class="reference external" href="http://pti.iu.edu/">Pervasive Technology Institute</a>.</p>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>If you use FutureGrid, we ask you kindly to include the following
+reference in your papers:</p>
+<p><a class="reference external" href="https://portal.futuregrid.org/biblio/author/11">Fox, G.</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/1">G. von
+Laszewski</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/61">J.
+Diaz</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/3">K.
+Keahey</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/18">J.
+Fortes</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/43">R.
+Figueiredo</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/24">S.
+Smallen</a>,&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/16">W.
+Smith</a>, and&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/author/17">A.
+Grimshaw</a>,&nbsp;&#8221;<a class="reference external" href="https://portal.futuregrid.org/references/futuregrid-recon-figurable-testbed-cloud-hpc-and-grid-computing">FutureGrid
+- a reconfigurable testbed for Cloud, HPC and Grid
+Computing</a>&#8221;,&nbsp;Contemporary
+High Performance Computing: From Petascale toward Exascale, April, 2013.
+Editor J.
+Vetter.&nbsp;Download:&nbsp;<a class="reference external" href="https://portal.futuregrid.org/biblio/view/2034">vonLaszewski-fg-bookchapter.pdf</a></p>
 </div>
+<div class="section" id="acknowledgement">
+<h2>Acknowledgement<a class="headerlink" href="#acknowledgement" title="Permalink to this headline">¶</a></h2>
+<p>The FutureGrid project is funded by the National Science Foundation
+(NSF) and is led by&nbsp;<a class="reference external" href="http://www.iub.edu/">Indiana
+University</a>&nbsp;with&nbsp;<a class="reference external" href="http://www.uchicago.edu/index.shtml">University of
+Chicago</a>,&nbsp;<a class="reference external" href="http://www.ufl.edu/">University of
+Florida</a>,&nbsp;<a class="reference external" href="http://www.sdsc.edu/">San Diego Supercomputing
+Center</a>,&nbsp;<a class="reference external" href="http://www.tacc.utexas.edu/">Texas Advanced Computing
+Center</a>,&nbsp;<a class="reference external" href="http://www.virginia.edu/">University of
+Virginia</a>,<a class="reference external" href="http://www.utk.edu/">University of
+Tennessee</a>,&nbsp;<a class="reference external" href="http://www3.isi.edu/home">University of Southern
+California</a>,&nbsp;<a class="reference external" href="http://tu-dresden.de/">Dresden</a>,&nbsp;<a class="reference external" href="http://www.purdue.edu/">Purdue
+University</a>, and&nbsp;<a class="reference external" href="https://www.grid5000.fr/mediawiki/index.php/Grid5000:Home">Grid
+5000</a>&nbsp;as
+partner sites. This material is based upon work supported in part by the
+National Science Foundation under Grant No. 0910812.</p>
 </div>
-<div class="section" id="theme">
-<h2>Theme<a class="headerlink" href="#theme" title="Permalink to this headline">¶</a></h2>
-<p>To build this book make sure you install the following module:</p>
-<div class="highlight-python"><pre>pip install sphinx_bootstrap_theme</pre>
-</div>
-</div>
-<div class="section" id="autorun">
-<h2>Autorun<a class="headerlink" href="#autorun" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default">https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default</a></p>
-<div class="highlight-python"><pre>$ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
-$ cd sphinx-contrib/autorun
-$ python setup.py install</pre>
-</div>
+<div class="section" id="about-this-manual">
+<h2>About this Manual<a class="headerlink" href="#about-this-manual" title="Permalink to this headline">¶</a></h2>
+<p>This manual is the primary location of&nbsp; information about FutureGrid
+software and services. All FG team members update this manual regularly.</p>
+<p>We would also like to <strong>ask the community to help</strong>.&nbsp; If
+you would enjoy contributing sections and chapters as part of your
+community activities, please contact Gregor
+at&nbsp;<a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a>. We welcome
+additional contributors and editors to this manual.</p>
+<p>Enjoy using and expanding the FutureGrid User Manual!</p>
+<p>Gregor von Laszewski</p>
 </div>
 </div>
 
