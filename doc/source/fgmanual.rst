@@ -41,8 +41,8 @@ part by the National Science Foundation under Grant No. 0910812.
 Preface
 =======
 
-| 
-|  FutureGrid is a project led by Indiana University and funded by the
+
+ FutureGrid is a project led by Indiana University and funded by the
 National Science Foundation (NSF) to develop a high-performance grid
 test bed that will allow scientists to collaboratively develop and test
 innovative approaches to parallel, grid, and cloud computing.
@@ -60,7 +60,7 @@ performance computers. FutureGrid will employ virtualization technology
 that will allow the test bed to support a wide range of operating
 systems.
 
-| The NSF awarded $10.1 million to enable joint development of
+The NSF awarded $10.1 million to enable joint development of
 FutureGrid through a partnership of Indiana University, Purdue
 University, University of California - San Diego, University of
 Chicago/Argonne National Labs, University of Florida, University of
@@ -69,7 +69,7 @@ Services and High Performance Computing at Technische Universität
 Dresden. The principal investigator is Dr. Geoffrey C. Fox, Director of
 the \ `Digital Science Center <http://pti.iu.edu/dsc>`__ at the
 IU \ `Pervasive Technology Institute <http://pti.iu.edu/>`__.
-|   
+  
 
 Citation
 --------
@@ -112,10 +112,10 @@ National Science Foundation under Grant No. 0910812.
 
 About this Manual
 
-| This manual is the primary location of  information about FutureGrid
+This manual is the primary location of  information about FutureGrid
 software and services. All FG team members update this manual regularly.
-| 
-|  We would also like to\ ***ask the community to***\ ***help***\ ​.  If
+
+ We would also like to\ ***ask the community to***\ ***help***\ ​.  If
 you would enjoy contributing sections and chapters as part of your
 community activities, please contact Gregor
 at \ `laszewski@gmail.com <mailto:laszewski@gmail.com>`__. We welcome
@@ -123,8 +123,8 @@ additional contributors and editors to this manual.
 
 Enjoy using and expanding the FutureGrid User Manual!
 
-| Gregor von Laszewski
-|   
+Gregor von Laszewski
+  
 
  
 
@@ -168,12 +168,12 @@ in the FutureGrid project include U. Chicago, U. Florida, San Diego
 Supercomputer Center - UC San Diego, U. Southern California, U. Texas at
 Austin, U. Tennessee at Knoxville, U. of Virginia, and T-U. Dresden.*
 
-| -Or the shorter version-
-|   
+-Or the shorter version-
+  
 
-| *This material is based upon work supported in part by the National
+*This material is based upon work supported in part by the National
 Science Foundation under Grant No. 0910812.*
-|   
+  
 
 |image2|
 
@@ -208,12 +208,12 @@ test-bed, named FutureGrid, to the research community, together with
 user support for third-party researchers conducting experiments on
 FutureGrid.
 
-| The test-bed makes it possible for researchers to conduct experiments
+The test-bed makes it possible for researchers to conduct experiments
 by submitting an experiment plan that is then executed via a
 sophisticated workflow engine, preserving the provenance and state
 information necessary to allow reproducibility.
-| 
-|  The test-bed also includes a geographically distributed set of
+
+ The test-bed also includes a geographically distributed set of
 heterogeneous computing systems, a data management system that holds
 both metadata and a growing library of software images, and a dedicated
 network allowing isolatable, secure experiments. The test-bed supports
@@ -224,7 +224,7 @@ create an easy-to-use software environment that supports the
 instantiation, execution, and recording of grid and cloud computing
 experiments.
 
-| One of the goals of the project is to understand the behavior and
+One of the goals of the project is to understand the behavior and
 utility of cloud computing approaches. Researchers are able to measure
 the overhead of cloud technology by requesting linked experiments on
 both virtual and bare-metal systems. FutureGrid enables US scientists to
@@ -241,14 +241,14 @@ include direct interaction with the network control layer. Another
 component of the project is the development of benchmarks appropriate
 for grid computing, including workflow-based benchmarks derived from
 applications in astronomy, bioinformatics, seismology, and physics.
-| 
-|  The FutureGrid forms part of NSF's high-performance
+
+ The FutureGrid forms part of NSF's high-performance
 cyberinfrastructure. It increases the capability of the XSEDE to support
 innovative computer science research requiring access to lower levels of
 the grid software stack, the networking software stack, and to
 virtualization and workflow orchestration tools.
-| 
-|  Education and broader outreach activities include the dissemination
+
+ Education and broader outreach activities include the dissemination
 of curricular materials on the use of FutureGrid, pre-packaged
 FutureGrid virtual machines configured for particular course modules,
 and educational modules based on virtual appliance networks and social
@@ -282,181 +282,9 @@ Supercomputer Center - UC San Diego, U. Southern California, U. Texas at
 Austin, U. Tennessee at Knoxville, U. of Virginia, Purdue I., and T-U.
 Dresden. 
 
- 
-
-Table of Contents
-=================
-
-The manual is also available as a `single HTML
-page <https://portal.futuregrid.org/book/export/html/104>`__.
-
--  `User Manual </manual>`__
-
-   -  `Preface </preface>`__
-
-      -  `Sponsors </sponsors>`__
-
-   -  `About </about>`__
-   -  `Table of Contents </manual/toc>`__
-   -  `Introduction </manual/introduction>`__
-
-      -  `Overview </overview-0>`__
-      -  `Getting Started </manual/gettingstarted>`__
-      -  `Accessing FutureGrid </manual/access>`__
-
-         -  `Account Creation </manual/account-creation>`__
-
-      -  `Help and Support </manual/help-and-support>`__
-      -  `Guide to Using the FutureGrid Portal </manual/portal>`__
-
-   -  `Overview of the Hardware </manual/hardware>`__
-
-      -  `Compute Resources </compute-resources>`__
-      -  `Alamo </hardware/alamo>`__
-      -  `Bravo </hardware/bravo>`__
-      -  `Delta </hardware/delta>`__
-      -  `Foxtrot </hardware/foxtrot>`__
-      -  `Hotel </hardware/hotel>`__
-      -  `India </hardware/india>`__
-      -  `Sierra </hardware/sierra>`__
-      -  `Xray </hardware/xray>`__
-      -  `Network </network>`__
-
-         -  `FutureGrid Network Impairments Device
-            (NID) </manual/services/network-impairment-device>`__
-
-      -  `Storage </storage>`__
-
-         -  `Using HPSS from FutureGrid </tutorials/hpss>`__
-
-   -  `Status </status>`__
-   -  `Accessing FutureGrid resources via
-      SSH </manual/accessing-futuregrid-resources-ssh>`__
-   -  `HPC Services </manual/hpcservices>`__
-
-      -  `Using HPC Services on FutureGrid </tutorials/hpc>`__
-      -  `Log in to HPC services </manual/user/login>`__
-
-         -  `Generating SSH Keys for FutureGrid
-            Access </generating-ssh-keys-futuregrid-access>`__
-
-      -  `Working with HPC Job Services </working-hpc-job-services>`__
-      -  `Analyzing Code Performance </manual/hpc/performance>`__
-
-         -  `PAPI </manual/papi>`__
-         -  `Vampir </manual/performance/vampir>`__
-         -  `VampirTrace </manual/vampir/trace>`__
-
-      -  `Official HPCC Results from the Acceptance
-         Tests </manual/official-hpcc-results-acceptance-tests>`__
-      -  `Foxtrot </manual/foxtrot>`__
-      -  `India </manual/india>`__
-      -  `Sierra </manual/sierra>`__
-      -  `Xray </manual/xray>`__
-      -  `Alamo </manual/software/alamo>`__
-      -  `Delta </manual/delta>`__
-
-         -  `Running MPI/GPU program on the Delta
-            cluster </manual/running-mpigpu-program-delta-cluster>`__
-         -  `Running programs on a single
-            GPU </manual/gpu/running-programs-single-gpu>`__
-         -  `C-means clustering using CUDA on
-            GPU </contrib/c-means-clustering-using-cuda-gpu>`__
-
-      -  `ScaleMP vSMP </manual/scalemp-vsmp>`__
-
-   -  `IaaS - Infrastructure as a Service </manual/iaas>`__
-
-      -  `Using IaaS Clouds on FutureGrid </using/clouds>`__
-      -  `Using Nimbus on FutureGrid </tutorials/nimbus>`__
-
-         -  `Cloud Quick Start : Launch a VM with 1
-            command </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
-         -  `FutureGrid Tutorial NM2 - Nimbus One-Click Cluster
-            Guide </tutorials/nm2>`__
-
-      -  `Using Eucalyptus on FutureGrid </tutorials/eucalyptus>`__
-      -  `Using OpenStack on
-         FutureGrid </manual/using-openstack-futuregrid>`__
-      -  `Image Management and Rain on
-         FutureGrid </image-management-and-rain-futuregrid>`__
-
-         -  `Generate and Register an OS Image on FutureGrid using the
-            FG
-            Shell </manual/generate-and-register-os-image-futuregrid-using-fg-shell>`__
-         -  `FutureGrid Standalone Image
-            Repository </futuregrid-standalone-image-repository>`__
-         -  `Manual Image Customization </manually-customize-image>`__
-         -  `RAIN Manual Pages </rain-manual-pages>`__
-
-            -  `fg-repo </man/fg-repo>`__
-            -  `fg-rain </man/fg-rain>`__
-            -  `fg-generate </man/fg-generate>`__
-            -  `fg-register </man/fg-register>`__
-            -  `fg-shell </man/fg-shell>`__
-            -  `fg-portal-manage </man/fg-portal-manage>`__
-
-      -  `ViNe </vine>`__
-      -  `OpenNebula 2.0 Tutorial </tutorials/opennebula>`__
-
-   -  `PaaS - Platform as a Service </manual/paas>`__
-
-      -  `Using Map/Reduce in FutureGrid </using/mapreduce>`__
-      -  `Running Hadoop as a Batch Job using
-         MyHadoop </tutorials/running-hadoop-batch-job-using-myhadoop>`__
-      -  `Using SalsaHadoop on
-         FutureGrid </using-salsahadoop-futuregrid>`__
-      -  `Hadoop Blast </manual/hadoop-blast>`__
-      -  `Hadoop WordCount </manual/hadoop-wordcount>`__
-      -  `Using Twister on FutureGrid </manual/twister>`__
-      -  `Twister Blast </manual/twister-blast>`__
-      -  `Eucalyptus and Twister on
-         FutureGrid </tutorials/eucalyptus-and-twister-futuregrid>`__
-      -  `Using Pegasus on FutureGrid </manual/pegasus>`__
-
-   -  `Management Services </manual/management-services>`__
-
-      -  `Nimbus Phantom </nimbus-phantom>`__
-      -  `Precip - Pegasus Repeatable Experiments for the Cloud in
-         Python </manual/precip>`__
-      -  `cloudinit.d </cloudinitd>`__
-
-   -  `Grid Services </manual/grid-services>`__
-
-      -  `Unicore </manual/unicore>`__
-      -  `Genesis II </genesisii>`__
-      -  `SAGA supporting Distributed Applications on Grids, Clouds on
-         FutureGrid </contrib/saga-supporting-distributed-applications-grids-clouds-futuregrid>`__
-      -  `EMI Unicore Tutorial </contrib/emi-unicore-tutorial>`__
-
-   -  `Tutorials </tutorials>`__
-
-      -  `FutureGrid Grid Appliance for Nimbus and
-         Eucalyptus </tutorials/ga6old>`__
-      -  `One-click Hadoop WordCount on Eucalyptus
-         FutureGrid </tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid>`__
-      -  `One-click Twister K-means on Eucalyptus
-         FutureGrid </tutorials/one-click-twister-k-means-eucalyptus-futuregrid>`__
-      -  `Register Virtual Box Image on
-         OpenStack </register-virtual-box-image-openstack>`__
-
-   -  `Virtual Appliances </community/appliances>`__
-   -  `Development Projects </development-projects>`__
-   -  `Appendix </appendix>`__
-
-      -  `Upgrading Nimbus On FG
-         clusters </upgrading-nimbus-fg-clusters>`__
-
-   -  `FAQ </node/2477>`__
-   -  `FAQ </manual/faq>`__
 
 Introduction
 ============
-
-Overview
-========
-
- 
 
 The \ `FutureGrid
 Project <https://portal.futuregrid.org/award-abstract-091081-futuregrid-experimental-high-performance-grid-test-bed-0>`__ allows
@@ -484,56 +312,52 @@ request is necessary for accessing Eucalyptus and OpenStack . To find
 out how the machines are divided, we provide a convenient \ `status
 monitor <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__.
 
-**Nimbus**
-~~~~~~~~~~
+Nimbus:
+    Nimbus is an open-source service package that allows users to run
+    virtual machines on FutureGrid hardware. You can easily upload
+    your own VM image or customize an image provided by us. When you
+    boot a VM, it is assigned a public IP address (and/or an optional
+    private address); you are authorized to log in as root via
+    SSH. You can then run services, perform computations, and
+    configure the system as desired. After using and configuring the
+    VM, you can save the modified VM image back to the Nimbus image
+    repository. Users can find more details in the \ `Nimbus tutorial
+    <https://portal.futuregrid.org/tutorials/nimbus>`__.
 
-Nimbus is an open-source service package that allows users to run
-virtual machines on FutureGrid hardware. You can easily upload your own
-VM image or customize an image provided by us. When you boot a VM, it is
-assigned a public IP address (and/or an optional private address); you
-are authorized to log in as root via SSH. You can then run services,
-perform computations, and configure the system as desired. After using
-and configuring the VM, you can save the modified VM image back to the
-Nimbus image repository. Users can find more details in the \ `Nimbus
-tutorial <https://portal.futuregrid.org/tutorials/nimbus>`__.
+Eucalyptus:
+    Eucalyptus is an open-source software platform that implements
+    IaaS-style cloud computing. Eucalyptus provides a Amazon Web
+    Services (AWS) compliant EC2-based web service interface for
+    interacting with the Cloud service. Eucalyptus also provides
+    services such as the AWS-compliant Walrus and a user interface for
+    managing users and images.  Users can find more details in the \
+    `Eucalyptus tutorial
+    <https://portal.futuregrid.org/tutorials/eucalyptus>`__.
 
-Eucalyptus
-~~~~~~~~~~
+OpenStack:
+    OpenStack is a collection of open source components to deliver
+    public and private clouds. These components currently include
+    OpenStack Compute (called Nova), OpenStack Object Storage (called
+    Swift), and OpenStack Image Service (called Glance). OpenStack is
+    a new effort and has received considerable momentum due to its
+    openness and the support of companies. Users can find more details
+    in the `OpenStack Tutorial
+    <https://portal.futuregrid.org/tutorials/openstack>`__.
 
-Eucalyptus is an open-source software platform that implements
-IaaS-style cloud computing. Eucalyptus provides a Amazon Web Services
-(AWS) compliant EC2-based web service interface for interacting with the
-Cloud service. Eucalyptus also provides services such as the
-AWS-compliant Walrus and a user interface for managing users and images.
-Users can find more details in the \ `Eucalyptus
-tutorial <https://portal.futuregrid.org/tutorials/eucalyptus>`__.
-
-OpenStack
-~~~~~~~~~
-
-OpenStack is a collection of open source components to deliver public
-and private clouds. These components currently include OpenStack Compute
-(called Nova), OpenStack Object Storage (called Swift), and OpenStack
-Image Service (called Glance). OpenStack is a new effort and has
-received considerable momentum due to its openness and the support of
-companies. Users can find more details in the
-`OpenStack Tutorial <https://portal.futuregrid.org/tutorials/openstack>`__.
-
-OpenNebula
-~~~~~~~~~~
-
-**Not yet available to the public**, OpenNebula is an open and flexible
-tool that fits into existing data center environments to build any type
-of IaaS Cloud deployment. OpenNebula can be primarily used as a
-virtualization tool to manage your virtual infrastructure in the data
-center or cluster, which is usually referred to as Private Cloud.
-OpenNebula supports Hybrid Cloud to combine local infrastructure with
-public cloud-based infrastructure, enabling highly scalable hosting
-environments. OpenNebula also supports Public Clouds by providing Cloud
-interfaces to expose its functionality for virtual machine, storage, and
-network management. Users can find how to use this software in the
-`OpenNebula
-tutorial <https://portal.futuregrid.org/tutorials/opennebula>`__. 
+OpenNebula:
+    **Not yet available to the public**, OpenNebula is an open and
+    flexible tool that fits into existing data center environments to
+    build any type of IaaS Cloud deployment. OpenNebula can be
+    primarily used as a virtualization tool to manage your virtual
+    infrastructure in the data center or cluster, which is usually
+    referred to as Private Cloud.  OpenNebula supports Hybrid Cloud to
+    combine local infrastructure with public cloud-based
+    infrastructure, enabling highly scalable hosting
+    environments. OpenNebula also supports Public Clouds by providing
+    Cloud interfaces to expose its functionality for virtual machine,
+    storage, and network management. Users can find how to use this
+    software in the `OpenNebula tutorial
+    <https://portal.futuregrid.org/tutorials/opennebula>`__. 
 
 High Performance Computing
 --------------------------
@@ -613,9 +437,9 @@ Dresden."*
 
 If you run out of space you can use a shorter version:
 
-| *"This material is based upon work supported in part by the National
+*"This material is based upon work supported in part by the National
 Science Foundation under Grant No. 0910812."*
-|   
+  
 
 Additionally, you should forward a copy of each publication or
 presentation
@@ -774,11 +598,6 @@ links to our tutorials and our MOOC.
 It will be also easy for you to search for some topics in our search box
 at the top of the Web page.
 
- 
-=
-
- 
--
 
 Accessing FutureGrid
 ====================
@@ -916,8 +735,8 @@ Once you have done that, please go back to this form and complete it.
 After submission, this form will create an e-mail request to FutureGrid.
 The FG administrators may contact you to verify this request.
 
-| Please, make sure you are a member of a valid project.
-|  Project IDs can be found at
+Please, make sure you are a member of a valid project.
+ Project IDs can be found at
 
 -  `https://portal.futuregrid.org/projects <https://portal.futuregrid.org/projects>`__
 
@@ -1009,100 +828,6 @@ submitted can be seen at
 
 -  `https://portal.futuregrid.org/tickets <https://portal.futuregrid.org/tickets>`__
 
- 
-
-FutureGrid Experts Team
------------------------
-
-To facilitate the support of projects, FG has established an expert
-team. Each project will be assigned an expert that can be consulted in
-case of questions or technical issues. If the expert can not answer the
-question, he will consult with other experts. The communication with the
-expert is initially conducted simply via e-mail. In future, we will have
-forums and a dedicated ticket system available that logs interactions
-with these experts. On general topics a forum is used that is monitored
-by the experts. For information that can not be publicly shared please
-use 
-
--  https://portal.futuregrid.org/help
-
-The current team of experts is coordinated by Geoffrey C. Fox. The team
-includes
-
-    -  `Edit </admin/build/views/edit/expert_list?destination=book%2Fexport%2Fhtml%2F104#views-tab-default>`__
-    -  `Export </admin/build/views/export/expert_list>`__
-    -  `Clone </admin/build/views/clone/expert_list>`__
-
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | Firstname                           | Lastname                              | Institution                                                                                                              |
-    +=====================================+=======================================+==========================================================================================================================+
-    | `Andrew </users/ajyounge>`__        | `Younge </users/ajyounge>`__          | `Community Grids Laboratory </users/ajyounge>`__                                                                         |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Gregor </users/gvonlasz>`__        | `von Laszewski </users/gvonlasz>`__   | `Community Grids Laboratory </users/gvonlasz>`__                                                                         |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Xiaoming </users/gaoxm>`__         | `Gao </users/gaoxm>`__                | `Pervasive Technology Institute </users/gaoxm>`__                                                                        |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Javier </users/jdiaz>`__           | `Diaz Montes </users/jdiaz>`__        | `Rutgers Discovery Informatics Institute (RDI2) / NSF Center for Cloud and Autonomic Computing (CAC) </users/jdiaz>`__   |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Geoffrey </users/gcf>`__           | `Fox </users/gcf>`__                  | `Community Grids Laboratory </users/gcf>`__                                                                              |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Zhenhua </users/zhguo>`__          | `Guo </users/zhguo>`__                | `Pervasive Technology Institute </users/zhguo>`__                                                                        |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Tak-Lon </users/taklwu>`__         | `Wu </users/taklwu>`__                | `Pervasive Technology Institute / Community Grids Laboratory </users/taklwu>`__                                          |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Yuduo </users/yuduo>`__            | `Zhou </users/yuduo>`__               | `Pervasive Technology Institute </users/yuduo>`__                                                                        |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Tao </users/taohuang>`__           | `Huang </users/taohuang>`__           | `IU PTI </users/taohuang>`__                                                                                             |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Jonathan </users/jklingin>`__      | `Klinginsmith </users/jklingin>`__    | `School of Informatics </users/jklingin>`__                                                                              |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Thilina </users/thilina>`__        | `Gunarathne </users/thilina>`__       | `Community Grids Laboratory </users/thilina>`__                                                                          |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Saliya </users/sekanaya>`__        | `Ekanayake </users/sekanaya>`__       | `Pervasive Technology Institute </users/sekanaya>`__                                                                     |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Ti </users/leggett>`__             | `Leggett </users/leggett>`__          | `Computation Institute </users/leggett>`__                                                                               |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Judy </users/xqiu>`__              | `Qiu </users/xqiu>`__                 | `School of Informatics and Computing </users/xqiu>`__                                                                    |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Mauricio </users/tsugawa>`__       | `Tsugawa </users/tsugawa>`__          | `University of Florida </users/tsugawa>`__                                                                               |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Jerome </users/jemitche>`__        | `Mitchell </users/jemitche>`__        | `Indiana University </users/jemitche>`__                                                                                 |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Bingjing </users/zhangbj>`__       | `Zhang </users/zhangbj>`__            | `Pervasive Technology Institute </users/zhangbj>`__                                                                      |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Shava </users/ssmallen>`__         | `Smallen </users/ssmallen>`__         | `San Diego Supercomputer Center </users/ssmallen>`__                                                                     |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `David </users/dgignac>`__          | `Gignac </users/dgignac>`__           | `TACC </users/dgignac>`__                                                                                                |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Ryan </users/rhartman>`__          | `Hartman </users/rhartman>`__         | `University Information Technological Services </users/rhartman>`__                                                      |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Yang </users/yangruan>`__          | `Ruan </users/yangruan>`__            | `Pervasive Technology Institute </users/yangruan>`__                                                                     |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Fugang </users/fuwang>`__          | `Wang </users/fuwang>`__              | `Community Grids Lab at the Pervasive Technology Institute </users/fuwang>`__                                            |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Koji </users/ktanaka>`__           | `Tanaka </users/ktanaka>`__           | `Community Grids Laboratory </users/ktanaka>`__                                                                          |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Hyungro </users/hrlee>`__          | `Lee </users/hrlee>`__                | `Community Grids Laboratory </users/hrlee>`__                                                                            |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Gary </users/gmiksik>`__           | `Miksik </users/gmiksik>`__           | `Pervasive Technology Institute / Digital Science Center/ Community Grids Laboratory </users/gmiksik>`__                 |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Jun </users/junwang>`__            | `Wang </users/junwang>`__             | `PTI </users/junwang>`__                                                                                                 |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Barbara Ann </users/baoleary>`__   | `O'Leary </users/baoleary>`__         | `Pervasive Technology Institute </users/baoleary>`__                                                                     |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-    | `Carrie </users/cmarnold>`__        | `Arnold </users/cmarnold>`__          | `Texas Advanced Computing Center </users/cmarnold>`__                                                                    |
-    +-------------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------+
-
- 
-
-Responsibilities of an expert include
-
--  help projects through the application process if contacted 
--  help on technical questions related to FG services
--  help creating manual pages from the information they have been asked
-   by FG users
--  help on gathering results from the projects
--  help on establishing a web presence of the project on the FG Web site
 
 Training and Education
 ----------------------
@@ -1229,16 +954,13 @@ Please see `this
 FAQ <https://portal.futuregrid.org/faq/how-uploadattach-file-page>`__
 for instructions on file upload.
 
-Overview of the Hardware
+Hardware
 ========================
 
- 
+These are the current resources available in FutureGrid. 
 
-These are the current resources available in FutureGrid. More detailed
-information is provided
-`here <https://portal.futuregrid.org/manual/hardware>`__.
-
-**Compute Resources**
+Compute Resources
+--------------------------------------------------
 
 +----------------------------------------------------------------+---------------------------+---------------+--------------+---------------+--------------+---------------+--------------------+------------+
 | **Name**                                                       | **System Type**           | **# Nodes**   | **# CPUS**   | **# Cores**   | **TFLOPS**   | **RAM (GB**   | **Storage (TB)**   | **Site**   |
@@ -1263,7 +985,8 @@ information is provided
 |                                                                |                           |               |              |               |              |               |  8.0 (HDD)         |            |
 +----------------------------------------------------------------+---------------------------+---------------+--------------+---------------+--------------+---------------+--------------------+------------+
 
-**Storage Resources**
+Storage Resources
+--------------------------------------------------
 
 +-------------------+------------------------+-------------------+------------+
 | **System Type**   | **Capacity (TB)**      | **File System**   | **Site**   |
@@ -1417,14 +1140,11 @@ Ethernet only (Blade Network Technologies & Force10 switches)
 Alamo
 =====
 
-| **ALAMO**
-|  *​Texas Advanced Computing Center*
-| 
-|  Alamo consists of 96 nodes with dual Intel X5550 processors and 1152
+*Texas Advanced Computing Center*
+
+Alamo consists of 96 nodes with dual Intel X5550 processors and 1152
 GB of memory. Following are detailed specifications for Alamo.
-| 
-|  SPECIFICATIONS
-| 
+
 
 +----------------------------------------+---------------------------------------+
 | Machine Type                           | Cluster                               |
@@ -1462,19 +1182,15 @@ GB of memory. Following are detailed specifications for Alamo.
 |                                        |                                       |
 +----------------------------------------+---------------------------------------+
 
-| 
 
 Bravo
 =====
 
-| **BRAVO**
-|  *​Indiana University, Bloomington*
-| 
-|  Bravo consists of 16 nodes with dual Intel Xeon E5620 processors and
+*​Indiana University, Bloomington*
+
+Bravo consists of 16 nodes with dual Intel Xeon E5620 processors and
 192 GB of memory. Following are detailed specifications for Bravo:
-| 
-|  SPECIFICATIONS
-| 
+
 
 +----------------------------------------+---------------------------------------+
 | Machine Type                           | Cluster                               |
@@ -1515,15 +1231,11 @@ bravo. <https://portal.futuregrid.org/manual/bravo>`__
 Delta
 =====
 
-| **DELTA**
-| 
-|  *​Indiana University, Bloomington*
-| 
-|  Delta consists of 16 nodes with two core Intel X5560 processors and
+*​Indiana University, Bloomington*
+ 
+Delta consists of 16 nodes with two core Intel X5560 processors and
 192 GB of memory. Each node supports two nVIDIA Tesla C2070 GPUs.
-| 
-|  SPECIFICATIONS
-| 
+ 
 
 +----------------------------------------+-----------------------------------+
 | Machine Type                           | Cluster                           |
@@ -1571,24 +1283,16 @@ Delta
 | Primary storage, shared by all nodes   | NFS                               |
 +----------------------------------------+-----------------------------------+
 
-| 
-| 
-|  For more, see the `DELTA GPU User
-Manual <https://portal.futuregrid.org/manual/delta%20%20>`__.
-| 
-| 
-
+ 
+ 
 Foxtrot
 =======
 
-| **FOXTROT**
-|  *​University of Florida, Gainesville*
-| 
-|  Foxtrot consists of 32 nodes with dual Intel X5520 processors and 768
+*​University of Florida, Gainesville*
+ 
+Foxtrot consists of 32 nodes with dual Intel X5520 processors and 768
 GB of memory. Following are detailed specifications for Foxtrot.
-| 
-|  SPECIFICATIONS
-
+ 
 +----------------------------------------+---------------------------------------+
 | Machine Type                           | Cluster                               |
 +----------------------------------------+---------------------------------------+
@@ -1622,19 +1326,15 @@ GB of memory. Following are detailed specifications for Foxtrot.
 |                                        |                                       |
 +----------------------------------------+---------------------------------------+
 
-| 
 
 Hotel
 =====
 
-| **HOTEL**
-|  *​University of Illinois, Chicago*
-| 
-|  Hotel consists of 84 nodes with dual Intel X5550 processors and 2016
+*​University of Illinois, Chicago*
+ 
+Hotel consists of 84 nodes with dual Intel X5550 processors and 2016
 GB of memory. Following are detailed specifications for Hotel.
-| 
-|  SPECIFICATIONS
-| 
+ 
 
 +----------------------------------------+---------------------------------------+
 | Machine Type                           | Cluster                               |
@@ -1672,20 +1372,16 @@ GB of memory. Following are detailed specifications for Hotel.
 |                                        |                                       |
 +----------------------------------------+---------------------------------------+
 
-| 
+
 
 India
 =====
 
-| **INDIA**
-|  *​Indiana University, Bloomington*
-| 
-|  India consists of 128 nodes with dual Intel X5550 processors and 24
-GB of memory. Following are detailed specifications for India.
-| 
-|  SPECIFICATIONS
-| 
+*​Indiana University, Bloomington*
 
+India consists of 128 nodes with dual Intel X5550 processors and 24
+GB of memory. Following are detailed specifications for India.
+ 
 +----------------------------------------+----------------------------------------+
 | Machine Type                           | Cluster                                |
 +----------------------------------------+----------------------------------------+
@@ -1726,14 +1422,11 @@ GB of memory. Following are detailed specifications for India.
 Sierra
 ======
 
-| **SIERRA**
-|  *San Diego Supercomputer Center*
-| 
-|  Sierra consists of 84 nodes with dual Intel L5420 processors and 2688
+*San Diego Supercomputer Center*
+ 
+Sierra consists of 84 nodes with dual Intel L5420 processors and 2688
 GB of memory. Following are detailed specifications for Sierra.
-| 
-|  SPECIFICATIONS
-| 
+ 
 
 +----------------------------------------+-------------------------------------------------------------------------------+
 | Machine Type                           | Cluster                                                                       |
@@ -1771,19 +1464,16 @@ GB of memory. Following are detailed specifications for Sierra.
 |                                        |                                                                               |
 +----------------------------------------+-------------------------------------------------------------------------------+
 
-| 
+ 
 
 Xray
 ====
 
-| **XRAY **
-|  *​Indiana University, Bloomington*
-| 
-|  Xray consists of a single node with AMD OPteron 2378 processor and
+*​Indiana University, Bloomington*
+ 
+Xray consists of a single node with AMD OPteron 2378 processor and
 1344 GB of memory. Following are detailed specifications for Xray.
-| 
-|  SPECIFICATIONS
-| 
+ 
 
 +----------------------------------------+---------------------------------+
 | Machine Type                           | Cluster                         |
@@ -1821,32 +1511,32 @@ Xray
 |                                        |                                 |
 +----------------------------------------+---------------------------------+
 
-| 
+ 
 
 Network
 =======
 
-| The FutureGrid network provides for connectivity among FutureGrid
+The FutureGrid network provides for connectivity among FutureGrid
 participants, and network access to the Network Impairments Device
 (NID).  Five participants connect through a variety of network providers
 (see Figure 1).
-|   
+ 
 
-| |image6|
-|  *Figure 1:  Diagram of FutureGrid Network*
-|   
-|  FutureGrid partners with XSEDE to allow participants of each to
+|image6|
+*Figure 1:  Diagram of FutureGrid Network*
+ 
+FutureGrid partners with XSEDE to allow participants of each to
 utilize the resources of both networks. Through interconnects at the
 Indiana Gigapop, Internet2 and NLR extend access to FutureGrid resources
 to researchers nationally.
-|   
-|  FutureGrid deployed a Juniper EX8208 at the Core in Chicago’s
+ 
+FutureGrid deployed a Juniper EX8208 at the Core in Chicago’s
 StarLight facility.
-| 
-|  |image7|
-| 
-|  *Figure 2: Juniper EX8208*
-|   
+ 
+|image7|
+ 
+*Figure 2: Juniper EX8208*
+ 
 
 The Juniper EX series provides for Layer2 and Layer3 connectivity. 
 FutureGrid uses the EX to fulfill the network services (i.e.,
@@ -1854,8 +1544,8 @@ interconnectivity and external connectivity). The EX provides a special
 feature labeled ‘firewall based forwarding’, allowing seamless
 integration with network impairments.
 
-|  
-|  GlobalNOC at Indiana University provides network engineering
+ 
+GlobalNOC at Indiana University provides network engineering
 services, and the Operations Center provides email and phone support
 24x7. GlobalNOC resources for public wan information can be found at
 `http://noc.futuregrid.org/ <http://noc.futuregrid.org/>`__. Available
@@ -1881,88 +1571,88 @@ tools include:
 -  **`FutureGrid Topology
    Map <http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Topology%20Map>`__**
 
-| As IPv6 test beds are not available at all FutureGrid partner sites,
+As IPv6 test beds are not available at all FutureGrid partner sites,
 early implementation of iPv6 would slow important software development
 work. As a result, current plans call for FutureGrid to continue using
 IPv4. Any change in plans will be noted here.
-| 
-|  Below is further information about networking:
-| 
-|  FutureGrid Core: Juniper EX8200
-|  India; Force10, C-150
-|  Bravo, Delta, Echo; Force10, S60
-|  Sierra: Juniper EX4200
-|  Hotel: EX4200
-|  Dlamo: Dell PowerConnect 6000 Series
-|  Xray: Force10, C-150
-|  foxtrot:
-|  internal network switch: IBM/BLADE Rack Switch G8000
-|  public network switch: Force10 S50
-|  Node NICs: built-in (IBM iDataPlex DX360 M2) dual Intel 82575EB
+ 
+Below is further information about networking:
+ 
+FutureGrid Core: Juniper EX8200
+India; Force10, C-150
+Bravo, Delta, Echo; Force10, S60
+Sierra: Juniper EX4200
+Hotel: EX4200
+Dlamo: Dell PowerConnect 6000 Series
+Xray: Force10, C-150
+foxtrot:
+internal network switch: IBM/BLADE Rack Switch G8000
+public network switch: Force10 S50
+Node NICs: built-in (IBM iDataPlex DX360 M2) dual Intel 82575EB
 Gigabit Network Connection
-|  10Gbps: Myricom Myri-10G Dual-Protocol NIC (available on login node)
-|  Alamo: Dell PowerConnett 6224
-| 
-|  Juniper, EX series
+10Gbps: Myricom Myri-10G Dual-Protocol NIC (available on login node)
+Alamo: Dell PowerConnett 6224
+ 
+Juniper, EX series
 - `https://www.juniper.net/us/en/products-services/switching/ex-series/Force10 <https://www.juniper.net/us/en/products-services/switching/ex-series/Force10>`__ (now
 Dell),
-| 
-|  C Series and S Series:
+ 
+C Series and S Series:
 
 -  `http://www.dell.com/us/enterprise/p/force10-c150/pd <http://www.dell.com/us/enterprise/p/force10-c150/pd>`__ 
 -  `http://www.dell.com/us/enterprise/p/force10-s60/pd <http://www.dell.com/us/enterprise/p/force10-s60/pd>`__
 
-| Dell, PowerConnect
+Dell, PowerConnect
 - `http://www.dell.com/us/enterprise/p/switch-powerconnect <http://www.dell.com/us/enterprise/p/switch-powerconnect>`__
-|  IBM (formerly BNT)
+IBM (formerly BNT)
 - `http://www-03.ibm.com/systems/networking/switches/rack.html <http://www-03.ibm.com/systems/networking/switches/rack.html>`__
-|   
-| 
-|  |image8|
-|  |image9|
-|   
+ 
+ 
+|image8|
+|image9|
+ 
 
 FutureGrid Network Impairments Device (NID)
 ===========================================
 
-| **FutureGrid Network Impairments Device (NID)**
-| 
-|  Researchers on FutureGrid may perodically employ the use of a Spirent
+**FutureGrid Network Impairments Device (NID)**
+ 
+Researchers on FutureGrid may perodically employ the use of a Spirent
 XGEM, a Network Impairments Emulator.  The XGEM allows users to
 accurately create the delays and impairments that occur over live
 production networks for validating and evaluating new products and
 technologies.  The XGEM supports a variety of impairments with the most
 common being delay, packet loss, jitter and re-ordering.
-| 
-|  |image10|
-|  *Figure 1: Spirent XGEM*
-|   
-|  The XGEM contains two blades, each with a 10GE interface.  Traffic
+ 
+|image10|
+*Figure 1: Spirent XGEM*
+ 
+The XGEM contains two blades, each with a 10GE interface.  Traffic
 received on one blade is automatically transmitted on the other blade,
 and vice-versa.  This allows the XGEM to be deployed as a pass-through
 device.  Impairments are applied unidirectionally.  An identical or
 different impairment can be applied in either direction, or
 simultaneously in both directions.
-|   
-|  FutureGrid also utilizes a Juniper EX8208 as the primary network
+ 
+FutureGrid also utilizes a Juniper EX8208 as the primary network
 element between all of the FutureGrid participants.  Juniper’s EX
 platform contains firewall-based forwarding, which allows us to insert
 the XGEM between FutureGrid participants with only software changes (see
 Figure 2).
-| 
-|  |image11|
-|  *Figure 2.  Diagram of FutureGrid Network.*
-|   
-|  The firewall-based forwarding feature can be configured to forward
+ 
+|image11|
+*Figure 2.  Diagram of FutureGrid Network.*
+ 
+The firewall-based forwarding feature can be configured to forward
 traffic unidirectionally or bidirectionally through the XGEM using a
 single IP address or any size subnet.  Only traffic defined by the
 Juniper EX8208 will be impaired, leaving all other traffic between
 FutureGrid participants unaffected.
-|   
-|  This implementation requires traffic to traverse the FutureGrid Core
+ 
+This implementation requires traffic to traverse the FutureGrid Core
 in order to be impaired.  Additional configuration might be required at
 the participants' individual sites for impairments to occur locally.
-|   
+ 
 
 Storage
 =======
@@ -2300,9 +1990,9 @@ Status of FutureGrid services
 Cluster Monitoring
 ~~~~~~~~~~~~~~~~~~
 
-    | Ganglia:
-    | 
-    |  |image14|
+Ganglia:
+ 
+    |image14|
 
      
 
@@ -2344,14 +2034,14 @@ FutureGrid Cloud Metrics
     | Metric system provides an integrated accounting service to view
     cloud usage statistics and graphs regarding the utilization of
     virtual machine (VM) instances.
-    |  |image18|
+    |image18|
 
 System software version info
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     | The version info of the installed system software across
     all FG sites:
-    |  |image19|
+    |image19|
 
 Nimbus Usage Reports
 ~~~~~~~~~~~~~~~~~~~~
@@ -2361,19 +2051,6 @@ graphs of each of the FutureGrid Nimbus deployments.
 
     |image20|
 
- 
-~
-
- 
-~
-
- 
-~
-
- 
-~
-
-     
 
 Accessing FutureGrid resources via SSH
 ======================================
@@ -2462,7 +2139,7 @@ This command requires the interaction of the user.
 
     1. The first question is:
 
-.. code:: rteindent1
+::
 
     Enter file in which to save the key (/home/Javi/.ssh/id_rsa): 
 
@@ -2495,7 +2172,7 @@ Check your ssh key
 Once, you have generated your key, you should have them in the .ssh
 directory
 
-.. code:: rteindent1
+::
 
     $ ls -l ~/.ssh
 
@@ -2523,10 +2200,10 @@ Go ahead and select the ouptut, right click, and copy
 Upload the key to the FutureGrid Portal
 ---------------------------------------
 
-| Click on the button bellow to add your SSH key (Note: The quick link
+Click on the button bellow to add your SSH key (Note: The quick link
 button below only works if you are logged in before visiting this page.
 Otherwise please make sure you login first and REFRESH this page.)
-|  |image24|
+ |image24|
 
 #. If you were logged into the Portal, this button redirects you to a
    page that includes a link Add a public key.
@@ -2641,7 +2318,7 @@ Using HPC Services on FutureGrid
 Accessing Systems
 -----------------
 
-| Several of the clusters that are part of FutureGrid have partitions
+Several of the clusters that are part of FutureGrid have partitions
 that operate as High Performance Computing (HPC) systems. These
 partitions are batch scheduled, are not virtualized, have computer nodes
 with fixed operating systems, and are suitable for running parallel
@@ -2649,8 +2326,8 @@ applications. FutureGrid provides a `list of HPC
 partitions <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
 that currently consists of nodes on Alamo, Hotel, India, Sierra, and
 Xray.
-| 
-|  To access the FutureGrid HPC partitions, you need a FutureGrid
+
+To access the FutureGrid HPC partitions, you need a FutureGrid
 account and an SSH public key you have uploaded to FutureGrid (this
 process is described on our `Getting Started
 page <https://portal.futuregrid.org/gettingstarted>`__). You can then
@@ -2665,11 +2342,11 @@ specifically:
 -  sierra.futuregrid.org
 -  xray.futuregrid.org
 
-| If your FutureGrid username is different from your username on your
+If your FutureGrid username is different from your username on your
 system, you will need to include it in your ssh command: *ssh
 <futuregrid user name>@<system>.futuregrid.org*. You can find out your
 HPC account name by visiting your Portal account page.
-| 
+
 
 Filesystem Layout
 -----------------
@@ -2716,19 +2393,19 @@ To display the list of currently loaded modules:
 
     module list
 
-| It is very important to make sure the proper modules are loaded in the
+It is very important to make sure the proper modules are loaded in the
 environment before you try to use FutureGrid HPC partitions. This
 ensures that your $PATH, $LD\_LIBRARY\_PATH, $LD\_PRELOAD and other
 environment variables are properly set and that you can access the
 programs and libraries you need. Additional information about the
 Modules utility is available via 'man module' on any FutureGrid login
 node.
-|   
+ 
 
 Managing Applications with Torque
 ---------------------------------
 
-| To run any jobs on resources within FutureGrid HPC partitions (single
+To run any jobs on resources within FutureGrid HPC partitions (single
 core, OpenMP or MPI jobs), users must use the job scheduler and a job
 submission script. Users should NOT run jobs on the login or headnodes.
 On FutureGrid machines, the job scheduler is the Torque (a variant of
@@ -2738,12 +2415,12 @@ PBS). To load torque into your environment, execute:
 
     -bash-3.2$ module load torque
 
-| 
-|  To run a serial job, you start by creating a job submission script
+
+To run a serial job, you start by creating a job submission script
 that both describes your job and will be executed on the compute nodes
 by Torque. An example of a job script for India, Sierra, and Alamo that
 runs */bin/hostname* is:
-| 
+
 
 ::
 
@@ -2768,7 +2445,7 @@ above are:
 -  -l: The resources needed by the job (in the case above, 1 node for 20
    minutes)
 
-| Additional information about the options that can be specified in a
+Additional information about the options that can be specified in a
 submit script is available in the qsub manual page via 'man qsub'. Note
 that there are multiple queues available on each FutureGrid system:
 
@@ -2824,7 +2501,7 @@ manual page <http://www.clusterresources.com/torquedocs21/>`__.
 Message Passing Interface (MPI)
 -------------------------------
 
-| The Message Passing Interface Standard (MPI) is a message passing
+The Message Passing Interface Standard (MPI) is a message passing
 library standard based on the consensus of the MPI Forum, which has
 dozens of participating organizations, including vendors, researchers,
 software library developers, and users. The goal of the Message Passing
@@ -2833,28 +2510,28 @@ for message passing that will be widely used for writing message passing
 programs. MPI is the *de facto* standard communication library for
 almost all HPC systems, and is available in a variety of
 implementations.
-| 
-|  For more information, please visit:
+
+For more information, please visit:
 
 -  `http://www.mpi-forum.org/ <http://www.mpi-forum.org/>`__
 -  `http://www.mcs.anl.gov/research/projects/mpi/tutorial/ <http://www.mcs.anl.gov/research/projects/mpi/tutorial/>`__
 
-| 
-|  For more information on OpenMPI, the default MPI distribution on
+
+For more information on OpenMPI, the default MPI distribution on
 FutureGrid, please visit:
 
 -  `http://www.open-mpi.org/ <http://www.open-mpi.org/>`__
 
-| 
+
 
 MPI Libraries
 -------------
 
-| 
-|  The FutureGrid systems that support HPC-style usage have an MPI
+
+The FutureGrid systems that support HPC-style usage have an MPI
 implementation. In most cases, it is OpenMPI-1.4.x compiled with Intel
 11.1 compilers. 
-| 
+
 
 +--------------+-------------------+----------------+--------------------------+-----------------------------+
 | **System**   | **MPI version**   | **Compiler**   | **Infiniband Support**   | **Module**                  |
@@ -2879,11 +2556,11 @@ implementation. In most cases, it is OpenMPI-1.4.x compiled with Intel
 +--------------+-------------------+----------------+--------------------------+-----------------------------+
 
 | 
-|  In cases where the OpenMPI is compiled with the Intel compilers,
+In cases where the OpenMPI is compiled with the Intel compilers,
 loading the OpenMPI module will automatically load the Intel compilers
 as a dependency:
 
-.. code:: rteindent1
+::
 
     -bash-3.2$ module load openmpi
     Intel compiler suite version 11.1/072 loaded
@@ -2894,7 +2571,7 @@ environment variable and the OpenMPI shared library directory to your
 $LD\_LIBRARY\_PATH. This is an important step to ensure MPI applications
 will compile and run successfully. Loading the torque module allows you
 to submit jobs to the scheduler.
-|   
+ 
 
 Compiling MPI Applications
 --------------------------
@@ -2911,7 +2588,7 @@ is accomplished by making the following replacements:
 -  CXX/icpc/g++ with mpicxx
 -  F90/F77/FC/ifort/gfortran with mpif90
 
-| Alternatively, for some codes that require intricate compilation flags
+Alternatively, for some codes that require intricate compilation flags
 and complicated make systems, and where changing compilers is not an
 option, you can edit the compilation/linking options for your codes.
 These options are machine, compiler, and language dependent. To view the
@@ -2920,26 +2597,26 @@ the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
 be taken when using these flags, as dependencies govern the order in
 which they appear in the link line. Should you run into compilation
 errors or problems, please submit a consulting ticket.
-| 
-|  Assuming you have loaded the openmpi module into your environment,
+
+Assuming you have loaded the openmpi module into your environment,
 you can compile a `simple MPI application </tutorials/hpc/ring>`__ as
 easily as executing:
 
-.. code:: rteindent1
+::
 
     -bash-3.2$ mpicc -o ring ring.c
 
-| 
+
 
 Running MPI Applications
 ------------------------
 
-| Once your MPI application is compiled, you run it on the compute nodes
+Once your MPI application is compiled, you run it on the compute nodes
 of a cluster via Torque. An example of an MPI parallel job script for
 India, Sierra, and Alamo that runs the ring application is:
-| 
 
-.. code:: rteindent1
+
+::
 
     #!/bin/bash
 
@@ -2957,7 +2634,7 @@ India, Sierra, and Alamo that runs the ring application is:
     # Typical usage: mpirun -np <number of processes> <executable> <arguments>
     mpirun -np 32 ring -t 1000
 
-| There are two important differences between this script and the submit
+There are two important differences between this script and the submit
 script shown previously. The first is that :ppn=8 is added to the
 request for four nodes. What this does is indicate that your application
 wants to allocate eight virtual processors per node. A virtual processor
@@ -2968,8 +2645,8 @@ from the previous submit script is that it executes mpirun with
 arguments that describe your MPI application. Note that the number of
 processes specified to mpirun is 32—matching the 32 cores allocated by
 Torque.
-| 
-|  A minor difference between this script and the previous one is that
+
+A minor difference between this script and the previous one is that
 the environment variable $PBS\_JOBID is used when creating the stdin and
 stdout files. Torque sets a number of environment variables that you can
 use in your submit script, starting with PBS\_ .
@@ -3043,7 +2720,7 @@ First, you have to generate a key. You do this as follows:
 
 Example:
 
-.. code:: rteindent1
+::
 
     ssh-keygen -t rsa -C johndoe@indiana.edu
 
@@ -3059,11 +2736,11 @@ Example:
 **2. **\ **List the result**
 ----------------------------
 
-| You can find your key under the key location. As we user the .ssh
+You can find your key under the key location. As we user the .ssh
 directory it will be located there. 
-|   
+ 
 
-.. code:: rteindent1
+::
 
     $ls -lisa ~/.ssh
     -rw-------  1 johndoe johndoe        1743 2011-02-10 09:44 id_rsa
@@ -3079,7 +2756,7 @@ In case you need to change your change passphrase, you can simply run
 and input (old and) new passphrases. There is no need to re-generate
 keys.
 
-.. code:: rteindent1
+::
 
     ssh-keygen -p
 
@@ -3119,10 +2796,10 @@ Please follow the instructions given at 
 7. I still can not access FG resources
 --------------------------------------
 
-| In order for you to access FG resources you must be in an active
+In order for you to access FG resources you must be in an active
 project. Please make sure you join a project or create your own while
 applying for one.
-|   
+ 
 
  
 
@@ -3494,7 +3171,7 @@ combination of Fortran77, Fortran (90/95/etc.), C, and C++.
 
 **Representation of Streams by Multiple Files**
 
-| OTF uses a special ASCII data representation to encode its data items
+OTF uses a special ASCII data representation to encode its data items
 with numbers and tokens in hexadecimal code without special prefixes.
 That enables a very powerful format with respect to storage size, human
 readability, and search capabilities on timed event records. In order to
@@ -3512,8 +3189,8 @@ definition file is named {name}.0.def. Events and local definitions are
 placed in files {name}.x.events and {name}.x.defs, where the latter
 files are optional. Snapshots and statistics are placed in files named
 {name}.x.snaps and {name}.x.stats, which are also optional.
-| 
-|  **Note**: Open the master file (\*.otf) to load a trace. When
+
+**Note**: Open the master file (\*.otf) to load a trace. When
 copying, moving, or deleting traces, it is important to take all
 according files into account; otherwise, Vampir will render the whole
 trace invalid! Good practice is to hold all files belonging to one trace
@@ -3836,7 +3513,7 @@ an action that can be reverted by "Undo".
 **The Zoom Toolbar**
 --------------------
 
-| Vampir provides a \ *Zoom Toolbar* that can be used for zooming and
+Vampir provides a \ *Zoom Toolbar* that can be used for zooming and
 navigation in the trace data. It is situated in the upper right corner
 of the *Trace View* window. Of course it is possible to drag and drop it
 as desired. The \ *Zoom Toolbar* offers an overview of the data
@@ -3844,7 +3521,7 @@ displayed in the corresponding charts. The current zoomed area can be
 seen highlighted as a rectangle within the \ *Zoom Toolbar*. Clicking on
 one of the two boundaries and moving it (with left mouse button held) to
 the intended position executes horizontal zooming in all charts.
-|  **Note**: Instead of dragging boundaries, it is also possible to use
+**Note**: Instead of dragging boundaries, it is also possible to use
 the mouse wheel for zooming. Hover over the \ *Zoom Toolbar* and scroll
 up to zoom in and scroll down to zoom out. Dragging the zoom area
 changes the section that is displayed without changing the zoom factor.
@@ -4283,7 +3960,7 @@ the different messages grouped by certain characteristics.
 Rate* showing the average transfer rate (A), and the minimal/maximal
 transfer rate (B)**
 
-| All values are represented in a bar chart fashion. The number next to
+All values are represented in a bar chart fashion. The number next to
 each bar is the group base, while the number inside a bar depicts the
 different values depending on the chosen metric. Therefore, the \ *Set
 Metric* sub-menu of the context menu can be used to switch between
@@ -4291,8 +3968,8 @@ Metric* sub-menu of the context menu can be used to switch between
 and \ *Message Transfer Rate*. The group base can be changed via the
 context menu entry \ *Group By*. It is possible to choose
 between \ *Message Size*, \ *Message Tag*, and \ *Communicator (MPI)*.
-| 
-|  **Note**: There will be one bar for every occurring group. However,
+
+**Note**: There will be one bar for every occurring group. However,
 if metric is set to \ *Message Transfer Rate*, the minimal and the
 maximal transfer rate is given in an additional bar beneath the one
 showing the average transfer rate. The additional bar starts at the
@@ -4311,7 +3988,7 @@ between processes.
 
 **Communication Matrix View**
 
-| The chart is realized as a table. Its rows represent the sending
+The chart is realized as a table. Its rows represent the sending
 processes while its columns represent the receivers. The color legend on
 the right indicates the displayed values. Depending on the displayed
 information, the color legend changes. It is possible to change the type
@@ -4320,8 +3997,8 @@ messages passed from sender to recipient or minimum and maximum
 bandwidth are offered. To change the type of value that is displayed,
 use the context menu option \ *Set Metric*. Use the \ *Process
 Filter* to define which processes/groups should be displayed.
-| 
-|  **Note**: A high duration is not automatically caused by a slow
+
+**Note**: A high duration is not automatically caused by a slow
 communication path between two processes, but can also be due to the
 fact that the time between starting transmission and successful
 reception of the message can be increased by a recipient that delays
@@ -4537,7 +4214,7 @@ tracefile. If the user has no access to it, it is possible to place them
 in the \ *Application Data Folder*. They are listed in the
 tab \ *Locally Stored Preferences* with creation and modification date.
 | 
-|  **Note**: On loading, Vampir favors settings in the \ *Application
+**Note**: On loading, Vampir favors settings in the \ *Application
 Data Folder*. *Default Preferences* offers to save preferences of the
 current trace file as default settings, where they are then used for
 tracefiles without settings. Another option is to restore the default
@@ -6270,7 +5947,7 @@ XRay \ **(`view machine details </manual/xray>`__)**
 +--------------------+-------------+----------------+---------------+----------------+----------------+-----------------+----------------+-----------------------------+---------------------------+----------------------+------------+---------------+
 
 | 
-|   
+ 
 
 HPCC Configuration
 ==================
@@ -6460,7 +6137,7 @@ XRay
     HPL.out output file name (if any)
     8 device out (6=stdout,7=stderr,file)
 
-| 
+
 
 Foxtrot
 =======
@@ -6489,15 +6166,15 @@ Compute **(**\ domain: idp.ufl.futuregrid.org)
 
 **2x IBM x3650 M2 management nodes** (fm1, fm2):
 
-| • 2 x 4-Core Intel Xeon E5530 (Nehalem-EP) processors
-|  • 24GB Main Memory 
-|  • 2 x 146GB 2.5-Inch 6Gbps SAS Disks
+• 2 x 4-Core Intel Xeon E5530 (Nehalem-EP) processors
+• 24GB Main Memory 
+• 2 x 146GB 2.5-Inch 6Gbps SAS Disks
 
 **32x IBM iDataPlex dx360 M2 nodes** (f1 through f2):
 
-| • 2 x 4-Core Intel Xeon E5520 (Nehalem-EP) processors
-|  • 24GB Main Memory 
-|  • 1 x 500GB 3.5-Inch SATA Disk
+• 2 x 4-Core Intel Xeon E5520 (Nehalem-EP) processors
+• 24GB Main Memory 
+• 1 x 500GB 3.5-Inch SATA Disk
 
 **1x Dell PowerEdge R310 Network monitoring node**
 (bwctl.ufl.net.futuregrid.org)
@@ -6508,9 +6185,9 @@ Compute **(**\ domain: idp.ufl.futuregrid.org)
 **Hardware**:  IBM iDataPlex dx360 M3 storage node with 24TB raw
 capacity (fs1).
 
-| • 2 x 4-Core Intel Xeon E5520 (Nehalem-EP) processors
-|  • 24GB Main Memory 
-|  • 12 x 2TB 7200 rpm 3.5-Inch 6Gbps SAS Disks
+• 2 x 4-Core Intel Xeon E5520 (Nehalem-EP) processors
+• 24GB Main Memory 
+• 12 x 2TB 7200 rpm 3.5-Inch 6Gbps SAS Disks
 
 **Capacity**:  20TB RAID5
 
@@ -6520,18 +6197,18 @@ capacity (fs1).
 
 **Filesystem Layout**:
 
-| • Home directories mounted to all foxtrot nodes (f1 thorugh f32) at
+• Home directories mounted to all foxtrot nodes (f1 thorugh f32) at
 /N/u/<username>
-|  • Backup is not provided
+• Backup is not provided
 
 Network
 ^^^^^^^
 
 **Hardware**
 
-| • Force10 S50 48-port GigE switch, with 10GigE uplink to Florida
+• Force10 S50 48-port GigE switch, with 10GigE uplink to Florida
 LambdaRail
-|  • BLADE Rackswitch 48-port GigE switch (Management Network)
+• BLADE Rackswitch 48-port GigE switch (Management Network)
 
 Services
 ^^^^^^^^
@@ -6550,8 +6227,8 @@ IU iDataplex User Manual
   Hostname
 ^^^^^^^^^^
 
-| • india.futuregrid.org 
-|  • i136r.idp.iu.futuregrid.org 
+• india.futuregrid.org 
+• i136r.idp.iu.futuregrid.org 
 
   Login
 ^^^^^^^
@@ -6587,9 +6264,9 @@ UCSD iDataPlex User Manual
 **Hardware**:  Two Sun Fire x4540 Servers @ 48 TB each.  Specifications
 for each Sun Fire X4540 Server are: 
 
-| • 2 x 6-Core AMD Opteron Model 2435, 2.6 GHz Processors 
-|  • 32 GB (16 x 2 GB DIMMs) Memory 
-|  • 48 x 1 TB 7200 rpm 3.5-Inch SATA Disks
+• 2 x 6-Core AMD Opteron Model 2435, 2.6 GHz Processors 
+• 32 GB (16 x 2 GB DIMMs) Memory 
+• 48 x 1 TB 7200 rpm 3.5-Inch SATA Disks
 
 **Capacity**:  76.8 TB raid2 and 5.4 TB of raid0 (for scratch)
 
@@ -6600,13 +6277,13 @@ ethernet.  Our long-term plan is to mount over Infiniband. 
 
 **Filesystem Layout**:
 
-| • Home directories mounted to Sierra at /N/u/<username>, snapshots
+• Home directories mounted to Sierra at /N/u/<username>, snapshots
 taken nightly, quota set at 50 GB 
-|  • Scratch directories mount to Sierra at /N/scratch/<username>, no
+• Scratch directories mount to Sierra at /N/scratch/<username>, no
 backup, quota at 100 GB 
-|  • Project directories, software directory mounted to Sierra as
+• Project directories, software directory mounted to Sierra as
 /N/soft, snapshots taken nightly, quota set at 50 GB 
-|  • Image directory (internal), mounts to Sierra at /images, snapshots
+• Image directory (internal), mounts to Sierra at /images, snapshots
 taken nightly, quota set at 6 TB
 
 **Overview of ZFS Data Snapshots**
@@ -6672,13 +6349,13 @@ THIS FEATURE IS NOT YET SUPPORTED OFFICIALLY
 FutureGrid now supports dynamic provisioning through Moab, and in
 Sierra, some instructions are listed below:
 
-| • The executable tools are installed at /usr/local/bin, and the $PATH
+• The executable tools are installed at /usr/local/bin, and the $PATH
 should have been all set. So a user could start running from his home
 directory. 
-|  • Command \ *qnodes* will list all the nodes and status. As for now,
+• Command \ *qnodes* will list all the nodes and status. As for now,
 node s36~s39 is up and running and should be available for
 test/experiment. 
-|  • \ *checknode s36* will list info on node s36. Os info can be found
+• \ *checknode s36* will list info on node s36. Os info can be found
 at line such as:
 
     ::
@@ -6696,9 +6373,9 @@ this:
 
 will schedule the job in some node.
 
-| • \ *showq* will list the current queue info, and you could see the
+• \ *showq* will list the current queue info, and you could see the
 submitted job in the \ *active jobs* section. 
-|  • Check job running status using command \ *checkjob <jobid>*. The
+• Check job running status using command \ *checkjob <jobid>*. The
 resource allocation info could be found in some lines like these:
 
     ::
@@ -6718,20 +6395,20 @@ a job like this:
 will try first to dynamically provision the requested os at some node,
 and then schedule the job.
 
-| • \ *showq* once again could list the jobs. 
-|  • \ *checkjob <jobid>* will first tell you the dependency
+• \ *showq* once again could list the jobs. 
+• \ *checkjob <jobid>* will first tell you the dependency
 job \ *provisioning os* is not completed.
 
     ::
 
           NOTE:  job cannot run  (dependency provision-73 jobsuccessfulcomplete not met)
 
-| • \ *checkjob provision-68(the provision job id)* will list the
+• \ *checkjob provision-68(the provision job id)* will list the
 provisioning status. 
-|  • Once the provisioning is done, \ *checkjob <jobid>* will show the
+• Once the provisioning is done, \ *checkjob <jobid>* will show the
 job is scheduled, and also allow us to see where is it scheduled, for
 example s37. 
-|  • By running \ *checknode s37* again, we could see that the running
+• By running \ *checknode s37* again, we could see that the running
 os was changed from \ *statelessrhels5.5* to*statefulrhels5*.
 
 • \ *testcmd.sh* used in the example:
@@ -6909,68 +6586,68 @@ into groups of eight, and the
 Alamo
 =====
 
-| Alamo is a 96 node Dell cluster running 2.66 GHz Intel Xeon X5550
+Alamo is a 96 node Dell cluster running 2.66 GHz Intel Xeon X5550
 processors.  The OS is CentOS 5.8 and 6.3.  It runs Torque and Moab for
 scheduling.  Alamo has a QDR IB interconnect and 15 TB of attached disk
 storage.   Alamo is partitioned into different resources for Nimbus and
 HPC.  See the Alamo hardware page for more
 detail: \ `https://portal.futuregrid.org/hardware/alamo <https://portal.futuregrid.org/hardware/alamo>`__
 .
-| 
-|  **Nimbus partition -** see nimbus
+
+**Nimbus partition -** see nimbus
 documentation: \ `https://portal.futuregrid.org/tutorials/nimbus <https://portal.futuregrid.org/tutorials/nimbus>`__
-| 
-|  **HPC partition**
-| 
-|  Max cores 584.  Submit
+
+**HPC partition**
+
+Max cores 584.  Submit
 `ticket <http://%20https://portal.futuregrid.org/help>`__ if you need to
 run larger than the 320 limit per user. 
-| 
-|  Available queues: 
-|     short - 24 hours runtime limit
-|     long - 72 hours runtime limit
-| 
-|  After registering your .ssh key on the portal, go to
+
+Available queues: 
+   short - 24 hours runtime limit
+   long - 72 hours runtime limit
+
+After registering your .ssh key on the portal, go to
 `https://portal.futuregrid.org/manual/access <https://portal.futuregrid.org/manual/access>`__
 .
-| 
-|  If you key has been uploaded, you can ssh to the login node using the
+
+If you key has been uploaded, you can ssh to the login node using the
 following command. 
-|  **Note**: If you are prompted for a password, your account has not
+**Note**: If you are prompted for a password, your account has not
 been set up correctly or the .ssh key has not been propagated. 
-| 
-|    ssh alamo.futuregrid.org
-| 
-|  To submit a test job use the qsub command.
-| 
-|  ex.  qsub -N job\_name -l nodes=1 -q short  job\_script
+
+  ssh alamo.futuregrid.org
+
+To submit a test job use the qsub command.
+
+ex.  qsub -N job\_name -l nodes=1 -q short  job\_script
 
 -  qstat - show current jobs in the queue with status
 -  showq - show current running and queued jobs and job id
 -  checkjob -v <jobid>   - more detailed information about your job
 
-| Applications are available via modules.  To see a list of available
+Applications are available via modules.  To see a list of available
 applications:
-|    module avail
-| 
-|  File systems:
-|     /home   - Quota enforced home directory, backed up nightly.
-|     /N/work - 6.3 TB work directory, not backed up. NFS mounted from
+  module avail
+
+File systems:
+   /home   - Quota enforced home directory, backed up nightly.
+   /N/work - 6.3 TB work directory, not backed up. NFS mounted from
 login node. 
-|     /N/images - 11 TB directory for system images, not backed up. NFS
+   /N/images - 11 TB directory for system images, not backed up. NFS
 mounted from login node.
-| 
-|  Administrator: David Gignac
-|  For issues or questions please
+
+Administrator: David Gignac
+For issues or questions please
 use \ `https://tickets.futuregrid.org <https://tickets.futuregrid.org>`__
 . You can conveniently submit a ticket
 via \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
 To look at your previously submitted tickets you can
 use \ `https://portal.futuregrid.org/tickets <https://portal.futuregrid.org/tickets>`__
 .
-| 
-|    
-| 
+
+  
+
 
 Delta
 =====
@@ -6978,7 +6655,7 @@ Delta
 GPU User Manual
 ---------------
 
-| FutureGrid's supercomputer, Delta (delta.futuregrid.org), is a 16-node
+FutureGrid's supercomputer, Delta (delta.futuregrid.org), is a 16-node
 GPU cluster running Red Hat Linux, with TORQUE (also called PBS) and
 Moab for job management, and Module to simplify application and
 environment configuration. Delta consists of 16 nodes with two 6-core
@@ -6987,9 +6664,9 @@ of RAID5 disk storage. Each node supports 2 nVIDIA Tesla C2070 GPUs
 with 448 processing cores. For details on Delta's hardware
 configuration, see the
 `Delta <https://portal.futuregrid.org/hardware/delta>`__\ page.
-| 
-| 
-|  The FutureGrid *delta* cluster is accessible via a batch queue that
+
+
+The FutureGrid *delta* cluster is accessible via a batch queue that
 is managed from india (india.futuregrid.org). To use delta
 interactively, first log into india:
 
@@ -6997,14 +6674,14 @@ interactively, first log into india:
 
      ssh username@india.futuregrid.org
 
-| Then, on india, the following command lets you use one of the delta
+Then, on india, the following command lets you use one of the delta
 compute nodes:
 
 ::
 
      qsub -I -q delta myprg
 
-| If you want to use delta with your job script, please use
+If you want to use delta with your job script, please use
 
 ::
 
@@ -7016,29 +6693,29 @@ compute nodes:
 
     delta
 
-| to indicate that you'd like to use this queue.
-| 
-|  For more details about how to manage queues with qsub, see the Delta
+to indicate that you'd like to use this queue.
+
+For more details about how to manage queues with qsub, see the Delta
 manual page.
-| 
-|  Utilization of GPU resources on Delta:
-|  1) Utilize GPU node
-|      ` Running Program on single GPU
+
+Utilization of GPU resources on Delta:
+1) Utilize GPU node
+    ` Running Program on single GPU
 node <https://portal.futuregrid.org/manual/gpu/running-programs-single-gpu>`__
-|  2) Utilize GPU cluster
-|  `     Running MPI/CUDA program on the Delta
+2) Utilize GPU cluster
+`     Running MPI/CUDA program on the Delta
 cluster <https://portal.futuregrid.org/manual/running-mpigpu-program-delta-cluster>`__
-|  3) Utilize GPU cloud
-|  4) Mixing utilization of GPU and CPU
-|  5) Non-trivial service or applications using GPU
-| 
-| 
-|       
+3) Utilize GPU cloud
+4) Mixing utilization of GPU and CPU
+5) Non-trivial service or applications using GPU
+
+
+     
 
 Running MPI/GPU program on the Delta cluster
 ============================================
 
-| GPUs provide the ability to use mathematical operations at a fraction
+GPUs provide the ability to use mathematical operations at a fraction
 of the cost and with higher performance than on the current generation
 of processors. FutureGrid provides the ability to test such an
 infrastructure as part of its delta cluster. Here, we provide a
@@ -7049,11 +6726,11 @@ nodes, each of which use CUDA to execute the shared workload. We also
 provide the complete parallel
 matrix multiplication code using MPI/CUDA that has already been tested
 on Delta cluster in attachment.  
-| 
-|  **MPI code: pmm\_mpi.c**
-| 
 
-.. code:: rteindent1
+**MPI code: pmm\_mpi.c**
+
+
+::
 
     #include <mpi.h>
 
@@ -7071,84 +6748,84 @@ on Delta cluster in attachment.  
      return 0;
     } 
 
-| 
-|  **CUDA code: dgemm\_cuda.cu**
 
-| #include <stdio.h>
-| 
-|  \_\_global\_\_ void cuda\_vecadd(int \*array1, int \*array2, int
+**CUDA code: dgemm\_cuda.cu**
+
+#include <stdio.h>
+
+\_\_global\_\_ void cuda\_vecadd(int \*array1, int \*array2, int
 \*array3)
-|  {
-|          int index = blockIdx.x \* blockDim.x + threadIdx.x;
-|          array3[index] = array1[index] + array2[index];
-|  }
-| 
-|    extern "C" void invoke\_cuda\_vecadd()
-|   {
-|          cudaMalloc((void\*\*) &devarray1, sizeof(int)\*10);
-|          cudaMalloc((void\*\*) &devarray2, sizeof(int)\*10);
-|          cudaMalloc((void\*\*) &devarray3, sizeof(int)\*10);
-|          cudaMemcpy(devarray1, hostarray1, sizeof(int)\*10,
+{
+        int index = blockIdx.x \* blockDim.x + threadIdx.x;
+        array3[index] = array1[index] + array2[index];
+}
+
+  extern "C" void invoke\_cuda\_vecadd()
+ {
+        cudaMalloc((void\*\*) &devarray1, sizeof(int)\*10);
+        cudaMalloc((void\*\*) &devarray2, sizeof(int)\*10);
+        cudaMalloc((void\*\*) &devarray3, sizeof(int)\*10);
+        cudaMemcpy(devarray1, hostarray1, sizeof(int)\*10,
 cudaMemcpyHostToDevice);
-|          cudaMemcpy(devarray2, hostarray2, sizeof(int)\*10,
+        cudaMemcpy(devarray2, hostarray2, sizeof(int)\*10,
 cudaMemcpyHostToDevice);
-|          cuda\_vec\_add<<<1, 10>>>(devarray1, devarray2, devarray3);
-|         cudaMemcpy(hostarray3, devarray3, sizeof(int)\*10,
+        cuda\_vec\_add<<<1, 10>>>(devarray1, devarray2, devarray3);
+       cudaMemcpy(hostarray3, devarray3, sizeof(int)\*10,
 cudaMemcpyDeviceToHost);
-|         cudaFree(devarray1);
-|         cudaFree(devarray2);
-|         cudaFree(devarray3);
-|  }
+       cudaFree(devarray1);
+       cudaFree(devarray2);
+       cudaFree(devarray3);
+}
 
 Note: Mixing MPI and CUDA code may cause problems during linking because
 of the difference between C and C++ calling conventions. The use of
 extern "C" around invoke\_cuda\_code which instructs the nvcc (a wrapper
 of c++) compiler to make that function callable from the C runtime. 
 
-| **Compiling the MPI/CUDA program:**
-| 
-|  Load the Modules
-|  > module load IntelMPI # load Intel MPI
-|  > module load Intel # load icc > module load cuda # load cuda tools
-|  This will load the Intel MPI, the compiler, and the cuda tools. Next
+**Compiling the MPI/CUDA program:**
+
+Load the Modules
+> module load IntelMPI # load Intel MPI
+> module load Intel # load icc > module load cuda # load cuda tools
+This will load the Intel MPI, the compiler, and the cuda tools. Next
 compile the code with 
-| 
-|  > nvcc -c dgemm\_cuda.cu -o dgemm\_cuda.o   > mpiicc
+
+> nvcc -c dgemm\_cuda.cu -o dgemm\_cuda.o   > mpiicc
 -o pmm\_mpi.c -o pmm\_mpi.o
-|  > mpiicc -o mpicuda pmm\_mpi.o dgemm\_cuda.o -lcudart -lcublas -L
+> mpiicc -o mpicuda pmm\_mpi.o dgemm\_cuda.o -lcudart -lcublas -L
 /opt/cuda/lib64 -I /opt/cuda/include
-| 
-|  Note: The CUDA compiler nvcc is used only to compile the CUDA source
+
+Note: The CUDA compiler nvcc is used only to compile the CUDA source
 file, and the IntelMPI compiler mpiicc is used to compile the C code and
 do the linking
-|    **Setting Up and Submitting MPI Jobs:**
-| 
-|  1. qsub -I -l nodes=4 -q delta        # get 4 nodes from FG
-|  2. uniq /var/spool/torque/aux/399286.i136
-> gpu\_nodes\_list       #create machine file list
-|  3. module load IntelMPI                # load Intel MPI
-|  4. module load Intel                     # load icc
-|  5. module load cuda                     # load cuda tools
-|  6. mpdboot -r ssh -f gpu\_nodes\_list -n 4  # will start an mpd ring
-on 4 nodes including local host 
-|  7. mpiexec -l -machinefile gpu\_nodes\_list -n 4 ./mpicuda 10000 1 4 
-# run mpi program using 4 nodes
-| 
-|  **Comparison between four implementations of sequential matrix
-multiplication on Delta:**
-| 
-|      |image79|
-|  **References:** `Source Code
-Package <https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip>`__
-|  [1] High Performance Computing using CUDA,2009 User Group Conference
-|  [2]
-`http://www.nvidia.com/content/global/global.php <http://www.nvidia.com/content/global/global.php>`__
-| 
-|  To get source code: git clone git@github.com:futuregrid/GPU.git
-| 
-|  Compiling source code on Delta machine:
+  **Setting Up and Submitting MPI Jobs:**
 
-.. code:: rteindent1
+1. qsub -I -l nodes=4 -q delta        # get 4 nodes from FG
+2. uniq /var/spool/torque/aux/399286.i136
+> gpu\_nodes\_list       #create machine file list
+3. module load IntelMPI                # load Intel MPI
+4. module load Intel                     # load icc
+5. module load cuda                     # load cuda tools
+6. mpdboot -r ssh -f gpu\_nodes\_list -n 4  # will start an mpd ring
+on 4 nodes including local host 
+7. mpiexec -l -machinefile gpu\_nodes\_list -n 4 ./mpicuda 10000 1 4 
+# run mpi program using 4 nodes
+
+**Comparison between four implementations of sequential matrix
+multiplication on Delta:**
+
+    |image79|
+**References:** `Source Code
+Package <https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip>`__
+[1] High Performance Computing using CUDA,2009 User Group Conference
+[2]
+`http://www.nvidia.com/content/global/global.php <http://www.nvidia.com/content/global/global.php>`__
+
+To get source code: git clone git@github.com:futuregrid/GPU.git
+
+Compiling source code on Delta machine:
+
+::
 
     module load intelmpi
     module load intel
@@ -7156,7 +6833,7 @@ Package <https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip>`__
     cd mpi_cuda_mkl
     make
 
-| 
+
 
 +-----------------------------------------------------------------------------------------------+-------------+
 | Attachment                                                                                    | Size        |
@@ -7169,7 +6846,7 @@ Running programs on a single GPU
 
 **Summary:**
 
-|      GPUs provide the ability to use mathematical operations at a
+GPUs provide the ability to use mathematical operations at a
 fraction of the cost and with higher performance than on the
 current generation of processors. CUDA is a parallel programming model
 and software environment that leverages the parallel computational power
@@ -7180,12 +6857,12 @@ some details of data-parallel computational model of CUDA, and then
 provide a step-by-step guide on how to make a parallel matrix
 multiplication program using CUDA. In the supplied attachment, we also
 provide the complete code that has already been tested on Delta node.
-| 
-|     |image80|
-|  Figure 1: GPU Kernel and Thread model [1]
-| 
-|   **CUDA Kernel and Threads:**
-|         The fundamental part of the CUDA code is the kernel program.
+ 
+   |image80|
+Figure 1: GPU Kernel and Thread model [1]
+
+ **CUDA Kernel and Threads:**
+       The fundamental part of the CUDA code is the kernel program.
 Kernel is the function that can be executed in parallel in the GPU
 device. A CUDA kernel is executed by an array of CUDA threads. All
 threads run the same code. Each thread has an ID that it uses to compute
@@ -7198,81 +6875,81 @@ themselves through a synchronization barrier and access to a shared
 memory space private to the block. Each thread is given a unique thread
 ID— thread.Idx within its thread block. Each thread block is given a
 unique block ID— block.Idx within its grid. 
-| 
-|    **CUDA Kernel code for Matrix Multiplication:**
-| 
-|   \_\_global\_\_ void matrixMul( float\* C, float\* A, float\* B, int
+
+  **CUDA Kernel code for Matrix Multiplication:**
+
+ \_\_global\_\_ void matrixMul( float\* C, float\* A, float\* B, int
 wA, int wB)
-|   {
-|       // Block index
-|             int bx = blockIdx.x;
-|             int by = blockIdx.y;
-|       // Thread index
-|             int tx = threadIdx.x;
-|             int ty = threadIdx.y;
-| 
-|       // Index of the first sub-matrix of A processed by the block
-|             int aBegin = wA \* BLOCK\_SIZE \* by;
-|       // Index of the last sub-matrix of A processed by the block
-|             int aEnd   = aBegin + wA - 1;
-|       // Step size used to iterate through the sub-matrices of A
-|             int aStep  = BLOCK\_SIZE;
-|       // Index of the first sub-matrix of B processed by the block
-|             int bBegin = BLOCK\_SIZE \* bx;
-|       // Step size used to iterate through the sub-matrices of B
-|             int bStep  = BLOCK\_SIZE \* wB;
-|       // Csub is used to store the element of the block
+ {
+     // Block index
+           int bx = blockIdx.x;
+           int by = blockIdx.y;
+     // Thread index
+           int tx = threadIdx.x;
+           int ty = threadIdx.y;
+
+     // Index of the first sub-matrix of A processed by the block
+           int aBegin = wA \* BLOCK\_SIZE \* by;
+     // Index of the last sub-matrix of A processed by the block
+           int aEnd   = aBegin + wA - 1;
+     // Step size used to iterate through the sub-matrices of A
+           int aStep  = BLOCK\_SIZE;
+     // Index of the first sub-matrix of B processed by the block
+           int bBegin = BLOCK\_SIZE \* bx;
+     // Step size used to iterate through the sub-matrices of B
+           int bStep  = BLOCK\_SIZE \* wB;
+     // Csub is used to store the element of the block
 sub-matrix that is computed by the thread
-|       float Csub = 0;
-|       // Loop over all the sub-matrices of A and B required to compute
+     float Csub = 0;
+     // Loop over all the sub-matrices of A and B required to compute
 the block sub-matrix
-|       for (int a = aBegin, b = bBegin; a <= aEnd; a += aStep, b +=
+     for (int a = aBegin, b = bBegin; a <= aEnd; a += aStep, b +=
 bStep) {
-|            // Declaration of the shared memory array As used to store
+          // Declaration of the shared memory array As used to store
 the sub-matrix of A
-|            \_\_shared\_\_ float As[BLOCK\_SIZE][BLOCK\_SIZE];
-|            // Declaration of the shared memory array Bs used to store
+          \_\_shared\_\_ float As[BLOCK\_SIZE][BLOCK\_SIZE];
+          // Declaration of the shared memory array Bs used to store
 the sub-matrix of B
-|            \_\_shared\_\_ float Bs[BLOCK\_SIZE][BLOCK\_SIZE];
-|             As[ty][tx] = A[a + wA \* ty +
+          \_\_shared\_\_ float Bs[BLOCK\_SIZE][BLOCK\_SIZE];
+           As[ty][tx] = A[a + wA \* ty +
 tx];                                                                 
-|                  Bs[ty],[tx] = B[b + wB \* ty +
+                Bs[ty],[tx] = B[b + wB \* ty +
 tx];                                                                 
-|            // Synchronize to make sure the matrices are
+          // Synchronize to make sure the matrices are
 loaded                                               
-|                 
+               
 \_\_syncthreads();                                                                                  
-|            // multiply two matrices together; each thread computes one
+          // multiply two matrices together; each thread computes one
 element  of  sub-matrix
-|   #pragma
+ #pragma
 unroll                                                                                            
-|            for (int k = 0; k < BLOCK\_SIZE;
+          for (int k = 0; k < BLOCK\_SIZE;
 ++k)                                                              
-|                         Csub += As[ty][k] \*
+                       Csub += As[ty][k] \*
 Bs[k][tx];                                                                
-| 
+
                                                                                                            
-|            // Synchronize to make sure that the preceding computation
+          // Synchronize to make sure that the preceding computation
 is done                   
-|                 
+               
 \_\_syncthreads();                                                                                  
-|       
+     
 }                                                                                                     
-|        // Write the block sub-matrix to device memory; each thread
+      // Write the block sub-matrix to device memory; each thread
 only writes one element!
-|          int c = wB \* BLOCK\_SIZE \* by + BLOCK\_SIZE \*
+        int c = wB \* BLOCK\_SIZE \* by + BLOCK\_SIZE \*
 bx;                                                       
-|        C[c + wB \* ty + tx] =
+      C[c + wB \* ty + tx] =
 Csub;                                                                           
-|  }                                   
-| 
-|     
-|    |image81|
-|  Figure 2: GPU memory architecture [1][1] [1]
-| 
-| 
-|   **CUDA Memory Architecture:**
-|      All multiprocessors of the GPU device access a large global
+}                                   
+
+   
+  |image81|
+Figure 2: GPU memory architecture [1][1] [1]
+
+
+ **CUDA Memory Architecture:**
+    All multiprocessors of the GPU device access a large global
 device memory for both gather and scatter operations. This memory is
 relatively slow because it does not provide caching. Shared memory is
 fast compared to device memory, and normally takes the same amount of
@@ -7286,96 +6963,96 @@ thread block that have the same lifetime as the block share this part of
 memory for both read and write operations. To declare variables in
 shared memory, \_\_shared\_\_ qualifier is used, and to declare in
 global memory, \_\_device\_\_ qualifier is used.
-| 
-|  **CPU code invoke CUDA kernel code:**
-| 
-|  void invoke\_matrixMul(int size){    
-| 
-|            int devID;
-|            cudaDeviceProp props;
-|            checkCudaErrors(cudaGetDevice(&devID));
-|            checkCudaErrors(cudaGetDeviceProperties(&props, devID));
-| 
-|            int block\_size = (props.major < 2) ? 16 : 32;
-|      unsigned int uiWA, uiHA, uiWB, uiHB, uiWC, uiHC;
-|            uiWA = uiHA= uiWB = uiHB = uiWC = uiHC;
-| 
-|      // allocate host memory for matrices A and B
-|      unsigned int size\_A = uiWA \* uiHA;
-|      unsigned int mem\_size\_A = sizeof(float) \* size\_A;
-|      float\* h\_A = (float\*)malloc(mem\_size\_A);
-|      unsigned int size\_B = uiWB \* uiHB;
-|      unsigned int mem\_size\_B = sizeof(float) \* size\_B;
-|      float\* h\_B = (float\*)malloc(mem\_size\_B);
-| 
-|  **    **// initialize host memory
-|            srand(2012);
-|            randomInit(h\_A, size\_A);
-|            randomInit(h\_B, size\_B);
-| 
-|      // allocate device memory
-|      float\* d\_A, \*d\_B, \*d\_C;
-|      unsigned int size\_C = uiWC \* uiHC;
-|      unsigned int mem\_size\_C = sizeof(float) \* size\_C;
-| 
-|      // allocate host memory for the result
-|      float\* h\_C      = (float\*) malloc(mem\_size\_C);
-|      float\* h\_CUBLAS = (float\*)
+
+**CPU code invoke CUDA kernel code:**
+
+void invoke\_matrixMul(int size){    
+
+          int devID;
+          cudaDeviceProp props;
+          checkCudaErrors(cudaGetDevice(&devID));
+          checkCudaErrors(cudaGetDeviceProperties(&props, devID));
+
+          int block\_size = (props.major < 2) ? 16 : 32;
+    unsigned int uiWA, uiHA, uiWB, uiHB, uiWC, uiHC;
+          uiWA = uiHA= uiWB = uiHB = uiWC = uiHC;
+
+    // allocate host memory for matrices A and B
+    unsigned int size\_A = uiWA \* uiHA;
+    unsigned int mem\_size\_A = sizeof(float) \* size\_A;
+    float\* h\_A = (float\*)malloc(mem\_size\_A);
+    unsigned int size\_B = uiWB \* uiHB;
+    unsigned int mem\_size\_B = sizeof(float) \* size\_B;
+    float\* h\_B = (float\*)malloc(mem\_size\_B);
+
+**    **// initialize host memory
+          srand(2012);
+          randomInit(h\_A, size\_A);
+          randomInit(h\_B, size\_B);
+
+    // allocate device memory
+    float\* d\_A, \*d\_B, \*d\_C;
+    unsigned int size\_C = uiWC \* uiHC;
+    unsigned int mem\_size\_C = sizeof(float) \* size\_C;
+
+    // allocate host memory for the result
+    float\* h\_C      = (float\*) malloc(mem\_size\_C);
+    float\* h\_CUBLAS = (float\*)
 malloc(mem\_size\_C);                                                        
-|            checkCudaErrors(cudaMalloc((void\*\*) &d\_A,
+          checkCudaErrors(cudaMalloc((void\*\*) &d\_A,
 mem\_size\_A));                                               
-|            checkCudaErrors(cudaMalloc((void\*\*) &d\_B,
+          checkCudaErrors(cudaMalloc((void\*\*) &d\_B,
 mem\_size\_B));                                               
-|      // copy host memory to
+    // copy host memory to
 device                                                                         
-|           checkCudaErrors(cudaMemcpy(d\_A, h\_A, mem\_size\_A,
+         checkCudaErrors(cudaMemcpy(d\_A, h\_A, mem\_size\_A,
 cudaMemcpyHostToDevice) );                           
-|           checkCudaErrors(cudaMemcpy(d\_B, h\_B, mem\_size\_B,
+         checkCudaErrors(cudaMemcpy(d\_B, h\_B, mem\_size\_B,
 cudaMemcpyHostToDevice) );                           
-|           checkCudaErrors(cudaMalloc((void\*\*) &d\_C,
+         checkCudaErrors(cudaMalloc((void\*\*) &d\_C,
 mem\_size\_C));                                               
-|      // setup execution
+    // setup execution
 parameters                                                                         
-|            dim3 threads(block\_size,
+          dim3 threads(block\_size,
 block\_size);                                                                 
-|            dim3 grid(uiWC / threads.x, uiHC /
+          dim3 grid(uiWC / threads.x, uiHC /
 threads.y);                                                        
-| 
+
                                                                                                            
-|       //Performs warmup operation using matrixMul CUDA
+     //Performs warmup operation using matrixMul CUDA
 kernel                                               
-|      if (block\_size 16) {
-|                    matrixMul<16><<< grid, threads >>>(d\_C, d\_A,
+    if (block\_size 16) {
+                  matrixMul<16><<< grid, threads >>>(d\_C, d\_A,
 d\_B, uiWA, uiWB);                                
-|      } else
+    } else
 {                                                                                              
-|                   matrixMul<32><<< grid, threads >>>(d\_C, d\_A, d\_B,
+                 matrixMul<32><<< grid, threads >>>(d\_C, d\_A, d\_B,
 uiWA, uiWB);                                
-|     
+   
 }                                                                                                     
 
     
 cudaDeviceSynchronize();                                                                              
 
-|     // clean up
+    // clean up
 memory                                                                                    
-|     
+   
 free(h\_A);                                                                              
-|     
+   
 free(h\_B);                                                                                            
-|      free(h\_C);                      
-|   }                 
+    free(h\_C);                      
+ }                 
 
-| **References:**
-|  [1] High Performance Computing with CUDA, 2009 User Group Conference
-|  [2] http://www.nvidia.com/content/global/global.php
+**References:**
+[1] High Performance Computing with CUDA, 2009 User Group Conference
+[2] http://www.nvidia.com/content/global/global.php
 
-| source code: git clone git@github.com:futuregrid/GPU.git
-| 
-|  Usage:
-|  module load cuda
-|  module load intel
-|    nvcc -c matrixMul.cu -L/opt/cuda/lib64 -lcudart
+source code: git clone git@github.com:futuregrid/GPU.git
+
+Usage:
+module load cuda
+module load intel
+  nvcc -c matrixMul.cu -L/opt/cuda/lib64 -lcudart
 
 +-----------------------------------------------------------------------------------------+-----------+
 | Attachment                                                                              | Size      |
@@ -7386,19 +7063,19 @@ free(h\_B);                                  �
 C-means clustering using CUDA on GPU
 ====================================
 
-| **Summary:**
-|  The computational demands for multivariate clustering are
+**Summary:**
+The computational demands for multivariate clustering are
 increasing rapidly, and therefore processing large data sets is
 time consuming on a single CPU. To address the computational demands, we
 implemented the cmeans clustering algorithm, using the NVIDIA's CUDA's
 framework and the latest GPU devices on the Delta machine. 
-| 
-|  **Fuzzy C-Means Clustering**
-|   Fuzzy c-means is an algorithm of clustering which allows one element
+
+**Fuzzy C-Means Clustering**
+ Fuzzy c-means is an algorithm of clustering which allows one element
 to belong to two or more clusters with different probability. This
 method is frequently used in multivariate clustering. This algorithm is
 based on minimization of the following objective function: |image82|
-|  Here, M is a real number greater than 1, N is the number of elements,
+Here, M is a real number greater than 1, N is the number of elements,
 Uij is the value of membership of Xi in cluster Cj,  xi is the ith of
 d-dimensional measured data, cj is the d-dimension center of the
 cluster, and \|\|Xi-Cj\|\| is any norm expressing the similarity between
@@ -7406,33 +7083,33 @@ any measured data and the center.  Fuzzy partitioning is performed
 through an iterative optimization of the objective function shown above.
 Within each iteration, the algorithm updates the membership uij and the
 cluster centers cj by:
-|  |image83|       |image84|
-|  This iteration will stop when |image85|, where 'e' is a termination
+|image83|       |image84|
+This iteration will stop when |image85|, where 'e' is a termination
 criterion between 0 and 1, and k represents the iteration steps.
-|  ****Algorithm of CUDA C-means:**
+****Algorithm of CUDA C-means:**
  1**) Copy data to GPU
-|  2) DistanceMatrix kernel
-|  3) MembershipMatrix kernel
-|  4) UpdateCenters kernel, copy partial centers to host from GPUs
-|  5) ClusterSizes kernel, copy cluster sizes to host from each GPU
-|  6) Aggregate partial cluster centers and reduce
-|  10) Compute difference between current cluster centers and previous
+2) DistanceMatrix kernel
+3) MembershipMatrix kernel
+4) UpdateCenters kernel, copy partial centers to host from GPUs
+5) ClusterSizes kernel, copy cluster sizes to host from each GPU
+6) Aggregate partial cluster centers and reduce
+10) Compute difference between current cluster centers and previous
 iteration.
-|  11) Compute cluster distance and memberships using final centers.
-| 
-|    **  CUDA kernels of C-means program:**
-|  1) DistanceMatrix
-|  2) MembershipMatrix
-|  3) UpdateCetners
-|  4) ClusterSizes
-| 
-|      **CUDA C-means performance on Delta:**
-|  |image86|
-|  Figure 1: C-means performance using GPU and CPU
-|    Reference:
-|    [1]
+11) Compute cluster distance and memberships using final centers.
+
+  **  CUDA kernels of C-means program:**
+1) DistanceMatrix
+2) MembershipMatrix
+3) UpdateCetners
+4) ClusterSizes
+
+    **CUDA C-means performance on Delta:**
+|image86|
+Figure 1: C-means performance using GPU and CPU
+  Reference:
+  [1]
 `http://en.wikipedia.org/wiki/Cluster\_analysis <http://en.wikipedia.org/wiki/Cluster_analysis>`__
-|    [2] Scalable Data Clustering using GPU Clusters,  Andrew
+  [2] Scalable Data Clustering using GPU Clusters,  Andrew
 Pangborn, Gregor von Laszewski
 
 Average: Select ratingPoorOkayGoodGreatAwesome
@@ -7484,8 +7161,8 @@ OR run a job interactively 
 
     qsub -I -q scalemp
 
-| 
-|   
+
+ 
 
 Developing a job script:
 ========================
@@ -7641,14 +7318,14 @@ Service offerings on FutureGrid
 Using IaaS Clouds on FutureGrid
 ===============================
 
-| Infrastructure-as-a-Service (IaaS) cloud computing encompasses
+Infrastructure-as-a-Service (IaaS) cloud computing encompasses
 techniques that have driven major recent advances in information
 technology supporting elastic, on-demand, "pay as you go" computing as a
 service. Key technologies behind IaaS cloud computing are resource
 virtualization, as well as cloud middleware that enables the management
 of clusters of virtualized resources through service interfaces. 
-| 
-|  The FutureGrid testbed provides capabilities that allow users to
+
+The FutureGrid testbed provides capabilities that allow users to
 experiment with open-source cloud middleware and virtualization
 platforms, and there are different ways you may want to use these
 platforms in the testbed. This page guides you in selecting from
@@ -7658,21 +7335,21 @@ respective tutorials:
  Nimbus Clouds
 --------------
 
-| Nimbus is an open-source service package that allows users to run
+Nimbus is an open-source service package that allows users to run
 virtual machines on FutureGrid hardware. You can easily upload your own
 VM image or customize an image provided by us. When you boot a VM, it is
 assigned a public IP address (and/or an optional private address), and
 you are authorized to log in as root via SSH. You can then run services,
 perform computations, and configure the system as desired.
-| 
-|  Nimbus is available across various FutureGrid sites, and there are
+
+Nimbus is available across various FutureGrid sites, and there are
 two open-source hypervisors in use in FutureGrid Nimbus clouds: Xen and
 KVM. Nimbus in FutureGrid is the recommended platform if you are
 interested in experiments within a cloud, across clouds, or in those not
 amenable to para-virtualization, as the Nimbus/KVM cloud (alamo)
 supports "classic" virtual machines.
-| 
-|  For tutorials on getting started with Nimbus, see:
+
+For tutorials on getting started with Nimbus, see:
 
 -  `Using Nimbus on
    FutureGrid <https://portal.futuregrid.org/tutorials/nimbus>`__ [novice]
@@ -7682,20 +7359,20 @@ supports "classic" virtual machines.
 OpenStack Clouds
 ----------------
 
-| `OpenStack <http://www.openstack.org/>`__ is a recently open-sourced,
+`OpenStack <http://www.openstack.org/>`__ is a recently open-sourced,
 IaaS cloud computing platform founded by Rackspace Hosting and NASA, and
 used widely in industry. It includes three components: Compute(Nova),
 Object Storage (Swift), and Image Service (Glance). OpenStack Nova
 supports an  Amazon Web Services (AWS) complaint EC2-based web service
 interface for interacting with the Cloud service, and can be used with
 the same client-side "eucatools" that is used with Eucalyptus.
-| 
-|  FutureGrid currently features the OpenStack Nova compute cloud. 
+
+FutureGrid currently features the OpenStack Nova compute cloud. 
 OpenStack Nova in FutureGrid is useful if you are interested in
 experiments within a cloud, and in comparison of cloud middleware
 stacks.
-| 
-|  For tutorials on getting started with OpenStack, see:
+
+For tutorials on getting started with OpenStack, see:
 
 -  `Using OpenStack Nova on
    FutureGrid <https://portal.futuregrid.org/tutorials/openstack>`__ [novice]
@@ -7713,38 +7390,38 @@ stacks.
 Eucalyptus Clouds
 -----------------
 
-| Eucalyptus is an open-source software platform that implements
+Eucalyptus is an open-source software platform that implements
 IaaS-style cloud computing. Eucalyptus provides an Amazon Web Services
 (AWS) complaint EC2-based web service interface for interacting with the
 Cloud service. Additionally, Eucalyptus provides services such as the
 AWS Complaint Walrus and a user interface for managing users and
 images. 
-| 
-|  Eucalyptus is also available on distributed FutureGrid resources.
+
+Eucalyptus is also available on distributed FutureGrid resources.
 Eucalyptus in FutureGrid is useful if  you are interested in experiments
 within a cloud, across clouds, and in comparison of cloud middleware
 stacks.
-| 
-|  For tutorials on getting started with Eucalyptus, see:
+
+For tutorials on getting started with Eucalyptus, see:
 
 -  `Using Eucalyptus on
    FutureGrid <https://portal.futuregrid.org/tutorials/eucalyptus3>`__ [novice]
 
-| 
+
 
 Virtual Appliances for Training and Education
 ---------------------------------------------
 
-| The IaaS cloud stacks on FutureGrid enable the use of "virtual
+The IaaS cloud stacks on FutureGrid enable the use of "virtual
 appliances" as an environment where hands-on, executable educational and
 training modules can be created, shared, and leveraged by the FutureGrid
 community. With these appliances, students are able to deploy virtual
 machines and virtual private clusters, where they are able to experiment
 with various Grid and cloud computing middleware stacks.
-| 
-|  For tutorials on getting started with educational virtual appliances,
+
+For tutorials on getting started with educational virtual appliances,
 see:
-| 
+
 
 -  `Running a Grid Appliance on your
    desktop <https://portal.futuregrid.org/tutorials/ga1>`__  [novice]
@@ -7929,7 +7606,7 @@ Using the Cloud Client
 Check out the various FutureGrid clouds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| When the credentials file was untarred in a step above, a
+When the credentials file was untarred in a step above, a
 configuration file for each of the four FutureGrid clouds was put in
 your *conf/*\ directory.  Now let's take a look at accessing each of
 those clouds and seeing what virtual machines are available for use.
@@ -7937,8 +7614,8 @@ This will require two options to cloud client.  The first is --conf ;
 this is used to select the cloud you wish to use.  Simply provide a path
 to the cloud configuration file.  This --conf switch will be used in all
 commands to direct cloud-client at the cloud of interest.
-| 
-|  The second option is --list.  This will simply provide a listing of
+
+The second option is --list.  This will simply provide a listing of
 all the available virtual machines:
 
 ::
@@ -7957,7 +7634,7 @@ tutorial:
 Run a Virtual Machine
 ~~~~~~~~~~~~~~~~~~~~~
 
-| Next, try to boot a virtual machine:
+Next, try to boot a virtual machine:
 
 ::
 
@@ -8077,7 +7754,7 @@ available for launch:
 Launch Your New VM
 ~~~~~~~~~~~~~~~~~~
 
-| You can now launch your new VM just like you did the hello-cloud VM
+You can now launch your new VM just like you did the hello-cloud VM
 above, simply changing the name from *hello-cloud* to *myvm *:
 
 ::
@@ -8129,7 +7806,7 @@ as you did in the *save a new VM step* and the --terminate option:
 Virtual Clusters
 ----------------
 
-| This is a basic walkthrough of how to run a sample virtual cluster. 
+This is a basic walkthrough of how to run a sample virtual cluster. 
 For more information on how they work, see
 *http://www.nimbusproject.org/docs/current/clouds/clusters2.html .*
 
@@ -8199,7 +7876,7 @@ Start the Cluster
 
     SSH trusts new key for vm-42.sdsc.futuregrid.org   compute-nodes #1 
 
-| This command takes a bit of time.  What is happening is cloud-client
+This command takes a bit of time.  What is happening is cloud-client
 is instructing Nimbus to start up three VMs on the user's behalf. 
 Information is put into the context broker.  When each VM boots, the
 context agent is run.  The context agent checks in with the context
@@ -8210,13 +7887,13 @@ clients use this mechanism to provide the nfs server with their IP
 addresses.  The NFS server then gets this information out of the context
 broker and uses it to authorize those IP addresses to remotely mount its
 disks. 
-| 
-|  When it is complete, your virtual cluster will be ready to go.
+
+When it is complete, your virtual cluster will be ready to go.
 
 Check Out the Virtual Cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Now ssh into one of the worker nodes and check out the file system.
+Now ssh into one of the worker nodes and check out the file system.
 
 ::
 
@@ -8231,14 +7908,14 @@ Check Out the Virtual Cluster
     198.202.120.134:/etc/grid-security/certificates
                           2.9G  1.2G  1.7G  42% /etc/grid-security/certificates
 
-| Notice the NFS mounted home directory.  Touch a file in that
+Notice the NFS mounted home directory.  Touch a file in that
 directory.
 
 ::
 
     $ echo "Hello FutureGrid" > /home/test_file
 
-| Now ssh into the other worker node and verify that the test file is
+Now ssh into the other worker node and verify that the test file is
 visible to this node as well.
 
 ::
@@ -8246,9 +7923,9 @@ visible to this node as well.
     $cat /home/test_file
     Hello FutureGrid
 
-| 
-| 
-| 
+
+
+
 
 +--------------------------------------------------------------------------------------------------------------+-------------+
 | Attachment                                                                                                   | Size        |
@@ -8269,11 +7946,11 @@ clouds, should find this useful.
 Launch A VM via Nimbus
 ======================
 
-| Once you have a FutureGrid Nimbus account and ssh access to
+Once you have a FutureGrid Nimbus account and ssh access to
 hotel.futuregrid.org, you can easily begin using the cloud.  All you
 need to do is ssh into hotel with ssh forwarding enabled, and type a
 single command:
-| 
+
 
 ::
 
@@ -8284,7 +7961,7 @@ single command:
     Access your VM with: ssh root@vm-156.uc.futuregrid.org
     Terminate your VM with: /soft/nimbus/tools/bin/cloudinitd.sh terminate 9ec20044
 
-| Notice the output from the above command.  It tells you how to access
+Notice the output from the above command.  It tells you how to access
 the VM, and how to clean it up when you are finished with it.  First
 let's access the VM and check out its file system.  The VM should have
 remotely mounted your home file system on FutureGrid.  This will allow
@@ -8311,7 +7988,7 @@ Options
 Using Other Nimbus Clouds on FutureGrid
 ---------------------------------------
 
-| By default, the VMs are launched on hotel's Nimbus cloud.  However,
+By default, the VMs are launched on hotel's Nimbus cloud.  However,
 you can use this script to launch a VM on any cloud to which you have
 access, including all of FutureGrid's Nimbus clouds, FutureGrid's
 Eucalytpus clouds, and FutureGrid's OpenStack clouds.  To run on a
@@ -8332,7 +8009,7 @@ env \ *CLOUDINITD\_IAAS\_URL* to one of the following:
 Launching Multiple VMs
 ----------------------
 
-| To launch many VMs at once, set the env
+To launch many VMs at once, set the env
 *CLOUDINITD\_SSHFS\_REPLICA\_COUNT* to the Number of VMs that you would
 like launched
 
@@ -8349,7 +8026,7 @@ set:
 -  export CLOUDINITD\_IAAS\_IMAGE='emi-5F4F1B49'
      
 
-| You may have trouble registering your keys.  This is due to Eucalyptus
+You may have trouble registering your keys.  This is due to Eucalyptus
 not yet supporting the latest version of the EC2 API.  To circumvent
 this, create a key pair named 'futuregrid', and set the env
 *CLOUDINITD\_IAAS\_SSHKEYNAME*\ to 'futuregrid'.  Then, set the env
@@ -8430,15 +8107,15 @@ user guide is also available
 **Requirements**
 ----------------
 
-| Users get access to the Eucalyptus features using the Eucalyptus EC2
+Users get access to the Eucalyptus features using the Eucalyptus EC2
 Interface, which is only available for GNU/Linux platforms. Therefore,
 users will require a machine with a GNU/Linux installed on it.
-|   
+ 
 
 Eucalyptus 3
 ''''''''''''
 
-| As of May 15, 2012, FutureGrid is using `Eucalyptus version
+As of May 15, 2012, FutureGrid is using `Eucalyptus version
 3 <http://www.eucalyptus.com/eucalyptus-cloud/iaas/features>`__ which
 requires `euca2ools
 2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ and python > 2.4
@@ -8447,7 +8124,7 @@ load euca2ools/2.0.2"** before using Eucalyptus. `euca2ools
 2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ is part of
 Eucalyptus Enterprise package. However, the source is available
 `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
-|   
+ 
 
 **Account Creation**
 --------------------
@@ -8478,16 +8155,16 @@ affiliation. There is no need to apply for accounts.
    scheme. The credential file will be found under the menu tab
    *username@fgnumber *.)
 
-| NOTICE: Due to an incompatibility problem introduced during the
+NOTICE: Due to an incompatibility problem introduced during the
 upgrade to the Eucalyptus 3.1 system, accessing the dashboard of
 Eucalyptus on india is tempararily unavailable. However, your credential
 will be in place so you can execute the later steps of this manual.
-|  On Sierra, the access is still available so you could download the
+On Sierra, the access is still available so you could download the
 credential zip file. Make sure to put it to Sierra first and then set up
 the environment as the following steps.
-|  Please be reminded that the credential for one cluster should/could
+Please be reminded that the credential for one cluster should/could
 not be used in another.
-|   
+ 
 
 |image88|
 
@@ -8665,8 +8342,8 @@ List the existing images using euca-describe-images:
 
 -  Create rules to allow access to the VM over ssh and to allow ping:
 
-    | $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
-    |  $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
+    $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
+    $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
 
 -  The ssh private key that was generated earlier can now be used to log
    in to the VM:
@@ -8790,7 +8467,7 @@ List the existing images using euca-describe-images:
 
 -  You can also delete your images:
 
-.. code:: rteindent1
+::
 
     $ euca-deregister emi-FFC3154F
 
@@ -8800,11 +8477,11 @@ Status of Deployments
 At times, you may ask if the Eucalyptus systems on FutureGrid are
 operational. You can find this out by visiting the following:
 
-| a) The Outage page
+a) The Outage page
 at \ `https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds <https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`__
-|  b) The Real Time Status monitor
+b) The Real Time Status monitor
 at \ `http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
-|  c) Our Runtime History
+c) Our Runtime History
 at \ `http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml <http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml>`__
 
 Using OpenStack on FutureGrid
@@ -8847,13 +8524,13 @@ Log into India
 ==============
 
 +-------------------------------------------------------------------------------------------------------------------------+
-|  Tip: to login into FutureGrid \ `see this page <https://portal.futuregrid.org/accessing-futuregrid-resources-ssh>`__   |
+ Tip: to login into FutureGrid \ `see this page <https://portal.futuregrid.org/accessing-futuregrid-resources-ssh>`__   |
 +-------------------------------------------------------------------------------------------------------------------------+
 
 The first step is to ssh into india.futuregrid.org using your FG
 username:
 
-.. code:: rteindent1
+::
 
     $ ssh gvonlasz@india.futuregrid.org
 
@@ -8881,13 +8558,13 @@ necessary environment variables.
 
 Unzip the credential file:
 
-.. code:: rteindent1
+::
 
     $ unzip ~/.futuregrid/openstack/openstack-essex-gvonlasz-india.zip -d ~/openstack
 
 Load Environment variables:
 
-.. code:: rteindent1
+::
 
     $ source ~/openstack/novarc
 
@@ -8906,7 +8583,7 @@ available for GNU/Linux platforms). In this tutorial, we are going to
 use the \ `Euca2ools <http://www.eucalyptus.com/download/euca2ools>`__
 client installed in India.
 
-.. code:: rteindent1
+::
 
     $ module load euca2ools
 
@@ -8915,7 +8592,7 @@ Testing Your Setup
 
 Use euca-describe-availability-zones to test the setup:
 
-.. code:: rteindent1
+::
 
     $ euca-describe-availability-zones 
 
@@ -8926,7 +8603,7 @@ List of Common Images
 
 Following are the current images uploaded in essex:
 
-.. code:: rteindent1
+::
 
     $ euca-describe-images |grep common
 
@@ -8966,7 +8643,7 @@ Before you instantiate a VM, you need to create at least one key pair.
 This key pair will be injected into the VM, allowing you to SSH into the
 instance. This is done using the *euca-add-keypair* command:
 
-.. code:: rteindent1
+::
 
     $ euca-add-keypair gvonlaszkey1 > gvonlaszkey1.pem
 
@@ -8981,7 +8658,7 @@ issuing the above command think about what you do.
 
 Fix the permissions on the generated private key:
 
-.. code:: rteindent1
+::
 
     $ chmod 0600 gvonlaszkey1.pem
 
@@ -8990,14 +8667,14 @@ created with a third-party tool using *euca-import-keypair*. For
 instance, if you have your ssh public key in india, you can do the
 following:
 
-.. code:: rteindent1
+::
 
     $ euca-import-keypair -f .ssh/id_rsa.pub gvonlaszkey2
 
 You can add multiple keys, and here's the command to check the list of
 your keys:
 
-.. code:: rteindent1
+::
 
     $ chmod 0600 keyname.pem
     euca-describe-keypairs
@@ -9020,7 +8697,7 @@ the output of the *euca-describe-images* command you saw earlier. Use
 the *euca-run-instances* command to start the VM (use the key name you
 specified before).
 
-.. code:: rteindent1
+::
 
     $ euca-run-instances -k gvonlaszkey -n 1 ami-000000b4
 
@@ -9051,11 +8728,11 @@ You can monitor the status of the instances by using the
 *euca-describe-instances* command. The public IP is highligthed in
 yellow; each VM should have one:
 
-.. code:: rteindent1
+::
 
     $ euca-describe-instances
 
-.. code:: rteindent1
+::
 
     RESERVATION r-xfj0nag8 461884eef90047fbb4eb9ec92f22a1e3 default
     INSTANCE i-0000090e ami-00000016 149.165.158.157 server-2318 running clegoues 0 m1.medium 2012-07-24T19:39:21.000Z india aki-00000014 ari-00000015
@@ -9073,7 +8750,7 @@ yellow; each VM should have one:
 You can monitor or restrict the output simply by checking the status of
 your VM:
 
-.. code:: rteindent1
+::
 
     $ euca-describe-instances i-00000a27
 
@@ -9083,7 +8760,7 @@ your VM:
 This VM does not have public IP yet. Getting the public IP may take some
 time, but it is needed to be able to connect to the VM:
 
-.. code:: rteindent1
+::
 
     $ euca-describe-instances i-00000a27
 
@@ -9097,7 +8774,7 @@ The ssh private key that was generated earlier can now be used to log in
 to the VM. You also need to indicate the public IP associated with your
 VM (use the key name you have specified before).
 
-.. code:: rteindent1
+::
 
     $ ssh -i gvonlaszkey.pem ubuntu@149.165.158.175
 
@@ -9108,7 +8785,7 @@ Note: For some ubuntu images, log in with the user *ubuntu,* then
 
 Exit from the VM to continue with the tutorial.
 
-.. code:: rteindent1
+::
 
     # exit
 
@@ -9117,7 +8794,7 @@ Making a snapshot with nova client
 
 You can make a snapshot of your instance:
 
-.. code:: rteindent1
+::
 
     $ nova image-create <instance name> <snapshot name>
     $ euca-describe-images
@@ -9142,7 +8819,7 @@ List available Volumes
 You can see the available volumes by using the *euca-describe-volumes*
 command:
 
-.. code:: rteindent1
+::
 
     $  euca-describe-volumes
 
@@ -9156,7 +8833,7 @@ Create a Volume
 
 Create a 1 GB volume in the India zone:
 
-.. code:: rteindent1
+::
 
     $  euca-create-volume -s 1 -z india
 
@@ -9171,7 +8848,7 @@ attached to a VM, *euca-describe-volumes* will show its status as
 
 Attach a volume to a running instance:
 
-.. code:: rteindent1
+::
 
     $  euca-attach-volume -i i-00000a27 -d /dev/vdc vol-0000031
 
@@ -9185,19 +8862,19 @@ Using the new Disk
 
 Log into the VM again (use the key name you specified before):
 
-.. code:: rteindent1
+::
 
     $ ssh -i gvonlaszkey.pem ubuntu@149.165.158.175
 
 Format the disk (skip this step if you want to reuse data stored):
 
-.. code:: rteindent1
+::
 
     # mkfs /dev/vdc
 
 Mount the disk:
 
-.. code:: rteindent1
+::
 
     # mount /dev/vdc /mnt
 
@@ -9207,7 +8884,7 @@ information stored there will be kept after you terminate the VM.
 
 Exit from the VM to continue with the tutorial:
 
-.. code:: rteindent1
+::
 
     # exit
 
@@ -9218,7 +8895,7 @@ Volumes are automatically detached when the instance is terminated.
 
 To detach a volume:
 
-.. code:: rteindent1
+::
 
     $  euca-detach-volume vol-00000031 
 
@@ -9236,7 +8913,7 @@ zones.
 Create Snapshot
 ---------------
 
-.. code:: rteindent1
+::
 
     $  euca-create-snapshot -d 'Testing snapshot' vol-00000027
 
@@ -9245,7 +8922,7 @@ Create Snapshot
 List Snapshot
 -------------
 
-.. code:: rteindent1
+::
 
     $  euca-describe-snapshots
 
@@ -9260,7 +8937,7 @@ a different zone (*-z* option).
 
 To create a 2 GB volume from snapshot:
 
-.. code:: rteindent1
+::
 
     $  euca-create-volume -s 2 --snapshot snap-00000001 -z india
 
@@ -9271,13 +8948,13 @@ Image Registration
 
 We will use an CentOS 5 image to test the image registration:
 
-.. code:: rteindent1
+::
 
     $ wget i120/test-image/centos5.tgz
 
 Uncompress and untar the archive:
 
-.. code:: rteindent1
+::
 
     $ tar xvfz centos5.tgz
 
@@ -9286,11 +8963,11 @@ Bundle the image with a kernel and a ramdisk using the
 already registered. *euca-describe-images* returns the kernel and
 ramdisk IDs that we need.
 
-.. code:: rteindent1
+::
 
     $ euca-bundle-image -i centos5.img --kernel aki-0000000e --ramdisk ari-0000000f
 
-.. code:: rteindent1
+::
 
     Checking image
     Encrypting image
@@ -9303,7 +8980,7 @@ ramdisk IDs that we need.
 Use the generated manifest file to upload the image. You need to specify
 a bucket name; it can be anything you want:
 
-.. code:: rteindent1
+::
 
     $ euca-upload-bundle -b gvonlasz-bucket -m /tmp/centos5.img.manifest.xml
 
@@ -9318,7 +8995,7 @@ a bucket name; it can be anything you want:
 
 Register the upload image:
 
-.. code:: rteindent1
+::
 
     $ euca-register gvonlasz-bucket/centos5.img.manifest.xml
 
@@ -9329,21 +9006,21 @@ with\ *euca-run-instances* as described earlier. However, you cannot run
 instances until the image is in available status. You can check the
 status using \ *euca-describe-images*:
 
-.. code:: rteindent1
+::
 
     $ euca-describe-instances ami00000033 IMAGE ami-00000033 gvonlasz-bucket/centos5.img.manifest.xml available private x86_64 machine aki-0000000e ari-0000000f instance-store
 
 Delete your images
 ==================
 
-.. code:: rteindent1
+::
 
     $ euca-deregister ami-00000033
 
 Terminate your VMs
 ==================
 
-.. code:: rteindent1
+::
 
     $ euca-terminate-instances i-00000a27
 
@@ -9357,25 +9034,25 @@ on finding a fix:
    (it is pingable and reachable from the outside). The private IP
    (which can be found via ifconfig) is pingable.
 
-   | ubuntu@server-837:~$ ifconfig
-   |  eth0      Link encap:Ethernet  HWaddr fa:16:3e:00:e5:2a 
-   |            inet addr:10.1.2.16  Bcast:10.1.2.255 
+   ubuntu@server-837:~$ ifconfig
+    eth0      Link encap:Ethernet  HWaddr fa:16:3e:00:e5:2a 
+              inet addr:10.1.2.16  Bcast:10.1.2.255 
    Mask:255.255.255.0
-   |            inet6 addr: fe80::f816:3eff:fe00:e52a/64 Scope:Link
-   |            UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-   |            RX packets:199 errors:0 dropped:0 overruns:0 frame:0
-   |            TX packets:188 errors:0 dropped:0 overruns:0 carrier:0
-   |            collisions:0 txqueuelen:1000
-   |            RX bytes:32213 (32.2 KB)  TX bytes:21676 (21.6 KB)
+              inet6 addr: fe80::f816:3eff:fe00:e52a/64 Scope:Link
+              UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+              RX packets:199 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:188 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:1000
+              RX bytes:32213 (32.2 KB)  TX bytes:21676 (21.6 KB)
 
-   | lo        Link encap:Local Loopback 
-   |            inet addr:127.0.0.1  Mask:255.0.0.0
-   |            inet6 addr: ::1/128 Scope:Host
-   |            UP LOOPBACK RUNNING  MTU:16436  Metric:1
-   |            RX packets:0 errors:0 dropped:0 overruns:0 frame:0
-   |            TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-   |            collisions:0 txqueuelen:0
-   |            RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+   lo        Link encap:Local Loopback 
+              inet addr:127.0.0.1  Mask:255.0.0.0
+              inet6 addr: ::1/128 Scope:Host
+              UP LOOPBACK RUNNING  MTU:16436  Metric:1
+              RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+              TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+              collisions:0 txqueuelen:0
+              RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 
 #. In Essex, each instance gets an internal DNS name.
    *euca-describe-instance* will show this name along with the public IP
@@ -9383,19 +9060,19 @@ on finding a fix:
    among all the nodes in the cluster, you will need to do so with these
    names or the private IP addresses:
 
-   | ubuntu@server-837:~$ ping server-716
-   |  PING server-716.novalocal (10.1.2.10) 56(84) bytes of data.
-   |  64 bytes from server-716.novalocal (10.1.2.10): icmp\_req=1 ttl=64
+   ubuntu@server-837:~$ ping server-716
+    PING server-716.novalocal (10.1.2.10) 56(84) bytes of data.
+    64 bytes from server-716.novalocal (10.1.2.10): icmp\_req=1 ttl=64
    time=5.06 ms
-   |  ^C
-   |  --- server-716.novalocal ping statistics ---
-   |  1 packets transmitted, 1 received, 0% packet loss, time 0ms
-   |  rtt min/avg/max/mdev = 5.062/5.062/5.062/0.000 ms
-   |  ubuntu@server-837:~$ ping server-837
-   |  PING server-837.novalocal (127.0.1.1) 56(84) bytes of data.
-   |  64 bytes from server-837.novalocal (127.0.1.1): icmp\_req=1 ttl=64
+    ^C
+    --- server-716.novalocal ping statistics ---
+    1 packets transmitted, 1 received, 0% packet loss, time 0ms
+    rtt min/avg/max/mdev = 5.062/5.062/5.062/0.000 ms
+    ubuntu@server-837:~$ ping server-837
+    PING server-837.novalocal (127.0.1.1) 56(84) bytes of data.
+    64 bytes from server-837.novalocal (127.0.1.1): icmp\_req=1 ttl=64
    time=0.032 ms
-   |  64 bytes from server-837.novalocal (127.0.1.1): icmp\_req=2 ttl=64
+    64 bytes from server-837.novalocal (127.0.1.1): icmp\_req=2 ttl=64
    time=0.018 ms
 
 Troubleshooting:
@@ -9403,7 +9080,7 @@ Troubleshooting:
 
 Console output will provide you more details about the VM:
 
-.. code:: rteindent1
+::
 
     $ euca-get-console-output <instanceId>
 
@@ -9441,7 +9118,7 @@ Generate and Register an OS Image on FutureGrid using the FG Shell
 Summary
 -------
 
-| Below, we summarize the different steps needed to create a new image
+Below, we summarize the different steps needed to create a new image
 and register it in a FutureGrid infrastructure. In this case, we will
 register the image in OpenStack, but it can be registered in any other
 FutureGrid infrastructure, such as Eucalyptus, Nimbus, or HPC. Detailed
@@ -9451,15 +9128,15 @@ in \ `http://futuregrid.github.com/rain/ <http://futuregrid.github.com/rain/>`_
 Request access
 --------------
 
-| Submit a ticket to request
+Submit a ticket to request
 access \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__
-| 
-|  Please use the subject: "Request to access FutureGrid Rain". Include
+
+Please use the subject: "Request to access FutureGrid Rain". Include
 in the body "I would like to obtain access to FutureGrid Rain".
 
-| *Note: In future we may just create a checkbox for this request in the
+*Note: In future we may just create a checkbox for this request in the
 help form.*
-|   
+ 
 
 Once you have access, you can continue the tutorial. Typically, it will
 take a business day for you to get added (a business day is 9am-5pm EST
@@ -9468,7 +9145,7 @@ Mon-Fri). 
 Log into India
 --------------
 
-.. code:: rteindent1
+::
 
     $ ssh <username>@india.futuregrid.org
     $ module load futuregrid
@@ -9480,7 +9157,7 @@ Execute the FG Shell. Please remember to replace <username> with your
 portal user name. Then, you will be asked for a password (which is your
 portal password):
 
-.. code:: rteindent1
+::
 
     $ fg-shell -u <username>
 
@@ -9490,16 +9167,16 @@ your prompt is different, you need to execute "use rain".
 Generate the Image
 ------------------
 
-| We are going to generate an Ubuntu 12.04 image. The -s parameter
+We are going to generate an Ubuntu 12.04 image. The -s parameter
 allows you to specify the software you want to install in your image.
 Currently, only the software available in the official repositories can
 be installed.
 
-.. code:: rteindent1
+::
 
     fg-rain> generate -o ubuntu -v 12.04 -a x86_64 -s wget, openmpi-bin
 
-| After a while, your image will be stored in the repository, and your
+After a while, your image will be stored in the repository, and your
 image ID will be printed.
 
 Image Repository
@@ -9509,7 +9186,7 @@ We can consult the information of the image by executing the following
 (please replace <imageid> with the ID that you got from the previous
 command):
 
-.. code:: rteindent1
+::
 
     fg-rain> list * where imgId=<imageId>
 
@@ -9522,7 +9199,7 @@ followed the FG Openstack tutorial, your novarc will probably be in
 ~/openstack/novarc). This command will return an <ami-ID>, which is the
 ID of the image in OpenStack.
 
-.. code:: rteindent1
+::
 
     fg-rain> register -r <imageId> -s india -v ~/novarc
 
@@ -9530,30 +9207,30 @@ Once you have registered the image, you need to wait until it becames
 available. To check the status of the image, you can execute the
 following command.
 
-.. code:: rteindent1
+::
 
     fg-rain> cloudlist -s india -v ~/novarc | grep <imageId>
 
-| The status is the second field. You may experience that this command
+The status is the second field. You may experience that this command
 takes time to respond when the image is being uploaded (it is an
 OpenStack issue).
 
 Start Image
 -----------
 
-| Once the image is in "available" status, we can proceed to start a VM
+Once the image is in "available" status, we can proceed to start a VM
 using the ami-ID that we got from the register command. In this case, we
 are going in Interative mode, which means that we are going to get
 logged into the VM once it is running.
 
-.. code:: rteindent1
+::
 
     fg-rain> launch -i <ami-ID> -s india -v ~/novarc -I
 
-| 
-| 
-| 
-| 
+
+
+
+
 
 FutureGrid Standalone Image Repository
 ======================================
@@ -9561,7 +9238,7 @@ FutureGrid Standalone Image Repository
 Introduction
 ------------
 
-| The FutureGrid image repository is a standalone service that is not
+The FutureGrid image repository is a standalone service that is not
 tied to FutureGrid nor to any IaaS infrastructure. This image repository
 offers a common interface that can distinguish image types for different
 IaaS frameworks like Nimbus, Eucalyptus, and also bare-metal images.
@@ -9574,8 +9251,8 @@ information is maintained in the catalog and can be searched by users
 and/or other FutureGrid services. Users looking for a specific image can
 discover available images ﬁtting their needs, and ﬁnd their location in
 the repository by using the catalog interface.
-| 
-|  The repository supports different storage systems that allow you to
+
+The repository supports different storage systems that allow you to
 choose the most appropriate one for you. It includes MySQL, where the
 image ﬁles are stored directly in the POSIX ﬁle system; MongoDB, where
 both data and ﬁles are stored in the NoSQL database; the OpenStack
@@ -9594,7 +9271,7 @@ Requirement
 Software
 --------
 
-| The software is open-source under an Apache 2 license. The image
+The software is open-source under an Apache 2 license. The image
 repository can be found in github as part of our Image Management and
 Rain
 software \ `https://github.com/futuregrid/rain <https://github.com/futuregrid/rain>`__ .
@@ -9602,7 +9279,7 @@ software \ `https://github.com/futuregrid/rain <https://github.com/futuregrid/r
 Documentation
 -------------
 
-| The documentation can be found
+The documentation can be found
 in \ `http://futuregrid.github.com/rain/index.html <http://futuregrid.github.com/rain/index.html>`__.
 Since this link provides information about all our tools, in this
 section we collect the links that refer to the image repository.
@@ -9618,7 +9295,7 @@ in \ `http://futuregrid.github.com/rain/man-shell.html <http://futuregrid.githu
 Installation
 ~~~~~~~~~~~~
 
-| You need to install the complete software, even if you only want to
+You need to install the complete software, even if you only want to
 use the image repository. This information is found
 in \ `http://futuregrid.github.com/rain/install.html <http://futuregrid.github.com/rain/install.html>`__.
 
@@ -9639,7 +9316,7 @@ You will be interested in:
 Manual Image Customization
 ==========================
 
-| Sometimes users need to further customize their images by installing
+Sometimes users need to further customize their images by installing
 their own software—software which may not be able to be installed with
 the image generation tool. In this tutorial, we explain how users can
 perform this customization in the images created with the FG image
@@ -9694,18 +9371,18 @@ in */N/u/<username>/123123123.tgz* .
 Customizing the image
 ---------------------
 
-| To continue with the rest of the tutorial, we need a UNIX machine
+To continue with the rest of the tutorial, we need a UNIX machine
 where we have root privileges.
-| 
-|  Assuming that we are in a UNIX machine with root privileges:
-| 
-|  1. Retrieve the image from India:
+
+Assuming that we are in a UNIX machine with root privileges:
+
+1. Retrieve the image from India:
 
 ::
 
     $ scp <username>@india.futuregrid.org:/N/u/<username/123123123.tgz .
 
-| 2. Decompress the image:
+2. Decompress the image:
 
 ::
 
@@ -9714,7 +9391,7 @@ where we have root privileges.
     jdiaz859434.img
     jdiaz859434.manifest.xml
 
-| 3. Mount the image. This will mount the image file into a directory.
+3. Mount the image. This will mount the image file into a directory.
 In this way, we will have access to the OS files that are inside the
 image.
 
@@ -9723,7 +9400,7 @@ image.
     $ mkdir image
     $ sudo mount -o loop jdiaz859434.img image
 
-| Copy your software into the image directory (if needed). In this case,
+Copy your software into the image directory (if needed). In this case,
 I am going to copy a software directory to the tmp directory of the
 image:
 
@@ -9731,7 +9408,7 @@ image:
 
     $ cp -r /home/javi/mysoftware image/tmp
 
-| *Chroot* into the image. This changes the root of the OS to the one of
+*Chroot* into the image. This changes the root of the OS to the one of
 the image. In this way, evey operation we execute will have effect only
 inside the image. After executing this command, you will be the root
 users inside the image.
@@ -9740,7 +9417,7 @@ users inside the image.
 
     $ sudo chroot image
 
-| Now you can install whatever software you need. You can also use
+Now you can install whatever software you need. You can also use
 *yum/apt* to install packages from the software repository. Remember
 that they will be installed inside the image. As example, here I install
 tomcat with *apt* and compile my software with *make*:
@@ -9751,11 +9428,11 @@ tomcat with *apt* and compile my software with *make*:
     # cd /tmp/mysoftware
     # make && make install
 
-| You can also configure the OS of image to start services during the
+You can also configure the OS of image to start services during the
 boot time. The easiest way to do that is by modifying
 the\ */etc/rc.local*\ file.
-| 
-|  Once you have finished customizing your image, you need to exit from
+
+Once you have finished customizing your image, you need to exit from
 the *chroot* command, unmount the image, and compress it again:
 
 ::
@@ -9796,7 +9473,7 @@ This ID is needed for the next step.
 Register your image in different infrastructures
 ------------------------------------------------
 
-| You now have your image ready to be registered in the different
+You now have your image ready to be registered in the different
 FutureGrid infrastructures. To use OpenStack
 (`tutorial <https://portal.futuregrid.org/tutorials/openstack>`__) and
 Eucalyptus
@@ -9824,8 +9501,8 @@ Register the image in HPC
 
     $ fg-register -u <username> -r <imageID> -x india
 
-| 
-|  Each command will provide you with the ami-ID that your image has in
+
+Each command will provide you with the ami-ID that your image has in
 the specified infrastructure.
 
 Using your Registered Image
@@ -9850,33 +9527,33 @@ Eucalyptus (more info in \ `https://portal.futuregrid.org/tutorials/eucalyptus3
 HPC (more info in \ `https://portal.futuregrid.org/tutorials/hpc <https://portal.futuregrid.org/tutorials/hpc>`__)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Provision a machine with our image and go into Interactive mode (you
+Provision a machine with our image and go into Interactive mode (you
 are logged into the machine):
 
 ::
 
     qsub -l os=<ami-ID> -I
 
-| Provision two machines with our image and execute an script:
+Provision two machines with our image and execute an script:
 
 ::
 
     qsub -l os=<ami-ID> -l nodes=2:ppn=8 myscript.sh
 
-| 
-| 
+
+
 
 RAIN Manual Pages
 =================
 
 FutureGrid provides a number of manual pages, listed below.
 
-| (For Rain, our up-to-date documentation of rain can be found at
+(For Rain, our up-to-date documentation of rain can be found at
 `https://portal.futuregrid.org/doc/rain/index.html <https://portal.futuregrid.org/doc/rain/index.html>`__
 and\ `http://futuregrid.github.com/rain/index.html <http://futuregrid.github.com/rain/index.html>`__
 .
-| 
-| 
+
+
 
 fg-repo
 =======
@@ -9920,7 +9597,7 @@ NAME
 **fg-portal-manage** - Futuregrid account management script - the portal
 portion
 
-| 
+
 
 SYNOPSIS
 --------
@@ -9954,7 +9631,7 @@ SYNOPSIS
                            approved, completed, denied
      -1, --pidonly         A sub-option for -p which prints out only the project
 
-| 
+
 
 DESCRIPTION
 -----------
@@ -9974,7 +9651,7 @@ ones. (Whoever has access to the portal server should have knowledge on
 this. We will not distribute this to anymore other than the portal admin
 and sys admin.)
 
-| 
+
 
 EXAMPLES
 --------
@@ -10055,8 +9732,8 @@ valid statuses are: pending, completed, denied.
 
     ./fg-portal-manage.py -p -s completed -1(number '1')
 
-| —prints a list of completed projects but only display the projectids.
-|   
+—prints a list of completed projects but only display the projectids.
+ 
 
 **SEE ALSO**
 ------------
@@ -10064,12 +9741,12 @@ valid statuses are: pending, completed, denied.
 ViNe
 ====
 
-| ViNe is available to FutureGrid users on the foxtrot and sierra
+ViNe is available to FutureGrid users on the foxtrot and sierra
 clusters, and can be deployed in any cloud on virtual machines (requires
 overlay network knowledge).
-| 
-|  **Overview**
-|  ViNe is a project developed at University of Florida that implements
+
+**Overview**
+ViNe is a project developed at University of Florida that implements
 routing and other communication mechanisms needed to deploy a user-level
 virtual network. ViNe is particularly appealing for cloud computing
 because it allows the establishment of wide-area virtual networks
@@ -10080,17 +9757,17 @@ low virtualization overheads. ViNe can provide communication among
 FutureGrid and external resources (including those with private IP
 addresses) without the need to reconfigure the (FutureGrid) physical
 network infrastructure.
-| 
-|  **Prerequisites**
-|  In order for a host to participate in ViNe overlays, users need root
+
+**Prerequisites**
+In order for a host to participate in ViNe overlays, users need root
 privilege to adjust operating system routing tables. Currently, users
 can get root privilege on the virtual machines (VMs) started on FG
 clouds. ViNe routers are available on foxtrot and sierra, and VMs
 started through Nimbus can be configured to participate on ViNe
 overlays.
-| 
-|  **Setup**
-|  All VMs must be members of ViNe overlays, independently wether they
+
+**Setup**
+All VMs must be members of ViNe overlays, independently wether they
 are on public or private networks. In order to enable the ViNe
 communication, the following command needs to be executed on
 participating VMs:
@@ -10100,14 +9777,14 @@ participating VMs:
     wget -P /tmp -N http://www.acis.ufl.edu/vine/enablevine.php
     . /tmp/enablevine.sh
 
-| 
-|  **Tutorial**
 
-| A step-by-step tutorial on connecting VMs to ViNe overlays is
+**Tutorial**
+
+A step-by-step tutorial on connecting VMs to ViNe overlays is
 available at:
-| 
+
 `https://portal.futuregrid.org/contrib/simple-vine-tutorial <https://portal.futuregrid.org/contrib/simple-vine-tutorial>`__
-|   
+ 
 
 OpenNebula 2.0 Tutorial
 =======================
@@ -10213,9 +9890,9 @@ of your linux distribution.
 
     http://dev.opennebula.org/projects/opennebula/repository/show/share/scripts
 
-| In this address you can find the vmcontext for each supported
+In this address you can find the vmcontext for each supported
 distribution.
-|  CentOS
+CentOS
 
 ::
 
@@ -10249,8 +9926,8 @@ In the VM copy the file to the /etc/init.d directory:
     sudo cp vmcontext.sh /etc/init.d
     sudo chmod +x /etc/init.d/vmcontext.sh
 
-| Configure init.d to execute the script during the VM startup
-|  Centos
+Configure init.d to execute the script during the VM startup
+Centos
 
 ::
 
@@ -10361,8 +10038,8 @@ Please check the `Virtual Machine definition
 file <http://www.opennebula.org/documentation:rel2.0:template>`__
 reference for details on all the sections.
 
-| A basic VM template to be run using KVM could be this:
-|   
+A basic VM template to be run using KVM could be this:
+ 
 
 ::
 
@@ -11145,14 +10822,14 @@ offerings on FutureGrid
 Using Map/Reduce in FutureGrid
 ==============================
 
-| As the computing landscape becomes increasingly data-centric,
+As the computing landscape becomes increasingly data-centric,
 data-intensive computing environments are poised to transform scientific
 research. In particular, MapReduce based programming models and run-time
 systems such as the open-source Hadoop system have increasingly been
 adopted by researchers with data-intensive problems, in areas including
 bio-informatics, data mining and analytics, and text processing. 
-| 
-|  FutureGrid provides capabilities that allow users to experiment with
+
+FutureGrid provides capabilities that allow users to experiment with
 MapReduce applications and middleware, including the widely-used
 Hadoop platform and the iterative map/reduce Twister plaftorm. There are
 different ways you may want to use MapReduce platforms in the testbed.
@@ -11162,8 +10839,8 @@ best suited depending on your goals, and links to respective tutorials:
  MapReduce on Physical Machines
 -------------------------------
 
-| 
-|  While there exist MapReduce systems that run on virtual machines,
+
+While there exist MapReduce systems that run on virtual machines,
 many dedicated Hadoop deployments run the Hadoop run-time and
 data-processing applications on physical machines to avoid I/O
 virtualization overheads. Currently, we have two major approaches for
@@ -11174,8 +10851,8 @@ with a 'one-click script' automatically on obtained HPC nodes and
 tasks are submitted to the Hadoop master directly. In addition,
 FutureGrid also supports Twister, a lightweight iterative MapReduce
 runtime, running on the HPC cluster. 
-| 
-|  Associated tutorials:
+
+Associated tutorials:
 
 -  `Basic High Performance
    Computing <https://portal.futuregrid.org/tutorials/hpc>`__ [novice]
@@ -11191,13 +10868,13 @@ runtime, running on the HPC cluster. 
  MapReduce on Virtual Machines
 ------------------------------
 
-| 
-|  Running Hadoop on virtual machines gives users the flexibility to
+
+Running Hadoop on virtual machines gives users the flexibility to
 customize the Hadoop runtime system and any additional middleware as
 desired, e.g. for research on novel MapReduce middleware approaches.
 Currently, Hadoop images can be deployed on FutureGrid resources in the
 following ways:
-| 
+
 
 -  `Using <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` Eucalyptus
    on
@@ -11211,19 +10888,19 @@ following ways:
    Eucalyptus <https://portal.futuregrid.org/twister-futuregrid-cloud-eucalyptus>`__
    [intermediate]
 
-| 
+
 
 Education / Training with MapReduce
 -----------------------------------
 
-| 
-|  FutureGrid offers educational virtual appliances that allow users to
+
+FutureGrid offers educational virtual appliances that allow users to
 deploy virtual private clusters where Hadoop tasks can be deployed using
 Condor. This approach allows users to not only experiment with Hadoop on
 FutureGrid, but also with virtual clusters, on their own resources.
 Currently, Hadoop virtual appliances can be deployed on FutureGrid
 resources in the following ways:
-| 
+
 
 -  `Running a Grid Appliance on
    FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__ [novice]
@@ -11496,14 +11173,14 @@ documentation in $MY\_HADOOP\_HOME/docs/myHadoop.pdf 
 Using SalsaHadoop on FutureGrid
 ===============================
 
-| PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
+PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.
-|   
+ 
 
 SalsaHadoop Introduction
 ------------------------
 
-| Apache Hadoop is widely used by domain scientists for running their
+Apache Hadoop is widely used by domain scientists for running their
 scientific applications in parallel fashion. For our research
 convenience, SalsaHPC research group develops SalsaHadoop, an automatic
 method to start Hadoop without worrying the Hadoop configuration, can be
@@ -11511,7 +11188,7 @@ running on any general cluster and multiple machines. SalsaHadoop has
 been used by `SalsaHPC research group <http://salsahpc.indiana.edu/>`__
 and a graduate-level course `CSCI B649 Cloud Computing for Data
 Intensive Sciences <http://salsahpc.indiana.edu/csci-b649-2011/>`__. 
-| 
+
 
 Running SalsaHadoop on FutureGrid
 ---------------------------------
@@ -11564,11 +11241,11 @@ have experience with IaaS Eucalyptus. 
 Hadoop Blast
 ============
 
-| Number:
-|  Author: Tak-Lon Stephen Wu
-|  Improvements: 
-|  Version: 0.1
-|  Date: 2011-11-01
+Number:
+Author: Tak-Lon Stephen Wu
+Improvements: 
+Version: 0.1
+Date: 2011-11-01
 
 Hadoop Blast
 ------------
@@ -11598,7 +11275,7 @@ tutorial <http://salsahpc.indiana.edu/tutorial/hadoopblast.html>`__.
 Acknowledge
 -----------
 
-| This page was original designed by
+This page was original designed by
 `SalsaHPC <http://salsahpc.indiana.edu/>`__ group for `Big Data for
 Science Workshop <http://salsahpc.indiana.edu/tutorial/>`__, you can see
 the original pages
@@ -11626,7 +11303,7 @@ Requirement
 HADOOP\_HOME
 ------------
 
-| Assuming your start SalsaHadoop/Hadoop with setting
+Assuming your start SalsaHadoop/Hadoop with setting
 $HADOOP\_HOME=~/hadoop-0.20.203.0, and is running the master node on
 i55. Then, we download the `Hadoop Blast source
 code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip>`__
@@ -11699,7 +11376,7 @@ Here is the description of the above command:
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 | 
-|  If Hadoop is running correctly, it will print hadoop running messages
+If Hadoop is running correctly, it will print hadoop running messages
 similar to the following:
 
 ::
@@ -11758,11 +11435,11 @@ Map-Reduce daemon:
 Hadoop WordCount
 ================
 
-| Number:
-|  Author: Tak-Lon Stephen Wu
-|  Improvements: 
-|  Version: 0.1
-|  Date: 2011-11-01
+Number:
+ Author: Tak-Lon Stephen Wu
+ Improvements: 
+Version: 0.1
+Date: 2011-11-01
 
 Hadoop WordCount
 ----------------
@@ -11782,7 +11459,7 @@ tutorial <http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html>`__.
 Acknowledge
 -----------
 
-| This page was original designed by
+This page was original designed by
 `SalsaHPC <http://salsahpc.indiana.edu/>`__ group for `Big Data for
 Science Workshop <http://salsahpc.indiana.edu/tutorial/>`__, you can see
 the original pages
@@ -11805,7 +11482,7 @@ Requirement
 1. Download and unzip WordCount under $HADOOP\_HOME
 ---------------------------------------------------
 
-| Assuming your start SalsaHadoop/Hadoop with setting
+Assuming your start SalsaHadoop/Hadoop with setting
 $HADOOP\_HOME=~/hadoop-0.20.203.0, and is running the master node on
 i55. Then, we download and unzip the `WordCount source
 code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip>`__
@@ -11906,7 +11583,7 @@ Map-Reduce daemon:
 Using Twister on FutureGrid
 ===========================
 
-| PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
+PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.
 
 What is Twister?
@@ -12038,16 +11715,14 @@ Papers and Presentations
 | |image126|   | Jaliya Ekanayake, Shrideep Pallickara, and Geoffrey Fox \ `MapReduce for Data Intensive Scientific Analysis <http://www.cs.indiana.edu/%7Ejekanaya/papers/eScience-final.pdf>`__, Fourth IEEE International Conference on eScience, 2008, pp.277-284.                                                                                                                                                                                    |
 +--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-| 
-
 Twister Blast
 =============
 
-| Number:
-|  Author: Yang Ruan
-|  Improvements: 
-|  Version: 0.1
-|  Date: 2011-11-07
+Number:
+ Author: Yang Ruan
+Improvements: 
+Version: 0.1
+Date: 2011-11-07
 
 Twister Blast
 -------------
@@ -12082,7 +11757,7 @@ tutorial <http://salsahpc.indiana.edu/tutorial/hadoopblast.html>`__.
 Acknowledge
 -----------
 
-| This page was original designed by
+This page was original designed by
 `SalsaHPC <http://salsahpc.indiana.edu/>`__ group for `Big Data for
 Science Workshop <http://salsahpc.indiana.edu/tutorial/>`__, you can see
 the original pages `here <http://salsahpc.indiana.edu/tutorial/>`__.
@@ -12108,7 +11783,7 @@ Requirement
 Twister-Blast
 -------------
 
-| First, Download and unzip the `Twister
+First, Download and unzip the `Twister
 Blast <http://salsahpc.indiana.edu/tutorial/apps/twister-blast.tar.gz>`__
 package (named as $TWISTER\_BLAST\_PROGRAM here), then ​copy the
 unzipped ​$TWISTER\_BLAST\_PROGRAM/blast/dist/Twister-Blast.jar to the
@@ -12123,7 +11798,7 @@ according to users' needs. However, Input option (-query) and output
 option (-out) are not set in execmd but in inop and outop in order to be
 compatible with both BLAST+ and BLAST. Twister-BLAST will merge these
 command options by itself when invoking BLAST+ parallel.
-|  The execution command template inside\ **twister\_blast.properties**
+The execution command template inside\ **twister\_blast.properties**
 is given below.
 
 ::
@@ -12188,8 +11863,8 @@ Here is the description of the above command:
 | output prefix      | The prefix of output blast result                                           |
 +--------------------+-----------------------------------------------------------------------------+
 
-| 
-|  If Twister Blast is running correctly, it will print twister running
+
+If Twister Blast is running correctly, it will print twister running
 messages similar to the following:
 
 ::
@@ -12215,7 +11890,7 @@ daemon and broker:
 
     $TWISTER_HOME/bin/stop_twister.sh
 
-| 
+
 
 Eucalyptus and Twister on FutureGrid
 ====================================
@@ -12223,34 +11898,34 @@ Eucalyptus and Twister on FutureGrid
 The FutureGrid Twister Tutorial
 ===============================
 
-| SALSA Group
-|  PTI Indiana University
+SALSA Group
+PTI Indiana University
 
  
 
 I. Introduction
 ~~~~~~~~~~~~~~~
 
-| This tutorial will show you how to use Twister under Eucalyptus on
+This tutorial will show you how to use Twister under Eucalyptus on
 India, FutureGrid.
-|   
+ 
 
 II. Prerequisite
 ~~~~~~~~~~~~~~~~
 
-| Follow tutorial `Using Eucalyptus on
+Follow tutorial `Using Eucalyptus on
 FutureGrid <http://portal.futuregrid.org/tutorials/eucalyptus>`__ to
 learn how to install and use the Eucalyptus client tool to access
 resources on India, FutureGrid.
-|   
+ 
 
 III. Download FutureGrid Eucalyptus Twister Tool 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| This tool is a set of python scripts. They can provide a
+This tool is a set of python scripts. They can provide a
 pre-configured Twister environment, and also can terminate the
 environment. Please 
-|  download the tool in the attachment below.
+download the tool in the attachment below.
 
  IV. Start Twister Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12264,8 +11939,8 @@ To start a Twister environment, execute the following program: 
     e.g.
     $ python fg_euca_start_twister.py -k userkey -i userkey.pem -n 3 -t c1.medium
 
-| 
-|  Here,
+
+Here,
 
 -  -k is the user key name generated by the **euca-add-keypair** step in
    the Eucalyptus tutorial.
@@ -12274,16 +11949,16 @@ To start a Twister environment, execute the following program: 
 -  -n is the number of instances for starting.
 -  -t  is the type of image.
 
-| The following is an execution example:
-|  |image127|
-| 
-|  Once the script is executed, the user can get a prepared Twister
+The following is an execution example:
+|image127|
+
+Once the script is executed, the user can get a prepared Twister
 environment.
-|  Then, the user can follow the instructions provided by
+Then, the user can follow the instructions provided by
 **fg\_euca\_start\_twister.py** to start ActiveMQ on the assigned node,
-|  and also start the Twister environment (could be on any node just
+and also start the Twister environment (could be on any node just
 applied).
-|   
+ 
 
 V. Terminate Twister Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -12317,10 +11992,10 @@ Log into the node assigned for ActiveMQ broker. 
 2. Start Twister and ActiveMQ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| Open two terminals and log into the node mentioned above. One is for
+Open two terminals and log into the node mentioned above. One is for
 starting ActiveMQ; the other is for starting Twister.
-| 
-|  In Terminal 1:
+
+In Terminal 1:
 
 ::
 
@@ -12371,7 +12046,7 @@ In the terminal used in Step 3, do the following:
 
     $ ./create_partition_file.sh kmeans km ../samples/kmeans/bin/p.pf
 
-| Back in the terminal used in Step 4, do the following:
+Back in the terminal used in Step 4, do the following:
 
 ::
 
@@ -12428,15 +12103,15 @@ pegasus-support <pegasus-support at isi dot edu>
 The Pegasus Run-Time Cloud Architecture
 ---------------------------------------
 
-| Pegasus uses the `Condor high-throughput scheduling
+Pegasus uses the `Condor high-throughput scheduling
 system <http://research.cs.wisc.edu/condor/>`__ to provide the work of
 executing a plan created by Pegasus from the abstract workflow
 description.
 
-| |Cloud site sample layouts.|
-|  **Figure:** Cloud Site Layouts example.
+|Cloud site sample layouts.|
+**Figure:** Cloud Site Layouts example.
 
-| The figure above shows two cloud sites, typically two distinct IaaS
+The figure above shows two cloud sites, typically two distinct IaaS
 clouds, with two virtual machines (VMs) running in each site. 
 Effectively, it shows a sample layout for sky computing (as in: multiple
 clouds) as supported by Pegasus. At this point, it is up to the user to
@@ -12457,14 +12132,14 @@ The figure above shows the way Pegasus WMS is deployed in cloud
 computing resources, ignoring how these resources were provisioned. The
 provisioning request shows multiple resources per provisioning request.
 
-| The provisioning broker -- Nimbus, Eucalyptus or EC2 -- is responsible
+The provisioning broker -- Nimbus, Eucalyptus or EC2 -- is responsible
 to allocate and set up the resources. Please note that each provisioning
 broker comes with its own set of client tools that may be executed
 either on your laptop or desktop in front of you, or from a FutureGrid
 login node. The FutureGrid tutorials for the various IaaS services have
 details on their client tools and usage.
-| 
-|  For a multi-node request, the worker nodes often require access to a
+
+For a multi-node request, the worker nodes often require access to a
 form of shared data storage. Concretely, either a POSIX-compliant shared
 file system (e.g. NFS, PVFS) is available to the nodes, or can be
 brought up for the lifetime of the application workflow. The task steps
@@ -12577,7 +12252,7 @@ caching service that stands up more workers on more resources as the
 number of requests to the service increases. Another example is a
 scheduler that grows its set of resources as demand grows.
 | 
-|  Currently Phantom works with all FutureGrid Nimbus and OpenStack
+Currently Phantom works with all FutureGrid Nimbus and OpenStack
 clouds as well as Amazon and the XSEDE wispy cloud (the only XSEDE cloud
 for now). A user can access it via two types of clients: an easy to use
 web application and a scripting client. The scripting client is the boto
@@ -12586,14 +12261,14 @@ so you can think of it as Amazon Autoscale for FutureGrid clouds that
 also allows for cloudburst to XSEDE and commercial clouds and is easy to
 extend with your own policies and sensors.
 | 
-|  The simplest scenario for using Phantom is as a gateway for deploying
+The simplest scenario for using Phantom is as a gateway for deploying
 and monitoring groups of virtual machines spread over multiple
 FutureGrid clouds. In a more complex scenario you can use it to
 cloudburst from FutureGrid clouds to Amazon. Finally, you can use it to
 explore policies that will automate cloudbursting and VM allocations
 between multiple clouds.
 | 
-|  For more information and/or to use the service go to
+For more information and/or to use the service go to
 `www.nimbusproject.org/phantom <http://www.nimbusproject.org/phantom>`__.
 It should take no more than 10-15 minutes to start your own VMs.
 
@@ -12651,7 +12326,7 @@ Installation
 your experiment, Precip is available on the interactive logins nodes via
 modules: module load precip/0.1
 | 
-|  You can also install Precip on your own machine. Prerequisites are
+You can also install Precip on your own machine. Prerequisites are
 the Paramiko and Boto Python modules. The Python source package and RPMs
 are available at:
 `http://pegasus.isi.edu/static/precip/software/ <http://pegasus.isi.edu/static/precip/software/>`__
@@ -13163,23 +12838,23 @@ We also need a bootstrap.sh which sets up the instances:
                     
                 
 
-| 
+
 
 cloudinit.d
 ===========
 
-| cloudinit.d is a tool designed for launching, controlling, and
+cloudinit.d is a tool designed for launching, controlling, and
 monitoring complex environments in the cloud.
-| 
-|  Its most important feature is repeatable, one-click, deployment of
+
+Its most important feature is repeatable, one-click, deployment of
 sets of VMs configured with launch plans.  These sets of VMs can be
 deployed over multiple clouds (Eucalyptus, Nimbus, OpenStack, and Amazon
 EC2 are currently supported) as well as include non-virtualized
 resources. Like the Unix init.d process, cloudinit.d can manage
 dependencies between deployed VMs. It also provides mechanisms for
 testing, monitoring, and repairing a launch.
-| 
-|  For more information about cloudinit.d see our \ `Teragrid 2011
+
+For more information about cloudinit.d see our \ `Teragrid 2011
 paper <http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf>`__. For
 repeatable experiment management with cloudinit.d read the \ `report
 on <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__ `support
@@ -13203,10 +12878,10 @@ UNICORE 6 on FutureGrid
  User Manual
 =======================
 
-| Author: Karolina Sarnowska-Upton, University of Virginia
-|  Version: 1.0
-|  Today's Date: 2010-12-21
-|  Last Revision: 2011-11-28
+Author: Karolina Sarnowska-Upton, University of Virginia
+Version: 1.0
+Today's Date: 2010-12-21
+Last Revision: 2011-11-28
 
 Introduction
 ============
@@ -13391,53 +13066,53 @@ Run ucc to get list and description of available commands
 
     ucc
 
-| Usage: ucc <command> [OPTIONS] <args>
-|  The following commands are available:
-|  DATA MANAGEMENT
-|   ls                     - list a storage
-|   rm                    - remove a remote file or directory
-|   copy-file-status      - check status of a copy-file
-|   get-file              - get remote files
-|   find                 - find files on storages
-|   resolve                - resolve remote location
-|   mkdir                  - create a directory remotely
-|   copy-file             - copy remote files
-|   put-file               - puts a local file to a remote server
-|  GENERAL
-|   create-storage       - create a storage service instance
-|   connect               - connect to UNICORE
-|   list-storages         - list the available remote storages
-|   list-applications    - lists applications on target systems
-|   list-jobs             - list your jobs
-|   list-sites             - list remote sites
-|   system-info            - checks the availability of services
-|  JOB EXECUTION
-|   run                    - run a job through UNICORE 6
-|   get-status             - get job status
-|   abort-job             - abort a job
-|   batch                  - run ucc on a set of files
-|   get-output            - get output files
-|  OGSA-BES
-|   bes-list-att           - provides information about U6 BES Interface
-|   bes-terminate-job      - terminate bes activity
-|   bes-submit-job         - run a job through UNICORE 6 BES Interface
-|   bes-list-jobs         - list jobs running on BES.
-|   bes-job-status         - get bes activity status
-|  OTHER
-|   shell                  - starts an interactive UCC session
-|   issue-delegation      - allows to issue a trust delegation assertion
-|   connect-to-testgrid   - get credentials for the public testgrid
-|   wsrf                   - perform a WSRF operation
-|   cip-query              - query a CIS Infoprovider at a UNICORE site
-|   run-groovy            - run a Groovy script
-|  WORKFLOW
-|   workflow-trace        - trace info on a workflow in Chemomentum
-|   workflow-control      - offers workflow control functions
-|   workflow-submit       - submit a workflow
-|   workflow-info         - lists info on workflows.
-|   broker-run             - submit work assignment to service
+Usage: ucc <command> [OPTIONS] <args>
+ The following commands are available:
+ DATA MANAGEMENT
+  ls                     - list a storage
+  rm                    - remove a remote file or directory
+  copy-file-status      - check status of a copy-file
+  get-file              - get remote files
+  find                 - find files on storages
+  resolve                - resolve remote location
+  mkdir                  - create a directory remotely
+  copy-file             - copy remote files
+  put-file               - puts a local file to a remote server
+ GENERAL
+  create-storage       - create a storage service instance
+  connect               - connect to UNICORE
+  list-storages         - list the available remote storages
+  list-applications    - lists applications on target systems
+  list-jobs             - list your jobs
+  list-sites             - list remote sites
+  system-info            - checks the availability of services
+ JOB EXECUTION
+  run                    - run a job through UNICORE 6
+  get-status             - get job status
+  abort-job             - abort a job
+  batch                  - run ucc on a set of files
+  get-output            - get output files
+ OGSA-BES
+  bes-list-att           - provides information about U6 BES Interface
+  bes-terminate-job      - terminate bes activity
+  bes-submit-job         - run a job through UNICORE 6 BES Interface
+  bes-list-jobs         - list jobs running on BES.
+  bes-job-status         - get bes activity status
+ OTHER
+  shell                  - starts an interactive UCC session
+  issue-delegation      - allows to issue a trust delegation assertion
+  connect-to-testgrid   - get credentials for the public testgrid
+  wsrf                   - perform a WSRF operation
+  cip-query              - query a CIS Infoprovider at a UNICORE site
+  run-groovy            - run a Groovy script
+ WORKFLOW
+  workflow-trace        - trace info on a workflow in Chemomentum
+  workflow-control      - offers workflow control functions
+  workflow-submit       - submit a workflow
+  workflow-info         - lists info on workflows.
+  broker-run             - submit work assignment to service
 orchestrator
-|  Enter 'ucc <command> -h' for help on a particular
+ Enter 'ucc <command> -h' for help on a particular
 
 Installation Conclusion
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -13482,10 +13157,10 @@ identity and who you trust via keystore and truststore files:
    of the Certificate Authorities you trust. It is not as sensitive as a
    keystore, but it is also encrypted.
 
-| For an overview of the security mechanism found in the UNICORE grid
-middleware, please consult the `Users' UNICORE Security Guide \| UCC
+For an overview of the security mechanism found in the UNICORE grid
+middleware, please consult the `Users' UNICORE Security Guide \UCC
 version <http://unicore.svn.sourceforge.net/svnroot/unicore/documentation/old/securityGuide/Main-UCCOnly.pdf>`__
-|  This guide also discusses common security configuration problems and
+ This guide also discusses common security configuration problems and
 details how to create keystores/truststores
 
 Setting Up a
@@ -13514,9 +13189,9 @@ into a truststore file. This should include:
 
 CA cert for CA that issued your certificate
 
-| CA cert for CA that issued FutureGrid U6 endpoint certs (Email
+CA cert for CA that issued FutureGrid U6 endpoint certs (Email
 `uvacse@virginia.edu <mailto:uvacse@virginia.edu>`__ for cert)
-|   
+  
 
 To create a truststore with keytool
 
@@ -13555,14 +13230,14 @@ options can be modified to allow this behavior.
 
 #. In the preferences file, set the contact-registry to false:
 
-.. code:: rteindent1
+::
 
       contact-registry=false
 
 2. Instead, provide at least one BESFactory URL using the following
    format.
 
-.. code:: rteindent1
+::
 
       bes.1=https://site1.com/services/BESFactory
       bes.4=file:///tmp/bes.xml
@@ -13606,7 +13281,7 @@ $UCC\_HOME/conf/preferences
 Example Preferences File
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: rteindent1
+::
 
     keystore=/home/gridcerts/keystore.p12
     password=YOUR-KEYSTORE-PASSWORD
@@ -13664,9 +13339,9 @@ Configuration
 Conclusion
 ~~~~~~~~~~
 
-| Your UCC has now been configured to access the FutureGrid U6 endpoint
+Your UCC has now been configured to access the FutureGrid U6 endpoint
 via X-509 based mutual client authentication
-|  Consult the next section to learn about getting started and submit
+ Consult the next section to learn about getting started and submit
 jobs
 
 Submitting Jobs to FutureGrid U6 Endpoints
@@ -13710,19 +13385,19 @@ To send a job read from a JSDL file
 
 -  to a site listed in the preferences file:
 
-.. code:: rteindent1
+::
 
             $UCC_HOME/bin/ucc bes-submit-job -j hellompi.xml -s bes.3 -v
 
 -  using a BESFactory URL:
 
-.. code:: rteindent1
+::
 
       ucc bes-submit-job -j hellompi.xml -s https://example.com/services/BESFactory -v
 
 -  using an endpoint reference file path:
 
-.. code:: rteindent1
+::
 
       ucc bes-submit-job -j hellompi.xml -s file:///tmp/bes.xml -v
 
@@ -13951,10 +13626,10 @@ quickly.
 Starting/Stopping the UNICORE Servers
 -------------------------------------
 
-| The servers are started with the start.sh script and stopped with the
+The servers are started with the start.sh script and stopped with the
 stop.sh script. Both of these scripts are located under the UNICORE
 install directory.
-|   
+  
 
 .. code:: _fck_mw_lspace
 
@@ -13972,9 +13647,9 @@ Genesis II
  User Manual
 =========================
 
-| Author: University of Virginia
-|   Version: 1.0
-|    Last Revision: 2011-11-02
+Author: University of Virginia
+ Version: 1.0
+  Last Revision: 2011-11-02
 
  Introduction
 =============
@@ -14049,11 +13724,11 @@ Supported Data Staging
 Protocols
 ---------
 
-| Each of the GenesisII endpoints supports a number of protocols for
+Each of the GenesisII endpoints supports a number of protocols for
 staging data into and out of jobs as supported by the JSDL
 specification's Data Staging elements.  The following are the protocols
 currently supported by the GenesisII endpoints:
-| 
+
 
 Stage in:
 ~~~~~~~~~
@@ -14073,7 +13748,7 @@ Stage out:
 -  scp
 -  sftp
 
-| \*\* NOTE: ftp, scp, sftp is supported as per the HPC FSE standard and
+\*\* NOTE: ftp, scp, sftp is supported as per the HPC FSE standard and
 only for the username/password security token version.
 
 Endpoint Connection Information
@@ -14167,7 +13842,7 @@ client or using the GenesisII client.
 Non-GenesisIIUsing a Standards-Compliant Client
 -----------------------------------------------
 
-| If you wish to use a standards-based middleware client, you may be
+If you wish to use a standards-based middleware client, you may be
 able to use that client to access the GenesisII BES endpoints within
 Futuregrid.  The first step is to determine whether the grid client
 software you wish to use is properly compliant with the GenesisII BES
@@ -14181,7 +13856,7 @@ provide a reference to the endpoints to the client tooling.  In either
 case, the information you or your grid administrator needs is included
 in the section above (`Connecting to the GenesisII BES
 Endpoints <#Connecting%20To%20GenesisII%20BES%20Endpoints>`__).
-| 
+
 
 Using The GenesisII Client
 --------------------------
@@ -14203,9 +13878,6 @@ Choose the platform that matches the machine/OS where you will be
 running your client and click the corresponding "Download" link to
 download the installer.
 
- 
-^
-
 Linux
 ^^^^^
 
@@ -14214,39 +13886,34 @@ with the entire GenesisII package inside.  Simply execute the shell
 script (./XCG-Installer in proper directory) to begin installation. 
 Follow the steps here in answering the installation questions.
 
- 
-^
 
 Windows
 ^^^^^^^
 
-| The Windows installer is an executable named XCG-Installer.exe. 
+The Windows installer is an executable named XCG-Installer.exe. 
 Simply run it like any other executable (e.g. double-clicking) and
 follow the steps here in answering the installation questions.
-| 
-|  Note that currently, the GenesisII software is only tested for
+
+Note that currently, the GenesisII software is only tested for
 Windows XP.  However, our early experience with Windows 7 (and Vista)
 indicates that the client installation will work fine as long as you
 install GenesisII in a folder that does not have special security
 meaning to Windows (such as your Documents and Settings directory or
 C:\\).
 
- 
-^
-
 MacOS
 ^^^^^
 
-| The MacOS installer is a dmg file named XCG-Installer.dmg encoded with
+The MacOS installer is a dmg file named XCG-Installer.dmg encoded with
 the entire GenesisII package inside.  Simply execute the dmg file (e.g.
 by double clicking) to begin installation.  Follow the steps here in
 answering the installation questions.
-| 
+
 
 Installing the GenesisII/XCG Client Package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The installation process requires answering a few questions about
+The installation process requires answering a few questions about
 license agreement and configuration options.
 
 -  **Agree to license terms**.  The GenesisII license follows the Apache
@@ -14276,10 +13943,10 @@ license agreement and configuration options.
    installing with root privileges, we recommend choosing "No" to this
    question.
 
-| That's it.  Since the installer is specific to the UVA Cross Campus
+That's it.  Since the installer is specific to the UVA Cross Campus
 Grid, you not only have GenesisII successfully installed, but you have
 also configured your system to connect to the XCG.
-| 
+
 
 Getting Started
 ---------------
@@ -14302,18 +13969,18 @@ directory.
 Windows
 ^^^^^^^
 
-| Double click the "grid" file in the installation directory;
-|  or
-|  Open a Windows command line window, cd to the installation directory,
+Double click the "grid" file in the installation directory;
+or
+Open a Windows command line window, cd to the installation directory,
 and enter the grid.exe command.
 
 Linux or MacOS
 ^^^^^^^^^^^^^^
 
-| If you have a Window manager running, double click on the grid binary
+If you have a Window manager running, double click on the grid binary
 in the installation directory
-|  or
-|  Open a shell, cd to the installation directory and enter the grid
+or
+Open a shell, cd to the installation directory and enter the grid
 command
 
 .. code:: _fck_mw_lspace
@@ -14321,8 +13988,8 @@ command
      $> cd <installation directory>
      $> grid
 
-| **LogIn**
-|  Once you have a grid shell open, you need to be logged into your XCG
+**LogIn**
+Once you have a grid shell open, you need to be logged into your XCG
 grid account in order to perform most useful commands. First check to
 see if you are already logged in - the "whoami" command prints out your
 current credentials. If you are not logged in, it should look like this
@@ -14337,7 +14004,7 @@ information):
         "Client Cert EFC05BB7-295A-B313-E0E0-95A8CE61EB68"
      $XCG>
 
-| To login, use the "login" command.  The syntax is "login
+To login, use the "login" command.  The syntax is "login
 --username=<grid user name>".  After running this command, a popup
 window will prompt you for your password
 
@@ -14351,7 +14018,7 @@ window will prompt you for your password
      "uva-idp-group.2010" -> "Client Cert EFC05BB7-295A-B313-E0E0-95A8CE61EB68" 
      $XCG> 
 
-| The output from the post-login whoami command indicates that I have 2
+The output from the post-login whoami command indicates that I have 2
 new certificates - one that asserts that I am user jfk3w, and another
 that asserts that I have the permissions of the group
 "uva-idp-group.2010".  The XCG uses the uva-idp-group.2010 to set
@@ -14395,12 +14062,12 @@ to look at further documentation and FAQs
 SAGA supporting Distributed Applications on Grids, Clouds on FutureGrid
 =======================================================================
 
-| ***SAGA on FutureGrid***
-| 
-| 
-|  ***Activity***:
-| 
-|  The Simple API for Grid Applications (SAGA) is an OGF standard
+***SAGA on FutureGrid***
+
+
+***Activity***:
+
+The Simple API for Grid Applications (SAGA) is an OGF standard
 (`http://www.ogf.org/ <http://www.ogf.org/>`__), and defines a high
 level, application-driven API for developing first-principle distributed
 applications, and for distributed application frameworks and tools. Our
@@ -14414,20 +14081,20 @@ environments available on FG for extensive portability and
 interoperability testing, but also for scale-up and scale-out
 experiments. These activities allow to harden the SAGA components
 described above, and support CS and Science experiments based on SAGA.
-| 
-|  ***Achievements:***
-| 
-|  FG has provided a persistent, production-grade experimental
+
+***Achievements:***
+
+FG has provided a persistent, production-grade experimental
 infrastructure with the ability to perform controlled experiments,
 without violating production policies and disrupting production
 infrastructure priorities.  These attributes, coupled with FutureGrid's
 technical support, have resulted in the following specific advances in
 the short period of under a year:
-| 
-|  *1: Use of FG for Standards-based development and interoperability
+
+*1: Use of FG for Standards-based development and interoperability
 tests:*
-| 
-|  We have, in particular, been able to prepare SAGA for future
+
+We have, in particular, been able to prepare SAGA for future
 deployments on XSEDE; this has occurred by testing the SAGA-BES adaptor
 in a variety of configurations: against Unicore and Genesis-II backends,
 with UserPass and Certificate-based authentication, with POSIX and HPC
@@ -14435,27 +14102,27 @@ application types, with and without file staging support.  While those
 tests are still ongoing, it allows us to be confident about the expected
 XSEDE middleware evolution; in the vast majority of cases, the
 standards-based approach seems to work without a hitch.
-| 
-|  Furthermore, we are continuously using FG-based job submission
+
+Furthermore, we are continuously using FG-based job submission
 endpoints for GIN-driven interoperation tests with a variety of other
 production Grid infrastructures, including DEISA, PRACE, Teragrid and
 EGI (see
 `http://forge.gridforum.org/sf/projects/gin/ <http://forge.gridforum.org/sf/projects/gin/>`__
 and
 `http://www.saga-project.org/interop-demos/ <http://www.saga-project.org/interop-demos/>`__).
-| 
-|  In order to simplify the deployment and to improve end user support
+
+In order to simplify the deployment and to improve end user support
 for SAGA, we have been using FG hosts to develop, test and harden our
 deployment procedures by mimicking the CSA approach we currently use on
 TeraGrid and XSEDE.  At the same time, that deployment procedure makes
 SAGA and SAGA-based components available and maintained on all FG
 endpoints.
-| 
-| 
-|  *2: Use of FG for Analysing & Comparing Programming Models and
+
+
+*2: Use of FG for Analysing & Comparing Programming Models and
 Run-time tools for Computation and Data-Intensive Science.*
-| 
-|  *2.a: Development of Tools and Frameworks:*
+
+*2.a: Development of Tools and Frameworks:*
 
 -  P\* experiments
     'P\*' is a conceptual model of pilot-based abstractions, in
@@ -14526,8 +14193,8 @@ Run-time tools for Computation and Data-Intensive Science.*
    use BigJob both on FutureGrid HPC and Cloud resources as well as on
    other resources such as the XSEDE and OSG Condor resources.
 
-|    
-|  *2.b: Data Intensive Apps:*
+   
+*2.b: Data Intensive Apps:*
 
 -  MapReduce [with Andre Luckow]
     In Ref. [1], published in Future Generation Computing Systems, we
@@ -14565,27 +14232,27 @@ Run-time tools for Computation and Data-Intensive Science.*
    understood environment at infrastructure scales that are not possible
    at the individual PI/resource level.
 
-| 
-|  *3. SAGA has also produced the following papers (selection):*
-|   
+
+*3. SAGA has also produced the following papers (selection):*
+ 
 
 See Refs:
 `[1] <#ref1>`__,\ `[2] <#ref2>`__,\ `[3] <#ref3>`__,\ `[4] <#ref4>`__,\ `[5] <#ref5>`__
 
-| 
-| 
-|  ***FuturePlans:***
-| 
-|  We will be continuing to use FG as a resource for SAGA development. 
+
+
+***FuturePlans:***
+
+We will be continuing to use FG as a resource for SAGA development. 
 Among other goals, we intend the following: to move the testing
 infrastructure to other SAGA based components, like our PilotJob and
 PilotData frameworks; to widen the set of middlewares used for testing
 (again, keeping XSEDE and other PGIs in mind); to enhance the scope and
 scale of our scalability testing; and to test and harden our deployment
 and packaging procedures.
-| 
-| 
-|   
+
+
+ 
 
 --------------
 
@@ -14885,7 +14552,7 @@ Your full job description file will now look something like this
 
     # a job to run a bash script { ApplicationName: Bash shell, ApplicationVersion: 3.1.16,  Environment: [ "SOURCE=remoteScript.sh", ],  Imports: [ { From: "./script.sh", To: "remoteScript.sh" }, ], Exports: [ { From: "output.txt", To:"./output.txt" }, ] }
 
-| Now run this job with the ucc run command. You can do the same with
+Now run this job with the ucc run command. You can do the same with
 Perl, Python or other scripting languages. Use ucc list-applications to
 see a full list of available scripting languages.
 
@@ -14916,7 +14583,7 @@ this URI. You can use this URI to access your Home directory as follows
 
     $ ucc put-file -s localfile.data -t https://vm-143.uc.futuregrid.org:8080/DEFAULT-SITE/services/StorageManagement?res=demo-Home#/remotefile.data
 
-| Note that the -s parameter for ucc put-file specifies the source file
+Note that the -s parameter for ucc put-file specifies the source file
 while -t specifies the target file.
 
 Using the full URI is sometimes inconvenient, so you can use a shorter,
@@ -14934,7 +14601,7 @@ will resolve the "Home" storage at the target system named
 
     $ ucc put-file -s localfile.data -t u6://DEFAULT-SITE/Home/testdata  $ ucc get-file -s u6://DEFAULT-SITE/Home/testdata -t newlocalfile.data
 
-| Remember that you will need to copy the file to the local working
+Remember that you will need to copy the file to the local working
 directory as part of your job in order to use it. To do this, include it
 in the job description file as an import as follows:
 
@@ -14986,10 +14653,10 @@ No votes yet
 Tutorials
 =========
 
-| 
-|  If you're looking for the Cloud Summer School 2012 (along with
+
+If you're looking for the Cloud Summer School 2012 (along with
 excellent tutorial material), click on the icon below:
-|   
+ 
 
 |image132|
 
@@ -15004,10 +14671,10 @@ developer, for instructions on how to add a tutorial to this list,
 please \ `refer to the TEOS
 page <https://portal.futuregrid.org/outreach>`__).
 
-| If you have corrections or suggestions related to our tutorial
+If you have corrections or suggestions related to our tutorial
 content, please `fill out a help
 request <https://portal.futuregrid.org/help>`__.
-|   
+ 
 
 Tutorial Topic 0: Accessing FutureGrid Resources
 ------------------------------------------------
@@ -15137,7 +14804,7 @@ Other Tutorials and Educational Materials
    tutorials <http://www.citutor.org/browse.php?access=&category=-1&search=performance&include=all&filter=Filter>`__
    (requires brief registration to view content)
 
-| 
+
 
 FutureGrid Grid Appliance for Nimbus and Eucalyptus
 ===================================================
@@ -15164,98 +14831,98 @@ One-click Hadoop WordCount on Eucalyptus FutureGrid
 I. Introduction
 ~~~~~~~~~~~~~~~
 
-| This tutorial shows how to run a one-click Hadoop WordCount job on the
+This tutorial shows how to run a one-click Hadoop WordCount job on the
 Eucalyptus platform of FutureGrid.
-| 
+
 
 II. Prerequisite
 ~~~~~~~~~~~~~~~~
 
-| 1. FutureGrid HPC account: please apply via \ `FutureGrid
+1. FutureGrid HPC account: please apply via \ `FutureGrid
 portal <../../user/register>`__ and \ `request a HPC
 account <../../request-hpc-account>`__.
-|  2. FutureGrid Eucalyptus account: please see `FutureGrid Eucalyptus
+2. FutureGrid Eucalyptus account: please see `FutureGrid Eucalyptus
 Tutorial <../../tutorials/eucalyptus3>`__ for detailed instructions.
-|  3. FutureGrid Eucalyptus credentials zip file
+3. FutureGrid Eucalyptus credentials zip file
 (euca2-[username]-x509.zip) stored under user's home directory
-|  4. Key pair created and added for use with Eucalyptus virtual
+4. Key pair created and added for use with Eucalyptus virtual
 machines
-| 
-|  The following sections assume a user has created both an HPC account
+
+The following sections assume a user has created both an HPC account
 and a Eucalpytus account under the username of *gaoxm*.
-| 
+
 
 III. Login to india.futuregrid.org
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| [gaoxm@129-79-49-98 ~]$ ssh -i .ssh/id\_rsa\_fg
+[gaoxm@129-79-49-98 ~]$ ssh -i .ssh/id\_rsa\_fg
 india.futuregrid.org                      
-|  Enter passphrase for key '.ssh/id\_rsa\_fg':
-|  Last login: Sat May  5 02:17:33 2012 from
+Enter passphrase for key '.ssh/id\_rsa\_fg':
+Last login: Sat May  5 02:17:33 2012 from
 c-71-194-153-252.hsd1.in.comcast.net
-|  ...
-|  torque/2.5.5 version 2.5.5 loaded
-|  moab version 5.4.0 loaded
-|  euca2ools version 1.2 loaded
-|  [gaoxm@i136 ~]$ cd eucalyptus/
-|  [gaoxm@i136 eucalyptus]$ ls
-|  cloud-cert.pem                 euca2-gaoxm-d108375b-pk.pem 
+...
+torque/2.5.5 version 2.5.5 loaded
+moab version 5.4.0 loaded
+euca2ools version 1.2 loaded
+[gaoxm@i136 ~]$ cd eucalyptus/
+[gaoxm@i136 eucalyptus]$ ls
+cloud-cert.pem                 euca2-gaoxm-d108375b-pk.pem 
 eucarc         hosts        nodes
-|  euca2-gaoxm-d108375b-cert.pem  euca2-gaoxm-x509.zip        
+euca2-gaoxm-d108375b-cert.pem  euca2-gaoxm-x509.zip        
 gaoxm.private  jssecacerts  tmp.out
-| 
+
 
 IV. Download and unzip the “hadoopOneClick.zip” package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| [gaoxm@i136 test]$ wget
+[gaoxm@i136 test]$ wget
 `http://mypage.iu.edu/~gao4/data/hadoopOneClick.zip <http://mypage.iu.edu/~gao4/data/hadoopOneClick.zip>`__
-|  ...
-|  [gaoxm@i136 test]$ ls
-|  hadoopOneClick.zip
-|  [gaoxm@i136 test]$ unzip hadoopOneClick.zip
-| 
+...
+[gaoxm@i136 test]$ ls
+hadoopOneClick.zip
+[gaoxm@i136 test]$ unzip hadoopOneClick.zip
+
 
 V. Run hadoop-one-click.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| [gaoxm@i136 test]$ cd hadoopOneClick
-|  [gaoxm@i136 hadoopOneClick]$ ls
-|  deploy-hadoop.sh     instanceIds.txt  publicIps.txt           
+[gaoxm@i136 test]$ cd hadoopOneClick
+[gaoxm@i136 hadoopOneClick]$ ls
+deploy-hadoop.sh     instanceIds.txt  publicIps.txt           
 stop-hadoop.sh
-|  hadoop-one-click.sh  ipHosts.txt      run-hadoop-wordcount.sh 
+hadoop-one-click.sh  ipHosts.txt      run-hadoop-wordcount.sh 
 terminate-instances.sh
-|  hosts                nodes.txt        start-instances.sh
-|  [gaoxm@i136 hadoopOneClick]$ chmod +x \*.sh
-|  [gaoxm@i136 hadoopOneClick]$ ./hadoop-one-click.sh -n 2 -t m1.small
+hosts                nodes.txt        start-instances.sh
+[gaoxm@i136 hadoopOneClick]$ chmod +x \*.sh
+[gaoxm@i136 hadoopOneClick]$ ./hadoop-one-click.sh -n 2 -t m1.small
 -i emi-D778156D -k gaoxm -p ~/eucalyptus/gaoxm.private -l
 `http://mypage.iu.edu/~gao4/data/grexp10.txt <http://mypage.iu.edu/~gao4/data/grexp10.txt>`__
 -s
 http://salsahpc.indiana.edu/tutorial/apps/hadoop-0.20.203.0-for-EucaVm.tar.gz
-| 
-|  This will run a MapReduce word-count job on a dynamically created
+
+This will run a MapReduce word-count job on a dynamically created
 virtual Hadoop cluster on FutureGrid. The user needs to replace the *–k*
 and *–p* parameter values with his/her key-pair name and private key
 path. For detailed usage information, try
-| 
-|  [gaoxm@i136 hadoopOneClick]$ ./hadoop-one-click.sh -h
-| 
+
+[gaoxm@i136 hadoopOneClick]$ ./hadoop-one-click.sh -h
+
 
 VI. Verify output
 ~~~~~~~~~~~~~~~~~
 
-| [gaoxm@i136 hadoopOneClick]$ ls outputs/
-|  \_logs  part-r-00000  \_SUCCESS
-|  [gaoxm@i136 hadoopOneClick]$ vim outputs/part-r-00000
-| 
+[gaoxm@i136 hadoopOneClick]$ ls outputs/
+\_logs  part-r-00000  \_SUCCESS
+[gaoxm@i136 hadoopOneClick]$ vim outputs/part-r-00000
+
 
 VII. Extensions
 ~~~~~~~~~~~~~~~
 
-| To run other MapReduce jobs, replace *run-hadoop-wordcount.sh* with
+To run other MapReduce jobs, replace *run-hadoop-wordcount.sh* with
 new scripts, and change *hadoop-one-click.sh* to call the corresponding
 scripts.
-| 
+
 
 One-click Twister K-means on Eucalyptus FutureGrid
 ==================================================
@@ -15263,116 +14930,116 @@ One-click Twister K-means on Eucalyptus FutureGrid
 I. Introduction
 ~~~~~~~~~~~~~~~
 
-| This tutorial shows how to run a one-click Twister K-means job on the
+This tutorial shows how to run a one-click Twister K-means job on the
 Eucalyptus platform of FutureGrid.
-| 
+
 
 II. Prerequisite
 ~~~~~~~~~~~~~~~~
 
-| 1. FutureGrid HPC account, please apply via \ `FutureGrid
+1. FutureGrid HPC account, please apply via \ `FutureGrid
 portal <https://portal.futuregrid.org/user/register>`__ and `request a
 HPC account <https://portal.futuregrid.org/request-hpc-account>`__.
-|  2. FutureGrid Eucalyptus account, please see \ `FutureGrid Eucalyptus
+2. FutureGrid Eucalyptus account, please see \ `FutureGrid Eucalyptus
 Tutorial <https://portal.futuregrid.org/tutorials/eucalyptus>`__ for
 detailed instructions.
-|  3. FutureGrid Eucalyptus credentials zip file
+3. FutureGrid Eucalyptus credentials zip file
 (euca2-[username]-x509.zip) stored under user's home directory.
-|  4. Key pair created and added for use with Eucalyptus virtual
+4. Key pair created and added for use with Eucalyptus virtual
 machines.
-| 
-|  The following sections assume a user has created both HPC account and
+
+The following sections assume a user has created both HPC account and
 Eucalpytus account under the username of “gaoxm”.
-| 
+
 
 III. Login to india.futuregrid.org
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| [gaoxm@129-79-49-98 ~]$ ssh -i .ssh/id\_rsa\_fg
+[gaoxm@129-79-49-98 ~]$ ssh -i .ssh/id\_rsa\_fg
 india.futuregrid.org                      
-|  Enter passphrase for key '.ssh/id\_rsa\_fg':
-|  Last login: Sat May  5 02:17:33 2012 from
+Enter passphrase for key '.ssh/id\_rsa\_fg':
+Last login: Sat May  5 02:17:33 2012 from
 c-71-194-153-252.hsd1.in.comcast.net
-|  ...
-|  torque/2.5.5 version 2.5.5 loaded
-|  moab version 5.4.0 loaded
-|  euca2ools version 1.2 loaded
-|  [gaoxm@i136 ~]$ cd eucalyptus/
-|  [gaoxm@i136 eucalyptus]$ ls
-|  cloud-cert.pem                 euca2-gaoxm-d108375b-pk.pem 
+...
+torque/2.5.5 version 2.5.5 loaded
+moab version 5.4.0 loaded
+euca2ools version 1.2 loaded
+[gaoxm@i136 ~]$ cd eucalyptus/
+[gaoxm@i136 eucalyptus]$ ls
+cloud-cert.pem                 euca2-gaoxm-d108375b-pk.pem 
 eucarc         hosts        nodes
-|  euca2-gaoxm-d108375b-cert.pem  euca2-gaoxm-x509.zip        
+euca2-gaoxm-d108375b-cert.pem  euca2-gaoxm-x509.zip        
 gaoxm.private  jssecacerts  tmp.out
-| 
+
 
 IV. Download and unzip the “twisterOneClick.zip” package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| [gaoxm@i136 test]$
+[gaoxm@i136 test]$
 wget \ `http://mypage.iu.edu/~gao4/data/twisterOneClick.zip <http://mypage.iu.edu/~gao4/data/hadoopOneClick.zip>`__
-|  ...
-|  [gaoxm@i136 test]$ ls
-|  hadoopOneClick  hadoopOneClick.zip  twisterOneClick.zip
-|  [gaoxm@i136 test]$ unzip twisterOneClick.zip
-| 
+...
+[gaoxm@i136 test]$ ls
+hadoopOneClick  hadoopOneClick.zip  twisterOneClick.zip
+[gaoxm@i136 test]$ unzip twisterOneClick.zip
+
 
 V. Run twister-one-click.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| [gaoxm@i136 test]$ cd twisterOneClick
-|  [gaoxm@i136 twisterOneClick]$ ls
-|  deploy-twister.sh  instanceIds.txt  publicIps.txt         
+[gaoxm@i136 test]$ cd twisterOneClick
+[gaoxm@i136 twisterOneClick]$ ls
+deploy-twister.sh  instanceIds.txt  publicIps.txt         
 stop-twister.sh
-|  hostnames.txt      ipHosts.txt      run-twister-kmeans.sh 
+hostnames.txt      ipHosts.txt      run-twister-kmeans.sh 
 terminate-instances.sh
-|  hosts              nodes.txt        start-instances.sh    
+hosts              nodes.txt        start-instances.sh    
 twister-one-click.sh
-|  [gaoxm@i136 twisterOneClick]$ chmod +x \*.sh
-|  [gaoxm@i136 twisterOneClick]$ ./twister-one-click.sh -n 2 -t m1.small
+[gaoxm@i136 twisterOneClick]$ chmod +x \*.sh
+[gaoxm@i136 twisterOneClick]$ ./twister-one-click.sh -n 2 -t m1.small
 -i emi-D778156D -k gaoxm -p ~/eucalyptus/gaoxm.private
 -l\ `http <http://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz>`__\ `://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz <http://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz>`__ -a
 http://www.iterativemapreduce.org/apache-activemq-5.4.2-bin.tar.gz
-| 
-|  This will run a MapReduce K-means job on a dynamically created
+
+This will run a MapReduce K-means job on a dynamically created
 virtual Twister cluster on  FutureGrid. The user needs to replace the
 “–k” and “–p” parameter values with his/her key-pair name and private
 key path. For detailed usage information, try
-| 
-|  [gaoxm@i136 twisterOneClick]$ ./twister-one-click.sh -h
-| 
+
+[gaoxm@i136 twisterOneClick]$ ./twister-one-click.sh -h
+
 
 VI. Verify results in the standard output of the scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Calling run\_kmeans.sh on 149.165.159.140...
-|  JobID: kmeans-map-reduce9ec9eaa2-9731-11e1-80d7-156f25bd362a
-|  May 6, 2012 4:11:57 AM
+Calling run\_kmeans.sh on 149.165.159.140...
+JobID: kmeans-map-reduce9ec9eaa2-9731-11e1-80d7-156f25bd362a
+May 6, 2012 4:11:57 AM
 org.apache.activemq.transport.failover.FailoverTransport doReconnect
-|  INFO: Successfully connected
+INFO: Successfully connected
 to \ `tcp://master:61616 <https://master:61616/>`__
-|  0    [main] INFO  cgl.imr.client.TwisterDriver  - Configure Mappers
+0    [main] INFO  cgl.imr.client.TwisterDriver  - Configure Mappers
 through the partition file, please wait....
-|  1975 [main] INFO  cgl.imr.client.TwisterDriver  - Configuring Mappers
+1975 [main] INFO  cgl.imr.client.TwisterDriver  - Configuring Mappers
 through the partition file is completed.
-|  250.77056136584878 , 125.15021341387315 , 249.21561041359857 ,
-|  246.74715176402833 , 375.350251646343 , 249.17570173022511 ,
-|  Total Time for kemeans : 6.808
-|  Total loop count : 15
-|  6260 [main] INFO  cgl.imr.client.TwisterDriver  - MapReduce
+250.77056136584878 , 125.15021341387315 , 249.21561041359857 ,
+246.74715176402833 , 375.350251646343 , 249.17570173022511 ,
+Total Time for kemeans : 6.808
+Total loop count : 15
+6260 [main] INFO  cgl.imr.client.TwisterDriver  - MapReduce
 computation termintated gracefully.
-|  ------------------------------------------------------
-|  Kmeans clustering took 6.841 seconds.
-|  ------------------------------------------------------
-| 
+------------------------------------------------------
+Kmeans clustering took 6.841 seconds.
+------------------------------------------------------
+
 
 VII. Extensions
 ~~~~~~~~~~~~~~~
 
-| To run other iterative MapReduce jobs, replace run-twister-kmeans.sh
+To run other iterative MapReduce jobs, replace run-twister-kmeans.sh
 with new scripts, and change twister-one-click.sh to call the
 corresponding scripts.
-| 
-| 
+
+
 
 Register Virtual Box Image on OpenStack
 =======================================
@@ -15620,13 +15287,13 @@ Virtual Appliances
 **Overview:**
 ~~~~~~~~~~~~~
 
-| Virtual appliances are virtual machine images encapsulating
+Virtual appliances are virtual machine images encapsulating
 pre-installed, pre-configured software that can be easily deployed on
 cloud resources. Users of FutureGrid can use public appliance images
 posted by other users, as well as contribute to the repository of
 images.
-| 
-|  This page provides a summary of community-provided virtual appliances
+
+This page provides a summary of community-provided virtual appliances
 that are available for use on FutureGrid. If you have created a virtual
 appliance and you would like to advertise its availability and features
 with the community, feel free to edit this page and include information
@@ -15635,18 +15302,18 @@ about your appliance.
  **Creating Your Own Appliance:**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Any FutureGrid user with Eucalyptus or Nimbus accounts can create and
+Any FutureGrid user with Eucalyptus or Nimbus accounts can create and
 register an appliance. The approach is similar in both cases: you can
 upload an existing image into FutureGrid (e.g. from another Eucalyptus
 or Nimbus cloud, or an image you create on your own computer), or you
 can customize an instance interactively in FutureGrid and save it in a
 FutureGrid resource.
-| 
+
 
 ***Nimbus***:
 ^^^^^^^^^^^^^
 
-| You can upload a "common" image so it becomes available to others in a
+You can upload a "common" image so it becomes available to others in a
 FutureGrid cloud resource - to do this, add the flag --common to the
 cloud\_client.sh command line when you transfer an image (ensure you are
 using cloud client version 020 or above).  You can also save a Nimbus
@@ -15655,14 +15322,14 @@ Please refer to the `manual for
 cloud\_client.sh <http://www.nimbusproject.org/docs/current/clouds/cloudquickstart.html>`__ and
 the  `Nimbus tutorial <http://portal.futuregrid.org/tutorials/nimbus>`__
 for instructions.
-| 
+
 
 ***Eucalyptus***: 
 ^^^^^^^^^^^^^^^^^^
 
-| Please refer to `FutureGrid tutorial
+Please refer to `FutureGrid tutorial
 GA7 <https://portal.futuregrid.org/tutorials/ga7>`__.
-| 
+
 
 **Reusing an Existing Appliance:**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -15685,7 +15352,7 @@ to this list, please add it to the table.
    explaining your appliance and its usage in more depth, and can link
    to it from this page*
 
-| 
+
 
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------------------------------+-----------------------------------------------------------+------------------------------+
 | **Appliance name**                                                                            | **Appliance description**                                                                       | **FutureGrid system(s) available**   | **Appliance ID**                                          | **Installed                  |
@@ -15705,7 +15372,7 @@ to this list, please add it to the table.
 |                                                                                               |                                                                                                 |                                      |                                                           |                              |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------------------------------+-----------------------------------------------------------+------------------------------+
 
-| 
+
 
 Average: Select ratingPoorOkayGoodGreatAwesome
 
@@ -15714,21 +15381,21 @@ No votes yet
 Development Projects
 ====================
 
-| FutureGrid provides a number of software development projects. Much
+FutureGrid provides a number of software development projects. Much
 (but not all) of our work we have just begun to move to github.
-| 
-|  The documentation for these projects can be found
+
+ The documentation for these projects can be found
 at \ `http://futuregrid.github.com/doc/ <http://futuregrid.github.com/doc/>`__
 .
-| 
-| 
-|   As a part of FutureGrid, many other projects perform development as
+
+
+ As a part of FutureGrid, many other projects perform development as
 well. These include Inca, Nimbus, Pegasus, PAPI, Vampir, as well as a
 project called hostlists. These projects either maintain their own
 repositories or use the FutureGrid sourceforge repository.
-| 
-|   Actvities on github include:
-| 
+
+ Actvities on github include:
+
 
 Rain
 
@@ -15789,7 +15456,7 @@ Upgrading Nimbus On FG clusters
 Disclaimer
 ----------
 
-| This document provides guidelines on how to upgrade Nimbus on
+This document provides guidelines on how to upgrade Nimbus on
 FutureGrid sites.  It is not a definitive guide to upgrading Nimbus
 anywhere.  An admin's own skills and intuition should be in full force
 while following this guide.  This page should be considered little more
@@ -15798,7 +15465,7 @@ than the notes from one effective upgrade from 2.7 to 2.8.
 Upgrading Workspace Service and Cumulus
 ---------------------------------------
 
-| First create a source directory and download the latest Nimbus release
+First create a source directory and download the latest Nimbus release
 from
 `http://www.nimbusproject.org/downloads/ <http://www.nimbusproject.org/downloads/>`__,
 and untar the distributions:
@@ -15811,14 +15478,14 @@ and untar the distributions:
     wget http://www.nimbusproject.org/downloads/nimbus-iaas-controls-2.8.tar.gz
     tar -zxf nimbus-iaas-controls-2.8.tar.gz
 
-| For convenience set the following variables:
+For convenience set the following variables:
 
 ::
 
     export OLD_NIMBUS=<path to old nimbus install>
     export NEW_NIMBUS=<path to new nimbus install>
 
-| Make sure that the old install is not running:
+Make sure that the old install is not running:
 
 ::
 
@@ -15883,26 +15550,26 @@ site
 
     done
 
-| Now verify that services/etc/nimbus-context-broker/jndi-config.xml has
+Now verify that services/etc/nimbus-context-broker/jndi-config.xml has
 the right caCertPath and caKeyPath (in almost every case it will not
 have the right values).
-|  Also verify that services/etc/globus\_wsrf\_core/server-config.wsdd
+Also verify that services/etc/globus\_wsrf\_core/server-config.wsdd
 has the right logicalHost.
-|  Also verify the customizations
+Also verify the customizations
 in services/etc/nimbus/workspace-service/other/authz-callout-ACTIVE.xml
 are still enabled (for example cp propagation).
-| 
-|  Also check $NEW\_NIMBUS/cumulus/etc/cumulus.ini for the backend
+
+Also check $NEW\_NIMBUS/cumulus/etc/cumulus.ini for the backend
 data\_dir if you are using type 'posix' (which you likely are).
-|  And check
+And check
 $NEW\_NIMBUS/services/etc/nimbus/workspace-service/cumulus.conf for the
 cumulus.authz.db and cumulus.repo.dir settings.
-| 
-|  Now you must load up the new Nimbus install with the backends from
+
+Now you must load up the new Nimbus install with the backends from
 the old install.  The following python script can help with that task. 
 Simply give it two arguments: $OLD\_NIMBUS $NEW\_NIMBUS
-| 
-| 
+
+
 `https://raw.github.com/nimbusproject/nimbus/master/docs/src/admin/reload.py <https://raw.github.com/nimbusproject/nimbus/master/docs/src/admin/reload.py>`__
 
 Upgrading Workspace Control
@@ -15915,14 +15582,14 @@ Set up the workspace control nodes by doing the following:
    user and group
 #. Create a symlink from /opt/nimbus to /opt/nimbus2.8
 
-| Now copy the old working workspace control code from a working VMM
+Now copy the old working workspace control code from a working VMM
 node to the source directory:
 
 ::
 
     scp -r working_node:/opt/nimbus2.7 ~/src/
 
-| Just like in the above step, run the following diff script to find
+Just like in the above step, run the following diff script to find
 configuration differences, give it the full path to nimbus2.7 as the
 first argument and the full path to the new distribution at the second:
 
@@ -15938,22 +15605,19 @@ first argument and the full path to the new distribution at the second:
 
     done
 
-| Merge all of the differences.  Check out the following files and merge
+Merge all of the differences.  Check out the following files and merge
 the differences:
-| 
-|  libexec/workspace-control/mount-alter.sh
-|  lantorrent/etc/\*
-|  etc/workspace-control/libvirt\_template.xml
-| 
-|  Make sure that everything in nimbus2.7/var/workspace-control/kernels
+
+libexec/workspace-control/mount-alter.sh
+lantorrent/etc/\*
+etc/workspace-control/libvirt\_template.xml
+
+Make sure that everything in nimbus2.7/var/workspace-control/kernels
 is also in
 nimbus-iaas-controls-2.8/workspace-control/var/workspace-control/kernels
-| 
-|  scp everything under nimbus-iaas-controls-2.8/workspace-control to
-all VMM nodes:/opt/nimbus/
 
-FAQ
-===
+scp everything under nimbus-iaas-controls-2.8/workspace-control to
+all VMM nodes:/opt/nimbus/
 
 FAQ
 ===
