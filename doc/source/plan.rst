@@ -39,7 +39,6 @@ Tasks:
     * introduction to how to build the documentation (Gregor, Fugang,
       getting everyone in the project, we need your github names, less
       than 1 day)
-
     * section on ssh (Gregor & Fugang, 2 days)
     * section on queuing systems (Allan, 1 day)
     * section on tutorials (Renato, Barbara, 1 day)
@@ -55,21 +54,23 @@ Tasks:
       sysadmin spend 1-2 days on fixing it, Gigniac, Legett, Allan,
       Koji, Shava, Mauricio, will need lots of help from Barbara with
       supervision by Gregor)
+    * task include QC and execution of section on FG
+    * MOOC coordination 1 week after all tasks abofe are completed.
 
-.. csv-table:: 
-   :header: "Who", "Effort"
-   :widths: 15, 80
+    .. csv-table:: 
+       :header:  "Who", "Effort"
+       :widths: 15, 80
 
-   * Gregor, 1 week
-   * Fugang, 2days
-   * Barbara, 2 days, mostly coordinating and than editorial work
-     additional 3 days
-   * Renato, 3-7 days
-   * Koji, 2 days
-   * Allan, 3-4 days
-   * Thalina, 2 days
-   * other sysadmins, 1day
-   * professional editor 7 days
+       * Gregor, 1 week
+       * Fugang, 2 days
+       * Barbara, 1 week editorial help
+       * Renato, 3-7 days
+       * Koji, 2 days
+       * Allan, 3-4 days
+       * Thalina, 2 days
+       * Other sysadmins, 1 day
+       * Professional editor, 7 days
+       * Sidd, 1 week with each topic lead 
 
 Sections to be determined what tp dp about:
     * papi
