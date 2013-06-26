@@ -6,6 +6,7 @@ Intoduction to Cloud Computing
    :numbered:
    :maxdepth: -1
 
+   plan
    title 
    todolist
    preface
