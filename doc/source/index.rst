@@ -12,10 +12,10 @@ FG Manual
    preface
    summary-executive
    introduction
+   hardware
 
 
    fgmanual
-   
    part-2
    contributing
    python
