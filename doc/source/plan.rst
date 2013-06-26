@@ -32,6 +32,8 @@ Deliverables:
         need just one chapter on ssh keys and not 5 as in the previous
         manual because the authors of the chapter did not consolidate
         between each other
+    #. Make sure to work with the software teams tight delivery schedule
+    #. be done with this by July 15th
 
 Tasks:
     * introduction to how to build the documentation (Gregor, Fugang,
