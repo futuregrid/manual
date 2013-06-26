@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>6. Hardware &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="7. Getting Started" href="fgmanual.html" />
+    <link rel="prev" title="5. Introduction" href="introduction.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plan.html">1. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="title.html">2.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">3. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">4. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">4.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">4.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">4.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">4.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">5. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">5.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">5.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">5.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">5.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">5.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">6. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compute-resources">6.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storage-resources">6.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status">6.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#maintenance">6.4. Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">6.5. Compute Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">7. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">7.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">7.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">7.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">8. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">8.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">8.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">9. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">9.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">9.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">9.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">9.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">10. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">10.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">10.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">10.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">10.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">10.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">11. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">12. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">13. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">13.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">13.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">13.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">13.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">13.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">13.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">14. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">15. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">15.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">15.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">15.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">15.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">15.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">15.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">15.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">15.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">16. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">17. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">18. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">18.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">18.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">18.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">18.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">18.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">18.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">18.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">19. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">19.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">19.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">19.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">20. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">20.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">21. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">22. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">23. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">24. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">25. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">26. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">26.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">26.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">26.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">27. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">27.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">27.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">27.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">27.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">27.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">27.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">28. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">29. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">29.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">29.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">30. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">30.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">30.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">30.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">30.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">30.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">30.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">30.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">30.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">30.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">30.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">31. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">6. Hardware</a><ul>
+<li><a class="reference internal" href="#compute-resources">6.1. Compute Resources</a></li>
+<li><a class="reference internal" href="#storage-resources">6.2. Storage Resources</a></li>
+<li><a class="reference internal" href="#status">6.3. Status</a></li>
+<li><a class="reference internal" href="#maintenance">6.4. Maintenance</a></li>
+<li><a class="reference internal" href="#id1">6.5. Compute Resources</a><ul>
+<li><a class="reference internal" href="#compute-networks">6.5.1. Compute Networks</a></li>
+<li><a class="reference internal" href="#network">6.5.2. Network</a></li>
+<li><a class="reference internal" href="#futuregrid-network-impairments-device-nid">6.5.3. FutureGrid Network Impairments Device (NID)</a></li>
+<li><a class="reference internal" href="#storage">6.5.4. Storage</a></li>
+<li><a class="reference internal" href="#using-hpss-from-futuregrid">6.5.5. Using HPSS from FutureGrid</a></li>
+<li><a class="reference internal" href="#id6">6.5.6. Status</a><ul>
+<li><a class="reference internal" href="#system-status">6.5.6.1. System Status</a></li>
+<li><a class="reference internal" href="#ongoing-outages">6.5.6.2. Ongoing outages</a></li>
+<li><a class="reference internal" href="#system-configuration">6.5.6.3. System configuration</a></li>
+<li><a class="reference internal" href="#status-of-futuregrid-services">6.5.6.4. Status of FutureGrid services</a></li>
+<li><a class="reference internal" href="#cluster-monitoring">6.5.6.5. Cluster Monitoring</a></li>
+<li><a class="reference internal" href="#network-status">6.5.6.6. Network Status</a></li>
+<li><a class="reference internal" href="#software-status">6.5.6.7. Software Status</a></li>
+<li><a class="reference internal" href="#cloud-status">6.5.6.8. Cloud Status</a></li>
+<li><a class="reference internal" href="#futuregrid-cloud-metrics">6.5.6.9. FutureGrid Cloud Metrics</a></li>
+<li><a class="reference internal" href="#system-software-version-info">6.5.6.10. System software version info</a></li>
+<li><a class="reference internal" href="#nimbus-usage-reports">6.5.6.11. Nimbus Usage Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="introduction.html"
+         title="previous chapter">&laquo; 5. Introduction</a></li>
+  <li><a href="fgmanual.html"
+         title="next chapter">7. Getting Started &raquo;</a></li>
+            
+            
+              <li>
+  <a href="_sources/hardware.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="hardware">
+<h1>6. Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h1>
+<p>These are the current resources available in FutureGrid.</p>
+<div class="section" id="compute-resources">
+<h2>6.1. Compute Resources<a class="headerlink" href="#compute-resources" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">System Type</th>
+<th class="head"># Nodes</th>
+<th class="head"># CPUS</th>
+<th class="head"># Cores</th>
+<th class="head">TFLOPS</th>
+<th class="head">RAM (GB</th>
+<th class="head">Storage (TB)</th>
+<th class="head">Site</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/india">india</a></td>
+<td>IBM iDataplex</td>
+<td>128</td>
+<td>256</td>
+<td>1024</td>
+<td>11</td>
+<td>3072</td>
+<td>335</td>
+<td>IU</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/hotel">hotel</a></td>
+<td>IBM iDataplex</td>
+<td>84</td>
+<td>168</td>
+<td>672</td>
+<td>7</td>
+<td>2016</td>
+<td>120</td>
+<td>UC</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/sierra">sierra</a></td>
+<td>IBM iDataplex</td>
+<td>84</td>
+<td>168</td>
+<td>672</td>
+<td>7</td>
+<td>2688</td>
+<td>96</td>
+<td>SDSC</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/foxtrot">foxtrot</a></td>
+<td>IBM iDataplex</td>
+<td>32</td>
+<td>64</td>
+<td>256</td>
+<td>3</td>
+<td>768</td>
+<td>0</td>
+<td>UF</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/alamo">alamo</a></td>
+<td>Dell Poweredge</td>
+<td>96</td>
+<td>192</td>
+<td>768</td>
+<td>8</td>
+<td>1152</td>
+<td>30</td>
+<td>TACC</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/xray">xray</a></td>
+<td>Cray XT5m</td>
+<td>1</td>
+<td>166</td>
+<td>664</td>
+<td>6</td>
+<td>1328</td>
+<td>5.4</td>
+<td>IU</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/bravo">bravo</a></td>
+<td>HP Proliant</td>
+<td>16</td>
+<td>32</td>
+<td>128</td>
+<td>1.7</td>
+<td>3072</td>
+<td>128</td>
+<td>IU</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/delta">delta</a></td>
+<td>GPU Cluster(SuperMicro)</td>
+<td>16</td>
+<td>32</td>
+<td>192</td>
+<td>&nbsp;</td>
+<td>1333</td>
+<td>144</td>
+<td>IU</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/hardware/lima">lima</a></td>
+<td>Aeon Eclipse64</td>
+<td>8</td>
+<td>16</td>
+<td>128</td>
+<td>1.3</td>
+<td>512</td>
+<td>3.8 (SSD)</td>
+<td>SDSC</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="storage-resources">
+<h2>6.2. Storage Resources<a class="headerlink" href="#storage-resources" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">System Type</th>
+<th class="head">Capacity (TB)</th>
+<th class="head">File System</th>
+<th class="head">Site</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DDN 9550</td>
+<td>339 shared with IU +</td>
+<td>Luster</td>
+<td>IU</td>
+</tr>
+<tr class="row-odd"><td>Data Capacitor</td>
+<td>16 TB dedicated</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>DDN 6620</td>
+<td>120</td>
+<td>GPFS</td>
+<td>UC</td>
+</tr>
+<tr class="row-odd"><td>SunFire x4540</td>
+<td>96</td>
+<td>ZFS</td>
+<td>SDSC</td>
+</tr>
+<tr class="row-even"><td>Dell MD3000</td>
+<td>30</td>
+<td>NFS</td>
+<td>TACC</td>
+</tr>
+<tr class="row-odd"><td>IBM dx360 M3</td>
+<td>24</td>
+<td>NFS</td>
+<td>UF</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="status">
+<h2>6.3. Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>The status of the resources can be monitored through:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/status">https://portal.futuregrid.org/status</a></li>
+</ul>
+<p>This page also contains a link to our operational status of FutureGrid
+resources and services, see the FutureGrid Inca server at:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://inca.futuregrid.org/">http://inca.futuregrid.org</a></li>
+</ul>
+</div>
+<div class="section" id="maintenance">
+<h2>6.4. Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h2>
+<p>Activities during the regular maintenance window for FutureGrid machines
+are listed in the FutureGrid wiki at:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://wiki.futuregrid.org/index.php/Hw:MaintActivities">https://wiki.futuregrid.org/index.php/Hw:MaintActivities</a>.</li>
+</ul>
+<p>Scheduled outages and maintenance windows on the FutureGrid network are
+collected in the Network Operations Calendar at:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://noc.futuregrid.org/futuregrid/support/operations-calendar3.html">https://noc.futuregrid.org/futuregrid/support/operations-calendar3.html</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>6.5. Compute Resources<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>GVL: This section belongs to HPC Services</p>
+<p>Compute Hardware Resources &amp; HPC Job Queue Information</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Resource</th>
+<th class="head">Queue name</th>
+<th class="head">Default Wallclock Limit</th>
+<th class="head">Max Wallclock Limit</th>
+<th class="head">NOTES</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>india</td>
+<td>batch</td>
+<td>4 hours</td>
+<td>24 hours</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>long</td>
+<td>8 hours</td>
+<td>168 hours</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>scalemp</td>
+<td>8 hours</td>
+<td>168 hours</td>
+<td>restricted access</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>b534</td>
+<td>none</td>
+<td>none</td>
+<td>restricted access</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>ajyounge</td>
+<td>none</td>
+<td>none</td>
+<td>restricted access</td>
+</tr>
+<tr class="row-odd"><td>sierra</td>
+<td>batch</td>
+<td>4 hours</td>
+<td>24 hours</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>long</td>
+<td>8 hours</td>
+<td>168 hours</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>hotel</td>
+<td>extended</td>
+<td>none</td>
+<td>none</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>alamo</td>
+<td>shortq</td>
+<td>none</td>
+<td>24 hours</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>longq</td>
+<td>none</td>
+<td>24 hours</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>foxtrot</td>
+<td>batch</td>
+<td>1 hour</td>
+<td>none</td>
+<td>not for general use</td>
+</tr>
+</tbody>
+</table>
+<p>For availability, please visit:
+<a class="reference external" href="http://portal.futuregrid.org/status">http://portal.futuregrid.org/status</a>
+.</p>
+<p>GVL: This image belongs to the specific cluster desciption:</p>
+<p><img alt="image4" src="https://portal.futuregrid.org/sites/default/files/resize/images/FutureGrid_iDataPlex_Cray_IU-sm-640x425.jpg" /></p>
+<p>IU iDataplex &amp; Cray</p>
+<p>GVL: This section belongs to the specific cluster description:</p>
+<p><img alt="image5" src="https://portal.futuregrid.org/sites/default/files/resize/images/Cray_XT5m_Front_closed-small-427x640.jpg" /></p>
+<p>IU Cray</p>
+<p>GVL: This belongs to networking:</p>
+<div class="section" id="compute-networks">
+<h3>6.5.1. Compute Networks<a class="headerlink" href="#compute-networks" title="Permalink to this headline">¶</a></h3>
+<p><strong>Resource Name</strong></p>
+<p><strong>Network Devices</strong></p>
+<p>IU Cray</p>
+<p>Cray 2D Torus SeaStar</p>
+<p>IU iDataPlex</p>
+<p>DDR IB</p>
+<p>QLogic switch with Mellanox ConnectX adapters</p>
+<p>Blade Network Technologies &amp; Force10 Ethernet switches</p>
+<p>SDSC</p>
+<p>DDR IB</p>
+<p>Cisco switch with Mellanox ConnectX adapters</p>
+<p>Juniper Ethernet switches</p>
+<p>TACC</p>
+<p>QDR IB</p>
+<p>Mellanox switches and adapters</p>
+<p>Dell Ethernet switches</p>
+<p>UC</p>
+<p>DDR IB</p>
+<p>QLogic switch with Mellanox ConnectX adapters</p>
+<p>Blade Network Technologies &amp; Juniper switches</p>
+<p>UF</p>
+<p>Ethernet only (Blade Network Technologies &amp; Force10 switches)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Alamo</th>
+<th class="head">Bravo</th>
+<th class="head">Delta</th>
+<th class="head">Foxtrot</th>
+<th class="head">Hotel</th>
+<th class="head">India</th>
+<th class="head">Sierra</th>
+<th class="head">xray</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Organization</td>
+<td>Texas Advanced Computing Center</td>
+<td>Indiana University</td>
+<td>Indiana University</td>
+<td>University of Florida</td>
+<td>University of Chicago</td>
+<td>Indiana University</td>
+<td>San Diego Supercomputer Center</td>
+<td>Indiana University</td>
+</tr>
+<tr class="row-odd"><td>Machine Type</td>
+<td>Cluster</td>
+<td>Cluster</td>
+<td>Cluster</td>
+<td>Cluster</td>
+<td>Cluster</td>
+<td>Cluster</td>
+<td>Cluster</td>
+<td>Cluster</td>
+</tr>
+<tr class="row-even"><td>System Type</td>
+<td>Dell PowerEdge M610 Blade</td>
+<td>HP Proliant</td>
+<td>&nbsp;</td>
+<td>IBM iDataPlex dx 360 M2</td>
+<td>IBM iDataPlex dx 360 M2</td>
+<td>IBM iDataPlex dx 360 M2</td>
+<td>IBM iDataPlex dx 340</td>
+<td>Cray XT5m</td>
+</tr>
+<tr class="row-odd"><td>CPU type</td>
+<td>Intel Xeon X5550</td>
+<td>Intel Xeon E5620</td>
+<td>Intel Xeon 5660</td>
+<td>Intel Xeon X5520</td>
+<td>Intel Xeon X5550</td>
+<td>Intel Xeon X5550</td>
+<td>Intel Xeon L5420</td>
+<td>AMD Opteron 2378</td>
+</tr>
+<tr class="row-even"><td>Host Name</td>
+<td>alamo</td>
+<td>bravo</td>
+<td>delta</td>
+<td>foxtrot</td>
+<td>hotel</td>
+<td>india</td>
+<td>sierra</td>
+<td>xray</td>
+</tr>
+<tr class="row-odd"><td>CPU Speed</td>
+<td>2.66GHz</td>
+<td>2.40GHz</td>
+<td>2.80 GHz</td>
+<td>2.26GHz</td>
+<td>2.66GHz</td>
+<td>2.66GHz</td>
+<td>2.5GHz</td>
+<td>2.4GHz</td>
+</tr>
+<tr class="row-even"><td>Number of CPUs</td>
+<td>192</td>
+<td>32</td>
+<td>32</td>
+<td>64</td>
+<td>168</td>
+<td>256</td>
+<td>168</td>
+<td>168</td>
+</tr>
+<tr class="row-odd"><td>Number of nodes</td>
+<td>96</td>
+<td>16</td>
+<td>16</td>
+<td>32</td>
+<td>84</td>
+<td>128</td>
+<td>84</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>RAM</td>
+<td>12 GB DDR3 1333Mhz</td>
+<td>192 GB DDR3 1333Mhz</td>
+<td>192 GB DDR3 1333 Mhz</td>
+<td>24 GB DDR3 1333Mhz</td>
+<td>24 GB DDR3 1333Mhz</td>
+<td>24 GB DDR3 1333Mhz</td>
+<td>32 GB DDR2-667</td>
+<td>8 GB DDR2-800</td>
+</tr>
+<tr class="row-odd"><td>Total RAM (GB)</td>
+<td>1152</td>
+<td>3072</td>
+<td>3072</td>
+<td>768</td>
+<td>2016</td>
+<td>3072</td>
+<td>2688</td>
+<td>1344</td>
+</tr>
+<tr class="row-even"><td>Number of cores</td>
+<td>768</td>
+<td>128</td>
+<td>&nbsp;</td>
+<td>256</td>
+<td>672</td>
+<td>1024</td>
+<td>672</td>
+<td>672</td>
+</tr>
+<tr class="row-odd"><td>Operating System</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+<td>Linux</td>
+</tr>
+<tr class="row-even"><td>Tflops</td>
+<td>8</td>
+<td>1.7</td>
+<td>&nbsp;</td>
+<td>3</td>
+<td>7</td>
+<td>11</td>
+<td>7</td>
+<td>6</td>
+</tr>
+<tr class="row-odd"><td>Disk Size (TB)</td>
+<td>48</td>
+<td>&nbsp;</td>
+<td>15</td>
+<td>20</td>
+<td>120</td>
+<td>335</td>
+<td>72</td>
+<td>335</td>
+</tr>
+<tr class="row-even"><td>Hard Drives</td>
+<td>500 GB Internal 7200 RPM SAS Drive</td>
+<td>6x2TB Internal 7200 RPM SATA Drive</td>
+<td>Seagate Constellation 7.2 K RPM     64 MB Cache SATA 92GB</td>
+<td>500 GB Internal 7200 RPM SATA Drive</td>
+<td>1 TB Internal 7200 RPM SATA Drive</td>
+<td>3000 GB Internal 7200 RPM SATA Drive</td>
+<td>160 GB Internal 7200 RPM SATA Drive</td>
+<td>6 TB Internal Lustre Storage</td>
+</tr>
+<tr class="row-odd"><td>Primary storage shared by all nodes</td>
+<td>NFS</td>
+<td>NFS</td>
+<td>NFS</td>
+<td>NFS</td>
+<td>GPFS</td>
+<td>NFS</td>
+<td>ZFS filesystem with 76.8 TB raid2 storage and 5.4 TB of raid0 (for scratch)</td>
+<td>NFS</td>
+</tr>
+<tr class="row-even"><td>Storage details</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>RAID 9260-4i 1pt SAS2  512 MB SGL</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Connection configuration</td>
+<td>Mellanox 4x QDR InfiniBand adapters</td>
+<td>Mellanox 4x DDR InfiniBand adapters</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Mellanox 4x DDR InfiniBand adapters</td>
+<td>Mellanox 4x DDR InfiniBand adapters</td>
+<td>Mellanox 4x DDR InfiniBand adapters</td>
+<td>Cray SeaStar Interconnect</td>
+</tr>
+<tr class="row-even"><td>Primary storage shared by all nodes</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>92 ????</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>CPUs (cores) per node</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Cores per CPU</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>6</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Total number of GPU cores</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>192</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>GPU type</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>nVIDIA Tesla C2070</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Cores per GPU</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>448</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>GPUs per node</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Batch system</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Torque</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="network">
+<h3>6.5.2. Network<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h3>
+<p>The FutureGrid network provides for connectivity among FutureGrid
+participants, and network access to the Network Impairments Device
+(NID).  Five participants connect through a variety of network providers
+(see Figure 1).</p>
+<p><img alt="image6" src="https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png" />
+<em>Figure 1:  Diagram of FutureGrid Network</em></p>
+<p>FutureGrid partners with XSEDE to allow participants of each to
+utilize the resources of both networks. Through interconnects at the
+Indiana Gigapop, Internet2 and NLR extend access to FutureGrid resources
+to researchers nationally.</p>
+<p>FutureGrid deployed a Juniper EX8208 at the Core in Chicago’s
+StarLight facility.</p>
+<p><img alt="image7" src="https://portal.futuregrid.org/sites/default/files/resize/images/Juniper%20EX8208-140x184.png" /></p>
+<p><em>Figure 2: Juniper EX8208</em></p>
+<p>The Juniper EX series provides for Layer2 and Layer3 connectivity.
+FutureGrid uses the EX to fulfill the network services (i.e.,
+interconnectivity and external connectivity). The EX provides a special
+feature labeled ‘firewall based forwarding’, allowing seamless
+integration with network impairments.</p>
+<p>GlobalNOC at Indiana University provides network engineering
+services, and the Operations Center provides email and phone support
+24x7. GlobalNOC resources for public wan information can be found at
+<a class="reference external" href="http://noc.futuregrid.org/">http://noc.futuregrid.org/</a>. Available
+tools include:</p>
+<ul class="simple">
+<li><strong>`FutureGrid
+Atlas &lt;http://noc.futuregrid.org/futuregrid/live-network-status/maps&#8211;graphs/futuregrid-atlas.html&gt;`__:</strong> View
+the current level of FutureGrid Network traffic as displayed on a
+geographical map.</li>
+<li><strong>`FutureGrid SNAPP Traffic
+Graphs &lt;http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/futuregrid-snapp-trafic-graphs2.html&gt;`__:</strong> View
+high-speed traffic graphs collected at one-minute samples using the
+Indiana University-developed SNAPP tool. Create custom views of the
+FutureGrid network and view historic utilization with greater data
+resolution.</li>
+<li><strong>`FutureGrid NOC Router
+Proxy &lt;http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/router-proxy3.html&gt;`__:</strong>
+Submit show commands to the FutureGrid router.</li>
+<li><strong>`FutureGrid Physical
+Map &lt;http://noc.futuregrid.org/futuregrid/maps&#8211;documentation/maps.html#FutureGrid%20Physical%20Map&gt;`__</strong></li>
+<li><strong>`FutureGrid Topology
+Map &lt;http://noc.futuregrid.org/futuregrid/maps&#8211;documentation/maps.html#FutureGrid%20Topology%20Map&gt;`__</strong></li>
+</ul>
+<p>As IPv6 test beds are not available at all FutureGrid partner sites,
+early implementation of iPv6 would slow important software development
+work. As a result, current plans call for FutureGrid to continue using
+IPv4. Any change in plans will be noted here.</p>
+<p>Below is further information about networking:</p>
+<p>FutureGrid Core: Juniper EX8200
+India; Force10, C-150
+Bravo, Delta, Echo; Force10, S60
+Sierra: Juniper EX4200
+Hotel: EX4200
+Dlamo: Dell PowerConnect 6000 Series
+Xray: Force10, C-150
+foxtrot:
+internal network switch: IBM/BLADE Rack Switch G8000
+public network switch: Force10 S50
+Node NICs: built-in (IBM iDataPlex DX360 M2) dual Intel 82575EB
+Gigabit Network Connection
+10Gbps: Myricom Myri-10G Dual-Protocol NIC (available on login node)
+Alamo: Dell PowerConnett 6224</p>
+<p>Juniper, EX series
+- <a class="reference external" href="https://www.juniper.net/us/en/products-services/switching/ex-series/Force10">https://www.juniper.net/us/en/products-services/switching/ex-series/Force10</a> (now
+Dell),</p>
+<p>C Series and S Series:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.dell.com/us/enterprise/p/force10-c150/pd">http://www.dell.com/us/enterprise/p/force10-c150/pd</a></li>
+<li><a class="reference external" href="http://www.dell.com/us/enterprise/p/force10-s60/pd">http://www.dell.com/us/enterprise/p/force10-s60/pd</a></li>
+</ul>
+<p>Dell, PowerConnect
+- <a class="reference external" href="http://www.dell.com/us/enterprise/p/switch-powerconnect">http://www.dell.com/us/enterprise/p/switch-powerconnect</a>
+IBM (formerly BNT)
+- <a class="reference external" href="http://www-03.ibm.com/systems/networking/switches/rack.html">http://www-03.ibm.com/systems/networking/switches/rack.html</a></p>
+<p><img alt="image8" src="https://portal.futuregrid.org/sites/default/files/u23/futuregrid-physical.png" />
+<img alt="image9" src="https://portal.futuregrid.org/sites/default/files/u23/futuregrid-topology.png" /></p>
+</div>
+<div class="section" id="futuregrid-network-impairments-device-nid">
+<h3>6.5.3. FutureGrid Network Impairments Device (NID)<a class="headerlink" href="#futuregrid-network-impairments-device-nid" title="Permalink to this headline">¶</a></h3>
+<p><strong>FutureGrid Network Impairments Device (NID)</strong></p>
+<p>Researchers on FutureGrid may perodically employ the use of a Spirent
+XGEM, a Network Impairments Emulator.  The XGEM allows users to
+accurately create the delays and impairments that occur over live
+production networks for validating and evaluating new products and
+technologies.  The XGEM supports a variety of impairments with the most
+common being delay, packet loss, jitter and re-ordering.</p>
+<p><img alt="image10" src="https://portal.futuregrid.org/sites/default/files/images/Spirent%20XGEM.png" />
+<em>Figure 1: Spirent XGEM</em></p>
+<p>The XGEM contains two blades, each with a 10GE interface.  Traffic
+received on one blade is automatically transmitted on the other blade,
+and vice-versa.  This allows the XGEM to be deployed as a pass-through
+device.  Impairments are applied unidirectionally.  An identical or
+different impairment can be applied in either direction, or
+simultaneously in both directions.</p>
+<p>FutureGrid also utilizes a Juniper EX8208 as the primary network
+element between all of the FutureGrid participants.  Juniper’s EX
+platform contains firewall-based forwarding, which allows us to insert
+the XGEM between FutureGrid participants with only software changes (see
+Figure 2).</p>
+<p><img alt="image11" src="https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png" />
+<em>Figure 2.  Diagram of FutureGrid Network.</em></p>
+<p>The firewall-based forwarding feature can be configured to forward
+traffic unidirectionally or bidirectionally through the XGEM using a
+single IP address or any size subnet.  Only traffic defined by the
+Juniper EX8208 will be impaired, leaving all other traffic between
+FutureGrid participants unaffected.</p>
+<p>This implementation requires traffic to traverse the FutureGrid Core
+in order to be impaired.  Additional configuration might be required at
+the participants&#8217; individual sites for impairments to occur locally.</p>
+</div>
+<div class="section" id="storage">
+<h3>6.5.4. Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h3>
+<p>Clustername(site)</p>
+<p>Mountpoint<a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">``</span></a></p>
+<p>Size</p>
+<p>Type</p>
+<p>Backups</p>
+<p>Use</p>
+<p>Notes</p>
+<p><a class="reference external" href="https://portal.futuregrid.org/kb/document/bbns">Sierra</a>(UCSD/SDSC)</p>
+<p>/N/u/username</p>
+<p>40.6TB</p>
+<p>ZFS (RAID2)</p>
+<p>Yes (nightly incremental)</p>
+<p>Home dir</p>
+<p>By default, quotas on home directories are 50 GB and quotas on scratch
+directories are 100 GB.</p>
+<p>/N/scratch/username</p>
+<p>5.44TB</p>
+<p>ZFS (RAID0)</p>
+<p>No</p>
+<p>Scratch</p>
+<p>/N/soft</p>
+<p>50GB</p>
+<p>ZFS (RAID2)</p>
+<p>Yes (nightly incremental)</p>
+<p>Software installs</p>
+<p>/N/images</p>
+<p>6TB</p>
+<p>ZFS (RAID2)</p>
+<p>Yes (nightly incremental)</p>
+<p>VM images</p>
+<p><a class="reference external" href="https://portal.futuregrid.org/kb/document/bbms">India (IU)</a></p>
+<p>/N/u/username</p>
+<p>15TB</p>
+<p>NFS (RAID5)</p>
+<p>Yes (nightly incremental)</p>
+<p>Home dir</p>
+<p>At the moment, we do not have any quota implemented on India and we use
+the local/tmp (77 GB) as scratch space.</p>
+<p>/share/project</p>
+<p>14TB</p>
+<p>NFS (RAID5)</p>
+<p>Yes (nightly incremental)</p>
+<p>Shared/group folders</p>
+<p>/tmp</p>
+<p>77GB</p>
+<p>local disk</p>
+<p>No</p>
+<p>Scratch</p>
+<p><a class="reference external" href="https://portal.futuregrid.org/kb/document/bcao">Bravo</a> (IU)</p>
+<p>/N/u/username</p>
+<p>15TB</p>
+<p>NFS (RAID5)</p>
+<p>Yes (nightly incremental)</p>
+<p>Home dir</p>
+<p>The same NFS shares in India are mounted in Bravo (users do not log in
+here; jobs are submitted through India). There are two local partitions,
+which are used for HDFS and swift tests.</p>
+<p>/share/project</p>
+<p>14TB</p>
+<p>NFS (RAID5)</p>
+<p>Yes (nightly incremental)</p>
+<p>Shared/group folders</p>
+<p><a class="reference external" href="https://portal.futuregrid.org/kb/document/bcaj">Delta</a> (IU)</p>
+<p>/N/u/username</p>
+<p>15TB</p>
+<p>NFS (RAID5)</p>
+<p>Yes (nightly incremental)</p>
+<p>Home dir</p>
+<p>Same as Bravo. The NFS shares are mounted for user and group share
+(users do not log in directly here; jobs are submitted through India).</p>
+<p>/share/project</p>
+<p>14TB</p>
+<p>NFS (RAID5)</p>
+<p>Yes (nightly incremental)</p>
+<p>Shared/group folders</p>
+<p>Hotel (UC)</p>
+<p>/gpfs/home</p>
+<p>15TB</p>
+<p>GPFS (RAID6)</p>
+<p>No</p>
+<p>Home dir</p>
+<p>By default, quotas on home directories are 10 GB.</p>
+<p>/gpfs/scratch</p>
+<p>57TB</p>
+<p>GPFS (RAID6)</p>
+<p>No</p>
+<p>Scratch</p>
+<p>/gpfs/software</p>
+<p>7.1GB</p>
+<p>GPFS (RAID6)</p>
+<p>No</p>
+<p>Software installs</p>
+<p>/gpfs/images</p>
+<p>7.1TB</p>
+<p>GPFS (RAID6)</p>
+<p>No</p>
+<p>VM images</p>
+<p>/scratch/local</p>
+<p>862GB</p>
+<p>ext3 (local disk)</p>
+<p>No</p>
+<p>Local scratch</p>
+<p>Foxtrot (UFL)</p>
+<p>/N/u/username</p>
+<p>16TiB</p>
+<p>NFS (RAID5)</p>
+<p>No</p>
+<p>Home dir</p>
+<p>At the moment, we do not have any quota implemented on Foxtrot.</p>
+</div>
+<div class="section" id="using-hpss-from-futuregrid">
+<h3>6.5.5. Using HPSS from FutureGrid<a class="headerlink" href="#using-hpss-from-futuregrid" title="Permalink to this headline">¶</a></h3>
+<p><strong>Note</strong>: FutureGrid does not provide an HPSS server. The HSI is used to
+access IU&#8217;s HPSS service from INDIA. This is available only for IU
+faculty, staff, and students.</p>
+<p>Through the <a class="reference external" href="http://rc.uits.iu.edu/storage/sda">SDA</a> (formerly known
+as MDSS) service, IU provides distributed storage service to faculty,
+staff, and graduate students. The
+<a class="reference external" href="http://rc.uits.iu.edu/storage/hsi">HSI</a> (Hierarchical Storage
+Interface) client is available in INDIA. To use the HSI client:</p>
+<ul class="simple">
+<li>First, activate your SDA account. Detailed instructions are available
+at IU&#8217;s <a class="reference external" href="http://rc.uits.iu.edu/storage/mdss-starter-kit">MDSS Service Starter
+Kit</a> page.</li>
+<li>Then, from INDIA, load the HSI module as follows:</li>
+</ul>
+<div class="highlight-python"><pre>$ module load hsi
+hsi version 3.5.3 loaded</pre>
+</div>
+<ul class="simple">
+<li>Connect to the SDA:</li>
+</ul>
+<div class="highlight-python"><pre>$ hsi -A combo
+Principal: your_iu_userid
+[youriuid]Password:
+Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewall: off [hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009]
+?</pre>
+</div>
+<p><strong>Note:</strong>Your Principal is your IU Network ID, and your password is
+the IU passphrase.</p>
+<ul>
+<li><p class="first">Enable firewall mode; otherwise, you will receive this error:</p>
+<div class="highlight-python"><pre>put: Error -5 on transfer</pre>
+</div>
+</li>
+</ul>
+<div class="highlight-python"><pre>? firewall -on
+A: firewall mode set ON, I/O mode set to extended (parallel=off), autoscheduling currently set to OFF</pre>
+</div>
+<ul class="simple">
+<li>List local folder:</li>
+</ul>
+<div class="highlight-python"><pre> ? lls
+testfile.txt</pre>
+</div>
+<ul class="simple">
+<li>List the current directory in HPSS:</li>
+</ul>
+<div class="highlight-python"><pre>? pwd
+pwd0: /hpss/pathtoyouriuusername</pre>
+</div>
+<ul class="simple">
+<li>For transferring files (<em>put</em> and <em>get</em>), search the <a class="reference external" href="http://kb.iu.edu/?search=hsi">IU Knowledge
+Base</a>.</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>6.5.6. Status<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="system-status">
+<h4>6.5.6.1. System Status<a class="headerlink" href="#system-status" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div>Please note that the information on this page is not 100% accurate
+as it is maintained by hand. However, dynamic monitoring tools are
+available and can be consulted for more details.</div></blockquote>
+</div>
+<div class="section" id="ongoing-outages">
+<h4>6.5.6.2. Ongoing outages<a class="headerlink" href="#ongoing-outages" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The <strong>first Tuesday of each month</strong> is the standard maintenance
+window.</p>
+<ul class="simple">
+<li><a class="reference external" href="/admin/build/views/edit/active_outage_list?destination=book%2Fexport%2Fhtml%2F104#views-tab-default">Edit</a></li>
+<li><a class="reference external" href="/admin/build/views/export/active_outage_list">Export</a></li>
+<li><a class="reference external" href="/admin/build/views/clone/active_outage_list">Clone</a></li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="7%" />
+<col width="30%" />
+<col width="7%" />
+<col width="11%" />
+<col width="11%" />
+<col width="5%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Status</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Impacted Systems</th>
+<th class="head">Start of Outage</th>
+<th class="head">Anticipated End of Outage</th>
+<th class="head">Resolution</th>
+<th class="head">Edit link</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Ongoing</td>
+<td>Software System</td>
+<td><a class="reference external" href="/outages/130514/bravo-reserved-6-weeks">Bravo is reserved in 6 weeks</a></td>
+<td>other</td>
+<td>Tue, 14 May 2013, 17:00 EDT</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="/node/2513/edit?destination=book%2Fexport%2Fhtml%2F104">edit</a></td>
+</tr>
+<tr class="row-odd"><td>Planned</td>
+<td>Software System</td>
+<td><a class="reference external" href="/outages/120901/eucalyptus-gui-not-available">Eucalyptus GUI not available</a></td>
+<td>india</td>
+<td>Sat, 01 Sep 2012 (All day)</td>
+<td>Fri, 05 Oct 2012 (All day)</td>
+<td>&nbsp;</td>
+<td><a class="reference external" href="/node/2226/edit?destination=book%2Fexport%2Fhtml%2F104">edit</a></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>You can find a list of previous outages <a class="reference external" href="/outages_all">here</a>
+including an <a class="reference external" href="/feeds/fg_outages_all_rss.xml">RSS</a> feed.</p>
+<p>~</p>
+</div>
+<div class="section" id="system-configuration">
+<h4>6.5.6.3. System configuration<a class="headerlink" href="#system-configuration" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The system is configured at this time using either HPC, Nimbus, or
+Eucalyptus services. The distribution used at this time can be
+found <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">here</a> and <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=Info&amp;xsl=info.xsl">here</a>.</p>
+<p><a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp"><img alt="image12" src="https://portal.futuregrid.org/sites/default/files/images/status_incapart.PNG" /></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="status-of-futuregrid-services">
+<h4>6.5.6.4. Status of FutureGrid services<a class="headerlink" href="#status-of-futuregrid-services" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>Lists the status of keyFutureGrid services (e.g., SSH, Nimbus,
+Eucalyptus) in a sortable table.</p>
+<p><a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&amp;xsl=table.xsl&amp;resourceIds=FutureGrid"><img alt="image13" src="https://portal.futuregrid.org/sites/default/files/ScreenSnapz.jpg" /></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="cluster-monitoring">
+<h4>6.5.6.5. Cluster Monitoring<a class="headerlink" href="#cluster-monitoring" title="Permalink to this headline">¶</a></h4>
+<p>Ganglia:</p>
+<blockquote>
+<div><a class="reference external" href="http://ganglia.futuregrid.org"><img alt="image14" src="https://portal.futuregrid.org/sites/default/files/ganglia.png" /></a></div></blockquote>
+</div>
+<div class="section" id="network-status">
+<h4>6.5.6.6. Network Status<a class="headerlink" href="#network-status" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The network status can be viewed via the <a class="reference external" href="http://noc.futuregrid.org">FutureGrid Network
+Operations Center page</a>.  Upcoming
+network events are maintained on the <a class="reference external" href="http://noc.futuregrid.org/futuregrid/support/operations-calendar3.html">Network Operations
+Calendar</a>.</p>
+<p><a class="reference external" href="http://noc.futuregrid.org"><img alt="image15" src="https://portal.futuregrid.org/sites/default/files/images/large_status_nocmap.PNG" /></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="software-status">
+<h4>6.5.6.7. Software Status<a class="headerlink" href="#software-status" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>The operational status of FutureGrid machines are continuously
+monitored via a number of tools. To view some of the contents,
+please
+visit <a class="reference external" href="http://inca.futuregrid.org">http://inca.futuregrid.org</a></p>
+<p><a class="reference external" href="http://inca.futuregrid.org"><img alt="image16" src="https://portal.futuregrid.org/sites/default/files/u23/Screen%20shot%202011-01-14%20at%207.48.06%20PM.png" /></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="cloud-status">
+<h4>6.5.6.8. Cloud Status<a class="headerlink" href="#cloud-status" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://portal.futuregrid.org/monitoring/cloud">Here</a> you will find
+information about how FG cloud services are currently used.</p>
+<blockquote>
+<div><a class="reference external" href="https://portal.futuregrid.org/monitoring/cloud"><img alt="image17" src="https://portal.futuregrid.org/sites/default/files/u23/Screen%20shot%202011-04-07%20at%203.23.05%20PM.png" /></a></div></blockquote>
+</div>
+<div class="section" id="futuregrid-cloud-metrics">
+<h4>6.5.6.9. FutureGrid Cloud Metrics<a class="headerlink" href="#futuregrid-cloud-metrics" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">Metric system provides an integrated accounting service to view</div>
+</div>
+<p>cloud usage statistics and graphs regarding the utilization of
+virtual machine (VM) instances.
+<a class="reference external" href="https://portal.futuregrid.org/metrics"><img alt="image18" src="https://portal.futuregrid.org/sites/default/files/screenshot-for-status-small.png" /></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="system-software-version-info">
+<h4>6.5.6.10. System software version info<a class="headerlink" href="#system-software-version-info" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><div class="line-block">
+<div class="line">The version info of the installed system software across</div>
+</div>
+<p>all FG sites:
+<a class="reference external" href="http://inca.futuregrid.org:8080/inca/HTML/rest/HPC/FutureGrid"><img alt="image19" src="https://portal.futuregrid.org/sites/default/files/fg-sys-sw-ver.PNG" /></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="nimbus-usage-reports">
+<h4>6.5.6.11. Nimbus Usage Reports<a class="headerlink" href="#nimbus-usage-reports" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://inca.futuregrid.org/nimbus-stats">Displays</a> weekly usage
+graphs of each of the FutureGrid Nimbus deployments.</p>
+<blockquote>
+<div><a class="reference external" href="http://inca.futuregrid.org/nimbus-stats"><img alt="image20" src="https://portal.futuregrid.org/sites/default/files/u15/nimbus-usage.png" /></a></div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
