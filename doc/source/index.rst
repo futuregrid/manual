@@ -1,5 +1,5 @@
 
-Intoduction to Cloud Computing
+FG Manual
 ================================================
 
 .. toctree::
