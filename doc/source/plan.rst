@@ -56,6 +56,21 @@ Tasks:
       Koji, Shava, Mauricio, will need lots of help from Barbara with
       supervision by Gregor)
 
+.. csv-table:: 
+   :header: "Who", "Effort"
+   :widths: 15, 80
+
+   * Gregor, 1 week
+   * Fugang, 2days
+   * Barbara, 2 days, mostly coordinating and than editorial work
+     additional 3 days
+   * Renato, 3-7 days
+   * Koji, 2 days
+   * Allan, 3-4 days
+   * Thalina, 2 days
+   * other sysadmins, 1day
+   * professional editor 7 days
+
 Sections to be determined what tp dp about:
     * papi
     * vampir
