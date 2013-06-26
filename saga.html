@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SAGA supporting Distributed Applications on Grids, Clouds on FutureGrid &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">SAGA supporting Distributed Applications on Grids, Clouds on FutureGrid</a><ul>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/saga.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="saga-supporting-distributed-applications-on-grids-clouds-on-futuregrid">
+<h1>SAGA supporting Distributed Applications on Grids, Clouds on FutureGrid<a class="headerlink" href="#saga-supporting-distributed-applications-on-grids-clouds-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<p><strong>*SAGA on FutureGrid*</strong></p>
+<p><strong>*Activity*</strong>:</p>
+<p>The Simple API for Grid Applications (SAGA) is an OGF standard
+(<a class="reference external" href="http://www.ogf.org/">http://www.ogf.org/</a>), and defines a high
+level, application-driven API for developing first-principle distributed
+applications, and for distributed application frameworks and tools. Our
+SAGA project (see
+<a class="reference external" href="http://www.saga-project.org/">http://www.saga-project.org/</a>)
+provides SAGA API implementations in C++ and Python, which interface to
+a variety of middleware backends, as well as higher level application
+frameworks, such as Master-Worker, MapReduce, AllPairs, and BigJob.&nbsp; For
+all those components, we use FutureGrid and the different software
+environments available on FG for extensive portability and
+interoperability testing, but also for scale-up and scale-out
+experiments. These activities allow to harden the SAGA components
+described above, and support CS and Science experiments based on SAGA.</p>
+<p><strong>*Achievements:*</strong></p>
+<p>FG has provided a persistent, production-grade experimental
+infrastructure with the ability to perform controlled experiments,
+without violating production policies and disrupting production
+infrastructure priorities.&nbsp; These attributes, coupled with FutureGrid&#8217;s
+technical support, have resulted in the following specific advances in
+the short period of under a year:</p>
+<p><em>1: Use of FG for Standards-based development and interoperability
+tests:</em></p>
+<p>We have, in particular, been able to prepare SAGA for future
+deployments on XSEDE; this has occurred by testing the SAGA-BES adaptor
+in a variety of configurations: against Unicore and Genesis-II backends,
+with UserPass and Certificate-based authentication, with POSIX and HPC
+application types, with and without file staging support.&nbsp; While those
+tests are still ongoing, it allows us to be confident about the expected
+XSEDE middleware evolution; in the vast majority of cases, the
+standards-based approach seems to work without a hitch.</p>
+<p>Furthermore, we are continuously using FG-based job submission
+endpoints for GIN-driven interoperation tests with a variety of other
+production Grid infrastructures, including DEISA, PRACE, Teragrid and
+EGI (see
+<a class="reference external" href="http://forge.gridforum.org/sf/projects/gin/">http://forge.gridforum.org/sf/projects/gin/</a>
+and
+<a class="reference external" href="http://www.saga-project.org/interop-demos/">http://www.saga-project.org/interop-demos/</a>).</p>
+<p>In order to simplify the deployment and to improve end user support
+for SAGA, we have been using FG hosts to develop, test and harden our
+deployment procedures by mimicking the CSA approach we currently use on
+TeraGrid and XSEDE.&nbsp; At the same time, that deployment procedure makes
+SAGA and SAGA-based components available and maintained on all FG
+endpoints.</p>
+<p><em>2: Use of FG for Analysing &amp; Comparing Programming Models and
+Run-time tools for Computation and Data-Intensive Science.</em></p>
+<p><em>2.a: Development of Tools and Frameworks:</em></p>
+<ul>
+<li><dl class="first docutils">
+<dt>P* experiments</dt>
+<dd><p class="first last">&#8216;P*&#8217; is a conceptual model of pilot-based abstractions, in</p>
+</dd>
+</dl>
+<p>particular for pilot jobs.&nbsp; Our work on P* includes comparison
+between different PilotJob frameworks (BigJob, Condor GlideIn, Diane,
+Swift), and between different coordination models within those
+frameworks.&nbsp; We used FG for a number of those experiments, as it
+allowed us to compare a range of characteristics in a controlled
+environment.</p>
+</li>
+<li><p class="first">Advanced dynamic partitioning and distribution of data-intensive
+distributed applications</p>
+<blockquote>
+<div><p>Futuregrid resources have been crucial in carrying out a first set</p>
+</div></blockquote>
+<p>of scoping experiments for O.W.&#8217;s Ph.D thesis: &#8220;Towards a Reasoning
+Framework and Software System to Aid the Dynamic Partitioning,
+Distribution and Execution of Data-Intensive Applications&#8221;. In these
+scoping experiments, three distinct FutureGrid resources (india,
+hotel, alamo) were used to coordinately execute a data-intensive
+genome matching workload (HTC). The partitioning and distribution
+decisions were dynamically made by an experimental software system
+based on autonomic computing concepts, and which is capable of
+monitoring FG HPC resources as well as jobs during workload
+execution.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Bliss (Bliss is SAGA)</dt>
+<dd><p class="first last">Bliss</p>
+</dd>
+</dl>
+<p>(<a class="reference external" href="http://oweidner.github.com/bliss/">http://oweidner.github.com/bliss/</a>)
+is an experimental implementation of SAGA written in pure Python.
+Bliss does not rely on any distributed Grid middleware; however, it
+allows distributed access to all FutureGrid HPC resources by
+providing an SFTP plugin for file transfer as well as &#8216;PBS over SSH&#8217;
+for SAGA&#8217;s job submission and resource information capabilities.
+Bliss has been developed specifically with FutureGrid in mind and has
+been used in several cross-site experiments as the primary access
+mechanism to computing and storage resources.&nbsp; While &#8216;PBS over SSH&#8217;
+probably won&#8217;t be a replacement for &#8216;real&#8217; Grid middleware (like,
+e.g., Globus), its exposure through the standardized SAGA API
+presents an attractive and lightweight alternative to traditionally
+large Grid middleware stacks.</p>
+</li>
+<li><dl class="first docutils">
+<dt>High-performance dynamic applications</dt>
+<dd><p class="first last">In extreme-scale computational science, there is a growing</p>
+</dd>
+</dl>
+<p>importance and need for specialized architectures and multi-model
+simulations. In this emerging environment, different simulation
+components will have different computational requirements.&nbsp; Instead
+of coarsely assigning resources to all simulation components for
+their lifetime, we research methodologies whereby simulations can be
+split into their constituent components, and distributed
+computational resources are allocated according to the needs of these
+individual components.&nbsp; Each simulation component is transferred
+along with the data and parameters needed to execute the simulation
+component on the target hardware.&nbsp; This approach enables
+multi-component applications to more easily benefit from
+heterogeneous and distributed computing environments, in which
+multiple types of processing elements and storage may be available.</p>
+<blockquote>
+<div><p>In cases where software is developed with a static execution mode</p>
+</div></blockquote>
+<p>and only one resource in mind, the choice to distribute may not be
+available. By creating a dynamic method of execution and developing
+software which can package, transmit, and execute sub-applications
+remotely, existing simulations may be extended to make use of
+distributed resources. Through specially-designed modules that are
+compatible with pre-existing Cactus framework applications, we
+demonstrated means of improving task-level parallelism and extended
+the range of computing resources used with a minimal amount of change
+needed to existing applications.&nbsp; Experiments were conducted using
+production cyberinfrastructures on FutureGrid and XSEDE, with up to
+128 cores.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Grid/Cloud interop (with Andre Luckow) [finished]</dt>
+<dd><p class="first last">We demonstrated for the first time the use of Pilot-Jobs</p>
+</dd>
+</dl>
+<p>concurrently on different types of infrastructures; specifically, we
+use BigJob both on FutureGrid HPC and Cloud resources as well as on
+other resources such as the XSEDE and OSG Condor resources.</p>
+</li>
+</ul>
+<p><em>2.b: Data Intensive Apps:</em></p>
+<ul>
+<li><dl class="first docutils">
+<dt>MapReduce [with Andre Luckow]</dt>
+<dd><p class="first last">In Ref. [1], published in Future Generation Computing Systems, we</p>
+</dd>
+</dl>
+<p>compare implementations of the word-count application to not only use
+multiple, heterogeneous infrastructure (Sector versus DFS), but also
+to use different programming models (Sphere versus MapReduce).</p>
+</li>
+<li><dl class="first docutils">
+<dt>Grid/Cloud NGS analysis experiments</dt>
+<dd><p class="first last">Building upon SAGA-based MapReduce, we have constructed an efficient</p>
+</dd>
+</dl>
+<p>pipeline for gene sequencing. This pipeline is capable of dynamic
+resource utilization and task/worker placement.</p>
+</li>
+<li><p class="first">Hybrid cloud-Grid scientific applications and tools (autonomic
+schedulers) [with Manish Parashar, finished]</p>
+<blockquote>
+<div><p>Policy-based (objective driven) Autonomic Scheduler provides a</p>
+</div></blockquote>
+<p>system-level approach to hybrid grid-cloud usage.&nbsp; FG has been used
+for the development and extension of such Autonomic Scheduling and
+application requirements.&nbsp; We have integrated the distributed and
+heterogeneous resources of FG as a pool of resources which can be
+allocated by the policy-based Autonomic Scheduler (Comet). The
+Autonomic Scheduler dynamically determines and allocates instances to
+meet specific objectives, such as lowest time-to-completion, lowest
+cost etc. We also used FG supplement objective-driven pilot jobs on
+TeraGrid (ranger).</p>
+</li>
+<li><dl class="first docutils">
+<dt>Investigate run time fluctuations of application kernels</dt>
+<dd><p class="first last">We attempt to explore and characterize run-time fluctuations for a</p>
+</dd>
+</dl>
+<p>given application kernel representative of both a large number of
+MPI/parallel workloads and workflows.&nbsp; Fluctuation appears to be
+independent of the system load and a consequence of the complex
+interaction of the MPI library specifics and virtualization layer, as
+well as operating environment.&nbsp; Thus we have been investigating
+fluctuations in application performance due to the cloud operational
+environment.&nbsp; An explicit aim is to correlate these fluctuations to
+details of the infrastructure.&nbsp; As it is difficult to discern or
+reverse engineer the specific infrastructure details on EC2 or other
+commercial infrastructure, FG has provided us a controlled and well
+understood environment at infrastructure scales that are not possible
+at the individual PI/resource level.</p>
+</li>
+</ul>
+<p><em>3. SAGA has also produced the following papers (selection):</em></p>
+<p>See Refs:
+<a class="reference external" href="#ref1">[1]</a>,<a class="reference external" href="#ref2">[2]</a>,<a class="reference external" href="#ref3">[3]</a>,<a class="reference external" href="#ref4">[4]</a>,<a class="reference external" href="#ref5">[5]</a></p>
+<p><strong>*FuturePlans:*</strong></p>
+<p>We will be continuing to use FG as a resource for SAGA development.
+Among other goals, we intend the following: to move the testing
+infrastructure to other SAGA based components, like our PilotJob and
+PilotData frameworks; to widen the set of middlewares used for testing
+(again, keeping XSEDE and other PGIs in mind); to enhance the scope and
+scale of our scalability testing; and to test and harden our deployment
+and packaging procedures.</p>
+<hr class="docutils" />
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>[fg-1975] <a class="reference external" href="/biblio/author/175">Sehgal, S.</a>, <a class="reference external" href="/biblio/author/176">M.
+Erdelyi</a>, <a class="reference external" href="/biblio/author/177">A. Merzky</a>,
+and <a class="reference external" href="/biblio/author/115">S. Jha</a>, &#8220;<a class="reference external" href="/references/understanding-application-level-interoperability-scaling-out-mapreduce-over-high-performa">Understanding
+application-level interoperability: Scaling-out MapReduce over
+high-performance grids and
+clouds</a>&#8221;,
+Future Generation Computer Systems, vol. 27, issue 5, 2011.</li>
+<li>[fg-1976] <a class="reference external" href="/biblio/author/178">Luckow, A.</a>, <a class="reference external" href="/biblio/author/179">L.
+Lacinski</a>, and <a class="reference external" href="/biblio/author/115">S.
+Jha</a>, &#8220;<a class="reference external" href="/references/saga-bigjob-extensible-and-interoperable-pilot-job-abstraction-distributed-applications-a">SAGA BigJob: An Extensible and
+Interoperable Pilot-Job Abstraction for Distributed Applications and
+Systems</a>&#8221;,
+10th IEEE/ACM International Symposium on Cluster, Cloud and Grid
+Computing, 2010.</li>
+<li>[fg-1977] <a class="reference external" href="/biblio/author/178">Luckow, A.</a>, and <a class="reference external" href="/biblio/author/115">S.
+Jha</a>, &#8220;<a class="reference external" href="/references/abstractions-loosely-coupled-and-ensemble-based-simulations-azure">Abstractions for Loosely-Coupled and
+Ensemble-Based Simulations on
+Azure</a>&#8221;,
+IEEE International Conference on Cloud Computing Technology and
+Science, 2010.</li>
+<li>[fg-1978] <a class="reference external" href="/biblio/author/180">Kim, J.</a>, <a class="reference external" href="/biblio/author/181">S.
+Maddineni</a>, and <a class="reference external" href="/biblio/author/115">S.
+Jha</a>, &#8220;<a class="reference external" href="/references/building-gateways-life-science-applications-using-dynamic-application-runtime-environment">Building Gateways for Life-Science
+Applications using the Dynamic Application Runtime Environment (DARE)
+Framework</a>&#8221;,
+The 2011 TeraGrid Conference: Extreme Digital Discovery, 2011.</li>
+<li>[fg-1979] <a class="reference external" href="/biblio/author/180">Kim, J.</a>, <a class="reference external" href="/biblio/author/181">S.
+Maddineni</a>, and <a class="reference external" href="/biblio/author/115">S.
+Jha</a>, &#8220;<a class="reference external" href="/references/characterizing-deep-sequencing-analytics-using-bfast-towards-scalable-distributed-archite">Characterizing Deep Sequencing
+Analytics using BFAST: Towards a Scalable Distributed Architecture
+for Next-Generation Sequencing
+Data</a>&#8221;,
+The Second International Workshop on Emerging Computational Methods
+for the Life Sciences, 06/2011.</li>
+</ol>
+<p>Average: Select ratingPoorOkayGoodGreatAwesome</p>
+<p>Your rating: 5 Average: 4.5 (2 votes)</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

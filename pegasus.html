@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using Pegasus on FutureGrid &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Using Pegasus on FutureGrid</a><ul>
+<li><a class="reference internal" href="#about-pegasus">About Pegasus</a></li>
+<li><a class="reference internal" href="#the-pegasus-run-time-cloud-architecture">The Pegasus Run-Time Cloud Architecture</a></li>
+<li><a class="reference internal" href="#id1">Using Pegasus on FutureGrid</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/pegasus.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="using-pegasus-on-futuregrid">
+<h1>Using Pegasus on FutureGrid<a class="headerlink" href="#using-pegasus-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about-pegasus">
+<h2>About Pegasus<a class="headerlink" href="#about-pegasus" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://pegasus.isi.edu">Pegasus WMS</a> is a configurable system for
+mapping and executing abstract application workflows over a wide range
+of execution environments including a laptop, a campus cluster, a Grid,
+or a commercial or academic cloud. One Pegasus workflow can run on a
+single system or across a heterogeneous set of resources. Pegasus can
+run workflows ranging from just a few computational tasks up to 1
+million.</p>
+<p>Pegasus has a number of features that contribute to its usability and
+effectiveness, as explained in detail in the tutorial and the <a class="reference external" href="https://pegasus.isi.edu/wms/docs/4.0/about.php#overview">Pegasus
+online
+documentation</a>.
+Among the key feature rank abstract workflow portability between
+environments, features to better control workflow performance and
+resource utilization, scalability, data provenance tracking, data
+management, error recovery and multiple operating environments not
+limited to clouds.</p>
+<p>The main mode of operation of Pegasus on FutureGrid is the usage of IaaS
+clouds, as provided by Nimbus, OpenStack, Eucalyptus and bare-metal
+(future).</p>
+<p>If you want to find out more about Pegasus WMS, please <a class="reference external" href="http://pegasus.isi.edu">visit our web
+site.</a> The liaison for FutureGrid is Jens
+Vöckler. He is available as &#8220;Expert&#8221; on the Portal. If you have general
+questions concerning Pegasus, not related to FutureGrid, you may want to
+contact</p>
+<p>pegasus-support &lt;pegasus-support at isi dot edu&gt;</p>
+</div>
+<div class="section" id="the-pegasus-run-time-cloud-architecture">
+<h2>The Pegasus Run-Time Cloud Architecture<a class="headerlink" href="#the-pegasus-run-time-cloud-architecture" title="Permalink to this headline">¶</a></h2>
+<p>Pegasus uses the <a class="reference external" href="http://research.cs.wisc.edu/condor/">Condor high-throughput scheduling
+system</a> to provide the work of
+executing a plan created by Pegasus from the abstract workflow
+description.</p>
+<p><a href="#id2"><span class="problematic" id="id3">|Cloud site sample layouts.|</span></a>
+<strong>Figure:</strong> Cloud Site Layouts example.</p>
+<p>The figure above shows two cloud sites, typically two distinct IaaS
+clouds, with two virtual machines (VMs) running in each site.
+Effectively, it shows a sample layout for sky computing (as in: multiple
+clouds) as supported by Pegasus. At this point, it is up to the user to
+provision the remote resources with a proper VM image that includes a
+Condor <em>startd</em> and proper Condor configuration to report back to a
+Condor <em>collector</em> that the Condor <em>schedd</em> has access to.</p>
+<p>The submit host is the point where a user submits Pegasus workflows for
+execution. In this discussion, the <em>submit host</em> (SH) is located
+logically external to the cloud provider(s) in order to bridge multiple
+clouds. In contrast, the tutorial uses a submit host that is located
+within a single cloud site. The site where the SH is located typically
+runs a Condor <em>collector</em> to gather resource announcements, or is part
+of a larger Condor pool that collects these announcement. Condor makes
+the remote resources available to the submit host&#8217;s Condor installation.</p>
+<p>The figure above shows the way Pegasus WMS is deployed in cloud
+computing resources, ignoring how these resources were provisioned. The
+provisioning request shows multiple resources per provisioning request.</p>
+<p>The provisioning broker &#8211; Nimbus, Eucalyptus or EC2 &#8211; is responsible
+to allocate and set up the resources. Please note that each provisioning
+broker comes with its own set of client tools that may be executed
+either on your laptop or desktop in front of you, or from a FutureGrid
+login node. The FutureGrid tutorials for the various IaaS services have
+details on their client tools and usage.</p>
+<p>For a multi-node request, the worker nodes often require access to a
+form of shared data storage. Concretely, either a POSIX-compliant shared
+file system (e.g. NFS, PVFS) is available to the nodes, or can be
+brought up for the lifetime of the application workflow. The task steps
+of the application workflow facilitate shared file systems to exchange
+intermediary results between tasks on the same cloud site. Pegasus also
+supports an S3 data mode for the application workflow data staging. As
+of Pegasus 4.0, it more easily supports non-shared file system execution
+where each worker node uses only its own storage.</p>
+<p>The initial stage-in and final stage-out of application data into and
+out of the node set is part of any Pegasus-planned workflow. Several
+configuration options exist in Pegasus to deal with the dynamics of push
+and pull of data, and when to stage data. In many use-cases, some form
+of external access to or from the shared file system that is visible to
+the application workflow is required to facilitate successful data
+staging. However, Pegasus is prepared to deal with a set of boundary
+cases.</p>
+<p>The data server in the figure is shown at the submit host. This is <em>not
+a strict requirement</em>. The data server for consumed data (input data)
+and data products (output data) may both be different and external to
+the submit host.</p>
+<p>Once worker nodes (resources) begin appearing in the pool managed by the
+submit host&#8217;s Condor <em>collector</em>, the application workflow, as planned
+by Pegasus, can be submitted to Condor. A Condor <em>DAGMan</em> will manage
+the application workflow execution. Pegasus run-time tools obtain
+timing-, performance and provenance information as the application
+workflow is executed. In the cloud and FutureGrid scenario, it is the
+user&#8217;s responsibility to de-provision the allocated resources.</p>
+<p>In the figure, the cloud resources on the right side are assumed to have
+uninhibited outside connectivity. This enables the Condor I/O to
+communicate directly with the resources. The right side includes a setup
+where the worker nodes use all private IP, but have out-going
+connectivity and a NAT router to talk to the internet. The <em>Condor
+connection broker</em> (CCB) facilitates this setup almost effortlessly.</p>
+<p>The left side shows a more difficult setup where the connectivity is
+fully firewalled without any connectivity except to in-site nodes. In
+this case, a proxy server process, the <em>generic connection broker</em>
+(GCB), needs to be set up in the de-militarized zone (DMZ) of the cloud
+site&#8217;s firewall to facilitate Condor I/O between the submit host and
+worker nodes.</p>
+<p>If the cloud supports data storage servers, Pegasus 4.0 is starting to
+support workflows that require staging in two steps: Consumed data is
+first staged to a data server in the remote site&#8217;s DMZ, and then a
+second staging task moves the data from the data server to the worker
+node where the job runs. For staging out, data needs to be first staged
+from the job&#8217;s worker node to the site&#8217;s data server, and possibly from
+there to another data server external to the site. Pegasus is capable to
+plan both steps: Normal staging to a remote site&#8217;s data server, and the
+worker-node staging from and to the site&#8217;s data server as part of the
+job. We are working on expanding the current code to support a more
+generic set in the newly released Pegasus 4.0.</p>
+</div>
+<div class="section" id="id1">
+<h2>Using Pegasus on FutureGrid<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The Pegasus tutorial for FutureGrid is forthcoming shortly. You are
+welcome to <a class="reference external" href="http://pegasus.isi.edu/futuregrid/tutorials/">review the &#8220;Using Pegasus In FutureGrid&#8221;
+tutorial</a> which makes
+use of one of the following Virtual Machines:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="11%" />
+<col width="32%" />
+<col width="10%" />
+<col width="8%" />
+<col width="10%" />
+<col width="10%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>IaaS</strong></td>
+<td><strong>Resource</strong></td>
+<td><strong>Image Name</strong></td>
+<td><strong>CentOS</strong></td>
+<td><strong>PWMS</strong></td>
+<td><strong>Condor</strong></td>
+<td><strong>Globus</strong></td>
+<td><strong>Mntge</strong></td>
+</tr>
+<tr class="row-even"><td>Nimbus</td>
+<td>alamo</td>
+<td>pegasus-tutorial.x64.kvm.gz</td>
+<td>5.7</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+<tr class="row-odd"><td>Nimbus</td>
+<td>hotel</td>
+<td>pegasus-tutorial.x64.gz</td>
+<td>5.7</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+<tr class="row-even"><td>Nimbus</td>
+<td>foxtrot</td>
+<td>pegasus-tutorial.x64.gz</td>
+<td>5.7</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+<tr class="row-odd"><td>Nimbus</td>
+<td>sierra</td>
+<td>pegasus-tutorial.x64.gz</td>
+<td>5.7</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+<tr class="row-even"><td>Eucalyptus</td>
+<td>sierra</td>
+<td>tutorial/pegasus-tutorial.x64.manifest.xml</td>
+<td>5.8</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+<tr class="row-odd"><td>Eucalyptus</td>
+<td>india</td>
+<td>pegasus/pegasus-tutorial.x64.manifest.xml</td>
+<td>5.8</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+<tr class="row-even"><td>OpenStack</td>
+<td>india</td>
+<td>pegasus/pegasus-tutorial.x64.manifest.xml</td>
+<td>5.8</td>
+<td>4.0.0</td>
+<td>7.6.6</td>
+<td>5.2.0</td>
+<td>3.3p2</td>
+</tr>
+</tbody>
+</table>
+<p>The table above shows the available Pegasus Virtual Machines you can use
+to try out Pegasus. At this point, the Nimbus-based VMs are are
+preferred.</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

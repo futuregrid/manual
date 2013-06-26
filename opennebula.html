@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>OpenNebula 2.0 Tutorial &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">OpenNebula 2.0 Tutorial</a></li>
+<li><a class="reference internal" href="#create-a-vm-image-contextualized-for-opennebula">Create a VM Image Contextualized for OpenNebula</a><ul>
+<li><a class="reference internal" href="#create-vm-image-using-kvm">Create VM Image Using KVM</a></li>
+<li><a class="reference internal" href="#contextualize-vm">Contextualize VM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-virtual-machines">Managing Virtual Machines</a><ul>
+<li><a class="reference internal" href="#virtual-machine-template">Virtual Machine Template</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-the-image-repository">Managing the Image Repository</a></li>
+<li><a class="reference internal" href="#managing-physical-hosts-and-clusters">Managing Physical Hosts and Clusters</a><ul>
+<li><a class="reference internal" href="#managing-hosts">Managing Hosts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-virtual-networks">Managing Virtual Networks</a><ul>
+<li><a class="reference internal" href="#defining-a-virtual-network">Defining a Virtual Network</a><ul>
+<li><a class="reference internal" href="#fixed-virtual-network">Fixed Virtual Network</a></li>
+<li><a class="reference internal" href="#ranged-virtual-network">Ranged Virtual Network</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adding-and-deleting-virtual-networks">Adding and Deleting Virtual Networks</a></li>
+<li><a class="reference internal" href="#using-the-leases-within-the-virtual-machine">Using the Leases Within the Virtual Machine</a><ul>
+<li><a class="reference internal" href="#configuring-the-virtual-machine-to-use-the-leases">Configuring the Virtual Machine to Use the Leases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accounting">Accounting</a><ul>
+<li><a class="reference internal" href="#physical-resources">Physical Resources</a></li>
+<li><a class="reference internal" href="#virtual-resources">&nbsp;&nbsp;Virtual Resources</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-management">User Management</a><ul>
+<li><a class="reference internal" href="#adding-new-users">Adding New Users</a><ul>
+<li><a class="reference internal" href="#public-key-extraction-done-by-users">Public Key Extraction (Done by Users)</a></li>
+<li><a class="reference internal" href="#user-creation-done-by-the-administrator">User Creation (done by the administrator)</a></li>
+<li><a class="reference internal" href="#user-login-done-by-users">User Login (Done by Users)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quota">Quota</a><ul>
+<li><a class="reference internal" href="#quotas-database-security-done-by-the-administrator">Quotas Database Security (Done by the Administrator)</a></li>
+<li><a class="reference internal" href="#default-quotas-done-by-the-administrator">Default Quotas (Done by the Administrator)</a></li>
+<li><a class="reference internal" href="#explicit-user-quotas-done-by-the-administrator">Explicit User Quotas (Done by the Administrator)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/opennebula.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="opennebula-2-0-tutorial">
+<h1>OpenNebula 2.0 Tutorial<a class="headerlink" href="#opennebula-2-0-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This document is aimed to be a guide to start using OpenNebula 2.0.
+Therefore, if you need more information about any particular OpenNebula
+aspect that it is not addressed here, please refer to the official
+documentation located in
+(<a class="reference external" href="http://www.opennebula.org/documentation:documentation">http://www.opennebula.org/documentation:documentation</a>)</p>
+<p>If you are a user that is only interested in test OpenNebula with some
+pre-configured VM, you can use this guide
+(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vmg">http://www.opennebula.org/documentation:rel2.0:vmg</a>).</p>
+<p>ALL users have to add the following lines to their $HOME/.bashrc or
+$HOME/.profile file.</p>
+<div class="highlight-python"><pre>export PATH=$PATH:$ONE_LOCATION/bin
+export ONE_AUTH=$HOME/.one/one_ssh</pre>
+</div>
+</div>
+<div class="section" id="create-a-vm-image-contextualized-for-opennebula">
+<h1>Create a VM Image Contextualized for OpenNebula<a class="headerlink" href="#create-a-vm-image-contextualized-for-opennebula" title="Permalink to this headline">¶</a></h1>
+<p>In this section we are going to explain how to create a KVM image and
+how to contextualize for OpenNebula.</p>
+<div class="section" id="create-vm-image-using-kvm">
+<h2>Create VM Image Using KVM<a class="headerlink" href="#create-vm-image-using-kvm" title="Permalink to this headline">¶</a></h2>
+<p>This process is generic and it is not related with OpenNebula directly.
+Therefore, this image can be deploy in any machine with KVM and could be
+used to create a VM image for any IaaS framework. The first step is
+install KVM.</p>
+<p>Ubuntu</p>
+<div class="highlight-python"><pre>sudo apt-get install qemu kvm
+
+sudo apt-get install libvirt-bin</pre>
+</div>
+<p>RHEL or CentOS</p>
+<div class="highlight-python"><pre>sudo yum install kvm virt-manager</pre>
+</div>
+<p>Be sure that the virtualization features of your machine are enabled in
+the BIOS. If they are, you should be able to load the KVM
+modules</p>
+<div class="highlight-python"><pre>sudo modprobe kvm-intel
+or
+sudo modprobe kvm-amd</pre>
+</div>
+<p>Now, we need to download the ISO that we are going to install in the VM,
+in this case Ubuntu iso. You can do it from
+<a class="reference external" href="http://ubuntu-releases.cs.umn.edu/10.10/ubuntu-10.10-server-amd64.iso">http://ubuntu-releases.cs.umn.edu/10.10/ubuntu-10.10-server-amd64.iso.</a></p>
+<p>Every VM need a disk to be used as a virtual hard drive (1GB is enough
+for Ubuntu server). Thus, to create this we use the next command:</p>
+<div class="highlight-python"><pre>qemu-img create machine_name.img -f raw 1G</pre>
+</div>
+<p>After this, we are prepared to boot the VM and install the OS.</p>
+<div class="highlight-python"><pre>kvm -m 512 -cdrom /home/user/ubuntu-10.10-server-amd64.iso -boot d machine_name.img</pre>
+</div>
+<p>This command will start the VM and you can install the OS as in a normal
+PC. When you install the OS in the VM you can boot it using this
+command:</p>
+<div class="highlight-python"><pre>kvm -no-acpi -m 512 machine_name.img</pre>
+</div>
+</div>
+<div class="section" id="contextualize-vm">
+<h2>Contextualize VM<a class="headerlink" href="#contextualize-vm" title="Permalink to this headline">¶</a></h2>
+<p>There are two contextualization mechanisms available in OpenNebula: the
+automatic IP assignment, and a more generic way to give any file and
+configuration parameters. You can use any of them individually, or both.
+Nevertheless, we need to prepare the VM image to use this mechanism
+(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cong">http://www.opennebula.org/documentation:rel2.0:cong</a>).</p>
+<p>First, download the vmcontext.sh&nbsp; file in your machine. This file depend
+of your linux distribution.</p>
+<div class="highlight-python"><pre>http://dev.opennebula.org/projects/opennebula/repository/show/share/scripts</pre>
+</div>
+<p>In this address you can find the vmcontext for each supported
+distribution.
+CentOS</p>
+<div class="highlight-python"><pre>wget http://dev.opennebula.org/projects/opennebula/repository/revisions/master/raw/share/scripts/centos-5/net-vmcontext/vmcontext -O vmcontext.sh</pre>
+</div>
+<p>Ubuntu</p>
+<div class="highlight-python"><pre>wget http://dev.opennebula.org/projects/opennebula/repository/revisions/master/raw/share/scripts/ubuntu/net-vmcontext/vmcontext -O vmcontext.sh</pre>
+</div>
+<p>Copy this file to the VM. To do that you can configure a network
+interface in the VM and send the file using ssh. For example if your
+machine has the private IP 192.168.1.1, you could assign to the VM the
+192.168.1.2. So, execute this command in the VM:</p>
+<div class="highlight-python"><pre>sudo ifconfig eht0 192.168.1.2</pre>
+</div>
+<p>From your machine execute this command to send the file to your VM:</p>
+<div class="highlight-python"><pre>scp vmcontext.sh 192.168.1.2:/home/user</pre>
+</div>
+<p>In the VM copy the file to the /etc/init.d directory:</p>
+<div class="highlight-python"><pre>sudo cp vmcontext.sh /etc/init.d
+sudo chmod +x /etc/init.d/vmcontext.sh</pre>
+</div>
+<p>Configure init.d to execute the script during the VM startup
+Centos</p>
+<div class="highlight-python"><pre>sudo chkconfig --add vmcontext.sh</pre>
+</div>
+<p>Ubuntu</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ln</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">vmcontext</span><span class="o">.</span><span class="n">sh</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S01vmcontext</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Add at the end of this file (this may not be needed):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ifup</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python"><pre>/etc/init.d/networking restart  #(in ubuntu)
+/etc/init.d/network restart     #(in centos)</pre>
+</div>
+<p>Remove the udev persistent files (ubuntu only)</p>
+<div class="highlight-python"><pre>sudo rm -f /etc/udev/rules.d/z25_persistent-net.rules
+
+sudo rm -f /etc/udev/rules.d/z45_persistent-net-generator.rules</pre>
+</div>
+<p>With all these steps we have configured the automatic IP assignment in
+the VM. Now, we need to enable the generic contextualization by copying
+these lines to /etc/rc.local.</p>
+<div class="highlight-python"><pre>mount -t iso9660 /dev/sr0 /mnt  #(in ubuntu)
+mount -t iso9660 /dev/hdc /mnt  #(in centos. Actually this depend on the initrd that you uses. If you use the one provided by Ubuntu then you use the previous line instead of this one)
+
+if [ -f /mnt/context.sh ]; then
+
+      . /mnt/init.sh
+
+fi
+
+umount /mnt
+
+exit 0</pre>
+</div>
+<p>The file init.sh is different for each distribution and you can find
+them in the <a class="reference external" href="http://dev.opennebula.org/projects/opennebula/repository/revisions/master/show/share/scripts">OpenNebula
+repository</a>.
+You do not need to include it in the VM because it is included
+automatically by OpenNebula when you require it in the VM template.</p>
+</div>
+</div>
+<div class="section" id="managing-virtual-machines">
+<h1>Managing Virtual Machines<a class="headerlink" href="#managing-virtual-machines" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vm_guide">(http://www.opennebula.org/documentation:rel2.0:vm_guide)</a></p>
+<p>A Virtual Machine within the OpenNebula system consists of:</p>
+<ul class="simple">
+<li>A capacity in terms memory and CPU</li>
+<li>A set of NICs attached to one or more virtual networks</li>
+<li>A set of <strong>disk images</strong>.</li>
+<li>A state file (optional) or <strong>recovery file</strong>, that contains the
+memory image of a running VM plus some hypervisor specific
+information.</li>
+</ul>
+<p>The above items, plus some additional VM attributes like the OS kernel
+and context information to be used inside the VM, are specified in a
+<strong>`VM
+template &lt;http://www.opennebula.org/documentation:rel2.0:template&gt;`__</strong>
+file.</p>
+<p>Each VM in OpenNebula is identified by an unique number, the <tt class="docutils literal"><span class="pre">&lt;VID&gt;</span></tt>.
+Also, the user can assign it a name in the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">VM
+template</a>,
+the default name for each VM is <tt class="docutils literal"><span class="pre">one-&lt;VID&gt;</span></tt>.</p>
+<div class="section" id="virtual-machine-template">
+<h2>Virtual Machine Template<a class="headerlink" href="#virtual-machine-template" title="Permalink to this headline">¶</a></h2>
+<p>OpenNebula templates are designed to be hypervisor-agnostic, but there
+are still some peculiarities to be taken into account, and mandatory
+attributes change depending on the target hypervisor. Hypervisor
+specific information for this attributes can be found in the drivers
+configuration guides:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:xeng">Xen Adaptor</a></li>
+<li><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:kvmg">KVM Adaptor</a></li>
+<li><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vmwareg">VMware
+Adaptor</a></li>
+</ul>
+<p>OpenNebula has been designed to be easily extended, so any attribute
+name can be defined for later use in any OpenNebula module. There are
+some pre-defined attributes, though.</p>
+<p>Please check the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">Virtual Machine definition
+file</a>
+reference for details on all the sections.</p>
+<p>A basic VM template to be run using KVM could be this:</p>
+<div class="highlight-python"><pre>#---------------------------------------
+# VM definition example
+#---------------------------------------
+
+NAME = "ttylinux"
+
+CPU    = 0.5
+MEMORY = 64
+
+# --- disks ---
+
+DISK = [
+  source   = "/srv/cloud/images/ttylinux/ttylinux.img",
+  target   = "hda",
+  readonly = "no" ]
+
+# --- 1 NIC ---
+
+NIC = [ NETWORK="Red LAN"]
+
+FEATURES=[ acpi="no" ]
+
+# --- VNC server ---
+
+GRAPHICS = [
+  type    = "vnc",
+  listen  = "127.0.0.1"]</pre>
+</div>
+<p>In the previous template KVM will asume that the image is RAW. If you
+have a image with the qcow2 format, you have to add the following to the
+DISK description:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">driver</span> <span class="o">=</span> <span class="s">&quot;qcow2&quot;</span>
+</pre></div>
+</div>
+<p>Assuming we have a VM template called &#8220;ttylinux.one&#8221; describing a
+virtual machine. Then, we can allocate the VM in OpenNebula issuing a:</p>
+<p>afterwards, the VM can be listed with the <tt class="docutils literal"><span class="pre">list</span></tt> option:</p>
+</div>
+</div>
+<div class="section" id="managing-the-image-repository">
+<h1>Managing the Image Repository<a class="headerlink" href="#managing-the-image-repository" title="Permalink to this headline">¶</a></h1>
+<p>The Image Repository system allows OpenNebula administrators and users
+to set up images, which can be operative systems or data, to be used in
+Virtual Machines easily. These images can be used by several Virtual
+Machines simultaneously, and also shared with other users.</p>
+<p>This is what a sample template looks like:</p>
+<p>To submit the template, you have to issue the command</p>
+<p>You can use the <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">list</span></tt> command to check the available images
+in the repository.</p>
+<p>There other commands to manage the images sotored in the Image
+Repository:</p>
+<ul class="simple">
+<li>Use the <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">publish</span></tt> and <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">unpublish</span></tt> commands to
+make your images public for every user to use in their virtual
+machines, or private.</li>
+<li>Use the <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">persistent</span></tt> and <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">nonpersistent</span></tt>
+commands to make your images persistent (they are not cloned, but
+rather used from the original image) or not. A persistent image
+cannot be published.</li>
+</ul>
+<p>The only difference with the previous VM template is that now, you only
+need to specify the name of the image that you want to use in the DISK
+section.</p>
+<p>Assuming that the template containing the previous information is called
+template.one, you can deploy the VM using the command:</p>
+<p>Once the VM is deployed you can save the changes made to any disk as a
+new image. To do so, use the <tt class="docutils literal"><span class="pre">onevm</span> <span class="pre">saveas</span></tt> command. This command
+takes three or four arguments: The VM name (or ID), the disk_id to
+save, the name of the new image to register, and optionally the image
+type.</p>
+<p>To know the DISK_ID of the disk you want to save, just take a look at
+the <tt class="docutils literal"><span class="pre">onevm</span> <span class="pre">show</span></tt> output for your VM.</p>
+<p>The DISK_IDs are assigned in the same order the disks were defined in
+the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">VM
+template</a>.</p>
+<p>This will register a new image called “Ubuntu with Apache and MySQL”,
+that will be ready as soon as the VM is shut down.</p>
+<p>The disks can be saved even if they were defined from a local disk file
+(see the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">VM
+template</a>
+reference guide for more information on the different kinds of disks).</p>
+</div>
+<div class="section" id="managing-physical-hosts-and-clusters">
+<h1>Managing Physical Hosts and Clusters<a class="headerlink" href="#managing-physical-hosts-and-clusters" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cluster_guide">http://www.opennebula.org/documentation:rel2.0:cluster_guide</a>)</p>
+<p>In order to use your existing physical nodes, you have to add them to
+the system as OpenNebula hosts. You need the following information:</p>
+<ul class="simple">
+<li><em>Hostname</em> of the cluster node or IP</li>
+<li><em>Information Driver</em> to be used to monitor the host, e.g. <tt class="docutils literal"><span class="pre">im_kvm</span></tt>.</li>
+<li><em>Storage Driver</em> to clone, delete, move or copy images into the host,
+e.g. <tt class="docutils literal"><span class="pre">tm_nfs</span></tt>.</li>
+<li><em>Virtualization Driver</em> to boot, stop, resume or migrate VMs in the
+host, e.g. <tt class="docutils literal"><span class="pre">vmm_kvm</span></tt>.</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">|:!:|</span></a> Before adding a host check that you can ssh to it without being
+prompt for a password</p>
+<div class="section" id="managing-hosts">
+<h2>Managing Hosts<a class="headerlink" href="#managing-hosts" title="Permalink to this headline">¶</a></h2>
+<p>Hosts can be added to the system anytime with the <tt class="docutils literal"><span class="pre">onehost</span></tt> command.
+You can add the cluster nodes to be used by OpenNebula.</p>
+<p>This is two example of adding a KVM host.</p>
+<p>This is an example of adding a XEN host.</p>
+<p>Note that in the two previous examples we are using tm_nfs. This means
+that OpenNebula is configured to share the VM directory or to use SSH
+with no share directory. Other option is the use of LVM. More
+information about the diferent storage system supported can be found in
+<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:sm">http://www.opennebula.org/documentation:rel2.0:sm</a></p>
+<p>The status of the cluster can be checked with the <tt class="docutils literal"><span class="pre">onehost</span> <span class="pre">list</span></tt>
+command:</p>
+<p>And specific information about a host with <tt class="docutils literal"><span class="pre">show</span></tt>:</p>
+<p>If you want not to use a given host you can temporarily disable it:</p>
+<p>A disabled host should be listed with <tt class="docutils literal"><span class="pre">STAT</span> <span class="pre">off</span></tt> by <tt class="docutils literal"><span class="pre">onehost</span> <span class="pre">list</span></tt>.
+You can also remove a host permanently with:</p>
+<p><a href="#id3"><span class="problematic" id="id4">|:!:|</span></a> Detailed information of the <tt class="docutils literal"><span class="pre">onehost</span></tt> utility can be found <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cli#onehost">in
+the Command Line
+Reference</a></p>
+<p>If you use the <tt class="docutils literal"><span class="pre">onecluster</span> <span class="pre">list</span></tt> command you will see that the
+“default” cluster is created automatically.</p>
+<p>You may want to isolate your physical hosts running virtual machines
+containing important services for you business, from the virtual
+machines running a development version of your software. The OpenNebula
+administrator can do so with these commands:</p>
+<p>From this point, the newly created machines can use this cluster names
+as a <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template#placement_section">placement
+requirement</a>:</p>
+<p>Once your development cycle is finished, this “testing” and “production”
+clusters may not be useful any more. Let&#8217;s delete the testing cluster.</p>
+<p>As you can see, the hosts assigned to the “testing” cluster have been
+moved to the “default” one.</p>
+<p><a href="#id5"><span class="problematic" id="id6">|:!:|</span></a> Detailed information of the <tt class="docutils literal"><span class="pre">onecluster</span></tt> utility can be found in
+the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cli#onecluster">Command Line
+Reference</a></p>
+</div>
+</div>
+<div class="section" id="managing-virtual-networks">
+<h1>Managing Virtual Networks<a class="headerlink" href="#managing-virtual-networks" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vgg">(</a><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vgg">http://www.opennebula.org/documentation:rel2.0:vgg</a>)</p>
+<p>A cluster node is connected to one or more networks that are available
+to the virtual machines through the corresponding bridges. To set up a
+virtual networks you just need to know the name of the bridge to bind
+the virtual machines to.</p>
+<div class="section" id="defining-a-virtual-network">
+<h2>Defining a Virtual Network<a class="headerlink" href="#defining-a-virtual-network" title="Permalink to this headline">¶</a></h2>
+<p>OpenNebula allows for the creation of Virtual Networks by mapping them
+on top of the physical ones. All Virtual Networks are going to share a
+default value for the MAC preffix, set in the <tt class="docutils literal"><span class="pre">oned.conf</span></tt> file.</p>
+<p>There are two types of Virtual Networks in OpenNebula:</p>
+<ol class="arabic simple">
+<li><strong>Fixed</strong>, defines a fixed set of IP-MAC pair addresses</li>
+<li><strong>Ranged</strong>, defines a class network.</li>
+</ol>
+<p><a href="#id7"><span class="problematic" id="id8">|:!:|</span></a> Virtual Networks created by <tt class="docutils literal"><span class="pre">oneadmin</span></tt> can be used by every
+other user.</p>
+<div class="section" id="fixed-virtual-network">
+<h3>Fixed Virtual Network<a class="headerlink" href="#fixed-virtual-network" title="Permalink to this headline">¶</a></h3>
+<p>For example to create a Fixed Virtual Network, called <tt class="docutils literal"><span class="pre">Public</span></tt> with
+the set of public IPs to be used by the VMs, just create a file with the
+following contents:</p>
+<p>where <strong>LEASES</strong>: Definition of the IP-MAC pairs. If an IP is defined,
+and there is no associated MAC, OpenNebula will generate it using the
+following rule: <tt class="docutils literal"><span class="pre">MAC</span> <span class="pre">=</span> <span class="pre">MAC_PREFFIX:IP</span></tt>. So, for example, from IP
+10.0.0.1 and MAC_PREFFIX 00:16, we get 00:16:0a:00:00:01. Defining only
+a MAC address with no associated IP is not allowed.</p>
+</div>
+<div class="section" id="ranged-virtual-network">
+<h3>Ranged Virtual Network<a class="headerlink" href="#ranged-virtual-network" title="Permalink to this headline">¶</a></h3>
+<p>The following is an example of a Ranged Virtual Network template:</p>
+<p>where:</p>
+<ul class="simple">
+<li><strong>NETWORK_ADDRESS</strong>: Base network address to generate IP addresses.</li>
+<li><strong>NETWORK_SIZE</strong>: Number of hosts that can be connected using this
+network. It can be defined either using a number or a network class
+(B or C).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="adding-and-deleting-virtual-networks">
+<h2>Adding and Deleting Virtual Networks<a class="headerlink" href="#adding-and-deleting-virtual-networks" title="Permalink to this headline">¶</a></h2>
+<p>Once a template for a VN has been defined, the <tt class="docutils literal"><span class="pre">onevnet</span></tt> command can
+be used to create it.</p>
+<p>To create the previous networks put their definitions in two different
+files, <tt class="docutils literal"><span class="pre">public.net</span></tt> and <tt class="docutils literal"><span class="pre">red.net</span></tt>, respectively. Then, execute:</p>
+<p>Also, <tt class="docutils literal"><span class="pre">onevnet</span></tt> can be used to query OpenNebula about available VNs:</p>
+<p>with <tt class="docutils literal"><span class="pre">USER</span></tt> the owner of the network and <tt class="docutils literal"><span class="pre">#LEASES</span></tt> the number of
+IP-MACs assigned to a VM from this network.</p>
+<p>We can see the details of a particular VN:</p>
+<div class="highlight-python"><pre>$onevnet show 0
+
+VIRTUAL NETWORK 0 INFORMATION
+ID:       : 0
+UID:      : 0
+PUBLIC    : N
+
+VIRTUAL NETWORK TEMPLATE
+BRIDGE=br1
+LEASES=[ IP=192.168.1.7 ]
+LEASES=[ IP=192.168.1.8 ]
+LEASES=[ IP=192.168.1.9 ]
+LEASES=[ IP=192.168.1.10 ]
+NAME=Small LAN
+TYPE=FIXED
+
+LEASES INFORMATION
+LEASE=[ IP=192.168.1.7, MAC=02:00:c0:a8:01:07, USED=1, VID=54 ]
+LEASE=[ IP=192.168.1.8, MAC=02:00:c0:a8:01:08, USED=1, VID=45 ]
+LEASE=[ IP=192.168.1.9, MAC=02:00:c0:a8:01:09, USED=0, VID=-1 ]
+LEASE=[ IP=192.168.1.10, MAC=02:00:c0:a8:01:0a, USED=0, VID=-1 ]</pre>
+</div>
+<p>To delete a virtual network just use <tt class="docutils literal"><span class="pre">onevnet</span> <span class="pre">delete</span></tt>. For example to
+delete the previous networks:</p>
+<p><a href="#id9"><span class="problematic" id="id10">|:!:|</span></a> Check the <tt class="docutils literal"><span class="pre">onevnet</span></tt> command help or <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cli#onevnet">reference
+guide</a>
+for more options to list the virtual networks.</p>
+</div>
+<div class="section" id="using-the-leases-within-the-virtual-machine">
+<h2>Using the Leases Within the Virtual Machine<a class="headerlink" href="#using-the-leases-within-the-virtual-machine" title="Permalink to this headline">¶</a></h2>
+<p>Hypervisors can attach a specific MAC address to a virtual network
+interface, but Virtual Machines need to obtain an IP address. There are
+a variety of ways to achieve this within OpenNebula:</p>
+<ul class="simple">
+<li>Obtain the IP from the MAC address, using the default MAC assignment
+schema (<strong>PREFERRED</strong>)</li>
+<li>Use the <tt class="docutils literal"><span class="pre">CONTEXT</span></tt> attribute, check the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cong">Contextualization
+Guide</a></li>
+</ul>
+<div class="section" id="configuring-the-virtual-machine-to-use-the-leases">
+<h3>Configuring the Virtual Machine to Use the Leases<a class="headerlink" href="#configuring-the-virtual-machine-to-use-the-leases" title="Permalink to this headline">¶</a></h3>
+<p>Please visit the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cong">contextualization
+guide</a> to learn
+how to configure your Virtual Machines.</p>
+</div>
+</div>
+</div>
+<div class="section" id="accounting">
+<h1>Accounting<a class="headerlink" href="#accounting" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="http://opennebula.org/documentation:rel2.0:accounting">http://opennebula.org/documentation:rel2.0:accounting</a>)</p>
+<div class="section" id="physical-resources">
+<h2>Physical Resources<a class="headerlink" href="#physical-resources" title="Permalink to this headline">¶</a></h2>
+<p>Usage of a physical resource can be obtained for a given user or a given
+virtual machine. Accounting reports always show aggregated information,
+considering possible migration of a virtual machine to between physical
+resources.</p>
+<p><tt class="docutils literal"><span class="pre">oneacct</span> <span class="pre">host</span></tt> - prints accounting information for the physical
+resources</p>
+<p>Obtaining the accounting information for user john</p>
+<p>The columns are:</p>
+<ul class="simple">
+<li>XFR: Total transfer time. It includes cloning VM disk images in the
+target resource and transfer back of modified images when applicable</li>
+<li>RUNN: Total running time. It includes boot, running and saving times</li>
+<li>VMS: Total number of virtual machines</li>
+</ul>
+<p>Obtaining accounting information for host</p>
+</div>
+<div class="section" id="virtual-resources">
+<h2>&nbsp;&nbsp;Virtual Resources<a class="headerlink" href="#virtual-resources" title="Permalink to this headline">¶</a></h2>
+<p>Accounting information for Virtual Machines can be obtained for a given
+user or a given virtual machine.</p>
+<p>The current version of the virtual resources reports does not consider
+possible migration of a virtual machine to between physical resources.</p>
+<p><tt class="docutils literal"><span class="pre">oneacct</span> <span class="pre">vm</span></tt> - prints accounting information for virtual machines</p>
+<p>Obtaining the accounting information for a given VM</p>
+<p>The columns are:</p>
+<ul class="simple">
+<li>HOST: where the VM has been executed</li>
+<li>XFR: Total transfer time in that host</li>
+<li>RUNN: Total running time in the host</li>
+</ul>
+<p>Obtaining the accounting information for a given host</p>
+<p>Obtaining the accounting information for a given user</p>
+<p>In this last example columns show aggregated transfer and running times.</p>
+</div>
+</div>
+<div class="section" id="user-management">
+<h1>User Management<a class="headerlink" href="#user-management" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:users">http://www.opennebula.org/documentation:rel2.0:users)</a></p>
+<div class="section" id="adding-new-users">
+<h2>Adding New Users<a class="headerlink" href="#adding-new-users" title="Permalink to this headline">¶</a></h2>
+<p>Current Authentication/Authorization module (from now on auth module)
+has support for user/password and rsa private/public key authentication
+and also user quota support. Here, we are going to talk about the SSH
+module and how to add users using SSH keys. More information can be
+found in the official documentation:
+<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:users">http://www.opennebula.org/documentation:rel2.0:users</a></p>
+<div class="section" id="public-key-extraction-done-by-users">
+<h3>Public Key Extraction (Done by Users)<a class="headerlink" href="#public-key-extraction-done-by-users" title="Permalink to this headline">¶</a></h3>
+<p>To create a user compatible with <tt class="docutils literal"><span class="pre">ssh</span></tt> option for authentication the
+administrator needs to add the user&#8217;s public key into the database. The
+file with public key generated by <tt class="docutils literal"><span class="pre">ssh-keygen</span></tt>
+(<tt class="docutils literal"><span class="pre">$HOME/.ssh/id_rsa.pub</span></tt>) is written in a format readable by
+<tt class="docutils literal"><span class="pre">openssl</span></tt> so the public key should be extracted by the user and sent
+to the administrator. The way to extract it is the following:</p>
+<p>The string the user has to send to the administrator to create the user
+is written to the console.</p>
+</div>
+<div class="section" id="user-creation-done-by-the-administrator">
+<h3>User Creation (done by the administrator)<a class="headerlink" href="#user-creation-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>After the user sends the rsa public key the administration needs to
+create a new account in OpenNebula system. This is done in a similar way
+as standard user/password users but using the public key provided by the
+user and adding a parameter to the command so the password (in this case
+the public key) is stored as is in the database. Here is the command to
+create a user called <tt class="docutils literal"><span class="pre">test</span></tt> with the previously extracted public key:</p>
+<p>After this the administrator can check that the user is in the system:</p>
+</div>
+<div class="section" id="user-login-done-by-users">
+<h3>User Login (Done by Users)<a class="headerlink" href="#user-login-done-by-users" title="Permalink to this headline">¶</a></h3>
+<p>Before performing any action in OpenNebula system the user needs to
+login. To do this we must issue this command:</p>
+<p>The command on success will print the command needed to execute so
+OpenNebula knows where to find the login file generated.</p>
+<p>This line can also be added by the user to $HOME/.profile or
+$HOME/.bashrc so it is not needed to be executed every new system login.</p>
+<p>By default the login file will be valid for one hour. This expire time
+can be changed adding another parameter with the number of seconds you
+want the login to be valid. For example to create a 2 hours valid login
+you can issue this command:</p>
+</div>
+</div>
+<div class="section" id="quota">
+<h2>Quota<a class="headerlink" href="#quota" title="Permalink to this headline">¶</a></h2>
+<p>When quota module is enabled it checks for user resource consumption
+before letting a VM to created in OpenNebula system. You have to take
+into account that all resources for VMs listed by <tt class="docutils literal"><span class="pre">onevm</span> <span class="pre">list</span></tt> for a
+user are counted as used. Administrator user has unlimited quota.</p>
+<div class="section" id="quotas-database-security-done-by-the-administrator">
+<h3>Quotas Database Security (Done by the Administrator)<a class="headerlink" href="#quotas-database-security-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>By default user quota database is an <em>sqlite</em> database located at
+<tt class="docutils literal"><span class="pre">$ONE_LOCATION/var/auth.db</span></tt>. This database on creation does not have
+secure permissions and the administrator may change its permission and
+maybe its location. To change its location you can use a full path to
+the database in the auth module configuration file:</p>
+<p>You may also change its permissions to <tt class="docutils literal"><span class="pre">0600</span></tt> so the unix user that
+runs OpenNebula daemons is the only with read/write access permissions.</p>
+</div>
+<div class="section" id="default-quotas-done-by-the-administrator">
+<h3>Default Quotas (Done by the Administrator)<a class="headerlink" href="#default-quotas-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>Default quotas for all users are configured as previously stated in
+<em>Configuring and Enabling Auth Module</em>. This is the first configuration
+you will have to do if you enable quota system as any user without
+explicit quotas can only use that amount of resources.</p>
+</div>
+<div class="section" id="explicit-user-quotas-done-by-the-administrator">
+<h3>Explicit User Quotas (Done by the Administrator)<a class="headerlink" href="#explicit-user-quotas-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>Setting special quotas for a user can be done using <tt class="docutils literal"><span class="pre">oneauth</span></tt> command.
+If you have secured the database only unix user that runs OpenNebula
+will be able to update them. The steps to change permissions for a user
+are as follows:</p>
+<ul class="simple">
+<li>Find the user id for the user we want to change limits. We are
+searching for user <tt class="docutils literal"><span class="pre">test</span></tt>:</li>
+</ul>
+<ul class="simple">
+<li>The user id for <tt class="docutils literal"><span class="pre">test</span></tt> is 1. Now we use
+<tt class="docutils literal"><span class="pre">oneauth</span> <span class="pre">quota</span> <span class="pre">set</span> <span class="pre">&lt;user</span> <span class="pre">id&gt;</span> <span class="pre">&lt;cpu&gt;</span> <span class="pre">&lt;memory&gt;</span></tt> to change user limits:</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

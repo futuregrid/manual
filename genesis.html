@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Genesis II &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Genesis II</a></li>
+<li><a class="reference internal" href="#what-is-genesisii">What is GenesisII</a></li>
+<li><a class="reference internal" href="#connecting-to-the-genesisii-bes-endpoints">Connecting to the GenesisII BES Endpoints</a><ul>
+<li><a class="reference internal" href="#supported-data-staging">Supported Data Staging</a></li>
+<li><a class="reference internal" href="#protocols">Protocols</a><ul>
+<li><a class="reference internal" href="#stage-in">Stage in:</a></li>
+<li><a class="reference internal" href="#stage-out">Stage out:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#endpoint-connection-information">Endpoint Connection Information</a><ul>
+<li><a class="reference internal" href="#india">India</a></li>
+<li><a class="reference internal" href="#sierra">Sierra</a></li>
+<li><a class="reference internal" href="#alamo">Alamo</a></li>
+<li><a class="reference internal" href="#hotel">Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-futuregrid-genesisii-endpoints-as-a-client">Using the Futuregrid GenesisII Endpoints as a Client</a><ul>
+<li><a class="reference internal" href="#non-genesisiiusing-a-standards-compliant-client">Non-GenesisIIUsing a Standards-Compliant Client</a></li>
+<li><a class="reference internal" href="#using-the-genesisii-client">Using The GenesisII Client</a><ul>
+<li><a class="reference internal" href="#acquiring-genesisii-client-package">Acquiring GenesisII Client Package</a><ul>
+<li><a class="reference internal" href="#linux">Linux</a></li>
+<li><a class="reference internal" href="#windows">Windows</a></li>
+<li><a class="reference internal" href="#macos">MacOS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installing-the-genesisii-xcg-client-package">Installing the GenesisII/XCG Client Package</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li><a class="reference internal" href="#start-grid-shell">Start Grid Shell</a><ul>
+<li><a class="reference internal" href="#id1">Windows</a></li>
+<li><a class="reference internal" href="#linux-or-macos">Linux or MacOS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-jobs">Running Jobs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/genesis.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="genesis-ii">
+<h1>Genesis II<a class="headerlink" href="#genesis-ii" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt><a href="#id2"><span class="problematic" id="id3">|image131|</span></a></dt>
+<dd>Genesis II on FutureGrid
+User Manual</dd>
+</dl>
+<hr class="docutils" />
+<p>Author: University of Virginia
+&nbsp;Version: 1.0
+&nbsp; Last Revision: 2011-11-02</p>
+<blockquote>
+<div>Introduction</div></blockquote>
+<hr class="docutils" />
+<p><a class="reference external" href="http://www.genesis2.virginia.edu/wiki">GenesisII</a> compute endpoints
+are currently deployed on three FutureGrid HPC resources: XRay, Sierra
+and India.&nbsp; Additional endpoints are planned for Hotel and Alamo in the
+near future.&nbsp; This tutorial explains:</p>
+<ul class="simple">
+<li>How to connect to these GenesisII endpoints from other grid
+middleware platforms;</li>
+<li>How to download GenesisII client software and use the UVa Corss
+Campus Grid (XCG) which includes the FutureGrid endpoints.</li>
+</ul>
+</div>
+<div class="section" id="what-is-genesisii">
+<h1>What is GenesisII<a class="headerlink" href="#what-is-genesisii" title="Permalink to this headline">¶</a></h1>
+<p>GenesisII is a Grid middleware system. Listed below are the key
+principles/features of the GenesisII design. More information about
+GenesisII can be found <a class="reference external" href="http://www.genesis2.virginia.edu/wiki">here</a>.</p>
+<ul class="simple">
+<li>Open source.</li>
+<li>Standards-based. GenesisII follows grid standards from the Open Grid
+Forum (OGF), W3C, and OASIS, including many from the Open Grid
+Services Architecture (OGSA) and the Web Services Resource Framework
+(WSRF).&nbsp; In particular, GenesisII adheres to parts or all of OGSA
+Basic Execution Service (BES), Resource Naming Service (RNS), OGSA
+ByteIO, WS-Security, WS-Naming, WS-Trust, and Job Submission
+Description Language (JSDL).</li>
+<li>Open and extensible realized with a modern Service- Oriented
+Architecture (SOA), which allows to easily replace particular
+components with others.</li>
+<li>Interoperable with other Grid technologies to enable a coupling of
+Grid infrastructures or the users needs</li>
+<li>End user focused. Whenever possible GenesisII was designed to use
+concepts already familiar to users (such as hierarchical directory
+structures) and to provide easy to use commands and GUIs to simplify
+the user&#8217;s experience.&nbsp; GenesisII provides a number of commands based
+on familiar UNIX tools and provides GUIs for to browse the grid
+directory structure, monitor jobs, create JSDL job descriptions, etc.</li>
+<li>Strong security mechanisms built in from the ground up.&nbsp; Flexible
+access control for all grid resources.&nbsp; Support for X.509
+certificates and username/password (based on WS-Security and OGF
+Basic Security Profile).&nbsp; Support for virtual organizations via
+user-defined groups.</li>
+<li>Quick and simple to install and configure.</li>
+<li>Client and server software supported on a number of platforms
+(Windows XP, Linux, and MacOS).&nbsp; Support for various batch systems
+such as PBS, Sun Grid Engine, etc.</li>
+<li>Implemented in Java to achieve platform independence.</li>
+</ul>
+</div>
+<div class="section" id="connecting-to-the-genesisii-bes-endpoints">
+<h1>Connecting to the GenesisII BES Endpoints<a class="headerlink" href="#connecting-to-the-genesisii-bes-endpoints" title="Permalink to this headline">¶</a></h1>
+<p>To date, three GenesisII BES endpoints have been deployed on FutureGrid
+for interoperability testing as well as grid client usage. Endpoints are
+located on Sierra, India, and Alamo. This section contains the
+information needed for other grid middleware platforms to connect to the
+GenesisII BES endpoints.</p>
+<div class="section" id="supported-data-staging">
+<h2>Supported Data Staging<a class="headerlink" href="#supported-data-staging" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="protocols">
+<h2>Protocols<a class="headerlink" href="#protocols" title="Permalink to this headline">¶</a></h2>
+<p>Each of the GenesisII endpoints supports a number of protocols for
+staging data into and out of jobs as supported by the JSDL
+specification&#8217;s Data Staging elements.&nbsp; The following are the protocols
+currently supported by the GenesisII endpoints:</p>
+<div class="section" id="stage-in">
+<h3>Stage in:<a class="headerlink" href="#stage-in" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>HTTP</li>
+<li>RNS/ByteIO</li>
+<li>ftp</li>
+<li>scp</li>
+<li>sftp</li>
+</ul>
+</div>
+<div class="section" id="stage-out">
+<h3>Stage out:<a class="headerlink" href="#stage-out" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>mailto</li>
+<li>RNS/ByteIO</li>
+<li>ftp</li>
+<li>scp</li>
+<li>sftp</li>
+</ul>
+<p>** NOTE: ftp, scp, sftp is supported as per the HPC FSE standard and
+only for the username/password security token version.</p>
+</div>
+</div>
+<div class="section" id="endpoint-connection-information">
+<h2>Endpoint Connection Information<a class="headerlink" href="#endpoint-connection-information" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="india">
+<h3>India<a class="headerlink" href="#india" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Endpoint EPR</strong>: <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/india-epr-Nov-01-2011.txt">click
+here</a></li>
+<li><strong>Security</strong>: configured for username/password authentication;
+<a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">Email</a> for username token and CA
+cert.</li>
+<li><strong>OS</strong>: Red Hat Enterprise Linux Server release 5.7</li>
+<li><strong>Arch</strong>: x86_64</li>
+<li><strong>Cores</strong>: Approximately 400. Jobs submitted to HPC (i.e. batch)
+queue via PBS</li>
+<li><strong>Grid Path</strong>:
+/bes-containers/FutureGrid/IU/pbs-long.from-daemon.india.futuregrid.org</li>
+</ul>
+</div>
+<div class="section" id="sierra">
+<h3>Sierra<a class="headerlink" href="#sierra" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Endpoint EPR</strong>: <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/sierra-epr-Mar-22-2012_0.txt">click
+here</a></li>
+<li><strong>Security</strong>: configured for username/password authentication;
+<a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">Email</a> for username token and CA
+cert.</li>
+<li><strong>OS</strong>: Red Hat Enterprise Linux Server release 6.1</li>
+<li><strong>Arch</strong>: x86_64</li>
+<li><strong>Cores</strong>: Approximately 300. Jobs submitted to HPC (i.e. batch)
+queue via PBS</li>
+<li><strong>Grid Path</strong>:
+/bes-containers/FutureGrid/SDSC/pbs-long.from-daemon.sierra.futuregrid.org</li>
+</ul>
+</div>
+<div class="section" id="alamo">
+<h3>Alamo<a class="headerlink" href="#alamo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Endpoint EPR</strong>: <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/alamo-epr-Mar-22-2012_0.txt">click
+here</a></li>
+<li><strong>Security</strong>: configured for username/password authentication;
+<a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">Email</a> for username token and CA
+cert.</li>
+<li><strong>OS</strong>: CentOS release 5.6</li>
+<li><strong>Arch</strong>: x86_64</li>
+<li><strong>Cores</strong>: Approximately 200. Jobs submitted to HPC (i.e. batch)
+queue via PBS</li>
+<li><strong>Grid Path</strong>: /bes-containers/FutureGrid/TACC/pbs-long.from-alamo1</li>
+</ul>
+</div>
+<div class="section" id="hotel">
+<h3>Hotel<a class="headerlink" href="#hotel" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>Endpoint EPR</strong>: <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/hotel-epr-Apr-24-2012.txt">click
+here</a></li>
+<li><strong>Security</strong>: <a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">Email</a> for
+username/password authentication token and CA cert.</li>
+<li><strong>OS</strong>: Red Hat Enterprise Linux Server release 5.8 (Tikanga)</li>
+<li><strong>Arch</strong>: x86_64</li>
+<li><strong>Cores</strong>: Approximately 300. Jobs submitted to HPC (i.e. batch)
+queue via PBS</li>
+<li><strong>Grid Path</strong>:
+/bes-containers/FutureGrid/UC/pbs-long.from-hotel1.futuregrid.org</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-futuregrid-genesisii-endpoints-as-a-client">
+<h1>Using the Futuregrid GenesisII Endpoints as a Client<a class="headerlink" href="#using-the-futuregrid-genesisii-endpoints-as-a-client" title="Permalink to this headline">¶</a></h1>
+<p>There are two ways a client can use the GenesisII endpoints deployed
+within Futuregrid: using a standards-compliant non-GenesisII middleware
+client or using the GenesisII client.</p>
+<div class="section" id="non-genesisiiusing-a-standards-compliant-client">
+<h2>Non-GenesisIIUsing a Standards-Compliant Client<a class="headerlink" href="#non-genesisiiusing-a-standards-compliant-client" title="Permalink to this headline">¶</a></h2>
+<p>If you wish to use a standards-based middleware client, you may be
+able to use that client to access the GenesisII BES endpoints within
+Futuregrid.&nbsp; The first step is to determine whether the grid client
+software you wish to use is properly compliant with the GenesisII BES
+implementation.&nbsp; GenesisII BES endpoints have been tested for
+interoperability against several grid software systems.&nbsp; You will need
+to contact the developer/vendor of your system to determine if their
+software is compatible with GenesisII.&nbsp; Depending on your system works,
+you will either need to contact your grid system administrator to have
+him/her add the Futuregrid GenesisII BES endpoints or you will need to
+provide a reference to the endpoints to the client tooling.&nbsp; In either
+case, the information you or your grid administrator needs is included
+in the section above (<a class="reference external" href="#Connecting%20To%20GenesisII%20BES%20Endpoints">Connecting to the GenesisII BES
+Endpoints</a>).</p>
+</div>
+<div class="section" id="using-the-genesisii-client">
+<h2>Using The GenesisII Client<a class="headerlink" href="#using-the-genesisii-client" title="Permalink to this headline">¶</a></h2>
+<p>GenesisII has a rich client package available for Windows, MacOS and
+LINUX platforms that includes UNIX-style command line tools as well as
+several graphical user interface tools.&nbsp; The University of Virginia
+maintains a grid called the Cross Campus Grid (XCG) that already
+includes the FurtureGrid GenesisII BES endpoints in it - already
+configured and ready to go.&nbsp; To get started, the first step is to
+download and install the GenesisII/XCG installation package.</p>
+<div class="section" id="acquiring-genesisii-client-package">
+<h3>Acquiring GenesisII Client Package<a class="headerlink" href="#acquiring-genesisii-client-package" title="Permalink to this headline">¶</a></h3>
+<p>The GenesisII/XCG installers are available at
+<a class="reference external" href="http://www.genesis2.virginia.edu/wiki/Main/Downloads">http://www.cs.virginia.edu/~vcgr/wiki/index.php/Genesis_II_Downloads</a>.
+Choose the platform that matches the machine/OS where you will be
+running your client and click the corresponding &#8220;Download&#8221; link to
+download the installer.</p>
+<div class="section" id="linux">
+<h4>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h4>
+<p>The Linux installer is a shell script named XCG-Installer.sh encoded
+with the entire GenesisII package inside.&nbsp; Simply execute the shell
+script (./XCG-Installer in proper directory) to begin installation.
+Follow the steps here in answering the installation questions.</p>
+</div>
+<div class="section" id="windows">
+<h4>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h4>
+<p>The Windows installer is an executable named XCG-Installer.exe.
+Simply run it like any other executable (e.g. double-clicking) and
+follow the steps here in answering the installation questions.</p>
+<p>Note that currently, the GenesisII software is only tested for
+Windows XP.&nbsp; However, our early experience with Windows 7 (and Vista)
+indicates that the client installation will work fine as long as you
+install GenesisII in a folder that does not have special security
+meaning to Windows (such as your Documents and Settings directory or
+C:\).</p>
+</div>
+<div class="section" id="macos">
+<h4>MacOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h4>
+<p>The MacOS installer is a dmg file named XCG-Installer.dmg encoded with
+the entire GenesisII package inside.&nbsp; Simply execute the dmg file (e.g.
+by double clicking) to begin installation.&nbsp; Follow the steps here in
+answering the installation questions.</p>
+</div>
+</div>
+<div class="section" id="installing-the-genesisii-xcg-client-package">
+<h3>Installing the GenesisII/XCG Client Package<a class="headerlink" href="#installing-the-genesisii-xcg-client-package" title="Permalink to this headline">¶</a></h3>
+<p>The installation process requires answering a few questions about
+license agreement and configuration options.</p>
+<ul class="simple">
+<li><strong>Agree to license terms</strong>.&nbsp; The GenesisII license follows the Apache
+License model.&nbsp; For command line versions, this may require hitting
+enter a number of time to scroll the license text on the screen.</li>
+<li><strong>Select the directory for the installation</strong>.&nbsp; In most cases the
+default is sufficient, though you can feel free to change it.&nbsp; As
+noted earlier, Windows Vista and 7 users should choose a directory
+that is not given special protection from those operating systems.
+For example, the default C:\Program Files is given special treatment
+and blocks writes made there by the software.&nbsp; This causes GenesisII
+problems because GenesisII has a patch mechanism built which needs to
+overwrite package files in the installation directory.&nbsp; For Windows
+7/Vista, we recommend a directory within your user folder.</li>
+<li><strong>Client v Full Container Install.</strong>&nbsp; The entire GenesisII software
+package is included in the installer.&nbsp; This includes both client-side
+command line tools and GUIs as well as server-side programs for
+installing grid servers.&nbsp; We recommend installing the client only
+version.&nbsp; Select XCG Client Install option.</li>
+<li><strong>Shortcuts/Start Menu options.</strong>&nbsp; For Windows users, you can select
+whether to create a shortcut for all users (default yes), create a
+start menu item for GenesisII (default: yes) and pick a name for the
+start menu folder (default: GenesisII).&nbsp; The defaults are
+recommended, but you can change if you like.&nbsp; For Linux and MacOS,
+you can choose whether to create shortcuts in the standard binary
+directory (Linux: /usr/bin; MacOS: /Applications/?).&nbsp; Unless you are
+installing with root privileges, we recommend choosing &#8220;No&#8221; to this
+question.</li>
+</ul>
+<p>That&#8217;s it.&nbsp; Since the installer is specific to the UVA Cross Campus
+Grid, you not only have GenesisII successfully installed, but you have
+also configured your system to connect to the XCG.</p>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>To get started using the XCG, you will need an XCG account - which is
+<strong>not</strong> the same as your local machine account or your FutureGrid
+resource account. To request an XCG account, fill out the XCG user
+application form located at
+<a class="reference external" href="https://www.cs.virginia.edu/~vcgr/userrequest/">http://www.cs.virginia.edu/~vcgr/userrequest</a>.</p>
+<p>Once you have an account and have the appropriate GenesisII software
+installed, you are ready to start a GenesisII grid shell and login.</p>
+<div class="section" id="start-grid-shell">
+<h3>Start Grid Shell<a class="headerlink" href="#start-grid-shell" title="Permalink to this headline">¶</a></h3>
+<p>To start a grid shell start the &#8220;grid&#8221; executable from the installation
+directory.</p>
+<div class="section" id="id1">
+<h4>Windows<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Double click the &#8220;grid&#8221; file in the installation directory;
+or
+Open a Windows command line window, cd to the installation directory,
+and enter the grid.exe command.</p>
+</div>
+<div class="section" id="linux-or-macos">
+<h4>Linux or MacOS<a class="headerlink" href="#linux-or-macos" title="Permalink to this headline">¶</a></h4>
+<p>If you have a Window manager running, double click on the grid binary
+in the installation directory
+or
+Open a shell, cd to the installation directory and enter the grid
+command</p>
+<p><strong>LogIn</strong>
+Once you have a grid shell open, you need to be logged into your XCG
+grid account in order to perform most useful commands. First check to
+see if you are already logged in - the &#8220;whoami&#8221; command prints out your
+current credentials. If you are not logged in, it should look like this
+(the Client Tool Identity is an automatically generated certificate used
+by GenesisII client commands and does not carry any authentication
+information):</p>
+<p>To login, use the &#8220;login&#8221; command.&nbsp; The syntax is &#8220;login
+&#8211;username=&lt;grid user name&gt;&#8221;.&nbsp; After running this command, a popup
+window will prompt you for your password</p>
+<p>The output from the post-login whoami command indicates that I have 2
+new certificates - one that asserts that I am user jfk3w, and another
+that asserts that I have the permissions of the group
+&#8220;uva-idp-group.2010&#8221;.&nbsp; The XCG uses the uva-idp-group.2010 to set
+permissions for all approved XCG users.&nbsp; Your membership in this group
+is done by XCG administrators when you account is created.&nbsp; If you later
+create new groups or are added to other existing groups, your login will
+automatically acquire the extra credentials to assert that you are a
+member of that group (assuming the group allows you access).</p>
+</div>
+</div>
+<div class="section" id="running-jobs">
+<h3>Running Jobs<a class="headerlink" href="#running-jobs" title="Permalink to this headline">¶</a></h3>
+<p>To learn how the basics about executing and monitoring jobs using
+GenesisII and the XCG, please refer to <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/XCG%20Tutorial.pdf">XCG
+Tutorial</a>
+document.</p>
+</div>
+</div>
+<div class="section" id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h2>
+<p>To get help using the XCG send email to the UVA Computational Science
+and Engineering (UVACSE) group at <a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">uvacse<span>&#64;</span>virginia<span>&#46;</span>edu</a>.&nbsp; You can also use
+the <a class="reference external" href="http://www.genesis2.virginia.edu/wiki/Main/HomePage">GenesisII web
+site</a> and the
+<a class="reference external" href="http://www.cs.virginia.edu/~xcgshare/wiki/index.php/Homepage">XCG web
+site</a>
+to look at further documentation and FAQs</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="91%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attachment</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/india-epr-Nov-01-2011.txt">india-epr-Nov-01-2011.txt</a></td>
+<td>7.8 KB</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/sierra-epr-Mar-22-2012_0.txt">sierra-epr-Mar-22-2012.txt</a></td>
+<td>7.8 KB</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/alamo-epr-Mar-22-2012_0.txt">alamo-epr-Mar-22-2012.txt</a></td>
+<td>7.82 KB</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/hotel-epr-Apr-24-2012.txt">hotel-epr-Apr-24-2012.txt</a></td>
+<td>7.86 KB</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EMI Unicore Tutorial &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">EMI Unicore Tutorial</a><ul>
+<li><a class="reference internal" href="#what-is-emi">What is EMI?</a></li>
+<li><a class="reference internal" href="#emi-on-futuregrid">EMI on FutureGrid</a></li>
+<li><a class="reference internal" href="#launching-the-unicore-appliance">Launching the UNICORE appliance</a></li>
+<li><a class="reference internal" href="#using-your-unicore-server">Using your UNICORE Server</a></li>
+<li><a class="reference internal" href="#querying-resources-on-emi-unicore">Querying Resources on EMI UNICORE</a></li>
+<li><a class="reference internal" href="#runing-a-job-and-the-job-description-file">Runing a job and the job description file</a></li>
+<li><a class="reference internal" href="#running-your-own-scripts">Running your own scripts</a></li>
+<li><a class="reference internal" href="#handling-data">Handling Data</a></li>
+<li><a class="reference internal" href="#resources">Resources</a></li>
+<li><a class="reference internal" href="#running-job-on-a-set-of-files">Running job on a set of files</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/emi.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="emi-unicore-tutorial">
+<h1>EMI Unicore Tutorial<a class="headerlink" href="#emi-unicore-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-emi">
+<h2>What is EMI?<a class="headerlink" href="#what-is-emi" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.eu-emi.eu/">European Middleware Initiative</a>&nbsp;(EMI) is a
+software platform for high performance distributed computing.</p>
+<p>It is at the core of grid middleware distributions used by scientific
+research communities and distributed computing infrastructures all over
+the world including WLCG&#8211;the Worldwide LHC Computing Grid&#8211;which
+supports, for example, the search for the Higgs boson and new types of
+matter searches of the physicists at LHC, together with other large
+scientific challenges in astronomy, biology, computational chemistry and
+other sciences.</p>
+<p>Being a close collaboration among well-established grid middleware
+providers and other specialized software providers, EMI proposes itself
+as a leading platform for scientific grid computing and looks at
+expanding outside of its natural environment.</p>
+</div>
+<div class="section" id="emi-on-futuregrid">
+<h2>EMI on FutureGrid<a class="headerlink" href="#emi-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<p>EMI have created a number of Virtual Appliances which run on FutureGrid.
+This tutorial describes how to use the the EMI UNICORE server tools.
+Users can connect an EMI user interface node to the UNICORE instance
+running on the VM in order to submit jobs, monitor them and retrieve
+results.</p>
+<p>The emi-unicore virtual appliance is available on the following
+resources</p>
+<ul class="simple">
+<li>Sierra</li>
+<li>Hotel</li>
+<li>Foxtrot</li>
+</ul>
+</div>
+<div class="section" id="launching-the-unicore-appliance">
+<h2>Launching the UNICORE appliance<a class="headerlink" href="#launching-the-unicore-appliance" title="Permalink to this headline">¶</a></h2>
+<p>To launch the emi-unicore VM you must use the Nimbus cloud-client tool.
+For instructions on how to install and configure Nimbus please see
+the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Nimbus
+tutorial</a>.</p>
+<p>Once you have a working Nimbus client you can search for the emi-unicore
+appliance using the following command</p>
+<div class="highlight-python"><pre>$ bin/cloud-client.sh --list</pre>
+</div>
+<p>You should see a the emi-unicore appliance in the list. To instantiate
+an emi-unicore appliance use the following command</p>
+<div class="highlight-python"><pre>$ bin/cloud-client.sh --run --name &lt;VM appliance name&gt; --hours &lt;number of hours&gt;</pre>
+</div>
+<p>For example, if the emi-unicore appliance is called
+emi1-unicore-centos-5.3-x64-p1.gz and you want to run it for three
+hours, use the following command</p>
+<div class="highlight-python"><pre>$ bin/cloud-client.sh --run --name emi1-unicore-centos-5.3-x64-p1.gz --hours 3</pre>
+</div>
+<p>Once the VM is running you should have a working UNICORE server. You can
+log in as root using your ssh key and test the UNICORE services with the
+command</p>
+<div class="highlight-python"><pre>$ unicore-unicorex-status.sh</pre>
+</div>
+</div>
+<div class="section" id="using-your-unicore-server">
+<h2>Using your UNICORE Server<a class="headerlink" href="#using-your-unicore-server" title="Permalink to this headline">¶</a></h2>
+<p>The emi-unicore appliance contains the UNICORE server packages. In order
+to submit jobs to this server you must have access to a user interface
+machine with the emi-ui package installed.</p>
+<p>This can be an external machine, or another VM, but it must run
+Scientific Linux versions 5 or 6.</p>
+<p>The emi-ui package can be obtained from the&nbsp;<a class="reference external" href="http://emisoft.web.cern.ch/emisoft/index.html">EMI
+repository</a>.&nbsp;EMI
+packages are signed with the EMI GPG key, which can be obtained
+from&nbsp;<a class="reference external" href="http://emisoft.web.cern.ch/emisoft/dist/EMI/2/RPM-GPG-KEY-emi">http://emisoft.web.cern.ch/emisoft/dist/EMI/2/RPM-GPG-KEY-emi</a>.
+Download the key and run&nbsp;rpm &#8211;import &lt;keyfilename&gt;&nbsp;in order to allow
+packages signed with this key to be verified.</p>
+<p>First configure the repository by installing the relevant yum repository
+file:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://emisoft.web.cern.ch/emisoft/dist/EMI/2/sl5/x86_64/base/emi-release-2.0.0-1.sl5.noarch.rpm">SL5</a></li>
+<li><a class="reference external" href="http://emisoft.web.cern.ch/emisoft/dist/EMI/2/sl6/x86_64/base/emi-release-2.0.0-1.sl6.noarch.rpm">SL6</a></li>
+</ul>
+<p>You should now be able to install packages from the EMI repository. To
+install the emi-ui type</p>
+<div class="highlight-python"><pre>$ yum install emi-ui</pre>
+</div>
+<p>To configure your emi user interface to use the UNICORE server running
+in your emi-unicore virtual appliance you must edit the file
+.ucc/preferences. If this file does not exist first run the command ucc
+to create it.</p>
+<p>Set the registry line to the uri of the EMI UNICORE instance, you will
+need to ensure that the hostname matches that of the emi-unicore VM
+which you previously instantiated. The hostname was given in the output
+of the Nimbus cloud-client.sh &#8211;run command. For example, if your
+UNICORE appliance was instantiated on host vm-7.sdsc.futuregrid.org then
+you would set the registry line as follows in the .ucc/preferences file:</p>
+<div class="highlight-python"><pre>registry=https://vm-7.sdsc.futuregrid.org:8080/DEFAULT-SITE/services/Registry?res=default_registry</pre>
+</div>
+<p>You will also need to configure the UNICORE authentication. Your UNICORE
+server is configured to allow access to the UNICORE &#8220;demo user&#8221;. You can
+find the keystore for this
+user&nbsp;<a class="reference external" href="http://www.eu-emi.eu/documents/10147/45270/user-keystore.jks">here</a>,
+download it and put it in the .ucc/certs/ directory. Next set the
+following parameters in the .ucc/preferences file:</p>
+<div class="highlight-python"><pre>keystore=certs/user-keystore.jks password=the!user</pre>
+</div>
+<p>You are now ready to begin using your EMI UNICORE installation. To test
+it use the command</p>
+<div class="highlight-python"><pre>$ ucc connect</pre>
+</div>
+</div>
+<div class="section" id="querying-resources-on-emi-unicore">
+<h2>Querying Resources on EMI UNICORE<a class="headerlink" href="#querying-resources-on-emi-unicore" title="Permalink to this headline">¶</a></h2>
+<p>Before you run any jobs, you should investigate what resources are
+available. You can query the UNICORE server using the following commands</p>
+<div class="highlight-python"><pre>$ ucc list-sites $ ucc list-storages $ ucc list-applications</pre>
+</div>
+<p>The first two commands will tell you about the computing and storage
+resources available to you. The last command tells you the supported
+applications which you are permitted to use. If you look in more detail
+at output of the list-applications command you will see that it provides
+a list of common applications along with their version number.</p>
+<div class="highlight-python"><pre>$ ucc list-applications Applications on target system &lt;DEFAULT-SITE&gt; Korn shell Version M 1993-12-28 q C shell 6.14.00 Bash shell 3.1.16 POVRay 3.5 Python Script 2.4.2 Perl 5.8.8 Date 1.0 Custom executable 1.0</pre>
+</div>
+<p>When you submit a job to a UNICORE server, you must specify which of
+these applications the job will use. You can also upload data files or
+scripts for execution by any of these commands. The details of which
+application to use and any input and output files must be stored in a
+job description file which is submitted to UNICORE for execution.</p>
+</div>
+<div class="section" id="runing-a-job-and-the-job-description-file">
+<h2>Runing a job and the job description file<a class="headerlink" href="#runing-a-job-and-the-job-description-file" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s get started with a very simple example. Create a file on your user
+interface machine called date.u with the follwoing content:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># simple job: run Date { ApplicationName: Date, ApplicationVersion: 1.0, }</span>
+</pre></div>
+</div>
+<p>This file tells UNICORE to execute the application Date version 1.0.</p>
+<p>To submit this job we use the command</p>
+<div class="highlight-python"><pre>$ ucc run date.u -v</pre>
+</div>
+<p>In the output from this command you should see a line specifying where
+the output file was downloaded to, for example:</p>
+<div class="highlight-python"><pre>[ucc run] Downloading remote file 'https://vm-7.sdsc.futuregrid.org:8080/DEFAULT-SITE/services/StorageManagement?res=f884b431-4660-4b7a-b91c-260b647604db#//stdout' -&gt; /root/./205d109d-42a6-4cea-8cd3-c85ecc201e4d/stdout</pre>
+</div>
+<p>This line indicates that the standard output of your job has been
+downloaded to the file
+/root/./205d109d-42a6-4cea-8cd3-c85ecc201e4d/stdout</p>
+<p>You can view your job&#8217;s output by typing</p>
+<div class="highlight-python"><pre>$ cat /root/./205d109d-42a6-4cea-8cd3-c85ecc201e4d/stdout Thu Jul 12 10:32:29 EDT 2012</pre>
+</div>
+<p>Congratulations, you have now succesfully run your first EMI UNICORE
+grid job! Of course, this was a very simple job, so next we will go on
+to look at how you can submit your own data and scripts for execution by
+UNICORE.</p>
+</div>
+<div class="section" id="running-your-own-scripts">
+<h2>Running your own scripts<a class="headerlink" href="#running-your-own-scripts" title="Permalink to this headline">¶</a></h2>
+<p>The job that you ran above didn&#8217;t require any input or output files, and
+used a native command on the server that does not require any input.
+This is not the case with most useful jobs.</p>
+<p>If you want to run your own script you will need to upload the script to
+the UNICORE storage device and specify it in the job description file to
+tell UNICORE which of your input files to pass to the interpreter.</p>
+<p>Let&#8217;s start with a simple bash script. The emi-unicore appliance comes
+with a version of the Bash shell, run ucc list-appliances to check the
+version number.</p>
+<p>Next create a job description file to run this application, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># a job to run a bash script { ApplicationName: Bash shell, ApplicationVersion: 3.1.16, }</span>
+</pre></div>
+</div>
+<p>Create a script that you want to run and copy it to the UI machine. A
+&#8220;Hello world&#8221; example is given below.</p>
+<div class="highlight-python"><pre>echo "Hello World!" &gt; output.txt</pre>
+</div>
+<p>This script should be set as the Source in your job description file as
+follows</p>
+<div class="highlight-python"><pre>Environment: [ "SOURCE=remoteScript.sh", ],</pre>
+</div>
+<p>Next you must tell ucc to upload the script with your job, and to
+download the output file using the Imports and Exports</p>
+<div class="highlight-python"><pre>Imports: [ { From: "./script.sh", To: "remoteScript.sh" }, ], Exports: [ { From: "output.txt", To:"./output.txt" }, ]</pre>
+</div>
+<p>Your full job description file will now look something like this</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># a job to run a bash script { ApplicationName: Bash shell, ApplicationVersion: 3.1.16,  Environment: [ &quot;SOURCE=remoteScript.sh&quot;, ],  Imports: [ { From: &quot;./script.sh&quot;, To: &quot;remoteScript.sh&quot; }, ], Exports: [ { From: &quot;output.txt&quot;, To:&quot;./output.txt&quot; }, ] }</span>
+</pre></div>
+</div>
+<p>Now run this job with the ucc run command. You can do the same with
+Perl, Python or other scripting languages. Use ucc list-applications to
+see a full list of available scripting languages.</p>
+</div>
+<div class="section" id="handling-data">
+<h2>Handling Data<a class="headerlink" href="#handling-data" title="Permalink to this headline">¶</a></h2>
+<p>If you have data files that you want to use with multiple jobs it can be
+inefficient to stage them in with each job. In this case it may be
+useful to copy the files to the UNICORE storage in advance. You can do
+this using the ucc command line tool. Once done, your job can tell
+UNICORE to copy the files to your local directory by specifying them in
+your job description file.</p>
+<p>To copy a file to a storage element first list the available storages:</p>
+<div class="highlight-python"><pre>$ ucc list-storages Home https://vm-143.uc.futuregrid.org:8080/DEFAULT-SITE/services/StorageManagement?res=demo-Home</pre>
+</div>
+<p>This tells you that your Home directory is available addressable via
+this URI. You can use this URI to access your Home directory as follows</p>
+<div class="highlight-python"><pre>$ ucc ls https://vm-143.uc.futuregrid.org:8080/DEFAULT-SITE/services/StorageManagement?res=demo-Home</pre>
+</div>
+<div class="highlight-python"><pre>$ ucc put-file -s localfile.data -t https://vm-143.uc.futuregrid.org:8080/DEFAULT-SITE/services/StorageManagement?res=demo-Home#/remotefile.data</pre>
+</div>
+<p>Note that the -s parameter for ucc put-file specifies the source file
+while -t specifies the target file.</p>
+<p>Using the full URI is sometimes inconvenient, so you can use a shorter,
+more intuitive format. This is also a URI, but you need to know only the
+site (target system) name, and the storage or job id. For example</p>
+<div class="highlight-python"><pre>unicore6://DEFAULT-SITE/Home/file</pre>
+</div>
+<p>will resolve the &#8220;Home&#8221; storage at the target system named
+&#8220;DEFAULT-SITE&#8221;.</p>
+<div class="highlight-python"><pre>$ ucc put-file -s localfile.data -t u6://DEFAULT-SITE/Home/testdata  $ ucc get-file -s u6://DEFAULT-SITE/Home/testdata -t newlocalfile.data</pre>
+</div>
+<p>Remember that you will need to copy the file to the local working
+directory as part of your job in order to use it. To do this, include it
+in the job description file as an import as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span> <span class="n">From</span><span class="p">:</span> <span class="s">&quot;u6://DEFAULT-SITE/Home/testdata&quot;</span><span class="p">,</span> <span class="n">To</span><span class="p">:</span> <span class="s">&quot;testdata&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>You can also refer to a job Uspace (the job&#8217;s working directory) on a
+given site. For this, you will need the unique ID of that job, which you
+can get for example using the &#8216;list-jobs&#8217; command. For example,</p>
+<div class="highlight-python"><pre>unicore6://DEFAULT-SITE/1f3bc2e2-d814-406e-811d-e533f8f7a93b/outfile</pre>
+</div>
+<p>refers to the file &#8220;outfile&#8221; in the working directory of the given job
+on the &#8220;DEFAULT-SITE&#8221; target system. This may be useful for checking the
+content of files during the job&#8217;s execution, allowing you to steer the
+analysis on the basis of partial results.</p>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p>In the Resources section of the .u script user can specify resources to
+run the job on the remote system. The section may look as follows:</p>
+<div class="highlight-python"><pre>Resources: { Memory: 128000000, Nodes: 1, CPUs: 8 , }</pre>
+</div>
+</div>
+<div class="section" id="running-job-on-a-set-of-files">
+<h2>Running job on a set of files<a class="headerlink" href="#running-job-on-a-set-of-files" title="Permalink to this headline">¶</a></h2>
+<p>To run UNICORE on a set of files user can put jobs descriptions in one
+directory (e.g. indir/) and use batch command: batch. -i argument
+indicate source directory (with .u scripts), -o - directory for output
+files:</p>
+<div class="highlight-python"><pre>$ ucc batch -i indir -o outdir</pre>
+</div>
+<p>Average: Select ratingPoorOkayGoodGreatAwesome</p>
+<p>No votes yet</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

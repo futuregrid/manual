@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using OpenStack on FutureGrid &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Using OpenStack on FutureGrid</a></li>
+<li><a class="reference internal" href="#note">NOTE:</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#log-into-india">Log into India</a></li>
+<li><a class="reference internal" href="#account-and-credentials">Account and Credentials</a></li>
+<li><a class="reference internal" href="#euca2ools-ec2-client-tools">Euca2ools (EC2 client tools)</a></li>
+<li><a class="reference internal" href="#testing-your-setup">Testing Your Setup</a></li>
+<li><a class="reference internal" href="#list-of-common-images">List of Common Images</a></li>
+<li><a class="reference internal" href="#vm-types">VM Types</a></li>
+<li><a class="reference internal" href="#key-management">Key Management</a><ul>
+<li><a class="reference internal" href="#key-pair-verification">Key pair verification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#image-instantiation">Image Instantiation</a></li>
+<li><a class="reference internal" href="#better-server-names">Better Server Names</a></li>
+<li><a class="reference internal" href="#monitoring-instances">Monitoring Instances</a></li>
+<li><a class="reference internal" href="#log-into-your-vm">Log into your VM</a><ul>
+<li><a class="reference internal" href="#making-a-snapshot-with-nova-client">Making a snapshot with nova client</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nova-volumes-not-available">Nova Volumes (Not available)</a><ul>
+<li><a class="reference internal" href="#list-available-volumes">List available Volumes</a></li>
+<li><a class="reference internal" href="#create-a-volume">Create a Volume</a></li>
+<li><a class="reference internal" href="#attach-volume">Attach Volume</a></li>
+<li><a class="reference internal" href="#using-the-new-disk">Using the new Disk</a></li>
+<li><a class="reference internal" href="#detach-volumes">Detach Volumes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volume-snapshots">Volume Snapshots</a><ul>
+<li><a class="reference internal" href="#create-snapshot">Create Snapshot</a></li>
+<li><a class="reference internal" href="#list-snapshot">List Snapshot</a></li>
+<li><a class="reference internal" href="#create-volume-from-snapshot-not-yet-functional-in-openstack-essex">Create Volume from Snapshot (not yet functional in OpenStack Essex)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#image-registration">Image Registration</a></li>
+<li><a class="reference internal" href="#delete-your-images">Delete your images</a></li>
+<li><a class="reference internal" href="#terminate-your-vms">Terminate your VMs</a></li>
+<li><a class="reference internal" href="#limitations">Limitations</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting:</a></li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/openstack-essex.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="using-openstack-on-futuregrid">
+<h1>Using OpenStack on FutureGrid<a class="headerlink" href="#using-openstack-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="note">
+<h1>NOTE:<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><strong>This tutorial contains material that is customized for the
+particular user. The best way to view this tutorial is to &nbsp;ask for a
+FutureGrid portal account and to log into the portal. You will also
+need to be in a valid FG project to execute the directions.</strong></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>We currently have twenty nodes in the FG&nbsp;India cluster dedicated to the
+<a class="reference external" href="http://www.openstack.org/software/essex/">Essex</a> release of
+<a class="reference external" href="http://www.openstack.org">OpenStack</a>, a collection of open-source
+technology that provides scalable, open-source cloud computing software.
+OpenStack consists of a series of <a class="reference external" href="http://www.openstack.org/software/">interrelated
+projects</a> that deliver various
+components for a cloud infrastructure solution. This tutorial provides
+an overview of OpenStack Nova installation on FutureGrid, as well as
+steps for deploying virtual machines.</p>
+</div>
+<div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>Be sure you have a valid portal account
+(<a class="reference external" href="https://portal.futuregrid.org">https://portal.futuregrid.org)</a> and
+are part of a valid FG project. If you&#8217;re not part of any project, you
+can either create a new one (it will need approval) or join an existing
+one with the permission of the Lead.</p>
+<p>Once the previous requirements are fulfilled, your OpenStack account is
+automatically created.</p>
+</div>
+<div class="section" id="log-into-india">
+<h1>Log into India<a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<p>&nbsp;Tip: to login into FutureGrid&nbsp;<a class="reference external" href="https://portal.futuregrid.org/accessing-futuregrid-resources-ssh">see this page</a>   |
++&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+</p>
+<p>The first step is to ssh into india.futuregrid.org using your FG
+username:</p>
+<div class="highlight-python"><pre>$ ssh gvonlasz@india.futuregrid.org</pre>
+</div>
+<p>If this command fails,
+contact&nbsp;<a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.
+It likely means one of the following:</p>
+<ol class="arabic simple">
+<li>Your account is not yet set up.</li>
+<li>You provided no public key, or a corrupted public key.</li>
+<li>The private key you are using does not match the public key you
+registered with FutureGrid.</li>
+</ol>
+</div>
+<div class="section" id="account-and-credentials">
+<h1>Account and Credentials<a class="headerlink" href="#account-and-credentials" title="Permalink to this headline">¶</a></h1>
+<p>As noted above, OpenStack credentials and configuration files are
+automatically created for all valid users, and are placed in your home
+directory on the India system under the <strong>*.futuregrid/openstack*</strong>
+folder. The file name is called
+<strong>*openstack-essex-&lt;username&gt;-india.zip*</strong>.&nbsp;The credential&nbsp;.zip&nbsp;fi
+le
+contains the user keys and novarc
+file.&nbsp;The novarc
+file contains the
+necessary environment variables.</p>
+<p>Unzip the credential file:</p>
+<div class="highlight-python"><pre>$ unzip ~/.futuregrid/openstack/openstack-essex-gvonlasz-india.zip -d ~/openstack</pre>
+</div>
+<p>Load Environment variables:</p>
+<div class="highlight-python"><pre>$ source ~/openstack/novarc</pre>
+</div>
+<p><strong>Note:</strong> As both Eucalyptus and OpenStack use the same EC2
+environmental variables (i.e. EC2_URL, EC2_ACCESS), using novarc will
+overwrite previous Eucalyptus credentials. If you have the eucarc
+file
+in your home directory, doing a <em>source eucarc</em> will bring back those
+variables and overwrite the OpenStack ones. In this way, you can go back
+and forth with OpenStack and Eucalyptus.</p>
+</div>
+<div class="section" id="euca2ools-ec2-client-tools">
+<h1>Euca2ools (EC2 client tools)<a class="headerlink" href="#euca2ools-ec2-client-tools" title="Permalink to this headline">¶</a></h1>
+<p>OpenStack services can be controlled using an EC2 interface (only
+available for GNU/Linux platforms). In this tutorial, we are going to
+use the&nbsp;<a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">Euca2ools</a>
+client installed in India.</p>
+<div class="highlight-python"><pre>$ module load euca2ools</pre>
+</div>
+</div>
+<div class="section" id="testing-your-setup">
+<h1>Testing Your Setup<a class="headerlink" href="#testing-your-setup" title="Permalink to this headline">¶</a></h1>
+<p>Use euca-describe-availability-zones to test the setup:</p>
+<div class="highlight-python"><pre>$ euca-describe-availability-zones
+
+AVAILABILITYZONE    india   available</pre>
+</div>
+</div>
+<div class="section" id="list-of-common-images">
+<h1>List of Common Images<a class="headerlink" href="#list-of-common-images" title="Permalink to this headline">¶</a></h1>
+<p>Following are the current images uploaded in essex:</p>
+<div class="highlight-python"><pre>$ euca-describe-images |grep common
+
+IMAGE   ami-000000b4   common/precise-server-cloudimg-amd64.img.manifest.xml   available   private   x86_64   machine   aki-000000b3   instance-store</pre>
+</div>
+</div>
+<div class="section" id="vm-types">
+<h1>VM Types<a class="headerlink" href="#vm-types" title="Permalink to this headline">¶</a></h1>
+<p>The following types of VM are available:</p>
+<p>$ nova flavor-list</p>
+<div class="line-block">
+<div class="line">+&#8212;-+&#8212;&#8212;&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;+&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;-+</div>
+<div class="line-block">
+<div class="line">| ID | Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Memory_MB | Disk | Ephemeral | Swap |</div>
+</div>
+</div>
+<p>VCPUs | RXTX_Factor | Is_Public | extra_specs |
+|
++&#8212;-+&#8212;&#8212;&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;+&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;-+
+|  | 1&nbsp; | m1.tiny&nbsp;&nbsp;&nbsp;&nbsp; | 512&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 0&nbsp;&nbsp;&nbsp; | 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+1&nbsp;&nbsp;&nbsp;&nbsp; | 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | {}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|  | 2&nbsp; | m1.small&nbsp;&nbsp;&nbsp; | 2048&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 10&nbsp;&nbsp; | 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+1&nbsp;&nbsp;&nbsp;&nbsp; | 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | {}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|  | 3&nbsp; | m1.medium&nbsp;&nbsp; | 4096&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 10&nbsp;&nbsp; | 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+2&nbsp;&nbsp;&nbsp;&nbsp; | 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | {}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|  | 4&nbsp; | m1.large&nbsp;&nbsp;&nbsp; | 8192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 10&nbsp;&nbsp; | 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+4&nbsp;&nbsp;&nbsp;&nbsp; | 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | {}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|  | 5&nbsp; | m1.xlarge&nbsp;&nbsp; | 16384&nbsp;&nbsp;&nbsp;&nbsp; | 10&nbsp;&nbsp; | 160&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+8&nbsp;&nbsp;&nbsp;&nbsp; | 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | {}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|  | 6&nbsp; | m1.special1 | 16384&nbsp;&nbsp;&nbsp;&nbsp; | 50&nbsp;&nbsp; | 1500&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+8&nbsp;&nbsp;&nbsp;&nbsp; | 1.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | N/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | {}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+|
++&#8212;-+&#8212;&#8212;&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;+&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8212;-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;-+</p>
+</div>
+<div class="section" id="key-management">
+<h1>Key Management<a class="headerlink" href="#key-management" title="Permalink to this headline">¶</a></h1>
+<p>Before you instantiate a VM, you need to create at least one key pair.
+This key pair will be injected into the VM, allowing you to SSH into the
+instance. This is done using the <em>euca-add-keypair</em> command:</p>
+<div class="highlight-python"><pre>$ euca-add-keypair gvonlaszkey1 &gt; gvonlaszkey1.pem</pre>
+</div>
+<p><strong>Important Tip:&nbsp;</strong>In case you execute this command twice this will
+naturally not work in case the key is already added and imported. You
+can check this by doing a cat on the .pem file and make sure that there
+is a key in ther and not an error! If there is an error, you can either
+delete the key and add it again, or you can create a new key name and
+use that. Also if you have used that key before and you overwrote it you
+will not have access to your images anymore. so be careful and before
+issuing the above command think about what you do.</p>
+<p>Fix the permissions on the generated private key:</p>
+<div class="highlight-python"><pre>$ chmod 0600 gvonlaszkey1.pem</pre>
+</div>
+<p>Note: Instead of creating a new keypair, you can import a public key
+created with a third-party tool using <em>euca-import-keypair</em>. For
+instance, if you have your ssh public key in india, you can do the
+following:</p>
+<div class="highlight-python"><pre>$ euca-import-keypair -f .ssh/id_rsa.pub gvonlaszkey2</pre>
+</div>
+<p>You can add multiple keys, and here&#8217;s the command to check the list of
+your keys:</p>
+<div class="highlight-python"><pre>$ chmod 0600 keyname.pem
+euca-describe-keypairs
+KEYPAIR    key1    53:e3:01:c1:70:df:94:ef:59:93:1a:3f:c0:10:a5:34
+KEYPAIR    key2    07:a5:da:30:b4:55:16:eb:35:54:a2:5a:56:68:f6:cb</pre>
+</div>
+<div class="section" id="key-pair-verification">
+<h2>Key pair verification<a class="headerlink" href="#key-pair-verification" title="Permalink to this headline">¶</a></h2>
+<p>Please verify that you do not have any error in the key file.</p>
+</div>
+</div>
+<div class="section" id="image-instantiation">
+<h1>Image Instantiation<a class="headerlink" href="#image-instantiation" title="Permalink to this headline">¶</a></h1>
+<p>At this point, you can start a VM using one of the pre-existing images.
+You need the ami-id of the image you want to start. This was listed in
+the output of the <em>euca-describe-images</em> command you saw earlier. Use
+the <em>euca-run-instances</em> command to start the VM (use the key name you
+specified before).</p>
+<div class="highlight-python"><pre>$ euca-run-instances -k gvonlaszkey -n 1 ami-000000b4
+
+RESERVATION r-gbs9hpmm 461884eef90047fbb4eb9ec92f22a1e3 default
+INSTANCE i-00000a27 ami-000000b4 server-2599 server-2599 pending gvonlaszkey 0 m1.small 2012-07-31T14:54:40.000Z unknown zone</pre>
+</div>
+<p>The output shows the id of your VM, which in this case is i-00000a27.</p>
+<p>This id will be useful to do operations with your VM. You can also see
+the status of your VM, which is pending now. You need to wait until the
+VM is in running status to be able to log into the VM.</p>
+</div>
+<div class="section" id="better-server-names">
+<h1>Better Server Names<a class="headerlink" href="#better-server-names" title="Permalink to this headline">¶</a></h1>
+<p>Unfortunately, the default use of the euca commands uses the name
+server-&lt;number&gt; to identify a started instance. This is often not
+desirable, as many users have similar names and it will be difficult to
+find your own images when lots of users start images. To fix this, you
+van however use the nova commands and say</p>
+<p>$ nova rename Server-2599 &lt;yourusername&gt;-001</p>
+</div>
+<div class="section" id="monitoring-instances">
+<h1>Monitoring Instances<a class="headerlink" href="#monitoring-instances" title="Permalink to this headline">¶</a></h1>
+<p>You can monitor the status of the instances by using the
+<em>euca-describe-instances</em> command. The public IP is highligthed in
+yellow; each VM should have one:</p>
+<div class="highlight-python"><pre>$ euca-describe-instances</pre>
+</div>
+<div class="highlight-python"><pre>RESERVATION r-xfj0nag8 461884eef90047fbb4eb9ec92f22a1e3 default
+INSTANCE i-0000090e ami-00000016 149.165.158.157 server-2318 running clegoues 0 m1.medium 2012-07-24T19:39:21.000Z india aki-00000014 ari-00000015
+
+RESERVATION r-8mwsq0n0 461884eef90047fbb4eb9ec92f22a1e3 default
+INSTANCE i-000008f2 ami-000000b4 149.165.158.130 server-2290 running clegoues 0 m1.medium 2012-07-24T02:19:38.000Z india aki-00000014 ari-00000015
+INSTANCE i-000008f3 ami-000000b4 149.165.158.149 server-2291 running clegoues 1 m1.medium 2012-07-24T02:19:38.000Z india aki-00000014 ari-00000015
+INSTANCE i-000008f4 ami-000000b4 149.165.158.156 server-2292 running clegoues 2 m1.medium 2012-07-24T02:19:39.000Z india aki-00000014 ari-00000015
+
+RESERVATION r-p90m3pno 461884eef90047fbb4eb9ec92f22a1e3 default
+INSTANCE i-000007e2 ami-000000b4 149.165.158.158 server-2018 running jiaazeng 0 m1.medium 2012-07-15T20:56:16.000Z india aki-00000026
+INSTANCE i-000007e3 ami-000000b4 149.165.158.159 server-2019 running jiaazeng 1 m1.medium 2012-07-15T20:56:17.000Z india aki-00000026
+...</pre>
+</div>
+<p>You can monitor or restrict the output simply by checking the status of
+your VM:</p>
+<div class="highlight-python"><pre>$ euca-describe-instances i-00000a27
+
+RESERVATION r-zvtbbj8j default
+INSTANCE i-00000a27 ami-000000b4 server-1854 server-1854 pending gvonlaszkey 0 m1.small 2012-07-09T15:49:46.000Z  unknown zone aki-0000000e ari-0000000f</pre>
+</div>
+<p>This VM does not have public IP yet. Getting the public IP may take some
+time, but it is needed to be able to connect to the VM:</p>
+<div class="highlight-python"><pre>$ euca-describe-instances i-00000a27
+
+RESERVATION r-zvtbbj8j default
+INSTANCE i-00000a27 ami-000000b4 149.165.158.175 server-1854 running gvonlaszkey 0 m1.small 2012-07-09T15:49:46.000Z  unknown zone aki-0000000e ari-0000000f</pre>
+</div>
+</div>
+<div class="section" id="log-into-your-vm">
+<h1>Log into your VM<a class="headerlink" href="#log-into-your-vm" title="Permalink to this headline">¶</a></h1>
+<p>The ssh private key that was generated earlier can now be used to log in
+to the VM. You also need to indicate the public IP associated with your
+VM (use the key name you have specified before).</p>
+<div class="highlight-python"><pre>$ ssh -i gvonlaszkey.pem ubuntu@149.165.158.175
+
+$ ssh ubuntu@149.165.158.175 (for imported keys)</pre>
+</div>
+<p>Note: For some ubuntu images, log in with the user <em>ubuntu,</em> then
+<em>sudo</em>.</p>
+<p>Exit from the VM to continue with the tutorial.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># exit</span>
+</pre></div>
+</div>
+<div class="section" id="making-a-snapshot-with-nova-client">
+<h2>Making a snapshot with nova client<a class="headerlink" href="#making-a-snapshot-with-nova-client" title="Permalink to this headline">¶</a></h2>
+<p>You can make a snapshot of your instance:</p>
+<div class="highlight-python"><pre>$ nova image-create &lt;instance name&gt; &lt;snapshot name&gt;
+$ euca-describe-images</pre>
+</div>
+<p>Your snapshot will be listed at the end of the output, and it will be
+available in 5 to 10 minutes. There&#8217;s a bug that snapshots are created
+as &#8220;snapshot&#8221; whatever you name it. So please remember the image ID.</p>
+</div>
+</div>
+<div class="section" id="nova-volumes-not-available">
+<h1>Nova Volumes (Not available)<a class="headerlink" href="#nova-volumes-not-available" title="Permalink to this headline">¶</a></h1>
+<p>Nova-volume provides persistent block storage compatible with Amazon’s
+Elastic Block Store.&nbsp;The storage in the instances is non-persistent and
+gets lost when the instance is terminated. Therefore, we need persistent
+volumes to keep data generated during instance lifetime after the
+instance is terminated. Volumes are accessed via iSCSI, although they
+will appear as a new device in your VM.</p>
+<div class="section" id="list-available-volumes">
+<h2>List available Volumes<a class="headerlink" href="#list-available-volumes" title="Permalink to this headline">¶</a></h2>
+<p>You can see the available volumes by using the <em>euca-describe-volumes</em>
+command:</p>
+<div class="highlight-python"><pre>$  euca-describe-volumes
+
+VOLUME  vol-00000027  100  india  in-use  2012-06-06T21:39:47.000Z
+           ATTACHMENT  vol-00000027  i-0000070f  /dev/vdc  attached
+VOLUME  vol-00000028  50  india  available  2012-06-06T21:44:30.000Z
+VOLUME  vol-0000002a  30  india  available  2012-06-06T21:45:37.000Z</pre>
+</div>
+</div>
+<div class="section" id="create-a-volume">
+<h2>Create a Volume<a class="headerlink" href="#create-a-volume" title="Permalink to this headline">¶</a></h2>
+<p>Create a 1 GB volume in the India zone:</p>
+<div class="highlight-python"><pre>$  euca-create-volume -s 1 -z india
+
+VOLUME  vol-00000031  1  india  creating  2012-07-10T15:15:47.244Z</pre>
+</div>
+</div>
+<div class="section" id="attach-volume">
+<h2>Attach Volume<a class="headerlink" href="#attach-volume" title="Permalink to this headline">¶</a></h2>
+<p>A volume can only be attached to one instance. Once the volume is
+attached to a VM, <em>euca-describe-volumes</em> will show its status as
+“attached”.</p>
+<p>Attach a volume to a running instance:</p>
+<div class="highlight-python"><pre>$  euca-attach-volume -i i-00000a27 -d /dev/vdc vol-0000031</pre>
+</div>
+<p>After this command is executed, an additional SCSI disk is created in
+the instance.&nbsp;Although we specified the device, it may differ if that
+device already exists (look into <em>/dev</em> or <em>/var/log/syslog</em> to find the
+new device).</p>
+</div>
+<div class="section" id="using-the-new-disk">
+<h2>Using the new Disk<a class="headerlink" href="#using-the-new-disk" title="Permalink to this headline">¶</a></h2>
+<p>Log into the VM again (use the key name you specified before):</p>
+<div class="highlight-python"><pre>$ ssh -i gvonlaszkey.pem ubuntu@149.165.158.175</pre>
+</div>
+<p>Format the disk&nbsp;(skip this step if you want to reuse data stored):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># mkfs /dev/vdc</span>
+</pre></div>
+</div>
+<p>Mount the disk:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># mount /dev/vdc /mnt</span>
+</pre></div>
+</div>
+<p>You now have the new disk mounted in your system. In this way, you can
+use it as a normal directory to store information. However, the
+information stored there will be kept after you terminate the VM.</p>
+<p>Exit from the VM to continue with the tutorial:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># exit</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="detach-volumes">
+<h2>Detach Volumes<a class="headerlink" href="#detach-volumes" title="Permalink to this headline">¶</a></h2>
+<p>Volumes are automatically detached when the instance is terminated.</p>
+<p>To detach a volume:</p>
+<div class="highlight-python"><pre>$  euca-detach-volume vol-00000031</pre>
+</div>
+<p>If you detach the volume while the instance is running, and with disk
+mounted, it loses access to the disk. Thus, you need to make sure that
+you umount (umount /mnt) the disk before you detach the volume.&nbsp;If you
+terminate the instance, the volume is automatically detached.</p>
+</div>
+</div>
+<div class="section" id="volume-snapshots">
+<h1>Volume Snapshots<a class="headerlink" href="#volume-snapshots" title="Permalink to this headline">¶</a></h1>
+<p>Snapshots are useful to create backups or replicate volumes in different
+zones.</p>
+<div class="section" id="create-snapshot">
+<h2>Create Snapshot<a class="headerlink" href="#create-snapshot" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$  euca-create-snapshot -d 'Testing snapshot' vol-00000027
+
+SNAPSHOT    snap-00000001    vol-00000027    creating    2012-07-16T14:22:21.728Z    0%    Testing snapshot</pre>
+</div>
+</div>
+<div class="section" id="list-snapshot">
+<h2>List Snapshot<a class="headerlink" href="#list-snapshot" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$  euca-describe-snapshots
+
+SNAPSHOT    snap-00000001    vol-00000027    available    2012-07-16T14:22:21.000Z    100%</pre>
+</div>
+</div>
+<div class="section" id="create-volume-from-snapshot-not-yet-functional-in-openstack-essex">
+<h2>Create Volume from Snapshot (not yet functional in OpenStack Essex)<a class="headerlink" href="#create-volume-from-snapshot-not-yet-functional-in-openstack-essex" title="Permalink to this headline">¶</a></h2>
+<p>The snapshot must be in available status (100% completed). The new
+volume can be bigger if desired, and you can also create this volume in
+a different zone (<em>-z</em> option).</p>
+<p>To create a 2 GB volume from snapshot:</p>
+<div class="highlight-python"><pre>$  euca-create-volume -s 2 --snapshot snap-00000001 -z india
+
+VOLUME    vol-00000032    2    snap-00000001    india    creating    2012-07-16T14:47:07.916Z</pre>
+</div>
+</div>
+</div>
+<div class="section" id="image-registration">
+<h1>Image Registration<a class="headerlink" href="#image-registration" title="Permalink to this headline">¶</a></h1>
+<p>We will use an CentOS 5 image to test the image registration:</p>
+<div class="highlight-python"><pre>$ wget i120/test-image/centos5.tgz</pre>
+</div>
+<p>Uncompress and untar the archive:</p>
+<div class="highlight-python"><pre>$ tar xvfz centos5.tgz</pre>
+</div>
+<p>Bundle the image with a kernel and a ramdisk using the
+<em>euca-bundle-image</em> command. In this example, we will use the KVM kernel
+already registered. <em>euca-describe-images</em> returns the kernel and
+ramdisk IDs that we need.</p>
+<div class="highlight-python"><pre>$ euca-bundle-image -i centos5.img --kernel aki-0000000e --ramdisk ari-0000000f</pre>
+</div>
+<div class="highlight-python"><pre>Checking image
+Encrypting image
+Splitting image...
+Part: centos5.img.part.00
+...
+Part: centos5.img.part.35
+Generating manifest /tmp/centos5.img.manifest.xml</pre>
+</div>
+<p>Use the generated manifest file to upload the image. You need to specify
+a bucket name; it can be anything you want:</p>
+<div class="highlight-python"><pre>$ euca-upload-bundle -b gvonlasz-bucket -m /tmp/centos5.img.manifest.xml
+
+Checking bucket: gvonlasz-bucket
+Creating bucket: gvonlasz-bucket
+Uploading manifest file
+Uploading part: centos5.img.part.00
+...
+Uploading part: centos5.img.part.35
+
+Uploaded image as gvonlasz-bucket/centos5.img.manifest.xml</pre>
+</div>
+<p>Register the upload image:</p>
+<div class="highlight-python"><pre>$ euca-register gvonlasz-bucket/centos5.img.manifest.xml
+
+IMAGE  ami-00000033</pre>
+</div>
+<p>The returned image ID can now be used to start instances
+with<em>euca-run-instances</em> as described earlier. However, you cannot run
+instances until the image is in available status. You can check the
+status using&nbsp;<em>euca-describe-images</em>:</p>
+<div class="highlight-python"><pre>$ euca-describe-instances ami00000033 IMAGE ami-00000033 gvonlasz-bucket/centos5.img.manifest.xml available private x86_64 machine aki-0000000e ari-0000000f instance-store</pre>
+</div>
+</div>
+<div class="section" id="delete-your-images">
+<h1>Delete your images<a class="headerlink" href="#delete-your-images" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python"><pre>$ euca-deregister ami-00000033</pre>
+</div>
+</div>
+<div class="section" id="terminate-your-vms">
+<h1>Terminate your VMs<a class="headerlink" href="#terminate-your-vms" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python"><pre>$ euca-terminate-instances i-00000a27</pre>
+</div>
+</div>
+<div class="section" id="limitations">
+<h1>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h1>
+<p>Our current installation has the following limitations. We are working
+on finding a fix:</p>
+<ol class="arabic">
+<li><p class="first">Instances cannot ping their own IP address from within the instance
+(it is pingable and reachable from the outside). The private IP
+(which can be found via ifconfig) is pingable.</p>
+<dl class="docutils">
+<dt><a class="reference external" href="mailto:ubuntu&#37;&#52;&#48;server-837">ubuntu<span>&#64;</span>server-837</a>:~$ ifconfig</dt>
+<dd><p class="first last">eth0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link encap:Ethernet&nbsp; HWaddr fa:16:3e:00:e5:2a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet addr:10.1.2.16&nbsp; Bcast:10.1.2.255</p>
+</dd>
+<dt>Mask:255.255.255.0</dt>
+<dd><p class="first last">inet6 addr: fe80::f816:3eff:fe00:e52a/64 Scope:Link
+UP BROADCAST RUNNING MULTICAST&nbsp; MTU:1500&nbsp; Metric:1
+RX packets:199 errors:0 dropped:0 overruns:0 frame:0
+TX packets:188 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0 txqueuelen:1000
+RX bytes:32213 (32.2 KB)&nbsp; TX bytes:21676 (21.6 KB)</p>
+</dd>
+<dt>lo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link encap:Local Loopback</dt>
+<dd><p class="first last">inet addr:127.0.0.1&nbsp; Mask:255.0.0.0
+inet6 addr: ::1/128 Scope:Host
+UP LOOPBACK RUNNING&nbsp; MTU:16436&nbsp; Metric:1
+RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+collisions:0 txqueuelen:0
+RX bytes:0 (0.0 B)&nbsp; TX bytes:0 (0.0 B)</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">In Essex, each instance gets an internal DNS name.
+<em>euca-describe-instance</em> will show this name along with the public IP
+addresses. If you are building a cluster and need to communicate
+among all the nodes in the cluster, you will need to do so with these
+names or the private IP addresses:</p>
+<dl class="docutils">
+<dt><a class="reference external" href="mailto:ubuntu&#37;&#52;&#48;server-837">ubuntu<span>&#64;</span>server-837</a>:~$ ping server-716</dt>
+<dd><p class="first last">PING server-716.novalocal (10.1.2.10) 56(84) bytes of data.
+64 bytes from server-716.novalocal (10.1.2.10): icmp_req=1 ttl=64</p>
+</dd>
+<dt>time=5.06 ms</dt>
+<dd><p class="first last">^C
+&#8212; server-716.novalocal ping statistics &#8212;
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 5.062/5.062/5.062/0.000 ms
+<a class="reference external" href="mailto:ubuntu&#37;&#52;&#48;server-837">ubuntu<span>&#64;</span>server-837</a>:~$ ping server-837
+PING server-837.novalocal (127.0.1.1) 56(84) bytes of data.
+64 bytes from server-837.novalocal (127.0.1.1): icmp_req=1 ttl=64</p>
+</dd>
+<dt>time=0.032 ms</dt>
+<dd><p class="first last">64 bytes from server-837.novalocal (127.0.1.1): icmp_req=2 ttl=64</p>
+</dd>
+</dl>
+<p>time=0.018 ms</p>
+</li>
+</ol>
+</div>
+<div class="section" id="troubleshooting">
+<h1>Troubleshooting:<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<p>Console output will provide you more details about the VM:</p>
+<div class="highlight-python"><pre>$ euca-get-console-output &lt;instanceId&gt;</pre>
+</div>
+<p>For any other issue, please submit a ticket.</p>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

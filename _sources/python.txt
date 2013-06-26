@@ -11,9 +11,9 @@ and here is one that you can do on a web browser in case you have not installed 
 
 Terminal
 ===================================================================
-::
 
-   todo
+* http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/
+
 
 OS Specific
 ===================================================================

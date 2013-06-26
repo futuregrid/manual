@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using with Eucalyptus &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Using with Eucalyptus</a><ul>
+<li><a class="reference internal" href="#what-happens">What Happens</a></li>
+<li><a class="reference internal" href="#futuregrid-tutorial-nm2-nimbus-one-click-cluster-guide">FutureGrid Tutorial NM2 - Nimbus One-Click Cluster Guide</a></li>
+<li><a class="reference internal" href="#using-eucalyptus-on-futuregrid">Using Eucalyptus on FutureGrid</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#summary"><strong>Summary</strong></a></li>
+<li><a class="reference internal" href="#requirements"><strong>Requirements</strong></a></li>
+<li><a class="reference internal" href="#account-creation"><strong>Account Creation</strong></a></li>
+<li><a class="reference internal" href="#resources-overview"><strong>Resources Overview</strong></a></li>
+<li><a class="reference internal" href="#testing-your-setup"><strong>Testing Your Setup</strong></a></li>
+<li><a class="reference internal" href="#image-deployment"><strong>Image Deployment</strong></a></li>
+<li><a class="reference internal" href="#logging-into-the-vm"><strong>Logging Into the VM</strong></a></li>
+<li><a class="reference internal" href="#vm-network-info"><strong>VM Network Info</strong></a></li>
+<li><a class="reference internal" href="#image-management"><strong>Image Management</strong></a></li>
+<li><a class="reference internal" href="#status-of-deployments">Status of Deployments</a></li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/eucalyptus-1.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="using-with-eucalyptus">
+<h1>Using with Eucalyptus<a class="headerlink" href="#using-with-eucalyptus" title="Permalink to this headline">¶</a></h1>
+<p>In order to use the tool with Eucalyptus, the following envs must be
+set:</p>
+<ul class="simple">
+<li>export
+CLOUDINITD_IAAS_URL=&#8217;<a class="reference external" href="http://149.165.146.135:8773/services/Eucalyptus">http://149.165.146.135:8773/services/Eucalyptus</a>&#8216;</li>
+<li>export CLOUDINITD_IAAS_ACCESS_KEY=&lt;your access key&gt;</li>
+<li>export CLOUDINITD_IAAS_SECRET_KEY=&lt;your access secret&gt;</li>
+<li>export CLOUDINITD_IAAS_IMAGE=&#8217;emi-5F4F1B49&#8217;</li>
+</ul>
+<p>You may have trouble registering your keys.&nbsp; This is due to Eucalyptus
+not yet supporting the latest version of the EC2 API.&nbsp; To circumvent
+this, create a key pair named &#8216;futuregrid&#8217;, and set the env
+<em>CLOUDINITD_IAAS_SSHKEYNAME</em>to &#8216;futuregrid&#8217;.&nbsp; Then, set the env
+<em>CLOUDINITD_IAAS_SSHKEY</em> to point to the private key associated with
+that key name.</p>
+<div class="section" id="what-happens">
+<h2>What Happens<a class="headerlink" href="#what-happens" title="Permalink to this headline">¶</a></h2>
+<p>This script uses the program cloudinit.d
+(<a class="reference external" href="http://www.nimbusproject.org/doc/cloudinitd/latest/">http://www.nimbusproject.org/doc/cloudinitd/latest/)</a>.
+This is a Nimbus Platform multi-cloud tool for running cloud
+applications.&nbsp; In this case, it runs a very simple 1 VM application.&nbsp; It
+can launch any debian-based VM and install sshfs on it.&nbsp; Then it runs
+sshfs inside of the VM to remotely mount your FutureGrid home directory.</p>
+</div>
+<div class="section" id="futuregrid-tutorial-nm2-nimbus-one-click-cluster-guide">
+<h2>FutureGrid Tutorial NM2 - Nimbus One-Click Cluster Guide<a class="headerlink" href="#futuregrid-tutorial-nm2-nimbus-one-click-cluster-guide" title="Permalink to this headline">¶</a></h2>
+<p><strong>Summary:</strong></p>
+<p>This tutorial demonstrates using the Nimbus cloud client to create
+auto-configured clusters of virtual machines on Nimbus.</p>
+<p><strong>Prerequisites:</strong></p>
+<p>Java 1.5+ and a working Nimbus cloud client.</p>
+<p><strong>Hands-On Tutorial</strong>:</p>
+<p>This tutorial is maintained at the Nimbus website. See&nbsp;<a class="reference external" href="http://www.nimbusproject.org/docs/current/clouds/clusters.html">One Click
+Clusters</a>.</p>
+<p><strong>Reference Material:</strong></p>
+<p><a class="reference external" href="http://www.nimbusproject.org/docs/">Nimbus Documentation</a></p>
+<p><strong>Authors:</strong></p>
+<p>Tim Freeman, Kate Keahey, David LaBissoniere, John Bresnahan</p>
+<p>University of Chicago</p>
+</div>
+<div class="section" id="using-eucalyptus-on-futuregrid">
+<h2>Using Eucalyptus on FutureGrid<a class="headerlink" href="#using-eucalyptus-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<p>Presentation about this document:
+<a class="reference external" href="http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/software/fg-tutorial-eucalyptus.ppt">fg-tutorial-eucalyptus.ppt</a></p>
+</div>
+</div>
+<div class="section" id="summary">
+<h1><strong>Summary</strong><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
+<p>Eucalyptus is a software platform that implements
+<a class="reference external" href="http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_Service_.28IaaS.29">IaaS-style</a>
+cloud computing. Eucalyptus provides an Amazon Web Services
+(<a class="reference external" href="http://aws.amazon.com/">AWS</a>) complaint EC2-based web service
+interface for interacting with the Cloud service. Additionally,
+Eucalyptus provides services such as the AWS Complaint Walrus and a user
+interface for managing users and images. The aim of this tutorial is to
+give users an introduction of how to interact with Eucalyptus using the
+Eucalyptus EC2 Interface
+(<a class="reference external" href="https://launchpad.net/euca2ools">Euca2ools</a>). More detailed
+documentation can be found in the <a class="reference external" href="http://www.eucalyptus.com/eucalyptus-cloud/iaas">Eucalyptus
+Website</a>. A detailed
+user guide is also available
+<a class="reference external" href="http://www.eucalyptus.com/sites/all/modules/pubdlcnt/pubdlcnt.php?file=/sites/all/files/docs/latest/ug.pdf&amp;nid=296">here</a>.</p>
+</div>
+<div class="section" id="requirements">
+<h1><strong>Requirements</strong><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h1>
+<p>Users get access to the Eucalyptus features using the Eucalyptus EC2
+Interface, which is only available for GNU/Linux platforms. Therefore,
+users will require a machine with a GNU/Linux installed on it.</p>
+<p>As of May 15, 2012, FutureGrid is using <a class="reference external" href="http://www.eucalyptus.com/eucalyptus-cloud/iaas/features">Eucalyptus version
+3</a> which
+requires <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
+2.0.2</a> and python &gt; 2.4
+(available by modules in india and sierra). Make sure to load <strong>&#8220;module
+load euca2ools/2.0.2&#8221;</strong> before using Eucalyptus. <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
+2.0.2</a> is part of
+Eucalyptus Enterprise package. However, the source is available
+<a class="reference external" href="http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/">here</a>.</p>
+</div>
+<div class="section" id="account-creation">
+<h1><strong>Account Creation</strong><a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h1>
+<p>Eucalyptus 3 is now integrated with our LDAP. Each account is created by
+default for all FutureGrid users with valid portal account and project
+affiliation. There is no need to apply for accounts.</p>
+<p><strong>Obtaining Credentials</strong></p>
+<ul class="simple">
+<li>Credentials files are created by default and placed in a user&#8217;s home
+directory under <em>.futuregrid</em> folder in india and sierra. To leverage
+LDAP group, we created separate credentials for each FutureGrid
+project. For instance, if you are part of FutureGrid project number
+100 and 200, there will be two folders (<strong>fg100</strong> and <strong>fg200</strong>) in
+<em>.futuregrid/eucalyptus</em>. Each project folder contains corresponding
+credentials zip files. So fg100:username and fg200:username in
+Eucalyptus, however, two different identities are tied to the same
+LDAP user. A user can also download the credential file from the
+Eucalyptus dashboard in
+<a class="reference external" href="https://eucalyptus.india.futuregrid.org:8443">india</a> and
+<a class="reference external" href="https://eucalyptus.sierra.futuregrid.org:8443">sierra</a>. To log in
+to the dashboard, use your FutureGrid project number (in the format
+of <em>fgnumber)</em>as &#8220;Account&#8221; and your portal user name as &#8220;User&#8221;.
+Then use the FutureGrid portal password. (If you download the file
+from the dashboard, by default the system will name the file
+<em>euca2-{username}-x509</em>). We are using a slightly different naming
+scheme. The credential file will be found under the menu tab
+<em>username&#64;fgnumber&nbsp;</em>.)</li>
+</ul>
+<p>NOTICE: Due to an incompatibility problem introduced during the
+upgrade to the Eucalyptus 3.1 system, accessing the dashboard of
+Eucalyptus on india is tempararily unavailable. However, your credential
+will be in place so you can execute the later steps of this manual.
+On Sierra, the access is still available so you could download the
+credential zip file. Make sure to put it to Sierra first and then set up
+the environment as the following steps.
+Please be reminded that the credential for one cluster should/could
+not be used in another.</p>
+<p><a href="#id1"><span class="problematic" id="id2">|image88|</span></a></p>
+<ul>
+<li><p class="first">Find your credential zip file in cd
+$HOME/.futuregrid/eucalyptus/fgprojectnumber :</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ unzip euca3-{username}-{cluster}-fgprojectnumber.zip</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Apply the eucarc file:</p>
+<div class="highlight-python"><pre>source eucarc</pre>
+</div>
+</li>
+<li><p class="first">If you want to add Eucalyptus environment variables to your .bashrc
+then, do this: (if you are planning to switch between different cloud
+platforms, it is probably better to use source.</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ cat eucarc &gt;&gt; $HOME/.bashrc</pre>
+</div>
+<div class="highlight-python"><pre>$ source .bashrc</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Install Euca2tools</strong></p>
+<blockquote>
+<div>Older versions of euca2ools are not compatible with Eucalyptus 3.
+<a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools 2.0.2</a>
+is part of the Enterprise project and so is not available for all
+users. However, the source is available
+<a class="reference external" href="http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/files">here</a>.</div></blockquote>
+</div>
+<div class="section" id="resources-overview">
+<h1><strong>Resources Overview</strong><a class="headerlink" href="#resources-overview" title="Permalink to this headline">¶</a></h1>
+<p>Eucalyptus is available to FutureGrid Users on the India and Sierra
+clusters. As we will see later, when we instantiate a Virtual Machine
+(VM), it is needed to select the type of VM Image that we are going to
+use. In this sense, the information of the VM Image types available in
+each cluster is summarized below:</p>
+<div class="highlight-python"><pre>AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
+AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
+AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
+AVAILABILITYZONE    |- c1.medium    0170 / 0171   1   2048     7
+AVAILABILITYZONE    |- m1.large    0091 / 0094   2   5120    10
+AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
+AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20</pre>
+</div>
+<div class="highlight-python"><pre>AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
+AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
+AVAILABILITYZONE    |- m1.small    0051 / 0056   1    256     4
+AVAILABILITYZONE    |- c1.medium    0037 / 0042   1    512     5
+AVAILABILITYZONE    |- m1.large    0012 / 0014   2   1024    10
+AVAILABILITYZONE    |- m1.xlarge    0012 / 0014   2   1024    12
+AVAILABILITYZONE    |- c1.xlarge    0009 / 0014   4   2048    15</pre>
+</div>
+</div>
+<div class="section" id="testing-your-setup">
+<h1><strong>Testing Your Setup</strong><a class="headerlink" href="#testing-your-setup" title="Permalink to this headline">¶</a></h1>
+<p>Use euca-describe-availability-zones to test the setup:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>ssh sierra.futuregrid.org
+Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
+
+Welcome to Sierra.FutureGrid.Org
+
+torque/2.4.8 version 2.4.8 loaded
+moab version 5.4.0 loaded
+
+$ module load euca2ools/2.0.2
+euca2ools version 2.0.2 loaded
+$ euca-version
+euca2ools 2.0.2
+$ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
+$ euca-describe-availability-zones
+AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/</pre>
+</div>
+</div></blockquote>
+<p><strong>Available Images</strong></p>
+<p>List the existing images using euca-describe-images:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-describe-images
+
+IMAGE    emi-8E1C3B69    euca-centos-2012/euca-centos-2012.1.14-x86_64.img.manifest.xml    available    public
+IMAGE    emi-D21D3F6C    euca3/ubuntu-natty.img.manifest.xml    available    public
+IMAGE    emi-1A413C95    centos/centos.5-3.x86-64.img.manifest.xml    available    public
+IMAGE    eki-9F293A6A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public
+IMAGE    emi-0FA13B83    inca/centos5inca3128800784.img.manifest.xml    available    public
+IMAGE    emi-A9D33917    ubuntu/ubuntu.9-04.x86-64.img.manifest.xml    available    public
+IMAGE    eri-D1513DBA    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public
+IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public
+IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public
+IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public</pre>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="image-deployment">
+<h1><strong>Image Deployment</strong><a class="headerlink" href="#image-deployment" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">Before deploying a VM, you need to create at least one key pair. This
+key pair will be injected into the VM, allowing you to SSH into the
+instance. This is done using the euca-add-keypair command:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-add-keypair userkey   &gt; userkey.pem</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Fix the permissions on the generated private key:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ chmod 0600 userkey.pem</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Now you can start a VM using one of the pre-existing images. You need
+the emi-id of the image you want to start. This was listed in the
+output of euca-describe-images command that you saw earlier. Use the
+euca-run-instances command to start the VM:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-run-instances -k userkey -n 1   emi-0B951139 -t c1.medium
+
+RESERVATION     r-4E730969      archit    archit-default
+INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">The euca-describe-instances command can be used to check the status
+of the request. The following image was assigned an ip address and is
+starting up, as demonstrated by the &#8220;pending&#8221; status:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-describe-instances
+
+RESERVATION     r-4E730969      archit    default
+INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0
+          m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Once started, the status will change to &#8220;running&#8221;:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-describe-instances
+
+RESERVATION     r-4E730969      archit    default
+INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0
+          m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">If you need to delete a deployed VM, you can use the
+euca-terminate-instances command:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-terminate-instances i-4FC40839</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="logging-into-the-vm">
+<h1><strong>Logging Into the VM</strong><a class="headerlink" href="#logging-into-the-vm" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">Create rules to allow access to the VM over ssh and to allow ping:</p>
+<blockquote>
+<div><p>$ euca-authorize -P tcp -p 22 -s 0.0.0.0/0&nbsp;&nbsp; default
+$ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default</p>
+</div></blockquote>
+</li>
+<li><p class="first">The ssh private key that was generated earlier can now be used to log
+in to the VM:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ssh -i userkey.pem root@149.165.146.153
+
+-bash-3.2# uname -a
+
+ Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="vm-network-info">
+<h1><strong>VM Network Info</strong><a class="headerlink" href="#vm-network-info" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">The VM itself is visible from outside using the VM public IP. The
+internal network will show the VM private IP address:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>-bash-3.2# /sbin/ifconfig
+
+eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40
+        inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192</pre>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="image-management">
+<h1><strong>Image Management</strong><a class="headerlink" href="#image-management" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p class="first">We will use the example ubuntu 10 image to test uploading images.
+Download the gzipped tar ball:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Uncompress and untar the archive:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ tar zxf ubuntu-12.04-server-cloudimg-amd64.tar.gz</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Bundle the image with a kernel and a ramdisk using the
+euca-bundle-image command. In this example, we will use the xen
+kernel already registered. euca-describe-images returns the kernel
+and ramdisk IDs that we need:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-bundle-image -i   precise-server-cloudimg-amd64.img --kernel eki-78EF12D2 --ramdisk   eri-5BB61255
+
+Checking image
+Tarring image
+Encrypting image
+Splitting image...
+Part:   precise-server-cloudimg-amd64.img.part.0
+Part:   precise-server-cloudimg-amd64.img.part.1
+Part:   precise-server-cloudimg-amd64.img.part.2
+Part:   precise-server-cloudimg-amd64.img.part.3
+Part:   precise-server-cloudimg-amd64.img.part.4
+Part:   precise-server-cloudimg-amd64.img.part.5
+Part:   precise-server-cloudimg-amd64.img.part.6
+Part:   precise-server-cloudimg-amd64.img.part.7
+Part:   precise-server-cloudimg-amd64.img.part.8
+Part:   precise-server-cloudimg-amd64.img.part.9
+Part:   precise-server-cloudimg-amd64.img.part.10
+Part:   precise-server-cloudimg-amd64.img.part.11
+Part:   precise-server-cloudimg-amd64.img.part.12
+Part:   precise-server-cloudimg-amd64.img.part.13
+Part:   precise-server-cloudimg-amd64.img.part.14
+Part:   precise-server-cloudimg-amd64.img.part.15
+Part:   precise-server-cloudimg-amd64.img.part.16
+Generating manifest   /tmp/precise-server-cloudimg-amd64.img.manifest.xml</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Use the generated manifest file to upload the image to Walrus:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-upload-bundle -b ubuntu-image-bucket   -m /tmp/precise-server-cloudimg-amd64.img.manifest.xml
+
+Checking bucket:   ubuntu-image-bucket
+Creating bucket:   ubuntu-image-bucket
+Uploading manifest   file
+Uploading part:   precise-server-cloudimg-amd64.img.part.0
+Uploading part:   precise-server-cloudimg-amd64.img.part.1
+Uploading part:   precise-server-cloudimg-amd64.img.part.2
+Uploading part:   precise-server-cloudimg-amd64.img.part.3
+Uploading part:   precise-server-cloudimg-amd64.img.part.4
+Uploading part:   precise-server-cloudimg-amd64.img.part.5
+Uploading part:   precise-server-cloudimg-amd64.img.part.6
+Uploading part:   precise-server-cloudimg-amd64.img.part.7
+Uploading part:   precise-server-cloudimg-amd64.img.part.8
+Uploading part:   precise-server-cloudimg-amd64.img.part.9
+Uploading part:   precise-server-cloudimg-amd64.img.part.10
+Uploading part:   precise-server-cloudimg-amd64.img.part.11
+Uploading part:   precise-server-cloudimg-amd64.img.part.12
+Uploading part:   precise-server-cloudimg-amd64.img.part.13
+Uploading part:   precise-server-cloudimg-amd64.img.part.14
+Uploading part:   precise-server-cloudimg-amd64.img.part.15
+Uploading part:   precise-server-cloudimg-amd64.img.part.16
+Uploaded image as   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Register the uploaded image:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
+
+IMAGE   emi-FFC3154F</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">The returned image ID can now be used to start instances with
+euca-run-instances as described earlier. euca-describe-images also
+shows the new image now:</p>
+<blockquote>
+<div><div class="highlight-python"><pre>$ euca-describe-images
+
+IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml archit available public   x86_64 machine eri-5BB61255 eki-78EF12D2
+IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine
+  ...</pre>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">You can also delete your images:</p>
+</li>
+</ul>
+<div class="highlight-python"><pre>$ euca-deregister emi-FFC3154F</pre>
+</div>
+</div>
+<div class="section" id="status-of-deployments">
+<h1>Status of Deployments<a class="headerlink" href="#status-of-deployments" title="Permalink to this headline">¶</a></h1>
+<p>At times, you may ask if the Eucalyptus systems on FutureGrid are
+operational. You can find this out by visiting the following:</p>
+<p>a) The Outage page
+at&nbsp;<a class="reference external" href="https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds">https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds</a>
+b) The Real Time Status monitor
+at&nbsp;<a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&amp;xsl=table.xsl&amp;resourceIds=FutureGrid">http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&amp;xsl=table.xsl&amp;resourceIds=FutureGrid</a>
+c) Our Runtime History
+at&nbsp;<a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml">http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml</a></p>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tutorials &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Tutorials</a><ul>
+<li><a class="reference internal" href="#tutorial-topic-0-accessing-futuregrid-resources">Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
+<li><a class="reference internal" href="#tutorial-topic-1-cloud-provisioning-platforms">Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
+<li><a class="reference internal" href="#tutorial-topic-2-cloud-run-time-map-reduce-platforms">Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
+<li><a class="reference internal" href="#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
+<li><a class="reference internal" href="#tutorial-topic-4-high-performance-computing">Tutorial Topic 4: High Performance Computing</a></li>
+<li><a class="reference internal" href="#tutorial-topic-5-experiment-management">Tutorial Topic 5: Experiment Management</a></li>
+<li><a class="reference internal" href="#tutorial-topic-6-image-management-and-rain">Tutorial Topic 6: Image Management and Rain</a></li>
+<li><a class="reference internal" href="#tutorial-topic-7-storage">Tutorial Topic 7: &nbsp;Storage</a></li>
+<li><a class="reference internal" href="#other-tutorials-and-educational-materials">Other Tutorials and Educational Materials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#futuregrid-grid-appliance-for-nimbus-and-eucalyptus">FutureGrid Grid Appliance for Nimbus and Eucalyptus</a></li>
+<li><a class="reference internal" href="#one-click-hadoop-wordcount-on-eucalyptus-futuregrid">One-click Hadoop WordCount on Eucalyptus FutureGrid</a></li>
+<li><a class="reference internal" href="#one-click-twister-k-means-on-eucalyptus-futuregrid">One-click Twister K-means on Eucalyptus FutureGrid</a></li>
+<li><a class="reference internal" href="#register-virtual-box-image-on-openstack">Register Virtual Box Image on OpenStack</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">Configuring the image network interface (eth0) for DHCP</a></li>
+<li><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">Configure udev persistent rules (only CentOS)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">Convert your virtual box image to raw format</a></li>
+<li><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">Convert the image to qcow2 format (optional)</a></li>
+<li><a class="reference internal" href="#test-your-image">Test your image</a></li>
+<li><a class="reference internal" href="#transfer-your-image-to-india">Transfer your Image to India</a></li>
+<li><a class="reference internal" href="#log-into-india">Log into India</a></li>
+<li><a class="reference internal" href="#upload-your-image-to-openstack">Upload your image to OpenStack</a></li>
+<li><a class="reference internal" href="#checking-status-image">Checking Status Image</a></li>
+<li><a class="reference internal" href="#test-image-in-openstack">Test Image in OpenStack</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#notes">Notes:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#virtual-appliances">Virtual Appliances</a></li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/tutorials.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="tutorials">
+<h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
+<p>If you&#8217;re looking for the Cloud Summer School 2012 (along with
+excellent tutorial material), click on the icon below:</p>
+<p><a href="#id5"><span class="problematic" id="id6">|image132|</span></a></p>
+<p><strong>Note:</strong>This page is maintained by Renato Figueiredo from UF.</p>
+<p>The following tutorials are broadly organized into topics, with each
+tutorial classified by the user&#8217;s target level of expertise with
+FutureGrid (novice, intermediate, advanced). (If you are a tutorial
+developer, for instructions on&nbsp;how to add a tutorial to this list,
+please&nbsp;<a class="reference external" href="https://portal.futuregrid.org/outreach">refer to the TEOS
+page</a>).</p>
+<p>If you have corrections or suggestions related to our tutorial
+content, please <a class="reference external" href="https://portal.futuregrid.org/help">fill out a help
+request</a>.</p>
+<div class="section" id="tutorial-topic-0-accessing-futuregrid-resources">
+<h2>Tutorial Topic 0: Accessing FutureGrid Resources<a class="headerlink" href="#tutorial-topic-0-accessing-futuregrid-resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/accessing-futuregrid-resources-ssh">https://portal.futuregrid.org/accessing-futuregrid-resources-ssh</a>&nbsp;[novice]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-1-cloud-provisioning-platforms">
+<h2>Tutorial Topic 1: Cloud Provisioning Platforms<a class="headerlink" href="#tutorial-topic-1-cloud-provisioning-platforms" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Using Nimbus on
+FutureGrid</a>
+[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/nm2">Nimbus One-click Cluster
+Guide</a> [intermediate]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/manual/openstack/grizzly">Using OpenStack Grizzly on
+FutureGrid</a>
+[novice] <strong>** NEW **</strong></li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">Using OpenStack Essex
+on&nbsp;FutureGrid</a>&nbsp;[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/eucalyptus3">Using Eucalyptus on
+FutureGrid</a>
+[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/contrib/simple-vine-tutorial">Connecting private network VMs&nbsp;across Nimbus clusters using
+ViNe</a>&nbsp;[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/ipop1">IPOP1: (IP-over-P2P) Virtual Network Introductory
+Tutorial</a> [novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/ipop1">IPOP2: Deploying your Own P2P Overlay for IPOP
+VPNs</a>&nbsp;[intermediate]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-2-cloud-run-time-map-reduce-platforms">
+<h2>Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms<a class="headerlink" href="#tutorial-topic-2-cloud-run-time-map-reduce-platforms" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/running-hadoop-batch-job-using-myhadoop">Running Hadoop as a batch job using
+MyHadoop</a>&nbsp;[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/salsahadoop-futuregrid-hpc">Running SalsaHadoop&nbsp;(one-click Hadoop) on HPC
+environment</a>&nbsp;[beginner]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/twister-futuregrid-hpc">Running Twister on HPC
+environment</a>&nbsp;[beginner]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus">Running SalsaHadoop&nbsp;on
+Eucalyptus</a>&nbsp;[intermediate]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid">Running</a><a class="reference external" href="https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid">FG-Twister
+on
+Eucalyptus</a>&nbsp;[intermediate]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid">Running One-click Hadoop WordCount on
+Eucalyptus</a>
+[beginner]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/one-click-twister-k-means-eucalyptus-futuregrid">Running One-click Twister K-means on
+Eucalyptus</a>
+[beginner]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-3-grid-appliances-for-training-education-and-outreach">
+<h2>Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach<a class="headerlink" href="#tutorial-topic-3-grid-appliances-for-training-education-and-outreach" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/ga1">Running a Grid Appliance on your
+desktop</a>&nbsp;&nbsp;[novice]</li>
+<li><a class="reference external" href="http://portal.futuregrid.org/tutorials/ga9">Running a Grid Appliance on
+FutureGrid</a> [novice]</li>
+<li><a class="reference external" href="http://portal.futuregrid.org/tutorials/os1">Running an OpenStack virtual appliance on
+FutureGrid</a> [novice]</li>
+<li><a class="reference external" href="http://portal.futuregrid.org/tutorials/ga8">Running Condor tasks on the Grid
+Appliance</a> [novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/mp1">Running MPI tasks on the Grid
+Appliance</a>&nbsp;[novice]</li>
+<li><a class="reference external" href="http://portal.futuregrid.org/tutorials/ga10">Running Hadoop&nbsp;tasks on the Grid
+Appliance</a> [novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/ga4">Deploying virtual private Grid Appliance clusters using
+Nimbus</a>
+[intermediate]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/ga3">Building an educational appliance from Ubuntu
+10.04</a> [intermediate]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/ga7">Customizing and registering Grid Appliance images using
+Eucalyptus</a>
+[intermediate]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-4-high-performance-computing">
+<h2>Tutorial Topic 4: High Performance Computing<a class="headerlink" href="#tutorial-topic-4-high-performance-computing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="/tutorials/hpc">Basic High Performance Computing</a> [novice]</li>
+<li><a class="reference external" href="/tutorials/running-hadoop-batch-job-using-myhadoop">Running Hadoop as a batch job using
+MyHadoop</a>
+[novice]</li>
+<li><a class="reference external" href="/manual/performance/vampir">Performance Analysis with Vampir</a>
+[advanced]</li>
+<li><a class="reference external" href="/manual/vampir/trace">Instrumentation and tracing with
+VampirTrace</a> [advanced]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-5-experiment-management">
+<h2>Tutorial Topic 5: Experiment Management<a class="headerlink" href="#tutorial-topic-5-experiment-management" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/interactive-experiment-management">Running interactive
+experiments</a>
+[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/workflow-experiment-management">Running workflow experiments using
+Pegasus</a>&nbsp;[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/pegasus-on-futuregrid-tutorial">Pegasus 4.1 on FutureGrid
+Tutorial</a>&nbsp;[novice]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-6-image-management-and-rain">
+<h2>Tutorial Topic 6: Image Management and Rain<a class="headerlink" href="#tutorial-topic-6-image-management-and-rain" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://futuregrid.github.com/rain/quickstart.html">Using Image Management and
+Rain</a>&nbsp;[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/generate-and-register-os-image-futuregrid-using-fg-shell">Easy steps to generate and register an
+Image</a>
+[novice]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/manually-customize-image">Manual Image
+Customization</a>
+[advanced]</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/register-virtual-box-image-openstack">Register your VirtualBox image in
+OpenStack</a>
+[intermediate]</li>
+</ul>
+</div>
+<div class="section" id="tutorial-topic-7-storage">
+<h2>Tutorial Topic 7: &nbsp;Storage<a class="headerlink" href="#tutorial-topic-7-storage" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/hpss">Using HPSS from
+FutureGrid</a>&nbsp;[novice]</li>
+</ul>
+</div>
+<div class="section" id="other-tutorials-and-educational-materials">
+<h2>Other Tutorials and Educational Materials<a class="headerlink" href="#other-tutorials-and-educational-materials" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/additional_tutorials">Additional tutorials on FutureGrid-related
+technologies</a></li>
+<li><a class="reference external" href="https://portal.futuregrid.org/community_edu_materials">FutureGrid community educational
+materials</a></li>
+<li><a class="reference external" href="http://www.citutor.org/browse.php?access=&amp;category=-1&amp;search=performance&amp;include=all&amp;filter=Filter">CI Tutor performance
+tutorials</a>
+(requires brief registration to view content)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="futuregrid-grid-appliance-for-nimbus-and-eucalyptus">
+<h1>FutureGrid Grid Appliance for Nimbus and Eucalyptus<a class="headerlink" href="#futuregrid-grid-appliance-for-nimbus-and-eucalyptus" title="Permalink to this headline">¶</a></h1>
+<p><strong>Summary:</strong></p>
+<p>This tutorial provides step-by-step instructions on how to install
+clients to access Eucalyptus and Nimbus clouds on FutureGrid using the
+Grid appliance.</p>
+<p><strong>Pre-requisites:</strong></p>
+<p><a class="reference external" href="http://portal.futuregrid.org/tutorials/ga1">FutureGrid tutorial GA1 - Introduction to the Grid
+Appliance</a></p>
+<p><strong>Hands-on tutorial</strong>:</p>
+<p>This tutorial is maintained at the Grid Appliance portal. See
+<a class="reference external" href="http://www.grid-appliance.org/wiki/index.php/FutureGrid:clientappliance">FutureGrid:clientappliance</a>.</p>
+</div>
+<div class="section" id="one-click-hadoop-wordcount-on-eucalyptus-futuregrid">
+<h1>One-click Hadoop WordCount on Eucalyptus FutureGrid<a class="headerlink" href="#one-click-hadoop-wordcount-on-eucalyptus-futuregrid" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows how to run a one-click Hadoop WordCount job on the
+Eucalyptus platform of FutureGrid.</p>
+<p>1. FutureGrid&nbsp;HPC account: please apply via&nbsp;<a class="reference external" href="../../user/register">FutureGrid
+portal</a> and&nbsp;<a class="reference external" href="../../request-hpc-account">request a HPC
+account</a>.
+2. FutureGrid Eucalyptus account: please see <a class="reference external" href="../../tutorials/eucalyptus3">FutureGrid Eucalyptus
+Tutorial</a> for detailed instructions.
+3. FutureGrid&nbsp;Eucalyptus credentials zip file
+(euca2-[username]-x509.zip) stored under user&#8217;s home directory
+4. Key pair created and added for use with Eucalyptus virtual
+machines</p>
+<p>The following sections assume a user has created both an HPC account
+and a Eucalpytus account under the username of <em>gaoxm</em>.</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;129-79-49-98">gaoxm<span>&#64;</span>129-79-49-98</a> ~]$ ssh -i .ssh/id_rsa_fg
+india.futuregrid.org
+Enter passphrase for key &#8216;.ssh/id_rsa_fg&#8217;:
+Last login: Sat May&nbsp; 5 02:17:33 2012 from
+c-71-194-153-252.hsd1.in.comcast.net
+...
+torque/2.5.5 version 2.5.5 loaded
+moab version 5.4.0 loaded
+euca2ools version 1.2 loaded
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> ~]$ cd eucalyptus/
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> eucalyptus]$ ls
+cloud-cert.pem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; euca2-gaoxm-d108375b-pk.pem
+eucarc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hosts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodes
+euca2-gaoxm-d108375b-cert.pem&nbsp; euca2-gaoxm-x509.zip
+gaoxm.private&nbsp; jssecacerts&nbsp; tmp.out</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ wget
+<a class="reference external" href="http://mypage.iu.edu/~gao4/data/hadoopOneClick.zip">http://mypage.iu.edu/~gao4/data/hadoopOneClick.zip</a>
+...
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ ls
+hadoopOneClick.zip
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ unzip hadoopOneClick.zip</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ cd hadoopOneClick
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> hadoopOneClick]$ ls
+deploy-hadoop.sh&nbsp;&nbsp;&nbsp;&nbsp; instanceIds.txt&nbsp; publicIps.txt
+stop-hadoop.sh
+hadoop-one-click.sh&nbsp; ipHosts.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run-hadoop-wordcount.sh
+terminate-instances.sh
+hosts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodes.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; start-instances.sh
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> hadoopOneClick]$ chmod +x *.sh
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> hadoopOneClick]$ ./hadoop-one-click.sh -n 2 -t m1.small
+-i emi-D778156D -k gaoxm -p ~/eucalyptus/gaoxm.private -l
+<a class="reference external" href="http://mypage.iu.edu/~gao4/data/grexp10.txt">http://mypage.iu.edu/~gao4/data/grexp10.txt</a>
+-s
+<a class="reference external" href="http://salsahpc.indiana.edu/tutorial/apps/hadoop-0.20.203.0-for-EucaVm.tar.gz">http://salsahpc.indiana.edu/tutorial/apps/hadoop-0.20.203.0-for-EucaVm.tar.gz</a></p>
+<p>This will run a MapReduce word-count job on a dynamically created
+virtual Hadoop cluster on FutureGrid. The user needs to replace the <em>–k</em>
+and <em>–p</em> parameter values with his/her key-pair name and private key
+path. For detailed usage information, try</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> hadoopOneClick]$ ./hadoop-one-click.sh -h</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> hadoopOneClick]$ ls outputs/
+_logs&nbsp; part-r-00000&nbsp; _SUCCESS
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> hadoopOneClick]$ vim outputs/part-r-00000</p>
+<p>To run other MapReduce jobs, replace <em>run-hadoop-wordcount.sh</em> with
+new scripts, and change <em>hadoop-one-click.sh</em> to call the corresponding
+scripts.</p>
+</div>
+<div class="section" id="one-click-twister-k-means-on-eucalyptus-futuregrid">
+<h1>One-click Twister K-means on Eucalyptus FutureGrid<a class="headerlink" href="#one-click-twister-k-means-on-eucalyptus-futuregrid" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial shows how to run a one-click Twister K-means job on the
+Eucalyptus platform of FutureGrid.</p>
+<p>1. FutureGrid&nbsp;HPC account, please apply via&nbsp;<a class="reference external" href="https://portal.futuregrid.org/user/register">FutureGrid
+portal</a>&nbsp;and&nbsp;<a class="reference external" href="https://portal.futuregrid.org/request-hpc-account">request a
+HPC account</a>.
+2. FutureGrid Eucalyptus account, please see&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/eucalyptus">FutureGrid Eucalyptus
+Tutorial</a>&nbsp;for
+detailed instructions.
+3. FutureGrid&nbsp;Eucalyptus credentials zip file
+(euca2-[username]-x509.zip) stored under user&#8217;s home directory.
+4. Key pair created and added for use with Eucalyptus virtual
+machines.</p>
+<p>The following sections assume a user has created both HPC account and
+Eucalpytus account under the username of “gaoxm”.</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;129-79-49-98">gaoxm<span>&#64;</span>129-79-49-98</a> ~]$ ssh -i .ssh/id_rsa_fg
+india.futuregrid.org
+Enter passphrase for key &#8216;.ssh/id_rsa_fg&#8217;:
+Last login: Sat May&nbsp; 5 02:17:33 2012 from
+c-71-194-153-252.hsd1.in.comcast.net
+...
+torque/2.5.5 version 2.5.5 loaded
+moab version 5.4.0 loaded
+euca2ools version 1.2 loaded
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> ~]$ cd eucalyptus/
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> eucalyptus]$ ls
+cloud-cert.pem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; euca2-gaoxm-d108375b-pk.pem
+eucarc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hosts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodes
+euca2-gaoxm-d108375b-cert.pem&nbsp; euca2-gaoxm-x509.zip
+gaoxm.private&nbsp; jssecacerts&nbsp; tmp.out</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$
+wget&nbsp;<a class="reference external" href="http://mypage.iu.edu/~gao4/data/hadoopOneClick.zip">http://mypage.iu.edu/~gao4/data/twisterOneClick.zip</a>
+...
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ ls
+hadoopOneClick&nbsp; hadoopOneClick.zip&nbsp; twisterOneClick.zip
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ unzip twisterOneClick.zip</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> test]$ cd twisterOneClick
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> twisterOneClick]$ ls
+deploy-twister.sh&nbsp; instanceIds.txt&nbsp; publicIps.txt
+stop-twister.sh
+hostnames.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ipHosts.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run-twister-kmeans.sh
+terminate-instances.sh
+hosts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodes.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; start-instances.sh
+twister-one-click.sh
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> twisterOneClick]$ chmod +x *.sh
+[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> twisterOneClick]$ ./twister-one-click.sh -n 2 -t m1.small
+-i emi-D778156D -k gaoxm -p ~/eucalyptus/gaoxm.private
+-l<a class="reference external" href="http://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz">http</a><a class="reference external" href="http://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz">://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz</a>&nbsp;-a
+<a class="reference external" href="http://www.iterativemapreduce.org/apache-activemq-5.4.2-bin.tar.gz">http://www.iterativemapreduce.org/apache-activemq-5.4.2-bin.tar.gz</a></p>
+<p>This will run a MapReduce K-means job on a dynamically created
+virtual Twister cluster on&nbsp; FutureGrid. The user needs to replace the
+“–k” and “–p” parameter values with his/her key-pair name and private
+key path. For detailed usage information, try</p>
+<p>[<a class="reference external" href="mailto:gaoxm&#37;&#52;&#48;i136">gaoxm<span>&#64;</span>i136</a> twisterOneClick]$ ./twister-one-click.sh -h</p>
+<p>Calling run_kmeans.sh on 149.165.159.140...
+JobID: kmeans-map-reduce9ec9eaa2-9731-11e1-80d7-156f25bd362a
+May 6, 2012 4:11:57 AM
+org.apache.activemq.transport.failover.FailoverTransport doReconnect
+INFO: Successfully connected
+to&nbsp;<a class="reference external" href="https://master:61616/">tcp://master:61616</a>
+0&nbsp;&nbsp;&nbsp; [main] INFO&nbsp; cgl.imr.client.TwisterDriver&nbsp; - Configure Mappers
+through the partition file, please wait....
+1975 [main] INFO&nbsp; cgl.imr.client.TwisterDriver&nbsp; - Configuring Mappers
+through the partition file is completed.
+250.77056136584878 , 125.15021341387315 , 249.21561041359857 ,
+246.74715176402833 , 375.350251646343 , 249.17570173022511 ,
+Total Time for kemeans : 6.808
+Total loop count : 15
+6260 [main] INFO&nbsp; cgl.imr.client.TwisterDriver&nbsp; - MapReduce
+computation termintated gracefully.
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+Kmeans clustering took 6.841 seconds.
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<p>To run other iterative MapReduce jobs, replace run-twister-kmeans.sh
+with new scripts, and change twister-one-click.sh to call the
+corresponding scripts.</p>
+</div>
+<div class="section" id="register-virtual-box-image-on-openstack">
+<h1>Register Virtual Box Image on OpenStack<a class="headerlink" href="#register-virtual-box-image-on-openstack" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we explain how to convert a Virtual Box image to kvm
+format and then register it on OpenStack.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>There is two main prerequisites for your images to work with OpenStack</p>
+<div class="section" id="disable-selinux-only-for-redhat-based-linux-like-centos">
+<h3>Disable SELinux (Only for RedHat-based Linux like CentOS)<a class="headerlink" href="#disable-selinux-only-for-redhat-based-linux-like-centos" title="Permalink to this headline">¶</a></h3>
+<p>Edit the file&nbsp;/etc/selinux/config and set the SELINUX option to disabled</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">SELINUX</span><span class="o">=</span><span class="n">disabled</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuring-the-image-network-interface-eth0-for-dhcp">
+<h3>Configuring the image network interface (eth0) for DHCP<a class="headerlink" href="#configuring-the-image-network-interface-eth0-for-dhcp" title="Permalink to this headline">¶</a></h3>
+<p>In Ubuntu, you edit the file /etc/network/interfaces and configure eth0
+to:</p>
+<div class="highlight-python"><pre>auto eth0
+iface eth0 inet dhcp</pre>
+</div>
+<p>In CentOS, you edit the file /etc/sysconfig/network-scripts/ifcfg-eth0
+and make sure it contains:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">DEVICE</span><span class="o">=</span><span class="n">eth0</span>
+<span class="n">BOOTPROTO</span><span class="o">=</span><span class="n">dhcp</span>
+<span class="n">ONBOOT</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-the-image-to-allow-openstack-to-inject-the-ssh-key">
+<h3>Configure the image to allow OpenStack to inject the ssh key<a class="headerlink" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ubuntu&nbsp;(it may not be needed for Ubuntu, but it is recomended)</li>
+</ul>
+<ul class="simple">
+<li>CentOS.&nbsp;Edit the file /etc/rc.local</li>
+</ul>
+</div>
+<div class="section" id="configure-udev-persistent-rules-only-centos">
+<h3>Configure udev persistent rules (only CentOS)<a class="headerlink" href="#configure-udev-persistent-rules-only-centos" title="Permalink to this headline">¶</a></h3>
+<p>Edit the file&nbsp;/etc/udev/rules.d/70-persistent-net.rules, delete
+everything and add:</p>
+<div class="highlight-python"><pre>ACTION=="add",SUBSYSTEM=="net", IMPORT{program}="/lib/udev/rename_device"
+SUBSYSTEM=="net", RUN+="/etc/sysconfig/network-scripts/net.hotplug"</pre>
+</div>
+</div>
+</div>
+<div class="section" id="convert-your-virtual-box-image-to-raw-format">
+<h2>Convert your virtual box image to raw format<a class="headerlink" href="#convert-your-virtual-box-image-to-raw-format" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>VBoxManage clonehd /path/to/imagefile/vboximage.vdi /path/to/rawimage.img --format raw</pre>
+</div>
+<p>Make sure that you specify the full path. Otherwise, you may experience
+errors and the new image will be placed in&nbsp;&nbsp;~/.VirtualBox/HardDisks/</p>
+</div>
+<div class="section" id="convert-the-image-to-qcow2-format-optional">
+<h2>Convert the image to qcow2 format (optional)<a class="headerlink" href="#convert-the-image-to-qcow2-format-optional" title="Permalink to this headline">¶</a></h2>
+<p>This step is optional, but it is recommended if your image as a
+considerable size because the qcow2 format will compress your image.
+Nevertheless, it will takes a while to finish this command. As example
+my 8GB image took a couple of hours to get ready and was compressed to
+less than 6 GB.</p>
+<div class="highlight-python"><pre>qemu-img convert -f raw rawimage.img -O qcow2 qcow2image.img</pre>
+</div>
+</div>
+<div class="section" id="test-your-image">
+<h2>Test your image<a class="headerlink" href="#test-your-image" title="Permalink to this headline">¶</a></h2>
+<p>If you are in a computer with graphical interface, the easiest way to
+test it is by executing the following command. This command will open a
+window and you will see if your image boots correctly.</p>
+<div class="highlight-python"><pre>kvm -hda rawimage.img -m 1024</pre>
+</div>
+<p>or</p>
+<div class="highlight-python"><pre>kvm -hda qcow2image.img -m 1024</pre>
+</div>
+<p>From now on, we refer only to the rawimage.img, but it works in the same
+way with the qcow2image.img.</p>
+</div>
+<div class="section" id="transfer-your-image-to-india">
+<h2>Transfer your Image to India<a class="headerlink" href="#transfer-your-image-to-india" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ scp rawimage.img &lt;username&gt;@india.futuregrid.org:/N/u/&lt;username&gt;/</pre>
+</div>
+</div>
+<div class="section" id="log-into-india">
+<h2>Log into India<a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ ssh &lt;username&gt;@india.futuregrid.org</pre>
+</div>
+</div>
+<div class="section" id="upload-your-image-to-openstack">
+<h2>Upload your image to OpenStack<a class="headerlink" href="#upload-your-image-to-openstack" title="Permalink to this headline">¶</a></h2>
+<p>First, we need to load the euca2ools module that contains the command
+line interface to interact with OpenStack. Then we need to load our own
+credentials that are typically in a novarc file. Finally you update and
+register the image. Although, we are going to briefly explain these
+steps here, this is part of the OpenStack tutorial that can be found
+in&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">https://portal.futuregrid.org/tutorials/openstack</a>.</p>
+<div class="highlight-python"><pre>$ module load euca2ools
+$ source ~/novarc</pre>
+</div>
+<p>Upload the image</p>
+<div class="highlight-python"><pre>$ euca-bundle-image -i rawimage.img
+
+Checking image
+Encrypting image
+Splitting image...
+Part: rawimage.img.part.00
+Part: rawimage.img.part.01
+Part: rawimage.img.part.02
+.....
+Generating manifest /tmp/rawimage.img.manifest.xml</pre>
+</div>
+<p>At the end you get a manifest file that you use in the next step. You
+also need to specify a bucket name (option -b). We can use our username
+(jdiazz in my case), but it can be any other string.</p>
+<div class="highlight-python"><pre>$ euca-upload-image -m /tmp/rawimage.img.manifest.xml -b jdiazz
+
+Checking bucket: jdiaz
+Uploading manifest file
+Uploading part: rawimage.img.part.00
+Uploading part: rawimage.img.part.01
+Uploading part: rawimage.img.part.02
+.....
+Uploaded image as jdiazz/rawimage.img.manifest.xml</pre>
+</div>
+<p>Finally we register the image.</p>
+<div class="highlight-python"><pre>$ euca-register jdiazz/rawimage.img.manifest.xml
+
+IMAGE ami-00000058</pre>
+</div>
+<p>From this last command we get the ami-ID that identifies the image in
+OpenStack (marked in yellow). You will need this to start instances.</p>
+</div>
+<div class="section" id="checking-status-image">
+<h2>Checking Status Image<a class="headerlink" href="#checking-status-image" title="Permalink to this headline">¶</a></h2>
+<p>You cannot run instances until your image is in available status. You
+can check the status of your image with the euca-describe-images
+command. This command can take some time to respond because the system
+will be busy processing your image.</p>
+<div class="highlight-python"><pre>$ euca-describe-images ami-00000058</pre>
+</div>
+</div>
+<div class="section" id="test-image-in-openstack">
+<h2>Test Image in OpenStack<a class="headerlink" href="#test-image-in-openstack" title="Permalink to this headline">¶</a></h2>
+<p>For this step we recomend to go to the OpenStack tutorial where we
+explain how to create a key-pair and run an instance with our image.
+Please
+see&nbsp;<a class="reference external" href="https://portal.futuregrid.org/using-openstack-futuregrid#key_management">https://portal.futuregrid.org/using-openstack-futuregrid#key_management</a></p>
+<p>Running the instance can be something like this:</p>
+<div class="highlight-python"><pre>$ euca-run-instances -k jdiaznova ami-00000058 -t m1.large</pre>
+</div>
+<p>where jdiaznova is the key name of my openstack key pairs. This key will
+allow us to ssh into the image. Please refer to the OpenStack tutorial
+for more information.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>One problem of this way of using our images is that we cannot use
+euca-get-console-output command to debug the boot process of the images.
+Therefore it makes more complicated solving runtime problems. However,
+if your image boots properly when doing the &#8220;Test your Image&#8221; section,
+it should work also on OpenStack and the only problem could be wrong
+configuration of network interface or SELinux enabled.</p>
+</div>
+<div class="section" id="notes">
+<h2>Notes:<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial has been tested with Ubuntu 12 and CentOS 6 using
+OpenStack Essex.</p>
+</div>
+</div>
+<div class="section" id="virtual-appliances">
+<h1>Virtual Appliances<a class="headerlink" href="#virtual-appliances" title="Permalink to this headline">¶</a></h1>
+<p>Virtual appliances are virtual machine images encapsulating
+pre-installed, pre-configured software that can be easily deployed on
+cloud resources.&nbsp;Users of FutureGrid can use public appliance images
+posted by other users, as well as contribute to the repository of
+images.</p>
+<p>This page provides a summary of community-provided virtual appliances
+that are available for use on FutureGrid. If you have created a virtual
+appliance and you would like to advertise its availability and features
+with the community, feel free to edit this page and include information
+about your appliance.</p>
+<blockquote>
+<div><strong>Creating Your Own Appliance:</strong></div></blockquote>
+<hr class="docutils" />
+<p>Any FutureGrid user with Eucalyptus or Nimbus accounts can create and
+register an appliance. The approach is similar in both cases: you can
+upload an existing image into FutureGrid (e.g. from another Eucalyptus
+or Nimbus cloud, or an image you create on your own computer), or you
+can customize an instance interactively in FutureGrid and save it in a
+FutureGrid resource.</p>
+<p>You can upload a &#8220;common&#8221; image so it becomes available to others in a
+FutureGrid cloud resource - to do this, add the flag &#8211;common to the
+cloud_client.sh command line when you transfer an image (ensure you are
+using cloud client version 020 or above).&nbsp; You can also save a Nimbus
+instance that you are using interactively (through ssh) as an image.
+Please refer to the <a class="reference external" href="http://www.nimbusproject.org/docs/current/clouds/cloudquickstart.html">manual for
+cloud_client.sh</a>&nbsp;and
+the &nbsp;<a class="reference external" href="http://portal.futuregrid.org/tutorials/nimbus">Nimbus tutorial</a>
+for instructions.</p>
+<p>Please refer to <a class="reference external" href="https://portal.futuregrid.org/tutorials/ga7">FutureGrid tutorial
+GA7</a>.</p>
+<p>There are several appliances already available on FutureGrid. The table
+below summarizes a list of appliances, where they are available, and
+their image names. If you have an appliance that you would like to add
+to this list, please add it to the table.</p>
+<blockquote>
+<div><em>Editing tips for the table:</em></div></blockquote>
+<hr class="docutils" />
+<ul class="simple">
+<li><em>You can add rows to the table by right-clicking the last row of the
+table and selecting Row-&gt;Insert Row After</em></li>
+<li><em>If you make a mistake (e.g., deleting a row), you can undo it by
+pressing CTRL-Z</em></li>
+<li><em>You need to click on the Submit button so your changes take effect</em></li>
+<li><em>You can `create a community
+page &lt;https://portal.futuregrid.org/node/add/page-community&gt;`__
+explaining your appliance and its usage in more depth, and can link
+to it from this page</em></li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="30%" />
+<col width="12%" />
+<col width="18%" />
+<col width="9%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Appliance name</strong></td>
+<td><strong>Appliance description</strong></td>
+<td><strong>FutureGrid system(s) available</strong></td>
+<td><strong>Appliance ID</strong></td>
+<td><dl class="first last docutils">
+<dt><a href="#id1"><span class="problematic" id="id2">**</span></a>Installed</dt>
+<dd>by (FutureGrid user ID)**</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/tutorials/ga9">Grid Appliance</a></td>
+<td>Self-configures Condor/MPI/Hadoop virtual clusters for training/education</td>
+<td>alamo, india</td>
+<td>grid-appliance-2.05.03.gz (alamo), emi-E4ED1880 (india)</td>
+<td>panoat</td>
+</tr>
+<tr class="row-odd"><td><dl class="first last docutils">
+<dt><a href="#id3"><span class="problematic" id="id4">`</span></a>OpenStack</dt>
+<dd>Appliance &lt;<a class="reference external" href="https://portal.futuregrid.org/tutorials/os1">https://portal.futuregrid.org/tutorials/os1</a>&gt;`__</dd>
+</dl>
+</td>
+<td>Deploys a single-node OpenStack compute virtual cloud</td>
+<td>alamo</td>
+<td>openstack-ubuntu-10.10-amd64.img</td>
+<td>menghan</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/contrib/simple-vine-tutorial">ViNe Appliance</a></td>
+<td>Deploys the ViNe virtual network overlay to connect private-address VMs in sierra and foxtrot</td>
+<td>sierra, foxtrot</td>
+<td>centos-5.5-x64-vine.gz</td>
+<td>menghan</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://portal.futuregrid.org/contrib/fg-twister-appliance-tutorial">Twister Appliance</a></td>
+<td>Deploys a virtual private cluster running the Twister iterative MapReduce system</td>
+<td>india</td>
+<td>emi-F0B8194D</td>
+<td>jemitche</td>
+</tr>
+<tr class="row-even"><td>(Add your appliance here)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Average: Select ratingPoorOkayGoodGreatAwesome</p>
+<p>No votes yet</p>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

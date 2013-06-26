@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Delta &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Delta</a><ul>
+<li><a class="reference internal" href="#gpu-user-manual">GPU&nbsp;User Manual</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-mpi-gpu-program-on-the-delta-cluster">Running MPI/GPU program on the Delta cluster</a></li>
+<li><a class="reference internal" href="#running-programs-on-a-single-gpu">Running programs on a single GPU</a></li>
+<li><a class="reference internal" href="#c-means-clustering-using-cuda-on-gpu">C-means clustering using CUDA on GPU</a></li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/gpu.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="delta">
+<h1>Delta<a class="headerlink" href="#delta" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="gpu-user-manual">
+<h2>GPU&nbsp;User Manual<a class="headerlink" href="#gpu-user-manual" title="Permalink to this headline">¶</a></h2>
+<p>FutureGrid&#8217;s supercomputer, Delta&nbsp;(delta.futuregrid.org), is a 16-node
+GPU cluster running Red Hat Linux,&nbsp;with TORQUE&nbsp;(also called PBS) and
+Moab for job management, and Module to simplify application and
+environment configuration.&nbsp;Delta consists of 16 nodes with two 6-core
+Intel X5560 processors at 2.8GHz, 192 GB of&nbsp;DDR3 memory, and 15TB
+of&nbsp;RAID5 disk storage. Each node supports 2 nVIDIA Tesla C2070 GPUs
+with&nbsp;448 processing cores. For details on Delta&#8217;s hardware
+configuration, see&nbsp;the
+<a class="reference external" href="https://portal.futuregrid.org/hardware/delta">Delta</a>page.</p>
+<p>The FutureGrid <em>delta</em> cluster is accessible via&nbsp;a batch queue that
+is managed from india (india.futuregrid.org). To use delta
+interactively, first log into india:</p>
+<div class="highlight-python"><pre>ssh username@india.futuregrid.org</pre>
+</div>
+<p>Then, on india, the following command lets you use one of the delta
+compute nodes:</p>
+<div class="highlight-python"><pre>qsub -I -q delta myprg</pre>
+</div>
+<p>If you want to use delta with your job script, please use</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -q</span>
+</pre></div>
+</div>
+<div class="highlight-python"><pre>::</pre>
+</div>
+<blockquote>
+<div>delta</div></blockquote>
+<p>to indicate that you&#8217;d like to use this queue.</p>
+<p>For more details about how to manage queues with qsub, see the Delta
+manual page.</p>
+<p>Utilization of GPU resources&nbsp;on Delta:
+1) Utilize GPU&nbsp;node
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual/gpu/running-programs-single-gpu">&nbsp;Running Program on&nbsp;single GPU
+node</a>
+2) Utilize GPU cluster
+<a class="reference external" href="https://portal.futuregrid.org/manual/running-mpigpu-program-delta-cluster">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running MPI/CUDA program on the Delta
+cluster</a>
+3) Utilize GPU cloud
+4) Mixing utilization of&nbsp;GPU&nbsp;and CPU
+5) Non-trivial service or applications using&nbsp;GPU</p>
+</div>
+</div>
+<div class="section" id="running-mpi-gpu-program-on-the-delta-cluster">
+<h1>Running MPI/GPU program on the Delta cluster<a class="headerlink" href="#running-mpi-gpu-program-on-the-delta-cluster" title="Permalink to this headline">¶</a></h1>
+<p>GPUs provide the ability to use mathematical operations at a fraction
+of the cost and with higher performance than on the current generation
+of processors. FutureGrid provides the ability to test such an
+infrastructure as part of its delta cluster. Here, we provide a
+step-by-step guide on how to run a
+parallel&nbsp;matrix&nbsp;multiplication&nbsp;program using IntelMPI and CUDA on Delta
+machines. The MPI framework&nbsp;distributes the work&nbsp;among compute
+nodes,&nbsp;each of which use CUDA&nbsp;to&nbsp;execute&nbsp;the shared workload. We also
+provide the&nbsp;complete&nbsp;parallel
+matrix&nbsp;multiplication&nbsp;code&nbsp;using&nbsp;MPI/CUDA&nbsp;that&nbsp;has already been tested
+on Delta cluster in attachment.</p>
+<p><strong>MPI code: pmm_mpi.c</strong></p>
+<div class="highlight-python"><pre>#include &lt;mpi.h&gt;
+
+void invoke_cuda_vecadd();
+
+       int main(int argc, char *argv[])
+{
+          int rank, size;
+
+          MPI_Init (&amp;argc, &amp;argv); /* starts MPI */
+          MPI_Comm_rank (MPI_COMM_WORLD, &amp;rank); /* get current process id */
+          MPI_Comm_size (MPI_COMM_WORLD, &amp;size); /* get number of processes */
+          invoke_cuda_vecadd();  /* the cuda code */
+          MPI_Finalize();
+ return 0;
+}</pre>
+</div>
+<p><strong>CUDA code: dgemm_cuda.cu</strong></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>__global__ void cuda_vecadd(int *array1, int *array2, int
+*array3)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int index = blockIdx.x * blockDim.x + threadIdx.x;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; array3[index] = array1[index] + array2[index];
+}</p>
+<p>&nbsp;&nbsp;extern &#8220;C&#8221; void invoke_cuda_vecadd()
+&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMalloc((void**) &amp;devarray1, sizeof(int)*10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMalloc((void**) &amp;devarray2, sizeof(int)*10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMalloc((void**) &amp;devarray3, sizeof(int)*10);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMemcpy(devarray1, hostarray1, sizeof(int)*10,
+cudaMemcpyHostToDevice);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMemcpy(devarray2,&nbsp;hostarray2, sizeof(int)*10,
+cudaMemcpyHostToDevice);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cuda_vec_add&lt;&lt;&lt;1, 10&gt;&gt;&gt;(devarray1, devarray2, devarray3);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMemcpy(hostarray3, devarray3, sizeof(int)*10,
+cudaMemcpyDeviceToHost);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaFree(devarray1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaFree(devarray2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaFree(devarray3);
+}</p>
+<p>Note: Mixing MPI and CUDA code may cause problems during linking because
+of&nbsp;the&nbsp;difference between C and C++ calling conventions. The use of
+extern &#8220;C&#8221; around invoke_cuda_code which instructs the nvcc (a wrapper
+of c++) compiler to make that function callable from the C runtime.</p>
+<p><strong>Compiling the MPI/CUDA&nbsp;program:</strong></p>
+<p>Load the Modules
+&gt; module load IntelMPI # load Intel MPI
+&gt; module load Intel # load icc &gt; module load cuda # load cuda tools
+This will load the Intel MPI, the compiler, and the cuda tools. Next
+compile the code with</p>
+<p>&gt; nvcc -c&nbsp;dgemm_cuda.cu -o dgemm_cuda.o &nbsp; &gt; mpiicc
+-o&nbsp;pmm_mpi.c&nbsp;-o&nbsp;pmm_mpi.o
+&gt; mpiicc -o mpicuda&nbsp;pmm_mpi.o&nbsp;dgemm_cuda.o -lcudart&nbsp;-lcublas&nbsp;-L
+/opt/cuda/lib64 -I /opt/cuda/include</p>
+<p>Note:&nbsp;The CUDA compiler nvcc is used only to compile the CUDA&nbsp;source
+file, and the IntelMPI compiler&nbsp;mpiicc&nbsp;is&nbsp;used to compile the&nbsp;C&nbsp;code and
+do the linking
+&nbsp; <strong>Setting Up&nbsp;and Submitting MPI&nbsp;Jobs:</strong></p>
+<p>1.&nbsp;qsub -I -l nodes=4 -q delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get&nbsp;4 nodes from FG
+2.&nbsp;uniq /var/spool/torque/aux/399286.i136
+&gt;&nbsp;gpu_nodes_list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#create&nbsp;machine file list
+3. module load IntelMPI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# load Intel MPI
+4. module load Intel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # load&nbsp;icc
+5. module load&nbsp;cuda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # load&nbsp;cuda&nbsp;tools
+6.&nbsp;mpdboot&nbsp;-r ssh -f&nbsp;gpu_nodes_list -n&nbsp;4&nbsp;&nbsp;# will start an mpd ring
+on&nbsp;4 nodes including local host
+7. mpiexec -l -machinefile&nbsp;gpu_nodes_list -n&nbsp;4 ./mpicuda&nbsp;10000 1&nbsp;4
+#&nbsp;run&nbsp;mpi program&nbsp;using 4 nodes</p>
+<p><strong>Comparison between&nbsp;four&nbsp;implementations of&nbsp;sequential&nbsp;matrix
+multiplication on Delta:</strong></p>
+<p>&nbsp; &nbsp; <a href="#id1"><span class="problematic" id="id2">|image79|</span></a>
+<strong>References:</strong> <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip">Source Code
+Package</a>
+[1] High Performance Computing&nbsp;using&nbsp;CUDA,2009 User Group Conference
+[2]
+<a class="reference external" href="http://www.nvidia.com/content/global/global.php">http://www.nvidia.com/content/global/global.php</a></p>
+<p>To get source code: git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:futuregrid/GPU.git</p>
+<p>Compiling source code on Delta machine:</p>
+<div class="highlight-python"><pre>module load intelmpi
+module load intel
+module load cuda
+cd mpi_cuda_mkl
+make</pre>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="88%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attachment</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip">mpi_cuda_mkl.zip</a></td>
+<td>888.92 KB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="running-programs-on-a-single-gpu">
+<h1>Running programs on a single GPU<a class="headerlink" href="#running-programs-on-a-single-gpu" title="Permalink to this headline">¶</a></h1>
+<p><strong>Summary:</strong></p>
+<p>GPUs provide the ability&nbsp;to use mathematical operations at a
+fraction of the cost and with higher&nbsp;performance than on the
+current&nbsp;generation of processors. CUDA is a parallel programming model
+and software environment&nbsp;that leverages the parallel computational&nbsp;power
+of GPU&nbsp;for non-graphics computing in a fraction of the time required on
+a CPU. FutureGrid provides the ability to test&nbsp;such a&nbsp;hardware&nbsp;and
+software environment as part of its Delta cluster. Here, we illustrate
+some details of data-parallel computational model&nbsp;of CUDA, and&nbsp;then
+provide a step-by-step guide on how to&nbsp;make a parallel matrix
+multiplication program using CUDA. In the supplied attachment, we also
+provide the complete code that has already been tested on Delta node.</p>
+<p>&nbsp;&nbsp;&nbsp;<a href="#id3"><span class="problematic" id="id4">|image80|</span></a>
+Figure&nbsp;1:&nbsp;GPU&nbsp;Kernel and Thread&nbsp;model&nbsp;[1]</p>
+<p>&nbsp;<strong>CUDA Kernel&nbsp;and Threads:</strong>
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The fundamental part of the CUDA code&nbsp;is the kernel program.
+Kernel is&nbsp;the&nbsp;function that can&nbsp;be&nbsp;executed&nbsp;in parallel in&nbsp;the GPU
+device.&nbsp;A CUDA kernel&nbsp;is executed by&nbsp;an array of CUDA&nbsp;threads. All
+threads run the same code.&nbsp;Each thread has&nbsp;an ID that it uses to compute
+memory address&nbsp;and make a control decision.&nbsp;CUDA supports to run
+thousands of&nbsp;threads on the GPU.&nbsp;CUDA&nbsp;organizes&nbsp;thousands
+of&nbsp;threads&nbsp;into a hierarchy of a grid of thread blocks.&nbsp;A grid is a set
+of thread blocks that can be processed on the device&nbsp;in parallel. A
+thread block is a set of concurrent threads that can cooperate among
+themselves through a synchronization barrier and access to a shared
+memory space private to the block. Each thread is given a unique thread
+ID— thread.Idx within its thread block.&nbsp;Each thread block is given a
+unique block&nbsp;ID— block.Idx within its&nbsp;grid.</p>
+<p>&nbsp; <strong>CUDA Kernel&nbsp;code for Matrix Multiplication:</strong></p>
+<p>&nbsp;__global__ void&nbsp;matrixMul( float* C, float* A, float* B, int
+wA, int wB)
+&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Block index
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int bx = blockIdx.x;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int by = blockIdx.y;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Thread index
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int tx = threadIdx.x;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int ty = threadIdx.y;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; // Index of the first sub-matrix of A processed by the block
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int aBegin = wA * BLOCK_SIZE * by;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Index of the last sub-matrix of A processed by the block
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int aEnd&nbsp;&nbsp; = aBegin + wA - 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Step size used to iterate through the sub-matrices of A
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int aStep&nbsp; = BLOCK_SIZE;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Index of the first sub-matrix of B processed by the block
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int bBegin = BLOCK_SIZE * bx;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Step size used to iterate through the sub-matrices of B
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;bStep&nbsp; = BLOCK_SIZE * wB;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Csub is used to store the element of the block
+sub-matrix&nbsp;that is computed by the thread
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;Csub = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Loop over all the sub-matrices of A and B&nbsp;required to compute
+the block sub-matrix
+&nbsp;&nbsp;&nbsp;&nbsp; for (int a = aBegin, b = bBegin; a &lt;= aEnd; a += aStep, b +=
+bStep) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Declaration of the shared memory array As used to&nbsp;store
+the sub-matrix of A
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __shared__ float As[BLOCK_SIZE][BLOCK_SIZE];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Declaration of the shared memory array Bs used to&nbsp;store
+the sub-matrix of B
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __shared__ float Bs[BLOCK_SIZE][BLOCK_SIZE];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As[ty][tx] = A[a + wA * ty +
+tx];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bs[ty],[tx] = B[b + wB * ty +
+tx];
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Synchronize to make sure the matrices are
+loaded</p>
+<p>__syncthreads();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;multiply two matrices together;&nbsp;each thread computes&nbsp;one
+element&nbsp;&nbsp;of&nbsp;&nbsp;sub-matrix
+&nbsp;#pragma
+unroll
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int k = 0; k &lt; BLOCK_SIZE;
+++k)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Csub += As[ty][k]&nbsp;*
+Bs[k][tx];</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Synchronize to make sure that the preceding&nbsp;computation
+is done</p>
+<p>__syncthreads();</p>
+<p>}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Write the block sub-matrix to device memory; each thread
+only writes one&nbsp;element!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int c = wB * BLOCK_SIZE * by + BLOCK_SIZE *
+bx;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C[c + wB * ty + tx] =
+Csub;
+}</p>
+<p>&nbsp;&nbsp;<a href="#id5"><span class="problematic" id="id6">|image81|</span></a>
+Figure 2: GPU memory&nbsp;architecture&nbsp;[1][1]&nbsp;[1]</p>
+<p>&nbsp;<strong>CUDA Memory Architecture:</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;multiprocessors of the GPU&nbsp;device access a&nbsp;large global
+device memory for both gather and scatter operations. This&nbsp;memory is
+relatively slow because it does not provide caching. Shared memory is
+fast compared to device memory, and normally takes the same amount of
+time as required to access registers. Shared memory is “local” to each
+multiprocessor unlike device memory and allows more efficient local
+synchronization. It is divided into many parts. Each thread block within
+a multiprocessor accesses its own part of shared memory, and this part
+of shared memory is not accessible by any other thread block of this
+multiprocessor or of some other multiprocessor. All threads within a
+thread block that have the same lifetime as the block share this part&nbsp;of
+memory for both read and write operations. To declare variables in
+shared memory, __shared__ qualifier is used, and to declare in
+global memory, __device__ qualifier is used.</p>
+<p><strong>CPU code invoke&nbsp;CUDA&nbsp;kernel code:</strong></p>
+<p>void&nbsp;invoke_matrixMul(int size){</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int devID;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaDeviceProp props;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaGetDevice(&amp;devID));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaGetDeviceProperties(&amp;props, devID));</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int block_size = (props.major &lt; 2) ? 16 : 32;
+&nbsp;&nbsp;&nbsp; unsigned int uiWA, uiHA,&nbsp;uiWB, uiHB, uiWC,&nbsp;uiHC;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uiWA = uiHA=&nbsp;uiWB =&nbsp;uiHB =&nbsp;uiWC =&nbsp;uiHC;</p>
+<p>&nbsp;&nbsp;&nbsp; // allocate host memory for matrices A and B
+&nbsp;&nbsp;&nbsp; unsigned int size_A = uiWA * uiHA;
+&nbsp;&nbsp;&nbsp; unsigned int mem_size_A = sizeof(float) * size_A;
+&nbsp;&nbsp;&nbsp; float* h_A = (float*)malloc(mem_size_A);
+&nbsp;&nbsp;&nbsp; unsigned int size_B = uiWB * uiHB;
+&nbsp;&nbsp;&nbsp; unsigned int mem_size_B = sizeof(float) * size_B;
+&nbsp;&nbsp;&nbsp; float* h_B = (float*)malloc(mem_size_B);</p>
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong>// initialize host memory
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; srand(2012);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; randomInit(h_A, size_A);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; randomInit(h_B, size_B);</p>
+<p>&nbsp;&nbsp;&nbsp; // allocate device memory
+&nbsp;&nbsp;&nbsp; float* d_A, *d_B, *d_C;
+&nbsp;&nbsp;&nbsp; unsigned int size_C = uiWC * uiHC;
+&nbsp;&nbsp;&nbsp; unsigned int mem_size_C = sizeof(float) * size_C;</p>
+<p>&nbsp;&nbsp;&nbsp; // allocate host memory for the result
+&nbsp;&nbsp;&nbsp; float* h_C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = (float*) malloc(mem_size_C);
+&nbsp;&nbsp;&nbsp; float* h_CUBLAS = (float*)
+malloc(mem_size_C);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMalloc((void**) &amp;d_A,
+mem_size_A));
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMalloc((void**) &amp;d_B,
+mem_size_B));
+&nbsp;&nbsp;&nbsp; // copy host memory to
+device
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMemcpy(d_A, h_A, mem_size_A,
+cudaMemcpyHostToDevice) );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMemcpy(d_B, h_B, mem_size_B,
+cudaMemcpyHostToDevice) );
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkCudaErrors(cudaMalloc((void**) &amp;d_C,
+mem_size_C));
+&nbsp;&nbsp;&nbsp; // setup execution
+parameters
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dim3 threads(block_size,
+block_size);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dim3 grid(uiWC / threads.x, uiHC /
+threads.y);</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; //Performs warmup operation using matrixMul CUDA
+kernel
+&nbsp;&nbsp;&nbsp; if (block_size 16) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; matrixMul&lt;16&gt;&lt;&lt;&lt; grid, threads &gt;&gt;&gt;(d_C, d_A,
+d_B, uiWA, uiWB);
+&nbsp;&nbsp;&nbsp; } else
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; matrixMul&lt;32&gt;&lt;&lt;&lt; grid, threads &gt;&gt;&gt;(d_C, d_A, d_B,
+uiWA, uiWB);</p>
+<p>}</p>
+<p>cudaDeviceSynchronize();</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;// clean up
+memory</p>
+<p>free(h_A);</p>
+<p>free(h_B);
+&nbsp;&nbsp;&nbsp; free(h_C);
+&nbsp;}</p>
+<p><strong>References:</strong>
+[1]&nbsp;High&nbsp;Performance&nbsp;Computing&nbsp;with&nbsp;CUDA,&nbsp;2009&nbsp;User&nbsp;Group&nbsp;Conference
+[2]&nbsp;<a class="reference external" href="http://www.nvidia.com/content/global/global.php">http://www.nvidia.com/content/global/global.php</a></p>
+<p>source&nbsp;code:&nbsp;git clone&nbsp;<a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:futuregrid/GPU.git</p>
+<p>Usage:
+module load cuda
+module load&nbsp;intel
+&nbsp;&nbsp;nvcc&nbsp;-c matrixMul.cu -L/opt/cuda/lib64&nbsp;-lcudart</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="89%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attachment</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/matrixMul_0.zip">matrixMul.zip</a></td>
+<td>3.13 KB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="c-means-clustering-using-cuda-on-gpu">
+<h1>C-means clustering using CUDA on GPU<a class="headerlink" href="#c-means-clustering-using-cuda-on-gpu" title="Permalink to this headline">¶</a></h1>
+<p><strong>Summary:</strong>
+The computational&nbsp;demands for multivariate clustering&nbsp;are
+increasing&nbsp;rapidly, and therefore&nbsp;processing large data sets is
+time&nbsp;consuming on&nbsp;a single CPU. To address the computational demands,&nbsp;we
+implemented the cmeans&nbsp;clustering&nbsp;algorithm, using&nbsp;the&nbsp;NVIDIA&#8217;s CUDA&#8217;s
+framework and the latest GPU&nbsp;devices on the Delta machine.</p>
+<p><strong>Fuzzy C-Means Clustering</strong>
+&nbsp;Fuzzy c-means&nbsp;is an algorithm&nbsp;of&nbsp;clustering which allows one&nbsp;element
+to belong to two or more clusters with&nbsp;different probability.&nbsp;This
+method&nbsp;is frequently used in multivariate clustering.&nbsp;This algorithm&nbsp;is
+based on minimization of the following objective function: <a href="#id7"><span class="problematic" id="id8">|image82|</span></a>
+Here, M&nbsp;is a real number greater than 1, N is the number&nbsp;of&nbsp;elements,
+Uij is the value&nbsp;of membership of&nbsp;Xi&nbsp;in cluster Cj,&nbsp; xi is the ith of
+d-dimensional measured data, cj is the d-dimension center of the
+cluster, and ||Xi-Cj|| is any norm expressing the similarity between
+any measured data and the center. &nbsp;Fuzzy partitioning is&nbsp;performed
+through an iterative optimization of the objective function shown above.
+Within each&nbsp;iteration,&nbsp;the algorithm&nbsp;updates&nbsp;the&nbsp;membership&nbsp;uij and the
+cluster centers cj by:
+<a href="#id9"><span class="problematic" id="id10">|image83|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |image84|</span></a>
+This iteration will stop when <a href="#id11"><span class="problematic" id="id12">|image85|</span></a>, where&nbsp;&#8216;e&#8217;&nbsp;is a termination
+criterion between 0 and 1, and k represents the iteration steps.
+<strong>**Algorithm of CUDA C-means:</strong></p>
+<blockquote>
+<div>1**) Copy data to GPU</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>DistanceMatrix kernel</li>
+<li>MembershipMatrix kernel</li>
+<li>UpdateCenters kernel, copy partial centers to host from GPUs</li>
+<li>ClusterSizes kernel, copy cluster sizes to host from each GPU</li>
+</ol>
+<p>6) Aggregate partial cluster centers and reduce
+10) Compute difference between current cluster centers and previous
+iteration.
+11) Compute cluster distance&nbsp;and&nbsp;memberships using final centers.</p>
+<p>&nbsp;&nbsp;<strong>&nbsp;&nbsp;CUDA kernels of C-means program:</strong>
+1) DistanceMatrix
+2)&nbsp;MembershipMatrix
+3)&nbsp;UpdateCetners
+4)&nbsp;ClusterSizes</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>CUDA&nbsp;C-means performance on Delta:</strong>
+<a href="#id13"><span class="problematic" id="id14">|image86|</span></a>
+Figure&nbsp;1:&nbsp;C-means performance&nbsp;using GPU and&nbsp;CPU
+&nbsp;&nbsp;Reference:
+&nbsp;&nbsp;[1]
+<a class="reference external" href="http://en.wikipedia.org/wiki/Cluster_analysis">http://en.wikipedia.org/wiki/Cluster_analysis</a>
+&nbsp;&nbsp;[2] Scalable Data Clustering using GPU&nbsp;Clusters,&nbsp; Andrew
+Pangborn,&nbsp;Gregor von Laszewski</p>
+<p>Average: Select ratingPoorOkayGoodGreatAwesome</p>
+<p>Your rating: None Average: 4 (1 vote)</p>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

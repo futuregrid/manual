@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Nimbus Phantom &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Nimbus Phantom</a></li>
+<li><a class="reference internal" href="#precip-pegasus-repeatable-experiments-for-the-cloud-in-python">Precip - Pegasus Repeatable Experiments for the Cloud in Python</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#api">API</a></li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#hello-world">Hello World</a></li>
+<li><a class="reference internal" href="#resources-from-mulitple-infrastructures">Resources from mulitple infrastructures</a></li>
+<li><a class="reference internal" href="#setting-up-a-condor-pool-and-run-a-pegasus-workflow">Setting up a Condor pool and run a Pegasus workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/nimbus-phantom.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="nimbus-phantom">
+<h1>Nimbus Phantom<a class="headerlink" href="#nimbus-phantom" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">Nimbus Phantom is a hosted service, running on FutureGrid, that makes</div>
+</div>
+<p>it easy to leverage on-demand resources provided by infrastructure
+clouds. Phantom allows the user to deploy a set of virtual machines over
+multiple private, community, and commercial clouds and then
+automatically grows or shrinks this set based on policies defined by the
+user. This elastic set of virtual machines can then be used to implement
+scalable and highly available services. An example of such service is a
+caching service that stands up more workers on more resources as the
+number of requests to the service increases. Another example is a
+scheduler that grows its set of resources as demand grows.
+|
+Currently Phantom works with all FutureGrid Nimbus and OpenStack
+clouds as well as Amazon and the XSEDE wispy cloud (the only XSEDE cloud
+for now). A user can access it via two types of clients: an easy to use
+web application and a scripting client. The scripting client is the boto
+autoscale client as Phantom currently implements Amazon Autscaling API –
+so you can think of it as Amazon Autoscale for FutureGrid clouds that
+also allows for cloudburst to XSEDE and commercial clouds and is easy to
+extend with your own policies and sensors.
+|
+The simplest scenario for using Phantom is as a gateway for deploying
+and monitoring groups of virtual machines spread over multiple
+FutureGrid clouds. In a more complex scenario you can use it to
+cloudburst from FutureGrid clouds to Amazon. Finally, you can use it to
+explore policies that will automate cloudbursting and VM allocations
+between multiple clouds.
+|
+For more information and/or to use the service go to
+<a class="reference external" href="http://www.nimbusproject.org/phantom">www.nimbusproject.org/phantom</a>.
+It should take no more than 10-15 minutes to start your own VMs.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://phantom.nimbusproject.org/accounts/login/?next=/">Phantom web
+interface</a></li>
+<li><a class="reference external" href="http://www.nimbusproject.org/files/keahey_wcs_ocs_2012.pdf">Phantom
+publication</a></li>
+</ul>
+</div>
+<div class="section" id="precip-pegasus-repeatable-experiments-for-the-cloud-in-python">
+<h1>Precip - Pegasus Repeatable Experiments for the Cloud in Python<a class="headerlink" href="#precip-pegasus-repeatable-experiments-for-the-cloud-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Precip is a flexible exeperiment management API for running experiments
+on clouds. Precip was developed for use on FutureGrid infrastructures
+such as OpenStack, Eucalyptus (&gt;=3.2), Nimbus, and at the same time
+commercial clouds such as Amazon EC2. The API allows you to easily
+provision resources, which you can then can run commands on and copy
+files to/from subsets of instances identified by tags. The goal of the
+API is to be flexible and simple to use in Python scripts to control
+your experiments.</p>
+<p>The API does not require any special images, which makes it easy to get
+going. Any basic Linux image will work. More complex images can be used
+if your experiment requires so, or you can use the experiment API to run
+bootstrap scripts on the images to install/configure required software.</p>
+<p>A concept which simplfies interacting with the API is instance tagging.
+When you start an instance, you can add arbitrary tags to it. The
+instance also gets a set of default tags. API methods such as running a
+remote command, or copying files, all use tags for specify which
+instances you want to target.</p>
+<p>Precip also handles ssh keys and security groups automatically. This is
+done to make sure the experiment management is not interfering with your
+existing cloud setup. The first time you use Precip, a directory will be
+created called ~/.precip. Inside this directory, a ssh keypair will be
+created and used for accessing instances. On clouds which supports it,
+the keypair is automatically registered as &#8216;precip&#8217;, and a &#8216;precip&#8217;
+security group is created. If your experiement requires more ports to be
+open you can use the cloud interface to add those ports to the precip
+security group.</p>
+<p>Precip is a fairly new API, and if you have questions or suggestions for
+improvements, please contact
+<a class="reference external" href="mailto:pegasus-support&#37;&#52;&#48;isi&#46;edu">pegasus-support<span>&#64;</span>isi<span>&#46;</span>edu</a></p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">If you want to use the India or Sierra FutureGrid resources to manage</div>
+</div>
+<p>your experiment, Precip is available on the interactive logins nodes via
+modules: module load precip/0.1
+|
+You can also install Precip on your own machine. Prerequisites are
+the Paramiko and Boto Python modules. The Python source package and RPMs
+are available at:
+<a class="reference external" href="http://pegasus.isi.edu/static/precip/software/">http://pegasus.isi.edu/static/precip/software/</a></p>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>provision(image_id, instance_type=&#8217;m1.small&#8217;, count=1, tags=None)</strong></dt>
+<dd><p class="first">Provision a new instance. Note that this method starts the
+provisioning cycle, but does not block for the instance to finish
+booting. For blocking on instance creation/booting, see wait()</p>
+<p>Parameters:</p>
+<ul class="last simple">
+<li><strong>image_id</strong> - the id of the image to instanciate</li>
+<li><strong>instance_type</strong> - the type of instance. This is infrastructure
+specific, but usually follows the Amazon EC2 model with m1.small,
+m1.large, and so on.</li>
+<li><strong>count</strong> - number of instances to create</li>
+<li><strong>tags</strong> - these are used to manipulate the instance later. Use
+this to create logical groups of your instances.</li>
+</ul>
+</dd>
+<dt><strong>wait(tags=[], timeout=600)</strong></dt>
+<dd><p class="first">Barrier for all instances matching the tags argument. This method
+will block until the instances have finish booting and are
+accessible via their external hostnames.</p>
+<p>Parameters:</p>
+<ul class="last simple">
+<li><strong>tags</strong> - tags specifying the subset of instances to block on.
+The default value is [] which means wait for all instances.</li>
+<li><strong>timeout</strong> - timeout in seconds for the instances to boot. If
+the timeout is reached, an ExperimentException is raised. The
+default is 600 seconds.</li>
+</ul>
+</dd>
+<dt><strong>deprovision(tags)</strong></dt>
+<dd><p class="first">Deprovisions (terminates) instances matching the tags argument</p>
+<p>Parameters:</p>
+<ul class="last simple">
+<li><strong>tags</strong> - tags specifying the subset of instances to
+deprovision.</li>
+</ul>
+</dd>
+<dt><strong>list(tags)</strong></dt>
+<dd><p class="first">Returns a list of details about the instances matching the tags. The
+details include instance id, hostnames, and tags.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><strong>tags</strong> - tags specifying the subset of instances to give
+information on. If you want details on all current instances, use
+[].</li>
+</ul>
+<p>Returns:</p>
+<ul class="last simple">
+<li>List of dictionaries, one for each instance.</li>
+</ul>
+</dd>
+<dt><strong>get_public_hostnames(tags)</strong></dt>
+<dd><p class="first">Provides a list of public hostnames for the instances matching the
+tags. The public hostnames can be provided to other instances in
+order to let the instances know about eachother.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><strong>tags</strong> - tags specifying the subset of instances.</li>
+</ul>
+<p>Returns:</p>
+<ul class="last simple">
+<li>A list of public hostnames</li>
+</ul>
+</dd>
+<dt><strong>get_private_hostnames(tags)</strong></dt>
+<dd><p class="first">Provides a list of private hostnames for the instances matching the
+tags. The private hostnames can be provided to other instances in
+order to let the instances know about eachother.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><strong>tags</strong> - tags specifying the subset of instances.</li>
+</ul>
+<p>Returns:</p>
+<ul class="last simple">
+<li>A list of private hostnames</li>
+</ul>
+</dd>
+<dt><strong>get(tags, remote_path, local_path, user=&#8221;root&#8221;)</strong></dt>
+<dd><p class="first">Transfers a file from a set of remote machines matching the tags,
+and stores the file locally. If more than one instance matches the
+tags, an instance id will be appended to the local_path.</p>
+<p>Parameters:</p>
+<ul class="last simple">
+<li><strong>tags</strong> - these are used to manipulate the instance later. Use
+this to create logical groups of your instances.</li>
+<li><strong>remote_path</strong> - the path of the file on the remote instance</li>
+<li><strong>local_path</strong> - the local path to tranfer to</li>
+<li><strong>user</strong> - remote user. If not specified, the default is &#8216;root&#8217;</li>
+</ul>
+</dd>
+<dt><strong>put(tags, local_path, remote_path, user=&#8221;root&#8221;)</strong></dt>
+<dd><p class="first">Transfers a local file to a set of remote machines matching the
+tags.</p>
+<p>Parameters:</p>
+<ul class="last simple">
+<li><strong>tags</strong> - these are used to manipulate the instance later. Use
+this to create logical groups of your instances.</li>
+<li><strong>local_path</strong> - the local path to tranfer from</li>
+<li><strong>remote_path</strong> - the path on the remote instance to store the
+file as</li>
+<li><strong>user</strong> - remote user. If not specified, the default is &#8216;root&#8217;</li>
+</ul>
+</dd>
+<dt><strong>run(tags, cmd, user=&#8221;root&#8221;, check_exit_code=True)</strong></dt>
+<dd><p class="first">Runs a command on the instances matches the tags. The commands are
+run in series, on one instance after the other.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><strong>tags</strong> - these are used to manipulate the instance later. Use
+this to create logical groups of your instances.</li>
+<li><strong>cmd</strong> - the command to run</li>
+<li><strong>user</strong> - remote user. If not specified, the default is &#8216;root&#8217;.
+If you need to run commands as another user, you will have to
+make sure that user accepts the ssh key in ~/.precip/</li>
+<li><strong>check_exit_code</strong> - If set to True (default), commands
+returning non-zero exit codes will result in a
+ExperimentException being raised.</li>
+</ul>
+<p>Returns:</p>
+<ul class="last simple">
+<li>A list of lists, containing exit_code[], stdout[] and stderr[]
+for the commands run</li>
+</ul>
+</dd>
+</dl>
+<p><strong>copy_and_run(tags, local_script, args=[], user=&#8221;root&#8221;,
+check_exit_code=True)</strong></p>
+<blockquote>
+<div><p>Copies a script from the local machine to the remote instances and
+executes the script. The script is run in series, on one instance
+after the other.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><strong>tags</strong> - these are used to manipulate the instance later. Use
+this to create logical groups of your instances.</li>
+<li><strong>local_script</strong> - the local script to run</li>
+<li><strong>args</strong> - arguments for the script</li>
+<li><strong>user</strong> - remote user. If not specified, the default is &#8216;root&#8217;.
+If you need to run commands as another user, you will have to
+make sure that user accepts the ssh key in ~/.precip/</li>
+<li><strong>check_exit_code</strong> - If set to True (default), commands
+returning non-zero exit codes will result in a
+ExperimentException being raised.</li>
+</ul>
+<p>Returns:</p>
+<ul class="simple">
+<li>A list of lists, containing exit_code[], stdout[] and stderr[]
+for the commands run</li>
+</ul>
+</div></blockquote>
+<p>The basic methods above are standard across all the Cloud
+infrastructures. What is different is the constructors as each
+infrastructure handles initialization a little bit different. For
+example, to create a new OpenStack using the EC2_* environment
+provided automatically by FutureGrid:</p>
+<p>i For Amazon EC2, you have to specify region, endpoint, and
+access/secret keys. Note that it is not required to use environment
+variables for your credentials, but seperating the crenditals from the
+code prevents the credentials from being check in to source control
+systems.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hello-world">
+<h3>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="resources-from-mulitple-infrastructures">
+<h3>Resources from mulitple infrastructures<a class="headerlink" href="#resources-from-mulitple-infrastructures" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="setting-up-a-condor-pool-and-run-a-pegasus-workflow">
+<h3>Setting up a Condor pool and run a Pegasus workflow<a class="headerlink" href="#setting-up-a-condor-pool-and-run-a-pegasus-workflow" title="Permalink to this headline">¶</a></h3>
+<p>This is a more complex example in which a small Condor pool is set up
+and then a Pegasus workflow is run and benchmarked. The Precip script is
+similar to what we have seen before, but it has two groups of instances,
+one master acting as the Condor central manager, and a set of Condor
+worker nodes.</p>
+<p>We also need a bootstrap.sh which sets up the instances:</p>
+</div>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

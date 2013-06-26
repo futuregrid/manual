@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Introduction &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="5. Getting Started" href="fgmanual.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="summary-executive.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="title.html">1.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">2. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">3. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">3.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">3.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">3.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">3.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#executive-summary">4.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-and-account-application">4.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#services">4.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware">4.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#support">4.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-1-create-a-futuregrid-portal-account">5.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-2-create-a-new-project-or-join-an-existing-one">5.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-3-upload-your-ssh-public-key-s">5.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid">6. Accessing FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#account-management-service">6.1. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-reset-or-adding-new-keys">6.2. Key Reset or Adding new Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#account-creation">7. Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#creating-an-hpc-account">7.1. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-a-ssh-key">7.2. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#nimbus-eucalyptus-openstack">7.3. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">7.4. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">8. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">8.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">8.2. A FutureGrid&nbsp;User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">8.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">8.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">8.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hardware">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#storage-resources">9.2. Storage Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#status">9.3. Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#maintenance">9.4. Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id1">10. Compute Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compute-networks">10.1. Compute Networks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">11. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#bravo">12. Bravo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#delta">13. Delta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#foxtrot">14. Foxtrot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hotel">15. Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#india">16. India</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#sierra">17. Sierra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#xray">18. Xray</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#network">19. Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#futuregrid-network-impairments-device-nid">20. FutureGrid Network Impairments Device (NID)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#storage">21. Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpss-from-futuregrid">22. Using HPSS from FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id6">23. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#accessing-futuregrid-resources-via-ssh">24. Accessing FutureGrid resources via SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#requirement-for-windows-users">25. Requirement for Windows Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#instructions-for-both-windows-and-unix-users">26. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-ssh-key">26.1. Generate SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#check-your-ssh-key">26.2. Check your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#copy-the-content-of-your-public-key">26.3. Copy the content of your public key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#upload-the-key-to-the-futuregrid-portal">26.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key">26.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#testing-your-ssh-key-on-hotel">26.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#hpc-services">27. HPC Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-hpc-services-on-futuregrid">28. Using HPC Services on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#accessing-systems">28.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#filesystem-layout">28.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#modules">28.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#managing-applications-with-torque">28.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#message-passing-interface-mpi">28.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#mpi-libraries">28.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#compiling-mpi-applications">28.7. Compiling MPI&nbsp;Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-mpi-applications">28.8. Running MPI&nbsp;Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#log-in-to-hpc-services">29. Log in to HPC services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#generating-ssh-keys-for-futuregrid-access">30. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#key-generation">31. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#generate-public-private-key-pair">31.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#list-the-result">31.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#add-or-replace-passphrase-for-an-already-generated-key">31.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#capture-the-public-key-for-futuregrid">31.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#key-management">31.5. 5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#resetting-the-ssh-key">31.6. 6. Resetting the SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#i-still-can-not-access-fg-resources">31.7. 7. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#working-with-hpc-job-services">32. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#running-queued-jobs-as-part-of-the-hpc-services">32.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#monitoring-your-job">32.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#examining-your-job-output">32.3. Examining Your Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id7">33. Xray</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iu-cray-user-manual">33.1. IU Cray User Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#id8">34. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">35. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">36. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">37. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">38. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">39. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">39.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">39.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">39.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">40. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">40.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">40.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">40.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">40.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">40.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">40.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">41. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">42. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">42.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">42.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">43. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">43.1. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">43.2. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">43.3. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">43.4. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">43.5. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">43.6. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">43.7. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">43.8. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">43.9. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">43.10. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">44. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">4. Introduction</a><ul>
+<li><a class="reference internal" href="#executive-summary">4.1. Executive Summary</a></li>
+<li><a class="reference internal" href="#project-and-account-application">4.2. Project and Account Application</a></li>
+<li><a class="reference internal" href="#services">4.3. Services</a></li>
+<li><a class="reference internal" href="#hardware">4.4. Hardware</a></li>
+<li><a class="reference internal" href="#support">4.5. Support</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="summary-executive.html"
+         title="previous chapter">&laquo; &lt;no title&gt;</a></li>
+  <li><a href="fgmanual.html"
+         title="next chapter">5. Getting Started &raquo;</a></li>
+            
+            
+              <li>
+  <a href="_sources/introduction.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="introduction">
+<h1>4. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Introduction. FIx all hyperlinks</p>
+</div>
+<div class="section" id="executive-summary">
+<h2>4.1. Executive Summary<a class="headerlink" href="#executive-summary" title="Permalink to this headline">¶</a></h2>
+<p>The&nbsp;FutureGrid Project (for citation see Section <a class="reference internal" href="preface.html#my-how-to-cite"><em>Citation for Publications</em></a>.) makes it possible for researchers to tackle complex research challenges in computer science related to the use and security of grids and clouds.  These include topics ranging from authentication, authorization, scheduling, virtualization, middleware design, interface design, and cybersecurity, to the optimization of grid-enabled and cloud-enabled computational schemes for researchers in astronomy, chemistry, biology, engineering, atmospheric science and epidemiology. The project team provides a significant new experimental computing grid and cloud test-bed, named FutureGrid, to the research community, together with user support for third-party researchers conducting experiments on FutureGrid.</p>
+<p>The test-bed makes it possible for researchers to conduct experiments by submitting an experiment plan that is then executed via a sophisticated workflow engine, preserving the provenance and state information necessary to allow reproducibility.</p>
+<p>The test-bed also includes a geographically distributed set of heterogeneous computing systems, a data management system that holds both metadata and a growing library of software images, and a dedicated network allowing isolatable, secure experiments. The test-bed supports virtual machine-based environments, as well as native operating systems for experiments aimed at minimizing overhead and maximizing performance.  The project partners integrate existing open-source software packages to create an easy-to-use software environment that supports the instantiation, execution, and recording of grid and cloud computing experiments.</p>
+<p>One of the goals of the project is to understand the behavior and utility of cloud computing approaches. Researchers are able to measure the overhead of cloud technology by requesting linked experiments on both virtual and bare-metal systems. FutureGrid enables US scientists to develop and test new approaches to parallel, grid, and cloud computing, and compare and collaborate with international efforts in this area. The FutureGrid project provides an experimental platform that accommodates batch, grid, and cloud computing, allowing researchers to attack a range of research questions associated with optimizing, integrating and scheduling the different service models. The FutureGrid also provides a test-bed for middleware development and, because of its private network, allows middleware researchers to do controlled experiments under different network conditions and to test approaches to middleware that include direct interaction with the network control layer. Another component of the project is the development of benchmarks appropriate for grid computing, including workflow-based benchmarks derived from applications in astronomy, bioinformatics, seismology, and physics.</p>
+<p>The FutureGrid forms part of NSF&#8217;s high-performance cyberinfrastructure. It increases the capability of the XSEDE to support innovative computer science research requiring access to lower levels of the grid software stack, the networking software stack, and to virtualization and workflow orchestration tools.</p>
+<p>Education and broader outreach activities include the dissemination of curricular materials on the use of FutureGrid, pre-packaged FutureGrid virtual machines configured for particular course modules, and educational modules based on virtual appliance networks and social networking technologies that focus on education in networking, parallel computing, virtualization and distributed computing. The project advances education and training in distributed computing at academic institutions with less diverse computational resources. It does this through the development of instructional resources that include preconfigured environments that provide students with sandboxed virtual clusters. These can be used for teaching courses in parallel, cloud, and grid computing. Such resources also provide academic institutions with a simple opportunity to experiment with cloud technology to see if such technology can enhance their campus resources. The FutureGrid project leverages the fruits of several software development projects funded by the National Science Foundation and the Department of Energy.</p>
+</div>
+<div class="section" id="project-and-account-application">
+<h2>4.2. Project and Account Application<a class="headerlink" href="#project-and-account-application" title="Permalink to this headline">¶</a></h2>
+<p>FutureGrid allows you to easily create a project and use FG resources.
+All you need to do is to create a portal account and apply for a
+project. Detailed information is provided in the
+<a class="reference external" href="https://portal.futuregrid.org/manual/access">manual</a>.</p>
+</div>
+<div class="section" id="services">
+<h2>4.3. Services<a class="headerlink" href="#services" title="Permalink to this headline">¶</a></h2>
+<p>Currently, FutureGrid provides a number of different services. However, not all services
+are offerd on all of the FG resources. To find
+out how the machines are&nbsp;divided, we provide a convenient&nbsp;<a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">status
+monitor</a>.
+The following services are most popular with our users</p>
+<dl class="docutils">
+<dt>OpenStack:</dt>
+<dd>OpenStack is a collection of open source components to deliver
+public and private clouds. These components currently include
+OpenStack Compute (called Nova), OpenStack Object Storage (called
+Swift), and OpenStack Image Service (called Glance). OpenStack is
+a new effort and has received considerable momentum due to its
+openness and the support of companies. Users can find more details
+in the <a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">OpenStack&nbsp;Tutorial</a>.</dd>
+<dt>Nimbus:</dt>
+<dd>Nimbus is an open-source service package that allows users to run
+virtual machines on FutureGrid hardware. You can easily upload
+your own VM image or customize an image provided by us. When you
+boot a VM, it is assigned a public IP address (and/or an optional
+private address); you are authorized to log in as root via
+SSH. You can then run services, perform computations, and
+configure the system as desired. After using and configuring the
+VM, you can save the modified VM image back to the Nimbus image
+repository. Users can find more details in the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Nimbus tutorial</a>.</dd>
+<dt>Eucalyptus:</dt>
+<dd>Eucalyptus is an open-source software platform that implements
+IaaS-style cloud computing. Eucalyptus provides a Amazon Web
+Services (AWS) compliant EC2-based web service interface for
+interacting with the Cloud service. Eucalyptus also provides
+services such as the AWS-compliant Walrus and a user interface for
+managing users and images.  Users can find more details in the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/eucalyptus">Eucalyptus tutorial</a>.</dd>
+</dl>
+<dl class="docutils">
+<dt>High Performance Computing:</dt>
+<dd>High Performance Computing can be defined as the application of
+supercomputing techniques to solve computational problems that are too
+large for standard computers or would take too much time. This is one of
+the more important features that the scientific community needs&nbsp;to
+achieve their projects. Thus, FutureGrid provides users the possibility
+of executing their parallel applications or using scientific software. A
+guide to accessing HPC services can be found in the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual/access">Accessing
+FutureGrid</a>&nbsp;and&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual/hpcservices">HPC
+services</a>&nbsp;sections&nbsp;of
+the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual">User Manual</a>.</dd>
+<dt>Storage:</dt>
+<dd>Users can find different storage systems to cover a wide number of
+purposes. In the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual/services/storage">Storage
+Manual</a>, users
+can find the information needed to get access and learn the usage.&nbsp;A
+summary of the external storage systems available can be found at:
+<a class="reference external" href="http://portal.futuregrid.org/manual/hardware">http://portal.futuregrid.org/manual/hardware</a>.</dd>
+<dt>Information Services:</dt>
+<dd>These services gather the information of the different elements that
+make up FutureGrid to&nbsp;provide accurate and complete knowledge of the
+computational environment.&nbsp;This information is presented using different
+web portals:&nbsp;<a class="reference external" href="https://portal.futuregrid.org/status">General System
+Status</a>,&nbsp;<a class="reference external" href="http://inca.futuregrid.org/">Cloud, Cluster,
+Services Status</a>&nbsp;and&nbsp;<a class="reference external" href="http://noc.futuregrid.org/">Network
+Status</a>.</dd>
+</dl>
+</div>
+<div class="section" id="hardware">
+<h2>4.4. Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<p>FutureGrid includes a geographically distributed set of heterogeneous
+computing systems, data management systems, and dedicated networks.
+These resources are provided by different institutions across the United
+States. Detailed information on the different sites can be
+found&nbsp;<a class="reference external" href="https://portal.futuregrid.org/hardware">here</a>&nbsp;and in
+the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual">User Manual</a>.</p>
+</div>
+<div class="section" id="support">
+<h2>4.5. Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
+<p>The best place to start obtaining information about FutureGrid is to
+visit our expanding&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual">FutureGrid User
+Manual</a>, of which this page is
+a part. To obtain support for FutureGrid via the portal [todo]
+which includes a collection of FAQs about FutureGrid. We also provide
+some user&nbsp;<a class="reference external" href="https://portal.futuregrid.org/forum">Forums</a>. Please
+note that some information may already be outdated. We try our best,
+however, to keep the manual and the Knowledge Base as up to date as
+possible.</p>
+<p>If you need help or observe things that are not correct, see
+<a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.</p>
+<dl class="docutils">
+<dt>Manual:</dt>
+<dd><p class="first">We are creating gradually a manual for FutureGrid. This manual contains
+contributions from the FG staff and FG users. The link for the manual is</p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/manual">https://portal.futuregrid.org/manual</a></li>
+</ul>
+<p>In case you have a useful contribution, you can simply comment on each
+page, or if you like to create a chapter to be included, please create a
+community page.&nbsp;&nbsp;A community page can be created by clicking on the
+following link</p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/node/add/page-community">Create a
+Community&nbsp;Page</a></li>
+</ul>
+<p>Community pages can also be used to report on elaborate experiment
+results. Once you are done with your contribution, please send a ticket
+to us so we can make it more prominently visible in the portal:</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a></li>
+</ul>
+</dd>
+<dt>User Forum:</dt>
+<dd><p class="first">Based on advice from other projects we have established a number of user
+forums that are available while following this link</p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/forum">User Forum</a></li>
+</ul>
+<p class="last">To post to the forum, you must create a portal account.</p>
+</dd>
+<dt>Help Ticketing System:</dt>
+<dd><p class="first">To create a ticket for FutureGrid support, please use out ticket form
+from the web page at</p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a></li>
+</ul>
+<p>in which you describe problems like feature request, or bug report. A
+ticket will be automatically generated and you&#8217;ll receive an auto-reply
+mail with the ticket number for further reference. FutureGrid staff will
+be looking into the ticket and working on it. You will receive updates
+and resolution through email upon the completion of the investigation.
+Please be aware that feedback may not be instantaneous. Tickets you have
+submitted can be seen at</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/tickets">https://portal.futuregrid.org/tickets</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
