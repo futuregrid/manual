@@ -4,8 +4,8 @@ Preface
  
 FutureGrid is a project led by Indiana University and funded by the
 National Science Foundation (NSF) to develop a high-performance grid
-test bed that will allow scientists to collaboratively develop and test
-innovative approaches to parallel, grid, and cloud computing.
+test bed that will allow scientists to collaboratively develop and
+test innovative approaches to parallel, grid, and cloud computing.
  FutureGrid will provide the infrastructure to researchers that allows
 them to perform their own computational experiments using distributed
 systems. The goal is to make it easier for scientists to conduct such
@@ -31,29 +31,33 @@ the \ `Digital Science Center <http://pti.iu.edu/dsc>`__ at the
 IU \ `Pervasive Technology Institute <http://pti.iu.edu/>`__.
 
 
-Citation
-======================================================================
+.. _my-how-to-cite:
 
-If you use FutureGrid, we ask you kindly to include the following
-reference in your papers:
+Citation for Publications
+===================
 
-`Fox, G. <https://portal.futuregrid.org/biblio/author/11>`__, \ `G. von
-Laszewski <https://portal.futuregrid.org/biblio/author/1>`__, \ `J.
-Diaz <https://portal.futuregrid.org/biblio/author/61>`__, \ `K.
-Keahey <https://portal.futuregrid.org/biblio/author/3>`__, \ `J.
-Fortes <https://portal.futuregrid.org/biblio/author/18>`__, \ `R.
-Figueiredo <https://portal.futuregrid.org/biblio/author/43>`__, \ `S.
-Smallen <https://portal.futuregrid.org/biblio/author/24>`__, \ `W.
-Smith <https://portal.futuregrid.org/biblio/author/16>`__, and \ `A.
-Grimshaw <https://portal.futuregrid.org/biblio/author/17>`__, "`FutureGrid
-- a reconfigurable testbed for Cloud, HPC and Grid
-Computing <https://portal.futuregrid.org/references/futuregrid-recon-figurable-testbed-cloud-hpc-and-grid-computing>`__\ ", Contemporary
-High Performance Computing: From Petascale toward Exascale, April, 2013.
-Editor J.
-Vetter. Download: `vonLaszewski-fg-bookchapter.pdf <https://portal.futuregrid.org/biblio/view/2034>`__
+If you use FutureGrid [1]_, we ask you to include the following
+reference in your papers.  
+
+.. [1]   Fox, G., G. von Laszewski, J. Diaz, K. Keahey, J. Fortes, R.
+   Figueiredo, S. Smallen, W. Smith, and A. Grimshaw, "FutureGrid - a  reconfigurable testbed for Cloud, HPC and Grid Computing",
+   Contemporary High Performance Computing: From Petascale toward
+   Exascale, April, 2013. Editor J. Vetter.    `[pdf]
+   <https://portal.futuregrid.org/sites/default/files/vonLaszewski-fg-bookchapter.pdf>`__
+   Contemporary High Performance Computing: From Petascale toward
+   Exascale, April, 2013. 
+
+Please also include the following sentence in your Acknowledgement section:
+
+
+..
+
+  This material is based upon work supported in part by the 
+  National Science Foundation under Grant No. 0910812.
+
 
 Acknowledgement
-======================================================================
+==========================================================
 
 The FutureGrid project is funded by the National Science Foundation
 (NSF) and is led by \ `Indiana
@@ -69,6 +73,22 @@ University <http://www.purdue.edu/>`__, and \ `Grid
 5000 <https://www.grid5000.fr/mediawiki/index.php/Grid5000:Home>`__ as
 partner sites. This material is based upon work supported in part by the
 National Science Foundation under Grant No. 0910812.
+
+Sponsors
+======
+The current
+sponsors of FutureGrid include:
+
+
+.. csv-table:: 
+   :header: "Logo", "Sponsor"
+   :widths: 15, 80
+
+   |image1|, "National Sciens Foundation"
+   |image2|, "Lilly Endowment"
+   |image3|, "Indiana University Pervasive Technology Institute"
+
+    
 
 About this Manual
 ======================================================================
@@ -87,3 +107,6 @@ Enjoy using and expanding the FutureGrid User Manual!
 Gregor von Laszewski
 
 
+.. |image1| image:: https://portal.futuregrid.org/sites/default/files/u30/nsf.jpg
+.. |image2| image:: https://portal.futuregrid.org/sites/default/files/images/lilly_endowment.jpg
+.. |image3| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/iu-logo-50x64.jpeg

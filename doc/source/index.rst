@@ -2,22 +2,27 @@
 Intoduction to Cloud Computing
 ================================================
 
-Contents:
-
 .. toctree::
-   :maxdepth: 3
+   :numbered:
+   :maxdepth: -1
 
-   part-1-fg
+   title 
+   todolist
    preface
+   summary-executive
+   introduction
+
 
    fgmanual
    
    part-2
    contributing
    python
+   git
    openstack
    eucalyptus
    india
+
 
 Indices and tables
 ==================
