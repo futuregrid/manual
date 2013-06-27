@@ -12,10 +12,8 @@ Hardware
    fix section outline
 
 
-
-
-
-These are the current resources available in FutureGrid. 
+FutureGrid is build out of a number of clusters that are interconected
+with up to a 10GB Ethernet among its sites.
 
 
 .. csv-table:: Compute Resources			
@@ -30,83 +28,6 @@ These are the current resources available in FutureGrid.
    bravo        , HP Proliant            , 16         , 32          , 128         , 1.7       , 3072       , 128 , IU     
    delta        , GPU Cluster(SuperMicro), 16         , 32          , 192         ,           , 1333       , 144 , IU     
    lima         , Aeon Eclipse64         , 8          , 16          , 128         , 1.3       , 512        , 3.8 , SDSC   
-
-
-.. csv-table:: Storage Resources
-   :header:  System Type   , Capacity (TB)      , File System   , Site    
-
-    DDN 9550          , 339 shared with IU +   , Luster            , IU        
-    Data Capacitor    ,  16 TB dedicated       ,                   ,            
-    DDN 6620          , 120                    , GPFS              , UC         
-    SunFire x4540     , 96                     , ZFS               , SDSC       
-    Dell MD3000       , 30                     , NFS               , TACC       
-    IBM dx360 M3      , 24                     , NFS               , UF         
-
-Status
-------
-
-The status of the resources can be monitored through:
-
--  `https://portal.futuregrid.org/status <https://portal.futuregrid.org/status>`__
-
-This page also contains a link to our operational status of FutureGrid
-resources and services, see the FutureGrid Inca server at:
-
--  `http://inca.futuregrid.org <http://inca.futuregrid.org/>`__
-
-Maintenance
------------
-
-Activities during the regular maintenance window for FutureGrid machines
-are listed in the FutureGrid wiki at:
-
--  `https://wiki.futuregrid.org/index.php/Hw:MaintActivities <https://wiki.futuregrid.org/index.php/Hw:MaintActivities>`__.
-
-Scheduled outages and maintenance windows on the FutureGrid network are
-collected in the Network Operations Calendar at:
-
--  `https://noc.futuregrid.org/futuregrid/support/operations-calendar3.html <https://noc.futuregrid.org/futuregrid/support/operations-calendar3.html>`__
-
-Compute Resources
-----------------------------------------------------------------------
-
-GVL: This section belongs to HPC Services
-
-Compute Hardware Resources & HPC Job Queue Information
-
-.. csv-table:: 
-   :header: Resource   , Queue name   , Default Wallclock Limit   , Max Wallclock Limit   , NOTES                 
-
-    india      , batch        , 4 hours                   , 24 hours              ,                       
-	       , long         , 8 hours                   , 168 hours             ,                       
-	       , scalemp      , 8 hours                   , 168 hours             , restricted access     
-	       , b534         , none                      , none                  , restricted access     
-	       , ajyounge     , none                      , none                  , restricted access     
-    sierra     , batch        , 4 hours                   , 24 hours              ,                       
-	       , long         , 8 hours                   , 168 hours             ,                       
-    hotel      , extended     , none                      , none                  ,                       
-    alamo      , shortq       , none                      , 24 hours              ,                       
-	       , longq        , none                      , 24 hours              ,                       
-    foxtrot    , batch        , 1 hour                    , none                  , not for general use   
-
-For availability, please visit:
-`http://portal.futuregrid.org/status <http://portal.futuregrid.org/status>`__
-
-
-GVL: This belongs to networking:
-
-Compute Networks
-======================================================================
-
-.. csv-table::
-   :header: Resource Name, Network Devices
-   
-   IU Cray, Cray 2D Torus SeaStar 
-   IU iDataPlex , DDR IB , QLogic switch with Mellanox ConnectX adapters,Blade Network Technologies & Force10 Ethernet switches
-   SDSC, DDR IB, Cisco switch with Mellanox ConnectX adapters, Juniper Ethernet switches
-   TACC, QDR IB , Mellanox switches and adapters, Dell Ethernet switches
-   UC, DDR IB, QLogic switch with Mellanox ConnectX adapters, Blade Network Technologies & Juniper switches
-   UF, Ethernet only (Blade Network Technologies & Force10 switches)
 
 .. csv-table:: 
    :header:   Name , Alamo, Bravo, Delta, Foxtrot, Hotel, India, Sierra, xray
@@ -139,6 +60,50 @@ Compute Networks
    GPUs per node,,,2,,,,,
    Batch system                           ,,, Torque                            ,,,,, 
 
+
+
+.. csv-table:: Storage Resources
+   :header:  System Type   , Capacity (TB)      , File System   , Site    
+
+    DDN 9550          , 339 shared with IU +   , Luster            , IU        
+    Data Capacitor    ,  16 TB dedicated       ,                   ,            
+    DDN 6620          , 120                    , GPFS              , UC         
+    SunFire x4540     , 96                     , ZFS               , SDSC       
+    Dell MD3000       , 30                     , NFS               , TACC       
+    IBM dx360 M3      , 24                     , NFS               , UF         
+
+
+HPC Job Queue Information:
+    .. csv-table:: 
+       :header: Resource   , Queue name   , Default Wallclock Limit   , Max Wallclock Limit   , NOTES                 
+
+	india      , batch        , 4 hours                   , 24 hours              ,                       
+		   , long         , 8 hours                   , 168 hours             ,                       
+		   , scalemp      , 8 hours                   , 168 hours             , restricted access     
+		   , b534         , none                      , none                  , restricted access     
+		   , ajyounge     , none                      , none                  , restricted access     
+	sierra     , batch        , 4 hours                   , 24 hours              ,                       
+		   , long         , 8 hours                   , 168 hours             ,                       
+	hotel      , extended     , none                      , none                  ,                       
+	alamo      , shortq       , none                      , 24 hours              ,                       
+		   , longq        , none                      , 24 hours              ,                       
+	foxtrot    , batch        , 1 hour                    , none                  , not for general use   
+
+
+
+
+Compute Networks
+======================================================================
+
+.. csv-table::
+   :header: Resource Name, Network Devices
+   
+   IU Cray, Cray 2D Torus SeaStar 
+   IU iDataPlex , DDR IB , QLogic switch with Mellanox ConnectX adapters,Blade Network Technologies & Force10 Ethernet switches
+   SDSC, DDR IB, Cisco switch with Mellanox ConnectX adapters, Juniper Ethernet switches
+   TACC, QDR IB , Mellanox switches and adapters, Dell Ethernet switches
+   UC, DDR IB, QLogic switch with Mellanox ConnectX adapters, Blade Network Technologies & Juniper switches
+   UF, Ethernet only (Blade Network Technologies & Force10 switches)
 
  
 
@@ -243,11 +208,9 @@ IBM (formerly BNT)
 |image9|
  
 
-FutureGrid Network Impairments Device (NID)
-===========================================
+Network Impairments Device (NID)
+----------------------------------------------------------------------
 
-FutureGrid Network Impairments Device (NID)
- 
 Researchers on FutureGrid may perodically employ the use of a Spirent
 XGEM, a Network Impairments Emulator.  The XGEM allows users to
 accurately create the delays and impairments that occur over live
@@ -285,8 +248,8 @@ in order to be impaired.  Additional configuration might be required at
 the participants' individual sites for impairments to occur locally.
  
 
-Storage
-=======
+Storage Service
+================
 
 .. csv-table::
 
@@ -311,23 +274,24 @@ Storage
 
 
 
-Using HPSS from FutureGrid
-==========================
+Using Indiana Universities Storage Services from FutureGrid
+----------------------------------------------------------------------
 
-Note: FutureGrid does not provide an HPSS server. The HSI is used to
-access IU's HPSS service from INDIA. This is available only for IU
-faculty, staff, and students.
+.. todo:: This section has not be tested recently
+  
+FutureGrid does not provide an HPSS server. However, if you have an IU
+account (available only for IU faculty, staff, and students), you can
+use the following services from india:
 
-Through the `SDA <http://rc.uits.iu.edu/storage/sda>`__ (formerly known
-as MDSS) service, IU provides distributed storage service to faculty,
-staff, and graduate students. The
-`HSI <http://rc.uits.iu.edu/storage/hsi>`__ (Hierarchical Storage
-Interface) client is available in INDIA. To use the HSI client:
+* `SDA <http://rc.uits.iu.edu/storage/sda>`__ service
+* `HSI <http://rc.uits.iu.edu/storage/hsi>`__, the Hierarchical Storage
+Interface client is available in india. 
 
--  First, activate your SDA account. Detailed instructions are available
-   at IU's `MDSS Service Starter
-   Kit <http://rc.uits.iu.edu/storage/mdss-starter-kit>`__ page.
--  Then, from INDIA, load the HSI module as follows:
+To use the HSI client on india:
+
+-  First, activate your SDA account as descreibed in the `MDSS Service Starter
+   Kit <http://rc.uits.iu.edu/storage/mdss-starter-kit>`__ documentation.
+-  Then, from india, load the HSI module as follows:
 
 ::
 
@@ -344,7 +308,7 @@ Interface) client is available in INDIA. To use the HSI client:
     Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewall: off [hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009]
     ?
 
-Note:\ Your Principal is your IU Network ID, and your password is
+Your principal is your IU Network ID, and your password is
 the IU passphrase.
 
 -  Enable firewall mode; otherwise, you will receive this error:
@@ -378,23 +342,33 @@ the IU passphrase.
 Status
 ======
 
-System Status:
-    Please note that the information on this page is not 100% accurate
-    as it is maintained by hand. However, dynamic monitoring tools are
-    available and can be consulted for more details.
+The status of the resources can be monitored through:
 
-Ongoing outages:
-    The **first Tuesday of each month** is the standard maintenance
-    window.
-    .. todo:
-       move this to operations
+-  `https://portal.futuregrid.org/status <https://portal.futuregrid.org/status>`__
 
-.. todo::
-   fix the links
-  
+This page also contains a link to our operational status of FutureGrid
+resources and services, see the FutureGrid Inca server at:
+
+-  `http://inca.futuregrid.org <http://inca.futuregrid.org/>`__
+
+Activities during the regular maintenance window for FutureGrid machines
+are listed in the FutureGrid wiki at:
+
+-  `https://wiki.futuregrid.org/index.php/Hw:MaintActivities <https://wiki.futuregrid.org/index.php/Hw:MaintActivities>`__.
+
+Scheduled outages and maintenance windows on the FutureGrid network are
+collected in the Network Operations Calendar at:
+
+-  `https://noc.futuregrid.org/futuregrid/support/operations-calendar3.html <https://noc.futuregrid.org/futuregrid/support/operations-calendar3.html>`__
+
+The **first Tuesday of each month** is the standard maintenance
+window.
+
 You can find a list of previous outages `here </outages_all>`__
 including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
 
+.. todo:: fix the links
+  
 .. list-table:: System Information
    :header-rows: 1
    :widths: 20,10,70
@@ -416,7 +390,7 @@ including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
      - Cluster Monitoring  
        crunchy, now would it?
    * - |image15|
-     - Network Status:
+     - Network Status
      - The network status can be viewed via the \ `FutureGrid Network
        Operations Center page <http://noc.futuregrid.org>`__.
        Upcoming network events are maintained on the \ `Network Operations
@@ -427,20 +401,20 @@ including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
        monitored via a number of tools. To view some of the contents,
        please visit \ `http://inca.futuregrid.org <http://inca.futuregrid.org>`__
    * - |image17|
-     - Cloud Status:
+     - Cloud Status
      - `Here <https://portal.futuregrid.org/monitoring/cloud>`__ you will find
         information about how FG cloud services are currently used.
    * - |image18|
-     - FutureGrid Cloud Metrics:
+     - FutureGrid Cloud Metrics
      - Metric system provides an integrated accounting service to view
        cloud usage statistics and graphs regarding the utilization of
        virtual machine (VM) instances.
    * - |image19|
-     - System software version info:
+     - System software version info
      - The version info of the installed system software across
-       all FG sites:
+       all FG sites
    * - |image20|
-     - Nimbus Usage Reports:
+     - Nimbus Usage Reports
      - `Displays <http://inca.futuregrid.org/nimbus-stats>`__ weekly usage
         graphs of each of the FutureGrid Nimbus deployments.
 
