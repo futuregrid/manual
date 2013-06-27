@@ -22,15 +22,15 @@ Compute Resources
 .. csv-table:: 
    :header: Name                                                       , System Type           , # Nodes   , # CPUS   , # Cores   , TFLOPS   , RAM (GB   , Storage (TB)   , Site   
 
-   `india <https://portal.futuregrid.org/hardware/india>`__       , IBM iDataplex             , 128           , 256          , 1024          , 11           , 3072          , 335                , IU         
-   `hotel <https://portal.futuregrid.org/hardware/hotel>`__       , IBM iDataplex             , 84            , 168          , 672           , 7            , 2016          , 120                , UC         
-   `sierra <https://portal.futuregrid.org/hardware/sierra>`__     , IBM iDataplex             , 84            , 168          , 672           , 7            , 2688          , 96                 , SDSC       
-   `foxtrot <https://portal.futuregrid.org/hardware/foxtrot>`__   , IBM iDataplex             , 32            , 64           , 256           , 3            , 768           , 0                  , UF         
-   `alamo <https://portal.futuregrid.org/hardware/alamo>`__       , Dell Poweredge            , 96            , 192          , 768           , 8            , 1152          , 30                 , TACC       
-   `xray <https://portal.futuregrid.org/hardware/xray>`__         , Cray XT5m                 , 1             , 166          , 664           , 6            , 1328          , 5.4                , IU         
-   `bravo <https://portal.futuregrid.org/hardware/bravo>`__       , HP Proliant               , 16            , 32           , 128           , 1.7          , 3072          , 128                , IU         
-   `delta <https://portal.futuregrid.org/hardware/delta>`__       , GPU Cluster(SuperMicro)   , 16            , 32           , 192           ,              , 1333          , 144                , IU         
-   `lima <https://portal.futuregrid.org/hardware/lima>`__         , Aeon Eclipse64            , 8             , 16           , 128           , 1.3          , 512           , 3.8 (SSD)          , SDSC       
+   india      , IBM iDataplex             , 128           , 256          , 1024          , 11           , 3072          , 335                , IU         
+   hotel      , IBM iDataplex             , 84            , 168          , 672           , 7            , 2016          , 120                , UC         
+   sierra    , IBM iDataplex             , 84            , 168          , 672           , 7            , 2688          , 96                 , SDSC       
+   foxtrot   ,IBM iDataplex             , 32            , 64           , 256           , 3            , 768           , 0                  , UF         
+   alamo      , Dell Poweredge            , 96            , 192          , 768           , 8            , 1152          , 30                 , TACC       
+   xray        , Cray XT5m                 , 1             , 166          , 664           , 6            , 1328          , 5.4                , IU         
+   bravo      , HP Proliant               , 16            , 32           , 128           , 1.7          , 3072          , 128                , IU         
+   delta      , GPU Cluster(SuperMicro)   , 16            , 32           , 192           ,              , 1333          , 144                , IU         
+   lima         , Aeon Eclipse64            , 8             , 16           , 128           , 1.3          , 512           , 3.8 (SSD)          , SDSC       
 
 
 Storage Resources
@@ -95,81 +95,27 @@ Compute Hardware Resources & HPC Job Queue Information
 
 For availability, please visit:
 `http://portal.futuregrid.org/status <http://portal.futuregrid.org/status>`__
-.
 
-GVL: This image belongs to the specific cluster desciption:
-
-|image4|
-
-IU iDataplex & Cray
-
-GVL: This section belongs to the specific cluster description:
-
-|image5|
-
-IU Cray
 
 GVL: This belongs to networking:
 
 Compute Networks
 ======================================================================
 
-
-**Resource Name**
-
-**Network Devices**
-
-IU Cray  
-
-Cray 2D Torus SeaStar 
-
- 
-
-IU iDataPlex  
-
-DDR IB  
-
-QLogic switch with Mellanox ConnectX adapters
-
-Blade Network Technologies & Force10 Ethernet switches
-
- 
-
-SDSC 
-
-DDR IB 
-
-Cisco switch with Mellanox ConnectX adapters
-
-Juniper Ethernet switches
-
- 
-
-TACC 
-
-QDR IB  
-
-Mellanox switches and adapters
-
-Dell Ethernet switches
-
- 
-
-UC 
-
-DDR IB 
-
-QLogic switch with Mellanox ConnectX adapters
-
-Blade Network Technologies & Juniper switches
-
-UF
-
-Ethernet only (Blade Network Technologies & Force10 switches)
+.. csv-table::
+   :header: Resource Name, Network Devices
+   
+   IU Cray, Cray 2D Torus SeaStar 
+   IU iDataPlex , DDR IB , QLogic switch with Mellanox ConnectX adapters,Blade Network Technologies & Force10 Ethernet switches
+   SDSC, DDR IB, Cisco switch with Mellanox ConnectX adapters, Juniper Ethernet switches
+   TACC, QDR IB , Mellanox switches and adapters, Dell Ethernet switches
+   UC, DDR IB, QLogic switch with Mellanox ConnectX adapters, Blade Network Technologies & Juniper switches
+   UF, Ethernet only (Blade Network Technologies & Force10 switches)
 
 .. csv-table:: 
    :header:   Name , Alamo, Bravo, Delta, Foxtrot, Hotel, India, Sierra, xray
 
+   Image,a,b,d,f,h,|image-india-cray|,s,|image-cray|
    Organization, Texas Advanced Computing Center, Indiana University, Indiana University, University of Florida, University of Chicago, Indiana University, San Diego Supercomputer Center, Indiana University
    Machine Type                           , Cluster                               , Cluster                               , Cluster                           , Cluster                               , Cluster                               , Cluster                                , Cluster                                                                       , Cluster                         
    System Type                            , Dell PowerEdge M610 Blade             , HP Proliant                           ,, IBM iDataPlex dx 360 M2               , IBM iDataPlex dx 360 M2               , IBM iDataPlex dx 360 M2                , IBM iDataPlex dx 340                                                          , Cray XT5m                       
@@ -238,25 +184,25 @@ services, and the Operations Center provides email and phone support
 `http://noc.futuregrid.org/ <http://noc.futuregrid.org/>`__. Available
 tools include:
 
--  **`FutureGrid
-   Atlas <http://noc.futuregrid.org/futuregrid/live-network-status/maps--graphs/futuregrid-atlas.html>`__:** View
+-  `FutureGrid
+   Atlas <http://noc.futuregrid.org/futuregrid/live-network-status/maps--graphs/futuregrid-atlas.html>`__: View
    the current level of FutureGrid Network traffic as displayed on a
    geographical map.
--  **`FutureGrid SNAPP Traffic
-   Graphs <http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/futuregrid-snapp-trafic-graphs2.html>`__:** View
+-  `FutureGrid SNAPP Traffic
+   Graphs <http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/futuregrid-snapp-trafic-graphs2.html>`__: View
    high-speed traffic graphs collected at one-minute samples using the
    Indiana University-developed SNAPP tool. Create custom views of the
    FutureGrid network and view historic utilization with greater data
    resolution.
--  **`FutureGrid NOC Router
-   Proxy <http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/router-proxy3.html>`__:**
+-  `FutureGrid NOC Router
+   Proxy <http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/router-proxy3.html>`__:
    Submit show commands to the FutureGrid router.
 
--  **`FutureGrid Physical
-   Map <http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Physical%20Map>`__**
+-  `FutureGrid Physical
+   Map <http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Physical%20Map>`__
 
--  **`FutureGrid Topology
-   Map <http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Topology%20Map>`__**
+-  `FutureGrid Topology
+   Map <http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Topology%20Map>`__
 
 As IPv6 test beds are not available at all FutureGrid partner sites,
 early implementation of iPv6 would slow important software development
@@ -264,21 +210,23 @@ work. As a result, current plans call for FutureGrid to continue using
 IPv4. Any change in plans will be noted here.
  
 Below is further information about networking:
+
+.. csv-table::
  
-FutureGrid Core: Juniper EX8200
-India; Force10, C-150
-Bravo, Delta, Echo; Force10, S60
-Sierra: Juniper EX4200
-Hotel: EX4200
-Dlamo: Dell PowerConnect 6000 Series
-Xray: Force10, C-150
-foxtrot:
-internal network switch: IBM/BLADE Rack Switch G8000
-public network switch: Force10 S50
-Node NICs: built-in (IBM iDataPlex DX360 M2) dual Intel 82575EB
-Gigabit Network Connection
-10Gbps: Myricom Myri-10G Dual-Protocol NIC (available on login node)
-Alamo: Dell PowerConnett 6224
+   FutureGrid Core, Juniper EX8200
+   India, Force10 C-150
+   Bravo, Force10 S60
+   Delta, Force10 S60
+   Echo, Force10 S60
+   Sierra, Juniper EX4200
+   Hotel, Juniper EX4200
+   Alamo, Dell PowerConnect 6000 Series
+   Xray, Force10, C-150
+   foxtrot, internal network switch: IBM/BLADE Rack Switch G8000
+              , public network switch: Force10 S50
+   Node NICs, built-in (IBM iDataPlex DX360 M2) dual Intel 82575EB Gigabit Network Connection
+   10Gbps, Myricom Myri-10G Dual-Protocol NIC (available on login node)
+   Alamo, Dell PowerConnett 6224
  
 Juniper, EX series
 - `https://www.juniper.net/us/en/products-services/switching/ex-series/Force10 <https://www.juniper.net/us/en/products-services/switching/ex-series/Force10>`__ (now
@@ -302,7 +250,7 @@ IBM (formerly BNT)
 FutureGrid Network Impairments Device (NID)
 ===========================================
 
-**FutureGrid Network Impairments Device (NID)**
+FutureGrid Network Impairments Device (NID)
  
 Researchers on FutureGrid may perodically employ the use of a Spirent
 XGEM, a Network Impairments Emulator.  The XGEM allows users to
@@ -344,223 +292,33 @@ the participants' individual sites for impairments to occur locally.
 Storage
 =======
 
-Clustername(site)
+.. csv-table::
+
+    Clustername (site),    Mountpoint,    Size,    Type,    Backups,    Use,    Notes,
+    Sierra (UCSD/SDSC),    /N/u/*username*,    40.6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    Home dir,    By default quotas on home directories are 50 GB and quotas on scratch directories are 100 GB.,
+    Sierra (UCSD/SDSC),    /N/scratch/*username*,    5.44TB,    ZFS  (RAID0),    No,    Scratch,  
+    Sierra (UCSD/SDSC),    /N/soft,    50GB,    ZFS  (RAID2),    Yes  (nightly incremental),    Software installs,  
+    Sierra (UCSD/SDSC),    /N/images,    6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    VM images,  
+    India  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    At the moment we do not have any quota implemented on India and we use the local/tmp  (77 GB) as scratch space.,
+    India  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
+    India  (IU),    /tmp,    77GB,    local disk,    No,    Scratch,  
+    Bravo  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    The same NFS shares in India are mounted in Bravo   (users do not log in here; jobs are submitted through India). There  are two local partitions which are used for HDFS and swift tests.,
+    Bravo  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
+    Delta  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    Same as Bravo. The NFS shares are mounted for user and group share (users do not log in directly here; jobs are submitted through India).,
+    Delta (IU),    /share/project,    14TB,    NFS (RAID5),    Yes (nightly incremental),    Shared/group folders,  
+    Hotel (UC),    /gpfs/home,    15TB,    GPFS (RAID6),    No,    Home dir,    By default quotas on home directories are 10 GB.,
+    Hotel (UC),    /gpfs/scratch,    57TB,    GPFS (RAID6),    No,    Scratch,  
+    Hotel (UC),    /gpfs/software,    7.1GB,    GPFS (RAID6),    No,    Software installs,  
+    Hotel (UC),    /gpfs/images,    7.1TB,    GPFS (RAID6),    No,    VM images,  
+    Hotel (UC),    /scratch/local,    862GB,    ext3 (local disk),    No,    Local scratch,  
+    Foxtrot (UFL),    /N/u/*username*,    16TiB,    NFS (RAID5),    No,    Home dir,    At the moment we do not have any quota implemented on Foxtrot.,
 
-Mountpoint\ ````
 
-Size
-
-Type
-
-Backups
-
-Use
-
-Notes
-
-`Sierra <https://portal.futuregrid.org/kb/document/bbns>`__\ (UCSD/SDSC)
-
-/N/u/username
-
-40.6TB
-
-ZFS (RAID2)
-
-Yes (nightly incremental)
-
-Home dir
-
-By default, quotas on home directories are 50 GB and quotas on scratch
-directories are 100 GB.
-
-/N/scratch/username
-
-5.44TB
-
-ZFS (RAID0)
-
-No
-
-Scratch
-
-/N/soft
-
-50GB
-
-ZFS (RAID2)
-
-Yes (nightly incremental)
-
-Software installs
-
-/N/images
-
-6TB
-
-ZFS (RAID2)
-
-Yes (nightly incremental)
-
-VM images
-
-`India (IU) <https://portal.futuregrid.org/kb/document/bbms>`__
-
-/N/u/username
-
-15TB
-
-NFS (RAID5)
-
-Yes (nightly incremental)
-
-Home dir
-
-At the moment, we do not have any quota implemented on India and we use
-the local/tmp (77 GB) as scratch space.
-
-/share/project
-
-14TB
-
-NFS (RAID5)
-
-Yes (nightly incremental)
-
-Shared/group folders
-
-/tmp
-
-77GB
-
-local disk
-
-No
-
-Scratch
-
-`Bravo <https://portal.futuregrid.org/kb/document/bcao>`__ (IU)
-
-/N/u/username
-
-15TB
-
-NFS (RAID5)
-
-Yes (nightly incremental)
-
-Home dir
-
-The same NFS shares in India are mounted in Bravo (users do not log in
-here; jobs are submitted through India). There are two local partitions,
-which are used for HDFS and swift tests.
-
-/share/project
-
-14TB
-
-NFS (RAID5)
-
-Yes (nightly incremental)
-
-Shared/group folders
-
-`Delta <https://portal.futuregrid.org/kb/document/bcaj>`__ (IU)
-
-/N/u/username
-
-15TB
-
-NFS (RAID5)
-
-Yes (nightly incremental)
-
-Home dir
-
-Same as Bravo. The NFS shares are mounted for user and group share
-(users do not log in directly here; jobs are submitted through India).
-
-/share/project
-
-14TB
-
-NFS (RAID5)
-
-Yes (nightly incremental)
-
-Shared/group folders
-
-Hotel (UC)
-
-/gpfs/home
-
-15TB
-
-GPFS (RAID6)
-
-No
-
-Home dir
-
-By default, quotas on home directories are 10 GB.
-
-/gpfs/scratch
-
-57TB
-
-GPFS (RAID6)
-
-No
-
-Scratch
-
-/gpfs/software
-
-7.1GB
-
-GPFS (RAID6)
-
-No
-
-Software installs
-
-/gpfs/images
-
-7.1TB
-
-GPFS (RAID6)
-
-No
-
-VM images
-
-/scratch/local
-
-862GB
-
-ext3 (local disk)
-
-No
-
-Local scratch
-
-Foxtrot (UFL)
-
-/N/u/username
-
-16TiB
-
-NFS (RAID5)
-
-No
-
-Home dir
-
-At the moment, we do not have any quota implemented on Foxtrot.
 
 Using HPSS from FutureGrid
 ==========================
 
-**Note**: FutureGrid does not provide an HPSS server. The HSI is used to
+Note: FutureGrid does not provide an HPSS server. The HSI is used to
 access IU's HPSS service from INDIA. This is available only for IU
 faculty, staff, and students.
 
@@ -590,7 +348,7 @@ Interface) client is available in INDIA. To use the HSI client:
     Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewall: off [hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009]
     ?
 
-**Note:**\ Your Principal is your IU Network ID, and your password is
+Note:\ Your Principal is your IU Network ID, and your password is
 the IU passphrase.
 
 -  Enable firewall mode; otherwise, you will receive this error:
@@ -624,143 +382,148 @@ the IU passphrase.
 Status
 ======
 
-System Status
-~~~~~~~~~~~~~
-
+System Status:
     Please note that the information on this page is not 100% accurate
     as it is maintained by hand. However, dynamic monitoring tools are
     available and can be consulted for more details.
 
-     
-
-Ongoing outages
-~~~~~~~~~~~~~~~
-
+Ongoing outages:
     The **first Tuesday of each month** is the standard maintenance
     window.
+    .. todo:
+       move this to operations
 
-    -  `Edit </admin/build/views/edit/active_outage_list?destination=book%2Fexport%2Fhtml%2F104#views-tab-default>`__
-    -  `Export </admin/build/views/export/active_outage_list>`__
-    -  `Clone </admin/build/views/clone/active_outage_list>`__
-
-    +-----------+-------------------+-----------------------------------------------------------------------------------+--------------------+-------------------------------+------------------------------+--------------+---------------------------------------------------------------------+
-    | Status    | Type              | Title                                                                             | Impacted Systems   | Start of Outage               | Anticipated End of Outage    | Resolution   | Edit link                                                           |
-    +===========+===================+===================================================================================+====================+===============================+==============================+==============+=====================================================================+
-    | Ongoing   | Software System   | `Bravo is reserved in 6 weeks </outages/130514/bravo-reserved-6-weeks>`__         | other              | Tue, 14 May 2013, 17:00 EDT   |                              |              | `edit </node/2513/edit?destination=book%2Fexport%2Fhtml%2F104>`__   |
-    +-----------+-------------------+-----------------------------------------------------------------------------------+--------------------+-------------------------------+------------------------------+--------------+---------------------------------------------------------------------+
-    | Planned   | Software System   | `Eucalyptus GUI not available </outages/120901/eucalyptus-gui-not-available>`__   | india              | Sat, 01 Sep 2012 (All day)    | Fri, 05 Oct 2012 (All day)   |              | `edit </node/2226/edit?destination=book%2Fexport%2Fhtml%2F104>`__   |
-    +-----------+-------------------+-----------------------------------------------------------------------------------+--------------------+-------------------------------+------------------------------+--------------+---------------------------------------------------------------------+
-
+.. todo::
+   fix the links
+  
 You can find a list of previous outages `here </outages_all>`__
 including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
 
- 
-~
+.. list-table:: System Information
+   :header-rows: 1
+   :widths: 20,10,70
 
-System configuration
-~~~~~~~~~~~~~~~~~~~~
+   * - Image
+     - Info
+     - Description
+   * - |image12| 
+     - System configuration
+     - The system is configured at this time using either HPC, Nimbus,
+         or Eucalyptus services. The distribution used at this time can be
+         found \ `here <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__ and `here <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=Info&xsl=info.xsl>`__.
+   * - |image13| 
+     - Status of FutureGrid services
+     - Lists the status of keyFutureGrid services (e.g., SSH, Nimbus,
+       Eucalyptus) in a sortable table.
+   * - |image14| 
+     - Ganglia
+     - Cluster Monitoring  
+       crunchy, now would it?
+   * - |image15|
+     - Network Status:
+     - The network status can be viewed via the \ `FutureGrid Network
+       Operations Center page <http://noc.futuregrid.org>`__.
+       Upcoming network events are maintained on the \ `Network Operations
+       Calendar <http://noc.futuregrid.org/futuregrid/support/operations-calendar3.html>`__.
+   * - |image16|
+     - Software Status
+     - The operational status of FutureGrid machines are continuously
+       monitored via a number of tools. To view some of the contents,
+       please visit \ `http://inca.futuregrid.org <http://inca.futuregrid.org>`__
+   * - |image17|
+     - Cloud Status:
+     - `Here <https://portal.futuregrid.org/monitoring/cloud>`__ you will find
+        information about how FG cloud services are currently used.
+   * - |image18|
+     - FutureGrid Cloud Metrics:
+     - Metric system provides an integrated accounting service to view
+       cloud usage statistics and graphs regarding the utilization of
+       virtual machine (VM) instances.
+   * - |image19|
+     - System software version info:
+     - The version info of the installed system software across
+       all FG sites:
+   * - |image20|
+     - Nimbus Usage Reports:
+     - `Displays <http://inca.futuregrid.org/nimbus-stats>`__ weekly usage
+        graphs of each of the FutureGrid Nimbus deployments.
 
-    The system is configured at this time using either HPC, Nimbus, or
-    Eucalyptus services. The distribution used at this time can be
-    found \ `here <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__ and `here <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=Info&xsl=info.xsl>`__.
 
-    |image12|
 
-Status of FutureGrid services
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. |image-india-cray| image:: https://portal.futuregrid.org/sites/default/files/resize/images/FutureGrid_iDataPlex_Cray_IU-sm-640x425.jpg
+   :width: 100px
+   :height: 100px
 
-    Lists the status of keyFutureGrid services (e.g., SSH, Nimbus,
-    Eucalyptus) in a sortable table.
+.. |image-cray| image:: https://portal.futuregrid.org/sites/default/files/resize/images/Cray_XT5m_Front_closed-small-427x640.jpg
+   :width: 100px
+   :height: 100px
 
-    |image13|
+.. |image6| image::  https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png
+   :height: 300px
+   :width: 400px
 
-Cluster Monitoring
-~~~~~~~~~~~~~~~~~~
-
-Ganglia:
- 
-    |image14|
-
-     
-
-Network Status
-~~~~~~~~~~~~~~
-
-    The network status can be viewed via the \ `FutureGrid Network
-    Operations Center page <http://noc.futuregrid.org>`__.  Upcoming
-    network events are maintained on the \ `Network Operations
-    Calendar <http://noc.futuregrid.org/futuregrid/support/operations-calendar3.html>`__.
-
-    |image15|
-
-Software Status
-~~~~~~~~~~~~~~~
-
-    The operational status of FutureGrid machines are continuously
-    monitored via a number of tools. To view some of the contents,
-    please
-    visit \ `http://inca.futuregrid.org <http://inca.futuregrid.org>`__
-
-     
-
-    |image16|
-
-Cloud Status
-~~~~~~~~~~~~
-
-`Here <https://portal.futuregrid.org/monitoring/cloud>`__ you will find
-information about how FG cloud services are currently used.
-
-    |image17|
-
-     
-
-FutureGrid Cloud Metrics
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-    | Metric system provides an integrated accounting service to view
-    cloud usage statistics and graphs regarding the utilization of
-    virtual machine (VM) instances.
-    |image18|
-
-System software version info
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    | The version info of the installed system software across
-    all FG sites:
-    |image19|
-
-Nimbus Usage Reports
-~~~~~~~~~~~~~~~~~~~~
-
-`Displays <http://inca.futuregrid.org/nimbus-stats>`__ weekly usage
-graphs of each of the FutureGrid Nimbus deployments.
-
-    |image20|
-
-.. |image4| image:: https://portal.futuregrid.org/sites/default/files/resize/images/FutureGrid_iDataPlex_Cray_IU-sm-640x425.jpg
-.. |image5| image:: https://portal.futuregrid.org/sites/default/files/resize/images/Cray_XT5m_Front_closed-small-427x640.jpg
-.. |image6| image:: https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png
 .. |image7| image:: https://portal.futuregrid.org/sites/default/files/resize/images/Juniper%20EX8208-140x184.png
+   :width: 100px
+   :height: 100px
+
 .. |image8| image:: https://portal.futuregrid.org/sites/default/files/u23/futuregrid-physical.png
+   :width: 300px
+   :height: 200px
+
 .. |image9| image:: https://portal.futuregrid.org/sites/default/files/u23/futuregrid-topology.png
+   :width: 300px
+   :height: 200px
+
 .. |image10| image:: https://portal.futuregrid.org/sites/default/files/images/Spirent%20XGEM.png
+   :width: 100px
+   :height: 100px
+
 .. |image11| image:: https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png
+   :width: 100px
+   :height: 100px
+
 .. |image12| image:: https://portal.futuregrid.org/sites/default/files/images/status_incapart.PNG
    :target: http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp
+   :width: 100px
+   :height: 100px
+
 .. |image13| image:: https://portal.futuregrid.org/sites/default/files/ScreenSnapz.jpg
    :target: http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid
+   :width: 100px
+   :height: 100px
+
 .. |image14| image:: https://portal.futuregrid.org/sites/default/files/ganglia.png
    :target: http://ganglia.futuregrid.org
+   :width: 100px
+   :height: 100px
+
 .. |image15| image:: https://portal.futuregrid.org/sites/default/files/images/large_status_nocmap.PNG
    :target: http://noc.futuregrid.org
+   :width: 100px
+   :height: 100px
+
 .. |image16| image:: https://portal.futuregrid.org/sites/default/files/u23/Screen%20shot%202011-01-14%20at%207.48.06%20PM.png
    :target: http://inca.futuregrid.org
+   :width: 100px
+   :height: 100px
+
 .. |image17| image:: https://portal.futuregrid.org/sites/default/files/u23/Screen%20shot%202011-04-07%20at%203.23.05%20PM.png
    :target: https://portal.futuregrid.org/monitoring/cloud
+   :width: 100px
+   :height: 100px
+
 .. |image18| image:: https://portal.futuregrid.org/sites/default/files/screenshot-for-status-small.png
    :target: https://portal.futuregrid.org/metrics
+   :width: 100px
+   :height: 100px
+
 .. |image19| image:: https://portal.futuregrid.org/sites/default/files/fg-sys-sw-ver.PNG
    :target: http://inca.futuregrid.org:8080/inca/HTML/rest/HPC/FutureGrid
+   :width: 100px
+   :height: 100px
+
 .. |image20| image:: https://portal.futuregrid.org/sites/default/files/u15/nimbus-usage.png
    :target: http://inca.futuregrid.org/nimbus-stats
+   :width: 100px
+   :height: 100px
+
