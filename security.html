@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>7. Accessing FutureGrid resources via SSH &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="10. Hardware" href="hardware.html" />
+    <link rel="prev" title="6. Account" href="account.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plan.html">1. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="title.html">2.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">3. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">4. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">4.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">4.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">4.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">4.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">5. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">5.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">5.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">5.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">5.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">5.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">6. Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-1-create-a-futuregrid-portal-account">6.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-2-create-a-new-project-or-join-an-existing-one">6.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-3-upload-your-ssh-public-key-s">6.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#account-management-service">6.4. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#key-reset-or-adding-new-keys">6.5. Key Reset or Adding new Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#creating-an-hpc-account">6.6. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#resetting-a-ssh-key">6.7. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#nimbus-eucalyptus-openstack">6.8. Nimbus, Eucalyptus, OpenStack</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">7. Accessing FutureGrid resources via SSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirement-for-windows-users">7.1. Requirement for Windows Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instructions-for-both-windows-and-unix-users">7.2. Instructions for both Windows and Unix users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#generating-ssh-keys-for-futuregrid-access">8. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#key-generation">9. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generate-public-private-key-pair">9.1. Generate Public/Private Key Pair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-the-result">9.2. List the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-or-replace-passphrase-for-an-already-generated-key">9.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#capture-the-public-key-for-futuregrid">9.4. Capture the Public Key for FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-management">9.5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resetting-the-ssh-key">9.6. Resetting the SSH key</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">10. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-networks">10.1. Compute Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#network">10.2. Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#storage-service">10.3. Storage Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#status">10.4. Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">11. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">11.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">11.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">11.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">11.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">11.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#mpi-libraries">11.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#compiling-mpi-applications">11.7. Compiling MPI Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-mpi-applications">11.8. Running MPI Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html#log-in-to-hpc-services">12. Log in to HPC services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#i-still-can-not-access-fg-resources">12.1. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">13. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-queued-jobs-as-part-of-the-hpc-services">13.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#monitoring-your-job">13.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#examining-your-job-output">13.3. Examining Your Job Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">13.4. Xray HPC Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">14. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">14.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">14.2. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">15. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">15.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">15.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">15.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">15.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">15.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">16. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">17. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">18. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">19. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">20. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">21. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">21.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">21.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">21.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">22. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">22.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">22.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">22.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">22.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">22.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">22.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">23. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">24. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">24.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">24.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">25. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">25.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">25.2. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">25.3. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">25.4. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">25.5. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">25.6. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">25.7. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">25.8. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">25.9. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">26. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">7. Accessing FutureGrid resources via SSH</a><ul>
+<li><a class="reference internal" href="#requirement-for-windows-users">7.1. Requirement for Windows Users</a></li>
+<li><a class="reference internal" href="#instructions-for-both-windows-and-unix-users">7.2. Instructions for both Windows and Unix users</a><ul>
+<li><a class="reference internal" href="#generate-a-ssh-key">7.2.1. Generate a SSH key</a></li>
+<li><a class="reference internal" href="#check-your-ssh-key">7.2.2. Check your ssh key</a></li>
+<li><a class="reference internal" href="#copy-the-content-of-your-public-key">7.2.3. Copy the content of your public key</a></li>
+<li><a class="reference internal" href="#upload-the-key-to-the-futuregrid-portal">7.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li><a class="reference internal" href="#testing-your-ssh-key">7.2.5. Testing your ssh key</a></li>
+<li><a class="reference internal" href="#testing-your-ssh-key-on-hotel">7.2.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#generating-ssh-keys-for-futuregrid-access">8. Generating SSH Keys for FutureGrid Access</a></li>
+<li><a class="reference internal" href="#key-generation">9. Key Generation</a><ul>
+<li><a class="reference internal" href="#generate-public-private-key-pair">9.1. Generate Public/Private Key Pair</a></li>
+<li><a class="reference internal" href="#list-the-result">9.2. List the result</a></li>
+<li><a class="reference internal" href="#add-or-replace-passphrase-for-an-already-generated-key">9.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li><a class="reference internal" href="#capture-the-public-key-for-futuregrid">9.4. Capture the Public Key for FutureGrid</a></li>
+<li><a class="reference internal" href="#key-management">9.5. Key Management</a></li>
+<li><a class="reference internal" href="#resetting-the-ssh-key">9.6. Resetting the SSH key</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="account.html"
+         title="previous chapter">&laquo; 6. Account</a></li>
+  <li><a href="hardware.html"
+         title="next chapter">10. Hardware &raquo;</a></li>
+            
+            
+              <li>
+  <a href="_sources/security.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="accessing-futuregrid-resources-via-ssh">
+<h1>7. Accessing FutureGrid resources via SSH<a class="headerlink" href="#accessing-futuregrid-resources-via-ssh" title="Permalink to this headline">¶</a></h1>
+<p>To properly view this manual page, please log into the FutureGrid portal
+with your FutureGrid name.</p>
+<p>To access the various FutureGrid resources, you need to provide a public
+ssh key to FutureGrid. In this manual, we explain how to generate a ssh
+key, upload it to the FutureGrid portal and log onto the resources. This
+manual covers both UNIX and Windows Users.</p>
+<div class="section" id="requirement-for-windows-users">
+<h2>7.1. Requirement for Windows Users<a class="headerlink" href="#requirement-for-windows-users" title="Permalink to this headline">¶</a></h2>
+<p>Windows users need to have some special software to be able to use the
+SSH commands. We recommend you use Cygwin (Linux-like environment for
+Windows) because it will ease your experience with FutureGrid. We have
+prepared a Cygwin version that is ready to use (If for some reason you
+decide to download and install Cygwin from the official site, remember
+that you need to install the ssh packages).</p>
+<ol class="arabic simple">
+<li>Download Cygwin from our
+Portal&nbsp;<a class="reference external" href="https://portal.futuregrid.org/sites/default/files/cygwin.zip">https://portal.futuregrid.org/sites/default/files/cygwin.zip</a>.</li>
+<li>Uncompress the file.</li>
+<li>Execute the file the &#8216;Windows Batch File&#8217; called Cygwin.bat
+<img alt="image21" src="https://portal.futuregrid.org/sites/default/files/u30/cygwim1.png" /></li>
+<li>You may get a warning. Click in the Run button
+<img alt="image22" src="https://portal.futuregrid.org/sites/default/files/u30/cygwin2.png" /></li>
+<li>You get a Linux-like terminal that will allow you to continue with
+this manual.
+<img alt="image23" src="https://portal.futuregrid.org/sites/default/files/u30/cygwinfirst.png" /></li>
+</ol>
+<p><strong>NOTE</strong>: When showing examples of commands, the $ symbol precedes the
+actual command. So, the other lines are the output obtained after
+executing the command.</p>
+</div>
+<div class="section" id="instructions-for-both-windows-and-unix-users">
+<h2>7.2. Instructions for both Windows and Unix users<a class="headerlink" href="#instructions-for-both-windows-and-unix-users" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generate-a-ssh-key">
+<h3>7.2.1. Generate a SSH key<a class="headerlink" href="#generate-a-ssh-key" title="Permalink to this headline">¶</a></h3>
+<p>Use the tool ssh-keygen. This program is commonly available on most UNIX
+systems (this includes Cygwin). It will ask you for the location and
+name of the new key. It will also ask you for a passphrase, we
+<strong>STRONGLY RECOMMEND</strong> that you use a passphrase. We have seem advise by
+teachers and teachin assistants to not use passphrases: this is
+<strong>WRONG</strong>. If you are not using a pasphrase and someone were to steal
+your private key they have easily access to your account. We recommend
+using the default location ~/.ssh/ and the default name id_rsa. A
+sample session:</p>
+<div class="highlight-python"><pre>$ ssh-keygen
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/Javi/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/Javi/.ssh/id_rsa
+Your public key has been saved in /home/Javi/.ssh/id_rsa.pub.
+The key fingerprint is:
+90:46:9b:cf:09:16:94:17:df:43:f4:99:97:0d:42:4a Javi@Javi-PC
+The key's randomart image is::
+
++--[ RSA 2048]----+
+|.+...Eo= .       |
+| ..=.o + o +o    |
+|O.  o o +.o      |
+| = .   . .       |
+|                 |
+|                 |
+|                 |
+|                 |
+|                 |
++-----------------+</pre>
+</div>
+<p>This command requires the interaction of the user.</p>
+<ol class="arabic">
+<li><p class="first">The first question is:</p>
+<div class="highlight-python"><pre>Enter file in which to save the key (/home/Javi/.ssh/id_rsa):</pre>
+</div>
+</li>
+</ol>
+<p>We recommend you use the default. To do so, just press the enter key. In
+case you already have a ssh key in your machine, you can skip this whole
+section or use a different file name.</p>
+<p>2. The second and third question is to protect your ssh key with a
+passphrase. This password will protect your key because you need to type
+it when you want to use it. Thus, you can either type a passphrase or
+press enter to leave it without passphrase. To avoid security problems,
+we DO recommend that chose a passphrase as discussed previously. Make
+sure to not just type return for an empty passphrase:</p>
+<div class="highlight-python"><pre>Enter passphrase (empty for no passphrase):</pre>
+</div>
+<p>and:</p>
+<div class="highlight-python"><pre>Enter same passphrase again:</pre>
+</div>
+</div>
+<div class="section" id="check-your-ssh-key">
+<h3>7.2.2. Check your ssh key<a class="headerlink" href="#check-your-ssh-key" title="Permalink to this headline">¶</a></h3>
+<p>Once, you have generated your key, you should have them in the .ssh
+directory:</p>
+<div class="highlight-python"><pre>$ ls -l ~/.ssh</pre>
+</div>
+</div>
+<div class="section" id="copy-the-content-of-your-public-key">
+<h3>7.2.3. Copy the content of your public key<a class="headerlink" href="#copy-the-content-of-your-public-key" title="Permalink to this headline">¶</a></h3>
+<p>You need to copy the content of your public key to upload it to the
+portal. A sample asumming that you used the default options during the
+key generation:</p>
+<div class="highlight-python"><pre>$ cat ~/.ssh/id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXJH2iG2FMHqC6T/U7uB8kt6KlRh4kUOjgw9sc4Uu+Uwe/EwD0wk6CBQMB+HKb9upvCRW/851UyRUagtlQexCRM2rMCi0VvhTVZhj61pTdhyl1t8hlkoL19JVnVBPP5kIN3wVyNAJjYBrAUNW4dXKXtmfkXp98T3OW4mxAtTH434MaT+QcPTcxims/hwsUeDAVKZY7UgZhEbiExxkejtnRBHTipi0W03W05TOUGRW7EuKf/4ftNVPilCO4DpfY44NFG1xPwHeimUk+t9h48pBQj16FrUCp0rS02Pj+4/9dNeS1kmNJu5ZYS8HVRhvuoTXuAY/UVcynEPUegkp+qYnR user@myemail.edu</pre>
+</div>
+<p>Go ahead and select the ouptut, right click, and copy:</p>
+<div class="highlight-python"><pre>$ cat ~/.ssh/id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXJH2iG2FMHqC6T/U7uB8kt6KlRh4kUOjgw9sc4Uu+Uwe/EwD0wk6CBQMB+HKb9upvCRW/851UyRUagtlQexCRM2rMCi0VvhTVZhj61pTdhyl1t8hlkoL19JVnVBPP5kIN3wVyNAJjYBrAUNW4dXKXtmfkXp98T3OW4mxAtTH434MaT+QcPTcxims/hwsUeDAVKZY7UgZhEbiExxkejtnRBHTipi0W03W05TOUGRW7EuKf/4ftNVPilCO4DpfY44NFG1xPwHeimUk+t9h48pBQj16FrUCp0rS02Pj+4/9dNeS1kmNJu5ZYS8HVRhvuoTXuAY/UVcynEPUegkp+qYnR Javi@Javi-PC</pre>
+</div>
+</div>
+<div class="section" id="upload-the-key-to-the-futuregrid-portal">
+<h3>7.2.4. Upload the key to the FutureGrid Portal<a class="headerlink" href="#upload-the-key-to-the-futuregrid-portal" title="Permalink to this headline">¶</a></h3>
+<p>Click on the button bellow to add your SSH key (Note: The quick link
+button below only works if you are logged in before visiting this page.
+Otherwise please make sure you login first and REFRESH this page.)</p>
+<blockquote>
+<div><a class="reference external" href="https://portal.futuregrid.org/user/23/ssh-keys"><img alt="image24" src="https://portal.futuregrid.org/sites/default/files/u23/register-sshkey.png" /></a></div></blockquote>
+<ol class="arabic simple">
+<li>If you were logged into the Portal, this button redirects you to a
+page that includes a link Add a public key.</li>
+<li>Otherwise, this button redirects you to the login page.<ol class="arabic">
+<li>Log into the portal
+<img alt="image25" src="https://portal.futuregrid.org/sites/default/files/u30/portalLogin_0.png" /></li>
+<li>Click in the &#8220;ssh key&#8221; button
+<img alt="image26" src="https://portal.futuregrid.org/sites/default/files/u30/portalsshkey.png" /></li>
+</ol>
+</li>
+<li>Click in the &#8220;add a public key&#8221; link.
+<img alt="image27" src="https://portal.futuregrid.org/sites/default/files/u30/portalclikaddkey_0.png" /></li>
+<li>Paste your ssh key into the box marked Key.
+<img alt="image28" src="https://portal.futuregrid.org/sites/default/files/u30/portalkeypaste_0.png" /></li>
+<li>Click the submit button.</li>
+</ol>
+<ul class="simple">
+<li><strong>IMPORTANT</strong>:<ul>
+<li>Leave the Title field blank.</li>
+<li>Make sure that when you paste your key, it does not contain
+newlines or carriage returns that may have been introduced by
+incorrect pasting and copying. If so, please remove them.</li>
+</ul>
+</li>
+</ul>
+<p>At this point you are all set. However you will still need to wait till
+all accounts have been set up to use the resources. Please, check your
+email for further updates. You can also refresh this page and see if the
+boxes in your account status information are all green. Than you can
+continue.</p>
+</div>
+<div class="section" id="testing-your-ssh-key">
+<h3>7.2.5. Testing your ssh key<a class="headerlink" href="#testing-your-ssh-key" title="Permalink to this headline">¶</a></h3>
+<p>Test you key by logging onto India. India cluster gets the new ssh key
+updated almost immediately. For other clusters like Hotel, it can take
+around 10 minutes to update the ssh keys. If you are viewing this page
+anonymously, please replace &lt;USER&gt; with your FutureGrid user name (the
+one used to log into the Portal).</p>
+<p>If you placed the ssh key in the default location:</p>
+<div class="highlight-python"><pre>$ ssh -A gvonlasz@india.futuregrid.org</pre>
+</div>
+<p>If you used a different path or name for your key:</p>
+<div class="highlight-python"><pre>$ ssh -A -i &lt;path to private key&gt; gvonlasz@india.futuregrid.org</pre>
+</div>
+<p>The first time you ssh into a machine you will see a message like the
+one shown in the picture. You have to type yes and press enter:</p>
+<p><strong>Note</strong>: the presence of the -A argument above is required for Nimbus
+tutorials.</p>
+<p><strong>Note 1</strong>: If you are asked for a password when trying to ssh onto
+Hotel, do <strong>NOT</strong> type any password. This means that your ssh key is not
+updated yet. You need to wait a bit more.</p>
+</div>
+<div class="section" id="testing-your-ssh-key-on-hotel">
+<h3>7.2.6. Testing your ssh key on Hotel<a class="headerlink" href="#testing-your-ssh-key-on-hotel" title="Permalink to this headline">¶</a></h3>
+<p>After uploading your ssh key, it can take around 10 minutes to update
+the ssh keys of Hotel. So, if you were able to log onto India, you have
+set up properly your ssh key. So, after a while you will be able to log
+onto Hotel.  If you are viewing this page anonymously, Please replace
+&lt;USER&gt; with your FutureGrid user name (the one used to log into the
+Portal).</p>
+<p>If you placed the ssh key in the default location:</p>
+<div class="highlight-python"><pre>$ ssh -A gvonlasz@hotel.futuregrid.org</pre>
+</div>
+<p>If you used a different path or name for your key:</p>
+<div class="highlight-python"><pre>$ ssh -A -i &lt;path to private key&gt; gvonlasz@hotel.futuregrid.org</pre>
+</div>
+<p>The first time you ssh into a machine you will see a message like this:</p>
+<div class="highlight-python"><pre>The authenticity of host 'hotel.futuregrid.org (149.165.148.5)' can't be established.
+RSA key fingerprint is f8:96:15:b7:21:eb:64:92:6c:de:e0:79:f3:fb:86:dd.
+Are you sure you want to continue connecting (yes/no)? yes</pre>
+</div>
+<p><strong>Note</strong>: the presence of the -A argument above is required for Nimbus
+tutorials.</p>
+<p><strong>Note 1</strong>: If you are asked for a password when trying to ssh onto
+Hotel, do <strong>NOT</strong> type any password. This means that your ssh key is
+not updated yet. You need to wait a bit more.</p>
+</div>
+</div>
+</div>
+<div class="section" id="generating-ssh-keys-for-futuregrid-access">
+<h1>8. Generating SSH Keys for FutureGrid Access<a class="headerlink" href="#generating-ssh-keys-for-futuregrid-access" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="key-generation">
+<h1>9. Key Generation<a class="headerlink" href="#key-generation" title="Permalink to this headline">¶</a></h1>
+<p>To gain access to FutureGrid Resources including HPC and Nimbus
+services, you need to provide a public key to FutureGrid. We recommend
+that you are familiar with public keys and have the understanding that
+we do REQUIRE passphrase protected keys. To generate and send such a
+key, please follow the following steps. To find more out about open
+ssh you can also go to</p>
+<ul class="simple">
+<li><a class="reference external" href="http://openssh.com/manual.html">http://openssh.com/manual.html</a></li>
+</ul>
+<p>Other good resources include</p>
+<ul class="simple">
+<li><a class="reference external" href="http://help.github.com/key-setup-redirect">http://help.github.com/key-setup-redirect</a></li>
+<li><a class="reference external" href="http://help.github.com/working-with-key-passphrases/">http://help.github.com/working-with-key-passphrases/</a></li>
+<li><a class="reference external" href="http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/">http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/</a></li>
+</ul>
+<div class="section" id="generate-public-private-key-pair">
+<h2>9.1. Generate Public/Private Key Pair<a class="headerlink" href="#generate-public-private-key-pair" title="Permalink to this headline">¶</a></h2>
+<p>First, you have to generate a key. You do this as follows:</p>
+<ul class="simple">
+<li>Step 1: use the command “ssh-keygen -t rsa -C &lt;your-e-mail&gt;” to
+generate the key</li>
+<li>Step 2: specifiy the KeyPair location and name. We recommend that you
+use the default location if you do not yet have another key there.
+e.g. /home/username/.ssh/id_rsa</li>
+<li>Step 3: type user defined passphrase when asking passphrase for the
+key</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-python"><pre>ssh-keygen -t rsa -C johndoe@indiana.edu
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/johndoe/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/johndoe/.ssh/id_rsa.
+Your public key has been saved in /home/johndoe/.ssh/id_rsa.pub.
+The key fingerprint is:
+34:87:67:ea:c2:49:ee:c2:81:d2:10:84:b1:3e:05:59 johndoe@indiana.edu</pre>
+</div>
+</div>
+<div class="section" id="list-the-result">
+<h2>9.2. List the result<a class="headerlink" href="#list-the-result" title="Permalink to this headline">¶</a></h2>
+<p>You can find your key under the key location. As we user the .ssh
+directory it will be located there:</p>
+<div class="highlight-python"><pre>$ls -lisa ~/.ssh
+-rw-------  1 johndoe johndoe        1743 2011-02-10 09:44 id_rsa
+-rw-r--r--  1 johndoe johndoe         399 2011-02-10 09:44 id_rsa.pub</pre>
+</div>
+</div>
+<div class="section" id="add-or-replace-passphrase-for-an-already-generated-key">
+<h2>9.3. Add or Replace Passphrase for an Already Generated Key<a class="headerlink" href="#add-or-replace-passphrase-for-an-already-generated-key" title="Permalink to this headline">¶</a></h2>
+<p>In case you need to change your change passphrase, you can simply run
+“ssh-keygen -p” command. Then specify the location of your current key,
+and input (old and) new passphrases. There is no need to re-generate
+keys:</p>
+<div class="highlight-python"><pre>ssh-keygen -p
+
+Enter file in which the key is (/home/johndoe/.ssh/id_rsa):
+Enter old passphrase:
+Key has comment '/home/johndoe/.ssh/id_rsa'
+Enter new passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved with the new passphrase.</pre>
+</div>
+</div>
+<div class="section" id="capture-the-public-key-for-futuregrid">
+<h2>9.4. Capture the Public Key for FutureGrid<a class="headerlink" href="#capture-the-public-key-for-futuregrid" title="Permalink to this headline">¶</a></h2>
+<p>Use a text editor to open the “id_rsa.pub”. Copy the <strong>entire</strong>
+contents of this file into the ssh key field as part of your profile
+information. You can now add this key to your keys at the following
+page:</p>
+</div>
+<div class="section" id="key-management">
+<h2>9.5. Key Management<a class="headerlink" href="#key-management" title="Permalink to this headline">¶</a></h2>
+<p>This is a future section that will include material about how to use
+ssh-add and keychain. You can find instructions on them via the
+github link that we provided above. However, we are not github ;-)</p>
+</div>
+<div class="section" id="resetting-the-ssh-key">
+<h2>9.6. Resetting the SSH key<a class="headerlink" href="#resetting-the-ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>Please follow the instructions given at</p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/how-do-i-reset-my-ssh-key">https://portal.futuregrid.org/how-do-i-reset-my-ssh-key</a></li>
+</ul>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7. Getting Started &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>14. Getting Started &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="25. Part 2 - OTHER STUFF" href="part-2.html" />
-    <link rel="prev" title="6. Hardware" href="hardware.html" />
+    <link rel="next" title="20. Part 2 - OTHER STUFF" href="part-2.html" />
+    <link rel="prev" title="11. HPC Services" href="hpc.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -83,230 +83,146 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#support">5.5. Support</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hardware.html">6. Hardware</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-networks">6.1. Compute Networks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#network">6.2. Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#storage-service">6.3. Storage Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#status">6.4. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">6. Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-1-create-a-futuregrid-portal-account">6.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-2-create-a-new-project-or-join-an-existing-one">6.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-3-upload-your-ssh-public-key-s">6.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#account-management-service">6.4. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#key-reset-or-adding-new-keys">6.5. Key Reset or Adding new Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#creating-an-hpc-account">6.6. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#resetting-a-ssh-key">6.7. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#nimbus-eucalyptus-openstack">6.8. Nimbus, Eucalyptus, OpenStack</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">7. Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-create-a-futuregrid-portal-account">7.1. Step 1: Create a FutureGrid Portal Account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-new-project-or-join-an-existing-one">7.2. Step 2: Create a new Project or join an existing one</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-upload-your-ssh-public-key-s">7.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">7. Accessing FutureGrid resources via SSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#requirement-for-windows-users">7.1. Requirement for Windows Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#instructions-for-both-windows-and-unix-users">7.2. Instructions for both Windows and Unix users</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#accessing-futuregrid">8. Accessing FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#account-management-service">8.1. Account Management Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#key-reset-or-adding-new-keys">8.2. Key Reset or Adding new Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html#generating-ssh-keys-for-futuregrid-access">8. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html#key-generation">9. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#generate-public-private-key-pair">9.1. Generate Public/Private Key Pair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#list-the-result">9.2. List the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">9.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#capture-the-public-key-for-futuregrid">9.4. Capture the Public Key for FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#key-management">9.5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#resetting-the-ssh-key">9.6. Resetting the SSH key</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#account-creation">9. Account Creation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#creating-an-hpc-account">9.1. Creating an HPC account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resetting-a-ssh-key">9.2. Resetting a ssh-key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nimbus-eucalyptus-openstack">9.3. Nimbus, Eucalyptus, OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#training-and-education">9.4. Training and Education</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">10. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-networks">10.1. Compute Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#network">10.2. Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#storage-service">10.3. Storage Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#status">10.4. Status</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#guide-to-using-the-futuregrid-portal">10. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#functions-of-the-futuregrid-portal">10.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#a-futuregrid-user-dashboard">10.2. A FutureGrid&nbsp;User Dashboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#update-project-information-and-add-results">10.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#contribute-to-the-futuregrid-community">10.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#file-upload-and-attachment-to-a-page">10.5. File Upload and Attachment to a Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">11. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">11.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">11.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">11.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">11.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">11.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#mpi-libraries">11.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#compiling-mpi-applications">11.7. Compiling MPI Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-mpi-applications">11.8. Running MPI Applications</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#accessing-futuregrid-resources-via-ssh">11. Accessing FutureGrid resources via SSH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#requirement-for-windows-users">12. Requirement for Windows Users</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#instructions-for-both-windows-and-unix-users">13. Instructions for both Windows and Unix users</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#generate-ssh-key">13.1. Generate SSH key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#check-your-ssh-key">13.2. Check your ssh key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#copy-the-content-of-your-public-key">13.3. Copy the content of your public key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#upload-the-key-to-the-futuregrid-portal">13.4. Upload the key to the FutureGrid Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-your-ssh-key">13.5. Testing your ssh key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-your-ssh-key-on-hotel">13.6. Testing your ssh key on Hotel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html#log-in-to-hpc-services">12. Log in to HPC services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#i-still-can-not-access-fg-resources">12.1. I still can not access FG resources</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#hpc-services">14. HPC Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#using-hpc-services-on-futuregrid">15. Using HPC Services on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#accessing-systems">15.1. Accessing Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#filesystem-layout">15.2. Filesystem Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#modules">15.3. Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#managing-applications-with-torque">15.4. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#message-passing-interface-mpi">15.5. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mpi-libraries">15.6. MPI Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compiling-mpi-applications">15.7. Compiling MPI&nbsp;Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-mpi-applications">15.8. Running MPI&nbsp;Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">13. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-queued-jobs-as-part-of-the-hpc-services">13.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#monitoring-your-job">13.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#examining-your-job-output">13.3. Examining Your Job Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">13.4. Xray HPC Services</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#log-in-to-hpc-services">16. Log in to HPC services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#generating-ssh-keys-for-futuregrid-access">17. Generating SSH Keys for FutureGrid Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#key-generation">18. Key Generation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#generate-public-private-key-pair">18.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#list-the-result">18.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#add-or-replace-passphrase-for-an-already-generated-key">18.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#capture-the-public-key-for-futuregrid">18.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#key-management">18.5. 5. Key Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resetting-the-ssh-key">18.6. 6. Resetting the SSH key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#i-still-can-not-access-fg-resources">18.7. 7. I still can not access FG resources</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">14. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-4-explore-the-documentation">14.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#training-and-education">14.2. Training and Education</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#working-with-hpc-job-services">19. Working with HPC Job Services</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">19.1. Running Queued Jobs as Part of the HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#monitoring-your-job">19.2. Monitoring Your Job</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#examining-your-job-output">19.3. Examining Your Job Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#guide-to-using-the-futuregrid-portal">15. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functions-of-the-futuregrid-portal">15.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-futuregrid-user-dashboard">15.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-project-information-and-add-results">15.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribute-to-the-futuregrid-community">15.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-upload-and-attachment-to-a-page">15.5. File Upload and Attachment to a Page</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#xray">20. Xray</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#iu-cray-user-manual">20.1. IU Cray User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#alamo">16. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#iaas-infrastructure-as-a-service">17. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-iaas-clouds-on-futuregrid">18. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#management-services">19. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">20. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">21. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">21.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">21.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">21.3. Autorun</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#alamo">21. Alamo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#iaas-infrastructure-as-a-service">22. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#using-iaas-clouds-on-futuregrid">23. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#management-services">24. Management Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="part-2.html">25. Part 2 - OTHER STUFF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">26. Building the Book</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">26.1. Virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">26.2. Theme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">26.3. Autorun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">22. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">22.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">22.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">22.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">22.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">22.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">22.6. Excersises</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python.html">27. Just Enough Python for the Cloud</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">27.1. Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">27.2. OS Specific</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">27.3. Lanaguage Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#local">27.4. Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">27.5. Ecosystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">27.6. Excersises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">23. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">24. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">24.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">24.2. commandline clients</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">28. Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="openstack.html">29. OpenStack</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">29.1. Get a cloud account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">29.2. commandline clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">25. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">25.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">25.2. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">25.3. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">25.4. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">25.5. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">25.6. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">25.7. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">25.8. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">25.9. Status of Deployments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">30. Eucalyptus on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#summary">30.1. Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">30.2. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">30.3. Account Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">30.4. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">30.5. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">30.6. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">30.7. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">30.8. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">30.9. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">30.10. Status of Deployments</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="india.html">31. India on  FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">26. India on  FutureGrid</a></li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">7. Getting Started</a><ul>
-<li><a class="reference internal" href="#step-1-create-a-futuregrid-portal-account">7.1. Step 1: Create a FutureGrid Portal Account</a></li>
-<li><a class="reference internal" href="#step-2-create-a-new-project-or-join-an-existing-one">7.2. Step 2: Create a new Project or join an existing one</a></li>
-<li><a class="reference internal" href="#step-3-upload-your-ssh-public-key-s">7.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+<li><a class="reference internal" href="#">14. Getting Started</a><ul>
+<li><a class="reference internal" href="#step-4-explore-the-documentation">14.1. Step 4: Explore the Documentation</a></li>
+<li><a class="reference internal" href="#training-and-education">14.2. Training and Education</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#accessing-futuregrid">8. Accessing FutureGrid</a><ul>
-<li><a class="reference internal" href="#account-management-service">8.1. Account Management Service</a><ul>
-<li><a class="reference internal" href="#apply-for-a-project-or-request-an-account">8.1.1. Apply for a Project or Request an Account</a><ul>
-<li><a class="reference internal" href="#implicit-project-responsibilities-for-project-members-and-pi-agreement-for-reporting">8.1.1.1. Implicit Project Responsibilities for Project Members and PI Agreement for Reporting</a></li>
+<li><a class="reference internal" href="#guide-to-using-the-futuregrid-portal">15. Guide to Using the FutureGrid Portal</a><ul>
+<li><a class="reference internal" href="#functions-of-the-futuregrid-portal">15.1. Functions of the FutureGrid Portal</a></li>
+<li><a class="reference internal" href="#a-futuregrid-user-dashboard">15.2. A FutureGrid User Dashboard</a></li>
+<li><a class="reference internal" href="#update-project-information-and-add-results">15.3. Update Project Information and Add Results</a></li>
+<li><a class="reference internal" href="#contribute-to-the-futuregrid-community">15.4. Contribute to the FutureGrid Community</a></li>
+<li><a class="reference internal" href="#file-upload-and-attachment-to-a-page">15.5. File Upload and Attachment to a Page</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#cloud-accounts">8.1.2. Cloud Accounts</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#key-reset-or-adding-new-keys">8.2. Key Reset or Adding new Keys</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#account-creation">9. Account Creation</a><ul>
-<li><a class="reference internal" href="#creating-an-hpc-account">9.1. Creating an HPC account</a></li>
-<li><a class="reference internal" href="#resetting-a-ssh-key">9.2. Resetting a ssh-key</a></li>
-<li><a class="reference internal" href="#nimbus-eucalyptus-openstack">9.3. Nimbus, Eucalyptus, OpenStack</a></li>
-<li><a class="reference internal" href="#training-and-education">9.4. Training and Education</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#guide-to-using-the-futuregrid-portal">10. Guide to Using the FutureGrid Portal</a><ul>
-<li><a class="reference internal" href="#functions-of-the-futuregrid-portal">10.1. Functions of the FutureGrid Portal</a></li>
-<li><a class="reference internal" href="#a-futuregrid-user-dashboard">10.2. A FutureGrid&nbsp;User Dashboard</a></li>
-<li><a class="reference internal" href="#update-project-information-and-add-results">10.3. Update Project Information and Add Results</a></li>
-<li><a class="reference internal" href="#contribute-to-the-futuregrid-community">10.4. Contribute to the FutureGrid Community</a></li>
-<li><a class="reference internal" href="#file-upload-and-attachment-to-a-page">10.5. File Upload and Attachment to a Page</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#accessing-futuregrid-resources-via-ssh">11. Accessing FutureGrid resources via SSH</a></li>
-<li><a class="reference internal" href="#requirement-for-windows-users">12. Requirement for Windows Users</a></li>
-<li><a class="reference internal" href="#instructions-for-both-windows-and-unix-users">13. Instructions for both Windows and Unix users</a><ul>
-<li><a class="reference internal" href="#generate-ssh-key">13.1. Generate SSH key</a></li>
-<li><a class="reference internal" href="#check-your-ssh-key">13.2. Check your ssh key</a></li>
-<li><a class="reference internal" href="#copy-the-content-of-your-public-key">13.3. Copy the content of your public key</a></li>
-<li><a class="reference internal" href="#upload-the-key-to-the-futuregrid-portal">13.4. Upload the key to the FutureGrid Portal</a></li>
-<li><a class="reference internal" href="#testing-your-ssh-key">13.5. Testing your ssh key</a></li>
-<li><a class="reference internal" href="#testing-your-ssh-key-on-hotel">13.6. Testing your ssh key on Hotel</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#hpc-services">14. HPC Services</a></li>
-<li><a class="reference internal" href="#using-hpc-services-on-futuregrid">15. Using HPC Services on FutureGrid</a><ul>
-<li><a class="reference internal" href="#accessing-systems">15.1. Accessing Systems</a></li>
-<li><a class="reference internal" href="#filesystem-layout">15.2. Filesystem Layout</a></li>
-<li><a class="reference internal" href="#modules">15.3. Modules</a></li>
-<li><a class="reference internal" href="#managing-applications-with-torque">15.4. Managing Applications with Torque</a></li>
-<li><a class="reference internal" href="#message-passing-interface-mpi">15.5. Message Passing Interface (MPI)</a></li>
-<li><a class="reference internal" href="#mpi-libraries">15.6. MPI Libraries</a></li>
-<li><a class="reference internal" href="#compiling-mpi-applications">15.7. Compiling MPI&nbsp;Applications</a></li>
-<li><a class="reference internal" href="#running-mpi-applications">15.8. Running MPI&nbsp;Applications</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#log-in-to-hpc-services">16. Log in to HPC services</a></li>
-<li><a class="reference internal" href="#generating-ssh-keys-for-futuregrid-access">17. Generating SSH Keys for FutureGrid Access</a></li>
-<li><a class="reference internal" href="#key-generation">18. Key Generation</a><ul>
-<li><a class="reference internal" href="#generate-public-private-key-pair">18.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong></a></li>
-<li><a class="reference internal" href="#list-the-result">18.2. <strong>2.&nbsp;</strong><strong>List the result</strong></a></li>
-<li><a class="reference internal" href="#add-or-replace-passphrase-for-an-already-generated-key">18.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong></a></li>
-<li><a class="reference internal" href="#capture-the-public-key-for-futuregrid">18.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong></a></li>
-<li><a class="reference internal" href="#key-management">18.5. 5. Key Management</a></li>
-<li><a class="reference internal" href="#resetting-the-ssh-key">18.6. 6. Resetting the SSH key</a></li>
-<li><a class="reference internal" href="#i-still-can-not-access-fg-resources">18.7. 7. I still can not access FG resources</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#working-with-hpc-job-services">19. Working with HPC Job Services</a><ul>
-<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">19.1. Running Queued Jobs as Part of the HPC Services</a><ul>
-<li><a class="reference internal" href="#a-simple-job-script">19.1.1. &nbsp;A Simple Job Script</a></li>
-<li><a class="reference internal" href="#submitting-your-job">19.1.2. &nbsp; Submitting Your Job</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#monitoring-your-job">19.2. Monitoring Your Job</a></li>
-<li><a class="reference internal" href="#examining-your-job-output">19.3. Examining Your Job Output</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#xray">20. Xray</a><ul>
-<li><a class="reference internal" href="#iu-cray-user-manual">20.1. IU Cray User Manual</a><ul>
-<li><a class="reference internal" href="#submitting-a-job">20.1.1. &nbsp;Submitting a job</a></li>
-<li><a class="reference internal" href="#how-do-i-submit-a-job-to-the-cray-xt5m-on-futuregrid">20.1.2. How Do I Submit a Job to the Cray XT5m on FutureGrid?</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#alamo">21. Alamo</a></li>
-<li><a class="reference internal" href="#iaas-infrastructure-as-a-service">22. IaaS - Infrastructure as a Service</a></li>
-<li><a class="reference internal" href="#using-iaas-clouds-on-futuregrid">23. Using IaaS Clouds on FutureGrid</a></li>
-<li><a class="reference internal" href="#management-services">24. Management Services</a></li>
+<li><a class="reference internal" href="#alamo">16. Alamo</a></li>
+<li><a class="reference internal" href="#iaas-infrastructure-as-a-service">17. IaaS - Infrastructure as a Service</a></li>
+<li><a class="reference internal" href="#using-iaas-clouds-on-futuregrid">18. Using IaaS Clouds on FutureGrid</a></li>
+<li><a class="reference internal" href="#management-services">19. Management Services</a></li>
 </ul>
 </ul>
 </li>
             
             
               
-  <li><a href="hardware.html"
-         title="previous chapter">&laquo; 6. Hardware</a></li>
+  <li><a href="hpc.html"
+         title="previous chapter">&laquo; 11. HPC Services</a></li>
   <li><a href="part-2.html"
-         title="next chapter">25. Part 2 - OTHER STUFF &raquo;</a></li>
+         title="next chapter">20. Part 2 - OTHER STUFF &raquo;</a></li>
             
             
               <li>
@@ -331,7 +247,11 @@
 <div class="container">
   
   <div class="section" id="getting-started">
-<h1>7. Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<h1>14. Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">put the links to the sections here</p>
+</div>
 <p>In order for you to gain access to the FutureGrid resources, you need to
 follow real simple steps:</p>
 <ol class="arabic simple">
@@ -341,115 +261,13 @@ follow real simple steps:</p>
 <li>Explore our Manual</li>
 </ol>
 <p>We will introduce these steps in more detail next.</p>
-<div class="section" id="step-1-create-a-futuregrid-portal-account">
-<h2>7.1. Step 1: Create a FutureGrid Portal Account<a class="headerlink" href="#step-1-create-a-futuregrid-portal-account" title="Permalink to this headline">¶</a></h2>
-<p>In order to utilize&nbsp;<strong>any</strong>&nbsp;FutureGrid resource, you must posses a
-FutureGrid&nbsp;<strong>portal account</strong>. Thus,&nbsp;<em>apply for your&nbsp;**portal
-account&nbsp;**</em>before you attempt anything else.&nbsp;This account is used to
-gather some information that we will use in the next steps. You must
-make sure that the information is complete before you proceed to the
-second step. &nbsp;FutureGrid performs basic verification of the information
-you provide when creating an account, so it may take a little while
-before your account is approved. Once you have a portal account, please
-proceed.</p>
-<p>Please note that you cannot access FutureGrid resources until you
-complete the next steps.</p>
-<p>Here are a few tips that make it easy for you</p>
-<ul class="simple">
-<li>On the portal&#8217;s main page at
-<a class="reference external" href="https://portal.futuregrid.org">https://portal.futuregrid.org</a>
-appears
-a&nbsp;<a class="reference external" href="https://portal.futuregrid.org/user/register%20">**Register**</a>&nbsp;Link.</li>
-<li>Following you will be able to&nbsp;<strong>Create a new account</strong>&nbsp;on the
-portal.</li>
-<li>Fill in <strong>ALL&nbsp;</strong>fields as much as you can.</li>
-<li>Note that fields with *&nbsp;are mandatory</li>
-<li>It is important that you specify your address information completely.</li>
-<li>If you are a graduate or undergraduate student please fill out your
-advisors contact information in the field specially dedicated for it.
-If he has a FutureGrid Portal name, please also add his portal name
-if you know it in that field.</li>
-<li>If you have an e-mail address from your institution, we ask that you
-use this address instead of one from gmail, hotmail, or other e-mail
-services that we cannot trace back to your name or institution.</li>
-<li>Usage of all non institutional addresses will prolong the application
-process.</li>
-<li>Please note that creating a portal account does not give you access
-to any FutureGrid resources, for that you have to complete step 2 and
-3.</li>
-<li>Please remember that checking your information will take time. Thus
-we recommend that you wait&nbsp;till you get a message that tells you that
-your portal account has been approved. Then continue to The next
-step. We are not conducting any portal approval outside of 10am-4pm
-EST. If you are easily to be identified your approval will take 1-2
-days, if not, we have either problems verifying your data or
-something else is not right. In case you appear to be a spammer we
-will not notify you.</li>
-<li>In case you are teaching a class class we have some special
-instructions for you and after you apply for a portal account you may
-want to get in contact with us via the <a class="reference external" href="https://portal.futuregrid.org/help">help
-form</a></li>
-</ul>
-</div>
-<div class="section" id="step-2-create-a-new-project-or-join-an-existing-one">
-<h2>7.2. Step 2: Create a new Project or join an existing one<a class="headerlink" href="#step-2-create-a-new-project-or-join-an-existing-one" title="Permalink to this headline">¶</a></h2>
-<p>You need to either apply for a new FutureGrid project or join an
-existing project to use FutureGrid resources. To apply for a new
-project, fill out the <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">project creation
-form</a>. To join an
-existing project, ask the project lead or project manager for that
-project to add you to their project using that same form. If the project
-is set to &#8220;accept public join request&#8221;, you may also send a request in
-the portal. To do this, first view the <a class="reference external" href="https://portal.futuregrid.org/projects">project
-list</a>and go to the project
-detail page by clicking the project title. If the project is set by the
-project lead to &#8220;accept join request&#8221;, then you&#8217;ll see a large gray
-&#8216;Join this project&#8217; button in the upper right corner of the page. Click
-the button to send the join request to the project lead and manager so
-they can process your request.</p>
-<p>Once you have been approved to work on a project, you will be able to
-access the resources and services that your project has requested and
-been authorized to use. See the <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">project creation
-form</a> for a list
-of FutureGrid resources and services.</p>
-<p>Here are a view links that may help you:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">Create a new project creation
-form</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/projects">See the project&nbsp;list to identify the project you like to
-join</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/faq">Read some FAQs about the account
-creation</a></li>
-</ul>
-</div>
-<div class="section" id="step-3-upload-your-ssh-public-key-s">
-<h2>7.3. Step 3: Upload Your SSH Public Key(s)<a class="headerlink" href="#step-3-upload-your-ssh-public-key-s" title="Permalink to this headline">¶</a></h2>
-<p>In order to be able to log into the started VMs, among other purposes,
-you need to provide FG with a secure-shell (ssh) public key.&nbsp;If you are
-already a frequent user of ssh, and have a private and public key pair,
-it is perfectly reasonable to provide your public key. It&#8217;s&nbsp;<em>public</em>,
-after all.</p>
-<p>To upload the chosen public key:</p>
-<ol class="arabic simple">
-<li>Copy your public identity into your system clipboard.</li>
-<li>Log into the FG portal&nbsp;<a class="reference external" href="../../">https://portal.futuregrid.org/</a></li>
-<li>In the&nbsp;<strong>Accounts</strong>&nbsp;menu, select&nbsp;<strong>My Portal and HPC
-Account</strong>&nbsp;page. and activate the panel saying <strong>SSH keys</strong></li>
-<li>Click the link that says Add a public key.</li>
-</ol>
-<p>This step should be fairly instantaneous.</p>
-<p>If you are not familiar with ssh key generation, or&nbsp;if you have
-difficulty generating a key pair, please inform yourself about ssh keys
-or contact us via our <a class="reference external" href="https://portal.futuregrid.org/help">help form</a>
-. Detailed instructions on how to generate ssh key pairs will be added
-to this document in the near future.</p>
-<p>Step 4: Explore the Documentation</p>
-<hr class="docutils" />
+<div class="section" id="step-4-explore-the-documentation">
+<h2>14.1. Step 4: Explore the Documentation<a class="headerlink" href="#step-4-explore-the-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Once you have access to FutureGrid resources, a good place to start
 learning about how to use FutureGrid are the tutorials, specifically the
 following:</p>
 <ul class="simple">
-<li>The&nbsp;<a class="reference external" href="http://portal.futuregrid.org/manual">Manual</a> for detailed
+<li>The <a class="reference external" href="http://portal.futuregrid.org/manual">Manual</a> for detailed
 information</li>
 </ul>
 <p>Our manual will include a variety of topics that are of interest to our
@@ -464,158 +282,8 @@ Contents</a></li>
 <p>It will be also easy for you to search for some topics in our search box
 at the top of the Web page.</p>
 </div>
-</div>
-<div class="section" id="accessing-futuregrid">
-<h1>8. Accessing FutureGrid<a class="headerlink" href="#accessing-futuregrid" title="Permalink to this headline">¶</a></h1>
-<p>To use FutureGrid&nbsp;you must be part of a valid &#8220;project&#8221;. Project
-leaders&nbsp;are requested to fill out project applications about the use of
-FutureGrid. The
-<a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">form</a> gathers
-some important information about their projects to be conducted. At this
-time this information is publicly shared. This information is used to
-report and document not only to us but also to our sponsors which
-activities are conducted on FutureGrid. The more precise you are in your
-descriptions and filling out the forms the better we can highlight your
-project. Once a project is formed, project members can join a project.
-This must be conducted by the project lead. &nbsp;A user retains an active
-account on FutureGrid when they are in at least one active project. A
-user that is inactive does not have to apply for a new account, but
-instead apply for a new project. Once that project is activated the user
-account becomes active.</p>
-<div class="section" id="account-management-service">
-<h2>8.1. Account Management Service<a class="headerlink" href="#account-management-service" title="Permalink to this headline">¶</a></h2>
-<p>Please note the current process of applying for account may change.</p>
-<ol class="arabic simple">
-<li>Any user can apply easily for a Portal account: Please go to<ul>
-<li><a class="reference external" href="http://portal.futuregrid.org/user/register">https://portal.futuregrid.org/user/register</a></li>
-<li>it may take a day or two to get a portal account. Portal
-accounts&nbsp;will not be created over the weekend.</li>
-</ul>
-</li>
-<li>Once logged in the user has a couple of options<ul>
-<li><a class="reference external" href="https://portal.futuregrid.org/manage-my-portal-account">User Profile
-Management</a>:
-Update information regarding the user profile</li>
-<li>Project Management: apply for <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">new
-projects</a>,
-join existing projects, update information and results of a
-project, manage members and roles of users participating in your
-projects</li>
-<li>Managing Certificates and Keys: Integrate OpenID login for the
-portal (with for example your google ID), manage your ssh key for
-access to the HPC service, Manage Nimbus and Eucalyptus accounts
-and keys</li>
-</ul>
-</li>
-</ol>
-<div class="section" id="apply-for-a-project-or-request-an-account">
-<h3>8.1.1. Apply for a Project or Request an Account<a class="headerlink" href="#apply-for-a-project-or-request-an-account" title="Permalink to this headline">¶</a></h3>
-<p>To get access to FutureGrid (FG), you need to register your project in
-it. Please go to:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">https://portal.futuregrid.org/node/add/fg-projects</a></li>
-</ul>
-<p>to apply for a new project. It may take some time for your project to
-get approved. No projects will be approved over the weekend.</p>
-<p>In case you like to join an existing project, please find the list of
-projects at:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/projects">https://portal.futuregrid.org/projects</a></li>
-</ul>
-<p>Clicking on a project title will bring you to the project information
-page, where you may see a large gray button on the upper right corner of
-the page named &#8216;Join this project&#8217;. Click to send join request to that
-project. Please notice the PI of the project has to approve you before
-you are part of that project.</p>
-<p>Some project may not accept external members so there would be no join
-button for them. Please notice this behavior is controlled by the owner
-of the project.</p>
-<p>You can always communicate with the project PI through external channel
-of the FutureGrid portal if you know him/her in person by letting
-him/her know your portal username. He/she can then directly add you as a
-member to his/her project without going through the join request process
-through the portal.</p>
-<div class="section" id="implicit-project-responsibilities-for-project-members-and-pi-agreement-for-reporting">
-<h4>8.1.1.1. Implicit Project Responsibilities for Project Members and PI Agreement for Reporting<a class="headerlink" href="#implicit-project-responsibilities-for-project-members-and-pi-agreement-for-reporting" title="Permalink to this headline">¶</a></h4>
-<p>The Project PI has agreed to certain reporting requirements to provide
-information to FutureGrid. He will be responsible to make sure that they
-are completed and also implemented with the users joining the project.
-Thus the user is responsible to comply with the terms of the project in
-regards to reporting and acknowledgements in case of publications. Each
-project PI has the responsibility to communicate such requirements to
-the members and managers. The project agreements overwrite the
-individuals agreement.</p>
-</div>
-</div>
-<div class="section" id="cloud-accounts">
-<h3>8.1.2. Cloud Accounts<a class="headerlink" href="#cloud-accounts" title="Permalink to this headline">¶</a></h3>
-<p>The cloud accounts are handled currently separately from the HPC account
-creation process. In fact the Eucalyptus clouds are disjunctive on each
-machine and have their own user management. For Nimbus uploading your
-ssh key is sufficient. The turnaround time for you getting access to the
-system is typically between 30 minutes and one day.</p>
-<p>Please be kind and only apply for these cloud accounts if you really
-need them.</p>
-</div>
-</div>
-<div class="section" id="key-reset-or-adding-new-keys">
-<h2>8.2. Key Reset or Adding new Keys<a class="headerlink" href="#key-reset-or-adding-new-keys" title="Permalink to this headline">¶</a></h2>
-<p>To reset or add a new you ssh key, please update your keys first by
-visiting the page</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/user/23/ssh-keys">https://portal.futuregrid.org/user/23/ssh-keys</a></li>
-</ul>
-<p>and change the keys as needed. Your reset will take 30 minutes to one
-day to propagate through the system services.</p>
-<p>You are not allowed to use password less keys. &nbsp;Your account may be
-deactivated.</p>
-</div>
-</div>
-<div class="section" id="account-creation">
-<h1>9. Account Creation<a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="creating-an-hpc-account">
-<h2>9.1. Creating an HPC account<a class="headerlink" href="#creating-an-hpc-account" title="Permalink to this headline">¶</a></h2>
-<p>All you need to do to obtain an HPC account is to be in a valid project
-and upload your ssh key. Typically you will get the account within one
-business day. There will be typically no accounts approved in non
-business hours including weekends.</p>
-<p>Please add your SSH keys in your profile which you can find at:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/user/23/ssh-keys">https://portal.futuregrid.org/user/23/ssh-keys</a></li>
-</ul>
-<p>Once you have done that, please go back to this form and complete it.
-After submission, this form will create an e-mail request to FutureGrid.
-The FG administrators may contact you to verify this request.</p>
-<dl class="docutils">
-<dt>Please, make sure you are a member of a valid project.</dt>
-<dd>Project IDs can be found at</dd>
-</dl>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/projects">https://portal.futuregrid.org/projects</a></li>
-</ul>
-<p>The project lead is responsible for determining if you can be added to
-the project.</p>
-<p>Note: Do not send mail to FG staff members about joining a project, as
-we are not managing individual project memberships</p>
-<p>To view your current memberships and status of your account application,
-please visit</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/manage-my-portal-account">https://portal.futuregrid.org/manage-my-portal-account</a></li>
-</ul>
-</div>
-<div class="section" id="resetting-a-ssh-key">
-<h2>9.2. Resetting a ssh-key<a class="headerlink" href="#resetting-a-ssh-key" title="Permalink to this headline">¶</a></h2>
-<p>Simply visit the ssh-key page and upload a new key. YoU can optionally
-delete other keys if you do n longer need them.</p>
-</div>
-<div class="section" id="nimbus-eucalyptus-openstack">
-<h2>9.3. Nimbus, Eucalyptus, OpenStack<a class="headerlink" href="#nimbus-eucalyptus-openstack" title="Permalink to this headline">¶</a></h2>
-<p>Once you have uploaded your SSH key, the Nimbus, Eucalyptus, and
-OpenStack access will be granted. Please visit the manual pages for more
-details on accessing them.</p>
-</div>
 <div class="section" id="training-and-education">
-<h2>9.4. Training and Education<a class="headerlink" href="#training-and-education" title="Permalink to this headline">¶</a></h2>
+<h2>14.2. Training and Education<a class="headerlink" href="#training-and-education" title="Permalink to this headline">¶</a></h2>
 <p>FutureGrid provides training and educational materials through manuals
 and tutorials.</p>
 <p>FutureGrid leverages technologies contributed by its partners and by the
@@ -624,26 +292,21 @@ virtual clusters - including the plug-and-play, self-configuring Grid
 appliance, the Nimbus science cloud middleware, the IPOP/GroupVPN
 self-configuring virtual network, and the ViNe virtual network.</p>
 <p>For links to the initial appliance-based FutureGrid tutorials, see the
-FutureGrid&nbsp;<a class="reference external" href="https://portal.futuregrid.org/outreach">Education and Outreach
+FutureGrid <a class="reference external" href="https://portal.futuregrid.org/outreach">Education and Outreach
 page</a>. Additionally, for
-video tutorials on the use of the appliances, see the&nbsp;<a class="reference external" href="http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3">Grid appliance
+video tutorials on the use of the appliances, see the <a class="reference external" href="http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3">Grid appliance
 YouTube
 channel</a>.</p>
 <p><a class="reference external" href="https://portal.futuregrid.org/gettingstarted">‹ Quickstart</a></p>
 </div>
 </div>
 <div class="section" id="guide-to-using-the-futuregrid-portal">
-<h1>10. Guide to Using the FutureGrid Portal<a class="headerlink" href="#guide-to-using-the-futuregrid-portal" title="Permalink to this headline">¶</a></h1>
+<h1>15. Guide to Using the FutureGrid Portal<a class="headerlink" href="#guide-to-using-the-futuregrid-portal" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="functions-of-the-futuregrid-portal">
-<h2>10.1. Functions of the FutureGrid Portal<a class="headerlink" href="#functions-of-the-futuregrid-portal" title="Permalink to this headline">¶</a></h2>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line-block">
-<div class="line">The FutureGrid portal aims to:</div>
-</div>
-</div>
+<h2>15.1. Functions of the FutureGrid Portal<a class="headerlink" href="#functions-of-the-futuregrid-portal" title="Permalink to this headline">¶</a></h2>
+<p>The FutureGrid portal aims to:</p>
 <ol class="arabic simple">
-<li>Be the definite&nbsp;source for information about FutureGrid (manuals,
+<li>Be the definite source for information about FutureGrid (manuals,
 papers, forums, FAQ, ...)</li>
 <li>Allow management of your FG accounts (portal, services, and
 resources)</li>
@@ -653,8 +316,8 @@ resources)</li>
 </ol>
 </div>
 <div class="section" id="a-futuregrid-user-dashboard">
-<h2>10.2. A FutureGrid&nbsp;User Dashboard<a class="headerlink" href="#a-futuregrid-user-dashboard" title="Permalink to this headline">¶</a></h2>
-<p>After login, you will be redirected to a dashboard-like page (go to&nbsp;the
+<h2>15.2. A FutureGrid User Dashboard<a class="headerlink" href="#a-futuregrid-user-dashboard" title="Permalink to this headline">¶</a></h2>
+<p>After login, you will be redirected to a dashboard-like page (go to the
 menu Accounts -&gt; My Portal Account), where you will see the following:</p>
 <ol class="arabic simple">
 <li>A list of useful links, including links to profile, account, SSH key,
@@ -674,7 +337,7 @@ it.</li>
 </ol>
 </div>
 <div class="section" id="update-project-information-and-add-results">
-<h2>10.3. Update Project Information and Add Results<a class="headerlink" href="#update-project-information-and-add-results" title="Permalink to this headline">¶</a></h2>
+<h2>15.3. Update Project Information and Add Results<a class="headerlink" href="#update-project-information-and-add-results" title="Permalink to this headline">¶</a></h2>
 <p>Another frequently used feature is the ability to update your project
 information (e.g., add project members) and fill in results in the
 &#8216;Project Results&#8217; section. You can do so only when you are either the
@@ -682,7 +345,7 @@ owner of the project or the project manager (if the owner has delegated
 that to you). By following the links provided in the &#8216;Dashboard&#8217;
 section, you can review and edit the project information.</p>
 <p>To add a user to your project as a member, the user must have a
-FutureGrid&nbsp;portal account first. Then, while editing the project, you
+FutureGrid portal account first. Then, while editing the project, you
 can type a user&#8217;s first name, and the suggestion feature will pop up
 with the user&#8217;s username to be added. If you have many members to add,
 click the &#8216;Add another item&#8217; in the &#8216;Project Members&#8217; section to add
@@ -700,12 +363,12 @@ an image hosted somewhere else.</p>
 FAQ</a>.</p>
 </div>
 <div class="section" id="contribute-to-the-futuregrid-community">
-<h2>10.4. Contribute to the FutureGrid Community<a class="headerlink" href="#contribute-to-the-futuregrid-community" title="Permalink to this headline">¶</a></h2>
+<h2>15.4. Contribute to the FutureGrid Community<a class="headerlink" href="#contribute-to-the-futuregrid-community" title="Permalink to this headline">¶</a></h2>
 <p>The FutureGrid portal also provides its users a place where they can
 contribute to the community by sharing their ideas, research topics, FG
 experience, etc.; in this way people can learn from you, and also you
 can learn from others. Emphasizing user participation and
-collaboration&nbsp;is one of the main goals shaping the portal to its current
+collaboration is one of the main goals shaping the portal to its current
 state.</p>
 <p>You can contribute by <a class="reference external" href="https://portal.futuregrid.org/node/add/page-community">creating a &#8216;Community
 Page&#8217;</a>. You
@@ -717,1037 +380,38 @@ images, etc.</p>
 <p>You can cite FutureGrid references also, by enclosing a citekey within
 the &#8216;bib&#8217; tag as stated under the editor window (NOTE: Please use &#8216;[]&#8217;
 instead of &#8216;&lt;&gt;&#8217;), where CITEKEY could be found in the <a class="reference external" href="https://portal.futuregrid.org/biblio">biblio
-page</a>&nbsp;(the content within but
+page</a> (the content within but
 not including the &#8216;[ ]&#8217;).</p>
 <p>An example of a user contributed page can be found
 <a class="reference external" href="https://portal.futuregrid.org/contrib/testexample-page-user-contributed-page">here</a>.</p>
 </div>
 <div class="section" id="file-upload-and-attachment-to-a-page">
-<h2>10.5. File Upload and Attachment to a Page<a class="headerlink" href="#file-upload-and-attachment-to-a-page" title="Permalink to this headline">¶</a></h2>
+<h2>15.5. File Upload and Attachment to a Page<a class="headerlink" href="#file-upload-and-attachment-to-a-page" title="Permalink to this headline">¶</a></h2>
 <p>Please see <a class="reference external" href="https://portal.futuregrid.org/faq/how-uploadattach-file-page">this
 FAQ</a>
 for instructions on file upload.</p>
 </div>
 </div>
-<div class="section" id="accessing-futuregrid-resources-via-ssh">
-<h1>11. Accessing FutureGrid resources via SSH<a class="headerlink" href="#accessing-futuregrid-resources-via-ssh" title="Permalink to this headline">¶</a></h1>
-<p>To properly view this manual page, please log into the FutureGrid portal
-with your FutureGrid name.</p>
-<p>To access the various FutureGrid resources, you need to provide a public
-ssh key to FutureGrid. In this manual, we explain how to generate a ssh
-key, upload it to the FutureGrid portal and log onto the resources. This
-manual covers both UNIX and Windows Users.</p>
-</div>
-<div class="section" id="requirement-for-windows-users">
-<h1>12. Requirement for Windows Users<a class="headerlink" href="#requirement-for-windows-users" title="Permalink to this headline">¶</a></h1>
-<p>Windows users need to have some special software to be able to use the
-SSH commands. We recommend you use Cygwin (Linux-like environment for
-Windows) because it will ease your experience with FutureGrid. We have
-prepared a Cygwin version that is ready to use (If for some reason you
-decide to download and install Cygwin from the official site, remember
-that you need to install the ssh packages).</p>
-<ol class="arabic simple">
-<li>Download Cygwin from our
-Portal&nbsp;<a class="reference external" href="https://portal.futuregrid.org/sites/default/files/cygwin.zip">https://portal.futuregrid.org/sites/default/files/cygwin.zip</a>.</li>
-<li>Uncompress the file.</li>
-<li>Execute the file the &#8216;Windows Batch File&#8217; called Cygwin.bat
-<img alt="image21" src="https://portal.futuregrid.org/sites/default/files/u30/cygwim1.png" /></li>
-<li>You may get a warning. Click in the Run button
-<img alt="image22" src="https://portal.futuregrid.org/sites/default/files/u30/cygwin2.png" /></li>
-<li>You get a Linux-like terminal that will allow you to continue with
-this manual.
-<img alt="image23" src="https://portal.futuregrid.org/sites/default/files/u30/cygwinfirst.png" /></li>
-</ol>
-<p><strong>NOTE</strong>: When showing examples of commands, the $ symbol precedes the
-actual command. So, the other lines are the output obtained after
-executing the command.</p>
-</div>
-<div class="section" id="instructions-for-both-windows-and-unix-users">
-<h1>13. Instructions for both Windows and Unix users<a class="headerlink" href="#instructions-for-both-windows-and-unix-users" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="generate-ssh-key">
-<h2>13.1. Generate SSH key<a class="headerlink" href="#generate-ssh-key" title="Permalink to this headline">¶</a></h2>
-<p>Use the tool ssh-keygen. This program is commonly available on most UNIX
-systems (this includes Cygwin). It will ask you for the location and
-name of the new key. It will also ask you for a passphrase, we
-<strong>STRONGLY RECOMMEND</strong> that you use a passphrase. We have seem advise by
-teachers and teachin assistants to not use passphrases: this is
-<strong>WRONG</strong>. If you are not using a pasphrase and someone were to steal
-your private key they have easily access to your account. We recommend
-using the default location ~/.ssh/ and the default name id_rsa. A
-sample session:</p>
-<div class="highlight-python"><pre>$ ssh-keygen
-
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/Javi/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/Javi/.ssh/id_rsa
-Your public key has been saved in /home/Javi/.ssh/id_rsa.pub.
-The key fingerprint is:
-90:46:9b:cf:09:16:94:17:df:43:f4:99:97:0d:42:4a Javi@Javi-PC
-The key's randomart image is:</pre>
-</div>
-<div class="highlight-python"><pre>+--[ RSA 2048]----+
-|     .+...Eo= .       |
-|     ..=.o + o +o    |
-|      O.  o o +.o      |
-|     o = .   . .       |
-|        S                     |
-|                                 |
-|                                 |
-|                 |
-|                                 |
-+-----------------+</pre>
-</div>
-<p>This command requires the interaction of the user.</p>
-<p>&nbsp; &nbsp; 1. The first question is:</p>
-<div class="highlight-python"><pre>Enter file in which to save the key (/home/Javi/.ssh/id_rsa):</pre>
-</div>
-<p>We recommend you use the default. To do so, just press the enter key. In
-case you already have a ssh key in your machine, you can skip this whole
-section or use a different file name.</p>
-<p>&nbsp; &nbsp; 2. The second and third question is to protect your ssh key with a
-passphrase. This password will protect your key because you need to type
-it when you want to use it. Thus, you can either type a passphrase or
-press enter to leave it without passphrase. To avoid security problems,
-we DO recommend that chose a passphrase as discussed previously. Make
-sure to not just type return for an empty passphrase.</p>
-<div class="highlight-python"><pre>Enter passphrase (empty for no passphrase):</pre>
-</div>
-<p>and</p>
-<div class="highlight-python"><pre>Enter same passphrase again:</pre>
-</div>
-</div>
-<div class="section" id="check-your-ssh-key">
-<h2>13.2. Check your ssh key<a class="headerlink" href="#check-your-ssh-key" title="Permalink to this headline">¶</a></h2>
-<p>Once, you have generated your key, you should have them in the .ssh
-directory</p>
-<div class="highlight-python"><pre>$ ls -l ~/.ssh</pre>
-</div>
-</div>
-<div class="section" id="copy-the-content-of-your-public-key">
-<h2>13.3. Copy the content of your public key<a class="headerlink" href="#copy-the-content-of-your-public-key" title="Permalink to this headline">¶</a></h2>
-<p>You need to copy the content of your public key to upload it to the
-portal. A sample asumming that you used the default options during the
-key generation:</p>
-<div class="highlight-python"><pre>$ cat ~/.ssh/id_rsa.pub
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXJH2iG2FMHqC6T/U7uB8kt6KlRh4kUOjgw9sc4Uu+Uwe/EwD0wk6CBQMB+HKb9upvCRW/851UyRUagtlQexCRM2rMCi0VvhTVZhj61pTdhyl1t8hlkoL19JVnVBPP5kIN3wVyNAJjYBrAUNW4dXKXtmfkXp98T3OW4mxAtTH434MaT+QcPTcxims/hwsUeDAVKZY7UgZhEbiExxkejtnRBHTipi0W03W05TOUGRW7EuKf/4ftNVPilCO4DpfY44NFG1xPwHeimUk+t9h48pBQj16FrUCp0rS02Pj+4/9dNeS1kmNJu5ZYS8HVRhvuoTXuAY/UVcynEPUegkp+qYnR Javi@Javi-PC</pre>
-</div>
-<p>Go ahead and select the ouptut, right click, and copy</p>
-<div class="highlight-python"><pre>$ cat ~/.ssh/id_rsa.pub
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXJH2iG2FMHqC6T/U7uB8kt6KlRh4kUOjgw9sc4Uu+Uwe/EwD0wk6CBQMB+HKb9upvCRW/851UyRUagtlQexCRM2rMCi0VvhTVZhj61pTdhyl1t8hlkoL19JVnVBPP5kIN3wVyNAJjYBrAUNW4dXKXtmfkXp98T3OW4mxAtTH434MaT+QcPTcxims/hwsUeDAVKZY7UgZhEbiExxkejtnRBHTipi0W03W05TOUGRW7EuKf/4ftNVPilCO4DpfY44NFG1xPwHeimUk+t9h48pBQj16FrUCp0rS02Pj+4/9dNeS1kmNJu5ZYS8HVRhvuoTXuAY/UVcynEPUegkp+qYnR Javi@Javi-PC</pre>
-</div>
-</div>
-<div class="section" id="upload-the-key-to-the-futuregrid-portal">
-<h2>13.4. Upload the key to the FutureGrid Portal<a class="headerlink" href="#upload-the-key-to-the-futuregrid-portal" title="Permalink to this headline">¶</a></h2>
-<p>Click on the button bellow to add your SSH key (Note: The quick link
-button below only works if you are logged in before visiting this page.
-Otherwise please make sure you login first and REFRESH this page.)</p>
-<blockquote>
-<div><a class="reference external" href="https://portal.futuregrid.org/user/23/ssh-keys"><img alt="image24" src="https://portal.futuregrid.org/sites/default/files/u23/register-sshkey.png" /></a></div></blockquote>
-<ol class="arabic simple">
-<li>If you were logged into the Portal, this button redirects you to a
-page that includes a link Add a public key.</li>
-<li>Otherwise, this button redirects you to the login page.<ol class="arabic">
-<li>Log into the portal
-<img alt="image25" src="https://portal.futuregrid.org/sites/default/files/u30/portalLogin_0.png" /></li>
-<li>Click in the &#8220;ssh key&#8221; button
-<img alt="image26" src="https://portal.futuregrid.org/sites/default/files/u30/portalsshkey.png" /></li>
-</ol>
-</li>
-<li>Click in the &#8220;add a public key&#8221; link.
-<img alt="image27" src="https://portal.futuregrid.org/sites/default/files/u30/portalclikaddkey_0.png" /></li>
-<li>Paste your ssh key into the box marked Key.
-<img alt="image28" src="https://portal.futuregrid.org/sites/default/files/u30/portalkeypaste_0.png" /></li>
-<li>Click the submit button.</li>
-</ol>
-<ul class="simple">
-<li><strong>IMPORTANT</strong>:<ul>
-<li>Leave the Title field blank.</li>
-<li>Make sure that when you paste your key, it does not contain
-newlines or carriage returns that may have been introduced by
-incorrect pasting and copying. If so, please remove them.</li>
-</ul>
-</li>
-</ul>
-<p>At this point you are all set. However you will still need to wait till
-all accounts have been set up to use the resources. Please, check your
-email for further updates. You can also refresh this page and see if the
-boxes in your account status information are all green. Than you can
-continue.</p>
-</div>
-<div class="section" id="testing-your-ssh-key">
-<h2>13.5. Testing your ssh key<a class="headerlink" href="#testing-your-ssh-key" title="Permalink to this headline">¶</a></h2>
-<p>Test you key by logging onto India. India cluster gets the new ssh key
-updated almost immediately. For other clusters like Hotel, it can take
-around 10 minutes to update the ssh keys. If you are viewing this page
-anonymously, please replace &lt;USER&gt; with your FutureGrid user name (the
-one used to log into the Portal).</p>
-<p>If you placed the ssh key in the default location:</p>
-<div class="highlight-python"><pre>$ ssh -A gvonlasz@india.futuregrid.org</pre>
-</div>
-<p>If you used a different path or name for your key:</p>
-<div class="highlight-python"><pre>$ ssh -A -i &lt;path to private key&gt; gvonlasz@india.futuregrid.org</pre>
-</div>
-<p>The first time you ssh into a machine you will see a message like the
-one shown in the picture. You have to type yes and press enter:</p>
-<div class="highlight-python"><pre>**Note**: the presence of the -A argument above is required for Nimbus</pre>
-</div>
-<p>tutorials.</p>
-<p><strong>Note 1</strong>: If you are asked for a password when trying to ssh onto
-Hotel, do <strong>NOT</strong> type any password. This means that your ssh key is not
-updated yet. You need to wait a bit more.</p>
-</div>
-<div class="section" id="testing-your-ssh-key-on-hotel">
-<h2>13.6. Testing your ssh key on Hotel<a class="headerlink" href="#testing-your-ssh-key-on-hotel" title="Permalink to this headline">¶</a></h2>
-<p>After uploading your ssh key, it can take around 10 minutes to update
-the ssh keys of Hotel. So, if you were able to log onto India, you have
-set up properly your ssh key. So, after a while you will be able to log
-onto Hotel.&nbsp; If you are viewing this page anonymously, Please replace
-&lt;USER&gt; with your FutureGrid user name (the one used to log into the
-Portal).</p>
-<p>If you placed the ssh key in the default location:</p>
-<div class="highlight-python"><pre>$ ssh -A gvonlasz@hotel.futuregrid.org</pre>
-</div>
-<p>If you used a different path or name for your key:</p>
-<div class="highlight-python"><pre>$ ssh -A -i &lt;path to private key&gt; gvonlasz@hotel.futuregrid.org</pre>
-</div>
-<p>The first time you ssh into a machine you will see a message like this:</p>
-<div class="highlight-python"><pre>The authenticity of host 'hotel.futuregrid.org (149.165.148.5)' can't be established.
-RSA key fingerprint is f8:96:15:b7:21:eb:64:92:6c:de:e0:79:f3:fb:86:dd.
-Are you sure you want to continue connecting (yes/no)? yes</pre>
-</div>
-<p><strong>Note</strong>: the presence of the -A argument above is required for Nimbus
-tutorials.</p>
-<p><strong>Note 1</strong>: If you are asked for a password when trying to ssh onto
-Hotel, do&nbsp;<strong>NOT</strong>&nbsp;type any password. This means that your ssh key is
-not updated yet. You need to wait a bit more.</p>
-</div>
-</div>
-<div class="section" id="hpc-services">
-<h1>14. HPC Services<a class="headerlink" href="#hpc-services" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="using-hpc-services-on-futuregrid">
-<h1>15. Using HPC Services on FutureGrid<a class="headerlink" href="#using-hpc-services-on-futuregrid" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="accessing-systems">
-<h2>15.1. Accessing Systems<a class="headerlink" href="#accessing-systems" title="Permalink to this headline">¶</a></h2>
-<p>Several of the clusters that are part of FutureGrid have partitions
-that operate as High Performance Computing (HPC) systems. These
-partitions are batch scheduled, are not virtualized, have computer nodes
-with fixed operating systems, and are suitable for running parallel
-applications. FutureGrid provides a <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">list of HPC
-partitions</a>
-that currently consists of nodes on Alamo, Hotel, India, Sierra, and
-Xray.</p>
-<p>To access the FutureGrid HPC partitions, you need a FutureGrid
-account and an SSH public key you have uploaded to FutureGrid (this
-process is described on our <a class="reference external" href="https://portal.futuregrid.org/gettingstarted">Getting Started
-page</a>). You can then
-simply ssh to the login node of the FutureGrid system you would like to
-use. These login nodes are named <em>&lt;system&gt;.futuregrid.org</em>,
-specifically:</p>
-<ul class="simple">
-<li>alamo.futuregrid.org</li>
-<li>bravo.futuregrid.org</li>
-<li>hotel.futuregrid.org</li>
-<li>india.futuregrid.org</li>
-<li>sierra.futuregrid.org</li>
-<li>xray.futuregrid.org</li>
-</ul>
-<p>If your FutureGrid username is different from your username on your
-system, you will need to include it in your ssh command: <em>ssh
-&lt;futuregrid user name&gt;&#64;&lt;system&gt;.futuregrid.org</em>. You can find out your
-HPC account name by visiting your Portal account page.</p>
-</div>
-<div class="section" id="filesystem-layout">
-<h2>15.2. Filesystem Layout<a class="headerlink" href="#filesystem-layout" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><em>Home</em> ($HOME) directories are located at <em>/N/u/&lt;username&gt;</em>, with
-automated nightly backups. This is where users are encouraged to keep
-source files, configuration files and executables. Users should not
-run code from their $HOME directories. Please note that this is an
-NFS file system, and may result in slower access for some
-applications.</li>
-<li><em>Scratch</em> directories are located at different locations on the
-systems. To find out more about the file layout, please see <a class="reference external" href="http://portal.futuregrid.org/kb/document/bcgv">Storage
-information for FutureGrid
-hardware.</a></li>
-<li><em>System software</em> directories are located at<em>/N/soft,</em> with
-automated nightly backups. System and community software are
-typically installed here.</li>
-</ul>
-</div>
-<div class="section" id="modules">
-<h2>15.3. Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
-<p>Resources in the FutureGrid HPC partitions have the Modules utility to
-let you dynamically control your environment. Modules allows you to load
-and unload packages and ensure a coherent working environment. The most
-basic Modules commands let you add and remove packages from your
-environment:</p>
-<div class="highlight-python"><pre>module load &lt;package name&gt;/&lt;optional package version&gt;
-module unload &lt;package name&gt;/&lt;optional package version&gt;</pre>
-</div>
-<p>To display the list of available modules:</p>
-<div class="highlight-python"><pre>module avail</pre>
-</div>
-<p>To display the list of currently loaded modules:</p>
-<div class="highlight-python"><pre>module list</pre>
-</div>
-<p>It is very important to make sure the proper modules are loaded in the
-environment before you try to use FutureGrid HPC partitions. This
-ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD and other
-environment variables are properly set and that you can access the
-programs and libraries you need. Additional information about the
-Modules utility is available via &#8216;man module&#8217; on any FutureGrid login
-node.</p>
-</div>
-<div class="section" id="managing-applications-with-torque">
-<h2>15.4. Managing Applications with Torque<a class="headerlink" href="#managing-applications-with-torque" title="Permalink to this headline">¶</a></h2>
-<p>To run any jobs on resources within FutureGrid&nbsp;HPC&nbsp;partitions (single
-core, OpenMP or MPI&nbsp;jobs), users must use the job scheduler and a job
-submission script. Users should NOT run jobs on the login or headnodes.
-On FutureGrid machines, the job scheduler is the Torque (a variant of
-PBS). To load torque into your environment, execute:</p>
-<div class="highlight-python"><pre>-bash-3.2$ module load torque</pre>
-</div>
-<p>To run a serial job, you start by creating a job submission script
-that both describes your job and will be executed on the compute nodes
-by Torque. An example of a job script for India, Sierra, and Alamo that
-runs <em>/bin/hostname</em> is:</p>
-<div class="highlight-python"><pre>#!/bin/bash
-
-#PBS -N hostname_test
-#PBS -o hostname.out
-#PBS -e hostname.err
-#PBS -q short
-#PBS -l nodes=1
-#PBS -l walltime=00:20:00
-
-/bin/hostname</pre>
-</div>
-<p>Options are passed to Torque on lines that begin with #PBS. The options
-above are:</p>
-<ul class="simple">
-<li>-N: An optional job name</li>
-<li>-o: The name of the file to write stdout to</li>
-<li>-e: The name of the file to write stderr to</li>
-<li>-q: The queue to submit the job to</li>
-<li>-l: The resources needed by the job (in the case above, 1 node for 20
-minutes)</li>
-</ul>
-<p>Additional information about the options that can be specified in a
-submit script is available in the qsub manual page via &#8216;man qsub&#8217;. Note
-that there are multiple queues available on each FutureGrid system:</p>
-<ul class="simple">
-<li>Alamo: short, long, default</li>
-<li>Hotel: extended, batch, long and route</li>
-<li>India: scalemp, batch, long and b534</li>
-<li>Sierra: batch and long</li>
-<li>Xray: batch</li>
-</ul>
-<p>You can find information (such as limits) that will help you select
-which queue to use by running qstat -q on the login node for the system
-you are interested in.</p>
-<p>Once you have created a submission script, you can then use the Torque
-qsub command to submit this job to be executed on the compute nodes:</p>
-<div class="highlight-python"><pre>-bash-3.2$ qsub ring.sh
-19095.master1.cm.cluster</pre>
-</div>
-<p>The qsub command outputs either a job identifier or an error message
-describing why Torque would not accept your job. If your job is
-submitted successfully, you can track its execution using the qstat
-command:</p>
-<div class="highlight-python"><pre>-bash-3.2$ qstat
-Job id                    Name             User            Time Use S Queue
-------------------------- ---------------- --------------- -------- - -----
-...
-19095.master1             hostname_test    user            00:00:00 R short
-...</pre>
-</div>
-<p>If the system is busy, your job will initially be queued (Q) waiting for
-resources to become available. It will then be in the running state (R),
-and finally it will complete and not be visible in the qstat output. The
-full set of Torque job states is provided in the qstat manual page via
-man qstat on a FutureGrid login node. The stdout and stderr from your
-job will be placed in the files you specified in your submission script.</p>
-<p>A final Torque command you will use occasionally is the qdel command
-that asks Torque to delete a job. If the job hasn&#8217;t begun running, it is
-simply deleted from the queue. If the job has begun, it is killed on the
-nodes it&#8217;s running on, and deleted from the queue.</p>
-<p>A list of all available Torque commands is available from the <a class="reference external" href="http://www.clusterresources.com/torquedocs21/">Torque
-manual page</a>.</p>
-</div>
-<div class="section" id="message-passing-interface-mpi">
-<h2>15.5. Message Passing Interface (MPI)<a class="headerlink" href="#message-passing-interface-mpi" title="Permalink to this headline">¶</a></h2>
-<p>The Message Passing Interface Standard (MPI) is a message passing
-library standard based on the consensus of the MPI Forum, which has
-dozens of participating organizations, including vendors, researchers,
-software library developers, and users. The goal of the Message Passing
-Interface is to establish a portable, efficient, and flexible standard
-for message passing that will be widely used for writing message passing
-programs. MPI is the <em>de facto</em> standard communication library for
-almost all HPC systems, and is available in a variety of
-implementations.</p>
-<p>For more information, please visit:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.mpi-forum.org/">http://www.mpi-forum.org/</a></li>
-<li><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/">http://www.mcs.anl.gov/research/projects/mpi/tutorial/</a></li>
-</ul>
-<p>For more information on OpenMPI, the default MPI distribution on
-FutureGrid, please visit:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.open-mpi.org/">http://www.open-mpi.org/</a></li>
-</ul>
-</div>
-<div class="section" id="mpi-libraries">
-<h2>15.6. MPI Libraries<a class="headerlink" href="#mpi-libraries" title="Permalink to this headline">¶</a></h2>
-<p>The FutureGrid systems that support HPC-style usage have an MPI
-implementation. In most cases, it is OpenMPI-1.4.x compiled with Intel
-11.1 compilers.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="13%" />
-<col width="18%" />
-<col width="15%" />
-<col width="25%" />
-<col width="28%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>System</strong></td>
-<td><strong>MPI version</strong></td>
-<td><strong>Compiler</strong></td>
-<td><strong>Infiniband Support</strong></td>
-<td><strong>Module</strong></td>
-</tr>
-<tr class="row-even"><td>Alamo</td>
-<td>OpenMPI 1.4.3</td>
-<td>Intel 11.1</td>
-<td>yes</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-odd"><td>Bravo</td>
-<td>OpenMPI 1.4.2</td>
-<td>Intel 11.1</td>
-<td>no</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>OpenMPI 1.4.3</td>
-<td>gcc 4.4.6</td>
-<td>no</td>
-<td>openmpi/1.4.3-gnu</td>
-</tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>OpenMPI 1.4.3</td>
-<td>Intel 11.1</td>
-<td>no</td>
-<td>openmpi/1.4.3-intel</td>
-</tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>OpenMPI 1.5.4</td>
-<td>gcc 4.4.6</td>
-<td>no</td>
-<td>openmpi/1.5.4-[gnu,intel]</td>
-</tr>
-<tr class="row-odd"><td>Hotel</td>
-<td>OpenMPI 1.4.3</td>
-<td>gcc 4.1.2</td>
-<td>yes</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-even"><td>India</td>
-<td>OpenMPI 1.4.2</td>
-<td>Intel 11.1</td>
-<td>yes</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-odd"><td>Sierra</td>
-<td>OpenMPI 1.4.2</td>
-<td>Intel 11.1</td>
-<td>no</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-even"><td>Xray</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>N/A</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>In cases where the OpenMPI is compiled with the Intel compilers,
-loading the OpenMPI module will automatically load the Intel compilers
-as a dependency:</p>
-<div class="highlight-python"><pre>-bash-3.2$ module load openmpi
-Intel compiler suite version 11.1/072 loaded
-OpenMPI version 1.4.3 loaded</pre>
-</div>
-<div class="line-block">
-<div class="line">Loading the OpenMPI module adds the MPI compilers to your $PATH</div>
-</div>
-<p>environment variable and the OpenMPI shared library directory to your
-$LD_LIBRARY_PATH. This is an important step to ensure MPI applications
-will compile and run successfully. Loading the torque module allows you
-to submit jobs to the scheduler.</p>
-</div>
-<div class="section" id="compiling-mpi-applications">
-<h2>15.7. Compiling MPI&nbsp;Applications<a class="headerlink" href="#compiling-mpi-applications" title="Permalink to this headline">¶</a></h2>
-<p>To compile MPI applications, users have two options:</p>
-<ol class="arabic simple">
-<li>Use the MPI&nbsp;compilers instead of regular Intel/GNU compilers</li>
-<li>Use the regular compilers (Intel/GNU) with MPI compilation flags</li>
-</ol>
-<p>We recommend using the MPI compilers to avoid compilation issues. This
-is accomplished by making the following replacements:</p>
-<ul class="simple">
-<li>CC/icc/gcc with mpicc</li>
-<li>CXX/icpc/g++ with mpicxx</li>
-<li>F90/F77/FC/ifort/gfortran with mpif90</li>
-</ul>
-<p>Alternatively, for some codes that require intricate compilation flags
-and complicated make systems, and where changing compilers is not an
-option, you can edit the compilation/linking options for your codes.
-These options are machine, compiler, and language dependent. To view the
-options required for C, C++ and Fortran on any machine, you can issue
-the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
-be taken when using these flags, as dependencies govern the order in
-which they appear in the link line. Should you run into compilation
-errors or problems, please submit a consulting ticket.</p>
-<p>Assuming you have loaded the openmpi module into your environment,
-you can compile a <a class="reference external" href="/tutorials/hpc/ring">simple MPI application</a> as
-easily as executing:</p>
-<div class="highlight-python"><pre>-bash-3.2$ mpicc -o ring ring.c</pre>
-</div>
-</div>
-<div class="section" id="running-mpi-applications">
-<h2>15.8. Running MPI&nbsp;Applications<a class="headerlink" href="#running-mpi-applications" title="Permalink to this headline">¶</a></h2>
-<p>Once your MPI application is compiled, you run it on the compute nodes
-of a cluster via Torque. An example of an MPI parallel job script for
-India, Sierra, and Alamo that runs the ring application is:</p>
-<div class="highlight-python"><pre>#!/bin/bash
-
-#PBS -N ring_test
-#PBS -o ring_$PBS_JOBID.out
-#PBS -e ring_$PBS_JOBID.err
-#PBS -q short
-#PBS -l nodes=4:ppn=8
-#PBS -l walltime=00:20:00
-
-# make sure MPI is in the environment
-module load openmpi
-
-# launch the parallel application with the correct number of processs
-# Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;
-mpirun -np 32 ring -t 1000</pre>
-</div>
-<p>There are two important differences between this script and the submit
-script shown previously. The first is that :ppn=8 is added to the
-request for four nodes. What this does is indicate that your application
-wants to allocate eight virtual processors per node. A virtual processor
-corresponds to a processing core. Alamo, Hotel, India, and Sierra all
-have eight cores per node, so the script above asks for exclusive access
-to four nodes with a total of 32 cores. The second importand difference
-from the previous submit script is that it executes mpirun with
-arguments that describe your MPI application. Note that the number of
-processes specified to mpirun is 32—matching the 32 cores allocated by
-Torque.</p>
-<p>A minor difference between this script and the previous one is that
-the environment variable $PBS_JOBID is used when creating the stdin and
-stdout files. Torque sets a number of environment variables that you can
-use in your submit script, starting with PBS_ .</p>
-</div>
-</div>
-<div class="section" id="log-in-to-hpc-services">
-<h1>16. Log in to HPC services<a class="headerlink" href="#log-in-to-hpc-services" title="Permalink to this headline">¶</a></h1>
-<p>To access a FutureGrid system via Torque/Moab, you should ssh to the
-login node for the system. The login node is one of the following:</p>
-<ul class="simple">
-<li>india.futuregrid.org</li>
-<li>bravo.futuregrid.org</li>
-<li>sierra.futuregrid.org</li>
-<li>foxtrot.futuregrid.org</li>
-<li>hotel.futuregrid.org</li>
-<li>alamo.futuregrid.org</li>
-<li>xray.futuregrid.org</li>
-</ul>
-<p>An example session follows:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>$ ssh sierra.futuregrid.org
-Last login: Thu Aug 12 19:19:22 2010 from ....
-Welcome to Sierra.FutureGrid.Org
-$</pre>
-</div>
-</div></blockquote>
-<p>Once you ssh into these nodes, you&#8217;ll have access to the HPC queuing
-services for the machine you have logged into. You will enter into a
-Unix/Linux shell in which you can enter the typical Unix commands.
-However, access to the clusters is provided through&nbsp;Torque/Moab commands
-from the command line.</p>
-</div>
-<div class="section" id="generating-ssh-keys-for-futuregrid-access">
-<h1>17. Generating SSH Keys for FutureGrid Access<a class="headerlink" href="#generating-ssh-keys-for-futuregrid-access" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="key-generation">
-<h1>18. Key Generation<a class="headerlink" href="#key-generation" title="Permalink to this headline">¶</a></h1>
-<p>To gain access to FutureGrid&nbsp;Resources including HPC and Nimbus
-services, you need to provide a public key to FutureGrid. We recommend
-that you are familiar with public keys and have the understanding that
-we do REQUIRE passphrase protected keys. To generate and send such a
-key, please follow the following steps. To find more out about open
-ssh&nbsp;you can also go to</p>
-<ul class="simple">
-<li><a class="reference external" href="http://openssh.com/manual.html">http://openssh.com/manual.html</a></li>
-</ul>
-<p>Other good resources include</p>
-<ul class="simple">
-<li><a class="reference external" href="http://help.github.com/key-setup-redirect">http://help.github.com/key-setup-redirect</a></li>
-<li><a class="reference external" href="http://help.github.com/working-with-key-passphrases/">http://help.github.com/working-with-key-passphrases/</a></li>
-<li><a class="reference external" href="http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/">http://www.dribin.org/dave/blog/archives/2007/11/28/ssh_agent_leopard/</a></li>
-</ul>
-<div class="section" id="generate-public-private-key-pair">
-<h2>18.1. <strong>1.&nbsp;</strong><strong>Generate Public/Private Key Pair</strong><a class="headerlink" href="#generate-public-private-key-pair" title="Permalink to this headline">¶</a></h2>
-<p>First, you have to generate a key. You do this as follows:</p>
-<ul class="simple">
-<li>Step 1: use the command “ssh-keygen -t rsa -C &lt;your-e-mail&gt;” to
-generate the key</li>
-<li>Step 2:&nbsp;specifiy the KeyPair location and name. We recommend that you
-use the default location if you do not yet have another key there.
-&nbsp;e.g. /home/username/.ssh/id_rsa</li>
-<li>Step 3: type user defined passphrase when asking passphrase for the
-key</li>
-</ul>
-<p>Example:</p>
-<div class="highlight-python"><pre>ssh-keygen -t rsa -C johndoe@indiana.edu
-
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/johndoe/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/johndoe/.ssh/id_rsa.
-Your public key has been saved in /home/johndoe/.ssh/id_rsa.pub.
-The key fingerprint is:
-34:87:67:ea:c2:49:ee:c2:81:d2:10:84:b1:3e:05:59 johndoe@indiana.edu</pre>
-</div>
-</div>
-<div class="section" id="list-the-result">
-<h2>18.2. <strong>2.&nbsp;</strong><strong>List the result</strong><a class="headerlink" href="#list-the-result" title="Permalink to this headline">¶</a></h2>
-<p>You can find your key under the key location. As we user the .ssh
-directory it will be located there.</p>
-<div class="highlight-python"><pre>$ls -lisa ~/.ssh
--rw-------  1 johndoe johndoe        1743 2011-02-10 09:44 id_rsa
--rw-r--r--  1 johndoe johndoe         399 2011-02-10 09:44 id_rsa.pub</pre>
-</div>
-</div>
-<div class="section" id="add-or-replace-passphrase-for-an-already-generated-key">
-<h2>18.3. <strong>3.&nbsp;</strong><strong>Add or Replace Passphrase for an Already Generated Key</strong><a class="headerlink" href="#add-or-replace-passphrase-for-an-already-generated-key" title="Permalink to this headline">¶</a></h2>
-<p>In case you need to change your change passphrase, you can simply run
-“ssh-keygen -p” command. Then specify the location of your current key,
-and input (old and) new passphrases. There is no need to re-generate
-keys.</p>
-<div class="highlight-python"><pre>ssh-keygen -p
-
-Enter file in which the key is (/home/johndoe/.ssh/id_rsa):
-Enter old passphrase:
-Key has comment '/home/johndoe/.ssh/id_rsa'
-Enter new passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved with the new passphrase.</pre>
-</div>
-</div>
-<div class="section" id="capture-the-public-key-for-futuregrid">
-<h2>18.4. <strong>4.</strong>&nbsp;&nbsp;<strong>Capture the Public Key for FutureGrid</strong><a class="headerlink" href="#capture-the-public-key-for-futuregrid" title="Permalink to this headline">¶</a></h2>
-<p>Use a text editor to open the “id_rsa.pub”.&nbsp;Copy the <strong>entire</strong>
-contents of this file into the ssh key field as part of your profile
-information. You can now add this key to your keys at the following
-page:</p>
-</div>
-<div class="section" id="key-management">
-<h2>18.5. 5. Key Management<a class="headerlink" href="#key-management" title="Permalink to this headline">¶</a></h2>
-<p>This is a future section that will include material about how to use
-ssh-add and keychain. You can find instructions on them via the
-github&nbsp;link that we provided above. However, we are not github ;-)</p>
-</div>
-<div class="section" id="resetting-the-ssh-key">
-<h2>18.6. 6. Resetting the SSH key<a class="headerlink" href="#resetting-the-ssh-key" title="Permalink to this headline">¶</a></h2>
-<p>Please follow the instructions given at</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/how-do-i-reset-my-ssh-key">https://portal.futuregrid.org/how-do-i-reset-my-ssh-key</a></li>
-</ul>
-</div>
-<div class="section" id="i-still-can-not-access-fg-resources">
-<h2>18.7. 7. I still can not access FG resources<a class="headerlink" href="#i-still-can-not-access-fg-resources" title="Permalink to this headline">¶</a></h2>
-<p>In order for you to access FG resources you must be in an active
-project. Please make sure you join a project or create your own while
-applying for one.</p>
-<p>=</p>
-</div>
-</div>
-<div class="section" id="working-with-hpc-job-services">
-<h1>19. Working with HPC Job Services<a class="headerlink" href="#working-with-hpc-job-services" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="running-queued-jobs-as-part-of-the-hpc-services">
-<h2>19.1. Running Queued Jobs as Part of the HPC Services<a class="headerlink" href="#running-queued-jobs-as-part-of-the-hpc-services" title="Permalink to this headline">¶</a></h2>
-<p>To run a job in the HPC service, you need to create a job script that
-tells the job manager how to run the job and how to handle things like
-output and notifications. You can then submit your job to the scheduler,
-monitor its progress in the job queue, and examine the output when it
-finishes.</p>
-<div class="section" id="a-simple-job-script">
-<h3>19.1.1. &nbsp;A Simple Job Script<a class="headerlink" href="#a-simple-job-script" title="Permalink to this headline">¶</a></h3>
-<p>An example job script looks like this:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>#!/bin/bash
-#PBS -N testjob
-#PBS -l nodes=1:ppn=1
-#PBS -q batch
-#PBS -j oe
-##PBS -M username@example.com
-##PBS -m ae ##PBS -o testjob.out
-##
-## Everything following is run by the scheduler
-##
-sleep 10
-echo -n "Host operating system version: "
-uname -a
-echo "Nodes allocated to this job: "
-cat $PBS_NODEFILE
-echo
-sleep 10
-##
-## End of job script
-##</pre>
-</div>
-</div></blockquote>
-<p>In the job script, lines that begin with&nbsp;<strong>#PBS</strong>&nbsp;are directives to
-the job scheduler. You can disable any of these lines by adding an
-extra&nbsp;<strong>#</strong>character at the beginning of the line, for example:</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>This job script shows some common examples of directives that you might
-want to use in your job scripts. The directives in this job script are
-described below:</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>This line isn&#8217;t strictly required, but it is added as a fail-safe in
-case something unexpected happens. Normally, the job manager reads your
-script and processes the directives, and then runs your script as a
-normal shell script. This simply ensures that the system uses the
-standard bash shell to run your script.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -N testjob</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>This line gives your job a name of&nbsp;<strong>testjob</strong>. This name will be used
-by the job manager when it shows a job listing, and will be used for
-your output file(s) unless you explicitly specify an output file.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -l nodes=1:ppn=1</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>This line tells the job manager what your job requires for resources. In
-this case, your job is asking for one node (<strong>nodes=1</strong>) and at least
-one processor per node (<strong>ppn=1</strong>). See the
-[[Sw:Manual/PBSDirectives|PBSDirectives] page for other options you can
-specify here.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -q batch</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>This line tells the job manager which job queue your job should be sent
-to. Each job queue has different characteristics, such as the maximum
-time a job is allowed to run, or the maximum number of nodes a job can
-use.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -j oe</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>This line tells the job manager to join the job standard output and
-standard error into a single file. For jobs with a small amount of
-output, this is usually helpful. If your job produces a lot of standard
-output, it may be helpful to keep the files separate so you can easily
-locate error messages in the single error file.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>Note that this line is a comment since it starts with&nbsp;<strong>##</strong>&nbsp;instead
-of&nbsp;<strong>#PBS</strong>. If you remove the first&nbsp;<strong>#</strong>, this line will set the
-email address that will get notified about events related to this job.
-The events that get reported are set by the next line.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -m ae</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>Again, note that this line is commented out. If you remove the
-first&nbsp;<strong>#</strong>, this line will send email whenever the job fails
-(or&nbsp;<strong>a</strong>borts) (<strong>a</strong>&nbsp;option), and when the job ends (<strong>e</strong>&nbsp;option).
-This is particularly helpful if your job has to wait a long time in the
-queue before it runs.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -o testjob.out</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>Again, note that this line is commented out. If you remove the
-first&nbsp;<strong>#</strong>, this line will specify the file name to be used for job
-output.</p>
-</div>
-<div class="section" id="submitting-your-job">
-<h3>19.1.2. &nbsp; Submitting Your Job<a class="headerlink" href="#submitting-your-job" title="Permalink to this headline">¶</a></h3>
-<p>You can submit your job with the&nbsp;<strong>qsub</strong>&nbsp;or&nbsp;<strong>msub</strong>&nbsp;commands.
-The&nbsp;<strong>msub</strong>&nbsp;and&nbsp;<strong>qsub</strong>&nbsp;are almost identical, and can mostly be used
-interchangeably. See the respective man pages for specific differences.
-Neither submission command provides much output.&nbsp;Examples of a job
-submission using both commands follows:</p>
-<p>Using&nbsp;<strong>msub</strong>:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>[62]s1::gpike&gt; msub testjob.pbs
-292250
-[63]s1::gpike&gt;</pre>
-</div>
-</div></blockquote>
-<p>Using&nbsp;<strong>qsub</strong>:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>[63]s1::gpike&gt; qsub testjob.pbs
-292251.s82
-[64]s1::gpike&gt;</pre>
-</div>
-</div></blockquote>
-<p>In both cases, the number that gets returned is the job number that the
-scheduler assigned to your job. In the case of&nbsp;<strong>qsub</strong>, the job
-number is followed by the host name where you submitted the job.</p>
-</div>
-</div>
-<div class="section" id="monitoring-your-job">
-<h2>19.2. Monitoring Your Job<a class="headerlink" href="#monitoring-your-job" title="Permalink to this headline">¶</a></h2>
-<p>To monitor your job after it has been submitted, you can use
-the&nbsp;<strong>qstat</strong>&nbsp;or&nbsp;<strong>showq</strong>&nbsp;commands. Both commands will show you the
-state of the job manager, but the information is displayed in different
-formats. In general, the&nbsp;<strong>showq</strong>&nbsp;command gives more complete
-information, and in a form that is a bit easier to read.
-The&nbsp;<strong>qstat</strong>&nbsp;command gives a very concise listing of the job queue,
-and in some instances this may give you a better quick overview of the
-resource.</p>
-<p>Using the test job script as an example, here is the output from
-the&nbsp;<strong>showq</strong>&nbsp;command:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>[66]s1::gpike&gt; showq
-active jobs
-------------------------
-JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-292252   greg       Running     16        3:59:59 Tue Aug 17 09:02:40
-1 active job 16 of 264 processors in use by local jobs (6.06%)
-                  2 of 33 nodes active (6.06%) eligible jobs
-----------------------
-JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-0 eligible jobs blocked jobs
------------------------
-JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-0 blocked jobs
-Total job: 1</pre>
-</div>
-</div></blockquote>
-<p>You can see the output is divided into three sections:&nbsp;<strong>active
-jobs</strong>,&nbsp;<strong>eligible jobs</strong>, and&nbsp;<strong>blocked jobs</strong>.</p>
-<p><strong>1. Active jobs</strong>&nbsp;are jobs that are currently running on the resource.</p>
-<p><strong>2.</strong><strong>Eligible jobs</strong>&nbsp;are jobs that are waiting for nodes to become
-available before they can run. As a general rule, jobs are listed in the
-order that they will be scheduled, but scheduling algorithms may change
-the order over time.</p>
-<p><strong>3.</strong><strong>Blocked jobs</strong>&nbsp;are jobs that the scheduler cannot run for some
-reason. Usually a job becomes blocked because it is requesting something
-that is impossible, such as more nodes than currently exist, or more
-processors per node than are installed.</p>
-<p>Using the test job as an example again, here is the output from
-the&nbsp;<strong>qstat</strong>&nbsp;command:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>[109]i136::gpike&gt; qstat
-Job id                             Name               User          Time Use S Queue
-------------------------- --------------------- ------------------- -------- - -----
-1981.i136                       sub19327.sub      inca               00:00:00 C batch
-1982.i136                       testjob           greg                      0 R batch</pre>
-</div>
-</div></blockquote>
-<p>The&nbsp;<strong>qstat</strong>&nbsp;command provides output in six columns:</p>
-<ol class="arabic simple">
-<li>Job id is the identifier assigned to your job.</li>
-<li>Name is the name that you assigned to your job.</li>
-<li>User is the username of the person who submitted the job.</li>
-<li>Time Use is the amount of time the job has been running.</li>
-<li>S shows the job state. Common job states are R for a running job, Q
-for a job that is queued and waiting to run, C for a job that has
-completed, and H for a job that is being held.</li>
-<li>Queue is the name of the job queue where your job will run.</li>
-</ol>
-</div>
-<div class="section" id="examining-your-job-output">
-<h2>19.3. Examining Your Job Output<a class="headerlink" href="#examining-your-job-output" title="Permalink to this headline">¶</a></h2>
-<p>If you gave your job a name with the&nbsp;<strong>#PBS -N &lt;jobname&gt;</strong>&nbsp;directive
-in your job script or by specifying the job name on the command line,
-your job output will be available in a file named&nbsp;<strong>jobname.o######</strong>,
-where the&nbsp;<strong>######</strong>&nbsp;is the job number assigned by the job manager.
-You can type&nbsp;<strong>ls jobname.o*</strong>&nbsp;to see all output files from the same
-job name.</p>
-<p>If you explicitly name an output file with the&nbsp;<strong>#PBS -o
-&lt;outfile&gt;</strong>&nbsp;directive in your job script or by specifying the output
-file on the command line, your output will be in the file you specified.
-If you run the job again, the output file will be overwritten.</p>
-<p>If you don&#8217;t specify any output file, your job output will have the same
-name as your job script, and will be numbered in the same manner as if
-you had specified a job name (<strong>jobname,o######</strong>).</p>
-</div>
-</div>
-<div class="section" id="xray">
-<h1>20. Xray<a class="headerlink" href="#xray" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="iu-cray-user-manual">
-<h2>20.1. IU Cray User Manual<a class="headerlink" href="#iu-cray-user-manual" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>xray.futuregrid.org</li>
-</ul>
-<blockquote>
-<div><div class="highlight-python"><pre>ssh xray.futuregrid.org</pre>
-</div>
-</div></blockquote>
-<p>For MPI jobs, use cc (pgcc).</p>
-<p>For best performance, add the xtpe-barcelona module</p>
-<blockquote>
-<div><div class="highlight-python"><pre>% module add xtpe-module</pre>
-</div>
-</div></blockquote>
-<ul class="simple">
-<li><a class="reference external" href="http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21">http://docs.cray.com/cgi-bin/craydoc.cgi?q=&amp;mode=Search&amp;hw=%22Cray+XT5%22</a></li>
-<li><a class="reference external" href="http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21">http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21</a></li>
-</ul>
-<p>Currently there is only one queue (batch) available to users on the
-Cray, and all jobs are automatically routed to that queue.</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="n">qstat</span> <span class="o">-</span><span class="n">Q</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p>The primary queue for running jobs on Xray is batch. To obtain details
-of running jobs and available processors, use the showq command.</p>
-<blockquote>
-<div><div class="highlight-python"><pre>/opt/moab/default/bin/showq</pre>
-</div>
-</div></blockquote>
-<div class="section" id="submitting-a-job">
-<h3>20.1.1. &nbsp;Submitting a job<a class="headerlink" href="#submitting-a-job" title="Permalink to this headline">¶</a></h3>
-<p><strong>MPI run cmd</strong>:&nbsp;&nbsp;aprun</p>
-<p>Example&nbsp;<strong>job script (16 processors / 2 nodes):</strong></p>
-<blockquote>
-<div><div class="highlight-python"><pre>% cat job.sub</pre>
-</div>
-<div class="highlight-python"><pre>#!/bin/sh
-#PBS -l mppwidth=16
-#PBS -l mppnppn=8
-#PBS -N hpcc-16
-#PBS -j oe
-#PBS -l walltime=7:00:00
-#cd to directory where job was submitted from
-cd $PBS_O_WORKDIR
-export MPICH_FAST_MEMCPY=1
-export MPICH_PTL_MATCH_OFF=1
-aprun -n 16 -N 8 -ss -cc cpu hpcc
-% qsub job.sub</pre>
-</div>
-</div></blockquote>
-<p>&nbsp;Looking at the Queue</p>
-<blockquote>
-<div><div class="highlight-python"><pre>% qstat</pre>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="how-do-i-submit-a-job-to-the-cray-xt5m-on-futuregrid">
-<h3>20.1.2. How Do I Submit a Job to the Cray XT5m on FutureGrid?<a class="headerlink" href="#how-do-i-submit-a-job-to-the-cray-xt5m-on-futuregrid" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://kb.iu.edu/data/azse.html">http://kb.iu.edu/data/azse.html</a></p>
-<p>The XT5m is a 2D mesh of nodes. Each node has two sockets, and each
-socket has four cores.</p>
-<p>The batch scheduler interfaces with a Cray resource scheduler called
-APLS. When you submit a job, the batch scheduler talks to ALPS to find
-out what resources are available, and ALPS then makes the reservation.</p>
-<p>Currently ALPS is a &#8220;gang scheduler&#8221; and only allows one &#8220;job&#8221; per node.
-If a user submits a job in the format&nbsp;aprun -n 1 a.out&nbsp;, ALPS will put
-that job on one core of one node and leave the other seven cores empty.
-When the next job comes in, either from the same user or a different
-one, it will schedule that job to the next node.</p>
-<p>If the user submits a job with&nbsp;aprun -n 10 a.out&nbsp;, then the scheduler
-will put the first eight tasks on the first node and the next two tasks
-on the second node, again leaving six empty cores on the second node.
-The user can modify the placement with&nbsp;-N&nbsp;,&nbsp;-S&nbsp;, and&nbsp;-cc&nbsp;.</p>
-<p>A user might also run a single job with multiple treads, as with OpenMP.
-If a user runs this job&nbsp;aprun -n 1 -d 8 a.out&nbsp;, the job will be
-scheduled to one node and have eight threads running, one on each core.</p>
-<p>You can run multiple, different binaries at the same time on the same
-node, but only from one submission. Submitting a script like this
-will&nbsp;not&nbsp;work:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 0 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 1 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 2 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 3 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 4 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 5 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 6 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 7 ./my-binary</pre>
-</div>
-</div></blockquote>
-<p>This will run a job on each core, but&nbsp;not&nbsp;at the same time. To run all
-jobs at the same time, you need to first bury all the binaries under
-one&nbsp;aprun&nbsp;command:</p>
-<blockquote>
-<div><div class="highlight-python"><pre>$ more run.sh
-./my-binary1
-./my-binary2
-./my-binary3
-./my-binary4
-./my-binary5
-./my-binary6
-./my-binary7
-./my-binary8
-$ aprun -n 1 run.sh</pre>
-</div>
-</div></blockquote>
-<p>Alternatively, use the command&nbsp;aprun -n 1 -d 8 run.sh&nbsp;. To run multiple
-serial jobs, you must build a batch script to divide the number of jobs
-into groups of eight, and the</p>
-</div>
-</div>
-</div>
 <div class="section" id="alamo">
-<h1>21. Alamo<a class="headerlink" href="#alamo" title="Permalink to this headline">¶</a></h1>
+<h1>16. Alamo<a class="headerlink" href="#alamo" title="Permalink to this headline">¶</a></h1>
 <p>Alamo is a 96 node Dell cluster running 2.66 GHz Intel Xeon X5550
-processors. &nbsp;The OS is CentOS 5.8 and 6.3. &nbsp;It runs Torque and Moab for
-scheduling. &nbsp;Alamo has a QDR IB interconnect and 15 TB of attached disk
-storage. &nbsp; Alamo is partitioned into different resources for Nimbus and
-HPC. &nbsp;See the Alamo hardware page for more
-detail:&nbsp;<a class="reference external" href="https://portal.futuregrid.org/hardware/alamo">https://portal.futuregrid.org/hardware/alamo</a>
+processors.  The OS is CentOS 5.8 and 6.3.  It runs Torque and Moab for
+scheduling.  Alamo has a QDR IB interconnect and 15 TB of attached disk
+storage.   Alamo is partitioned into different resources for Nimbus and
+HPC.  See the Alamo hardware page for more
+detail: <a class="reference external" href="https://portal.futuregrid.org/hardware/alamo">https://portal.futuregrid.org/hardware/alamo</a>
 .</p>
-<p><strong>Nimbus partition -</strong>&nbsp;see nimbus
-documentation:&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">https://portal.futuregrid.org/tutorials/nimbus</a></p>
+<p><strong>Nimbus partition -</strong> see nimbus
+documentation: <a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">https://portal.futuregrid.org/tutorials/nimbus</a></p>
 <p><strong>HPC partition</strong></p>
-<p>Max cores 584.&nbsp;&nbsp;Submit
+<p>Max cores 584.  Submit
 <a class="reference external" href="http://%20https://portal.futuregrid.org/help">ticket</a> if you need to
 run larger than the 320 limit per user.</p>
-<p>Available queues:
-&nbsp; &nbsp;short - 24 hours runtime limit
-&nbsp; &nbsp;long - 72 hours runtime limit</p>
+<dl class="docutils">
+<dt>Available queues:</dt>
+<dd>short - 24 hours runtime limit
+long - 72 hours runtime limit</dd>
+</dl>
 <p>After registering your .ssh key on the portal, go to
 <a class="reference external" href="https://portal.futuregrid.org/manual/access">https://portal.futuregrid.org/manual/access</a>
 .</p>
@@ -1755,39 +419,55 @@ run larger than the 320 limit per user.</p>
 following command.
 <strong>Note</strong>: If you are prompted for a password, your account has not
 been set up correctly or the .ssh key has not been propagated.</p>
-<p>&nbsp; ssh alamo.futuregrid.org</p>
+<blockquote>
+<div>ssh alamo.futuregrid.org</div></blockquote>
 <p>To submit a test job use the qsub command.</p>
-<p>ex. &nbsp;qsub -N job_name -l nodes=1 -q short &nbsp;job_script</p>
+<p>ex.  qsub -N job_name -l nodes=1 -q short  job_script</p>
 <ul class="simple">
 <li>qstat - show current jobs in the queue with status</li>
 <li>showq - show current running and queued jobs and job id</li>
-<li>checkjob -v &lt;jobid&gt; &nbsp; - more detailed information about your job</li>
+<li>checkjob -v &lt;jobid&gt;   - more detailed information about your job</li>
 </ul>
-<p>Applications are available via modules. &nbsp;To see a list of available
-applications:
-&nbsp; module avail</p>
-<p>File systems:
-&nbsp; &nbsp;/home &nbsp; - Quota enforced home directory, backed up nightly.
-&nbsp; &nbsp;/N/work - 6.3 TB work directory, not backed up. NFS mounted from
-login node.
-&nbsp; &nbsp;/N/images - 11 TB directory for system images, not backed up. NFS
-mounted from login node.</p>
+<p>Applications are available via modules.  To see a list of available
+applications:</p>
+<blockquote>
+<div>module avail</div></blockquote>
+<dl class="docutils">
+<dt>File systems:</dt>
+<dd><table class="first docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">/home</span></kbd></td>
+<td><ul class="first last simple">
+<li>Quota enforced home directory, backed up nightly.</li>
+</ul>
+</td></tr>
+</tbody>
+</table>
+<p class="last">/N/work - 6.3 TB work directory, not backed up. NFS mounted from</p>
+</dd>
+<dt>login node.</dt>
+<dd>/N/images - 11 TB directory for system images, not backed up. NFS</dd>
+</dl>
+<p>mounted from login node.</p>
 <p>Administrator: David Gignac
 For issues or questions please
-use&nbsp;<a class="reference external" href="https://tickets.futuregrid.org">https://tickets.futuregrid.org</a>
+use <a class="reference external" href="https://tickets.futuregrid.org">https://tickets.futuregrid.org</a>
 . You can conveniently submit a ticket
-via&nbsp;<a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.
+via <a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.
 To look at your previously submitted tickets you can
-use&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tickets">https://portal.futuregrid.org/tickets</a>
+use <a class="reference external" href="https://portal.futuregrid.org/tickets">https://portal.futuregrid.org/tickets</a>
 .</p>
 </div>
 <div class="section" id="iaas-infrastructure-as-a-service">
-<h1>22. IaaS - Infrastructure as a Service<a class="headerlink" href="#iaas-infrastructure-as-a-service" title="Permalink to this headline">¶</a></h1>
+<h1>17. IaaS - Infrastructure as a Service<a class="headerlink" href="#iaas-infrastructure-as-a-service" title="Permalink to this headline">¶</a></h1>
 <p>This chapter contains information in regards to Infrastructure as a
 Service offerings on FutureGrid</p>
 </div>
 <div class="section" id="using-iaas-clouds-on-futuregrid">
-<h1>23. Using IaaS Clouds on FutureGrid<a class="headerlink" href="#using-iaas-clouds-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>18. Using IaaS Clouds on FutureGrid<a class="headerlink" href="#using-iaas-clouds-on-futuregrid" title="Permalink to this headline">¶</a></h1>
 <p>Infrastructure-as-a-Service (IaaS) cloud computing encompasses
 techniques that have driven major recent advances in information
 technology supporting elastic, on-demand, &#8220;pay as you go&#8221; computing as a
@@ -1802,7 +482,7 @@ FutureGrid capabilities best suited to your goals, and provides links to
 respective tutorials:</p>
 </div>
 <div class="section" id="management-services">
-<h1>24. Management Services<a class="headerlink" href="#management-services" title="Permalink to this headline">¶</a></h1>
+<h1>19. Management Services<a class="headerlink" href="#management-services" title="Permalink to this headline">¶</a></h1>
 <p>FutureGrid contains a number of interresting management services. This
 includes image management services to deploy and provision images onto
 bare metal or virtualized machines as well as experiment management that

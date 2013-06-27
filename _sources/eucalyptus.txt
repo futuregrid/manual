@@ -2,9 +2,6 @@
 Eucalyptus on FutureGrid
 ===================================================
 
-Summary
------------
-
 Eucalyptus is a software platform that implements
 `IaaS-style <http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_Service_.28IaaS.29>`__
 cloud computing. Eucalyptus provides an Amazon Web Services
@@ -70,23 +67,19 @@ Obtaining Credentials
    scheme. The credential file will be found under the menu tab
    username@fgnumber.)
 
-| NOTICE: Due to an incompatibility problem introduced during the
+NOTICE: Due to an incompatibility problem introduced during the
 upgrade to the Eucalyptus 3.1 system, accessing the dashboard of
 Eucalyptus on india is tempararily unavailable. However, your credential
 will be in place so you can execute the later steps of this manual.
-|  On Sierra, the access is still available so you could download the
+
+On Sierra, the access is still available so you could download the
 credential zip file. Make sure to put it to Sierra first and then set up
 the environment as the following steps.
-|  Please be reminded that the credential for one cluster should/could
+Please be reminded that the credential for one cluster should/could
 not be used in another.
-|   
-
-|image1|
 
 -  Find your credential zip file in cd
-   $HOME/.futuregrid/eucalyptus/fgprojectnumber
-
-       ::
+   $HOME/.futuregrid/eucalyptus/fgprojectnumber::
 
            $ unzip euca3-{username}-{cluster}-fgprojectnumber.zip  
 
@@ -96,9 +89,7 @@ not be used in another.
 
 -  If you want to add Eucalyptus environment variables to your .bashrc
    then, do this: (if you are planning to switch between different cloud
-   platforms, it is probably better to use source. 
-
-       ::
+   platforms, it is probably better to use source::
 
            $ cat eucarc >> $HOME/.bashrc
            $ source .bashrc
@@ -150,9 +141,7 @@ SIERRA: 
 Testing Your Setup
 ----------------------
 
-Use euca-describe-availability-zones to test the setup.
-
-    ::
+Use euca-describe-availability-zones to test the setup::
 
         ssh sierra.futuregrid.org
         Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
@@ -172,9 +161,7 @@ Use euca-describe-availability-zones to test the setup.
 
 Available Images
 
-List the existing images using euca-describe-images
-
-    ::
+List the existing images using euca-describe-images::
 
         $ euca-describe-images 
 
@@ -232,9 +219,7 @@ Image Deployment
                   m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
 -  If you need to delete a deployed VM, you can use the
-   euca-terminate-instances command.
-
-       ::
+   euca-terminate-instances command::
 
            $ euca-terminate-instances i-4FC40839
 
@@ -243,13 +228,11 @@ Logging Into the VM
 
 -  Create rules to allow access to the VM over ssh and to allow ping
 
-    | $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
-    |  $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
+    $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
+    $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
 
 -  The ssh private key that was generated earlier can now be used to
-   login to the VM.
-
-    ::
+   login to the VM::
 
         $ssh -i userkey.pem root@149.165.146.153
 
@@ -261,9 +244,7 @@ VM Network Info
 -------------------
 
 -  The VM itself is visible from outside using the VM public IP. The
-   internal network will show the VM private IP address.
-
-    ::
+   internal network will show the VM private IP address::
 
         -bash-3.2# /sbin/ifconfig
 
@@ -274,24 +255,18 @@ Image Management
 --------------------
 
 -  We will use the example ubuntu 10 image to test uploading images.
-   Download the gzipped tar ball.
-
-    ::
+   Download the gzipped tar ball::
 
         $ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz
 
--  Uncompress and untar the archive.
-
-    ::
+-  Uncompress and untar the archive::
 
         $ tar zxf ubuntu-12.04-server-cloudimg-amd64.tar.gz
 
 -  Bundle the image with a kernel and a ramdisk using the
    euca-bundle-image command. In this example, we will use the xen
    kernel already registered. euca-describe-images returns the kernel
-   and ramdisk IDs that we need.
-
-    ::
+   and ramdisk IDs that we need::
 
         $ euca-bundle-image -i   precise-server-cloudimg-amd64.img --kernel eki-78EF12D2 --ramdisk   eri-5BB61255
 
@@ -318,9 +293,7 @@ Image Management
         Part:   precise-server-cloudimg-amd64.img.part.16
         Generating manifest   /tmp/precise-server-cloudimg-amd64.img.manifest.xml
 
--  Use the generated manifest file to upload the image to Walrus.
-
-    ::
+-  Use the generated manifest file to upload the image to Walrus::
 
         $ euca-upload-bundle -b ubuntu-image-bucket   -m /tmp/precise-server-cloudimg-amd64.img.manifest.xml
 
@@ -346,9 +319,7 @@ Image Management
         Uploading part:   precise-server-cloudimg-amd64.img.part.16
         Uploaded image as   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
 
--  Register the uploaded image.
-
-    ::
+-  Register the uploaded image::
 
         $ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
 
@@ -356,9 +327,7 @@ Image Management
 
 -  The returned image ID can now be used to start instances with
    euca-run-instances as described earlier. euca-describe-images also
-   shows the new image now.
-
-    ::
+   shows the new image now::
 
         $ euca-describe-images 
 
@@ -366,9 +335,7 @@ Image Management
         IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine 
           ...
 
--  You can also delete your images
-
-.. code:: rteindent1
+-  You can also delete your images::
 
     $ euca-deregister emi-FFC3154F
 
@@ -378,9 +345,9 @@ Status of Deployments
 At times you may ask if the Eucalyptus systems on FutureGrid are
 operational. You can find this out by visiting 
 
-| a) The Outage page
+a) The Outage page
 at \ `https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds <https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`__
-|  b) The Real Time Status monitor
+b) The Real Time Status monitor
 at \ `http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
-|  c) Our Runtime History
+c) Our Runtime History
 at \ `http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml <http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml>`__

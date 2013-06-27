@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>11. HPC Services &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="14. Getting Started" href="fgmanual.html" />
+    <link rel="prev" title="10. Hardware" href="hardware.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plan.html">1. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="title.html">2.   Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">3. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">4. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">4.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">4.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">4.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">4.4. About this Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">5. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">5.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">5.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">5.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">5.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">5.5. Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="account.html">6. Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-1-create-a-futuregrid-portal-account">6.1. Step 1: Create a FutureGrid Portal Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-2-create-a-new-project-or-join-an-existing-one">6.2. Step 2: Create a new Project or join an existing one</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#step-3-upload-your-ssh-public-key-s">6.3. Step 3: Upload Your SSH Public Key(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#account-management-service">6.4. Account Management Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#key-reset-or-adding-new-keys">6.5. Key Reset or Adding new Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#creating-an-hpc-account">6.6. Creating an HPC account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#resetting-a-ssh-key">6.7. Resetting a ssh-key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#nimbus-eucalyptus-openstack">6.8. Nimbus, Eucalyptus, OpenStack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">7. Accessing FutureGrid resources via SSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#requirement-for-windows-users">7.1. Requirement for Windows Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#instructions-for-both-windows-and-unix-users">7.2. Instructions for both Windows and Unix users</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security.html#generating-ssh-keys-for-futuregrid-access">8. Generating SSH Keys for FutureGrid Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html#key-generation">9. Key Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#generate-public-private-key-pair">9.1. Generate Public/Private Key Pair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#list-the-result">9.2. List the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">9.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#capture-the-public-key-for-futuregrid">9.4. Capture the Public Key for FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#key-management">9.5. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#resetting-the-ssh-key">9.6. Resetting the SSH key</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">10. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-networks">10.1. Compute Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#network">10.2. Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#storage-service">10.3. Storage Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#status">10.4. Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">11. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-systems">11.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filesystem-layout">11.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modules">11.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-applications-with-torque">11.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#message-passing-interface-mpi">11.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mpi-libraries">11.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiling-mpi-applications">11.7. Compiling MPI Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-mpi-applications">11.8. Running MPI Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#log-in-to-hpc-services">12. Log in to HPC services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#i-still-can-not-access-fg-resources">12.1. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#working-with-hpc-job-services">13. Working with HPC Job Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">13.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monitoring-your-job">13.2. Monitoring Your Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examining-your-job-output">13.3. Examining Your Job Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xray-hpc-services">13.4. Xray HPC Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">14. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">14.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">14.2. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">15. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">15.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">15.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">15.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">15.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">15.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">16. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">17. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">18. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">19. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="part-2.html">20. Part 2 - OTHER STUFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">21. Building the Book</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">21.1. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">21.2. Theme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">21.3. Autorun</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">22. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">22.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">22.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">22.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">22.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">22.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">22.6. Excersises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">23. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">24. OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">24.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">24.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">25. Eucalyptus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">25.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">25.2. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">25.3. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">25.4. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">25.5. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">25.6. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">25.7. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">25.8. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">25.9. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="india.html">26. India on  FutureGrid</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">11. HPC Services</a><ul>
+<li><a class="reference internal" href="#accessing-systems">11.1. Accessing Systems</a></li>
+<li><a class="reference internal" href="#filesystem-layout">11.2. Filesystem Layout</a></li>
+<li><a class="reference internal" href="#modules">11.3. Modules</a></li>
+<li><a class="reference internal" href="#managing-applications-with-torque">11.4. Managing Applications with Torque</a></li>
+<li><a class="reference internal" href="#message-passing-interface-mpi">11.5. Message Passing Interface (MPI)</a></li>
+<li><a class="reference internal" href="#mpi-libraries">11.6. MPI Libraries</a></li>
+<li><a class="reference internal" href="#compiling-mpi-applications">11.7. Compiling MPI Applications</a></li>
+<li><a class="reference internal" href="#running-mpi-applications">11.8. Running MPI Applications</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#log-in-to-hpc-services">12. Log in to HPC services</a><ul>
+<li><a class="reference internal" href="#i-still-can-not-access-fg-resources">12.1. I still can not access FG resources</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-hpc-job-services">13. Working with HPC Job Services</a><ul>
+<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">13.1. Running Queued Jobs as Part of the HPC Services</a><ul>
+<li><a class="reference internal" href="#submitting-your-job">13.1.1. Submitting Your Job</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#monitoring-your-job">13.2. Monitoring Your Job</a></li>
+<li><a class="reference internal" href="#examining-your-job-output">13.3. Examining Your Job Output</a></li>
+<li><a class="reference internal" href="#xray-hpc-services">13.4. Xray HPC Services</a><ul>
+<li><a class="reference internal" href="#submitting-a-job">13.4.1. Submitting a job</a></li>
+<li><a class="reference internal" href="#how-do-i-submit-a-job-to-the-cray-xt5m-on-futuregrid">13.4.2. How Do I Submit a Job to the Cray XT5m on FutureGrid?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="hardware.html"
+         title="previous chapter">&laquo; 10. Hardware</a></li>
+  <li><a href="fgmanual.html"
+         title="next chapter">14. Getting Started &raquo;</a></li>
+            
+            
+              <li>
+  <a href="_sources/hpc.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="hpc-services">
+<h1>11. HPC Services<a class="headerlink" href="#hpc-services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="accessing-systems">
+<h2>11.1. Accessing Systems<a class="headerlink" href="#accessing-systems" title="Permalink to this headline">¶</a></h2>
+<p>Several of the clusters that are part of FutureGrid have partitions
+that operate as High Performance Computing (HPC) systems. These
+partitions are batch scheduled, are not virtualized, have computer nodes
+with fixed operating systems, and are suitable for running parallel
+applications. FutureGrid provides a <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">list of HPC
+partitions</a>
+that currently consists of nodes on Alamo, Hotel, India, Sierra, and
+Xray.</p>
+<p>To access the FutureGrid HPC partitions, you need a FutureGrid
+account and an SSH public key you have uploaded to FutureGrid (this
+process is described on our <a class="reference external" href="https://portal.futuregrid.org/gettingstarted">Getting Started
+page</a>). You can then
+simply ssh to the login node of the FutureGrid system you would like to
+use. These login nodes are named <em>&lt;system&gt;.futuregrid.org</em>,
+specifically:</p>
+<ul class="simple">
+<li>alamo.futuregrid.org</li>
+<li>bravo.futuregrid.org</li>
+<li>hotel.futuregrid.org</li>
+<li>india.futuregrid.org</li>
+<li>sierra.futuregrid.org</li>
+<li>xray.futuregrid.org</li>
+</ul>
+<p>If your FutureGrid username is different from your username on your
+system, you will need to include it in your ssh command: <em>ssh
+&lt;futuregrid user name&gt;&#64;&lt;system&gt;.futuregrid.org</em>. You can find out your
+HPC account name by visiting your Portal account page.</p>
+</div>
+<div class="section" id="filesystem-layout">
+<h2>11.2. Filesystem Layout<a class="headerlink" href="#filesystem-layout" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><em>Home</em> ($HOME) directories are located at <em>/N/u/&lt;username&gt;</em>, with
+automated nightly backups. This is where users are encouraged to keep
+source files, configuration files and executables. Users should not
+run code from their $HOME directories. Please note that this is an
+NFS file system, and may result in slower access for some
+applications.</li>
+<li><em>Scratch</em> directories are located at different locations on the
+systems. To find out more about the file layout, please see <a class="reference external" href="http://portal.futuregrid.org/kb/document/bcgv">Storage
+information for FutureGrid
+hardware.</a></li>
+<li><em>System software</em> directories are located at<em>/N/soft,</em> with
+automated nightly backups. System and community software are
+typically installed here.</li>
+</ul>
+</div>
+<div class="section" id="modules">
+<h2>11.3. Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<p>Resources in the FutureGrid HPC partitions have the Modules utility to
+let you dynamically control your environment. Modules allows you to load
+and unload packages and ensure a coherent working environment. The most
+basic Modules commands let you add and remove packages from your
+environment:</p>
+<div class="highlight-python"><pre>$ module load &lt;package name&gt;/&lt;optional package version&gt;
+$ module unload &lt;package name&gt;/&lt;optional package version&gt;</pre>
+</div>
+<p>To display the list of available modules:</p>
+<div class="highlight-python"><pre>$ module avail</pre>
+</div>
+<p>To display the list of currently loaded modules:</p>
+<div class="highlight-python"><pre>$ module list</pre>
+</div>
+<p>It is very important to make sure the proper modules are loaded in the
+environment before you try to use FutureGrid HPC partitions. This
+ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD and other
+environment variables are properly set and that you can access the
+programs and libraries you need. Additional information about the
+Modules utility is available via &#8216;man module&#8217; on any FutureGrid login
+node.</p>
+</div>
+<div class="section" id="managing-applications-with-torque">
+<h2>11.4. Managing Applications with Torque<a class="headerlink" href="#managing-applications-with-torque" title="Permalink to this headline">¶</a></h2>
+<p>To run any jobs on resources within FutureGrid HPC partitions (single
+core, OpenMP or MPI jobs), users must use the job scheduler and a job
+submission script. Users should NOT run jobs on the login or headnodes.
+On FutureGrid machines, the job scheduler is the Torque (a variant of
+PBS). To load torque into your environment, execute:</p>
+<div class="highlight-python"><pre>$ module load torque</pre>
+</div>
+<p>To run a serial job, you start by creating a job submission script
+that both describes your job and will be executed on the compute nodes
+by Torque. An example of a job script for India, Sierra, and Alamo that
+runs <em>/bin/hostname</em> is:</p>
+<div class="highlight-python"><pre>#!/bin/bash
+
+#PBS -N hostname_test
+#PBS -o hostname.out
+#PBS -e hostname.err
+#PBS -q short
+#PBS -l nodes=1
+#PBS -l walltime=00:20:00
+
+/bin/hostname</pre>
+</div>
+<p>Options are passed to Torque on lines that begin with #PBS. The options
+above are:</p>
+<ul class="simple">
+<li>-N: An optional job name</li>
+<li>-o: The name of the file to write stdout to</li>
+<li>-e: The name of the file to write stderr to</li>
+<li>-q: The queue to submit the job to</li>
+<li>-l: The resources needed by the job (in the case above, 1 node for 20
+minutes)</li>
+</ul>
+<p>Additional information about the options that can be specified in a
+submit script is available in the qsub manual page via &#8216;man qsub&#8217;. Note
+that there are multiple queues available on each FutureGrid system:</p>
+<ul class="simple">
+<li>Alamo: short, long, default</li>
+<li>Hotel: extended, batch, long and route</li>
+<li>India: scalemp, batch, long and b534</li>
+<li>Sierra: batch and long</li>
+<li>Xray: batch</li>
+</ul>
+<p>You can find information (such as limits) that will help you select
+which queue to use by running qstat -q on the login node for the system
+you are interested in.</p>
+<p>Once you have created a submission script, you can then use the Torque
+qsub command to submit this job to be executed on the compute nodes:</p>
+<div class="highlight-python"><pre>$ qsub ring.sh
+19095.master1.cm.cluster</pre>
+</div>
+<p>The qsub command outputs either a job identifier or an error message
+describing why Torque would not accept your job. If your job is
+submitted successfully, you can track its execution using the qstat
+command:</p>
+<div class="highlight-python"><pre>$ qstat
+Job id                    Name             User            Time Use S Queue
+------------------------- ---------------- --------------- -------- - -----
+...
+19095.master1             hostname_test    user            00:00:00 R short
+...</pre>
+</div>
+<p>If the system is busy, your job will initially be queued (Q) waiting for
+resources to become available. It will then be in the running state (R),
+and finally it will complete and not be visible in the qstat output. The
+full set of Torque job states is provided in the qstat manual page via
+man qstat on a FutureGrid login node. The stdout and stderr from your
+job will be placed in the files you specified in your submission script.</p>
+<p>A final Torque command you will use occasionally is the qdel command
+that asks Torque to delete a job. If the job hasn&#8217;t begun running, it is
+simply deleted from the queue. If the job has begun, it is killed on the
+nodes it&#8217;s running on, and deleted from the queue.</p>
+<p>A list of all available Torque commands is available from the <a class="reference external" href="http://www.clusterresources.com/torquedocs21/">Torque
+manual page</a>.</p>
+</div>
+<div class="section" id="message-passing-interface-mpi">
+<h2>11.5. Message Passing Interface (MPI)<a class="headerlink" href="#message-passing-interface-mpi" title="Permalink to this headline">¶</a></h2>
+<p>The Message Passing Interface Standard (MPI) is a message passing
+library standard based on the consensus of the MPI Forum, which has
+dozens of participating organizations, including vendors, researchers,
+software library developers, and users. The goal of the Message Passing
+Interface is to establish a portable, efficient, and flexible standard
+for message passing that will be widely used for writing message passing
+programs. MPI is the <em>de facto</em> standard communication library for
+almost all HPC systems, and is available in a variety of
+implementations.</p>
+<p>For more information, please visit:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.mpi-forum.org/">http://www.mpi-forum.org/</a></li>
+<li><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/">http://www.mcs.anl.gov/research/projects/mpi/tutorial/</a></li>
+</ul>
+<p>For more information on OpenMPI, the default MPI distribution on
+FutureGrid, please visit:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.open-mpi.org/">http://www.open-mpi.org/</a></li>
+</ul>
+</div>
+<div class="section" id="mpi-libraries">
+<h2>11.6. MPI Libraries<a class="headerlink" href="#mpi-libraries" title="Permalink to this headline">¶</a></h2>
+<p>The FutureGrid systems that support HPC-style usage have an MPI
+implementation. In most cases, it is OpenMPI-1.4.x compiled with Intel
+11.1 compilers.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="18%" />
+<col width="15%" />
+<col width="25%" />
+<col width="28%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>System</strong></td>
+<td><strong>MPI version</strong></td>
+<td><strong>Compiler</strong></td>
+<td><strong>Infiniband Support</strong></td>
+<td><strong>Module</strong></td>
+</tr>
+<tr class="row-even"><td>Alamo</td>
+<td>OpenMPI 1.4.3</td>
+<td>Intel 11.1</td>
+<td>yes</td>
+<td>openmpi</td>
+</tr>
+<tr class="row-odd"><td>Bravo</td>
+<td>OpenMPI 1.4.2</td>
+<td>Intel 11.1</td>
+<td>no</td>
+<td>openmpi</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>OpenMPI 1.4.3</td>
+<td>gcc 4.4.6</td>
+<td>no</td>
+<td>openmpi/1.4.3-gnu</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>OpenMPI 1.4.3</td>
+<td>Intel 11.1</td>
+<td>no</td>
+<td>openmpi/1.4.3-intel</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>OpenMPI 1.5.4</td>
+<td>gcc 4.4.6</td>
+<td>no</td>
+<td>openmpi/1.5.4-[gnu,intel]</td>
+</tr>
+<tr class="row-odd"><td>Hotel</td>
+<td>OpenMPI 1.4.3</td>
+<td>gcc 4.1.2</td>
+<td>yes</td>
+<td>openmpi</td>
+</tr>
+<tr class="row-even"><td>India</td>
+<td>OpenMPI 1.4.2</td>
+<td>Intel 11.1</td>
+<td>yes</td>
+<td>openmpi</td>
+</tr>
+<tr class="row-odd"><td>Sierra</td>
+<td>OpenMPI 1.4.2</td>
+<td>Intel 11.1</td>
+<td>no</td>
+<td>openmpi</td>
+</tr>
+<tr class="row-even"><td>Xray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>N/A</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>In cases where the OpenMPI is compiled with the Intel compilers,
+loading the OpenMPI module will automatically load the Intel compilers
+as a dependency:</p>
+<div class="highlight-python"><pre>$ module load openmpi
+Intel compiler suite version 11.1/072 loaded
+OpenMPI version 1.4.3 loaded</pre>
+</div>
+<p>Loading the OpenMPI module adds the MPI compilers to your $PATH
+environment variable and the OpenMPI shared library directory to your
+$LD_LIBRARY_PATH. This is an important step to ensure MPI applications
+will compile and run successfully. Loading the torque module allows you
+to submit jobs to the scheduler.</p>
+</div>
+<div class="section" id="compiling-mpi-applications">
+<h2>11.7. Compiling MPI Applications<a class="headerlink" href="#compiling-mpi-applications" title="Permalink to this headline">¶</a></h2>
+<p>To compile MPI applications, users have two options:</p>
+<ol class="arabic simple">
+<li>Use the MPI compilers instead of regular Intel/GNU compilers</li>
+<li>Use the regular compilers (Intel/GNU) with MPI compilation flags</li>
+</ol>
+<p>We recommend using the MPI compilers to avoid compilation issues. This
+is accomplished by making the following replacements:</p>
+<ul class="simple">
+<li>CC/icc/gcc with mpicc</li>
+<li>CXX/icpc/g++ with mpicxx</li>
+<li>F90/F77/FC/ifort/gfortran with mpif90</li>
+</ul>
+<p>Alternatively, for some codes that require intricate compilation flags
+and complicated make systems, and where changing compilers is not an
+option, you can edit the compilation/linking options for your codes.
+These options are machine, compiler, and language dependent. To view the
+options required for C, C++ and Fortran on any machine, you can issue
+the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
+be taken when using these flags, as dependencies govern the order in
+which they appear in the link line. Should you run into compilation
+errors or problems, please submit a consulting ticket.</p>
+<p>Assuming you have loaded the openmpi module into your environment,
+you can compile a <a class="reference external" href="/tutorials/hpc/ring">simple MPI application</a> as
+easily as executing:</p>
+<div class="highlight-python"><pre>$ mpicc -o ring ring.c</pre>
+</div>
+</div>
+<div class="section" id="running-mpi-applications">
+<h2>11.8. Running MPI Applications<a class="headerlink" href="#running-mpi-applications" title="Permalink to this headline">¶</a></h2>
+<p>Once your MPI application is compiled, you run it on the compute nodes
+of a cluster via Torque. An example of an MPI parallel job script for
+India, Sierra, and Alamo that runs the ring application is:</p>
+<div class="highlight-python"><pre>#!/bin/bash
+
+#PBS -N ring_test
+#PBS -o ring_$PBS_JOBID.out
+#PBS -e ring_$PBS_JOBID.err
+#PBS -q short
+#PBS -l nodes=4:ppn=8
+#PBS -l walltime=00:20:00
+
+# make sure MPI is in the environment
+module load openmpi
+
+# launch the parallel application with the correct number of processs
+# Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;
+mpirun -np 32 ring -t 1000</pre>
+</div>
+<p>There are two important differences between this script and the submit
+script shown previously. The first is that :ppn=8 is added to the
+request for four nodes. What this does is indicate that your application
+wants to allocate eight virtual processors per node. A virtual processor
+corresponds to a processing core. Alamo, Hotel, India, and Sierra all
+have eight cores per node, so the script above asks for exclusive access
+to four nodes with a total of 32 cores. The second importand difference
+from the previous submit script is that it executes mpirun with
+arguments that describe your MPI application. Note that the number of
+processes specified to mpirun is 32—matching the 32 cores allocated by
+Torque.</p>
+<p>A minor difference between this script and the previous one is that
+the environment variable $PBS_JOBID is used when creating the stdin and
+stdout files. Torque sets a number of environment variables that you can
+use in your submit script, starting with PBS_ .</p>
+</div>
+</div>
+<div class="section" id="log-in-to-hpc-services">
+<h1>12. Log in to HPC services<a class="headerlink" href="#log-in-to-hpc-services" title="Permalink to this headline">¶</a></h1>
+<p>To access a FutureGrid system via Torque/Moab, you should ssh to the
+login node for the system. The login node is one of the following:</p>
+<ul class="simple">
+<li>india.futuregrid.org</li>
+<li>bravo.futuregrid.org</li>
+<li>sierra.futuregrid.org</li>
+<li>foxtrot.futuregrid.org</li>
+<li>hotel.futuregrid.org</li>
+<li>alamo.futuregrid.org</li>
+<li>xray.futuregrid.org</li>
+</ul>
+<p>An example session follows:</p>
+<div class="highlight-python"><pre>$ ssh sierra.futuregrid.org
+Last login: Thu Aug 12 19:19:22 2010 from ....
+Welcome to Sierra.FutureGrid.Org
+$</pre>
+</div>
+<p>Once you ssh into these nodes, you&#8217;ll have access to the HPC queuing
+services for the machine you have logged into. You will enter into a
+Unix/Linux shell in which you can enter the typical Unix commands.
+However, access to the clusters is provided through Torque/Moab commands
+from the command line.</p>
+<div class="section" id="i-still-can-not-access-fg-resources">
+<h2>12.1. I still can not access FG resources<a class="headerlink" href="#i-still-can-not-access-fg-resources" title="Permalink to this headline">¶</a></h2>
+<p>In order for you to access FG resources you must be in an active
+project. Please make sure you join a project or create your own while
+applying for one.</p>
+</div>
+</div>
+<div class="section" id="working-with-hpc-job-services">
+<h1>13. Working with HPC Job Services<a class="headerlink" href="#working-with-hpc-job-services" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="running-queued-jobs-as-part-of-the-hpc-services">
+<h2>13.1. Running Queued Jobs as Part of the HPC Services<a class="headerlink" href="#running-queued-jobs-as-part-of-the-hpc-services" title="Permalink to this headline">¶</a></h2>
+<p>To run a job in the HPC service, you need to create a job script that
+tells the job manager how to run the job and how to handle things like
+output and notifications. You can then submit your job to the scheduler,
+monitor its progress in the job queue, and examine the output when it
+finishes.</p>
+<p>An example job script looks like this:</p>
+<div class="highlight-python"><pre>#!/bin/bash
+#PBS -N testjob
+#PBS -l nodes=1:ppn=1
+#PBS -q batch
+#PBS -j oe
+##PBS -M username@example.com
+##PBS -m ae ##PBS -o testjob.out
+##
+## Everything following is run by the scheduler
+##
+sleep 10
+echo -n "Host operating system version: "
+uname -a
+echo "Nodes allocated to this job: "
+cat $PBS_NODEFILE
+echo
+sleep 10
+##
+## End of job script
+##</pre>
+</div>
+<p>In the job script, lines that begin with <strong>#PBS</strong> are directives to
+the job scheduler. You can disable any of these lines by adding an
+extra <strong>#</strong>character at the beginning of the line, for example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
+</pre></div>
+</div>
+<p>This job script shows some common examples of directives that you might
+want to use in your job scripts. The directives in this job script are
+described below:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+</pre></div>
+</div>
+<p>This line isn&#8217;t strictly required, but it is added as a fail-safe in
+case something unexpected happens. Normally, the job manager reads your
+script and processes the directives, and then runs your script as a
+normal shell script. This simply ensures that the system uses the
+standard bash shell to run your script:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -N testjob</span>
+</pre></div>
+</div>
+<p>This line gives your job a name of <strong>testjob</strong>. This name will be used
+by the job manager when it shows a job listing, and will be used for
+your output file(s) unless you explicitly specify an output file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -l nodes=1:ppn=1</span>
+</pre></div>
+</div>
+<p>This line tells the job manager what your job requires for resources. In
+this case, your job is asking for one node (<strong>nodes=1</strong>) and at least
+one processor per node (<strong>ppn=1</strong>). See the
+[[Sw:Manual/PBSDirectives|PBSDirectives] page for other options you can
+specify here:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -q batch</span>
+</pre></div>
+</div>
+<p>This line tells the job manager which job queue your job should be sent
+to. Each job queue has different characteristics, such as the maximum
+time a job is allowed to run, or the maximum number of nodes a job can
+use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -j oe</span>
+</pre></div>
+</div>
+<p>This line tells the job manager to join the job standard output and
+standard error into a single file. For jobs with a small amount of
+output, this is usually helpful. If your job produces a lot of standard
+output, it may be helpful to keep the files separate so you can easily
+locate error messages in the single error file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
+</pre></div>
+</div>
+<p>Note that this line is a comment since it starts with <strong>##</strong> instead
+of <strong>#PBS</strong>. If you remove the first <strong>#</strong>, this line will set the
+email address that will get notified about events related to this job.
+The events that get reported are set by the next line:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -m ae</span>
+</pre></div>
+</div>
+<p>Again, note that this line is commented out. If you remove the
+first <strong>#</strong>, this line will send email whenever the job fails
+(or <strong>a</strong>borts) (<strong>a</strong> option), and when the job ends (<strong>e</strong> option).
+This is particularly helpful if your job has to wait a long time in the
+queue before it runs:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -o testjob.out</span>
+</pre></div>
+</div>
+<p>Again, note that this line is commented out. If you remove the
+first <strong>#</strong>, this line will specify the file name to be used for job
+output.</p>
+<div class="section" id="submitting-your-job">
+<h3>13.1.1. Submitting Your Job<a class="headerlink" href="#submitting-your-job" title="Permalink to this headline">¶</a></h3>
+<p>You can submit your job with the <strong>qsub</strong> or <strong>msub</strong> commands.
+The <strong>msub</strong> and <strong>qsub</strong> are almost identical, and can mostly be used
+interchangeably. See the respective man pages for specific differences.
+Neither submission command provides much output. Examples of a job
+submission using both commands follows:</p>
+<p>Using <strong>msub</strong>:</p>
+<div class="highlight-python"><pre>$ msub testjob.pbs
+292250</pre>
+</div>
+<p>Using <strong>qsub</strong>:</p>
+<div class="highlight-python"><pre>$ qsub testjob.pbs
+292251.s82</pre>
+</div>
+<p>In both cases, the number that gets returned is the job number that the
+scheduler assigned to your job. In the case of <strong>qsub</strong>, the job
+number is followed by the host name where you submitted the job.</p>
+</div>
+</div>
+<div class="section" id="monitoring-your-job">
+<h2>13.2. Monitoring Your Job<a class="headerlink" href="#monitoring-your-job" title="Permalink to this headline">¶</a></h2>
+<p>To monitor your job after it has been submitted, you can use
+the <strong>qstat</strong> or <strong>showq</strong> commands. Both commands will show you the
+state of the job manager, but the information is displayed in different
+formats. In general, the <strong>showq</strong> command gives more complete
+information, and in a form that is a bit easier to read.
+The <strong>qstat</strong> command gives a very concise listing of the job queue,
+and in some instances this may give you a better quick overview of the
+resource.</p>
+<p>Using the test job script as an example, here is the output from
+the <strong>showq</strong> command:</p>
+<div class="highlight-python"><pre>$ showq
+active jobs
+------------------------
+JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
+292252   greg       Running     16        3:59:59 Tue Aug 17 09:02:40
+1 active job 16 of 264 processors in use by local jobs (6.06%)
+                  2 of 33 nodes active (6.06%) eligible jobs
+----------------------
+JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
+0 eligible jobs blocked jobs
+-----------------------
+JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
+0 blocked jobs
+Total job: 1</pre>
+</div>
+<p>You can see the output is divided into three sections: <strong>active
+jobs</strong>, <strong>eligible jobs</strong>, and <strong>blocked jobs</strong>.</p>
+<p><strong>1. Active jobs</strong> are jobs that are currently running on the resource.</p>
+<p><strong>2.</strong><strong>Eligible jobs</strong> are jobs that are waiting for nodes to become
+available before they can run. As a general rule, jobs are listed in the
+order that they will be scheduled, but scheduling algorithms may change
+the order over time.</p>
+<p><strong>3.</strong><strong>Blocked jobs</strong> are jobs that the scheduler cannot run for some
+reason. Usually a job becomes blocked because it is requesting something
+that is impossible, such as more nodes than currently exist, or more
+processors per node than are installed.</p>
+<p>Using the test job as an example again, here is the output from
+the <strong>qstat</strong> command:</p>
+<div class="highlight-python"><pre>$ qstat
+Job id                             Name               User          Time Use S Queue
+------------------------- --------------------- ------------------- -------- - -----
+1981.i136                       sub19327.sub      inca               00:00:00 C batch
+1982.i136                       testjob           greg                      0 R batch</pre>
+</div>
+<p>The <strong>qstat</strong> command provides output in six columns:</p>
+<ol class="arabic simple">
+<li>Job id is the identifier assigned to your job.</li>
+<li>Name is the name that you assigned to your job.</li>
+<li>User is the username of the person who submitted the job.</li>
+<li>Time Use is the amount of time the job has been running.</li>
+<li>S shows the job state. Common job states are R for a running job, Q
+for a job that is queued and waiting to run, C for a job that has
+completed, and H for a job that is being held.</li>
+<li>Queue is the name of the job queue where your job will run.</li>
+</ol>
+</div>
+<div class="section" id="examining-your-job-output">
+<h2>13.3. Examining Your Job Output<a class="headerlink" href="#examining-your-job-output" title="Permalink to this headline">¶</a></h2>
+<p>If you gave your job a name with the <strong>#PBS -N &lt;jobname&gt;</strong> directive
+in your job script or by specifying the job name on the command line,
+your job output will be available in a file named <strong>jobname.o######</strong>,
+where the <strong>######</strong> is the job number assigned by the job manager.
+You can type <strong>ls jobname.o*</strong> to see all output files from the same
+job name.</p>
+<p>If you explicitly name an output file with the <strong>#PBS -o
+&lt;outfile&gt;</strong> directive in your job script or by specifying the output
+file on the command line, your output will be in the file you specified.
+If you run the job again, the output file will be overwritten.</p>
+<p>If you don&#8217;t specify any output file, your job output will have the same
+name as your job script, and will be numbered in the same manner as if
+you had specified a job name (<strong>jobname,o######</strong>).</p>
+</div>
+<div class="section" id="xray-hpc-services">
+<h2>13.4. Xray HPC Services<a class="headerlink" href="#xray-hpc-services" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Hostname:</dt>
+<dd>xray.futuregrid.org</dd>
+</dl>
+<p>Login:</p>
+<div class="highlight-python"><pre>ssh xray.futuregrid.org</pre>
+</div>
+<p>Filesystem:</p>
+<p>Compiler:</p>
+<p>For MPI jobs, use cc (pgcc). For best performance, add the xtpe-barcelona module:</p>
+<div class="highlight-python"><pre>% module add xtpe-module</pre>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21">http://docs.cray.com/cgi-bin/craydoc.cgi?q=&amp;mode=Search&amp;hw=%22Cray+XT5%22</a></li>
+<li><a class="reference external" href="http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21">http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21</a></li>
+</ul>
+<p>Currently there is only one queue (batch) available to users on the
+Cray, and all jobs are automatically routed to that queue.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">qstat</span> <span class="o">-</span><span class="n">Q</span>
+</pre></div>
+</div>
+<p>The primary queue for running jobs on Xray is batch. To obtain details
+of running jobs and available processors, use the showq command:</p>
+<div class="highlight-python"><pre>/opt/moab/default/bin/showq</pre>
+</div>
+<div class="section" id="submitting-a-job">
+<h3>13.4.1. Submitting a job<a class="headerlink" href="#submitting-a-job" title="Permalink to this headline">¶</a></h3>
+<p><strong>MPI run cmd</strong>:  aprun</p>
+<p>Example <strong>job script (16 processors / 2 nodes):</strong>:</p>
+<div class="highlight-python"><pre>% cat job.sub</pre>
+</div>
+<div class="highlight-python"><pre>#!/bin/sh
+#PBS -l mppwidth=16
+#PBS -l mppnppn=8
+#PBS -N hpcc-16
+#PBS -j oe
+#PBS -l walltime=7:00:00
+#cd to directory where job was submitted from
+cd $PBS_O_WORKDIR
+export MPICH_FAST_MEMCPY=1
+export MPICH_PTL_MATCH_OFF=1
+aprun -n 16 -N 8 -ss -cc cpu hpcc
+% qsub job.sub</pre>
+</div>
+<p>Looking at the Queue</p>
+<div class="highlight-python"><pre>% qstat</pre>
+</div>
+</div>
+<div class="section" id="how-do-i-submit-a-job-to-the-cray-xt5m-on-futuregrid">
+<h3>13.4.2. How Do I Submit a Job to the Cray XT5m on FutureGrid?<a class="headerlink" href="#how-do-i-submit-a-job-to-the-cray-xt5m-on-futuregrid" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://kb.iu.edu/data/azse.html">http://kb.iu.edu/data/azse.html</a></p>
+<p>The XT5m is a 2D mesh of nodes. Each node has two sockets, and each
+socket has four cores.</p>
+<p>The batch scheduler interfaces with a Cray resource scheduler called
+APLS. When you submit a job, the batch scheduler talks to ALPS to find
+out what resources are available, and ALPS then makes the reservation.</p>
+<p>Currently ALPS is a &#8220;gang scheduler&#8221; and only allows one &#8220;job&#8221; per node.
+If a user submits a job in the format aprun -n 1 a.out , ALPS will put
+that job on one core of one node and leave the other seven cores empty.
+When the next job comes in, either from the same user or a different
+one, it will schedule that job to the next node.</p>
+<p>If the user submits a job with aprun -n 10 a.out , then the scheduler
+will put the first eight tasks on the first node and the next two tasks
+on the second node, again leaving six empty cores on the second node.
+The user can modify the placement with -N , -S , and -cc .</p>
+<p>A user might also run a single job with multiple treads, as with OpenMP.
+If a user runs this job aprun -n 1 -d 8 a.out , the job will be
+scheduled to one node and have eight threads running, one on each core.</p>
+<p>You can run multiple, different binaries at the same time on the same
+node, but only from one submission. Submitting a script like this
+will not work:</p>
+<div class="highlight-python"><pre>OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 0 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 1 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 2 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 3 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 4 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 5 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 6 ./my-binary
+OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 7 ./my-binary</pre>
+</div>
+<p>This will run a job on each core, but not at the same time. To run all
+jobs at the same time, you need to first bury all the binaries under
+one aprun command:</p>
+<div class="highlight-python"><pre>$ more run.sh
+./my-binary1
+./my-binary2
+./my-binary3
+./my-binary4
+./my-binary5
+./my-binary6
+./my-binary7
+./my-binary8
+$ aprun -n 1 run.sh</pre>
+</div>
+<p>Alternatively, use the command aprun -n 1 -d 8 run.sh. To run multiple
+serial jobs, you must build a batch script to divide the number of jobs
+into groups of eight, and the</p>
+</div>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
