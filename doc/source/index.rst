@@ -12,8 +12,9 @@ FG Manual
    preface
    summary-executive
    introduction
+   security
    hardware
-
+   hpc
 
    fgmanual
    part-2

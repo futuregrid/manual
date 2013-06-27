@@ -22,6 +22,7 @@ Contributors:
     Alan Streib
     Archit Kulshrestha, 
     Jonathan Bolte
+    Gregory Pike
 
 .. 
 
