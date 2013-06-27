@@ -17,30 +17,26 @@ Hardware
 
 These are the current resources available in FutureGrid. 
 
-Compute Resources
---------------------------------------------------
-.. csv-table:: 
-   :header: Name                                                       , System Type           , # Nodes   , # CPUS   , # Cores   , TFLOPS   , RAM (GB   , Storage (TB)   , Site   
 
-   india      , IBM iDataplex             , 128           , 256          , 1024          , 11           , 3072          , 335                , IU         
-   hotel      , IBM iDataplex             , 84            , 168          , 672           , 7            , 2016          , 120                , UC         
-   sierra    , IBM iDataplex             , 84            , 168          , 672           , 7            , 2688          , 96                 , SDSC       
-   foxtrot   ,IBM iDataplex             , 32            , 64           , 256           , 3            , 768           , 0                  , UF         
-   alamo      , Dell Poweredge            , 96            , 192          , 768           , 8            , 1152          , 30                 , TACC       
-   xray        , Cray XT5m                 , 1             , 166          , 664           , 6            , 1328          , 5.4                , IU         
-   bravo      , HP Proliant               , 16            , 32           , 128           , 1.7          , 3072          , 128                , IU         
-   delta      , GPU Cluster(SuperMicro)   , 16            , 32           , 192           ,              , 1333          , 144                , IU         
-   lima         , Aeon Eclipse64            , 8             , 16           , 128           , 1.3          , 512           , 3.8 (SSD)          , SDSC       
+.. csv-table:: Compute Resources			
+   :header: Name, System Type           , # Nodes, # CPUS, # Cores, TFLOPS , RAM (GB), Storage (TB), Site
+						 
+   india        , IBM iDataplex          , 128        , 256         , 1024        , 11        , 3072       , 335 , IU    
+   hotel        , IBM iDataplex          , 84         , 168         , 672         , 7         , 2016       , 120 , UC     
+   sierra       , IBM iDataplex          , 84         , 168         , 672         , 7         , 2688       , 96  , SDSC   
+   foxtrot      ,IBM iDataplex           , 32         , 64          , 256         , 3         , 768        , 0   , UF    
+   alamo        , Dell Poweredge         , 96         , 192         , 768         , 8         , 1152       , 30  , TACC   
+   xray         , Cray XT5m              , 1          , 166         , 664         , 6         , 1328       , 5.4 , IU     
+   bravo        , HP Proliant            , 16         , 32          , 128         , 1.7       , 3072       , 128 , IU     
+   delta        , GPU Cluster(SuperMicro), 16         , 32          , 192         ,           , 1333       , 144 , IU     
+   lima         , Aeon Eclipse64         , 8          , 16          , 128         , 1.3       , 512        , 3.8 , SDSC   
 
 
-Storage Resources
---------------------------------------------------
-
-.. csv-table:: 
+.. csv-table:: Storage Resources
    :header:  System Type   , Capacity (TB)      , File System   , Site    
 
     DDN 9550          , 339 shared with IU +   , Luster            , IU        
-    Data Capacitor   ,  16 TB dedicated       ,                   ,            
+    Data Capacitor    ,  16 TB dedicated       ,                   ,            
     DDN 6620          , 120                    , GPFS              , UC         
     SunFire x4540     , 96                     , ZFS               , SDSC       
     Dell MD3000       , 30                     , NFS               , TACC       
