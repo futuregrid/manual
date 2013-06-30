@@ -4,36 +4,52 @@ HPC Services
 Accessing Systems
 -----------------
 
-Several of the clusters that are part of FutureGrid have partitions
-that operate as High Performance Computing (HPC) systems. These
-partitions are batch scheduled, are not virtualized, have computer nodes
-with fixed operating systems, and are suitable for running parallel
-applications. FutureGrid provides a `list of HPC
+Several of the clusters that are part of FutureGrid expose services that 
+operate as High Performance Computing (HPC) systems. These
+services se batch queues, and are not virtualized, have computer nodes
+with fixed operating systems
+
+.. todo:: THIS IS WRONG.
+
+and are suitable for running parallel
+applications. 
+
+
+FutureGrid provides a `list of HPC
 partitions <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
 that currently consists of nodes on Alamo, Hotel, India, Sierra, and
 Xray.
 
+.. todo: this list is incomplete
+
 To access the FutureGrid HPC partitions, you need a FutureGrid
 account and an SSH public key you have uploaded to FutureGrid (this
-process is described on our `Getting Started
-page <https://portal.futuregrid.org/gettingstarted>`__). You can then
-simply ssh to the login node of the FutureGrid system you would like to
-use. These login nodes are named *<system>.futuregrid.org*,
-specifically:
+process is described in the section about 
+_:ref:`s-account-management`. After you are part of a valid project
+and have a FutureGrid account, you can log into the FutureGrid
+resources with ssh. The resources include the following login nodes:
 
 -  alamo.futuregrid.org
 -  bravo.futuregrid.org
+-  foxtrot.futuregrid.org
 -  hotel.futuregrid.org
 -  india.futuregrid.org
 -  sierra.futuregrid.org
 -  xray.futuregrid.org
 
-If your FutureGrid username is different from your username on your
-system, you will need to include it in your ssh command: *ssh
-<futuregrid user name>@<system>.futuregrid.org*. You can find out your
-HPC account name by visiting your Portal account page.
+An example session follows::
 
+        $ ssh portalname@sierra.futuregrid.org
+        Last login: Thu Aug 12 19:19:22 2010 from ....
+        Welcome to Sierra.FutureGrid.Org
 
+Once you ssh into these nodes, you'll have access to the HPC queuing
+services for the machine you have logged into. You will enter into a
+Unix/Linux shell in which you can enter the typical Unix commands.
+Access to the clusters is provided through Torque/Moab commands
+from the command line. 
+
+ 
 Filesystem Layout
 -----------------
 
@@ -55,6 +71,8 @@ Filesystem Layout
 
 Modules
 -------
+
+.. todo:: the list of useful modules is missing
 
 Resources in the FutureGrid HPC partitions have the Modules utility to
 let you dynamically control your environment. Modules allows you to load
@@ -333,56 +351,15 @@ the environment variable $PBS\_JOBID is used when creating the stdin and
 stdout files. Torque sets a number of environment variables that you can
 use in your submit script, starting with PBS\_ .
 
-Log in to HPC services
-======================
-
- 
-
-To access a FutureGrid system via Torque/Moab, you should ssh to the
-login node for the system. The login node is one of the following:
-
--  india.futuregrid.org
--  bravo.futuregrid.org
--  sierra.futuregrid.org
--  foxtrot.futuregrid.org
--  hotel.futuregrid.org
--  alamo.futuregrid.org
--  xray.futuregrid.org
-
-An example session follows::
-
-        $ ssh sierra.futuregrid.org
-        Last login: Thu Aug 12 19:19:22 2010 from ....
-        Welcome to Sierra.FutureGrid.Org
-        $
-
-Once you ssh into these nodes, you'll have access to the HPC queuing
-services for the machine you have logged into. You will enter into a
-Unix/Linux shell in which you can enter the typical Unix commands.
-However, access to the clusters is provided through Torque/Moab commands
-from the command line. 
-
- 
-
-I still can not access FG resources
---------------------------------------
-
-In order for you to access FG resources you must be in an active
-project. Please make sure you join a project or create your own while
-applying for one.
-
-
- 
-
  
 
 Working with HPC Job Services
-=============================
+----------------------------------------------------------------------
 
  
 
 Running Queued Jobs as Part of the HPC Services
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To run a job in the HPC service, you need to create a job script that
 tells the job manager how to run the job and how to handle things like
@@ -506,7 +483,7 @@ scheduler assigned to your job. In the case of \ **qsub**, the job
 number is followed by the host name where you submitted the job.
 
 Monitoring Your Job
--------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To monitor your job after it has been submitted, you can use
 the \ **qstat** or **showq** commands. Both commands will show you the
@@ -524,7 +501,7 @@ the \ **showq** command::
         active jobs
         ------------------------ 
         JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME 
-        292252   greg       Running     16        3:59:59 Tue Aug 17 09:02:40 
+        292252   yourusername       Running     16        3:59:59 Tue Aug 17 09:02:40 
         1 active job 16 of 264 processors in use by local jobs (6.06%) 
                           2 of 33 nodes active (6.06%) eligible jobs
         ----------------------
@@ -559,7 +536,7 @@ the \ **qstat** command::
         Job id                             Name               User          Time Use S Queue 
         ------------------------- --------------------- ------------------- -------- - ----- 
         1981.i136                       sub19327.sub      inca               00:00:00 C batch 
-        1982.i136                       testjob           greg                      0 R batch 
+        1982.i136                       testjob           yourusername                      0 R batch 
 
 The \ **qstat** command provides output in six columns:
 
@@ -575,7 +552,7 @@ The \ **qstat** command provides output in six columns:
  
 
 Examining Your Job Output
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you gave your job a name with the \ **#PBS -N <jobname>** directive
 in your job script or by specifying the job name on the command line,
@@ -594,56 +571,44 @@ name as your job script, and will be numbered in the same manner as if
 you had specified a job name (**jobname,o######**).
 
 Xray HPC Services
-------------------
+----------------------------------------------------------------------
 
+To log into the login node of xreay please use the command
 
-Hostname:
-  xray.futuregrid.org
+    ssh yourportalname@xray.futuregrid.org
 
-Login::
+Extensive documentation about the user environment of the Cray can be
+found at 
 
-    ssh xray.futuregrid.org
-
-
-Filesystem::
-
-
-Compiler:
+- `Cray XTTM Programming Environment User's
+  Guide`<http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
 
 For MPI jobs, use cc (pgcc). For best performance, add the xtpe-barcelona module::
 
-	    % module add xtpe-module
-
-Cray Programming Environment Manuals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
--  `http://docs.cray.com/cgi-bin/craydoc.cgi?q=&mode=Search&hw=%22Cray+XT5%22 <http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
--  `http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21 <http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
-
-Queue
-^^^^^^^
+    % module add xtpe-module
 
 Currently there is only one queue (batch) available to users on the
 Cray, and all jobs are automatically routed to that queue.
 
-Listing Queues on Xray
-^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+To list the queues please use::
 
          qstat -Q
 
-The primary queue for running jobs on Xray is batch. To obtain details
-of running jobs and available processors, use the showq command::
+To obtain details of running jobs and available processors, use the showq command::
 
         /opt/moab/default/bin/showq
 
-Submitting a job
-~~~~~~~~~~~~~~~~~
+Submitting a job on xray
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: this example is incomplete and connfusing. we cat the job. submit but do
+   not show how we submit ;-)
+
 
 **MPI run cmd**:  aprun
 
-Example \ **job script (16 processors / 2 nodes):**::
+Example job script (16 processors / 2 nodes)::
 
         % cat job.sub 
 
@@ -665,11 +630,6 @@ Example \ **job script (16 processors / 2 nodes):**::
 Looking at the Queue ::
 
         % qstat
-
-How Do I Submit a Job to the Cray XT5m on FutureGrid?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-`http://kb.iu.edu/data/azse.html <http://kb.iu.edu/data/azse.html>`__
 
 The XT5m is a 2D mesh of nodes. Each node has two sockets, and each
 socket has four cores.
@@ -725,8 +685,10 @@ Alternatively, use the command aprun -n 1 -d 8 run.sh. To run multiple
 serial jobs, you must build a batch script to divide the number of jobs
 into groups of eight, and the
 
-Storage Service
-================
+.. todo:: where is run.sh, is see job.sub but not run.sh
+
+Storage Services
+----------------------------------------------------------------------
 
 .. csv-table::
 
@@ -752,7 +714,7 @@ Storage Service
 
 
 Using Indiana Universities Storage Services from FutureGrid
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: This section has not be tested recently
   

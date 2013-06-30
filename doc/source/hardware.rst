@@ -12,9 +12,12 @@ Hardware
    fix section outline
 
 
+
 FutureGrid is build out of a number of clusters that are interconected
 with up to a 10GB Ethernet among its sites.
 
+Compute Resources
+==================
 
 .. csv-table:: Compute Resources			
    :header: Name, System Type           , # Nodes, # CPUS, # Cores, TFLOPS , RAM (GB), Storage (TB), Site
@@ -75,7 +78,7 @@ with up to a 10GB Ethernet among its sites.
 
 
 
-Compute Networks
+Networks
 ======================================================================
 
 .. csv-table::
@@ -89,9 +92,6 @@ Compute Networks
    UF, Ethernet only (Blade Network Technologies & Force10 switches)
 
  
-
-Network
-=======
 
 The FutureGrid network provides for connectivity among FutureGrid
 participants, and network access to the Network Impairments Device
