@@ -4,36 +4,52 @@ HPC Services
 Accessing Systems
 -----------------
 
-Several of the clusters that are part of FutureGrid have partitions
-that operate as High Performance Computing (HPC) systems. These
-partitions are batch scheduled, are not virtualized, have computer nodes
-with fixed operating systems, and are suitable for running parallel
-applications. FutureGrid provides a `list of HPC
+Several of the clusters that are part of FutureGrid expose services that 
+operate as High Performance Computing (HPC) systems. These
+services se batch queues, and are not virtualized, have computer nodes
+with fixed operating systems
+
+.. todo:: THIS IS WRONG.
+
+and are suitable for running parallel
+applications. 
+
+
+FutureGrid provides a `list of HPC
 partitions <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
 that currently consists of nodes on Alamo, Hotel, India, Sierra, and
 Xray.
 
+.. todo: this list is incomplete
+
 To access the FutureGrid HPC partitions, you need a FutureGrid
 account and an SSH public key you have uploaded to FutureGrid (this
-process is described on our `Getting Started
-page <https://portal.futuregrid.org/gettingstarted>`__). You can then
-simply ssh to the login node of the FutureGrid system you would like to
-use. These login nodes are named *<system>.futuregrid.org*,
-specifically:
+process is described in the section about 
+_:ref:`s-account-management`. After you are part of a valid project
+and have a FutureGrid account, you can log into the FutureGrid
+resources with ssh. The resources include the following login nodes:
 
 -  alamo.futuregrid.org
 -  bravo.futuregrid.org
+-  foxtrot.futuregrid.org
 -  hotel.futuregrid.org
 -  india.futuregrid.org
 -  sierra.futuregrid.org
 -  xray.futuregrid.org
 
-If your FutureGrid username is different from your username on your
-system, you will need to include it in your ssh command: *ssh
-<futuregrid user name>@<system>.futuregrid.org*. You can find out your
-HPC account name by visiting your Portal account page.
+An example session follows::
 
+        $ ssh portalname@sierra.futuregrid.org
+        Last login: Thu Aug 12 19:19:22 2010 from ....
+        Welcome to Sierra.FutureGrid.Org
 
+Once you ssh into these nodes, you'll have access to the HPC queuing
+services for the machine you have logged into. You will enter into a
+Unix/Linux shell in which you can enter the typical Unix commands.
+Access to the clusters is provided through Torque/Moab commands
+from the command line. 
+
+ 
 Filesystem Layout
 -----------------
 
@@ -55,6 +71,8 @@ Filesystem Layout
 
 Modules
 -------
+
+.. todo:: the list of useful modules is missing
 
 Resources in the FutureGrid HPC partitions have the Modules utility to
 let you dynamically control your environment. Modules allows you to load
@@ -85,6 +103,24 @@ node.
 
 Managing Applications with Torque
 ---------------------------------
+
+HPC Job Queue Information:
+    .. csv-table:: 
+       :header: Resource   , Queue name   , Default Wallclock Limit   , Max Wallclock Limit   , NOTES                 
+
+	india      , batch        , 4 hours                   , 24 hours              ,                       
+		   , long         , 8 hours                   , 168 hours             ,                       
+		   , scalemp      , 8 hours                   , 168 hours             , restricted access     
+		   , b534         , none                      , none                  , restricted access     
+		   , ajyounge     , none                      , none                  , restricted access     
+	sierra     , batch        , 4 hours                   , 24 hours              ,                       
+		   , long         , 8 hours                   , 168 hours             ,                       
+	hotel      , extended     , none                      , none                  ,                       
+	alamo      , shortq       , none                      , 24 hours              ,                       
+		   , longq        , none                      , 24 hours              ,                       
+	foxtrot    , batch        , 1 hour                    , none                  , not for general use   
+
+
 
 To run any jobs on resources within FutureGrid HPC partitions (single
 core, OpenMP or MPI jobs), users must use the job scheduler and a job
@@ -315,56 +351,15 @@ the environment variable $PBS\_JOBID is used when creating the stdin and
 stdout files. Torque sets a number of environment variables that you can
 use in your submit script, starting with PBS\_ .
 
-Log in to HPC services
-======================
-
- 
-
-To access a FutureGrid system via Torque/Moab, you should ssh to the
-login node for the system. The login node is one of the following:
-
--  india.futuregrid.org
--  bravo.futuregrid.org
--  sierra.futuregrid.org
--  foxtrot.futuregrid.org
--  hotel.futuregrid.org
--  alamo.futuregrid.org
--  xray.futuregrid.org
-
-An example session follows::
-
-        $ ssh sierra.futuregrid.org
-        Last login: Thu Aug 12 19:19:22 2010 from ....
-        Welcome to Sierra.FutureGrid.Org
-        $
-
-Once you ssh into these nodes, you'll have access to the HPC queuing
-services for the machine you have logged into. You will enter into a
-Unix/Linux shell in which you can enter the typical Unix commands.
-However, access to the clusters is provided through Torque/Moab commands
-from the command line. 
-
- 
-
-I still can not access FG resources
---------------------------------------
-
-In order for you to access FG resources you must be in an active
-project. Please make sure you join a project or create your own while
-applying for one.
-
-
- 
-
  
 
 Working with HPC Job Services
-=============================
+----------------------------------------------------------------------
 
  
 
 Running Queued Jobs as Part of the HPC Services
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To run a job in the HPC service, you need to create a job script that
 tells the job manager how to run the job and how to handle things like
@@ -488,7 +483,7 @@ scheduler assigned to your job. In the case of \ **qsub**, the job
 number is followed by the host name where you submitted the job.
 
 Monitoring Your Job
--------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To monitor your job after it has been submitted, you can use
 the \ **qstat** or **showq** commands. Both commands will show you the
@@ -506,7 +501,7 @@ the \ **showq** command::
         active jobs
         ------------------------ 
         JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME 
-        292252   greg       Running     16        3:59:59 Tue Aug 17 09:02:40 
+        292252   yourusername       Running     16        3:59:59 Tue Aug 17 09:02:40 
         1 active job 16 of 264 processors in use by local jobs (6.06%) 
                           2 of 33 nodes active (6.06%) eligible jobs
         ----------------------
@@ -541,7 +536,7 @@ the \ **qstat** command::
         Job id                             Name               User          Time Use S Queue 
         ------------------------- --------------------- ------------------- -------- - ----- 
         1981.i136                       sub19327.sub      inca               00:00:00 C batch 
-        1982.i136                       testjob           greg                      0 R batch 
+        1982.i136                       testjob           yourusername                      0 R batch 
 
 The \ **qstat** command provides output in six columns:
 
@@ -557,7 +552,7 @@ The \ **qstat** command provides output in six columns:
  
 
 Examining Your Job Output
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you gave your job a name with the \ **#PBS -N <jobname>** directive
 in your job script or by specifying the job name on the command line,
@@ -576,56 +571,44 @@ name as your job script, and will be numbered in the same manner as if
 you had specified a job name (**jobname,o######**).
 
 Xray HPC Services
-------------------
+----------------------------------------------------------------------
 
+To log into the login node of xreay please use the command
 
-Hostname:
-  xray.futuregrid.org
+    ssh yourportalname@xray.futuregrid.org
 
-Login::
+Extensive documentation about the user environment of the Cray can be
+found at 
 
-    ssh xray.futuregrid.org
-
-
-Filesystem::
-
-
-Compiler:
+- `Cray XTTM Programming Environment User's
+  Guide`<http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
 
 For MPI jobs, use cc (pgcc). For best performance, add the xtpe-barcelona module::
 
-	    % module add xtpe-module
-
-Cray Programming Environment Manuals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
--  `http://docs.cray.com/cgi-bin/craydoc.cgi?q=&mode=Search&hw=%22Cray+XT5%22 <http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
--  `http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21 <http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
-
-Queue
-^^^^^^^
+    % module add xtpe-module
 
 Currently there is only one queue (batch) available to users on the
 Cray, and all jobs are automatically routed to that queue.
 
-Listing Queues on Xray
-^^^^^^^^^^^^^^^^^^^^^^^
 
-::
+To list the queues please use::
 
          qstat -Q
 
-The primary queue for running jobs on Xray is batch. To obtain details
-of running jobs and available processors, use the showq command::
+To obtain details of running jobs and available processors, use the showq command::
 
         /opt/moab/default/bin/showq
 
-Submitting a job
-~~~~~~~~~~~~~~~~~
+Submitting a job on xray
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: this example is incomplete and connfusing. we cat the job. submit but do
+   not show how we submit ;-)
+
 
 **MPI run cmd**:  aprun
 
-Example \ **job script (16 processors / 2 nodes):**::
+Example job script (16 processors / 2 nodes)::
 
         % cat job.sub 
 
@@ -647,11 +630,6 @@ Example \ **job script (16 processors / 2 nodes):**::
 Looking at the Queue ::
 
         % qstat
-
-How Do I Submit a Job to the Cray XT5m on FutureGrid?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-`http://kb.iu.edu/data/azse.html <http://kb.iu.edu/data/azse.html>`__
 
 The XT5m is a 2D mesh of nodes. Each node has two sockets, and each
 socket has four cores.
@@ -706,3 +684,96 @@ one aprun command::
 Alternatively, use the command aprun -n 1 -d 8 run.sh. To run multiple
 serial jobs, you must build a batch script to divide the number of jobs
 into groups of eight, and the
+
+.. todo:: where is run.sh, is see job.sub but not run.sh
+
+Storage Services
+----------------------------------------------------------------------
+
+.. csv-table::
+
+    Clustername (site),    Mountpoint,    Size,    Type,    Backups,    Use,    Notes,
+    Sierra (UCSD/SDSC),    /N/u/*username*,    40.6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    Home dir,    By default quotas on home directories are 50 GB and quotas on scratch directories are 100 GB.,
+    Sierra (UCSD/SDSC),    /N/scratch/*username*,    5.44TB,    ZFS  (RAID0),    No,    Scratch,  
+    Sierra (UCSD/SDSC),    /N/soft,    50GB,    ZFS  (RAID2),    Yes  (nightly incremental),    Software installs,  
+    Sierra (UCSD/SDSC),    /N/images,    6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    VM images,  
+    India  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    At the moment we do not have any quota implemented on India and we use the local/tmp  (77 GB) as scratch space.,
+    India  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
+    India  (IU),    /tmp,    77GB,    local disk,    No,    Scratch,  
+    Bravo  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    The same NFS shares in India are mounted in Bravo   (users do not log in here; jobs are submitted through India). There  are two local partitions which are used for HDFS and swift tests.,
+    Bravo  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
+    Delta  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    Same as Bravo. The NFS shares are mounted for user and group share (users do not log in directly here; jobs are submitted through India).,
+    Delta (IU),    /share/project,    14TB,    NFS (RAID5),    Yes (nightly incremental),    Shared/group folders,  
+    Hotel (UC),    /gpfs/home,    15TB,    GPFS (RAID6),    No,    Home dir,    By default quotas on home directories are 10 GB.,
+    Hotel (UC),    /gpfs/scratch,    57TB,    GPFS (RAID6),    No,    Scratch,  
+    Hotel (UC),    /gpfs/software,    7.1GB,    GPFS (RAID6),    No,    Software installs,  
+    Hotel (UC),    /gpfs/images,    7.1TB,    GPFS (RAID6),    No,    VM images,  
+    Hotel (UC),    /scratch/local,    862GB,    ext3 (local disk),    No,    Local scratch,  
+    Foxtrot (UFL),    /N/u/*username*,    16TiB,    NFS (RAID5),    No,    Home dir,    At the moment we do not have any quota implemented on Foxtrot.,
+
+
+
+Using Indiana Universities Storage Services from FutureGrid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: This section has not be tested recently
+  
+FutureGrid does not provide an HPSS server. However, if you have an IU
+account (available only for IU faculty, staff, and students), you can
+use the following services from india:
+
+* `SDA <http://rc.uits.iu.edu/storage/sda>`__ service
+* `HSI <http://rc.uits.iu.edu/storage/hsi>`__, the Hierarchical Storage
+Interface client is available in india. 
+
+To use the HSI client on india:
+
+-  First, activate your SDA account as descreibed in the `MDSS Service Starter
+   Kit <http://rc.uits.iu.edu/storage/mdss-starter-kit>`__ documentation.
+-  Then, from india, load the HSI module as follows:
+
+::
+
+    $ module load hsi
+    hsi version 3.5.3 loaded
+
+-  Connect to the SDA:
+
+::
+
+    $ hsi -A combo
+    Principal: your_iu_userid                                
+    [youriuid]Password:                                
+    Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewall: off [hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009]
+    ?
+
+Your principal is your IU Network ID, and your password is
+the IU passphrase.
+
+-  Enable firewall mode; otherwise, you will receive this error:
+
+   ::
+
+       put: Error -5 on transfer
+
+::
+
+    ? firewall -on
+    A: firewall mode set ON, I/O mode set to extended (parallel=off), autoscheduling currently set to OFF
+
+-  List local folder:
+
+::
+
+     ? lls
+    testfile.txt
+
+-  List the current directory in HPSS:
+
+::
+
+    ? pwd
+    pwd0: /hpss/pathtoyouriuusername
+
+-  For transferring files (*put* and *get*), search the `IU Knowledge
+   Base <http://kb.iu.edu/?search=hsi>`__.

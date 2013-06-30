@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>6. Account &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>6. Project and Account Management &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="7. Accessing FutureGrid resources via SSH" href="security.html" />
+    <link rel="next" title="7. Using SSH keys" href="security.html" />
     <link rel="prev" title="5. Introduction" href="introduction.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -65,14 +65,15 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="plan.html">1. Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="title.html">2.   Manual</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">3. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="title.html">3.   Manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">4. Preface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">4.1. Citation for Publications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">4.2. Acknowledgement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">4.3. Sponsors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">4.4. About this Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#conventions">4.5. Conventions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">5. Introduction</a><ul>
@@ -83,134 +84,66 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#support">5.5. Support</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">6. Account</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#step-1-create-a-futuregrid-portal-account">6.1. Step 1: Create a FutureGrid Portal Account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-2-create-a-new-project-or-join-an-existing-one">6.2. Step 2: Create a new Project or join an existing one</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#step-3-upload-your-ssh-public-key-s">6.3. Step 3: Upload Your SSH Public Key(s)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#account-management-service">6.4. Account Management Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#key-reset-or-adding-new-keys">6.5. Key Reset or Adding new Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-an-hpc-account">6.6. Creating an HPC account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resetting-a-ssh-key">6.7. Resetting a ssh-key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#nimbus-eucalyptus-openstack">6.8. Nimbus, Eucalyptus, OpenStack</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">6. Project and Account Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#terminology">6.1. Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">6.2. Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#projects-and-accounts-for-xsede-users">6.3. Projects and Accounts for XSEDE users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#in-depth-information">6.4. In Depth Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-your-ssh-public-key-s">6.5. Upload Your SSH Public Key(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#openid-integration">6.6. OpenId Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-futuregrid-resources">6.7. Using FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq-about-accounts">6.8. FAQ about Accounts</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="security.html">7. Accessing FutureGrid resources via SSH</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="security.html#requirement-for-windows-users">7.1. Requirement for Windows Users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html#instructions-for-both-windows-and-unix-users">7.2. Instructions for both Windows and Unix users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">7. Using SSH keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#using-ssh-from-windows">7.1. Using SSH from Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#generate-a-ssh-key">7.2. Generate a SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">7.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#upload-the-key-to-the-futuregrid-portal">7.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#testing-your-ssh-key">7.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#testing-your-ssh-key-for-hotel">7.6. Testing your ssh key for Hotel</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="security.html#generating-ssh-keys-for-futuregrid-access">8. Generating SSH Keys for FutureGrid Access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="security.html#key-generation">9. Key Generation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="security.html#generate-public-private-key-pair">9.1. Generate Public/Private Key Pair</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html#list-the-result">9.2. List the result</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">9.3. Add or Replace Passphrase for an Already Generated Key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html#capture-the-public-key-for-futuregrid">9.4. Capture the Public Key for FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html#key-management">9.5. Key Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="security.html#resetting-the-ssh-key">9.6. Resetting the SSH key</a></li>
+<li class="toctree-l1"><a class="reference internal" href="status.html">8. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">9. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-resources">9.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#networks">9.2. Networks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hardware.html">10. Hardware</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-networks">10.1. Compute Networks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#network">10.2. Network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#storage-service">10.3. Storage Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardware.html#status">10.4. Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">10. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">10.1. Accessing Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">10.2. Filesystem Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">10.3. Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">10.4. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">10.5. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#mpi-libraries">10.6. MPI Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#compiling-mpi-applications">10.7. Compiling MPI Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-mpi-applications">10.8. Running MPI Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">10.9. Working with HPC Job Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">10.10. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">10.11. Storage Services</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">11. HPC Services</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">11.1. Accessing Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">11.2. Filesystem Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">11.3. Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">11.4. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">11.5. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#mpi-libraries">11.6. MPI Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#compiling-mpi-applications">11.7. Compiling MPI Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-mpi-applications">11.8. Running MPI Applications</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html#log-in-to-hpc-services">12. Log in to HPC services</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#i-still-can-not-access-fg-resources">12.1. I still can not access FG resources</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">13. Working with HPC Job Services</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-queued-jobs-as-part-of-the-hpc-services">13.1. Running Queued Jobs as Part of the HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#monitoring-your-job">13.2. Monitoring Your Job</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#examining-your-job-output">13.3. Examining Your Job Output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">13.4. Xray HPC Services</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">14. Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">14.1. Step 4: Explore the Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">14.2. Training and Education</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">15. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">15.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">15.2. A FutureGrid User Dashboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">15.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">15.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">15.5. File Upload and Attachment to a Page</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">16. Alamo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">17. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">18. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">19. Management Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="part-2.html">20. Part 2 - OTHER STUFF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">21. Building the Book</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">21.1. Virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#theme">21.2. Theme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#autorun">21.3. Autorun</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python.html">22. Just Enough Python for the Cloud</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">22.1. Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">22.2. OS Specific</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">22.3. Lanaguage Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#local">22.4. Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">22.5. Ecosystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">22.6. Excersises</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">23. Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="openstack.html">24. OpenStack</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">24.1. Get a cloud account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">24.2. commandline clients</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">25. Eucalyptus on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">25.1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">25.2. Account Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">25.3. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">25.4. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">25.5. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">25.6. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">25.7. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">25.8. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">25.9. Status of Deployments</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="india.html">26. India on  FutureGrid</a></li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">6. Account</a><ul>
-<li><a class="reference internal" href="#step-1-create-a-futuregrid-portal-account">6.1. Step 1: Create a FutureGrid Portal Account</a></li>
-<li><a class="reference internal" href="#step-2-create-a-new-project-or-join-an-existing-one">6.2. Step 2: Create a new Project or join an existing one</a></li>
-<li><a class="reference internal" href="#step-3-upload-your-ssh-public-key-s">6.3. Step 3: Upload Your SSH Public Key(s)</a><ul>
-<li><a class="reference internal" href="#accessing-futuregrid">6.3.1. Accessing FutureGrid</a></li>
+<li><a class="reference internal" href="#">6. Project and Account Management</a><ul>
+<li><a class="reference internal" href="#terminology">6.1. Terminology</a></li>
+<li><a class="reference internal" href="#quickstart">6.2. Quickstart</a></li>
+<li><a class="reference internal" href="#projects-and-accounts-for-xsede-users">6.3. Projects and Accounts for XSEDE users</a></li>
+<li><a class="reference internal" href="#in-depth-information">6.4. In Depth Information</a><ul>
+<li><a class="reference internal" href="#create-a-portal-account">6.4.1. Create a Portal account</a></li>
+<li><a class="reference internal" href="#create-a-project">6.4.2. Create a Project</a></li>
+<li><a class="reference internal" href="#join-a-project">6.4.3. Join a Project</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#account-management-service">6.4. Account Management Service</a></li>
-<li><a class="reference internal" href="#key-reset-or-adding-new-keys">6.5. Key Reset or Adding new Keys</a><ul>
-<li><a class="reference internal" href="#account-creation">6.5.1. Account Creation</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#creating-an-hpc-account">6.6. Creating an HPC account</a></li>
-<li><a class="reference internal" href="#resetting-a-ssh-key">6.7. Resetting a ssh-key</a></li>
-<li><a class="reference internal" href="#nimbus-eucalyptus-openstack">6.8. Nimbus, Eucalyptus, OpenStack</a></li>
+<li><a class="reference internal" href="#upload-your-ssh-public-key-s">6.5. Upload Your SSH Public Key(s)</a></li>
+<li><a class="reference internal" href="#openid-integration">6.6. OpenId Integration</a></li>
+<li><a class="reference internal" href="#using-futuregrid-resources">6.7. Using FutureGrid Resources</a></li>
+<li><a class="reference internal" href="#faq-about-accounts">6.8. FAQ about Accounts</a></li>
 </ul>
 </li>
 </ul>
@@ -222,7 +155,7 @@
   <li><a href="introduction.html"
          title="previous chapter">&laquo; 5. Introduction</a></li>
   <li><a href="security.html"
-         title="next chapter">7. Accessing FutureGrid resources via SSH &raquo;</a></li>
+         title="next chapter">7. Using SSH keys &raquo;</a></li>
             
             
               <li>
@@ -246,38 +179,108 @@
 
 <div class="container">
   
-  <div class="section" id="account">
-<h1>6. Account<a class="headerlink" href="#account" title="Permalink to this headline">¶</a></h1>
-<p class="actdiag">
-<img src="_images/actdiag-4a8d332c162307d0c473af617fd309ac5acc375d.png" alt="None" width="640" height="360" />
-</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Get Portal Account</td>
-<td>Apply for a portal account at <a class="reference external" href="https://portal.futuregrid.org">https://portal.futuregrid.org</a></td>
-</tr>
-<tr class="row-odd"><td>Checks Identity</td>
-<td>Administrator checks the data submitted.</td>
-</tr>
-<tr class="row-even"><td>Identified Spammer</td>
-<td>SPammers will be deleted without notification.</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="step-1-create-a-futuregrid-portal-account">
-<h2>6.1. Step 1: Create a FutureGrid Portal Account<a class="headerlink" href="#step-1-create-a-futuregrid-portal-account" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="project-and-account-management">
+<h1>6. Project and Account Management<a class="headerlink" href="#project-and-account-management" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">all links to <a class="reference external" href="http://portal.futuregrid/my">http://portal.futuregrid/my</a> do not yet
+work. Carrie must implement this as communicated to her  and
+Barbara a while ago. We have not gotten feedback from Carrie yet.
+If no feedback we may have to have Allan implement? This is needed
+to make entire documentation easier on account management. This is
+one of the root causes for confusion. Alternatively we coudl do
+my.futuregrid.org.</p>
+</div>
+<p>It is very easy to get a project and accounts associated with this
+project on FutureGrid. This section is structured as follows:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#s-account-terminology"><em>Terminology</em></a>: a list of terms relevant to the
+account creation.</li>
+<li><a class="reference internal" href="#s-account-quickstart"><em>Quickstart</em></a>: a quickstart guide to remind those that
+have previously used FutureGrid on what to do.</li>
+<li><a class="reference internal" href="#s-account-description"><em>In Depth Information</em></a>: an in depth description including
+diagrams that help you understand the process of the account
+application.<ul>
+<li><a class="reference internal" href="#s-account-create-account"><em>Create a Portal account</em></a></li>
+<li><a class="reference internal" href="#s-account-create-project"><em>Create a Project</em></a></li>
+<li><a class="reference internal" href="#s-account-join-project"><em>Join a Project</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#s-account-faq"><em>FAQ about Accounts</em></a>: a list of Frequently Asked Questions related to Accounts</li>
+<li><a class="reference internal" href="#s-account-xsede"><em>Projects and Accounts for XSEDE users</em></a>: a documentation tailored for XSEDE users to apply for FG through the
+XSEDE portal (under development)</li>
+</ul>
+<div class="section" id="terminology">
+<span id="s-account-terminology"></span><h2>6.1. Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Portal Account:</dt>
+<dd>A portal account is necessary to comunicate information about
+yourself to the FutureGrid team s they can verify that you exist and
+you are a community member with need to use FutureGrid. Once you
+have a portal account approved you can apply for a project.</dd>
+<dt>Resource Account:</dt>
+<dd>A portal account will not give you access to the FutureGrid
+resources. You will have to go to the portal and join a
+project or create one.</dd>
+<dt>Valid Project:</dt>
+<dd>At least one project you belong to must be valid. A
+valid project is one that is aproved by a comittee. If you are not
+in an active project your access to FutureGrid will be
+blocked. Projects that do not report any progress will be blocked
+after a while. Note that you aagree to update us with regular
+resullts reportedvia the portal as this is part of your agreement to
+use FutureGrid.</dd>
+<dt>Uploaded SSH Key:</dt>
+<dd>As you are using remote compute resources we will require that you
+are very familiar with ssh key management. You will need to upload
+a public ssh key to the portal so we can create you an account and use
+that public ssh key so you log into the resources.</dd>
+</dl>
+</div>
+<div class="section" id="quickstart">
+<span id="s-account-quickstart"></span><h2>6.2. Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">add the links</p>
+</div>
+<p>If you have not created a project on FutureGrid before we recommend
+that you <strong>do not use the quickstart quide</strong> and instead read the full
+documentation. To remind you what you have to do here are a couple
+steps that you need to do:</p>
+<p>For non XSEDE users:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/user/register">Create a Portal account</a> and wait for confirmation via e-mail</li>
+<li>Join a <a class="reference external" href="https://portal.futuregrid.org/projects">project</a> or <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">create a new project</a>  and wait for
+confirmation. Note that you must communicate with the project lead
+first before you can join a project.</li>
+</ol>
+<p>For XSEDE users:</p>
+<ol class="arabic simple">
+<li>Please go to the <a class="reference external" href="http://www.xsede.org">XSEDE portal</a> and apply for an XSEDE portal
+account.</li>
+<li>Create a new project as documented in the <a class="reference external" href="https://www.xsede.org/allocations">XSEDE portal allocations page</a> or ask you XSEDE project lead
+to join you to the project.</li>
+<li>It will take some time to get youe account activated</li>
+</ol>
+</div>
+<div class="section" id="projects-and-accounts-for-xsede-users">
+<span id="s-account-xsede"></span><h2>6.3. Projects and Accounts for XSEDE users<a class="headerlink" href="#projects-and-accounts-for-xsede-users" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Gregor writes this section</p>
+</div>
+</div>
+<div class="section" id="in-depth-information">
+<span id="s-account-description"></span><h2>6.4. In Depth Information<a class="headerlink" href="#in-depth-information" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-a-portal-account">
+<span id="s-account-create-account"></span><h3>6.4.1. Create a Portal account<a class="headerlink" href="#create-a-portal-account" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last">update the links</p>
+</div>
 <p>In order to utilize <strong>any</strong> FutureGrid resource, you must posses a
 FutureGrid <strong>portal account</strong>. Thus, <em>apply for your **portal
-account **</em>before you attempt anything else. This account is used to
+account *</em> before you attempt anything else. This account is used to
 gather some information that we will use in the next steps. You must
 make sure that the information is complete before you proceed to the
 second step.  FutureGrid performs basic verification of the information
@@ -286,16 +289,21 @@ before your account is approved. Once you have a portal account, please
 proceed.</p>
 <p>Please note that you cannot access FutureGrid resources until you
 complete the next steps.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Hint</p>
+<p class="last">It may take a day or two to get a portal account. Portal
+accounts will not be created over the weekend.</p>
+</div>
 <p>Here are a few tips that make it easy for you</p>
 <ul class="simple">
 <li>On the portal&#8217;s main page at
 <a class="reference external" href="https://portal.futuregrid.org">https://portal.futuregrid.org</a>
 appears
-a <a class="reference external" href="https://portal.futuregrid.org/user/register%20">**Register**</a> Link.</li>
+a <a class="reference external" href="https://portal.futuregrid.org/user/register">Register</a> Link.</li>
 <li>Following you will be able to <strong>Create a new account</strong> on the
 portal.</li>
-<li>Fill in <a href="#id1"><span class="problematic" id="id2">**</span></a>ALL <a href="#id3"><span class="problematic" id="id4">**</span></a>fields as much as you can.</li>
-<li>Note that fields with * are mandatory</li>
+<li>Fill in <strong>ALL</strong> fields as much as you can.</li>
+<li>Note that fields with <strong>*</strong> are mandatory</li>
 <li>It is important that you specify your address information completely.</li>
 <li>If you are a graduate or undergraduate student please fill out your
 advisors contact information in the field specially dedicated for it.
@@ -321,130 +329,64 @@ will not notify you.</li>
 instructions for you and after you apply for a portal account you may
 want to get in contact with us via the <a class="reference external" href="https://portal.futuregrid.org/help">help
 form</a></li>
+<li>After your account has been approved, you can correct the
+information  as part of the portal account <a class="reference external" href="https://portal.futuregrid.org/manage-my-portal-account">User Profile
+Management</a>.</li>
 </ul>
-</div>
-<div class="section" id="step-2-create-a-new-project-or-join-an-existing-one">
-<h2>6.2. Step 2: Create a new Project or join an existing one<a class="headerlink" href="#step-2-create-a-new-project-or-join-an-existing-one" title="Permalink to this headline">¶</a></h2>
-<p>You need to either apply for a new FutureGrid project or join an
-existing project to use FutureGrid resources. To apply for a new
-project, fill out the <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">project creation
-form</a>. To join an
-existing project, ask the project lead or project manager for that
-project to add you to their project using that same form. If the project
-is set to &#8220;accept public join request&#8221;, you may also send a request in
-the portal. To do this, first view the <a class="reference external" href="https://portal.futuregrid.org/projects">project
-list</a>and go to the project
-detail page by clicking the project title. If the project is set by the
-project lead to &#8220;accept join request&#8221;, then you&#8217;ll see a large gray
-&#8216;Join this project&#8217; button in the upper right corner of the page. Click
-the button to send the join request to the project lead and manager so
-they can process your request.</p>
-<p>Once you have been approved to work on a project, you will be able to
-access the resources and services that your project has requested and
-been authorized to use. See the <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">project creation
-form</a> for a list
-of FutureGrid resources and services.</p>
-<p>Here are a view links that may help you:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">Create a new project creation
-form</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/projects">See the project list to identify the project you like to
-join</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/faq">Read some FAQs about the account
-creation</a></li>
-</ul>
-</div>
-<div class="section" id="step-3-upload-your-ssh-public-key-s">
-<h2>6.3. Step 3: Upload Your SSH Public Key(s)<a class="headerlink" href="#step-3-upload-your-ssh-public-key-s" title="Permalink to this headline">¶</a></h2>
-<p>In order to be able to log into the started VMs, among other purposes,
-you need to provide FG with a secure-shell (ssh) public key. If you are
-already a frequent user of ssh, and have a private and public key pair,
-it is perfectly reasonable to provide your public key. It&#8217;s <em>public</em>,
-after all.</p>
-<p>To upload the chosen public key:</p>
-<ol class="arabic simple">
-<li>Copy your public identity into your system clipboard.</li>
-<li>Log into the FG portal <a class="reference external" href="../../">https://portal.futuregrid.org/</a></li>
-<li>In the <strong>Accounts</strong> menu, select <strong>My Portal and HPC
-Account</strong> page. and activate the panel saying <strong>SSH keys</strong></li>
-<li>Click the link that says Add a public key.</li>
+<p class="actdiag">
+<img src="_images/actdiag-b2efaaf979ba578c23f74c352469a5083cd0b9c1.png" alt="None" width="832" height="440" />
+</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><ol class="first last arabic simple">
+<li>Get Portaln Account</li>
 </ol>
-<p>This step should be fairly instantaneous.</p>
-<p>If you are not familiar with ssh key generation, or if you have
-difficulty generating a key pair, please inform yourself about ssh keys
-or contact us via our <a class="reference external" href="https://portal.futuregrid.org/help">help form</a>
-. Detailed instructions on how to generate ssh key pairs will be added
-to this document in the near future.</p>
-<div class="section" id="accessing-futuregrid">
-<h3>6.3.1. Accessing FutureGrid<a class="headerlink" href="#accessing-futuregrid" title="Permalink to this headline">¶</a></h3>
-<p>To use FutureGrid you must be part of a valid &#8220;project&#8221;. Project
-leaders are requested to fill out project applications about the use of
-FutureGrid. The
-<a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">form</a> gathers
-some important information about their projects to be conducted. At this
-time this information is publicly shared. This information is used to
-report and document not only to us but also to our sponsors which
-activities are conducted on FutureGrid. The more precise you are in your
-descriptions and filling out the forms the better we can highlight your
-project. Once a project is formed, project members can join a project.
-This must be conducted by the project lead.  A user retains an active
-account on FutureGrid when they are in at least one active project. A
-user that is inactive does not have to apply for a new account, but
-instead apply for a new project. Once that project is activated the user
-account becomes active.</p>
-</div>
-</div>
-<div class="section" id="account-management-service">
-<h2>6.4. Account Management Service<a class="headerlink" href="#account-management-service" title="Permalink to this headline">¶</a></h2>
-<p>Please note the current process of applying for account may change.</p>
-<ol class="arabic simple">
-<li>Any user can apply easily for a Portal account: Please go to<ul>
-<li><a class="reference external" href="http://portal.futuregrid.org/user/register">https://portal.futuregrid.org/user/register</a></li>
-<li>it may take a day or two to get a portal account. Portal
-accounts will not be created over the weekend.</li>
-</ul>
-</li>
-<li>Once logged in the user has a couple of options<ul>
-<li><a class="reference external" href="https://portal.futuregrid.org/manage-my-portal-account">User Profile
-Management</a>:
-Update information regarding the user profile</li>
-<li>Project Management: apply for <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">new
-projects</a>,
-join existing projects, update information and results of a
-project, manage members and roles of users participating in your
-projects</li>
-<li>Managing Certificates and Keys: Integrate OpenID login for the
-portal (with for example your google ID), manage your ssh key for
-access to the HPC service, Manage Nimbus and Eucalyptus accounts
-and keys</li>
-</ul>
-</li>
+</td>
+<td>Apply for a portal account at
+      <a class="reference external" href="https://portal.futuregrid.org/user/register">https://portal.futuregrid.org/user/register</a></td>
+</tr>
+<tr class="row-odd"><td>Checks Identity</td>
+<td>Administrator checks the data submitted.</td>
+</tr>
+<tr class="row-even"><td>Spammer</td>
+<td>Spammers will be deleted without notification.</td>
+</tr>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="2">
+<li>Wait for e-mail</li>
 </ol>
-<p>To get access to FutureGrid (FG), you need to register your project in
-it. Please go to:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">https://portal.futuregrid.org/node/add/fg-projects</a></li>
-</ul>
-<p>to apply for a new project. It may take some time for your project to
-get approved. No projects will be approved over the weekend.</p>
-<p>In case you like to join an existing project, please find the list of
-projects at:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/projects">https://portal.futuregrid.org/projects</a></li>
-</ul>
-<p>Clicking on a project title will bring you to the project information
-page, where you may see a large gray button on the upper right corner of
-the page named &#8216;Join this project&#8217;. Click to send join request to that
-project. Please notice the PI of the project has to approve you before
-you are part of that project.</p>
-<p>Some project may not accept external members so there would be no join
-button for them. Please notice this behavior is controlled by the owner
-of the project.</p>
-<p>You can always communicate with the project PI through external channel
-of the FutureGrid portal if you know him/her in person by letting
-him/her know your portal username. He/she can then directly add you as a
-member to his/her project without going through the join request process
-through the portal.</p>
+</td>
+<td>Wait for the e-mail that approves your portal
+      account. If you have not head from us within 2 buisiness days
+      use the help form on the portal to contact us.</td>
+</tr>
+<tr class="row-even"><td>3a. Create Project</td>
+<td>Create a new Project.</td>
+</tr>
+<tr class="row-odd"><td>3b. Join Project</td>
+<td>Join an existing Project.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="create-a-project">
+<span id="s-account-create-project"></span><h3>6.4.2. Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h3>
+<p>To apply for a new project, fill out the <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">project creation form</a>.  Through this
+form we gather some important information about the project so we can
+review it for approval. This information is used to report and
+document not only to us but also to our sponsors which activities are
+conducted on FutureGrid. The more precise you are in your descriptions
+and filling out the forms the better we can highlight your
+project. Once a project is approved, project members can join a
+project.  This must be conducted by the project lead.</p>
 <p>The Project PI has agreed to certain reporting requirements to provide
 information to FutureGrid. He will be responsible to make sure that they
 are completed and also implemented with the users joining the project.
@@ -453,69 +395,201 @@ regards to reporting and acknowledgements in case of publications. Each
 project PI has the responsibility to communicate such requirements to
 the members and managers. The project agreements overwrite the
 individuals agreement.</p>
-<p>The cloud accounts are handled currently separately from the HPC account
-creation process. In fact the Eucalyptus clouds are disjunctive on each
-machine and have their own user management. For Nimbus uploading your
-ssh key is sufficient. The turnaround time for you getting access to the
+<p class="actdiag">
+<img src="_images/actdiag-130684f1074ef5983d01d3c3f9050806a6d5a547.png" alt="None" width="640" height="680" />
+</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3a. Create new nProject</td>
+<td>Fill out the project form at <a class="reference external" href="http://">http://</a> .</td>
+</tr>
+<tr class="row-odd"><td>Review</td>
+<td>Comittee reviews the project and corresponds with project lead to improve</td>
+</tr>
+<tr class="row-even"><td>3a.1.. Wait for n e-mail</td>
+<td>Wait for an e-mail
+      that you have an account</td>
+</tr>
+<tr class="row-odd"><td>3a.2. Projectn Approved</td>
+<td>The project has been approved.</td>
+</tr>
+<tr class="row-even"><td>3a.3.i. Membersn add, del., alumni</td>
+<td>manage the project members</td>
+</tr>
+<tr class="row-odd"><td>3a.3.ii. Reportn Results</td>
+<td>Make project member Alumni</td>
+</tr>
+<tr class="row-even"><td>Review Results</td>
+<td>Comittee recieves results for review</td>
+</tr>
+<tr class="row-odd"><td>4.Renewal</td>
+<td>Renewla of the project</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="join-a-project">
+<span id="s-account-join-project"></span><h3>6.4.3. Join a Project<a class="headerlink" href="#join-a-project" title="Permalink to this headline">¶</a></h3>
+<p>To join an
+existing project, ask the project lead or project manager for that
+project to add you to their project using that same form. If the project
+is set to &#8220;accept public join request&#8221;, you may also send a request in
+the portal. To do this, first view the <a class="reference external" href="https://portal.futuregrid.org/projects">project list</a> and go to the project
+detail page by clicking the project title. If the project is set by the
+project lead to &#8220;accept join request&#8221;, then you&#8217;ll see a large gray
+&#8216;Join this project&#8217; button in the upper right corner of the page. Click
+the button to send the join request to the project lead and manager so
+they can process your request.</p>
+<p class="actdiag">
+<img src="_images/actdiag-78f93bc4c0c468bea725c1ff8c84d9b529fcf2f2.png" alt="None" width="832" height="680" />
+</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>3b. Join Project?</td>
+<td>Join an existing Project.</td>
+</tr>
+<tr class="row-odd"><td>Get Permission</td>
+<td>Get permission from the project lead to join
+      the project.</td>
+</tr>
+<tr class="row-even"><td>Delete Join Request</td>
+<td>Project leads will carefully evaluate if the
+      person requesting to join is elidgeble. If not join requests will be
+      deleted without notification requires to those that want to join.</td>
+</tr>
+<tr class="row-odd"><td>3b.1. Join Approved</td>
+<td>The project lead has approved that you join
+      the project. Go to the project page and press the join button/link.</td>
+</tr>
+<tr class="row-even"><td>Project Active</td>
+<td>Checks if the project is actve
+      the project.</td>
+</tr>
+<tr class="row-odd"><td>3b.2. SSH keyn uploaded?</td>
+<td>You must have
+      uploaded your ssh key to use Futuregrid resources</td>
+</tr>
+<tr class="row-even"><td>Generate Accounts</td>
+<td>Generate accounts
+      to resources</td>
+</tr>
+<tr class="row-odd"><td>3b.3. Wait forn e-mail</td>
+<td>Wait for an e-mail
+      that you have an account</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="upload-your-ssh-public-key-s">
+<h2>6.5. Upload Your SSH Public Key(s)<a class="headerlink" href="#upload-your-ssh-public-key-s" title="Permalink to this headline">¶</a></h2>
+<p>In order to be able to log into the started VMs, among other purposes,
+you need to provide FG with a secure-shell (ssh) public key. If you are
+already a frequent user of ssh, and have a private and public key pair,
+it is perfectly reasonable to provide your public key. It&#8217;s <em>public</em>,
+after all.</p>
+<p>To upload the chosen public key:</p>
+<ol class="arabic simple">
+<li>Copy your public identity into your system clipboard.</li>
+<li>Log into the FG portal <a class="reference external" href="https://portal.futuregrid.org/my/ssh-keys">https://portal.futuregrid.org/my/ssh-keys</a>.</li>
+<li>Click the link that says Add a public key.</li>
+</ol>
+<p>If you are not familiar with ssh keys we have provided a more
+elaborate section about <a class="reference internal" href="security.html#s-using-ssh"><em>Using SSH keys</em></a></p>
+<p>Changes to keys will take up to 1 hour to propagate through the system
+services. You are not allowed to use password less keys.  Your account
+may be deactivated if you violate this policy.</p>
+</div>
+<div class="section" id="openid-integration">
+<h2>6.6. OpenId Integration<a class="headerlink" href="#openid-integration" title="Permalink to this headline">¶</a></h2>
+<p>Often users may not remember the pasword or username of the FG
+portal. However, they may have an easier time to remember their openid
+from for example google. It is possible to use your openid account and
+register it once you gain access to the portal. Please visit (<a class="reference external" href="https://portal.futuregrid.org/my/openid">https://portal.futuregrid.org/my/openid</a>)</p>
+</div>
+<div class="section" id="using-futuregrid-resources">
+<h2>6.7. Using FutureGrid Resources<a class="headerlink" href="#using-futuregrid-resources" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-4">
+<p class="first admonition-title">Todo</p>
+<p class="last">link in this section not yet set</p>
+</div>
+<p>To use resources, you must have</p>
+<ul class="simple">
+<li>a portal account</li>
+<li>be part of a valid project</li>
+<li>have uploaded a public key to the portal that you wll use to log
+into some of its resources.</li>
+</ul>
+<p>Once these conditions are met, you will be able to
+access the resources and services that your project has requested and
+been authorized to use. See the <a class="reference external" href="https://portal.futuregrid.org/???">services</a> for a list
+of FutureGrid resources and services This includes cloud and HPC
+resources. Accounts to these resources will be automatically generated
+once you have conducted the above steps. The turnaround time for you getting access to the
 system is typically between 30 minutes and one day.</p>
-<p>Please be kind and only apply for these cloud accounts if you really
-need them.</p>
 </div>
-<div class="section" id="key-reset-or-adding-new-keys">
-<h2>6.5. Key Reset or Adding new Keys<a class="headerlink" href="#key-reset-or-adding-new-keys" title="Permalink to this headline">¶</a></h2>
-<p>To reset or add a new you ssh key, please update your keys first by
-visiting the page</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/user/23/ssh-keys">https://portal.futuregrid.org/user/23/ssh-keys</a></li>
+<div class="section" id="faq-about-accounts">
+<span id="s-account-faq"></span><h2>6.8. FAQ about Accounts<a class="headerlink" href="#faq-about-accounts" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Additional FAQ&#8217;s</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/faq">Read some FAQs about the account creation</a></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">What do I need to get an account on resources?</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>A valid portal account</li>
+<li>Be member of a valid project</li>
+<li>You must upload your ssh key via the portal</li>
+</ol>
+</div></blockquote>
+</li>
+<li><p class="first">What do I have to do if I am a teacher and want to apply for a
+class project?</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Create a portal account if you do not have one</li>
+<li>Apply for an educational project, carefuly filling out the form
+including how many students, broader impact, such
+as support of minorities, what will be learned, the course syllabus
+if available, a link to the course web page if available, the
+duration of the course including a time when the course is
+completed. We typically add a month so that incomplets can be done
+easily.</li>
+<li>Make sure you enable the join button of the project.</li>
+<li>Determine a class &#8220;join code&#8221; that your students can use at time of
+their portal registration. Communicate that join code with a help
+ticket.</li>
+<li>You will be able to manage the join of students yourself. Be
+carefull that you only join those students that are in your class.</li>
+<li>If the student roster is cahnging, just edit the project details
+and add remove them.</li>
+<li>Make sure you write a results section after your class is over.</li>
+</ol>
+</div></blockquote>
+</li>
 </ul>
-<p>and change the keys as needed. Your reset will take 30 minutes to one
-day to propagate through the system services.</p>
-<p>You are not allowed to use password less keys.  Your account may be
-deactivated.</p>
-<div class="section" id="account-creation">
-<h3>6.5.1. Account Creation<a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="creating-an-hpc-account">
-<h2>6.6. Creating an HPC account<a class="headerlink" href="#creating-an-hpc-account" title="Permalink to this headline">¶</a></h2>
-<p>All you need to do to obtain an HPC account is to be in a valid project
-and upload your ssh key. Typically you will get the account within one
-business day. There will be typically no accounts approved in non
-business hours including weekends.</p>
-<p>Please add your SSH keys in your profile which you can find at:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/user/23/ssh-keys">https://portal.futuregrid.org/user/23/ssh-keys</a></li>
-</ul>
-<p>Once you have done that, please go back to this form and complete it.
-After submission, this form will create an e-mail request to FutureGrid.
-The FG administrators may contact you to verify this request.</p>
-<dl class="docutils">
-<dt>Please, make sure you are a member of a valid project.</dt>
-<dd>Project IDs can be found at</dd>
-</dl>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/projects">https://portal.futuregrid.org/projects</a></li>
-</ul>
-<p>The project lead is responsible for determining if you can be added to
-the project.</p>
-<p>Note: Do not send mail to FG staff members about joining a project, as
-we are not managing individual project memberships</p>
-<p>To view your current memberships and status of your account application,
-please visit</p>
-<ul class="simple">
-<li><a class="reference external" href="https://portal.futuregrid.org/manage-my-portal-account">https://portal.futuregrid.org/manage-my-portal-account</a></li>
-</ul>
-</div>
-<div class="section" id="resetting-a-ssh-key">
-<h2>6.7. Resetting a ssh-key<a class="headerlink" href="#resetting-a-ssh-key" title="Permalink to this headline">¶</a></h2>
-<p>Simply visit the ssh-key page and upload a new key. YoU can optionally
-delete other keys if you do n longer need them.</p>
-</div>
-<div class="section" id="nimbus-eucalyptus-openstack">
-<h2>6.8. Nimbus, Eucalyptus, OpenStack<a class="headerlink" href="#nimbus-eucalyptus-openstack" title="Permalink to this headline">¶</a></h2>
-<p>Once you have uploaded your SSH key, the Nimbus, Eucalyptus, and
-OpenStack access will be granted. Please visit the manual pages for more
-details on accessing them.</p>
 </div>
 </div>
 

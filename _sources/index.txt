@@ -6,17 +6,19 @@ FG Manual
    :numbered:
    :maxdepth: -1
 
+   todolist
    plan
    title 
-   todolist
    preface
    summary-executive
    introduction
    account
    security
+   status
    hardware
    hpc
 
+..
    fgmanual
    part-2
    contributing
@@ -26,11 +28,4 @@ FG Manual
    eucalyptus
    india
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
