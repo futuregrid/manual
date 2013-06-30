@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Delta &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>28. Delta GPU User Manual &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="prev" title="27. PAPI" href="papi.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -62,7 +63,7 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="title.html">3.   Manual</a></li>
@@ -108,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hardware.html#networks">9.2. Networks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">10. HPC Services</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">10. HPC Services (assigned to Allen and Koji)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">10.1. Accessing Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">10.2. Filesystem Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">10.3. Modules</a></li>
@@ -122,25 +123,164 @@
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">10.11. Storage Services</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="scalemp.html">11. ScaleMP vSMP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#accessing-scalemp">11.1. Accessing ScaleMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#submitting-a-job">11.2. Submitting a job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#developing-a-job-script">11.3. Developing a job script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">12. OpenStack (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">12.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">12.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-essex.html">13. Using OpenStack on FutureGrid (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#note">13.1. NOTE:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#summary">13.2. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#getting-started">13.3. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#log-into-india">13.4. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#account-and-credentials">13.5. Account and Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#euca2ools-ec2-client-tools">13.6. Euca2ools (EC2 client tools)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#testing-your-setup">13.7. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#list-of-common-images">13.8. List of Common Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#vm-types">13.9. VM Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#key-management">13.10. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#image-instantiation">13.11. Image Instantiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#better-server-names">13.12. Better Server Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#monitoring-instances">13.13. Monitoring Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#log-into-your-vm">13.14. Log into your VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#nova-volumes-not-available">13.15. Nova Volumes (Not available)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#volume-snapshots">13.16. Volume Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#image-registration">13.17. Image Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#delete-your-images">13.18. Delete your images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#terminate-your-vms">13.19. Terminate your VMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#limitations">13.20. Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#troubleshooting">13.21. Troubleshooting:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">14. OpenStack Grizzly (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#from-zero-to-get-your-first-instance-running">14.1. From zero to get your first instance running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">14.2. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">14.3. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">14.4. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">14.5. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">14.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">14.7. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">14.8. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">14.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">15. Eucalyptus  (Allen)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">15.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">15.2. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">15.3. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">15.4. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">15.5. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">15.6. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">15.7. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">15.8. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">15.9. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iaas.html">16. IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">16.1. Nimbus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">16.2. OpenStack Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#eucalyptus-clouds">16.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">16.4. Virtual Appliances for Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus.html">17. Using Nimbus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">17.1. Nimbus on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#getting-started">17.2. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-the-cloud-client">17.3. Using the Cloud Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#virtual-clusters">17.4. Virtual Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloud-quick-start-launch-a-vm-with-1-command">17.5. Cloud Quick Start : Launch a VM with 1 command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">17.6. Launch A VM via Nimbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-other-nimbus-clouds-on-futuregrid">17.7. Using Other Nimbus Clouds on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launching-multiple-vms">17.8. Launching Multiple VMs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">18. Nimbus Phantom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">19. cloudinit.d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="precip.html">20. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">20.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#api">20.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">20.3. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">21. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">21.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">21.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">21.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">21.4. RAIN Manual Pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pegasus.html">22. Pegasus (Matts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">22.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">22.2. Using Pegasus on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vine.html">23. ViNe (Mauritsio/Renato)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unicore.html">24. Unicore</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#unicore-6-on-futuregrid-user-manual">24.1. UNICORE 6 on FutureGrid User Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#introduction">24.2. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#what-is-unicore">24.3. What is UNICORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">24.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">24.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#running-jobs-on-unicore-sites">24.6. Running Jobs on UNICORE Sites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#deploying-a-new-unicore-6-grid">24.7. Deploying a New UNICORE 6 Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="genesis.html">25. Genesis II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#introduction">25.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#what-is-genesisii">25.2. What is GenesisII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#connecting-to-the-genesisii-bes-endpoints">25.3. Connecting to the GenesisII BES Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#using-the-futuregrid-genesisii-endpoints-as-a-client">25.4. Using the Futuregrid GenesisII Endpoints as a Client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">26. Tutorials (Renato/Mauritsio)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-0-accessing-futuregrid-resources">26.1. Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-1-cloud-provisioning-platforms">26.2. Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-2-cloud-run-time-map-reduce-platforms">26.3. Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">26.4. Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-4-high-performance-computing">26.5. Tutorial Topic 4: High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-5-experiment-management">26.6. Tutorial Topic 5: Experiment Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-6-image-management-and-rain">26.7. Tutorial Topic 6: Image Management and Rain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-7-storage">26.8. Tutorial Topic 7:  Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#other-tutorials-and-educational-materials">26.9. Other Tutorials and Educational Materials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="papi.html">27. PAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">27.1. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#references">27.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">28. Delta GPU User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-mpi-gpu-program-on-the-delta-cluster">28.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-programs-on-a-single-gpu">28.2. Running programs on a single GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-means-clustering-using-cuda-on-gpu">28.3. C-means clustering using CUDA on GPU</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Delta</a><ul>
-<li><a class="reference internal" href="#gpu-user-manual">GPU&nbsp;User Manual</a></li>
+<li><a class="reference internal" href="#">28. Delta GPU User Manual</a><ul>
+<li><a class="reference internal" href="#running-mpi-gpu-program-on-the-delta-cluster">28.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li><a class="reference internal" href="#running-programs-on-a-single-gpu">28.2. Running programs on a single GPU</a></li>
+<li><a class="reference internal" href="#c-means-clustering-using-cuda-on-gpu">28.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#running-mpi-gpu-program-on-the-delta-cluster">Running MPI/GPU program on the Delta cluster</a></li>
-<li><a class="reference internal" href="#running-programs-on-a-single-gpu">Running programs on a single GPU</a></li>
-<li><a class="reference internal" href="#c-means-clustering-using-cuda-on-gpu">C-means clustering using CUDA on GPU</a></li>
 </ul>
 </ul>
 </li>
             
             
               
+  <li><a href="papi.html"
+         title="previous chapter">&laquo; 27. PAPI</a></li>
             
             
               <li>
@@ -164,20 +304,18 @@
 
 <div class="container">
   
-  <div class="section" id="delta">
-<h1>Delta<a class="headerlink" href="#delta" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="gpu-user-manual">
-<h2>GPU&nbsp;User Manual<a class="headerlink" href="#gpu-user-manual" title="Permalink to this headline">¶</a></h2>
-<p>FutureGrid&#8217;s supercomputer, Delta&nbsp;(delta.futuregrid.org), is a 16-node
-GPU cluster running Red Hat Linux,&nbsp;with TORQUE&nbsp;(also called PBS) and
+  <div class="section" id="delta-gpu-user-manual">
+<h1>28. Delta GPU User Manual<a class="headerlink" href="#delta-gpu-user-manual" title="Permalink to this headline">¶</a></h1>
+<p>FutureGrid&#8217;s Delta (delta.futuregrid.org), is a 16-node
+GPU cluster running Red Hat Linux, with TORQUE (also called PBS) and
 Moab for job management, and Module to simplify application and
-environment configuration.&nbsp;Delta consists of 16 nodes with two 6-core
-Intel X5560 processors at 2.8GHz, 192 GB of&nbsp;DDR3 memory, and 15TB
-of&nbsp;RAID5 disk storage. Each node supports 2 nVIDIA Tesla C2070 GPUs
-with&nbsp;448 processing cores. For details on Delta&#8217;s hardware
-configuration, see&nbsp;the
-<a class="reference external" href="https://portal.futuregrid.org/hardware/delta">Delta</a>page.</p>
-<p>The FutureGrid <em>delta</em> cluster is accessible via&nbsp;a batch queue that
+environment configuration. Delta consists of 16 nodes with two 6-core
+Intel X5560 processors at 2.8GHz, 192 GB of DDR3 memory, and 15TB
+of RAID5 disk storage. Each node supports 2 nVIDIA Tesla C2070 GPUs
+with 448 processing cores. For details on Delta&#8217;s hardware
+configuration, see the
+<a class="reference external" href="https://portal.futuregrid.org/hardware/delta">Delta</a> page.</p>
+<p>The FutureGrid <em>delta</em> cluster is accessible via a batch queue that
 is managed from india (india.futuregrid.org). To use delta
 interactively, first log into india:</p>
 <div class="highlight-python"><pre>ssh username@india.futuregrid.org</pre>
@@ -186,43 +324,39 @@ interactively, first log into india:</p>
 compute nodes:</p>
 <div class="highlight-python"><pre>qsub -I -q delta myprg</pre>
 </div>
-<p>If you want to use delta with your job script, please use</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -q</span>
+<p>If you want to use delta with your job script, please use:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -q delta</span>
 </pre></div>
 </div>
-<div class="highlight-python"><pre>::</pre>
-</div>
-<blockquote>
-<div>delta</div></blockquote>
 <p>to indicate that you&#8217;d like to use this queue.</p>
 <p>For more details about how to manage queues with qsub, see the Delta
 manual page.</p>
-<p>Utilization of GPU resources&nbsp;on Delta:
-1) Utilize GPU&nbsp;node
-&nbsp;&nbsp;&nbsp;&nbsp;<a class="reference external" href="https://portal.futuregrid.org/manual/gpu/running-programs-single-gpu">&nbsp;Running Program on&nbsp;single GPU
-node</a>
-2) Utilize GPU cluster
-<a class="reference external" href="https://portal.futuregrid.org/manual/running-mpigpu-program-delta-cluster">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running MPI/CUDA program on the Delta
-cluster</a>
-3) Utilize GPU cloud
-4) Mixing utilization of&nbsp;GPU&nbsp;and CPU
-5) Non-trivial service or applications using&nbsp;GPU</p>
-</div>
-</div>
+<p>Utilization of GPU resources on Delta:
+#. Utilize GPU node <a href="#id1"><span class="problematic" id="id2">`</span></a>Running Program on single GPU</p>
+<blockquote>
+<div>node &lt;<a class="reference external" href="https://portal.futuregrid.org/manual/gpu/running-programs-single-gpu">https://portal.futuregrid.org/manual/gpu/running-programs-single-gpu</a>&gt;`__</div></blockquote>
+<ol class="arabic simple">
+<li>Utilize GPU cluster
+<a class="reference external" href="https://portal.futuregrid.org/manual/running-mpigpu-program-delta-cluster">Running MPI/CUDA program on the Delta
+cluster</a></li>
+<li>Utilize GPU cloud</li>
+<li>Mixing utilization of GPU and CPU</li>
+<li>Non-trivial service or applications using GPU</li>
+</ol>
 <div class="section" id="running-mpi-gpu-program-on-the-delta-cluster">
-<h1>Running MPI/GPU program on the Delta cluster<a class="headerlink" href="#running-mpi-gpu-program-on-the-delta-cluster" title="Permalink to this headline">¶</a></h1>
+<h2>28.1. Running MPI/GPU program on the Delta cluster<a class="headerlink" href="#running-mpi-gpu-program-on-the-delta-cluster" title="Permalink to this headline">¶</a></h2>
 <p>GPUs provide the ability to use mathematical operations at a fraction
 of the cost and with higher performance than on the current generation
 of processors. FutureGrid provides the ability to test such an
 infrastructure as part of its delta cluster. Here, we provide a
 step-by-step guide on how to run a
-parallel&nbsp;matrix&nbsp;multiplication&nbsp;program using IntelMPI and CUDA on Delta
-machines. The MPI framework&nbsp;distributes the work&nbsp;among compute
-nodes,&nbsp;each of which use CUDA&nbsp;to&nbsp;execute&nbsp;the shared workload. We also
-provide the&nbsp;complete&nbsp;parallel
-matrix&nbsp;multiplication&nbsp;code&nbsp;using&nbsp;MPI/CUDA&nbsp;that&nbsp;has already been tested
+parallel matrix multiplication program using IntelMPI and CUDA on Delta
+machines. The MPI framework distributes the work among compute
+nodes, each of which use CUDA to execute the shared workload. We also
+provide the complete parallel
+matrix multiplication code using MPI/CUDA that has already been tested
 on Delta cluster in attachment.</p>
-<p><strong>MPI code: pmm_mpi.c</strong></p>
+<p>MPI code: pmm_mpi.c:</p>
 <div class="highlight-python"><pre>#include &lt;mpi.h&gt;
 
 void invoke_cuda_vecadd();
@@ -239,66 +373,69 @@ void invoke_cuda_vecadd();
  return 0;
 }</pre>
 </div>
-<p><strong>CUDA code: dgemm_cuda.cu</strong></p>
-<p>#include &lt;stdio.h&gt;</p>
-<p>__global__ void cuda_vecadd(int *array1, int *array2, int
+<p>CUDA code: dgemm_cuda.cu:</p>
+<div class="highlight-python"><pre>#include &lt;stdio.h&gt;
+
+__global__ void cuda_vecadd(int *array1, int *array2, int
 *array3)
 {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int index = blockIdx.x * blockDim.x + threadIdx.x;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; array3[index] = array1[index] + array2[index];
-}</p>
-<p>&nbsp;&nbsp;extern &#8220;C&#8221; void invoke_cuda_vecadd()
-&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMalloc((void**) &amp;devarray1, sizeof(int)*10);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMalloc((void**) &amp;devarray2, sizeof(int)*10);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMalloc((void**) &amp;devarray3, sizeof(int)*10);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMemcpy(devarray1, hostarray1, sizeof(int)*10,
-cudaMemcpyHostToDevice);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMemcpy(devarray2,&nbsp;hostarray2, sizeof(int)*10,
-cudaMemcpyHostToDevice);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cuda_vec_add&lt;&lt;&lt;1, 10&gt;&gt;&gt;(devarray1, devarray2, devarray3);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaMemcpy(hostarray3, devarray3, sizeof(int)*10,
-cudaMemcpyDeviceToHost);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaFree(devarray1);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaFree(devarray2);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaFree(devarray3);
-}</p>
+     int index = blockIdx.x * blockDim.x + threadIdx.x;
+     array3[index] = array1[index] + array2[index];
+}
+
+ extern "C" void invoke_cuda_vecadd()
+ {
+     cudaMalloc((void**) &amp;devarray1, sizeof(int)*10);
+     cudaMalloc((void**) &amp;devarray2, sizeof(int)*10);
+     cudaMalloc((void**) &amp;devarray3, sizeof(int)*10);
+     cudaMemcpy(devarray1, hostarray1, sizeof(int)*10, cudaMemcpyHostToDevice);
+     cudaMemcpy(devarray2, hostarray2, sizeof(int)*10, cudaMemcpyHostToDevice);
+     cuda_vec_add&lt;&lt;&lt;1, 10&gt;&gt;&gt;(devarray1, devarray2, devarray3);
+     cudaMemcpy(hostarray3, devarray3, sizeof(int)*10,  cudaMemcpyDeviceToHost);
+     cudaFree(devarray1);
+     cudaFree(devarray2);
+     cudaFree(devarray3);
+ }</pre>
+</div>
 <p>Note: Mixing MPI and CUDA code may cause problems during linking because
-of&nbsp;the&nbsp;difference between C and C++ calling conventions. The use of
+of the difference between C and C++ calling conventions. The use of
 extern &#8220;C&#8221; around invoke_cuda_code which instructs the nvcc (a wrapper
 of c++) compiler to make that function callable from the C runtime.</p>
-<p><strong>Compiling the MPI/CUDA&nbsp;program:</strong></p>
-<p>Load the Modules
-&gt; module load IntelMPI # load Intel MPI
-&gt; module load Intel # load icc &gt; module load cuda # load cuda tools
-This will load the Intel MPI, the compiler, and the cuda tools. Next
-compile the code with</p>
-<p>&gt; nvcc -c&nbsp;dgemm_cuda.cu -o dgemm_cuda.o &nbsp; &gt; mpiicc
--o&nbsp;pmm_mpi.c&nbsp;-o&nbsp;pmm_mpi.o
-&gt; mpiicc -o mpicuda&nbsp;pmm_mpi.o&nbsp;dgemm_cuda.o -lcudart&nbsp;-lcublas&nbsp;-L
-/opt/cuda/lib64 -I /opt/cuda/include</p>
-<p>Note:&nbsp;The CUDA compiler nvcc is used only to compile the CUDA&nbsp;source
-file, and the IntelMPI compiler&nbsp;mpiicc&nbsp;is&nbsp;used to compile the&nbsp;C&nbsp;code and
-do the linking
-&nbsp; <strong>Setting Up&nbsp;and Submitting MPI&nbsp;Jobs:</strong></p>
-<p>1.&nbsp;qsub -I -l nodes=4 -q delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # get&nbsp;4 nodes from FG
-2.&nbsp;uniq /var/spool/torque/aux/399286.i136
-&gt;&nbsp;gpu_nodes_list&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#create&nbsp;machine file list
-3. module load IntelMPI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# load Intel MPI
-4. module load Intel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # load&nbsp;icc
-5. module load&nbsp;cuda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # load&nbsp;cuda&nbsp;tools
-6.&nbsp;mpdboot&nbsp;-r ssh -f&nbsp;gpu_nodes_list -n&nbsp;4&nbsp;&nbsp;# will start an mpd ring
-on&nbsp;4 nodes including local host
-7. mpiexec -l -machinefile&nbsp;gpu_nodes_list -n&nbsp;4 ./mpicuda&nbsp;10000 1&nbsp;4
-#&nbsp;run&nbsp;mpi program&nbsp;using 4 nodes</p>
-<p><strong>Comparison between&nbsp;four&nbsp;implementations of&nbsp;sequential&nbsp;matrix
+<p><strong>Compiling the MPI/CUDA program:</strong></p>
+<p>Load the Modules:</p>
+<div class="highlight-python"><pre>$ module load IntelMPI # load Intel MPI
+$ module load Intel # load icc
+$ module load cuda # load cuda tools</pre>
+</div>
+<p>This will load the Intel MPI, the compiler, and the cuda tools. Next
+compile the code with:</p>
+<div class="highlight-python"><pre>$ nvcc -c dgemm_cuda.cu -o dgemm_cuda.o
+$ mpiicc -o pmm_mpi.c -o pmm_mpi.o
+$ mpiicc -o mpicuda pmm_mpi.o dgemm_cuda.o -lcudart -lcublas -L /opt/cuda/lib64 -I /opt/cuda/include</pre>
+</div>
+<p>Note: The CUDA compiler nvcc is used only to compile the CUDA source
+file, and the IntelMPI compiler mpiicc is used to compile the C code and
+do the linking</p>
+<p><strong>Setting Up and Submitting MPI Jobs:</strong>:</p>
+<div class="highlight-python"><pre>qsub -I -l nodes=4 -q delta     # get 4 nodes from FG
+uniq /var/spool/torque/aux/399286.i136
+gpu_nodes_list    #create machine file list
+module load IntelMPI        # load Intel MPI
+module load Intel           # load icc
+module load cuda           # load cuda tools
+mpdboot -r ssh -f gpu_nodes_list -n 4 # will start an mpd ring on 4 nodes including local host
+mpiexec -l -machinefile gpu_nodes_list -n 4 ./mpicuda 10000 1 4
+# run mpi program using 4 nodes</pre>
+</div>
+<p><strong>Comparison between four implementations of sequential matrix
 multiplication on Delta:</strong></p>
-<p>&nbsp; &nbsp; <a href="#id1"><span class="problematic" id="id2">|image79|</span></a>
-<strong>References:</strong> <a class="reference external" href="https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip">Source Code
-Package</a>
-[1] High Performance Computing&nbsp;using&nbsp;CUDA,2009 User Group Conference
-[2]
-<a class="reference external" href="http://www.nvidia.com/content/global/global.php">http://www.nvidia.com/content/global/global.php</a></p>
+<p><img alt="image79" src="_images/CUBLAS2-800x280.png" /></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip">Source Code Package</a></li>
+<li>[1] High Performance Computing using CUDA,2009 User Group Conference</li>
+<li>[2] <a class="reference external" href="http://www.nvidia.com/content/global/global.php">http://www.nvidia.com/content/global/global.php</a></li>
+</ul>
 <p>To get source code: git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:futuregrid/GPU.git</p>
 <p>Compiling source code on Delta machine:</p>
 <div class="highlight-python"><pre>module load intelmpi
@@ -307,117 +444,92 @@ module load cuda
 cd mpi_cuda_mkl
 make</pre>
 </div>
-<table border="1" class="docutils">
-<colgroup>
-<col width="88%" />
-<col width="12%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Attachment</th>
-<th class="head">Size</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/mpi_cuda_mkl.zip">mpi_cuda_mkl.zip</a></td>
-<td>888.92 KB</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="running-programs-on-a-single-gpu">
-<h1>Running programs on a single GPU<a class="headerlink" href="#running-programs-on-a-single-gpu" title="Permalink to this headline">¶</a></h1>
-<p><strong>Summary:</strong></p>
-<p>GPUs provide the ability&nbsp;to use mathematical operations at a
-fraction of the cost and with higher&nbsp;performance than on the
-current&nbsp;generation of processors. CUDA is a parallel programming model
-and software environment&nbsp;that leverages the parallel computational&nbsp;power
-of GPU&nbsp;for non-graphics computing in a fraction of the time required on
-a CPU. FutureGrid provides the ability to test&nbsp;such a&nbsp;hardware&nbsp;and
+<h2>28.2. Running programs on a single GPU<a class="headerlink" href="#running-programs-on-a-single-gpu" title="Permalink to this headline">¶</a></h2>
+<p>GPUs provide the ability to use mathematical operations at a
+fraction of the cost and with higher performance than on the
+current generation of processors. CUDA is a parallel programming model
+and software environment that leverages the parallel computational power
+of GPU for non-graphics computing in a fraction of the time required on
+a CPU. FutureGrid provides the ability to test such a hardware and
 software environment as part of its Delta cluster. Here, we illustrate
-some details of data-parallel computational model&nbsp;of CUDA, and&nbsp;then
-provide a step-by-step guide on how to&nbsp;make a parallel matrix
+some details of data-parallel computational model of CUDA, and then
+provide a step-by-step guide on how to make a parallel matrix
 multiplication program using CUDA. In the supplied attachment, we also
 provide the complete code that has already been tested on Delta node.</p>
-<p>&nbsp;&nbsp;&nbsp;<a href="#id3"><span class="problematic" id="id4">|image80|</span></a>
-Figure&nbsp;1:&nbsp;GPU&nbsp;Kernel and Thread&nbsp;model&nbsp;[1]</p>
-<p>&nbsp;<strong>CUDA Kernel&nbsp;and Threads:</strong>
-&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The fundamental part of the CUDA code&nbsp;is the kernel program.
-Kernel is&nbsp;the&nbsp;function that can&nbsp;be&nbsp;executed&nbsp;in parallel in&nbsp;the GPU
-device.&nbsp;A CUDA kernel&nbsp;is executed by&nbsp;an array of CUDA&nbsp;threads. All
-threads run the same code.&nbsp;Each thread has&nbsp;an ID that it uses to compute
-memory address&nbsp;and make a control decision.&nbsp;CUDA supports to run
-thousands of&nbsp;threads on the GPU.&nbsp;CUDA&nbsp;organizes&nbsp;thousands
-of&nbsp;threads&nbsp;into a hierarchy of a grid of thread blocks.&nbsp;A grid is a set
-of thread blocks that can be processed on the device&nbsp;in parallel. A
+<p><img alt="image80" src="_images/cudaarchi_threadsmode-544x300.png" />
+Figure 1: GPU Kernel and Thread model [1]</p>
+<p><strong>CUDA Kernel and Threads:</strong></p>
+<p>The fundamental part of the CUDA code is the kernel program.
+Kernel is the function that can be executed in parallel in the GPU
+device. A CUDA kernel is executed by an array of CUDA threads. All
+threads run the same code. Each thread has an ID that it uses to compute
+memory address and make a control decision. CUDA supports to run
+thousands of threads on the GPU. CUDA organizes thousands
+of threads into a hierarchy of a grid of thread blocks. A grid is a set
+of thread blocks that can be processed on the device in parallel. A
 thread block is a set of concurrent threads that can cooperate among
 themselves through a synchronization barrier and access to a shared
 memory space private to the block. Each thread is given a unique thread
-ID— thread.Idx within its thread block.&nbsp;Each thread block is given a
-unique block&nbsp;ID— block.Idx within its&nbsp;grid.</p>
-<p>&nbsp; <strong>CUDA Kernel&nbsp;code for Matrix Multiplication:</strong></p>
-<p>&nbsp;__global__ void&nbsp;matrixMul( float* C, float* A, float* B, int
+ID— thread.Idx within its thread block. Each thread block is given a
+unique block ID— block.Idx within its grid.</p>
+<p><strong>CUDA Kernel code for Matrix Multiplication:</strong>:</p>
+<div class="highlight-python"><pre>__global__ void matrixMul( float* C, float* A, float* B, int
 wA, int wB)
-&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Block index
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int bx = blockIdx.x;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int by = blockIdx.y;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Thread index
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int tx = threadIdx.x;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int ty = threadIdx.y;</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; // Index of the first sub-matrix of A processed by the block
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int aBegin = wA * BLOCK_SIZE * by;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Index of the last sub-matrix of A processed by the block
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int aEnd&nbsp;&nbsp; = aBegin + wA - 1;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Step size used to iterate through the sub-matrices of A
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int aStep&nbsp; = BLOCK_SIZE;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Index of the first sub-matrix of B processed by the block
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int bBegin = BLOCK_SIZE * bx;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Step size used to iterate through the sub-matrices of B
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;bStep&nbsp; = BLOCK_SIZE * wB;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Csub is used to store the element of the block
-sub-matrix&nbsp;that is computed by the thread
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;Csub = 0;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Loop over all the sub-matrices of A and B&nbsp;required to compute
-the block sub-matrix
-&nbsp;&nbsp;&nbsp;&nbsp; for (int a = aBegin, b = bBegin; a &lt;= aEnd; a += aStep, b +=
-bStep) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Declaration of the shared memory array As used to&nbsp;store
-the sub-matrix of A
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __shared__ float As[BLOCK_SIZE][BLOCK_SIZE];
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Declaration of the shared memory array Bs used to&nbsp;store
-the sub-matrix of B
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __shared__ float Bs[BLOCK_SIZE][BLOCK_SIZE];
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As[ty][tx] = A[a + wA * ty +
-tx];
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bs[ty],[tx] = B[b + wB * ty +
-tx];
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Synchronize to make sure the matrices are
-loaded</p>
-<p>__syncthreads();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;multiply two matrices together;&nbsp;each thread computes&nbsp;one
-element&nbsp;&nbsp;of&nbsp;&nbsp;sub-matrix
-&nbsp;#pragma
-unroll
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int k = 0; k &lt; BLOCK_SIZE;
-++k)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Csub += As[ty][k]&nbsp;*
-Bs[k][tx];</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Synchronize to make sure that the preceding&nbsp;computation
-is done</p>
-<p>__syncthreads();</p>
-<p>}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Write the block sub-matrix to device memory; each thread
-only writes one&nbsp;element!
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int c = wB * BLOCK_SIZE * by + BLOCK_SIZE *
-bx;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C[c + wB * ty + tx] =
-Csub;
-}</p>
-<p>&nbsp;&nbsp;<a href="#id5"><span class="problematic" id="id6">|image81|</span></a>
-Figure 2: GPU memory&nbsp;architecture&nbsp;[1][1]&nbsp;[1]</p>
-<p>&nbsp;<strong>CUDA Memory Architecture:</strong>
-&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;multiprocessors of the GPU&nbsp;device access a&nbsp;large global
-device memory for both gather and scatter operations. This&nbsp;memory is
+ {
+   // Block index
+      int bx = blockIdx.x;
+      int by = blockIdx.y;
+   // Thread index
+      int tx = threadIdx.x;
+      int ty = threadIdx.y;
+
+   // Index of the first sub-matrix of A processed by the block
+      int aBegin = wA * BLOCK_SIZE * by;
+   // Index of the last sub-matrix of A processed by the block
+      int aEnd  = aBegin + wA - 1;
+   // Step size used to iterate through the sub-matrices of A
+      int aStep  = BLOCK_SIZE;
+   // Index of the first sub-matrix of B processed by the block
+      int bBegin = BLOCK_SIZE * bx;
+   // Step size used to iterate through the sub-matrices of B
+      int bStep  = BLOCK_SIZE * wB;
+   // Csub is used to store the element of the block
+sub-matrix that is computed by the thread
+   float Csub = 0;
+   // Loop over all the sub-matrices of A and B required to compute the block sub-matrix
+   for (int a = aBegin, b = bBegin; a &lt;= aEnd; a += aStep, b += bStep) {
+      // Declaration of the shared memory array As used to store the sub-matrix of A
+      __shared__ float As[BLOCK_SIZE][BLOCK_SIZE];
+      // Declaration of the shared memory array Bs used to store the sub-matrix of B
+      __shared__ float Bs[BLOCK_SIZE][BLOCK_SIZE];
+      As[ty][tx] = A[a + wA * ty + tx];
+        Bs[ty],[tx] = B[b + wB * ty + tx];
+      // Synchronize to make sure the matrices are loaded
+
+__syncthreads();
+     // multiply two matrices together; each thread computes one element of sub-matrix
+ #pragma unroll
+      for (int k = 0; k &lt; BLOCK_SIZE; ++k)
+            Csub += As[ty][k] * Bs[k][tx];
+
+
+      // Synchronize to make sure that the preceding computation is done
+
+__syncthreads();
+
+}
+   // Write the block sub-matrix to device memory; each thread only writes one element!
+    int c = wB * BLOCK_SIZE * by + BLOCK_SIZE * bx;
+    C[c + wB * ty + tx] = Csub;
+}</pre>
+</div>
+<p><img alt="image81" src="_images/cudaMemoryArchitecture-500x173.png" />
+Figure 2: GPU memory architecture [1][1] [1]</p>
+<p><strong>CUDA Memory Architecture:</strong></p>
+<p>All multiprocessors of the GPU device access a large global
+device memory for both gather and scatter operations. This memory is
 relatively slow because it does not provide caching. Shared memory is
 fast compared to device memory, and normally takes the same amount of
 time as required to access registers. Shared memory is “local” to each
@@ -426,81 +538,83 @@ synchronization. It is divided into many parts. Each thread block within
 a multiprocessor accesses its own part of shared memory, and this part
 of shared memory is not accessible by any other thread block of this
 multiprocessor or of some other multiprocessor. All threads within a
-thread block that have the same lifetime as the block share this part&nbsp;of
+thread block that have the same lifetime as the block share this part of
 memory for both read and write operations. To declare variables in
 shared memory, __shared__ qualifier is used, and to declare in
 global memory, __device__ qualifier is used.</p>
-<p><strong>CPU code invoke&nbsp;CUDA&nbsp;kernel code:</strong></p>
-<p>void&nbsp;invoke_matrixMul(int size){</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int devID;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cudaDeviceProp props;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaGetDevice(&amp;devID));
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaGetDeviceProperties(&amp;props, devID));</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int block_size = (props.major &lt; 2) ? 16 : 32;
-&nbsp;&nbsp;&nbsp; unsigned int uiWA, uiHA,&nbsp;uiWB, uiHB, uiWC,&nbsp;uiHC;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uiWA = uiHA=&nbsp;uiWB =&nbsp;uiHB =&nbsp;uiWC =&nbsp;uiHC;</p>
-<p>&nbsp;&nbsp;&nbsp; // allocate host memory for matrices A and B
-&nbsp;&nbsp;&nbsp; unsigned int size_A = uiWA * uiHA;
-&nbsp;&nbsp;&nbsp; unsigned int mem_size_A = sizeof(float) * size_A;
-&nbsp;&nbsp;&nbsp; float* h_A = (float*)malloc(mem_size_A);
-&nbsp;&nbsp;&nbsp; unsigned int size_B = uiWB * uiHB;
-&nbsp;&nbsp;&nbsp; unsigned int mem_size_B = sizeof(float) * size_B;
-&nbsp;&nbsp;&nbsp; float* h_B = (float*)malloc(mem_size_B);</p>
-<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong>// initialize host memory
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; srand(2012);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; randomInit(h_A, size_A);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; randomInit(h_B, size_B);</p>
-<p>&nbsp;&nbsp;&nbsp; // allocate device memory
-&nbsp;&nbsp;&nbsp; float* d_A, *d_B, *d_C;
-&nbsp;&nbsp;&nbsp; unsigned int size_C = uiWC * uiHC;
-&nbsp;&nbsp;&nbsp; unsigned int mem_size_C = sizeof(float) * size_C;</p>
-<p>&nbsp;&nbsp;&nbsp; // allocate host memory for the result
-&nbsp;&nbsp;&nbsp; float* h_C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = (float*) malloc(mem_size_C);
-&nbsp;&nbsp;&nbsp; float* h_CUBLAS = (float*)
-malloc(mem_size_C);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMalloc((void**) &amp;d_A,
-mem_size_A));
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMalloc((void**) &amp;d_B,
-mem_size_B));
-&nbsp;&nbsp;&nbsp; // copy host memory to
-device
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMemcpy(d_A, h_A, mem_size_A,
-cudaMemcpyHostToDevice) );
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; checkCudaErrors(cudaMemcpy(d_B, h_B, mem_size_B,
-cudaMemcpyHostToDevice) );
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkCudaErrors(cudaMalloc((void**) &amp;d_C,
-mem_size_C));
-&nbsp;&nbsp;&nbsp; // setup execution
-parameters
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dim3 threads(block_size,
-block_size);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dim3 grid(uiWC / threads.x, uiHC /
-threads.y);</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; //Performs warmup operation using matrixMul CUDA
-kernel
-&nbsp;&nbsp;&nbsp; if (block_size 16) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; matrixMul&lt;16&gt;&lt;&lt;&lt; grid, threads &gt;&gt;&gt;(d_C, d_A,
-d_B, uiWA, uiWB);
-&nbsp;&nbsp;&nbsp; } else
-{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; matrixMul&lt;32&gt;&lt;&lt;&lt; grid, threads &gt;&gt;&gt;(d_C, d_A, d_B,
-uiWA, uiWB);</p>
-<p>}</p>
-<p>cudaDeviceSynchronize();</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;// clean up
-memory</p>
-<p>free(h_A);</p>
-<p>free(h_B);
-&nbsp;&nbsp;&nbsp; free(h_C);
-&nbsp;}</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">this code has wrong tabs</p>
+</div>
+<p><strong>CPU code invoke CUDA kernel code:</strong>:</p>
+<div class="highlight-python"><pre>void invoke_matrixMul(int size){
+
+      int devID;
+      cudaDeviceProp props;
+      checkCudaErrors(cudaGetDevice(&amp;devID));
+      checkCudaErrors(cudaGetDeviceProperties(&amp;props, devID));
+
+      int block_size = (props.major &lt; 2) ? 16 : 32;
+      unsigned int uiWA, uiHA, uiWB, uiHB, uiWC, uiHC;
+      uiWA = uiHA= uiWB = uiHB = uiWC = uiHC;
+
+   // allocate host memory for matrices A and B
+   unsigned int size_A = uiWA * uiHA;
+   unsigned int mem_size_A = sizeof(float) * size_A;
+   float* h_A = (float*)malloc(mem_size_A);
+   unsigned int size_B = uiWB * uiHB;
+   unsigned int mem_size_B = sizeof(float) * size_B;
+   float* h_B = (float*)malloc(mem_size_B);
+
+   // initialize host memory
+      srand(2012);
+      randomInit(h_A, size_A);
+      randomInit(h_B, size_B);
+
+   // allocate device memory
+   float* d_A, *d_B, *d_C;
+   unsigned int size_C = uiWC * uiHC;
+   unsigned int mem_size_C = sizeof(float) * size_C;
+
+   // allocate host memory for the result
+   float* h_C    = (float*) malloc(mem_size_C);
+   float* h_CUBLAS = (float*)    malloc(mem_size_C);
+      checkCudaErrors(cudaMalloc((void**) &amp;d_A, mem_size_A));
+      checkCudaErrors(cudaMalloc((void**) &amp;d_B, mem_size_B));
+   // copy host memory to device
+     checkCudaErrors(cudaMemcpy(d_A, h_A, mem_size_A, cudaMemcpyHostToDevice) );
+     checkCudaErrors(cudaMemcpy(d_B, h_B, mem_size_B, cudaMemcpyHostToDevice) );
+     checkCudaErrors(cudaMalloc((void**) &amp;d_C, mem_size_C));
+   // setup execution parameters
+      dim3 threads(block_size, block_size);
+      dim3 grid(uiWC / threads.x, uiHC / threads.y);
+
+
+   //Performs warmup operation using matrixMul CUDA kernel
+   if (block_size 16) {
+          matrixMul&lt;16&gt;&lt;&lt;&lt; grid, threads &gt;&gt;&gt;(d_C, d_A, d_B, uiWA, uiWB);
+   } else {
+         matrixMul&lt;32&gt;&lt;&lt;&lt; grid, threads &gt;&gt;&gt;(d_C, d_A, d_B, uiWA, uiWB);
+
+   }
+
+
+   cudaDeviceSynchronize();
+   // clean up memory
+   free(h_A);
+   free(h_B);
+   free(h_C);
+ }</pre>
+</div>
 <p><strong>References:</strong>
-[1]&nbsp;High&nbsp;Performance&nbsp;Computing&nbsp;with&nbsp;CUDA,&nbsp;2009&nbsp;User&nbsp;Group&nbsp;Conference
-[2]&nbsp;<a class="reference external" href="http://www.nvidia.com/content/global/global.php">http://www.nvidia.com/content/global/global.php</a></p>
-<p>source&nbsp;code:&nbsp;git clone&nbsp;<a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:futuregrid/GPU.git</p>
-<p>Usage:
-module load cuda
-module load&nbsp;intel
-&nbsp;&nbsp;nvcc&nbsp;-c matrixMul.cu -L/opt/cuda/lib64&nbsp;-lcudart</p>
+[1] High Performance Computing with CUDA, 2009 User Group Conference
+[2] <a class="reference external" href="http://www.nvidia.com/content/global/global.php">http://www.nvidia.com/content/global/global.php</a></p>
+<p>source code: git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:futuregrid/GPU.git</p>
+<p>Usage:</p>
+<div class="highlight-python"><pre>module load cuda
+module load intel
+nvcc -c matrixMul.cu -L/opt/cuda/lib64 -lcudart</pre>
+</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="89%" />
@@ -519,57 +633,52 @@ module load&nbsp;intel
 </table>
 </div>
 <div class="section" id="c-means-clustering-using-cuda-on-gpu">
-<h1>C-means clustering using CUDA on GPU<a class="headerlink" href="#c-means-clustering-using-cuda-on-gpu" title="Permalink to this headline">¶</a></h1>
-<p><strong>Summary:</strong>
-The computational&nbsp;demands for multivariate clustering&nbsp;are
-increasing&nbsp;rapidly, and therefore&nbsp;processing large data sets is
-time&nbsp;consuming on&nbsp;a single CPU. To address the computational demands,&nbsp;we
-implemented the cmeans&nbsp;clustering&nbsp;algorithm, using&nbsp;the&nbsp;NVIDIA&#8217;s CUDA&#8217;s
-framework and the latest GPU&nbsp;devices on the Delta machine.</p>
-<p><strong>Fuzzy C-Means Clustering</strong>
-&nbsp;Fuzzy c-means&nbsp;is an algorithm&nbsp;of&nbsp;clustering which allows one&nbsp;element
-to belong to two or more clusters with&nbsp;different probability.&nbsp;This
-method&nbsp;is frequently used in multivariate clustering.&nbsp;This algorithm&nbsp;is
-based on minimization of the following objective function: <a href="#id7"><span class="problematic" id="id8">|image82|</span></a>
-Here, M&nbsp;is a real number greater than 1, N is the number&nbsp;of&nbsp;elements,
-Uij is the value&nbsp;of membership of&nbsp;Xi&nbsp;in cluster Cj,&nbsp; xi is the ith of
+<h2>28.3. C-means clustering using CUDA on GPU<a class="headerlink" href="#c-means-clustering-using-cuda-on-gpu" title="Permalink to this headline">¶</a></h2>
+<p>The computational demands for multivariate clustering are
+increasing rapidly, and therefore processing large data sets is
+time consuming on a single CPU. To address the computational demands, we
+implemented the cmeans clustering algorithm, using the NVIDIA&#8217;s CUDA&#8217;s
+framework and the latest GPU devices on the Delta machine.</p>
+<dl class="docutils">
+<dt><strong>Fuzzy C-Means Clustering</strong></dt>
+<dd>Fuzzy c-means is an algorithm of clustering which allows one element</dd>
+</dl>
+<p>to belong to two or more clusters with different probability. This
+method is frequently used in multivariate clustering. This algorithm is
+based on minimization of the following objective function: <img alt="image82" src="_images/cmeans_objective_function.gif" />
+Here, M is a real number greater than 1, N is the number of elements,
+Uij is the value of membership of Xi in cluster Cj,  xi is the ith of
 d-dimensional measured data, cj is the d-dimension center of the
 cluster, and ||Xi-Cj|| is any norm expressing the similarity between
-any measured data and the center. &nbsp;Fuzzy partitioning is&nbsp;performed
+any measured data and the center.  Fuzzy partitioning is performed
 through an iterative optimization of the objective function shown above.
-Within each&nbsp;iteration,&nbsp;the algorithm&nbsp;updates&nbsp;the&nbsp;membership&nbsp;uij and the
+Within each iteration, the algorithm updates the membership uij and the
 cluster centers cj by:
-<a href="#id9"><span class="problematic" id="id10">|image83|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |image84|</span></a>
-This iteration will stop when <a href="#id11"><span class="problematic" id="id12">|image85|</span></a>, where&nbsp;&#8216;e&#8217;&nbsp;is a termination
-criterion between 0 and 1, and k represents the iteration steps.
-<strong>**Algorithm of CUDA C-means:</strong></p>
-<blockquote>
-<div>1**) Copy data to GPU</div></blockquote>
-<ol class="arabic simple" start="2">
-<li>DistanceMatrix kernel</li>
-<li>MembershipMatrix kernel</li>
-<li>UpdateCenters kernel, copy partial centers to host from GPUs</li>
-<li>ClusterSizes kernel, copy cluster sizes to host from each GPU</li>
-</ol>
-<p>6) Aggregate partial cluster centers and reduce
-10) Compute difference between current cluster centers and previous
-iteration.
-11) Compute cluster distance&nbsp;and&nbsp;memberships using final centers.</p>
-<p>&nbsp;&nbsp;<strong>&nbsp;&nbsp;CUDA kernels of C-means program:</strong>
-1) DistanceMatrix
-2)&nbsp;MembershipMatrix
-3)&nbsp;UpdateCetners
-4)&nbsp;ClusterSizes</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>CUDA&nbsp;C-means performance on Delta:</strong>
-<a href="#id13"><span class="problematic" id="id14">|image86|</span></a>
-Figure&nbsp;1:&nbsp;C-means performance&nbsp;using GPU and&nbsp;CPU
-&nbsp;&nbsp;Reference:
-&nbsp;&nbsp;[1]
-<a class="reference external" href="http://en.wikipedia.org/wiki/Cluster_analysis">http://en.wikipedia.org/wiki/Cluster_analysis</a>
-&nbsp;&nbsp;[2] Scalable Data Clustering using GPU&nbsp;Clusters,&nbsp; Andrew
-Pangborn,&nbsp;Gregor von Laszewski</p>
-<p>Average: Select ratingPoorOkayGoodGreatAwesome</p>
-<p>Your rating: None Average: 4 (1 vote)</p>
+<img alt="image83" src="_images/cmeans_uij_ck.gif" />    <img alt="image84" src="_images/cmeans_ck.gif" />
+This iteration will stop when <img alt="image85" src="_images/cmeans_stop_condition.gif" />, where &#8216;e&#8217; is a termination
+criterion between 0 and 1, and k represents the iteration steps.</p>
+<p><strong>Algorithm of CUDA C-means:</strong>
+#. Copy data to GPU
+#. DistanceMatrix kernel
+#. MembershipMatrix kernel
+#. UpdateCenters kernel, copy partial centers to host from GPUs
+#. ClusterSizes kernel, copy cluster sizes to host from each GPU
+#. Aggregate partial cluster centers and reduce
+#. Compute difference between current cluster centers and previous
+#. Compute cluster distance and memberships using final centers.
+#. DistanceMatrix
+#. MembershipMatrix
+#. UpdateCetners
+#. ClusterSizes</p>
+<p><strong>CUDA C-means performance on Delta:</strong>
+<img alt="image86" src="_images/cmeansPerformance2-600x178.png" />
+Figure 1: C-means performance using GPU and CPU</p>
+<p>References</p>
+<ul class="simple">
+<li>[1]`http://en.wikipedia.org/wiki/Cluster_analysis &lt;<a class="reference external" href="http://en.wikipedia.org/wiki/Cluster_analysis">http://en.wikipedia.org/wiki/Cluster_analysis</a>&gt;`__</li>
+<li>[2] Scalable Data Clustering using GPU Clusters,  Andrew Pangborn, Gregor von Laszewski</li>
+</ul>
+</div>
 </div>
 
 

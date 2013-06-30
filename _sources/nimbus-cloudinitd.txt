@@ -1,5 +1,6 @@
+**********************************************************************
 cloudinit.d
-===========
+**********************************************************************
 
 cloudinit.d is a tool designed for launching, controlling, and
 monitoring complex environments in the cloud.

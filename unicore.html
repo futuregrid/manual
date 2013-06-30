@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Unicore &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>24. Unicore &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,6 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="25. Genesis II" href="genesis.html" />
+    <link rel="prev" title="23. ViNe (Mauritsio/Renato)" href="vine.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -62,7 +64,7 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="title.html">3.   Manual</a></li>
@@ -108,7 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hardware.html#networks">9.2. Networks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">10. HPC Services</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">10. HPC Services (assigned to Allen and Koji)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">10.1. Accessing Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">10.2. Filesystem Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">10.3. Modules</a></li>
@@ -122,70 +124,202 @@
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">10.11. Storage Services</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="scalemp.html">11. ScaleMP vSMP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#accessing-scalemp">11.1. Accessing ScaleMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#submitting-a-job">11.2. Submitting a job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#developing-a-job-script">11.3. Developing a job script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">12. OpenStack (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">12.1. Get a cloud account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">12.2. commandline clients</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-essex.html">13. Using OpenStack on FutureGrid (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#note">13.1. NOTE:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#summary">13.2. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#getting-started">13.3. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#log-into-india">13.4. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#account-and-credentials">13.5. Account and Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#euca2ools-ec2-client-tools">13.6. Euca2ools (EC2 client tools)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#testing-your-setup">13.7. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#list-of-common-images">13.8. List of Common Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#vm-types">13.9. VM Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#key-management">13.10. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#image-instantiation">13.11. Image Instantiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#better-server-names">13.12. Better Server Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#monitoring-instances">13.13. Monitoring Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#log-into-your-vm">13.14. Log into your VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#nova-volumes-not-available">13.15. Nova Volumes (Not available)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#volume-snapshots">13.16. Volume Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#image-registration">13.17. Image Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#delete-your-images">13.18. Delete your images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#terminate-your-vms">13.19. Terminate your VMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#limitations">13.20. Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#troubleshooting">13.21. Troubleshooting:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">14. OpenStack Grizzly (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#from-zero-to-get-your-first-instance-running">14.1. From zero to get your first instance running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">14.2. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">14.3. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">14.4. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">14.5. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">14.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">14.7. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">14.8. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">14.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">15. Eucalyptus  (Allen)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">15.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">15.2. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">15.3. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">15.4. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">15.5. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">15.6. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">15.7. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">15.8. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">15.9. Status of Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iaas.html">16. IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">16.1. Nimbus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">16.2. OpenStack Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#eucalyptus-clouds">16.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">16.4. Virtual Appliances for Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus.html">17. Using Nimbus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">17.1. Nimbus on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#getting-started">17.2. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-the-cloud-client">17.3. Using the Cloud Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#virtual-clusters">17.4. Virtual Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloud-quick-start-launch-a-vm-with-1-command">17.5. Cloud Quick Start : Launch a VM with 1 command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">17.6. Launch A VM via Nimbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-other-nimbus-clouds-on-futuregrid">17.7. Using Other Nimbus Clouds on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launching-multiple-vms">17.8. Launching Multiple VMs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">18. Nimbus Phantom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">19. cloudinit.d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="precip.html">20. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">20.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#api">20.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">20.3. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">21. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">21.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">21.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">21.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">21.4. RAIN Manual Pages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pegasus.html">22. Pegasus (Matts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">22.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">22.2. Using Pegasus on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vine.html">23. ViNe (Mauritsio/Renato)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">24. Unicore</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#unicore-6-on-futuregrid-user-manual">24.1. UNICORE 6 on FutureGrid User Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">24.2. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-unicore">24.3. What is UNICORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">24.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">24.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-jobs-on-unicore-sites">24.6. Running Jobs on UNICORE Sites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deploying-a-new-unicore-6-grid">24.7. Deploying a New UNICORE 6 Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="genesis.html">25. Genesis II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#introduction">25.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#what-is-genesisii">25.2. What is GenesisII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#connecting-to-the-genesisii-bes-endpoints">25.3. Connecting to the GenesisII BES Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#using-the-futuregrid-genesisii-endpoints-as-a-client">25.4. Using the Futuregrid GenesisII Endpoints as a Client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">26. Tutorials (Renato/Mauritsio)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-0-accessing-futuregrid-resources">26.1. Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-1-cloud-provisioning-platforms">26.2. Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-2-cloud-run-time-map-reduce-platforms">26.3. Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">26.4. Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-4-high-performance-computing">26.5. Tutorial Topic 4: High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-5-experiment-management">26.6. Tutorial Topic 5: Experiment Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-6-image-management-and-rain">26.7. Tutorial Topic 6: Image Management and Rain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-7-storage">26.8. Tutorial Topic 7:  Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#other-tutorials-and-educational-materials">26.9. Other Tutorials and Educational Materials</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="papi.html">27. PAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">27.1. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#references">27.2. References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">28. Delta GPU User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">28.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">28.2. Running programs on a single GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">28.3. C-means clustering using CUDA on GPU</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Unicore</a></li>
-<li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#what-is-unicore">What is UNICORE?</a></li>
-<li><a class="reference internal" href="#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a><ul>
-<li><a class="reference internal" href="#india-endpoint-info-currently-unavailable">India Endpoint Info &lt;currently unavailable&gt;</a></li>
-<li><a class="reference internal" href="#sierra-endpoint-info">Sierra Endpoint Info</a></li>
+<li><a class="reference internal" href="#">24. Unicore</a><ul>
+<li><a class="reference internal" href="#unicore-6-on-futuregrid-user-manual">24.1. UNICORE 6 on FutureGrid User Manual</a></li>
+<li><a class="reference internal" href="#introduction">24.2. Introduction</a></li>
+<li><a class="reference internal" href="#what-is-unicore">24.3. What is UNICORE?</a></li>
+<li><a class="reference internal" href="#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">24.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a><ul>
+<li><a class="reference internal" href="#india-endpoint-info-currently-unavailable">24.4.1. India Endpoint Info &lt;currently unavailable&gt;</a></li>
+<li><a class="reference internal" href="#sierra-endpoint-info">24.4.2. Sierra Endpoint Info</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a><ul>
-<li><a class="reference internal" href="#installing-the-unicore6-commandline-client-ucc">Installing the UNICORE6 Commandline Client (UCC)</a><ul>
-<li><a class="reference internal" href="#acquire-client-bundle">Acquire Client Bundle</a></li>
-<li><a class="reference internal" href="#unpack-ucc">Unpack UCC</a></li>
-<li><a class="reference internal" href="#examine-ucc-files">Examine UCC Files</a></li>
-<li><a class="reference internal" href="#run-commandline">Run Commandline</a></li>
-<li><a class="reference internal" href="#client">Client</a></li>
-<li><a class="reference internal" href="#installation-conclusion">Installation Conclusion</a></li>
+<li><a class="reference internal" href="#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">24.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a><ul>
+<li><a class="reference internal" href="#installing-the-unicore6-commandline-client-ucc">24.5.1. Installing the UNICORE6 Commandline Client (UCC)</a><ul>
+<li><a class="reference internal" href="#acquire-client-bundle">24.5.1.1. Acquire Client Bundle</a></li>
+<li><a class="reference internal" href="#unpack-ucc">24.5.1.2. Unpack UCC</a></li>
+<li><a class="reference internal" href="#examine-ucc-files">24.5.1.3. Examine UCC Files</a></li>
+<li><a class="reference internal" href="#run-commandline-client">24.5.1.4. Run Commandline Client</a></li>
+<li><a class="reference internal" href="#installation-conclusion">24.5.1.5. Installation Conclusion</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configuring-client-to-connect-to-futuregrid-u6-endpoints">Configuring Client to Connect to FutureGrid U6 Endpoints</a><ul>
-<li><a class="reference internal" href="#configuration-overview">Configuration Overview</a></li>
+<li><a class="reference internal" href="#configuring-client-to-connect-to-futuregrid-u6-endpoints">24.5.2. Configuring Client to Connect to FutureGrid U6 Endpoints</a><ul>
+<li><a class="reference internal" href="#configuration-overview">24.5.2.1. Configuration Overview</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#setting-up-security-in-unicore">Setting Up Security in UNICORE</a></li>
-<li><a class="reference internal" href="#setting-up-a">Setting Up a</a></li>
-<li><a class="reference internal" href="#keystore">Keystore</a><ul>
-<li><a class="reference internal" href="#creating-a-truststore">Creating a Truststore</a></li>
-<li><a class="reference internal" href="#acquiring-the-registry">Acquiring the Registry</a></li>
-<li><a class="reference internal" href="#address">Address</a></li>
-<li><a class="reference internal" href="#connecting-to-endpoints-w-o-registries">Connecting to Endpoints w/o Registries</a></li>
-<li><a class="reference internal" href="#preferences-file-modifications">Preferences File Modifications</a></li>
-<li><a class="reference internal" href="#example-preferences-file">Example Preferences File</a></li>
-<li><a class="reference internal" href="#locating-the-preferences">Locating the Preferences</a></li>
-<li><a class="reference internal" href="#file">File</a></li>
-<li><a class="reference internal" href="#validate-client">Validate Client</a></li>
-<li><a class="reference internal" href="#setup">Setup</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li><a class="reference internal" href="#setting-up-security-in-unicore">24.5.3. Setting Up Security in UNICORE</a></li>
+<li><a class="reference internal" href="#setting-up-a-keystore">24.5.4. Setting Up a Keystore</a><ul>
+<li><a class="reference internal" href="#creating-a-truststore">24.5.4.1. Creating a Truststore</a></li>
+<li><a class="reference internal" href="#acquiring-the-registry-address">24.5.4.2. Acquiring the Registry Address</a></li>
+<li><a class="reference internal" href="#connecting-to-endpoints-w-o-registries">24.5.4.3. Connecting to Endpoints w/o Registries</a></li>
+<li><a class="reference internal" href="#preferences-file-modifications">24.5.4.4. Preferences File Modifications</a></li>
+<li><a class="reference internal" href="#example-preferences-file">24.5.4.5. Example Preferences File</a></li>
+<li><a class="reference internal" href="#locating-the-preferences-file">24.5.4.6. Locating the Preferences File</a></li>
+<li><a class="reference internal" href="#validate-client-setup">24.5.4.7. Validate Client Setup</a></li>
+<li><a class="reference internal" href="#configuration-conclusion">24.5.4.8. Configuration Conclusion</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#submitting-jobs-to-futuregrid-u6-endpoints">Submitting Jobs to FutureGrid U6 Endpoints</a><ul>
-<li><a class="reference internal" href="#getting">Getting</a></li>
-<li><a class="reference internal" href="#started">Started</a></li>
-<li><a class="reference internal" href="#submit-jobs-to">Submit Jobs to</a></li>
-<li><a class="reference internal" href="#bes">BES</a></li>
-<li><a class="reference internal" href="#other-bes-related">Other BES Related</a></li>
-<li><a class="reference internal" href="#commands">Commands</a></li>
-<li><a class="reference internal" href="#job-submission-conclusion">Job Submission Conclusion</a></li>
+<li><a class="reference internal" href="#submitting-jobs-to-futuregrid-u6-endpoints">24.5.5. Submitting Jobs to FutureGrid U6 Endpoints</a><ul>
+<li><a class="reference internal" href="#getting-started">24.5.5.1. Getting Started</a></li>
+<li><a class="reference internal" href="#submit-jobs-to-bes">24.5.5.2. Submit Jobs to BES</a></li>
+<li><a class="reference internal" href="#other-bes-related-commands">24.5.5.3. Other BES Related Commands</a></li>
+<li><a class="reference internal" href="#job-submission-conclusion">24.5.5.4. Job Submission Conclusion</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#references">References</a></li>
-<li><a class="reference internal" href="#questions-comments">&nbsp; Questions/Comments</a></li>
+<li><a class="reference internal" href="#references">24.5.6. References</a></li>
+<li><a class="reference internal" href="#questions-comments">24.5.7. Questions/Comments</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#running-jobs-on-unicore-sites">Running Jobs on UNICORE Sites</a></li>
-<li><a class="reference internal" href="#deploying-a-new-unicore-6-grid">Deploying a New UNICORE 6 Grid</a><ul>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li><a class="reference internal" href="#installing-the-core-server-bundle">Installing the Core Server Bundle</a></li>
-<li><a class="reference internal" href="#starting-stopping-the-unicore-servers">Starting/Stopping the UNICORE Servers</a></li>
+<li><a class="reference internal" href="#running-jobs-on-unicore-sites">24.6. Running Jobs on UNICORE Sites</a></li>
+<li><a class="reference internal" href="#deploying-a-new-unicore-6-grid">24.7. Deploying a New UNICORE 6 Grid</a><ul>
+<li><a class="reference internal" href="#prerequisites">24.7.1. Prerequisites</a></li>
+<li><a class="reference internal" href="#installing-the-core-server-bundle">24.7.2. Installing the Core Server Bundle</a></li>
+<li><a class="reference internal" href="#starting-stopping-the-unicore-servers">24.7.3. Starting/Stopping the UNICORE Servers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -194,6 +328,10 @@
             
             
               
+  <li><a href="vine.html"
+         title="previous chapter">&laquo; 23. ViNe (Mauritsio/Renato)</a></li>
+  <li><a href="genesis.html"
+         title="next chapter">25. Genesis II &raquo;</a></li>
             
             
               <li>
@@ -218,23 +356,19 @@
 <div class="container">
   
   <div class="section" id="unicore">
-<h1>Unicore<a class="headerlink" href="#unicore" title="Permalink to this headline">¶</a></h1>
-<p>This page is maintained by Karolina Sarnowska-Upton from the University
-of Virginia.</p>
-<p><a href="#id1"><span class="problematic" id="id2">|image130|</span></a></p>
-<hr class="docutils" />
-<dl class="docutils">
-<dt>UNICORE 6 on FutureGrid</dt>
-<dd>User Manual</dd>
-</dl>
-<hr class="docutils" />
+<h1>24. Unicore<a class="headerlink" href="#unicore" title="Permalink to this headline">¶</a></h1>
+<div class="figure">
+<img alt="_images/otf_0.png" src="_images/otf_0.png" />
+<p class="caption">Unicore 6</p>
+</div>
+<div class="section" id="unicore-6-on-futuregrid-user-manual">
+<h2>24.1. UNICORE 6 on FutureGrid User Manual<a class="headerlink" href="#unicore-6-on-futuregrid-user-manual" title="Permalink to this headline">¶</a></h2>
 <p>Author: Karolina Sarnowska-Upton, University of Virginia
 Version: 1.0
-Today&#8217;s Date: 2010-12-21
-Last Revision: 2011-11-28</p>
+Last Revision: 2013-07-01, Gregor von Laszewski</p>
 </div>
 <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h2>24.2. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.unicore.eu/download/unicore6%A0">UNICORE 6</a> has been
 deployed at various FutureGrid sites. This tutorial explains how to
 connect to the existing FutureGrid UNICORE endpoints from other grid
@@ -242,7 +376,7 @@ middleware platforms or a UNICORE Commandline Client (UCC) as well as
 how runs jobs on UNICORE sites and how to deploy a new UNICORE grid.</p>
 </div>
 <div class="section" id="what-is-unicore">
-<h1>What is UNICORE?<a class="headerlink" href="#what-is-unicore" title="Permalink to this headline">¶</a></h1>
+<h2>24.3. What is UNICORE?<a class="headerlink" href="#what-is-unicore" title="Permalink to this headline">¶</a></h2>
 <p>UNICORE (Uniform Interface to Computing Resources) is a Grid middleware
 system. Listed below are the key principles of the UNICORE design. More
 information about UNICORE can be found at
@@ -289,75 +423,78 @@ LoadLeveler, Torque, SLURM, LSF, OpenCCS, etc.</li>
 </ul>
 </div>
 <div class="section" id="connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">
-<h1>Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients<a class="headerlink" href="#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients" title="Permalink to this headline">¶</a></h1>
+<h2>24.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients<a class="headerlink" href="#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients" title="Permalink to this headline">¶</a></h2>
 <p>Two UNICORE BES endpoints have been deployed on FutureGrid for
 interoperability testing. One endpoint is located on Sierra and the
 other is located on India. This section contains the information needed
 for other grid middleware platforms to connect to the UNICORE BES
 endpoints.</p>
 <div class="section" id="india-endpoint-info-currently-unavailable">
-<h2>India Endpoint Info &lt;currently unavailable&gt;<a class="headerlink" href="#india-endpoint-info-currently-unavailable" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>Endpoint URL</strong>:
-<a class="reference external" href="https://149.165.146.134:8081/DEMO-SITE/services/">https://149.165.146.134:8081/DEMO-SITE/services/</a>BESFactory?res=default_bes_factory</li>
-<li><strong>Security</strong>: configured for username/password authentication;
-<a class="reference external" href="mailto:karolina&#37;&#52;&#48;virginia&#46;edu">Email</a> for username token and CA
-cert.</li>
-<li><strong>OS</strong>: Red Hat Enterprise Linux Server release 5.5</li>
-<li><strong>Arch</strong>: x86_64</li>
-<li><strong>Cores</strong>: 8 (Jobs submitted directly to machine - i.e. not through
-PBS queue)</li>
-</ul>
+<h3>24.4.1. India Endpoint Info &lt;currently unavailable&gt;<a class="headerlink" href="#india-endpoint-info-currently-unavailable" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Endpoint URL:</dt>
+<dd><a class="reference external" href="https://149.165.146.134:8081/DEMO-SITE/services/">https://149.165.146.134:8081/DEMO-SITE/services/</a>BESFactory?res=default_bes_factory</dd>
+</dl>
+<p>Security: configured for username/password authentication;    <a class="reference external" href="mailto:karolina&#37;&#52;&#48;virginia&#46;edu">Email</a> for username token and CA cert.</p>
+<p>OS: Red Hat Enterprise Linux Server release 5.5</p>
+<p>Arch: x86_64</p>
+<dl class="docutils">
+<dt>Cores: 8 (Jobs submitted directly to machine - i.e. not through</dt>
+<dd>PBS queue)</dd>
+</dl>
 </div>
 <div class="section" id="sierra-endpoint-info">
-<h2>Sierra Endpoint Info<a class="headerlink" href="#sierra-endpoint-info" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>Endpoint URL</strong>:
-<a class="reference external" href="https://198.202.120.85:8081/DEMO-SITE/services/">https://198.202.120.85:8081/DEMO-SITE/services/</a>BESFactory?res=default_bes_factory</li>
-<li><strong>Security</strong>: configured for X-509 based mutual client
-authentication; <a class="reference external" href="mailto:karolina&#37;&#52;&#48;virginia&#46;edu">Email</a> with X-509
-cert and for CA cert.</li>
-<li><strong>OS</strong>: Red Hat Enterprise Linux Server release 5.5</li>
-<li><strong>Arch</strong>: x86_64</li>
-<li><strong>Cores</strong>: 320 (Jobs submitted to PBS queue)</li>
-</ul>
+<h3>24.4.2. Sierra Endpoint Info<a class="headerlink" href="#sierra-endpoint-info" title="Permalink to this headline">¶</a></h3>
+<p>Endpoint URL: <a class="reference external" href="https://198.202.120.85:8081/DEMO-SITE/services/">https://198.202.120.85:8081/DEMO-SITE/services/</a>BESFactory?res=default_bes_factory</p>
+<dl class="docutils">
+<dt>Security: configured for X-509 based mutual client</dt>
+<dd>authentication; <a class="reference external" href="mailto:karolina&#37;&#52;&#48;virginia&#46;edu">Email</a> with X-509
+cert and for CA cert.</dd>
+</dl>
+<p>OS: Red Hat Enterprise Linux Server release 5.5</p>
+<p>Arch: x86_64</p>
+<p>Cores: 320 (Jobs submitted to PBS queue)</p>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">
-<h1>Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client<a class="headerlink" href="#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client" title="Permalink to this headline">¶</a></h1>
+<h2>24.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client<a class="headerlink" href="#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client" title="Permalink to this headline">¶</a></h2>
 <p>A UNICORE client can be used to connect to the FutureGrid UNICORE6
 endpoints. This section describes how to install a UCC ( UNICORE
 Commandline Client), configure it to connect to a FutureGrid U6 endpoint
 via X-509 based mutual client authentication, and then submit jobs via
 BES.</p>
 <div class="section" id="installing-the-unicore6-commandline-client-ucc">
-<h2>Installing the UNICORE6 Commandline Client (UCC)<a class="headerlink" href="#installing-the-unicore6-commandline-client-ucc" title="Permalink to this headline">¶</a></h2>
+<h3>24.5.1. Installing the UNICORE6 Commandline Client (UCC)<a class="headerlink" href="#installing-the-unicore6-commandline-client-ucc" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="acquire-client-bundle">
-<h3>Acquire Client Bundle<a class="headerlink" href="#acquire-client-bundle" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.1.1. Acquire Client Bundle<a class="headerlink" href="#acquire-client-bundle" title="Permalink to this headline">¶</a></h4>
 <ol class="arabic simple">
 <li>Navigate to the UNICORE website:
 <a class="reference external" href="http://www.unicore.eu/">http://www.unicore.eu/</a></li>
 <li>Select “Download” link in left hand tool bar</li>
 <li>Under Clients section, select “Download” link for Commandline Client</li>
-<li>Click on folder for desired version&nbsp; (i.e. 6.4.1)</li>
-<li>Click on desired distribution bundle to download&nbsp; (i.e.
+<li>Click on folder for desired version  (i.e. 6.4.1)</li>
+<li>Click on desired distribution bundle to download  (i.e.
 ucc-6.4.1-all.tar.gz)</li>
 </ol>
 </div>
 <div class="section" id="unpack-ucc">
-<h3>Unpack UCC<a class="headerlink" href="#unpack-ucc" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Unpack files from downloaded distribution bundle&nbsp; (i.e. tar -xvzf
-ucc-6.4.1-all.tar.gz)</li>
-<li>On completion, there should be a directory containing the UNICORE6
-commandline client&nbsp; (i.e. ucc-6.4.1)</li>
-<li>You can add the bin directory to your path for easier client
-execution</li>
+<h4>24.5.1.2. Unpack UCC<a class="headerlink" href="#unpack-ucc" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Unpack files from downloaded distribution bundle  (i.e. tar -xvzf
+ucc-6.4.1-all.tar.gz)</p>
+</li>
+<li><p class="first">On completion, there should be a directory containing the UNICORE6
+commandline client  (i.e. ucc-6.4.1)</p>
+</li>
+<li><p class="first">You can add the bin directory to your path for easier client
+execution:</p>
+<div class="highlight-python"><pre>export PATH=$PATH:&lt;UCC_HOME&gt;/bin,  where UCC_HOME is the directory you installed UCC</pre>
+</div>
+</li>
 </ul>
 </div>
 <div class="section" id="examine-ucc-files">
-<h3>Examine UCC Files<a class="headerlink" href="#examine-ucc-files" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.1.3. Examine UCC Files<a class="headerlink" href="#examine-ucc-files" title="Permalink to this headline">¶</a></h4>
 <p>Directory Structure</p>
 <ul class="simple">
 <li>bin – contains executable “ucc”</li>
@@ -370,167 +507,165 @@ and registry settings</li>
 <li>samples</li>
 </ul>
 </div>
-<div class="section" id="run-commandline">
-<h3>Run Commandline<a class="headerlink" href="#run-commandline" title="Permalink to this headline">¶</a></h3>
-<p>~</p>
+<div class="section" id="run-commandline-client">
+<h4>24.5.1.4. Run Commandline Client<a class="headerlink" href="#run-commandline-client" title="Permalink to this headline">¶</a></h4>
+<p>Run ucc to get list and description of available commands:</p>
+<div class="highlight-python"><pre>$UCC_HOME/bin/
+ucc</pre>
 </div>
-<div class="section" id="client">
-<h3>Client<a class="headerlink" href="#client" title="Permalink to this headline">¶</a></h3>
-<p>Run ucc to get list and description of available commands</p>
-<dl class="docutils">
-<dt>Usage: ucc &lt;command&gt; [OPTIONS] &lt;args&gt;</dt>
-<dd>The following commands are available:
-DATA MANAGEMENT
-&nbsp;ls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - list a storage
-&nbsp;rm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - remove a remote file or directory
-&nbsp;copy-file-status&nbsp;&nbsp;&nbsp; &nbsp; - check status of a copy-file
-&nbsp;get-file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - get remote files
-&nbsp;find&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - find files on storages
-&nbsp;resolve&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - resolve remote location
-&nbsp;mkdir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - create a directory remotely
-&nbsp;copy-file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - copy remote files
-&nbsp;put-file&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - puts a local file to a remote server
-GENERAL
-&nbsp;create-storage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - create a storage service instance
-&nbsp;connect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - connect to UNICORE
-&nbsp;list-storages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - list the available remote storages
-&nbsp;list-applications&nbsp;&nbsp;&nbsp; - lists applications on target systems
-&nbsp;list-jobs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - list your jobs
-&nbsp;list-sites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - list remote sites
-&nbsp;system-info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - checks the availability of services
-JOB EXECUTION
-&nbsp;run&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;- run a job through UNICORE 6
-&nbsp;get-status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;- get job status
-&nbsp;abort-job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - abort a job
-&nbsp;batch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - run ucc on a set of files
-&nbsp;get-output &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - get output files
-OGSA-BES
-&nbsp;bes-list-att&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - provides information about U6 BES Interface
-&nbsp;bes-terminate-job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - terminate bes activity
-&nbsp;bes-submit-job&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - run a job through UNICORE 6 BES Interface
-&nbsp;bes-list-jobs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - list jobs running on BES.
-&nbsp;bes-job-status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - get bes activity status
-OTHER
-&nbsp;shell&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - starts an interactive UCC session
-&nbsp;issue-delegation &nbsp;&nbsp;&nbsp;&nbsp; - allows to issue a trust delegation assertion
-&nbsp;connect-to-testgrid&nbsp;&nbsp; - get credentials for the public testgrid
-&nbsp;wsrf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - perform a WSRF operation
-&nbsp;cip-query&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - query a CIS Infoprovider at a UNICORE site
-&nbsp;run-groovy&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - run a Groovy script
-WORKFLOW
-&nbsp;workflow-trace &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - trace info on a workflow in Chemomentum
-&nbsp;workflow-control &nbsp;&nbsp;&nbsp;&nbsp; - offers workflow control functions
-&nbsp;workflow-submit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - submit a workflow
-&nbsp;workflow-info&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; - lists info on workflows.
-&nbsp;broker-run&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - submit work assignment to service</dd>
-<dt>orchestrator</dt>
-<dd>Enter &#8216;ucc &lt;command&gt; -h&#8217; for help on a particular</dd>
-</dl>
+<div class="highlight-python"><pre>Usage: ucc &lt;command&gt; [OPTIONS] &lt;args&gt;
+ The following commands are available:
+ DATA MANAGEMENT
+  ls                     - list a storage
+  rm                    - remove a remote file or directory
+  copy-file-status      - check status of a copy-file
+  get-file              - get remote files
+  find                 - find files on storages
+  resolve                - resolve remote location
+  mkdir                  - create a directory remotely
+  copy-file             - copy remote files
+  put-file               - puts a local file to a remote server
+ GENERAL
+  create-storage       - create a storage service instance
+  connect               - connect to UNICORE
+  list-storages         - list the available remote storages
+  list-applications    - lists applications on target systems
+  list-jobs             - list your jobs
+  list-sites             - list remote sites
+  system-info            - checks the availability of services
+ JOB EXECUTION
+  run                    - run a job through UNICORE 6
+  get-status             - get job status
+  abort-job             - abort a job
+  batch                  - run ucc on a set of files
+  get-output            - get output files
+ OGSA-BES
+  bes-list-att           - provides information about U6 BES Interface
+  bes-terminate-job      - terminate bes activity
+  bes-submit-job         - run a job through UNICORE 6 BES Interface
+  bes-list-jobs         - list jobs running on BES.
+  bes-job-status         - get bes activity status
+ OTHER
+  shell                  - starts an interactive UCC session
+  issue-delegation      - allows to issue a trust delegation assertion
+  connect-to-testgrid   - get credentials for the public testgrid
+  wsrf                   - perform a WSRF operation
+  cip-query              - query a CIS Infoprovider at a UNICORE site
+  run-groovy            - run a Groovy script
+ WORKFLOW
+  workflow-trace        - trace info on a workflow in Chemomentum
+  workflow-control      - offers workflow control functions
+  workflow-submit       - submit a workflow
+  workflow-info         - lists info on workflows.
+  broker-run             - submit work assignment to service
+orchestrator
+ Enter 'ucc &lt;command&gt; -h' for help on a particular</pre>
+</div>
 </div>
 <div class="section" id="installation-conclusion">
-<h3>Installation Conclusion<a class="headerlink" href="#installation-conclusion" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>At this point, the UNICORE Commandline Client has been installed</li>
-<li>However, the client is currently not connected to any UNICORE sites</li>
-<li>The next section will explain how to configure the client so that the
-client will connect to one of the FutureGrid U6 endpoints</li>
-</ul>
+<h4>24.5.1.5. Installation Conclusion<a class="headerlink" href="#installation-conclusion" title="Permalink to this headline">¶</a></h4>
+<p>At this point, the UNICORE Commandline Client has been
+installed. However, the client is currently not connected to any
+UNICORE sites. The next section will explain how to configure the
+client so that the client will connect to one of the FutureGrid U6
+endpoints</p>
 </div>
 </div>
 <div class="section" id="configuring-client-to-connect-to-futuregrid-u6-endpoints">
-<h2>Configuring Client to Connect to FutureGrid U6 Endpoints<a class="headerlink" href="#configuring-client-to-connect-to-futuregrid-u6-endpoints" title="Permalink to this headline">¶</a></h2>
+<h3>24.5.2. Configuring Client to Connect to FutureGrid U6 Endpoints<a class="headerlink" href="#configuring-client-to-connect-to-futuregrid-u6-endpoints" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="configuration-overview">
-<h3>Configuration Overview<a class="headerlink" href="#configuration-overview" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.2.1. Configuration Overview<a class="headerlink" href="#configuration-overview" title="Permalink to this headline">¶</a></h4>
+<p>To connect to a FutureGrid U6 endpoint, you need to</p>
 <ul class="simple">
-<li>To connect to a FutureGrid U6 endpoint, you need to<ul>
 <li>setup security information so that your client will trust the
 FutureGrid U6 endpoint and vice-versa</li>
 <li>specify the connection address that the client should use (aka
 registry address)</li>
 </ul>
-</li>
-<li>This configuration process consists of<ul>
+<p>This configuration process consists of</p>
+<ul class="simple">
 <li>setting up keystore and truststore files with security info</li>
 <li>specifying a registry address for the FutureGrid endpoint</li>
 </ul>
-</li>
-<li>This information is stored in a “preferences” file (starter at
-$UCC_HOME/conf/preferences)</li>
-</ul>
+<p>This information is stored in a <em>preferences</em> file (starter at $UCC_HOME/conf/preferences)</p>
 </div>
 </div>
 <div class="section" id="setting-up-security-in-unicore">
-<h2>Setting Up Security in UNICORE<a class="headerlink" href="#setting-up-security-in-unicore" title="Permalink to this headline">¶</a></h2>
+<h3>24.5.3. Setting Up Security in UNICORE<a class="headerlink" href="#setting-up-security-in-unicore" title="Permalink to this headline">¶</a></h3>
 <p>To setup security, you will need to inform the UNICORE software of your
 identity and who you trust via keystore and truststore files:</p>
-<ul class="simple">
-<li><strong>Keystore</strong>- a file from which UNICORE software reads your identity,
-i.e. your private key and your certificate. As your private key is
+<dl class="docutils">
+<dt>Keystore: a file from which UNICORE software reads your identity,</dt>
+<dd>i.e. your private key and your certificate. As your private key is
 very sensitive, the keystore is encrypted and you will need a
-password to &#8220;unlock” it before usage.</li>
-<li><strong>Truststore</strong>- a file from which UNICORE software reads certificates
-of the Certificate Authorities you trust. It is not as sensitive as a
-keystore, but it is also encrypted.</li>
-</ul>
+password to &#8220;unlock” it before usage.</dd>
+<dt>Truststore: a file from which UNICORE software reads certificates</dt>
+<dd>of the Certificate Authorities you trust. It is not as sensitive as a
+keystore, but it is also encrypted.</dd>
+</dl>
 <p>For an overview of the security mechanism found in the UNICORE grid
 middleware, please consult the <a class="reference external" href="http://unicore.svn.sourceforge.net/svnroot/unicore/documentation/old/securityGuide/Main-UCCOnly.pdf">Users&#8217; UNICORE Security Guide UCC
-version</a></p>
-<blockquote>
-<div>This guide also discusses common security configuration problems and</div></blockquote>
-<p>details how to create keystores/truststores</p>
+version</a>
+This guide also discusses common security configuration problems and
+details how to create keystores/truststores</p>
 </div>
-<div class="section" id="setting-up-a">
-<h2>Setting Up a<a class="headerlink" href="#setting-up-a" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="keystore">
-<h2>Keystore<a class="headerlink" href="#keystore" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-up-a-keystore">
+<h3>24.5.4. Setting Up a Keystore<a class="headerlink" href="#setting-up-a-keystore" title="Permalink to this headline">¶</a></h3>
 <p>Assumption: you want to use a preexisting X.509 certificate for security
 validation</p>
-<ul class="simple">
-<li>If your key and certificate are in a keystore (in PKCS12 or JKS
-format), you can directly use this keystore</li>
-<li>If you have PEM files, you will need to wrap your key and certificate
-files into a PKCS12 keystore:</li>
+<ul>
+<li><p class="first">If your key and certificate are in a keystore (in PKCS12 or JKS
+format), you can directly use this keystore</p>
+</li>
+<li><p class="first">If you have PEM files, you will need to wrap your key and certificate
+files into a PKCS12 keystore:</p>
+<div class="highlight-python"><pre>openssl pkcs12 -export -in myCert.pem -inkey myKey.pem -out keystore.p12 -name mykey</pre>
+</div>
+</li>
 </ul>
 <div class="section" id="creating-a-truststore">
-<h3>Creating a Truststore<a class="headerlink" href="#creating-a-truststore" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.4.1. Creating a Truststore<a class="headerlink" href="#creating-a-truststore" title="Permalink to this headline">¶</a></h4>
 <p>Assumption: you have certificates for CAs that you trust and want to put
 into a truststore file. This should include:</p>
 <p>CA cert for CA that issued your certificate</p>
 <p>CA cert for CA that issued FutureGrid U6 endpoint certs (Email
 <a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">uvacse<span>&#64;</span>virginia<span>&#46;</span>edu</a> for cert)</p>
-<p>To create a truststore with keytool</p>
+<p>To create a truststore with keytool:</p>
+<div class="highlight-python"><pre>keytool -import -keystore truststore.jks -file CAcert.pem -alias
+myTrustedCA</pre>
+</div>
 <p>Repeat command for every CA certificate file (set a unique alias for
 each certificate)</p>
 </div>
-<div class="section" id="acquiring-the-registry">
-<h3>Acquiring the Registry<a class="headerlink" href="#acquiring-the-registry" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="address">
-<h3>Address<a class="headerlink" href="#address" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="acquiring-the-registry-address">
+<h4>24.5.4.2. Acquiring the Registry Address<a class="headerlink" href="#acquiring-the-registry-address" title="Permalink to this headline">¶</a></h4>
 <p>The UNICORE Registry server provides information about available
 services to clients and other services</p>
-<p>Registry address for FutureGrid U6 Endpoint on Sierra (as of 08/2011)</p>
+<p>Registry address for FutureGrid U6 Endpoint on Sierra (as of 08/2011):</p>
+<div class="highlight-python"><pre>https://198.202.120.85:8081/DEMO-SITE/services/Registry?res=default_registry</pre>
+</div>
 </div>
 <div class="section" id="connecting-to-endpoints-w-o-registries">
-<h3>Connecting to Endpoints w/o Registries<a class="headerlink" href="#connecting-to-endpoints-w-o-registries" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.4.3. Connecting to Endpoints w/o Registries<a class="headerlink" href="#connecting-to-endpoints-w-o-registries" title="Permalink to this headline">¶</a></h4>
 <p>A Registry URL is expected to be provided in the preferences file. If a
 BES endpoint is not advertised via a UNICORE Registry, the configuration
 options can be modified to allow this behavior.</p>
-<ol class="arabic simple">
-<li>In the preferences file, set the contact-registry to false:</li>
-</ol>
+<ol class="arabic">
+<li><p class="first">In the preferences file, set the contact-registry to false:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">contact</span><span class="o">-</span><span class="n">registry</span><span class="o">=</span><span class="n">false</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li>Instead, provide at least one BESFactory URL using the following
-format.</li>
+</li>
 </ol>
+<ol class="arabic" start="2">
+<li><p class="first">Instead, provide at least one BESFactory URL using the following
+format:</p>
 <div class="highlight-python"><pre>bes.1=https://site1.com/services/BESFactory
 bes.4=file:///tmp/bes.xml
 bes.5=/tmp/bes.xml</pre>
 </div>
+</li>
+</ol>
 <p>If the &#8220;contact-registry&#8221; option is set to false and no OGSA-BES URL is
 specified, UCC will report an error.</p>
 <p>To use an XML endpoint reference (EPR) read from a file for contacting a
@@ -538,12 +673,15 @@ BESFactory service, the contents of a EPR file must validate against the
 WS-Addressing’s endpoint reference schema.</p>
 </div>
 <div class="section" id="preferences-file-modifications">
-<h3>Preferences File Modifications<a class="headerlink" href="#preferences-file-modifications" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.4.4. Preferences File Modifications<a class="headerlink" href="#preferences-file-modifications" title="Permalink to this headline">¶</a></h4>
 <p>Once you have keystore and truststore files, configure the client
 preferences file to use this security information</p>
 <p>$UCC_HOME/conf/preferences</p>
-<p><strong>Keystore Settings</strong></p>
 <ul class="simple">
+<li>Keystore Settings</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
 <li>Set keystore path to the full path to where your keystore file is
 saved locally</li>
 <li>Provide the password that “unlocks” your keystore file</li>
@@ -552,19 +690,28 @@ the commandline</li>
 <li>Provide keystore’s alias</li>
 <li>Provide keystore’s storetype (PKCS12 or JKS)</li>
 </ul>
-<p><strong>Truststore Settings</strong></p>
+</div></blockquote>
 <ul class="simple">
+<li>Truststore Settings</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
 <li>Set truststore path to the full path to where your truststore file is
 saved locally</li>
 <li>Provide the password that “unlocks” your truststore file</li>
 </ul>
-<p><strong>Registry Address or BESFactory URL Information</strong></p>
+</div></blockquote>
 <ul class="simple">
+<li>Registry Address or BESFactory URL Information</li>
+</ul>
+<blockquote>
+<div><ul class="simple">
 <li>Provide registry address/BESFactory URL of FutureGrid U6 endpoint</li>
 </ul>
+</div></blockquote>
 </div>
 <div class="section" id="example-preferences-file">
-<h3>Example Preferences File<a class="headerlink" href="#example-preferences-file" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.4.5. Example Preferences File<a class="headerlink" href="#example-preferences-file" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>keystore=/home/gridcerts/keystore.p12
 password=YOUR-KEYSTORE-PASSWORD
 storetype=pkcs12
@@ -579,100 +726,73 @@ registry=https://198.202.120.85:8081/DEMO-SITE/services/Registry?res=default_reg
 # ... other properties can follow</pre>
 </div>
 </div>
-<div class="section" id="locating-the-preferences">
-<h3>Locating the Preferences<a class="headerlink" href="#locating-the-preferences" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="file">
-<h3>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="locating-the-preferences-file">
+<h4>24.5.4.6. Locating the Preferences File<a class="headerlink" href="#locating-the-preferences-file" title="Permalink to this headline">¶</a></h4>
 <p>By default, UCC checks for the existence of a file at
 $USER_HOME/.ucc/preferences and reads default settings from there</p>
 <p>Copy your preferences file to this location or specify it’s a location
-every time you issue a UCC command</p>
+every time you issue a UCC command:</p>
 <div class="highlight-python"><pre>-c $UCC_HOME/conf/preferences</pre>
 </div>
 </div>
-<div class="section" id="validate-client">
-<h3>Validate Client<a class="headerlink" href="#validate-client" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="setup">
-<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="validate-client-setup">
+<h4>24.5.4.7. Validate Client Setup<a class="headerlink" href="#validate-client-setup" title="Permalink to this headline">¶</a></h4>
 <p>To check access to FutureGrid endpoints, try a command while specifying
-the path to your preferences file</p>
+the path to your preferences file:</p>
 <div class="highlight-python"><pre>$UCC_HOME/bin/ucc system-info -v -l -c $UCC_HOME/conf/preferences
-$UCC-HOME/bin/ucc list-sites -c $UCC_HOME/conf/</pre>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">preferences</span>
-</pre></div>
+$UCC-HOME/bin/ucc list-sites -c $UCC_HOME/conf/preferences</pre>
 </div>
 <p>If everything is alright you should see information about the FutureGrid
 endpoint.</p>
 </div>
-<div class="section" id="configuration">
-<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="conclusion">
-<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configuration-conclusion">
+<h4>24.5.4.8. Configuration Conclusion<a class="headerlink" href="#configuration-conclusion" title="Permalink to this headline">¶</a></h4>
 <p>Your UCC has now been configured to access the FutureGrid U6 endpoint
-via X-509 based mutual client authentication</p>
-<blockquote>
-<div>Consult the next section to learn about getting started and submit</div></blockquote>
-<p>jobs</p>
+via X-509 based mutual client authentication. Consult the next section
+to learn about getting started and submit jobs.</p>
 </div>
 </div>
 <div class="section" id="submitting-jobs-to-futuregrid-u6-endpoints">
-<h2>Submitting Jobs to FutureGrid U6 Endpoints<a class="headerlink" href="#submitting-jobs-to-futuregrid-u6-endpoints" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="getting">
-<h3>Getting<a class="headerlink" href="#getting" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="started">
-<h3>Started<a class="headerlink" href="#started" title="Permalink to this headline">¶</a></h3>
-<p>Make sure you have access to some target system</p>
+<h3>24.5.5. Submitting Jobs to FutureGrid U6 Endpoints<a class="headerlink" href="#submitting-jobs-to-futuregrid-u6-endpoints" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="getting-started">
+<h4>24.5.5.1. Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h4>
+<p>Make sure you have access to some target system:</p>
 <div class="highlight-python"><pre>$UCC_HOME/bin/ucc connect -c $UCC_HOME/conf/preferences</pre>
 </div>
-<p>List the sites available to you using</p>
-<div class="highlight-python"><pre>$UCC_HOME/bin/ucc list-sites -c $UCC_HOME/conf/</pre>
+<p>List the sites available to you using:</p>
+<div class="highlight-python"><pre>$UCC_HOME/bin/ucc list-sites -c $UCC_HOME/conf/preferences</pre>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">preferences</span>
-</pre></div>
-</div>
-<p>Run a sample job</p>
+<p>Run a sample job:</p>
 <div class="highlight-python"><pre>$UCC_HOME/bin/ucc run -v $UCC_HOME/samples/date.u -c $UCC_HOME/conf/preferences</pre>
 </div>
 </div>
-<div class="section" id="submit-jobs-to">
-<h3>Submit Jobs to<a class="headerlink" href="#submit-jobs-to" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="bes">
-<h3>BES<a class="headerlink" href="#bes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submit-jobs-to-bes">
+<h4>24.5.5.2. Submit Jobs to BES<a class="headerlink" href="#submit-jobs-to-bes" title="Permalink to this headline">¶</a></h4>
 <p>To send a job read from a JSDL file</p>
-<ul class="simple">
-<li>to a site listed in the preferences file:</li>
-</ul>
+<ul>
+<li><p class="first">to a site listed in the preferences file:</p>
 <div class="highlight-python"><pre>$UCC_HOME/bin/ucc bes-submit-job -j hellompi.xml -s bes.3 -v</pre>
 </div>
-<ul class="simple">
-<li>using a BESFactory URL:</li>
-</ul>
+</li>
+<li><p class="first">using a BESFactory URL:</p>
 <div class="highlight-python"><pre>ucc bes-submit-job -j hellompi.xml -s https://example.com/services/BESFactory -v</pre>
 </div>
-<ul class="simple">
-<li>using an endpoint reference file path:</li>
-</ul>
+</li>
+<li><p class="first">using an endpoint reference file path:</p>
 <div class="highlight-python"><pre>ucc bes-submit-job -j hellompi.xml -s file:///tmp/bes.xml -v</pre>
 </div>
+</li>
+</ul>
 </div>
-<div class="section" id="other-bes-related">
-<h3>Other BES Related<a class="headerlink" href="#other-bes-related" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="commands">
-<h3>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h3>
-<p>Check job status</p>
+<div class="section" id="other-bes-related-commands">
+<h4>24.5.5.3. Other BES Related Commands<a class="headerlink" href="#other-bes-related-commands" title="Permalink to this headline">¶</a></h4>
+<p>Check job status:</p>
 <div class="highlight-python"><pre>ucc bes-job-status jobid.job</pre>
 </div>
-<p>Terminate job</p>
+<p>Terminate job:</p>
 <div class="highlight-python"><pre>ucc bes-terminate-job jobid.job</pre>
 </div>
-<p>List user’s jobs on a BESFactory</p>
+<p>List user’s jobs on a BESFactory:</p>
 <div class="highlight-python"><pre>ucc bes-list-job-s bes.1</pre>
 </div>
 <p>List BESFactory properties:</p>
@@ -682,17 +802,13 @@ via X-509 based mutual client authentication</p>
 execution of &#8220;bes-submit-job&#8221; command</p>
 </div>
 <div class="section" id="job-submission-conclusion">
-<h3>Job Submission Conclusion<a class="headerlink" href="#job-submission-conclusion" title="Permalink to this headline">¶</a></h3>
+<h4>24.5.5.4. Job Submission Conclusion<a class="headerlink" href="#job-submission-conclusion" title="Permalink to this headline">¶</a></h4>
 <p>You should now be able to submit jobs to a BES service on a FutureGrid
 U6 endpoint</p>
-<ul class="simple">
-<li></li>
-<li></li>
-</ul>
 </div>
 </div>
 <div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h3>24.5.6. References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
 <p>The information provided in this section has been extracted from the
 following sources. Each contains much more detail about the various
 topics discussed here.</p>
@@ -706,44 +822,92 @@ UCC</a></li>
 </ul>
 </div>
 <div class="section" id="questions-comments">
-<h2>&nbsp; Questions/Comments<a class="headerlink" href="#questions-comments" title="Permalink to this headline">¶</a></h2>
+<h3>24.5.7. Questions/Comments<a class="headerlink" href="#questions-comments" title="Permalink to this headline">¶</a></h3>
 <p>Please email <a class="reference external" href="mailto:uvacse&#37;&#52;&#48;virginia&#46;edu">uvacse<span>&#64;</span>virginia<span>&#46;</span>edu</a></p>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="running-jobs-on-unicore-sites">
-<h1>Running Jobs on UNICORE Sites<a class="headerlink" href="#running-jobs-on-unicore-sites" title="Permalink to this headline">¶</a></h1>
+<h2>24.6. Running Jobs on UNICORE Sites<a class="headerlink" href="#running-jobs-on-unicore-sites" title="Permalink to this headline">¶</a></h2>
 <p>This section provides a general overview of running jobs on UNICORE
 sites.</p>
 <p>First, you can check whether there is an available target system for
 execution:</p>
+<div class="highlight-python"><pre>$ucc connect -c &lt;path_to_ucc.preferences&gt;</pre>
+</div>
 <p>You can also list the available target sites:</p>
+<div class="highlight-python"><pre>$ucc list-sites</pre>
+</div>
 <p>To run a job, you can specify the job using the UNICORE <a class="reference external" href="http://www.unicore.eu/documentation/manuals/unicore6/ucc/jobdescription.html">job description
-format</a>.</p>
+format</a>:</p>
+<div class="highlight-python"><pre>$ucc run &lt;job_description_file&gt;</pre>
+</div>
 <p>Or you can specify a job to run using a Job Submission Description
-Language (JSDL) file.</p>
+Language (JSDL) file:</p>
+<div class="highlight-python"><pre>$ucc run -j &lt;JSDL_file&gt;</pre>
+</div>
 <p>For example, a simple job to run the date, date.u, could be described
 using the UNICORE description format as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#</span>
+<span class="c"># simple job: run Date</span>
+<span class="c">#</span>
+
+<span class="p">{</span>
+ <span class="n">ApplicationName</span><span class="p">:</span> <span class="n">Date</span><span class="p">,</span>
+ <span class="n">ApplicationVersion</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>This job can then be run with the command:</p>
+<div class="highlight-python"><pre>$ucc run date.u</pre>
+</div>
 <p>Alternately, this job could be described using a JSDL file, date.jsdl,
 as follows:</p>
+<div class="highlight-python"><pre> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;jsdl:JobDefinition xmlns="http://www.example.org/"
+       xmlns:jsdl="http://schemas.ggf.org/jsdl/2005/11/jsdl"
+       xmlns:jsdl-posix="http://schemas.ggf.org/jsdl/2005/11/jsdl-posix"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+
+       &lt;jsdl:JobDescription&gt;
+               &lt;jsdl:JobIdentification&gt;
+                       &lt;jsdl:JobName&gt;Test Job&lt;/jsdl:JobName&gt;
+               &lt;/jsdl:JobIdentification&gt;
+
+               &lt;jsdl:Application&gt;
+                       &lt;jsdl:ApplicationName&gt;Date 1.0&lt;/jsdl:ApplicationName&gt;
+                       &lt;jsdl-posix:POSIXApplication&gt;
+                             &lt;jsdl-posix:Executable&gt;
+                                     /bin/date
+                             &lt;/jsdl-posix:Executable&gt;
+                     &lt;/jsdl-posix:POSIXApplication&gt;
+             &lt;/jsdl:Application&gt;
+       &lt;/jsdl:JobDescription&gt;
+&lt;/jsdl:JobDefinition&gt;</pre>
+</div>
 <p>This JSDL job can then be run with the command:</p>
+<div class="highlight-python"><pre>$ucc run -j date.jsdl.</pre>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="deploying-a-new-unicore-6-grid">
-<h1>Deploying a New UNICORE 6 Grid<a class="headerlink" href="#deploying-a-new-unicore-6-grid" title="Permalink to this headline">¶</a></h1>
+<h2>24.7. Deploying a New UNICORE 6 Grid<a class="headerlink" href="#deploying-a-new-unicore-6-grid" title="Permalink to this headline">¶</a></h2>
 <p>This section details how to install and setup a UNICORE 6 grid. This
 will create a new grid infrastructure separate from the existing
 deployments mentioned above.</p>
 <div class="section" id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h3>24.7.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <p>Prerequisites listed in UNICORE 6 README.txt file:</p>
 <ul class="simple">
 <li>Java 5 JRE or SDK (or later). We recommend using SUN Java 6.</li>
 </ul>
 <p>You can check what version of java is installed by running:</p>
+<div class="highlight-python"><pre>$java -version</pre>
+</div>
 <p>If the java version is too old or the command is not found, download the
-latest JRE version. After unpacking, update JAVA_HOME and PATH.</p>
+latest JRE version. After unpacking, update JAVA_HOME and PATH:</p>
+<div class="highlight-python"><pre>JAVA_HOME=&lt;JAVA_LOCATION&gt;
+PATH=&lt;JAVA_LOCATION&gt;/bin:$PATH</pre>
+</div>
 <ul class="simple">
 <li>Perl 5 (only for the classic TSI)</li>
 </ul>
@@ -753,18 +917,45 @@ configuration is needed to setup a TSI and run jobs via a queue
 management system.</p>
 </div>
 <div class="section" id="installing-the-core-server-bundle">
-<h2>Installing the Core Server Bundle<a class="headerlink" href="#installing-the-core-server-bundle" title="Permalink to this headline">¶</a></h2>
+<h3>24.7.2. Installing the Core Server Bundle<a class="headerlink" href="#installing-the-core-server-bundle" title="Permalink to this headline">¶</a></h3>
 <p>The UNICORE 6 Core Server Bundle can be downloaded from the <a class="reference external" href="http://www.unicore.eu/download/unicore6/">UNICORE
 website</a>. This bundle will
 provide you with the minimal set of UNICORE components (Gateway,
 UNICORE/X, TSI, XUUDB) needed to get a UNICORE 6 grid up and running
 quickly.</p>
+<p>From the README.txt:</p>
+<div class="highlight-python"><pre>The basic configuration and installation is as follows
+1) edit configure.properties
+2) ./configure.py &lt;unicore_user&gt; [&lt;hostname&gt;]
+3) run ./install.py to install UNICORE in the selected directory
+
+To start the configuration process, do (as non-root user)
+./configure.py &lt;login&gt; [&lt;hostname&gt;]
+where &lt;login&gt; is the Unix account that the installation shall use, and the
+optional &lt;hostname&gt; indicates which hostname shall be used. If not given,
+a hostname lookup will be performed.
+
+If you want to customize this process, edit the "configure.properties" file,
+which contains all the ports and other settings (except security settings
+such as keystore locations).
+
+To finally copy the files into the installation directory, run
+./install.py
+
+More documentation at http://www.unicore.eu/documentation.</pre>
+</div>
 </div>
 <div class="section" id="starting-stopping-the-unicore-servers">
-<h2>Starting/Stopping the UNICORE Servers<a class="headerlink" href="#starting-stopping-the-unicore-servers" title="Permalink to this headline">¶</a></h2>
+<h3>24.7.3. Starting/Stopping the UNICORE Servers<a class="headerlink" href="#starting-stopping-the-unicore-servers" title="Permalink to this headline">¶</a></h3>
 <p>The servers are started with the start.sh script and stopped with the
 stop.sh script. Both of these scripts are located under the UNICORE
-install directory.</p>
+install directory:</p>
+<div class="highlight-python"><pre>You can confirm that the UNICORE servers are running with the ps command.
+You should see three processes running: XUUDB, Gateway, and UNICOREX.
+
+$ps aux| grep unicore</pre>
+</div>
+</div>
 </div>
 </div>
 

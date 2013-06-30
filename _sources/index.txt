@@ -17,6 +17,25 @@ FG Manual
    status
    hardware
    hpc
+   scalemp
+   
+   openstack
+   openstack-essex
+   openstack-grizzly
+   eucalyptus
+   iaas
+   nimbus
+   nimbus-phantom
+   nimbus-cloudinitd
+   precip
+   rain
+   pegasus
+   vine
+   unicore
+   genesis
+   tutorials
+   papi
+   gpu
 
 ..
    fgmanual
@@ -24,8 +43,6 @@ FG Manual
    contributing
    python
    git
-   openstack
-   eucalyptus
    india
 
 

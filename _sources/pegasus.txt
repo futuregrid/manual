@@ -1,8 +1,5 @@
-Using Pegasus on FutureGrid
+Pegasus (Matts)
 ===========================
-
-About Pegasus
--------------
 
 `Pegasus WMS <http://pegasus.isi.edu>`__ is a configurable system for
 mapping and executing abstract application workflows over a wide range
@@ -42,8 +39,12 @@ system <http://research.cs.wisc.edu/condor/>`__ to provide the work of
 executing a plan created by Pegasus from the abstract workflow
 description.
 
-|Cloud site sample layouts.|
-**Figure:** Cloud Site Layouts example.
+.. figure:: images/fg-pwms-prefio.3.png
+   :scale: 70%
+   :align: right
+
+   Figure: Cloud Site Layouts example
+
 
 The figure above shows two cloud sites, typically two distinct IaaS
 clouds, with two virtual machines (VMs) running in each site. 

@@ -1,12 +1,11 @@
-Analyzing Code Performance
-==========================
-
+**********************************************************************
 PAPI
-====
+**********************************************************************
 
-|image29|
+.. figure:: https://portal.futuregrid.org/sites/default/files/u30/icl_footer.gif
+   :align: right
 
-**Summary**
+   PAPI
 
 `PAPI <http://icl.cs.utk.edu/papi/overview/index.html>`__ is an acronym
 for \ **P**\ erformance \ **A**\ pplication \ **P**\ rogramming \ **I**\ nterface.
@@ -19,25 +18,37 @@ counters found on most modern microprocessors.  For more information,
 please see the user guides listed below.  `Read more
 ... <http://icl.cs.utk.edu/projects/papi/wiki/User_Guide>`__
 
-**Availability**
+Availability
+================
 
 PAPI 4.2.0 is available on the Bravo machine and PAPI version 3.6.2.2 is
 available on the Xray machine. To load PAPI on Bravo, 'module add papi'
-as below:
+as below::
 
-    ``% module add papi         papi version 4.2.0 loaded     % env | grep papi     MANPATH=/opt/papi-4.2.0/man:/usr/share/man          LD_LIBRARY_PATH=/opt/papi-4.2.0/lib:/N/u/inca/openssl/lib:         PATH=/opt/papi-4.2.0/bin:...         PAPI_ROOT=/opt/papi-4.2.0``
+     $ module add papi
+         papi version 4.2.0 loaded
 
-To load PAPI on Xray, type 'module add xt-papi' as below:
+     $ env | grep papi
 
-    ``% module add xt-papi     % env | grep PAPI     PAPI_POST_LINK_OPTS= -L/opt/xt-tools/papi/3.6.2.2/lib -lpapi -lpfm     PAPI_VERSION=3.6.2.2     PAPI_INCLUDE_OPTS= -I/opt/xt-tools/papi/3.6.2.2/include``
+       MANPATH=/opt/papi-4.2.0/man:/usr/share/man
+       LD_LIBRARY_PATH=/opt/papi-4.2.0/lib:/N/u/inca/openssl/lib:
+       PATH=/opt/papi-4.2.0/bin:...
+       PAPI_ROOT=/opt/papi-4.2.0``
+
+To load PAPI on Xray, type 'module add xt-papi' as below::
+
+     $ module add xt-papi
+     $ env | grep PAPI
+
+       PAPI_POST_LINK_OPTS= -L/opt/xt-tools/papi/3.6.2.2/lib -lpapi -lpfm
+       PAPI_VERSION=3.6.2.2
+       PAPI_INCLUDE_OPTS= -I/opt/xt-tools/papi/3.6.2.2/include``
 
 Our plans are to make PAPI 4.2.0 available on Alamo, India, Sierra, and
 Hotel when the machines are upgraded to Redhat 6.
 
- 
-
-**PAPI User Guide**
+References
+===============
 
 -  `User Guide <http://icl.cs.utk.edu/projects/papi/wiki/User_Guide>`__
 
- 

@@ -1,24 +1,18 @@
-
-
-Genesis II
-==========
-
-|image131|
- Genesis II on FutureGrid
- User Manual
-=========================
+**********************************************************************
+Genesis II 
+**********************************************************************
 
 Author: University of Virginia
- Version: 1.0
-  Last Revision: 2011-11-02
+Version: 1.0
+Last Revision: 2011-11-02
 
- Introduction
+Introduction
 =============
 
 `GenesisII <http://www.genesis2.virginia.edu/wiki>`__ compute endpoints
 are currently deployed on three FutureGrid HPC resources: XRay, Sierra
-and India.  Additional endpoints are planned for Hotel and Alamo in the
-near future.  This tutorial explains:
+and India.  Additional endpoints are planned for Hotel and Alamo in the
+near future.  This tutorial explains:
 
 -  How to connect to these GenesisII endpoints from other grid
    middleware platforms;
@@ -37,7 +31,7 @@ GenesisII can be found `here <http://www.genesis2.virginia.edu/wiki>`__.
 -  Standards-based. GenesisII follows grid standards from the Open Grid
    Forum (OGF), W3C, and OASIS, including many from the Open Grid
    Services Architecture (OGSA) and the Web Services Resource Framework
-   (WSRF).  In particular, GenesisII adheres to parts or all of OGSA
+   (WSRF).  In particular, GenesisII adheres to parts or all of OGSA
    Basic Execution Service (BES), Resource Naming Service (RNS), OGSA
    ByteIO, WS-Security, WS-Naming, WS-Trust, and Job Submission
    Description Language (JSDL).
@@ -52,20 +46,20 @@ GenesisII can be found `here <http://www.genesis2.virginia.edu/wiki>`__.
 -  End user focused. Whenever possible GenesisII was designed to use
    concepts already familiar to users (such as hierarchical directory
    structures) and to provide easy to use commands and GUIs to simplify
-   the user's experience.  GenesisII provides a number of commands based
+   the user's experience.  GenesisII provides a number of commands based
    on familiar UNIX tools and provides GUIs for to browse the grid
    directory structure, monitor jobs, create JSDL job descriptions, etc.
 
--  Strong security mechanisms built in from the ground up.  Flexible
-   access control for all grid resources.  Support for X.509
+-  Strong security mechanisms built in from the ground up.  Flexible
+   access control for all grid resources.  Support for X.509
    certificates and username/password (based on WS-Security and OGF
-   Basic Security Profile).  Support for virtual organizations via
+   Basic Security Profile).  Support for virtual organizations via
    user-defined groups.
 
 -  Quick and simple to install and configure.
 
 -  Client and server software supported on a number of platforms
-   (Windows XP, Linux, and MacOS).  Support for various batch systems
+   (Windows XP, Linux, and MacOS).  Support for various batch systems
    such as PBS, Sun Grid Engine, etc.
 
 -  Implemented in Java to achieve platform independence.
@@ -79,15 +73,12 @@ located on Sierra, India, and Alamo. This section contains the
 information needed for other grid middleware platforms to connect to the
 GenesisII BES endpoints.
 
-Supported Data Staging
+Supported Data Staging Protocols
 ----------------------
-
-Protocols
----------
 
 Each of the GenesisII endpoints supports a number of protocols for
 staging data into and out of jobs as supported by the JSDL
-specification's Data Staging elements.  The following are the protocols
+specification's Data Staging elements.  The following are the protocols
 currently supported by the GenesisII endpoints:
 
 
@@ -112,11 +103,11 @@ Stage out:
 \*\* NOTE: ftp, scp, sftp is supported as per the HPC FSE standard and
 only for the username/password security token version.
 
-Endpoint Connection Information
--------------------------------
+Endpoint Connection Information 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 India
-~~~~~
+-------------------------------
 
 -  **Endpoint EPR**: `click
    here <https://portal.futuregrid.org/sites/default/files/india-epr-Nov-01-2011.txt>`__
@@ -131,12 +122,12 @@ India
 
 -  **Cores**: Approximately 400. Jobs submitted to HPC (i.e. batch)
    queue via PBS
-     
+     
 -  **Grid Path**:
    /bes-containers/FutureGrid/IU/pbs-long.from-daemon.india.futuregrid.org
 
 Sierra
-~~~~~~
+----------------------------------------------------------------------
 
 -  **Endpoint EPR**: `click
    here <https://portal.futuregrid.org/sites/default/files/sierra-epr-Mar-22-2012_0.txt>`__
@@ -151,7 +142,7 @@ Sierra
 
 -  **Cores**: Approximately 300. Jobs submitted to HPC (i.e. batch)
    queue via PBS
-     
+     
 -  **Grid Path**:
    /bes-containers/FutureGrid/SDSC/pbs-long.from-daemon.sierra.futuregrid.org
 
@@ -171,7 +162,7 @@ Alamo
 
 -  **Cores**: Approximately 200. Jobs submitted to HPC (i.e. batch)
    queue via PBS
-     
+     
 -  **Grid Path**: /bes-containers/FutureGrid/TACC/pbs-long.from-alamo1
 
 Hotel
@@ -186,10 +177,10 @@ Hotel
 -  **OS**: Red Hat Enterprise Linux Server release 5.8 (Tikanga)
 
 -  **Arch**: x86\_64
-     
+     
 -  **Cores**: Approximately 300. Jobs submitted to HPC (i.e. batch)
    queue via PBS
-     
+     
 -  **Grid Path**:
    /bes-containers/FutureGrid/UC/pbs-long.from-hotel1.futuregrid.org
 
@@ -205,15 +196,15 @@ Non-GenesisIIUsing a Standards-Compliant Client
 
 If you wish to use a standards-based middleware client, you may be
 able to use that client to access the GenesisII BES endpoints within
-Futuregrid.  The first step is to determine whether the grid client
+Futuregrid.  The first step is to determine whether the grid client
 software you wish to use is properly compliant with the GenesisII BES
-implementation.  GenesisII BES endpoints have been tested for
-interoperability against several grid software systems.  You will need
+implementation.  GenesisII BES endpoints have been tested for
+interoperability against several grid software systems.  You will need
 to contact the developer/vendor of your system to determine if their
-software is compatible with GenesisII.  Depending on your system works,
+software is compatible with GenesisII.  Depending on your system works,
 you will either need to contact your grid system administrator to have
 him/her add the Futuregrid GenesisII BES endpoints or you will need to
-provide a reference to the endpoints to the client tooling.  In either
+provide a reference to the endpoints to the client tooling.  In either
 case, the information you or your grid administrator needs is included
 in the section above (`Connecting to the GenesisII BES
 Endpoints <#Connecting%20To%20GenesisII%20BES%20Endpoints>`__).
@@ -224,10 +215,10 @@ Using The GenesisII Client
 
 GenesisII has a rich client package available for Windows, MacOS and
 LINUX platforms that includes UNIX-style command line tools as well as
-several graphical user interface tools.  The University of Virginia
+several graphical user interface tools.  The University of Virginia
 maintains a grid called the Cross Campus Grid (XCG) that already
 includes the FurtureGrid GenesisII BES endpoints in it - already
-configured and ready to go.  To get started, the first step is to
+configured and ready to go.  To get started, the first step is to
 download and install the GenesisII/XCG installation package.
 
 Acquiring GenesisII Client Package
@@ -243,20 +234,20 @@ Linux
 ^^^^^
 
 The Linux installer is a shell script named XCG-Installer.sh encoded
-with the entire GenesisII package inside.  Simply execute the shell
-script (./XCG-Installer in proper directory) to begin installation. 
+with the entire GenesisII package inside.  Simply execute the shell
+script (./XCG-Installer in proper directory) to begin installation. 
 Follow the steps here in answering the installation questions.
 
 
 Windows
 ^^^^^^^
 
-The Windows installer is an executable named XCG-Installer.exe. 
+The Windows installer is an executable named XCG-Installer.exe. 
 Simply run it like any other executable (e.g. double-clicking) and
 follow the steps here in answering the installation questions.
 
 Note that currently, the GenesisII software is only tested for
-Windows XP.  However, our early experience with Windows 7 (and Vista)
+Windows XP.  However, our early experience with Windows 7 (and Vista)
 indicates that the client installation will work fine as long as you
 install GenesisII in a folder that does not have special security
 meaning to Windows (such as your Documents and Settings directory or
@@ -266,8 +257,8 @@ MacOS
 ^^^^^
 
 The MacOS installer is a dmg file named XCG-Installer.dmg encoded with
-the entire GenesisII package inside.  Simply execute the dmg file (e.g.
-by double clicking) to begin installation.  Follow the steps here in
+the entire GenesisII package inside.  Simply execute the dmg file (e.g.
+by double clicking) to begin installation.  Follow the steps here in
 answering the installation questions.
 
 
@@ -277,34 +268,34 @@ Installing the GenesisII/XCG Client Package
 The installation process requires answering a few questions about
 license agreement and configuration options.
 
--  **Agree to license terms**.  The GenesisII license follows the Apache
-   License model.  For command line versions, this may require hitting
+-  **Agree to license terms**.  The GenesisII license follows the Apache
+   License model.  For command line versions, this may require hitting
    enter a number of time to scroll the license text on the screen.
--  **Select the directory for the installation**.  In most cases the
-   default is sufficient, though you can feel free to change it.  As
+-  **Select the directory for the installation**.  In most cases the
+   default is sufficient, though you can feel free to change it.  As
    noted earlier, Windows Vista and 7 users should choose a directory
-   that is not given special protection from those operating systems. 
+   that is not given special protection from those operating systems. 
    For example, the default C:\\Program Files is given special treatment
-   and blocks writes made there by the software.  This causes GenesisII
+   and blocks writes made there by the software.  This causes GenesisII
    problems because GenesisII has a patch mechanism built which needs to
-   overwrite package files in the installation directory.  For Windows
+   overwrite package files in the installation directory.  For Windows
    7/Vista, we recommend a directory within your user folder.
--  **Client v Full Container Install.**  The entire GenesisII software
-   package is included in the installer.  This includes both client-side
+-  **Client v Full Container Install.**  The entire GenesisII software
+   package is included in the installer.  This includes both client-side
    command line tools and GUIs as well as server-side programs for
-   installing grid servers.  We recommend installing the client only
-   version.  Select XCG Client Install option.  
--  **Shortcuts/Start Menu options.**  For Windows users, you can select
+   installing grid servers.  We recommend installing the client only
+   version.  Select XCG Client Install option.  
+-  **Shortcuts/Start Menu options.**  For Windows users, you can select
    whether to create a shortcut for all users (default yes), create a
    start menu item for GenesisII (default: yes) and pick a name for the
-   start menu folder (default: GenesisII).  The defaults are
-   recommended, but you can change if you like.  For Linux and MacOS,
+   start menu folder (default: GenesisII).  The defaults are
+   recommended, but you can change if you like.  For Linux and MacOS,
    you can choose whether to create shortcuts in the standard binary
-   directory (Linux: /usr/bin; MacOS: /Applications/?).  Unless you are
+   directory (Linux: /usr/bin; MacOS: /Applications/?).  Unless you are
    installing with root privileges, we recommend choosing "No" to this
    question.
 
-That's it.  Since the installer is specific to the UVA Cross Campus
+That's it.  Since the installer is specific to the UVA Cross Campus
 Grid, you not only have GenesisII successfully installed, but you have
 also configured your system to connect to the XCG.
 
@@ -365,8 +356,8 @@ information):
         "Client Cert EFC05BB7-295A-B313-E0E0-95A8CE61EB68"
      $XCG>
 
-To login, use the "login" command.  The syntax is "login
---username=<grid user name>".  After running this command, a popup
+To login, use the "login" command.  The syntax is "login
+--username=<grid user name>".  After running this command, a popup
 window will prompt you for your password
 
 .. code:: _fck_mw_lspace
@@ -382,9 +373,9 @@ window will prompt you for your password
 The output from the post-login whoami command indicates that I have 2
 new certificates - one that asserts that I am user jfk3w, and another
 that asserts that I have the permissions of the group
-"uva-idp-group.2010".  The XCG uses the uva-idp-group.2010 to set
-permissions for all approved XCG users.  Your membership in this group
-is done by XCG administrators when you account is created.  If you later
+"uva-idp-group.2010".  The XCG uses the uva-idp-group.2010 to set
+permissions for all approved XCG users.  Your membership in this group
+is done by XCG administrators when you account is created.  If you later
 create new groups or are added to other existing groups, your login will
 automatically acquire the extra credentials to assert that you are a
 member of that group (assuming the group allows you access).
@@ -401,7 +392,7 @@ Getting Help
 ------------
 
 To get help using the XCG send email to the UVA Computational Science
-and Engineering (UVACSE) group at uvacse@virginia.edu.  You can also use
+and Engineering (UVACSE) group at uvacse@virginia.edu.  You can also use
 the `GenesisII web
 site <http://www.genesis2.virginia.edu/wiki/Main/HomePage>`__ and the
 `XCG web
@@ -409,7 +400,7 @@ site <http://www.cs.virginia.edu/~xcgshare/wiki/index.php/Homepage>`__
 to look at further documentation and FAQs
 
 +-------------------------------------------------------------------------------------------------------------------+-----------+
-| Attachment                                                                                                        | Size      |
+| Endpoints                                                                                                        | Size      |
 +===================================================================================================================+===========+
 | `india-epr-Nov-01-2011.txt <https://portal.futuregrid.org/sites/default/files/india-epr-Nov-01-2011.txt>`__       | 7.8 KB    |
 +-------------------------------------------------------------------------------------------------------------------+-----------+

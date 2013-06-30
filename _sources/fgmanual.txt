@@ -304,8 +304,8 @@ and you are welcome to join the development teams by contacting
    :target: http://inca.futuregrid.org:8080/inca/HTML/rest/HPC/FutureGrid
 .. |image20| image:: https://portal.futuregrid.org/sites/default/files/u15/nimbus-usage.png
    :target: http://inca.futuregrid.org/nimbus-stats
-.. |image29| image:: https://portal.futuregrid.org/sites/default/files/u30/icl_footer.gif
-.. |image30| image:: https://portal.futuregrid.org/sites/default/files/images/otf_0.png
+
+
 .. |image31| image:: https://portal.futuregrid.org/sites/default/files/images/open_file.png
 .. |image32| image:: https://portal.futuregrid.org/sites/default/files/images/cancel_loading_resize.png
 .. |image33| image:: https://portal.futuregrid.org/sites/default/files/images/Startup.png
@@ -354,16 +354,6 @@ and you are welcome to join the development teams by contacting
 .. |image76| image:: https://portal.futuregrid.org/sites/default/files/images/process_filter.png
 .. |image77| image:: https://portal.futuregrid.org/sites/default/files/images/pref_general.png
 .. |image78| image:: https://portal.futuregrid.org/sites/default/files/images/pref_appearance.png
-.. |image79| image:: https://portal.futuregrid.org/sites/default/files/resize/u28/CUBLAS2-800x280.png
-.. |image80| image:: https://portal.futuregrid.org/sites/default/files/resize/u28/cudaarchi_threadsmode-544x300.png
-.. |image81| image:: https://portal.futuregrid.org/sites/default/files/resize/u28/cudaMemoryArchitecture-500x173.png
-.. |image82| image:: https://portal.futuregrid.org/sites/default/files/u28/cmeans_objective_function.gif
-.. |image83| image:: https://portal.futuregrid.org/sites/default/files/u28/cmeans_uij_ck.gif
-.. |image84| image:: https://portal.futuregrid.org/sites/default/files/u28/cmeans_ck.gif
-.. |image85| image:: https://portal.futuregrid.org/sites/default/files/u28/cmeans_stop_condition.gif
-.. |image86| image:: https://portal.futuregrid.org/sites/default/files/resize/u28/cmeansPerformance2-600x178.png
-.. |image87| image:: https://portal.futuregrid.org/sites/default/files/images/nimbus_logo.png
-   :target: http://www.nimbusproject.org/
 .. |image88| image:: https://portal.futuregrid.org/sites/default/files/resize/euca_fg_login-290x240.png
 .. |image89| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/Screen%20Shot%202013-03-06%20at%2012.47.32%20PM-201x200.png
    :target: http://futuregrid.github.com/rain/
@@ -411,6 +401,5 @@ and you are welcome to join the development teams by contacting
 .. |image128| image:: https://portal.futuregrid.orghttps://portal.futuregrid.org/sites/default/files/resize/u192/twister_kmeans-906x257.jpg
 .. |Cloud site sample layouts.| image:: https://pegasus.isi.edu/wms/docs/4.0/images/fg-pwms-prefio.3.png
 .. |image130| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif
-.. |image131| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif
 .. |image132| image:: https://portal.futuregrid.org/sites/default/files/u23/summerschool2012.png
    :target: https://portal.futuregrid.org/projects/241
