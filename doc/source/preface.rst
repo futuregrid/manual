@@ -34,7 +34,7 @@ IU \ `Pervasive Technology Institute <http://pti.iu.edu/>`__.
 .. _my-how-to-cite:
 
 Citation for Publications
-===================
+==========================
 
 If you use FutureGrid [1]_, we ask you to include the following
 reference in your papers.  
@@ -110,3 +110,16 @@ Gregor von Laszewski
 .. |image1| image:: https://portal.futuregrid.org/sites/default/files/u30/nsf.jpg
 .. |image2| image:: https://portal.futuregrid.org/sites/default/files/images/lilly_endowment.jpg
 .. |image3| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/iu-logo-50x64.jpeg
+
+.. conventions::
+
+Conventions
+============
+
+$
+    When showing examples of commands, the $ symbol precedes the
+    actual command. So, the other lines are the output obtained after
+    executing the command.
+
+yourportalname:
+    In some examples we refer to your portal name as *yourportalname*

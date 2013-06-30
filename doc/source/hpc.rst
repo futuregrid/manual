@@ -86,6 +86,24 @@ node.
 Managing Applications with Torque
 ---------------------------------
 
+HPC Job Queue Information:
+    .. csv-table:: 
+       :header: Resource   , Queue name   , Default Wallclock Limit   , Max Wallclock Limit   , NOTES                 
+
+	india      , batch        , 4 hours                   , 24 hours              ,                       
+		   , long         , 8 hours                   , 168 hours             ,                       
+		   , scalemp      , 8 hours                   , 168 hours             , restricted access     
+		   , b534         , none                      , none                  , restricted access     
+		   , ajyounge     , none                      , none                  , restricted access     
+	sierra     , batch        , 4 hours                   , 24 hours              ,                       
+		   , long         , 8 hours                   , 168 hours             ,                       
+	hotel      , extended     , none                      , none                  ,                       
+	alamo      , shortq       , none                      , 24 hours              ,                       
+		   , longq        , none                      , 24 hours              ,                       
+	foxtrot    , batch        , 1 hour                    , none                  , not for general use   
+
+
+
 To run any jobs on resources within FutureGrid HPC partitions (single
 core, OpenMP or MPI jobs), users must use the job scheduler and a job
 submission script. Users should NOT run jobs on the login or headnodes.
@@ -706,3 +724,94 @@ one aprun command::
 Alternatively, use the command aprun -n 1 -d 8 run.sh. To run multiple
 serial jobs, you must build a batch script to divide the number of jobs
 into groups of eight, and the
+
+Storage Service
+================
+
+.. csv-table::
+
+    Clustername (site),    Mountpoint,    Size,    Type,    Backups,    Use,    Notes,
+    Sierra (UCSD/SDSC),    /N/u/*username*,    40.6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    Home dir,    By default quotas on home directories are 50 GB and quotas on scratch directories are 100 GB.,
+    Sierra (UCSD/SDSC),    /N/scratch/*username*,    5.44TB,    ZFS  (RAID0),    No,    Scratch,  
+    Sierra (UCSD/SDSC),    /N/soft,    50GB,    ZFS  (RAID2),    Yes  (nightly incremental),    Software installs,  
+    Sierra (UCSD/SDSC),    /N/images,    6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    VM images,  
+    India  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    At the moment we do not have any quota implemented on India and we use the local/tmp  (77 GB) as scratch space.,
+    India  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
+    India  (IU),    /tmp,    77GB,    local disk,    No,    Scratch,  
+    Bravo  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    The same NFS shares in India are mounted in Bravo   (users do not log in here; jobs are submitted through India). There  are two local partitions which are used for HDFS and swift tests.,
+    Bravo  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
+    Delta  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    Same as Bravo. The NFS shares are mounted for user and group share (users do not log in directly here; jobs are submitted through India).,
+    Delta (IU),    /share/project,    14TB,    NFS (RAID5),    Yes (nightly incremental),    Shared/group folders,  
+    Hotel (UC),    /gpfs/home,    15TB,    GPFS (RAID6),    No,    Home dir,    By default quotas on home directories are 10 GB.,
+    Hotel (UC),    /gpfs/scratch,    57TB,    GPFS (RAID6),    No,    Scratch,  
+    Hotel (UC),    /gpfs/software,    7.1GB,    GPFS (RAID6),    No,    Software installs,  
+    Hotel (UC),    /gpfs/images,    7.1TB,    GPFS (RAID6),    No,    VM images,  
+    Hotel (UC),    /scratch/local,    862GB,    ext3 (local disk),    No,    Local scratch,  
+    Foxtrot (UFL),    /N/u/*username*,    16TiB,    NFS (RAID5),    No,    Home dir,    At the moment we do not have any quota implemented on Foxtrot.,
+
+
+
+Using Indiana Universities Storage Services from FutureGrid
+----------------------------------------------------------------------
+
+.. todo:: This section has not be tested recently
+  
+FutureGrid does not provide an HPSS server. However, if you have an IU
+account (available only for IU faculty, staff, and students), you can
+use the following services from india:
+
+* `SDA <http://rc.uits.iu.edu/storage/sda>`__ service
+* `HSI <http://rc.uits.iu.edu/storage/hsi>`__, the Hierarchical Storage
+Interface client is available in india. 
+
+To use the HSI client on india:
+
+-  First, activate your SDA account as descreibed in the `MDSS Service Starter
+   Kit <http://rc.uits.iu.edu/storage/mdss-starter-kit>`__ documentation.
+-  Then, from india, load the HSI module as follows:
+
+::
+
+    $ module load hsi
+    hsi version 3.5.3 loaded
+
+-  Connect to the SDA:
+
+::
+
+    $ hsi -A combo
+    Principal: your_iu_userid                                
+    [youriuid]Password:                                
+    Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewall: off [hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009]
+    ?
+
+Your principal is your IU Network ID, and your password is
+the IU passphrase.
+
+-  Enable firewall mode; otherwise, you will receive this error:
+
+   ::
+
+       put: Error -5 on transfer
+
+::
+
+    ? firewall -on
+    A: firewall mode set ON, I/O mode set to extended (parallel=off), autoscheduling currently set to OFF
+
+-  List local folder:
+
+::
+
+     ? lls
+    testfile.txt
+
+-  List the current directory in HPSS:
+
+::
+
+    ? pwd
+    pwd0: /hpss/pathtoyouriuusername
+
+-  For transferring files (*put* and *get*), search the `IU Knowledge
+   Base <http://kb.iu.edu/?search=hsi>`__.

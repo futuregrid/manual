@@ -31,4 +31,4 @@ Contributors:
 In case you need to cite Futuregrid, please do not use this manual,
 instead use the paper listed in Section :ref:`my-how-to-cite`.
 
-.. |image0| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif
+.. |image0| image:: /images/fg-logo-md.gif
