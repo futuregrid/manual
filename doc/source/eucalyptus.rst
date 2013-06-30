@@ -1,5 +1,5 @@
 ===================================================
-Eucalyptus on FutureGrid
+Eucalyptus  (Allen)
 ===================================================
 
 Eucalyptus is a software platform that implements
@@ -345,9 +345,6 @@ Status of Deployments
 At times you may ask if the Eucalyptus systems on FutureGrid are
 operational. You can find this out by visiting 
 
-a) The Outage page
-at \ `https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds <https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`__
-b) The Real Time Status monitor
-at \ `http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
-c) Our Runtime History
-at \ `http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml <http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml>`__
+a) The `Outage page <https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`__
+b) The `Real Time Status monitor <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
+c) Our `Runtime History <http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml>`__

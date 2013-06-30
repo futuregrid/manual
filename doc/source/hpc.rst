@@ -1,5 +1,5 @@
-HPC Services
-============
+HPC Services (assigned to Allen and Koji)
+==============================
 
 Accessing Systems
 -----------------
@@ -9,7 +9,7 @@ operate as High Performance Computing (HPC) systems. These
 services se batch queues, and are not virtualized, have computer nodes
 with fixed operating systems
 
-.. todo:: THIS IS WRONG.
+.. todo:: Gregor: THIS IS WRONG.
 
 and are suitable for running parallel
 applications. 
