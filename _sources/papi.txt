@@ -2,7 +2,7 @@
 PAPI
 **********************************************************************
 
-.. figure:: https://portal.futuregrid.org/sites/default/files/u30/icl_footer.gif
+.. figure:: images/icl_footer.png
    :align: right
 
    PAPI

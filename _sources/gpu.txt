@@ -416,8 +416,8 @@ References
 .. |image79| image:: images/CUBLAS2-800x280.png
 .. |image80| image:: images/cudaarchi_threadsmode-544x300.png
 .. |image81| image:: images/cudaMemoryArchitecture-500x173.png
-.. |image82| image:: images/cmeans_objective_function.gif
-.. |image83| image:: images/cmeans_uij_ck.gif
-.. |image84| image:: images/cmeans_ck.gif
-.. |image85| image:: images/cmeans_stop_condition.gif
+.. |image82| image:: images/cmeans_objective_function.png
+.. |image83| image:: images/cmeans_uij_ck.png
+.. |image84| image:: images/cmeans_ck.png
+.. |image85| image:: images/cmeans_stop_condition.png
 .. |image86| image:: images/cmeansPerformance2-600x178.png
