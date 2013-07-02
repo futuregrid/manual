@@ -39,7 +39,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    summary-executive
    introduction
 
-**PART I. ACCOUNTS AND PROJECTS**
+**PART II. ACCOUNTS AND PROJECTS**
 
 .. toctree::
    :numbered:
@@ -56,7 +56,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    status
 
-**PART III. HPC SERVICES**
+**PART IV. HPC SERVICES**
 
 .. toctree::
    :numbered:
@@ -68,7 +68,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    unicore
    genesis
    
-**PART III. IAAS/CLOUD SERVICES**
+**PART V. IAAS/CLOUD SERVICES**
 
 .. toctree::
    :numbered:
@@ -77,10 +77,11 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    iaas
    openstack
    openstack-grizzly
+   openstack-virtualbox
    nimbus
    eucalyptus
 
-**PART III. EXPERIMENT MANAGEMENT SERVICES**
+**PART VI. EXPERIMENT MANAGEMENT SERVICES**
 
 .. toctree::
    :numbered:
@@ -93,7 +94,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    pegasus
 
 
-**PART III. TUTORIALS**
+**PART VII. TUTORIALS**
 
 .. toctree::
    :numbered:
@@ -101,7 +102,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    tutorials
 
-**PART III. MISCELANEOUS SERVICES**
+**PART VIII. MISCELANEOUS SERVICES**
 
 .. toctree::
    :numbered:
