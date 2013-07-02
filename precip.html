@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3. Precip &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>4. Precip &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="4. RAIN" href="rain.html" />
-    <link rel="prev" title="2. cloudinit.d" href="nimbus-cloudinitd.html" />
+    <link rel="next" title="5. RAIN" href="rain.html" />
+    <link rel="prev" title="3. Pegasus (Matts)" href="pegasus.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -74,6 +74,8 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
 </ul>
 </li>
 </ul>
@@ -86,7 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="preface.html#conventions">1.5. Conventions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Introduction</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">2.1. Executive Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">2.2. Project and Account Application</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#services">2.3. Services</a></li>
@@ -197,16 +199,15 @@
 <li class="toctree-l2"><a class="reference internal" href="openstack.html#compatibility-between-nova-and-euca2ools-commands">2.21. Compatibility between nova and euca2ools commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">3. OpenStack Grizzly (Gregor)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#from-zero-to-get-your-first-instance-running">3.1. From zero to get your first instance running</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">3.2. Use Block Storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">3.3. Set up external access to your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">3.4. Make a snapshot of an instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">3.5. Automate some initial configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">3.7. Delete your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">3.8. How to change your password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">3. OpenStack Grizzly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">3.1. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">3.2. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">3.3. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">3.4. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">3.6. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">3.7. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.8. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus.html">4. Using Nimbus on FutureGrid</a><ul>
@@ -233,25 +234,90 @@
 </ul>
 </li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html">1. PaaS - Platform as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-map-reduce-in-futuregrid">2. Using Map/Reduce in FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#education-training-with-mapreduce">2.1. Education / Training with MapReduce</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-hadoop-as-a-batch-job-using-myhadoop">3. Running Hadoop as a Batch Job using MyHadoop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#overview">4. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-on-futuregrid">5. Hadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#what-is-myhadoop">6. What is myHadoop?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-myhadoop-on-futuregrid">7. Running myHadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#persistent-mode">8. Persistent Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#customizing-hadoop-settings">9. Customizing Hadoop&nbsp;Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-a-different-installation-of-hadoop">10. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#more-information">11. More Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-salsahadoop-on-futuregrid">12. Using SalsaHadoop on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#salsahadoop-introduction">12.1. SalsaHadoop Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-salsahadoop-on-futuregrid">12.2. Running SalsaHadoop on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-blast">13. Hadoop Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id1">13.1. Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#acknowledge">13.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#requirement">13.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-hadoop-blast-under">13.4. 1. Download Hadoop Blast under $</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#hadoop-home">13.5. HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-hadoop-blast">13.6. 2. Prepare Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-hadoop-blast">13.7. 3. Execute Hadoop-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#monitoring-hadoop">13.8. 3. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#finishing-the-map-reduce-process">13.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-wordcount">14. Hadoop WordCount</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id2">14.1. Hadoop WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id3">14.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id4">14.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-unzip-wordcount-under-hadoop-home">14.4. 1. Download and unzip WordCount under $HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute">14.5. 2. Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id5">14.6. Hadoop-WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id6">14.7. 3. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#check-the-result">14.8. 4.&nbsp;Check the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id7">14.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-twister-on-futuregrid">15. Using Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#what-is-twister">15.1. What is Twister?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#image114">15.2. |image114|</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-twister-on-futuregrid">15.3. Running Twister on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#papers-and-presentations">15.4. Papers and Presentations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#twister-blast">16. Twister Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id10">16.1. Twister Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id11">16.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id12">16.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-prepare-the">16.4. 1. Download and prepare the</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id13">16.5. Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-twister-blast-input">16.6. 2. Prepare Twister-Blast input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-twister-blast">16.7. 3. Execute Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id14">16.8. 4.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#eucalyptus-and-twister-on-futuregrid">17. Eucalyptus and Twister on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#the-futuregrid-twister-tutorial">18. The FutureGrid Twister Tutorial</a></li>
+</ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">1. Nimbus Phantom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">2. cloudinit.d</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">3. Precip</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">3.1. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api">3.2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#examples">3.3. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pegasus.html">3. Pegasus (Matts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">3.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">3.2. Using Pegasus on FutureGrid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rain.html">4. RAIN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">4.2. FutureGrid Standalone Image Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">4.3. Manual Image Customization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">4.4. RAIN Manual Pages</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">4.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api">4.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">4.3. Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pegasus.html">5. Pegasus (Matts)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">5.1. The Pegasus Run-Time Cloud Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">5.2. Using Pegasus on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">5. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">5.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">5.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">5.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">5.4. RAIN Manual Pages</a></li>
 </ul>
 </li>
 </ul>
@@ -271,48 +337,53 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="vine.html">1. ViNe (Mauritsio/Renato)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="papi.html">2. PAPI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">2.1. Availability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#references">2.2. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vine-overlay.html">2. Vine Overlay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vine-overlay.html#prerequisite">2.1. Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vine-overlay.html#deploying-a-virtual-cluster-across-foxtrot-and-sierra">2.2. Deploying a virtual cluster across foxtrot and sierra</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="gpu.html">3. Delta GPU User Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">3.1. Running MPI/GPU program on the Delta cluster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">3.2. Running programs on a single GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papi.html">3. PAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">3.1. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#references">3.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">4. Delta GPU User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">4.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">4.2. Running programs on a single GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">4.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">5.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">5.2. Training and Education</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">6. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">6.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">6.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">6.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">6.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">6.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">7. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">8. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">9. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">10. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">11. Commandline clients</a></li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">3. Precip</a><ul>
-<li><a class="reference internal" href="#installation">3.1. Installation</a></li>
-<li><a class="reference internal" href="#api">3.2. API</a></li>
-<li><a class="reference internal" href="#examples">3.3. Examples</a><ul>
-<li><a class="reference internal" href="#hello-world">3.3.1. Hello World</a></li>
-<li><a class="reference internal" href="#resources-from-mulitple-infrastructures">3.3.2. Resources from mulitple infrastructures</a></li>
-<li><a class="reference internal" href="#setting-up-a-condor-pool-and-run-a-pegasus-workflow">3.3.3. Setting up a Condor pool and run a Pegasus workflow</a></li>
+<li><a class="reference internal" href="#">4. Precip</a><ul>
+<li><a class="reference internal" href="#installation">4.1. Installation</a></li>
+<li><a class="reference internal" href="#api">4.2. API</a></li>
+<li><a class="reference internal" href="#examples">4.3. Examples</a><ul>
+<li><a class="reference internal" href="#hello-world">4.3.1. Hello World</a></li>
+<li><a class="reference internal" href="#resources-from-mulitple-infrastructures">4.3.2. Resources from mulitple infrastructures</a></li>
+<li><a class="reference internal" href="#setting-up-a-condor-pool-and-run-a-pegasus-workflow">4.3.3. Setting up a Condor pool and run a Pegasus workflow</a></li>
 </ul>
 </li>
 </ul>
@@ -323,10 +394,10 @@
             
             
               
-  <li><a href="nimbus-cloudinitd.html"
-         title="previous chapter">&laquo; 2. cloudinit.d</a></li>
+  <li><a href="pegasus.html"
+         title="previous chapter">&laquo; 3. Pegasus (Matts)</a></li>
   <li><a href="rain.html"
-         title="next chapter">4. RAIN &raquo;</a></li>
+         title="next chapter">5. RAIN &raquo;</a></li>
             
             
               <li>
@@ -351,7 +422,7 @@
 <div class="container">
   
   <div class="section" id="precip">
-<h1>3. Precip<a class="headerlink" href="#precip" title="Permalink to this headline">¶</a></h1>
+<h1>4. Precip<a class="headerlink" href="#precip" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
@@ -390,7 +461,7 @@ security group.</p>
 improvements, please contact
 <a class="reference external" href="mailto:pegasus-support&#37;&#52;&#48;isi&#46;edu">pegasus-support<span>&#64;</span>isi<span>&#46;</span>edu</a></p>
 <div class="section" id="installation">
-<h2><a class="toc-backref" href="#id1">3.1. Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">4.1. Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>If you want to use the India or Sierra FutureGrid resources to manage
 your experiment, Precip is available on the interactive logins nodes via
 modules: module load precip/0.1</p>
@@ -400,7 +471,7 @@ are available at:
 <a class="reference external" href="http://pegasus.isi.edu/static/precip/software/">http://pegasus.isi.edu/static/precip/software/</a></p>
 </div>
 <div class="section" id="api">
-<h2><a class="toc-backref" href="#id2">3.2. API</a><a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">4.2. API</a><a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><strong>provision(image_id, instance_type=&#8217;m1.small&#8217;, count=1, tags=None)</strong></dt>
 <dd><p class="first">Provision a new instance. Note that this method starts the
@@ -576,9 +647,9 @@ systems:</p>
 </div>
 </div>
 <div class="section" id="examples">
-<h2><a class="toc-backref" href="#id3">3.3. Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">4.3. Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="hello-world">
-<h3><a class="toc-backref" href="#id4">3.3.1. Hello World</a><a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">4.3.1. Hello World</a><a class="headerlink" href="#hello-world" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/python</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -636,7 +707,7 @@ systems:</p>
 </div>
 </div>
 <div class="section" id="resources-from-mulitple-infrastructures">
-<h3><a class="toc-backref" href="#id5">3.3.2. Resources from mulitple infrastructures</a><a class="headerlink" href="#resources-from-mulitple-infrastructures" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">4.3.2. Resources from mulitple infrastructures</a><a class="headerlink" href="#resources-from-mulitple-infrastructures" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/python</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
@@ -701,7 +772,7 @@ systems:</p>
 </div>
 </div>
 <div class="section" id="setting-up-a-condor-pool-and-run-a-pegasus-workflow">
-<h3><a class="toc-backref" href="#id6">3.3.3. Setting up a Condor pool and run a Pegasus workflow</a><a class="headerlink" href="#setting-up-a-condor-pool-and-run-a-pegasus-workflow" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">4.3.3. Setting up a Condor pool and run a Pegasus workflow</a><a class="headerlink" href="#setting-up-a-condor-pool-and-run-a-pegasus-workflow" title="Permalink to this headline">¶</a></h3>
 <p>This is a more complex example in which a small Condor pool is set up
 and then a Pegasus workflow is run and benchmarked. The Precip script is
 similar to what we have seen before, but it has two groups of instances,

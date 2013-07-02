@@ -1,52 +1,34 @@
-OpenStack Grizzly (Gregor)
+OpenStack Grizzly
 ===================
 
-
-This manual page explains how to use OpenStack Grizzly on Sierra. It
-explains how to login, create an instance of an image, upload/download
-images, automate some initial setting and make a snapshot of instance.
-
-From zero to get your first instance running
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#. Login to sierra::
+Currently we have OpenSTack Grizzly installed on Sierra. To use it you
+need to first log into sierra and prepare your openstack credentials::
 
        $ ssh username@sierra.futuregrid.org
 
-#. Create your novarc file with cloudmesh::
+Next you need to create your novarc file with our cloudmesh tools::
 
        $ module load cloudmesh
        $ cm-manage config sierra-openstack-grizzly
 
-   The cm-manage command will create a nova rc file at the default
-   location ~/.futuregrid/novarc To find out more about novarc files,
-   please consult with the OpenStack manuals.
-    
+The cm-manage command will create a nova rc file at the default
+location::
 
-#. Set your OpenStack environment valiables by reading your novarc
-   file, and load novaclient::
+    ~/.futuregrid/novarc 
+
+To activate your your OpenStack environment and load the openstack
+tools you will need to source the novarc file and load the novaclient module::
 
        $ source ~/.futuregrid/novarc
        $ module load novaclient
 
-#. Check if your nova client works by printing the image list and the
-   flavor-list. If you can see the list, your account is fine and you
-   are good to go to the next step. If you have a problem at this point,
-   your account may have a problem. So please submit a support ticket on
-   `our ticket system <https://portal.futuregrid.org/help>`__. Our staff
-   will help you::
-
-       $ nova image-list
-       +--------------------------------------+-------------------------+--------+--------+
-       | ID                                   | Name                    | Status | Server |
-       +--------------------------------------+-------------------------+--------+--------+
-       | 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18    | ACTIVE |        |
-       | 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04 | ACTIVE |        |
-       +--------------------------------------+-------------------------+--------+--------+   
-
-   ::
+To check if your nova client works we use a simple command to list the
+flavors::
 
        $ nova flavor-list
+
+Everything is fine, if you se an output similar to::
+
        +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
        | ID | Name      | Memory_MB | Disk | Ephemeral | Swap | VCPUs | RXTX_Factor | Is_Public | extra_specs |
        +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
@@ -57,9 +39,31 @@ From zero to get your first instance running
        | 5  | m1.xlarge | 16384     | 160  | 0         |      | 8     | 1.0         | True      | {}          |
        +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
 
-#. Create your ssh key. (\*$USER is your username on a Linux
-   machine. So you can simply type your username instead of $USER, if
-   you like.)::
+If not your environment may not be set up correctly. Make sure that
+you follow the steps in this section and the account management
+section carefully.
+
+After you got the flavor list, you can list the current set of
+uploaded images with the nova image-list command::
+
+       $ nova image-list
+
+You will see an output similar to::
+
+       +--------------------------------------+-------------------------+--------+--------+
+       | ID                                   | Name                    | Status | Server |
+       +--------------------------------------+-------------------------+--------+--------+
+       | 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18    | ACTIVE |        |
+       | 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04 | ACTIVE |        |
+       +--------------------------------------+-------------------------+--------+--------+   
+
+.. sidebar :: Hint
+
+   $USER is your username on sierra machine. 
+
+To start a virtual machine you must first upload a key to the
+cloud. This can be easily done in the following way::
+
 
        $ nova keypair-add $USER-key > ~/.ssh/$USER-key
        $ chmod 600 ~/.ssh/$USER-key
@@ -71,22 +75,25 @@ From zero to get your first instance running
        +---------------+-------------------------------------------------+
        Where USER is your ligin name on sierra
 
-   Note: Make sure you are not already having the key wiith that name in
-   order to avoid overwriting it. Thus be extra careful to execute this
-   step twice.
+Make sure you are not already having the key with that name in order
+to avoid overwriting it in the cloud. Thus be extra careful to execute
+this step twice. Often it is the case that you already have a key in
+your ~/.ssh directory that you may want to use. For example if you use
+rsa, your key will be located at ~/.ssh/id_rsa.pub. 
 
-   Often it is the case that you already have a key in your ~/.ssh
-   directory that you may want to use. For example if you use rsa, your
-   key will be located at ~/.ssh/id\_rsa.pub. If you like to find out
-   more about normal Linux use key management, please consult with a ssh
-   manual.
     
-
-#. Open ICMP and port 22 on default group::
+In the next step we need to make sure that the security groups allow
+us to log into the VMs. To do so we create the following policies as
+part of our default security policies. Not that whne you are in a
+group project this may already have been done for you by another group
+member. We will add ICMP and port 22 on default group::
 
        $ nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
        $ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
        $ nova secgroup-list-rules default
+
+You will see the following output if everything went correctly::
+
        +-------------+-----------+---------+-----------+--------------+
        | IP Protocol | From Port | To Port | IP Range  | Source Group |
        +-------------+-----------+---------+-----------+--------------+
@@ -94,18 +101,21 @@ From zero to get your first instance running
        | tcp         | 22        | 22      | 0.0.0.0/0 |              |
        +-------------+-----------+---------+-----------+--------------+
 
-#. Boot an instance::
+To boot an instance you simply can now use the command::
 
        $ nova boot --flavor m1.small \
                    --image "futuregrid/ubuntu-12.04" \
                    --key_name $USER-key $USER-001
+
+If everything went correctly, you will see an output similar to::
+
        +-----------------------------+--------------------------------------+
        | Property                    | Value                                |
        +-----------------------------+--------------------------------------+
        | status                      | BUILD                                |
        | updated                     | 2013-05-15T20:32:03Z                 |
        | OS-EXT-STS:task_state       | scheduling                           |
-       | key_name                    | mystackkey                           |
+       | key_name                    | <USER>-key                           |
        | image                       | futuregrid/ubuntu-12.04              |
        | hostId                      |                                      |
        | OS-EXT-STS:vm_state         | building                             |
@@ -127,40 +137,43 @@ From zero to get your first instance running
        | config_drive                |                                      |
        +-----------------------------+--------------------------------------+
 
-#. Check if your instance is active. If the status changed from BUILD
-   to ACTIVE, you should be able to login::
+To chheck if your instance is active you can repeatedly issue the list
+command and monitor the Status field in the table::
 
        $ nova list
+
        +--------------------------------------+---------------+--------+---------------------+
        | ID                                   | Name          | Status | Networks            |
        +--------------------------------------+---------------+--------+---------------------+
-       | e15ad5b6-c3f0-4c07-996c-3bbe709a63b7 | <USER>-001 | ACTIVE | private=10.35.23.18 |
+       | e15ad5b6-c3f0-4c07-996c-3bbe709a63b7 | <USER>-001    | ACTIVE | private=10.35.23.18 |
        +--------------------------------------+---------------+--------+---------------------+
 
+Once it hase changed from for example BUILD to ACTIVE, you can log
+in. Pleas use the IP address provided under networks. Note that the
+first address is private and can not be reached from outside sierra.
+
        $ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18
-       ubuntu@<USER>-001:~$
 
-#. If you see this error, you need to delete the offending host key
-   from .ssh/known\_hosts::
+If you see a warning similar to::
 
-       Add correct host key in /home/username/.ssh/known_hosts to get rid of this message.
-       Offending key in /home/peter/.ssh/known_hosts:3
+       Add correct host key in /home/<USER>/.ssh/known_hosts to get rid of this message.
+       Offending key in /home/<$USER>/.ssh/known_hosts:3
 
-#. But you can simply disable ssh host key checking by adding these
-   lines on .ssh/config . The .ssh/config doesn't exist as default so
-   create the file and put these lines::
-
-       Host 10.35.23.* 198.202.120.*
-        StrictHostKeyChecking no
-        UserKnownHostsFile=/dev/null
+you need to delete the offending host key from .ssh/known_hosts.
 
 Use Block Storage
 ~~~~~~~~~~~~~~~~~
 
-#. You can create a block storage(which is similar to Amazon EBS).
-   Creating a 5G volume is like this::
+You can create a block storage with the volume-create command. A
+valume is useful as you can store data in it and associate that
+particulare volumen to a VM. Hence, if you delete the VM, your volume
+and the data on t is still there to be reused. To create one 5G volume
+you can do ::
 
        $ nova volume-create 5
+
+To list the volumes you can use::
+
        $ nova volume-list
        +--------------------------------------+-----------+--------------+------+-------------+-------------+
        | ID                                   | Status    | Display Name | Size | Volume Type | Attached to |
@@ -168,12 +181,19 @@ Use Block Storage
        | 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx | available | None         |  5   | None        |             |
        +--------------------------------------+-----------+--------------+------+-------------+-------------+
 
-#. Attach the volume to your instance as "/dev/vdb" with this:::
+To attach the volume to your instance you can use the volume-attach
+subcommand. Let us assume we like to attache it as "/dev/vdb", than
+you can use the command:::
 
        $ nova volume-attach $USER-001 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx "/dev/vdb"
 
-#. Login to your instance, make filesystem and mount it on some
-   directory. Here's an example, mounting on /mnt::
+.. sidebar:: Hint
+
+   Note thate $USER-001 refers to the name of the VM that we have
+   created earlier with the boot command.
+
+Next, let us login to your instance, make filesystem and mount it.
+Here's an example, mounting on /mnt::
 
        $ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18
        ubuntu@<USER>-001:~$ sudo su -
@@ -190,122 +210,135 @@ Use Block Storage
        none            100M     0  100M   0% /run/user
        /dev/vdb        4.8G   23M  4.2G   1% /mnt
 
-#. When you want to detach it, unmount /mnt first, go back to sierra's
-   login node and execute volume-detach::
+When you want to detach it, unmount /mnt first, go back to sierra's
+login node and execute volume-detach::
 
        root@<USER>-001:~# umount /mnt
        root@<USER>-001:~# exit
        ubuntu@<USER>-001:~$ exit
+       
        $ nova volume-detach $USER-001 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Set up external access to your instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For making it possible to access your instance from external, you need
-to create an external IP address and add it on your instance.
-
-#. Create an external ip address with::
+So far we only used the internal IP address, but you can also assign
+an external address, so that you can log in from other machines than
+sierra. Firts, Create an external ip address with::
 
        $ nova floating-ip-create
+
        +-----------------+-------------+----------+------+
        | Ip              | Instance Id | Fixed Ip | Pool |
        +-----------------+-------------+----------+------+
        | 198.202.120.193 | None        | None     | nova |
        +-----------------+-------------+----------+------+
 
-#. And then, put it on your instance with::
+Next, put it on your instance with::
 
        $ nova add-floating-ip $USER-001 198.202.120.193
        $ nova floating-ip-list
+
        +-----------------+--------------------------------------+-------------+------+
        | Ip              | Instance Id                          | Fixed Ip    | Pool |
        +-----------------+--------------------------------------+-------------+------+
        | 198.202.120.193 | c0bd849a-221a-4e53-bf7b-7097541a9bcc | 10.35.23.20 | nova |
        +-----------------+--------------------------------------+-------------+------+
 
-   Now you should be able to ping and ssh from external.
+Now you should be able to ping and ssh from external and can use the
+given ip address.
 
 Make a snapshot of an instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Note: Please use your login name as a prefix followed by a /. If you
-create an image for a particular project, please use the projectname. In
-many cases the projectname is preferable in case multiple users share
-the same images
+To allow snapshots, you must use the following convention: 
 
-#. After you have worked on your instance, you will want to create a
-   snapshot of your instance. You can do it with::
+* use your project number fg### in the prefix of your snapshot name followed
+  by a /
 
-       $ nova image-create $USER-001 $USER/custom-ubuntu-01
+* If needed you can also add your username as a prefix in addition to
+  the project number.
+
+Let us assume your project is fg101 and you want to save the image
+with by reminding you it was a my-ubuntu-01 image you want to
+keey. Than you can issue on sierra the  following command::
+
+       $ nova image-create $USER-001 fg101/$USER/my-ubuntu-01
        $ nova image-list
        +--------------------------------------+----------------------------+--------+--------------------------------------+
        | ID                                   | Name                       | Status | Server                               |
        +--------------------------------------+----------------------------+--------+--------------------------------------+
        | 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18       | ACTIVE |                                      |
        | 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04    | ACTIVE |                                      |
-       | f43375b4-44d3-4350-a9a8-a73f35589344 | <USER>/custom-ubuntu-01 | ACTIVE | c0bd849a-221a-4e53-bf7b-7097541a9bcc |
+       | f43375b4-44d3-4350-a9a8-a73f35589344 | fg101/<USER>/my-ubuntu-01  | ACTIVE | c0bd849a-221a-4e53-bf7b-7097541a9bcc |
        +--------------------------------------+----------------------------+--------+--------------------------------------+
 
-#. If you want to download your customized image, you can do it with
-   this::
+If you want to download your customized image, you can do it with this::
 
-       $ glance image-download --file "custome-ubuntu-01.img" "$USER/custom-ubuntu-01"
-               
+       $ glance image-download --file "my-ubuntu-01.img" "fg101/$USER/custom-ubuntu-01"
+
+.. sidebar:: Hint
+
+   Please note that images not following this convention will be deleted.
 
 Automate some initial configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You may want to install some packages into the iamge, enable root, and
-add ssh authorized\_keys. With the OpenStack cloud-init such steps can
+add ssh authorized_keys. With the OpenStack cloud-init such steps can
 be simplified.
 
-#. Create a file(mycloudinit.txt) containing these lines::
+Create a file(mycloudinit.txt) containing these lines::
 
-       #cloud-config
+       # cloud-config
 
        # Enable root login.
        disable_root: false
+
        # Install packages.
        packages:
        - apt-show-versions
        - wget
        - build-essential
+
        # Add some more ssh public keys.
        ssh_authorized_keys:
        - ssh-rsa AAAfkdfeiekf....fES7060rb myuser@s1
        - ssh-rsa AAAAAAkgeig78...skdfjeigi myuser@myhost
 
-#. Boot your instance with --user-data mycloudinit.txt like this::
+Now boot your instance with --user-data mycloudinit.txt like this::
 
        $ nova boot --flavor m1.small \
                    --image "futuregrid/ubuntu-12.04" \
                    --key_name $USER-key \
                    --user-data mycloudinit.txt $USER-002
 
-   You should be able to login to <USER>-002 as root, and the added
-   packages are installed.
+You should be able to login to <USER>-002 as root, and the added packages are installed.
 
 Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Several versions of Ubuntu cloud images are available on
-   `http://cloud-images.ubuntu.com/ <http://cloud-images.ubuntu.com/>`__
-   . Choose the version you want and download the file name with
-   \*\*\*\*\*\*-cloudimg-amd64-disk1.img. For example, downloading
-   Ubuntu-13.04(Raring Ringtail)is like this::
+.. todo:: In future we will just host these images so we do not
+   duplicate them on the server
+
+Several versions of Ubuntu cloud images are available at
+`http://cloud-images.ubuntu.com/
+<http://cloud-images.ubuntu.com/>`__. Choose the version you want and
+download the file name with \*\*\*\*\*\*-cloudimg-amd64-disk1.img. For
+example, downloading Ubuntu-13.04(Raring Ringtail)is like this::
 
        $ wget http://cloud-images.ubuntu.com/raring/current/raring-server-cloudimg-amd...
 
-#. Upload it with glance client like this::
+You can upload the image with the glance client like this::
 
        $ glance image-create \
-              --name $USER/myimages/ubuntu-13.04 \
+              --name fg101/$USER/myimages/ubuntu-13.04 \
               --disk-format qcow2 \
               --container-format bare \
               --file raring-server-cloudimg-amd64-disk1.img
 
-   Now your new image is listed on ``nova image-list``\ and will be
-   available when the status become "ACTIVE".
+Now your new image is listed on ``nova image-list``\ and will be
+available when the status become "ACTIVE".
 
 Delete your instance
 ~~~~~~~~~~~~~~~~~~~~
@@ -351,12 +384,12 @@ how you can access them.
        nova x509-get-root-cert
        ls -la
 
-#. Create EC2\_ACCESS\_KEY and EC2\_SECRET\_KEY::
+#. Create EC2_ACCESS_KEY and EC2_SECRET_KEY::
 
        keystone ec2-credentials-create
 
-#. Create eucarc file and put your EC2\_ACCESS\_KEY and
-   EC2\_SECRET\_KEY like this::
+#. Create eucarc file and put your EC2_ACCESS_KEY and
+   EC2_SECRET_KEY like this::
 
        export EC2_ACCESS_KEY="Your EC2_ACCESS_KEY"
        export EC2_SECRET_KEY="Your EC2_SECRET_KEY"

@@ -9,11 +9,12 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
 .. sidebar:: Authors
 
-   Gregor von Laszewski
+   Gregor von Laszewski,
    Fugang Wang,
    Javier Diaz, 
-   Koji Tanaka
-   Alan Streib
+   Koji Tanaka,
+   Alan Streib,
+   Renato Figurero
    Archit Kulshrestha, 
    Jonathan Bolte,
    Gregory Pike
@@ -69,7 +70,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    scalemp
    unicore
    genesis
-   
+
 **PART V. IAAS/CLOUD SERVICES**
 
 .. toctree::
@@ -83,6 +84,14 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    nimbus
    eucalyptus
 
+**PART V. PAAS CLOUD SERVICES**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   mapreduce
+
 **PART VI. EXPERIMENT MANAGEMENT SERVICES**
 
 .. toctree::
@@ -91,9 +100,9 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    nimbus-phantom
    nimbus-cloudinitd
+   pegasus
    precip
    rain
-   pegasus
 
 
 **PART VII. TUTORIALS**
@@ -111,15 +120,13 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    vine
+   vine-overlay
    papi
    gpu
 
    fgmanual
 ..
-   contributing
    python
-   git
-   india
 
 
 .. |image0| image:: /images/fg-logo-md.png

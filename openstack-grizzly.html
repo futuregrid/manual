@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>3. OpenStack Grizzly (Gregor) &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>3. OpenStack Grizzly &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -74,6 +74,8 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
 </ul>
 </li>
 </ul>
@@ -86,7 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="preface.html#conventions">1.5. Conventions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Introduction</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">2.1. Executive Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">2.2. Project and Account Application</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#services">2.3. Services</a></li>
@@ -197,16 +199,15 @@
 <li class="toctree-l2"><a class="reference internal" href="openstack.html#compatibility-between-nova-and-euca2ools-commands">2.21. Compatibility between nova and euca2ools commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">3. OpenStack Grizzly (Gregor)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#from-zero-to-get-your-first-instance-running">3.1. From zero to get your first instance running</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#use-block-storage">3.2. Use Block Storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#set-up-external-access-to-your-instance">3.3. Set up external access to your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-snapshot-of-an-instance">3.4. Make a snapshot of an instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#automate-some-initial-configuration">3.5. Automate some initial configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#delete-your-instance">3.7. Delete your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-change-your-password">3.8. How to change your password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. OpenStack Grizzly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#use-block-storage">3.1. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-external-access-to-your-instance">3.2. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-snapshot-of-an-instance">3.3. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automate-some-initial-configuration">3.4. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-your-instance">3.6. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-change-your-password">3.7. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.8. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus.html">4. Using Nimbus on FutureGrid</a><ul>
@@ -234,24 +235,89 @@
 </li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html">1. PaaS - Platform as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-map-reduce-in-futuregrid">2. Using Map/Reduce in FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#education-training-with-mapreduce">2.1. Education / Training with MapReduce</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-hadoop-as-a-batch-job-using-myhadoop">3. Running Hadoop as a Batch Job using MyHadoop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#overview">4. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-on-futuregrid">5. Hadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#what-is-myhadoop">6. What is myHadoop?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-myhadoop-on-futuregrid">7. Running myHadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#persistent-mode">8. Persistent Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#customizing-hadoop-settings">9. Customizing Hadoop&nbsp;Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-a-different-installation-of-hadoop">10. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#more-information">11. More Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-salsahadoop-on-futuregrid">12. Using SalsaHadoop on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#salsahadoop-introduction">12.1. SalsaHadoop Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-salsahadoop-on-futuregrid">12.2. Running SalsaHadoop on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-blast">13. Hadoop Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id1">13.1. Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#acknowledge">13.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#requirement">13.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-hadoop-blast-under">13.4. 1. Download Hadoop Blast under $</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#hadoop-home">13.5. HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-hadoop-blast">13.6. 2. Prepare Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-hadoop-blast">13.7. 3. Execute Hadoop-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#monitoring-hadoop">13.8. 3. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#finishing-the-map-reduce-process">13.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-wordcount">14. Hadoop WordCount</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id2">14.1. Hadoop WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id3">14.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id4">14.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-unzip-wordcount-under-hadoop-home">14.4. 1. Download and unzip WordCount under $HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute">14.5. 2. Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id5">14.6. Hadoop-WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id6">14.7. 3. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#check-the-result">14.8. 4.&nbsp;Check the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id7">14.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-twister-on-futuregrid">15. Using Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#what-is-twister">15.1. What is Twister?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#image114">15.2. |image114|</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-twister-on-futuregrid">15.3. Running Twister on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#papers-and-presentations">15.4. Papers and Presentations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#twister-blast">16. Twister Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id10">16.1. Twister Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id11">16.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id12">16.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-prepare-the">16.4. 1. Download and prepare the</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id13">16.5. Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-twister-blast-input">16.6. 2. Prepare Twister-Blast input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-twister-blast">16.7. 3. Execute Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id14">16.8. 4.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#eucalyptus-and-twister-on-futuregrid">17. Eucalyptus and Twister on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#the-futuregrid-twister-tutorial">18. The FutureGrid Twister Tutorial</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">1. Nimbus Phantom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">2. cloudinit.d</a></li>
-<li class="toctree-l1"><a class="reference internal" href="precip.html">3. Precip</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">3.1. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#api">3.2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">3.3. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pegasus.html">3. Pegasus (Matts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">3.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">3.2. Using Pegasus on FutureGrid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rain.html">4. RAIN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">4.2. FutureGrid Standalone Image Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">4.3. Manual Image Customization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">4.4. RAIN Manual Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="precip.html">4. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">4.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#api">4.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">4.3. Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pegasus.html">5. Pegasus (Matts)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">5.1. The Pegasus Run-Time Cloud Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">5.2. Using Pegasus on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">5. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">5.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">5.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">5.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">5.4. RAIN Manual Pages</a></li>
 </ul>
 </li>
 </ul>
@@ -271,51 +337,55 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="vine.html">1. ViNe (Mauritsio/Renato)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="papi.html">2. PAPI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">2.1. Availability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#references">2.2. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vine-overlay.html">2. Vine Overlay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vine-overlay.html#prerequisite">2.1. Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vine-overlay.html#deploying-a-virtual-cluster-across-foxtrot-and-sierra">2.2. Deploying a virtual cluster across foxtrot and sierra</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="gpu.html">3. Delta GPU User Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">3.1. Running MPI/GPU program on the Delta cluster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">3.2. Running programs on a single GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papi.html">3. PAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">3.1. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#references">3.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">4. Delta GPU User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">4.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">4.2. Running programs on a single GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">4.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">5.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">5.2. Training and Education</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">6. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">6.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">6.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">6.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">6.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">6.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">7. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">8. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">9. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">10. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">11. Commandline clients</a></li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">3. OpenStack Grizzly (Gregor)</a><ul>
-<li><a class="reference internal" href="#from-zero-to-get-your-first-instance-running">3.1. From zero to get your first instance running</a></li>
-<li><a class="reference internal" href="#use-block-storage">3.2. Use Block Storage</a></li>
-<li><a class="reference internal" href="#set-up-external-access-to-your-instance">3.3. Set up external access to your instance</a></li>
-<li><a class="reference internal" href="#make-a-snapshot-of-an-instance">3.4. Make a snapshot of an instance</a></li>
-<li><a class="reference internal" href="#automate-some-initial-configuration">3.5. Automate some initial configuration</a></li>
-<li><a class="reference internal" href="#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
-<li><a class="reference internal" href="#delete-your-instance">3.7. Delete your instance</a></li>
-<li><a class="reference internal" href="#how-to-change-your-password">3.8. How to change your password</a></li>
-<li><a class="reference internal" href="#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li><a class="reference internal" href="#">3. OpenStack Grizzly</a><ul>
+<li><a class="reference internal" href="#use-block-storage">3.1. Use Block Storage</a></li>
+<li><a class="reference internal" href="#set-up-external-access-to-your-instance">3.2. Set up external access to your instance</a></li>
+<li><a class="reference internal" href="#make-a-snapshot-of-an-instance">3.3. Make a snapshot of an instance</a></li>
+<li><a class="reference internal" href="#automate-some-initial-configuration">3.4. Automate some initial configuration</a></li>
+<li><a class="reference internal" href="#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li><a class="reference internal" href="#delete-your-instance">3.6. Delete your instance</a></li>
+<li><a class="reference internal" href="#how-to-change-your-password">3.7. How to change your password</a></li>
+<li><a class="reference internal" href="#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.8. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 </ul>
 </li>
 </ul>
@@ -351,48 +421,31 @@
 
 <div class="container">
   
-  <div class="section" id="openstack-grizzly-gregor">
-<h1>3. OpenStack Grizzly (Gregor)<a class="headerlink" href="#openstack-grizzly-gregor" title="Permalink to this headline">¶</a></h1>
-<p>This manual page explains how to use OpenStack Grizzly on Sierra. It
-explains how to login, create an instance of an image, upload/download
-images, automate some initial setting and make a snapshot of instance.</p>
-<div class="section" id="from-zero-to-get-your-first-instance-running">
-<h2>3.1. From zero to get your first instance running<a class="headerlink" href="#from-zero-to-get-your-first-instance-running" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Login to sierra:</p>
+  <div class="section" id="openstack-grizzly">
+<h1>3. OpenStack Grizzly<a class="headerlink" href="#openstack-grizzly" title="Permalink to this headline">¶</a></h1>
+<p>Currently we have OpenSTack Grizzly installed on Sierra. To use it you
+need to first log into sierra and prepare your openstack credentials:</p>
 <div class="highlight-python"><pre>$ ssh username@sierra.futuregrid.org</pre>
 </div>
-</li>
-<li><p class="first">Create your novarc file with cloudmesh:</p>
+<p>Next you need to create your novarc file with our cloudmesh tools:</p>
 <div class="highlight-python"><pre>$ module load cloudmesh
 $ cm-manage config sierra-openstack-grizzly</pre>
 </div>
 <p>The cm-manage command will create a nova rc file at the default
-location ~/.futuregrid/novarc To find out more about novarc files,
-please consult with the OpenStack manuals.</p>
-</li>
-<li><p class="first">Set your OpenStack environment valiables by reading your novarc
-file, and load novaclient:</p>
+location:</p>
+<div class="highlight-python"><pre>~/.futuregrid/novarc</pre>
+</div>
+<p>To activate your your OpenStack environment and load the openstack
+tools you will need to source the novarc file and load the novaclient module:</p>
 <div class="highlight-python"><pre>$ source ~/.futuregrid/novarc
 $ module load novaclient</pre>
 </div>
-</li>
-<li><p class="first">Check if your nova client works by printing the image list and the
-flavor-list. If you can see the list, your account is fine and you
-are good to go to the next step. If you have a problem at this point,
-your account may have a problem. So please submit a support ticket on
-<a class="reference external" href="https://portal.futuregrid.org/help">our ticket system</a>. Our staff
-will help you:</p>
-<div class="highlight-python"><pre>$ nova image-list
-+--------------------------------------+-------------------------+--------+--------+
-| ID                                   | Name                    | Status | Server |
-+--------------------------------------+-------------------------+--------+--------+
-| 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18    | ACTIVE |        |
-| 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04 | ACTIVE |        |
-+--------------------------------------+-------------------------+--------+--------+</pre>
+<p>To check if your nova client works we use a simple command to list the
+flavors:</p>
+<div class="highlight-python"><pre>$ nova flavor-list</pre>
 </div>
-<div class="highlight-python"><pre>$ nova flavor-list
-+----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
+<p>Everything is fine, if you se an output similar to:</p>
+<div class="highlight-python"><pre>+----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
 | ID | Name      | Memory_MB | Disk | Ephemeral | Swap | VCPUs | RXTX_Factor | Is_Public | extra_specs |
 +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
 | 1  | m1.tiny   | 512       | 0    | 0         |      | 1     | 1.0         | True      | {}          |
@@ -402,10 +455,27 @@ will help you:</p>
 | 5  | m1.xlarge | 16384     | 160  | 0         |      | 8     | 1.0         | True      | {}          |
 +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+</pre>
 </div>
-</li>
-<li><p class="first">Create your ssh key. (*$USER is your username on a Linux
-machine. So you can simply type your username instead of $USER, if
-you like.):</p>
+<p>If not your environment may not be set up correctly. Make sure that
+you follow the steps in this section and the account management
+section carefully.</p>
+<p>After you got the flavor list, you can list the current set of
+uploaded images with the nova image-list command:</p>
+<div class="highlight-python"><pre>$ nova image-list</pre>
+</div>
+<p>You will see an output similar to:</p>
+<div class="highlight-python"><pre>+--------------------------------------+-------------------------+--------+--------+
+| ID                                   | Name                    | Status | Server |
++--------------------------------------+-------------------------+--------+--------+
+| 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18    | ACTIVE |        |
+| 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04 | ACTIVE |        |
++--------------------------------------+-------------------------+--------+--------+</pre>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Hint</p>
+<p class="last">$USER is your username on sierra machine.</p>
+</div>
+<p>To start a virtual machine you must first upload a key to the
+cloud. This can be easily done in the following way:</p>
 <div class="highlight-python"><pre>$ nova keypair-add $USER-key &gt; ~/.ssh/$USER-key
 $ chmod 600 ~/.ssh/$USER-key
 $ nova keypair-list
@@ -416,38 +486,41 @@ $ nova keypair-list
 +---------------+-------------------------------------------------+
 Where USER is your ligin name on sierra</pre>
 </div>
-<p>Note: Make sure you are not already having the key wiith that name in
-order to avoid overwriting it. Thus be extra careful to execute this
-step twice.</p>
-<p>Often it is the case that you already have a key in your ~/.ssh
-directory that you may want to use. For example if you use rsa, your
-key will be located at ~/.ssh/id_rsa.pub. If you like to find out
-more about normal Linux use key management, please consult with a ssh
-manual.</p>
-</li>
-<li><p class="first">Open ICMP and port 22 on default group:</p>
+<p>Make sure you are not already having the key with that name in order
+to avoid overwriting it in the cloud. Thus be extra careful to execute
+this step twice. Often it is the case that you already have a key in
+your ~/.ssh directory that you may want to use. For example if you use
+rsa, your key will be located at ~/.ssh/id_rsa.pub.</p>
+<p>In the next step we need to make sure that the security groups allow
+us to log into the VMs. To do so we create the following policies as
+part of our default security policies. Not that whne you are in a
+group project this may already have been done for you by another group
+member. We will add ICMP and port 22 on default group:</p>
 <div class="highlight-python"><pre>$ nova secgroup-add-rule default icmp -1 -1 0.0.0.0/0
 $ nova secgroup-add-rule default tcp 22 22 0.0.0.0/0
-$ nova secgroup-list-rules default
-+-------------+-----------+---------+-----------+--------------+
+$ nova secgroup-list-rules default</pre>
+</div>
+<p>You will see the following output if everything went correctly:</p>
+<div class="highlight-python"><pre>+-------------+-----------+---------+-----------+--------------+
 | IP Protocol | From Port | To Port | IP Range  | Source Group |
 +-------------+-----------+---------+-----------+--------------+
 | icmp        | -1        | -1      | 0.0.0.0/0 |              |
 | tcp         | 22        | 22      | 0.0.0.0/0 |              |
 +-------------+-----------+---------+-----------+--------------+</pre>
 </div>
-</li>
-<li><p class="first">Boot an instance:</p>
+<p>To boot an instance you simply can now use the command:</p>
 <div class="highlight-python"><pre>$ nova boot --flavor m1.small \
             --image "futuregrid/ubuntu-12.04" \
-            --key_name $USER-key $USER-001
-+-----------------------------+--------------------------------------+
+            --key_name $USER-key $USER-001</pre>
+</div>
+<p>If everything went correctly, you will see an output similar to:</p>
+<div class="highlight-python"><pre>+-----------------------------+--------------------------------------+
 | Property                    | Value                                |
 +-----------------------------+--------------------------------------+
 | status                      | BUILD                                |
 | updated                     | 2013-05-15T20:32:03Z                 |
 | OS-EXT-STS:task_state       | scheduling                           |
-| key_name                    | mystackkey                           |
+| key_name                    | &lt;USER&gt;-key                           |
 | image                       | futuregrid/ubuntu-12.04              |
 | hostId                      |                                      |
 | OS-EXT-STS:vm_state         | building                             |
@@ -469,56 +542,55 @@ $ nova secgroup-list-rules default
 | config_drive                |                                      |
 +-----------------------------+--------------------------------------+</pre>
 </div>
-</li>
-<li><p class="first">Check if your instance is active. If the status changed from BUILD
-to ACTIVE, you should be able to login:</p>
+<p>To chheck if your instance is active you can repeatedly issue the list
+command and monitor the Status field in the table:</p>
 <div class="highlight-python"><pre>$ nova list
+
 +--------------------------------------+---------------+--------+---------------------+
 | ID                                   | Name          | Status | Networks            |
 +--------------------------------------+---------------+--------+---------------------+
-| e15ad5b6-c3f0-4c07-996c-3bbe709a63b7 | &lt;USER&gt;-001 | ACTIVE | private=10.35.23.18 |
-+--------------------------------------+---------------+--------+---------------------+
-
-$ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18
-ubuntu@&lt;USER&gt;-001:~$</pre>
+| e15ad5b6-c3f0-4c07-996c-3bbe709a63b7 | &lt;USER&gt;-001    | ACTIVE | private=10.35.23.18 |
++--------------------------------------+---------------+--------+---------------------+</pre>
 </div>
-</li>
-<li><p class="first">If you see this error, you need to delete the offending host key
-from .ssh/known_hosts:</p>
-<div class="highlight-python"><pre>Add correct host key in /home/username/.ssh/known_hosts to get rid of this message.
-Offending key in /home/peter/.ssh/known_hosts:3</pre>
+<p>Once it hase changed from for example BUILD to ACTIVE, you can log
+in. Pleas use the IP address provided under networks. Note that the
+first address is private and can not be reached from outside sierra.</p>
+<blockquote>
+<div>$ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18</div></blockquote>
+<p>If you see a warning similar to:</p>
+<div class="highlight-python"><pre>Add correct host key in /home/&lt;USER&gt;/.ssh/known_hosts to get rid of this message.
+Offending key in /home/&lt;$USER&gt;/.ssh/known_hosts:3</pre>
 </div>
-</li>
-<li><p class="first">But you can simply disable ssh host key checking by adding these
-lines on .ssh/config . The .ssh/config doesn&#8217;t exist as default so
-create the file and put these lines:</p>
-<div class="highlight-python"><pre>Host 10.35.23.* 198.202.120.*
- StrictHostKeyChecking no
- UserKnownHostsFile=/dev/null</pre>
-</div>
-</li>
-</ol>
-</div>
+<p>you need to delete the offending host key from .ssh/known_hosts.</p>
 <div class="section" id="use-block-storage">
-<h2>3.2. Use Block Storage<a class="headerlink" href="#use-block-storage" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">You can create a block storage(which is similar to Amazon EBS).
-Creating a 5G volume is like this:</p>
-<div class="highlight-python"><pre>$ nova volume-create 5
-$ nova volume-list
+<h2>3.1. Use Block Storage<a class="headerlink" href="#use-block-storage" title="Permalink to this headline">¶</a></h2>
+<p>You can create a block storage with the volume-create command. A
+valume is useful as you can store data in it and associate that
+particulare volumen to a VM. Hence, if you delete the VM, your volume
+and the data on t is still there to be reused. To create one 5G volume
+you can do</p>
+<div class="highlight-python"><pre>$ nova volume-create 5</pre>
+</div>
+<p>To list the volumes you can use:</p>
+<div class="highlight-python"><pre>$ nova volume-list
 +--------------------------------------+-----------+--------------+------+-------------+-------------+
 | ID                                   | Status    | Display Name | Size | Volume Type | Attached to |
 +--------------------------------------+-----------+--------------+------+-------------+-------------+
 | 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx | available | None         |  5   | None        |             |
 +--------------------------------------+-----------+--------------+------+-------------+-------------+</pre>
 </div>
-</li>
-<li><p class="first">Attach the volume to your instance as &#8220;/dev/vdb&#8221; with this::</p>
+<p>To attach the volume to your instance you can use the volume-attach
+subcommand. Let us assume we like to attache it as &#8220;/dev/vdb&#8221;, than
+you can use the command::</p>
 <div class="highlight-python"><pre>$ nova volume-attach $USER-001 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx "/dev/vdb"</pre>
 </div>
-</li>
-<li><p class="first">Login to your instance, make filesystem and mount it on some
-directory. Here&#8217;s an example, mounting on /mnt:</p>
+<div class="sidebar">
+<p class="first sidebar-title">Hint</p>
+<p class="last">Note thate $USER-001 refers to the name of the VM that we have
+created earlier with the boot command.</p>
+</div>
+<p>Next, let us login to your instance, make filesystem and mount it.
+Here&#8217;s an example, mounting on /mnt:</p>
 <div class="highlight-python"><pre>$ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18
 ubuntu@&lt;USER&gt;-001:~$ sudo su -
 root@&lt;USER&gt;-001:~# mkfs.ext4 /dev/vdb
@@ -534,129 +606,126 @@ none           1002M     0 1002M   0% /run/shm
 none            100M     0  100M   0% /run/user
 /dev/vdb        4.8G   23M  4.2G   1% /mnt</pre>
 </div>
-</li>
-<li><p class="first">When you want to detach it, unmount /mnt first, go back to sierra&#8217;s
+<p>When you want to detach it, unmount /mnt first, go back to sierra&#8217;s
 login node and execute volume-detach:</p>
 <div class="highlight-python"><pre>root@&lt;USER&gt;-001:~# umount /mnt
 root@&lt;USER&gt;-001:~# exit
 ubuntu@&lt;USER&gt;-001:~$ exit
+
 $ nova volume-detach $USER-001 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx</pre>
 </div>
-</li>
-</ol>
 </div>
 <div class="section" id="set-up-external-access-to-your-instance">
-<h2>3.3. Set up external access to your instance<a class="headerlink" href="#set-up-external-access-to-your-instance" title="Permalink to this headline">¶</a></h2>
-<p>For making it possible to access your instance from external, you need
-to create an external IP address and add it on your instance.</p>
-<ol class="arabic">
-<li><p class="first">Create an external ip address with:</p>
+<h2>3.2. Set up external access to your instance<a class="headerlink" href="#set-up-external-access-to-your-instance" title="Permalink to this headline">¶</a></h2>
+<p>So far we only used the internal IP address, but you can also assign
+an external address, so that you can log in from other machines than
+sierra. Firts, Create an external ip address with:</p>
 <div class="highlight-python"><pre>$ nova floating-ip-create
+
 +-----------------+-------------+----------+------+
 | Ip              | Instance Id | Fixed Ip | Pool |
 +-----------------+-------------+----------+------+
 | 198.202.120.193 | None        | None     | nova |
 +-----------------+-------------+----------+------+</pre>
 </div>
-</li>
-<li><p class="first">And then, put it on your instance with:</p>
+<p>Next, put it on your instance with:</p>
 <div class="highlight-python"><pre>$ nova add-floating-ip $USER-001 198.202.120.193
 $ nova floating-ip-list
+
 +-----------------+--------------------------------------+-------------+------+
 | Ip              | Instance Id                          | Fixed Ip    | Pool |
 +-----------------+--------------------------------------+-------------+------+
 | 198.202.120.193 | c0bd849a-221a-4e53-bf7b-7097541a9bcc | 10.35.23.20 | nova |
 +-----------------+--------------------------------------+-------------+------+</pre>
 </div>
-<p>Now you should be able to ping and ssh from external.</p>
-</li>
-</ol>
+<p>Now you should be able to ping and ssh from external and can use the
+given ip address.</p>
 </div>
 <div class="section" id="make-a-snapshot-of-an-instance">
-<h2>3.4. Make a snapshot of an instance<a class="headerlink" href="#make-a-snapshot-of-an-instance" title="Permalink to this headline">¶</a></h2>
-<p>Note: Please use your login name as a prefix followed by a /. If you
-create an image for a particular project, please use the projectname. In
-many cases the projectname is preferable in case multiple users share
-the same images</p>
-<ol class="arabic">
-<li><p class="first">After you have worked on your instance, you will want to create a
-snapshot of your instance. You can do it with:</p>
-<div class="highlight-python"><pre>$ nova image-create $USER-001 $USER/custom-ubuntu-01
+<h2>3.3. Make a snapshot of an instance<a class="headerlink" href="#make-a-snapshot-of-an-instance" title="Permalink to this headline">¶</a></h2>
+<p>To allow snapshots, you must use the following convention:</p>
+<ul class="simple">
+<li>use your project number fg### in the prefix of your snapshot name followed
+by a /</li>
+<li>If needed you can also add your username as a prefix in addition to
+the project number.</li>
+</ul>
+<p>Let us assume your project is fg101 and you want to save the image
+with by reminding you it was a my-ubuntu-01 image you want to
+keey. Than you can issue on sierra the  following command:</p>
+<div class="highlight-python"><pre>$ nova image-create $USER-001 fg101/$USER/my-ubuntu-01
 $ nova image-list
 +--------------------------------------+----------------------------+--------+--------------------------------------+
 | ID                                   | Name                       | Status | Server                               |
 +--------------------------------------+----------------------------+--------+--------------------------------------+
 | 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18       | ACTIVE |                                      |
 | 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04    | ACTIVE |                                      |
-| f43375b4-44d3-4350-a9a8-a73f35589344 | &lt;USER&gt;/custom-ubuntu-01 | ACTIVE | c0bd849a-221a-4e53-bf7b-7097541a9bcc |
+| f43375b4-44d3-4350-a9a8-a73f35589344 | fg101/&lt;USER&gt;/my-ubuntu-01  | ACTIVE | c0bd849a-221a-4e53-bf7b-7097541a9bcc |
 +--------------------------------------+----------------------------+--------+--------------------------------------+</pre>
 </div>
-</li>
-<li><p class="first">If you want to download your customized image, you can do it with
-this:</p>
-<div class="highlight-python"><pre>$ glance image-download --file "custome-ubuntu-01.img" "$USER/custom-ubuntu-01"</pre>
+<p>If you want to download your customized image, you can do it with this:</p>
+<div class="highlight-python"><pre>$ glance image-download --file "my-ubuntu-01.img" "fg101/$USER/custom-ubuntu-01"</pre>
 </div>
-</li>
-</ol>
+<div class="sidebar">
+<p class="first sidebar-title">Hint</p>
+<p class="last">Please note that images not following this convention will be deleted.</p>
+</div>
 </div>
 <div class="section" id="automate-some-initial-configuration">
-<h2>3.5. Automate some initial configuration<a class="headerlink" href="#automate-some-initial-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Automate some initial configuration<a class="headerlink" href="#automate-some-initial-configuration" title="Permalink to this headline">¶</a></h2>
 <p>You may want to install some packages into the iamge, enable root, and
 add ssh authorized_keys. With the OpenStack cloud-init such steps can
 be simplified.</p>
-<ol class="arabic">
-<li><p class="first">Create a file(mycloudinit.txt) containing these lines:</p>
-<div class="highlight-python"><pre>#cloud-config
+<p>Create a file(mycloudinit.txt) containing these lines:</p>
+<div class="highlight-python"><pre># cloud-config
 
 # Enable root login.
 disable_root: false
+
 # Install packages.
 packages:
 - apt-show-versions
 - wget
 - build-essential
+
 # Add some more ssh public keys.
 ssh_authorized_keys:
 - ssh-rsa AAAfkdfeiekf....fES7060rb myuser@s1
 - ssh-rsa AAAAAAkgeig78...skdfjeigi myuser@myhost</pre>
 </div>
-</li>
-<li><p class="first">Boot your instance with &#8211;user-data mycloudinit.txt like this:</p>
+<p>Now boot your instance with &#8211;user-data mycloudinit.txt like this:</p>
 <div class="highlight-python"><pre>$ nova boot --flavor m1.small \
             --image "futuregrid/ubuntu-12.04" \
             --key_name $USER-key \
             --user-data mycloudinit.txt $USER-002</pre>
 </div>
-<p>You should be able to login to &lt;USER&gt;-002 as root, and the added
-packages are installed.</p>
-</li>
-</ol>
+<p>You should be able to login to &lt;USER&gt;-002 as root, and the added packages are installed.</p>
 </div>
 <div class="section" id="get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">
-<h2>3.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack<a class="headerlink" href="#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Several versions of Ubuntu cloud images are available on
-<a class="reference external" href="http://cloud-images.ubuntu.com/">http://cloud-images.ubuntu.com/</a>
-. Choose the version you want and download the file name with
-******-cloudimg-amd64-disk1.img. For example, downloading
-Ubuntu-13.04(Raring Ringtail)is like this:</p>
+<h2>3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack<a class="headerlink" href="#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">In future we will just host these images so we do not
+duplicate them on the server</p>
+</div>
+<p>Several versions of Ubuntu cloud images are available at
+<a class="reference external" href="http://cloud-images.ubuntu.com/">http://cloud-images.ubuntu.com/</a>. Choose the version you want and
+download the file name with ******-cloudimg-amd64-disk1.img. For
+example, downloading Ubuntu-13.04(Raring Ringtail)is like this:</p>
 <div class="highlight-python"><pre>$ wget http://cloud-images.ubuntu.com/raring/current/raring-server-cloudimg-amd...</pre>
 </div>
-</li>
-<li><p class="first">Upload it with glance client like this:</p>
+<p>You can upload the image with the glance client like this:</p>
 <div class="highlight-python"><pre>$ glance image-create \
-       --name $USER/myimages/ubuntu-13.04 \
+       --name fg101/$USER/myimages/ubuntu-13.04 \
        --disk-format qcow2 \
        --container-format bare \
        --file raring-server-cloudimg-amd64-disk1.img</pre>
 </div>
 <p>Now your new image is listed on <tt class="docutils literal"><span class="pre">nova</span> <span class="pre">image-list</span></tt>and will be
 available when the status become &#8220;ACTIVE&#8221;.</p>
-</li>
-</ol>
 </div>
 <div class="section" id="delete-your-instance">
-<h2>3.7. Delete your instance<a class="headerlink" href="#delete-your-instance" title="Permalink to this headline">¶</a></h2>
+<h2>3.6. Delete your instance<a class="headerlink" href="#delete-your-instance" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">You can delete your instance with:</p>
 <div class="highlight-python"><pre>$ nova delete $USER-002</pre>
@@ -667,7 +736,7 @@ it</p>
 </ol>
 </div>
 <div class="section" id="how-to-change-your-password">
-<h2>3.8. How to change your password<a class="headerlink" href="#how-to-change-your-password" title="Permalink to this headline">¶</a></h2>
+<h2>3.7. How to change your password<a class="headerlink" href="#how-to-change-your-password" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Sometimes, users accidentally send password to a corablator/support
 for debugging, and then regret. When you put yourself in the
@@ -683,7 +752,7 @@ novarc file.</p>
 </ol>
 </div>
 <div class="section" id="things-to-do-when-you-need-euca2ools-or-ec2-interfaces">
-<h2>3.9. Things to do when you need Euca2ools or EC2 interfaces<a class="headerlink" href="#things-to-do-when-you-need-euca2ools-or-ec2-interfaces" title="Permalink to this headline">¶</a></h2>
+<h2>3.8. Things to do when you need Euca2ools or EC2 interfaces<a class="headerlink" href="#things-to-do-when-you-need-euca2ools-or-ec2-interfaces" title="Permalink to this headline">¶</a></h2>
 <p>Even though the nova client and protocols will provide you with more
 advanced features, some users still want to access OpenStack with EC2
 compatible tools. One such tool are the euca2tools. We explain briefly

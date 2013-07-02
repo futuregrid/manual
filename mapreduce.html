@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PaaS - Platform as a Service &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>1. PaaS - Platform as a Service &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,6 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="1. Nimbus Phantom" href="nimbus-phantom.html" />
+    <link rel="prev" title="5. Eucalyptus (Allen)" href="eucalyptus.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -72,6 +74,8 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
 </ul>
 </li>
 </ul>
@@ -84,7 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="preface.html#conventions">1.5. Conventions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Introduction</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">2.1. Executive Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">2.2. Project and Account Application</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#services">2.3. Services</a></li>
@@ -195,16 +199,15 @@
 <li class="toctree-l2"><a class="reference internal" href="openstack.html#compatibility-between-nova-and-euca2ools-commands">2.21. Compatibility between nova and euca2ools commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">3. OpenStack Grizzly (Gregor)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#from-zero-to-get-your-first-instance-running">3.1. From zero to get your first instance running</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">3.2. Use Block Storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">3.3. Set up external access to your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">3.4. Make a snapshot of an instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">3.5. Automate some initial configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">3.7. Delete your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">3.8. How to change your password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">3. OpenStack Grizzly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">3.1. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">3.2. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">3.3. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">3.4. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">3.6. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">3.7. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.8. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus.html">4. Using Nimbus on FutureGrid</a><ul>
@@ -231,25 +234,90 @@
 </ul>
 </li>
 </ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. PaaS - Platform as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-map-reduce-in-futuregrid">2. Using Map/Reduce in FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#education-training-with-mapreduce">2.1. Education / Training with MapReduce</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#running-hadoop-as-a-batch-job-using-myhadoop">3. Running Hadoop as a Batch Job using MyHadoop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#overview">4. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#hadoop-on-futuregrid">5. Hadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#what-is-myhadoop">6. What is myHadoop?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#running-myhadoop-on-futuregrid">7. Running myHadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#persistent-mode">8. Persistent Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#customizing-hadoop-settings">9. Customizing Hadoop&nbsp;Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-a-different-installation-of-hadoop">10. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#more-information">11. More Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-salsahadoop-on-futuregrid">12. Using SalsaHadoop on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#salsahadoop-introduction">12.1. SalsaHadoop Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-salsahadoop-on-futuregrid">12.2. Running SalsaHadoop on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#hadoop-blast">13. Hadoop Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">13.1. Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledge">13.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirement">13.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-hadoop-blast-under">13.4. 1. Download Hadoop Blast under $</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hadoop-home">13.5. HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prepare-hadoop-blast">13.6. 2. Prepare Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execute-hadoop-blast">13.7. 3. Execute Hadoop-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monitoring-hadoop">13.8. 3. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finishing-the-map-reduce-process">13.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#hadoop-wordcount">14. Hadoop WordCount</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">14.1. Hadoop WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">14.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">14.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-unzip-wordcount-under-hadoop-home">14.4. 1. Download and unzip WordCount under $HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execute">14.5. 2. Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">14.6. Hadoop-WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">14.7. 3. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-the-result">14.8. 4.&nbsp;Check the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">14.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#using-twister-on-futuregrid">15. Using Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-twister">15.1. What is Twister?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image114">15.2. |image114|</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-twister-on-futuregrid">15.3. Running Twister on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#papers-and-presentations">15.4. Papers and Presentations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#twister-blast">16. Twister Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id10">16.1. Twister Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">16.2. Acknowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">16.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-prepare-the">16.4. 1. Download and prepare the</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">16.5. Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prepare-twister-blast-input">16.6. 2. Prepare Twister-Blast input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execute-twister-blast">16.7. 3. Execute Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">16.8. 4.&nbsp;Finishing the Map-Reduce process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#eucalyptus-and-twister-on-futuregrid">17. Eucalyptus and Twister on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#the-futuregrid-twister-tutorial">18. The FutureGrid Twister Tutorial</a></li>
+</ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">1. Nimbus Phantom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">2. cloudinit.d</a></li>
-<li class="toctree-l1"><a class="reference internal" href="precip.html">3. Precip</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">3.1. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#api">3.2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">3.3. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pegasus.html">3. Pegasus (Matts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">3.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">3.2. Using Pegasus on FutureGrid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rain.html">4. RAIN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">4.2. FutureGrid Standalone Image Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">4.3. Manual Image Customization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">4.4. RAIN Manual Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="precip.html">4. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">4.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#api">4.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">4.3. Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pegasus.html">5. Pegasus (Matts)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">5.1. The Pegasus Run-Time Cloud Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">5.2. Using Pegasus on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">5. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">5.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">5.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">5.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">5.4. RAIN Manual Pages</a></li>
 </ul>
 </li>
 </ul>
@@ -269,110 +337,119 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="vine.html">1. ViNe (Mauritsio/Renato)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="papi.html">2. PAPI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">2.1. Availability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#references">2.2. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vine-overlay.html">2. Vine Overlay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vine-overlay.html#prerequisite">2.1. Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vine-overlay.html#deploying-a-virtual-cluster-across-foxtrot-and-sierra">2.2. Deploying a virtual cluster across foxtrot and sierra</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="gpu.html">3. Delta GPU User Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">3.1. Running MPI/GPU program on the Delta cluster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">3.2. Running programs on a single GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papi.html">3. PAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">3.1. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#references">3.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">4. Delta GPU User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">4.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">4.2. Running programs on a single GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">4.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">5. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">5.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">5.2. Training and Education</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">6. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">6.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">6.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">6.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">6.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">6.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">7. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">8. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">9. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">10. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">11. Commandline clients</a></li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">PaaS - Platform as a Service</a></li>
-<li><a class="reference internal" href="#using-map-reduce-in-futuregrid">Using Map/Reduce in FutureGrid</a><ul>
-<li><a class="reference internal" href="#education-training-with-mapreduce">Education / Training with MapReduce</a></li>
+<li><a class="reference internal" href="#">1. PaaS - Platform as a Service</a></li>
+<li><a class="reference internal" href="#using-map-reduce-in-futuregrid">2. Using Map/Reduce in FutureGrid</a><ul>
+<li><a class="reference internal" href="#education-training-with-mapreduce">2.1. Education / Training with MapReduce</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#running-hadoop-as-a-batch-job-using-myhadoop">Running Hadoop as a Batch Job using MyHadoop</a></li>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#hadoop-on-futuregrid">Hadoop on FutureGrid</a></li>
-<li><a class="reference internal" href="#what-is-myhadoop">What is myHadoop?</a></li>
-<li><a class="reference internal" href="#running-myhadoop-on-futuregrid">Running myHadoop on FutureGrid</a></li>
-<li><a class="reference internal" href="#persistent-mode">Persistent Mode</a></li>
-<li><a class="reference internal" href="#customizing-hadoop-settings">Customizing Hadoop&nbsp;Settings</a></li>
-<li><a class="reference internal" href="#using-a-different-installation-of-hadoop">Using a Different Installation of Hadoop</a></li>
-<li><a class="reference internal" href="#more-information">More Information</a></li>
-<li><a class="reference internal" href="#using-salsahadoop-on-futuregrid">Using SalsaHadoop on FutureGrid</a><ul>
-<li><a class="reference internal" href="#salsahadoop-introduction">SalsaHadoop Introduction</a></li>
-<li><a class="reference internal" href="#running-salsahadoop-on-futuregrid">Running SalsaHadoop on FutureGrid</a></li>
+<li><a class="reference internal" href="#running-hadoop-as-a-batch-job-using-myhadoop">3. Running Hadoop as a Batch Job using MyHadoop</a></li>
+<li><a class="reference internal" href="#overview">4. Overview</a></li>
+<li><a class="reference internal" href="#hadoop-on-futuregrid">5. Hadoop on FutureGrid</a></li>
+<li><a class="reference internal" href="#what-is-myhadoop">6. What is myHadoop?</a></li>
+<li><a class="reference internal" href="#running-myhadoop-on-futuregrid">7. Running myHadoop on FutureGrid</a></li>
+<li><a class="reference internal" href="#persistent-mode">8. Persistent Mode</a></li>
+<li><a class="reference internal" href="#customizing-hadoop-settings">9. Customizing Hadoop&nbsp;Settings</a></li>
+<li><a class="reference internal" href="#using-a-different-installation-of-hadoop">10. Using a Different Installation of Hadoop</a></li>
+<li><a class="reference internal" href="#more-information">11. More Information</a></li>
+<li><a class="reference internal" href="#using-salsahadoop-on-futuregrid">12. Using SalsaHadoop on FutureGrid</a><ul>
+<li><a class="reference internal" href="#salsahadoop-introduction">12.1. SalsaHadoop Introduction</a></li>
+<li><a class="reference internal" href="#running-salsahadoop-on-futuregrid">12.2. Running SalsaHadoop on FutureGrid</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#hadoop-blast">Hadoop Blast</a><ul>
-<li><a class="reference internal" href="#id1">Hadoop Blast</a></li>
-<li><a class="reference internal" href="#acknowledge">Acknowledge</a></li>
-<li><a class="reference internal" href="#requirement">Requirement</a></li>
-<li><a class="reference internal" href="#download-hadoop-blast-under">1. Download Hadoop Blast under $</a></li>
-<li><a class="reference internal" href="#hadoop-home">HADOOP_HOME</a></li>
-<li><a class="reference internal" href="#prepare-hadoop-blast">2. Prepare Hadoop Blast</a></li>
-<li><a class="reference internal" href="#execute-hadoop-blast">3. Execute Hadoop-Blast</a></li>
-<li><a class="reference internal" href="#monitoring-hadoop">3. Monitoring Hadoop</a></li>
-<li><a class="reference internal" href="#finishing-the-map-reduce-process">5.&nbsp;Finishing the Map-Reduce process</a></li>
+<li><a class="reference internal" href="#hadoop-blast">13. Hadoop Blast</a><ul>
+<li><a class="reference internal" href="#id1">13.1. Hadoop Blast</a></li>
+<li><a class="reference internal" href="#acknowledge">13.2. Acknowledge</a></li>
+<li><a class="reference internal" href="#requirement">13.3. Requirement</a></li>
+<li><a class="reference internal" href="#download-hadoop-blast-under">13.4. 1. Download Hadoop Blast under $</a></li>
+<li><a class="reference internal" href="#hadoop-home">13.5. HADOOP_HOME</a></li>
+<li><a class="reference internal" href="#prepare-hadoop-blast">13.6. 2. Prepare Hadoop Blast</a></li>
+<li><a class="reference internal" href="#execute-hadoop-blast">13.7. 3. Execute Hadoop-Blast</a></li>
+<li><a class="reference internal" href="#monitoring-hadoop">13.8. 3. Monitoring Hadoop</a></li>
+<li><a class="reference internal" href="#finishing-the-map-reduce-process">13.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#hadoop-wordcount">Hadoop WordCount</a><ul>
-<li><a class="reference internal" href="#id2">Hadoop WordCount</a></li>
-<li><a class="reference internal" href="#id3">Acknowledge</a></li>
-<li><a class="reference internal" href="#id4">Requirement</a></li>
-<li><a class="reference internal" href="#download-and-unzip-wordcount-under-hadoop-home">1. Download and unzip WordCount under $HADOOP_HOME</a></li>
-<li><a class="reference internal" href="#execute">2. Execute</a></li>
-<li><a class="reference internal" href="#id5">Hadoop-WordCount</a></li>
-<li><a class="reference internal" href="#id6">3. Monitoring Hadoop</a></li>
-<li><a class="reference internal" href="#check-the-result">4.&nbsp;Check the result</a></li>
-<li><a class="reference internal" href="#id7">5.&nbsp;Finishing the Map-Reduce process</a></li>
+<li><a class="reference internal" href="#hadoop-wordcount">14. Hadoop WordCount</a><ul>
+<li><a class="reference internal" href="#id2">14.1. Hadoop WordCount</a></li>
+<li><a class="reference internal" href="#id3">14.2. Acknowledge</a></li>
+<li><a class="reference internal" href="#id4">14.3. Requirement</a></li>
+<li><a class="reference internal" href="#download-and-unzip-wordcount-under-hadoop-home">14.4. 1. Download and unzip WordCount under $HADOOP_HOME</a></li>
+<li><a class="reference internal" href="#execute">14.5. 2. Execute</a></li>
+<li><a class="reference internal" href="#id5">14.6. Hadoop-WordCount</a></li>
+<li><a class="reference internal" href="#id6">14.7. 3. Monitoring Hadoop</a></li>
+<li><a class="reference internal" href="#check-the-result">14.8. 4.&nbsp;Check the result</a></li>
+<li><a class="reference internal" href="#id7">14.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-twister-on-futuregrid">Using Twister on FutureGrid</a><ul>
-<li><a class="reference internal" href="#what-is-twister">What is Twister?</a></li>
-<li><a class="reference internal" href="#image114">|image114|</a></li>
-<li><a class="reference internal" href="#running-twister-on-futuregrid">Running Twister on FutureGrid</a></li>
-<li><a class="reference internal" href="#papers-and-presentations">Papers and Presentations</a></li>
+<li><a class="reference internal" href="#using-twister-on-futuregrid">15. Using Twister on FutureGrid</a><ul>
+<li><a class="reference internal" href="#what-is-twister">15.1. What is Twister?</a></li>
+<li><a class="reference internal" href="#image114">15.2. |image114|</a></li>
+<li><a class="reference internal" href="#running-twister-on-futuregrid">15.3. Running Twister on FutureGrid</a></li>
+<li><a class="reference internal" href="#papers-and-presentations">15.4. Papers and Presentations</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#twister-blast">Twister Blast</a><ul>
-<li><a class="reference internal" href="#id10">Twister Blast</a></li>
-<li><a class="reference internal" href="#id11">Acknowledge</a></li>
-<li><a class="reference internal" href="#id12">Requirement</a></li>
-<li><a class="reference internal" href="#download-and-prepare-the">1. Download and prepare the</a></li>
-<li><a class="reference internal" href="#id13">Twister-Blast</a></li>
-<li><a class="reference internal" href="#prepare-twister-blast-input">2. Prepare Twister-Blast input</a></li>
-<li><a class="reference internal" href="#execute-twister-blast">3. Execute Twister-Blast</a></li>
-<li><a class="reference internal" href="#id14">4.&nbsp;Finishing the Map-Reduce process</a></li>
+<li><a class="reference internal" href="#twister-blast">16. Twister Blast</a><ul>
+<li><a class="reference internal" href="#id10">16.1. Twister Blast</a></li>
+<li><a class="reference internal" href="#id11">16.2. Acknowledge</a></li>
+<li><a class="reference internal" href="#id12">16.3. Requirement</a></li>
+<li><a class="reference internal" href="#download-and-prepare-the">16.4. 1. Download and prepare the</a></li>
+<li><a class="reference internal" href="#id13">16.5. Twister-Blast</a></li>
+<li><a class="reference internal" href="#prepare-twister-blast-input">16.6. 2. Prepare Twister-Blast input</a></li>
+<li><a class="reference internal" href="#execute-twister-blast">16.7. 3. Execute Twister-Blast</a></li>
+<li><a class="reference internal" href="#id14">16.8. 4.&nbsp;Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#eucalyptus-and-twister-on-futuregrid">Eucalyptus and Twister on FutureGrid</a></li>
-<li><a class="reference internal" href="#the-futuregrid-twister-tutorial">The FutureGrid Twister Tutorial</a></li>
+<li><a class="reference internal" href="#eucalyptus-and-twister-on-futuregrid">17. Eucalyptus and Twister on FutureGrid</a></li>
+<li><a class="reference internal" href="#the-futuregrid-twister-tutorial">18. The FutureGrid Twister Tutorial</a></li>
 </ul>
 </ul>
 </li>
             
             
               
+  <li><a href="eucalyptus.html"
+         title="previous chapter">&laquo; 5. Eucalyptus  (Allen)</a></li>
+  <li><a href="nimbus-phantom.html"
+         title="next chapter">1. Nimbus Phantom &raquo;</a></li>
             
             
               <li>
@@ -397,7 +474,7 @@
 <div class="container">
   
   <div class="section" id="paas-platform-as-a-service">
-<h1>PaaS - Platform as a Service<a class="headerlink" href="#paas-platform-as-a-service" title="Permalink to this headline">¶</a></h1>
+<h1>1. PaaS - Platform as a Service<a class="headerlink" href="#paas-platform-as-a-service" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first last sidebar-title">Page Contents</p>
 </div>
@@ -405,7 +482,7 @@
 offerings on FutureGrid</p>
 </div>
 <div class="section" id="using-map-reduce-in-futuregrid">
-<h1>Using Map/Reduce in FutureGrid<a class="headerlink" href="#using-map-reduce-in-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>2. Using Map/Reduce in FutureGrid<a class="headerlink" href="#using-map-reduce-in-futuregrid" title="Permalink to this headline">¶</a></h1>
 <p>As the computing landscape becomes increasingly data-centric,
 data-intensive computing environments are poised to transform scientific
 research. In particular, MapReduce based programming models and run-time
@@ -467,7 +544,7 @@ Eucalyptus</a>
 [intermediate]</li>
 </ul>
 <div class="section" id="education-training-with-mapreduce">
-<h2>Education / Training with MapReduce<a class="headerlink" href="#education-training-with-mapreduce" title="Permalink to this headline">¶</a></h2>
+<h2>2.1. Education / Training with MapReduce<a class="headerlink" href="#education-training-with-mapreduce" title="Permalink to this headline">¶</a></h2>
 <p>FutureGrid offers educational virtual appliances that allow users to
 deploy virtual private clusters where Hadoop tasks can be deployed using
 Condor. This approach allows users to not only experiment with Hadoop on
@@ -494,12 +571,12 @@ FutureGrid</a> [novice]</li>
 </div>
 </div>
 <div class="section" id="running-hadoop-as-a-batch-job-using-myhadoop">
-<h1>Running Hadoop as a Batch Job using MyHadoop<a class="headerlink" href="#running-hadoop-as-a-batch-job-using-myhadoop" title="Permalink to this headline">¶</a></h1>
+<h1>3. Running Hadoop as a Batch Job using MyHadoop<a class="headerlink" href="#running-hadoop-as-a-batch-job-using-myhadoop" title="Permalink to this headline">¶</a></h1>
 <p><a href="#id15"><span class="problematic" id="id16">|image94|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Hadoop logo|</span></a></p>
 <p>=</p>
 </div>
 <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<h1>4. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>MapReduce is a programming model developed by Google<strong>.</strong>Their
 definition of MapReduce is as follows: &nbsp;&#8220;MapReduce is a programming
 model and an associated implementation for processing and generating
@@ -515,19 +592,19 @@ File System).</p>
 systems on FutureGrid using the MyHadoop tool.</p>
 </div>
 <div class="section" id="hadoop-on-futuregrid">
-<h1>Hadoop on FutureGrid<a class="headerlink" href="#hadoop-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>5. Hadoop on FutureGrid<a class="headerlink" href="#hadoop-on-futuregrid" title="Permalink to this headline">¶</a></h1>
 <p>Hadoop 0.20.2 is currently installed on Alamo, Hotel, India, and Sierra
 FutureGrid systems. &nbsp;Please see the <a class="reference external" href="https://portal.futuregrid.org/gettingstarted">Getting Started
 guide</a> to get accounts
 on those systems.</p>
 </div>
 <div class="section" id="what-is-myhadoop">
-<h1>What is myHadoop?<a class="headerlink" href="#what-is-myhadoop" title="Permalink to this headline">¶</a></h1>
+<h1>6. What is myHadoop?<a class="headerlink" href="#what-is-myhadoop" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="http://sourceforge.net/projects/myhadoop/">MyHadoop</a>&nbsp;is a set of
 scripts that configure and instantiate&nbsp;Hadoop&nbsp;as a batch job.</p>
 </div>
 <div class="section" id="running-myhadoop-on-futuregrid">
-<h1>Running myHadoop on FutureGrid<a class="headerlink" href="#running-myhadoop-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>7. Running myHadoop on FutureGrid<a class="headerlink" href="#running-myhadoop-on-futuregrid" title="Permalink to this headline">¶</a></h1>
 <p>To run the example, use the following steps.</p>
 <ol class="arabic">
 <li><p class="first">Log into a FutureGrid system that has myHadoop available. &nbsp;In this
@@ -647,7 +724,7 @@ $MY_HADOOP_HOME/pbs-example.sh script and modify the lines described
 in Step 7.</p>
 </div>
 <div class="section" id="persistent-mode">
-<h1>Persistent Mode<a class="headerlink" href="#persistent-mode" title="Permalink to this headline">¶</a></h1>
+<h1>8. Persistent Mode<a class="headerlink" href="#persistent-mode" title="Permalink to this headline">¶</a></h1>
 <p>The above example copies input to local HDFS scratch space you specified
 in $MY_HADOOP_HOME/bin/setenv.sh, runs MapReduce, and copies output
 from HDFS back to your home directory. &nbsp;This is called non-persistent
@@ -658,7 +735,7 @@ space. &nbsp;To enable persistent mode, follow the directions in
 pbs-example.sh.</p>
 </div>
 <div class="section" id="customizing-hadoop-settings">
-<h1>Customizing Hadoop&nbsp;Settings<a class="headerlink" href="#customizing-hadoop-settings" title="Permalink to this headline">¶</a></h1>
+<h1>9. Customizing Hadoop&nbsp;Settings<a class="headerlink" href="#customizing-hadoop-settings" title="Permalink to this headline">¶</a></h1>
 <p>To modify any of the Hadoop settings
 like&nbsp;maximum_number_of_map_task, maximum_number_of_reduce_task,
 etc., make you own copy of myHadoop and customize the settings
@@ -688,7 +765,7 @@ $HOME/myHadoop/etc</p>
 </ol>
 </div>
 <div class="section" id="using-a-different-installation-of-hadoop">
-<h1>Using a Different Installation of Hadoop<a class="headerlink" href="#using-a-different-installation-of-hadoop" title="Permalink to this headline">¶</a></h1>
+<h1>10. Using a Different Installation of Hadoop<a class="headerlink" href="#using-a-different-installation-of-hadoop" title="Permalink to this headline">¶</a></h1>
 <p>If you would like to use a different version of my Hadoop or have
 customized the Hadoop code in some way, you can specify a different
 installation of Hadoop by redefining the HADOOP_HOME variable after
@@ -702,16 +779,16 @@ export HADOOP_HOME=${HOME}/my-custom-hadoop</pre>
 </div>
 </div>
 <div class="section" id="more-information">
-<h1>More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h1>
+<h1>11. More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h1>
 <p>For more information about how myHadoop works, please see the
 documentation in $MY_HADOOP_HOME/docs/myHadoop.pdf</p>
 </div>
 <div class="section" id="using-salsahadoop-on-futuregrid">
-<h1>Using SalsaHadoop on FutureGrid<a class="headerlink" href="#using-salsahadoop-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>12. Using SalsaHadoop on FutureGrid<a class="headerlink" href="#using-salsahadoop-on-futuregrid" title="Permalink to this headline">¶</a></h1>
 <p>PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.</p>
 <div class="section" id="salsahadoop-introduction">
-<h2>SalsaHadoop Introduction<a class="headerlink" href="#salsahadoop-introduction" title="Permalink to this headline">¶</a></h2>
+<h2>12.1. SalsaHadoop Introduction<a class="headerlink" href="#salsahadoop-introduction" title="Permalink to this headline">¶</a></h2>
 <p>Apache Hadoop is widely used by domain scientists for running their
 scientific&nbsp;applications in parallel fashion. For our research
 convenience, SalsaHPC research group develops SalsaHadoop, an automatic
@@ -722,7 +799,7 @@ and a graduate-level course <a class="reference external" href="http://salsahpc.
 Intensive Sciences</a>.</p>
 </div>
 <div class="section" id="running-salsahadoop-on-futuregrid">
-<h2>Running SalsaHadoop on FutureGrid<a class="headerlink" href="#running-salsahadoop-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<h2>12.2. Running SalsaHadoop on FutureGrid<a class="headerlink" href="#running-salsahadoop-on-futuregrid" title="Permalink to this headline">¶</a></h2>
 <p>SalsaHadoop can be run in various modes within FG&nbsp;either in FutureGrid
 HPC and FutureGrid Cloud/IaaS environments. The following tutorials
 provide step-by-step instructions to use SalsaHadoop on these modes, and
@@ -772,14 +849,14 @@ Blast</a></li>
 </div>
 </div>
 <div class="section" id="hadoop-blast">
-<h1>Hadoop Blast<a class="headerlink" href="#hadoop-blast" title="Permalink to this headline">¶</a></h1>
+<h1>13. Hadoop Blast<a class="headerlink" href="#hadoop-blast" title="Permalink to this headline">¶</a></h1>
 <p>Number:
 Author: Tak-Lon Stephen Wu
 Improvements:
 Version: 0.1
 Date: 2011-11-01</p>
 <div class="section" id="id1">
-<h2>Hadoop Blast<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>13.1. Hadoop Blast<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>BLAST (Basic Local Alignment Search Tool) is one of the most widely used
 bioinformatics applications written in C++, and&nbsp;the version we are using
 is v2.2.23. Hadoop Blast is an advanced Hadoop program which helps
@@ -800,7 +877,7 @@ tutorial</a>.</p>
 </ul>
 </div>
 <div class="section" id="acknowledge">
-<h2>Acknowledge<a class="headerlink" href="#acknowledge" title="Permalink to this headline">¶</a></h2>
+<h2>13.2. Acknowledge<a class="headerlink" href="#acknowledge" title="Permalink to this headline">¶</a></h2>
 <p>This page was original designed by
 <a class="reference external" href="http://salsahpc.indiana.edu/">SalsaHPC</a> group for <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/">Big Data for
 Science Workshop</a>, you can see
@@ -808,7 +885,7 @@ the original pages
 <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/hadoopblast.html">here</a>.</p>
 </div>
 <div class="section" id="requirement">
-<h2>Requirement<a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h2>
+<h2>13.3. Requirement<a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Login to FutureGrid Cluster and obtain compute nodes.
 (<a class="reference external" href="https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#HPC_Nodes">HPC</a>/
@@ -825,10 +902,10 @@ tutorial</a>.</li>
 </ol>
 </div>
 <div class="section" id="download-hadoop-blast-under">
-<h2>1. Download Hadoop Blast under $<a class="headerlink" href="#download-hadoop-blast-under" title="Permalink to this headline">¶</a></h2>
+<h2>13.4. 1. Download Hadoop Blast under $<a class="headerlink" href="#download-hadoop-blast-under" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="hadoop-home">
-<h2>HADOOP_HOME<a class="headerlink" href="#hadoop-home" title="Permalink to this headline">¶</a></h2>
+<h2>13.5. HADOOP_HOME<a class="headerlink" href="#hadoop-home" title="Permalink to this headline">¶</a></h2>
 <p>Assuming your start SalsaHadoop/Hadoop with setting
 $HADOOP_HOME=~/hadoop-0.20.203.0, and is running the master node on
 i55. Then, we download the <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip">Hadoop Blast source
@@ -845,7 +922,7 @@ $HADOOP_HOME.</p>
 </div>
 </div>
 <div class="section" id="prepare-hadoop-blast">
-<h2>2. Prepare Hadoop Blast<a class="headerlink" href="#prepare-hadoop-blast" title="Permalink to this headline">¶</a></h2>
+<h2>13.6. 2. Prepare Hadoop Blast<a class="headerlink" href="#prepare-hadoop-blast" title="Permalink to this headline">¶</a></h2>
 <p>Assuming the program are already stored in $HADOOP_HOME/Hadoop-Blast,
 we need to copy the input files, Blast program and Database archive
 (<a class="reference external" href="http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz">BlastProgramAndDB.tar.gz</a>)
@@ -867,7 +944,7 @@ distributed caches which will be used later.</li>
 </ul>
 </div>
 <div class="section" id="execute-hadoop-blast">
-<h2>3. Execute Hadoop-Blast<a class="headerlink" href="#execute-hadoop-blast" title="Permalink to this headline">¶</a></h2>
+<h2>13.7. 3. Execute Hadoop-Blast<a class="headerlink" href="#execute-hadoop-blast" title="Permalink to this headline">¶</a></h2>
 <p>After deploying those required files onto HDFS, run the Hadoop Blast
 program with the following commands:</p>
 <div class="highlight-python"><pre>[taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop jar $HADOOP_HOME/Hadoop-Blast/executable/blast-hadoop.jar BlastProgramAndDB.tar.gz \
@@ -919,7 +996,7 @@ Job Finished in 191.376 seconds</pre>
 </div>
 </div>
 <div class="section" id="monitoring-hadoop">
-<h2>3. Monitoring Hadoop<a class="headerlink" href="#monitoring-hadoop" title="Permalink to this headline">¶</a></h2>
+<h2>13.8. 3. Monitoring Hadoop<a class="headerlink" href="#monitoring-hadoop" title="Permalink to this headline">¶</a></h2>
 <p>We can also monitor the job status using lynx, a text browser, on i136
 based Hadoop monitoring console. Assuming the Hadoop Jobtracker is
 running on i55:9003:</p>
@@ -944,7 +1021,7 @@ BG3:2_30MNAAAXX:7:1:981:1318/1  gi|297746581|emb|CBM42047.1|    100.00  11      
 </div>
 </div>
 <div class="section" id="finishing-the-map-reduce-process">
-<h2>5.&nbsp;Finishing the Map-Reduce process<a class="headerlink" href="#finishing-the-map-reduce-process" title="Permalink to this headline">¶</a></h2>
+<h2>13.9. 5.&nbsp;Finishing the Map-Reduce process<a class="headerlink" href="#finishing-the-map-reduce-process" title="Permalink to this headline">¶</a></h2>
 <p>After finishing the Job, please use the command to kill the HDFS and
 Map-Reduce daemon:</p>
 <div class="highlight-python"><pre>[taklwu@i55 hadoop-0.20.203.0]$ bin/stop-all.sh</pre>
@@ -952,7 +1029,7 @@ Map-Reduce daemon:</p>
 </div>
 </div>
 <div class="section" id="hadoop-wordcount">
-<h1>Hadoop WordCount<a class="headerlink" href="#hadoop-wordcount" title="Permalink to this headline">¶</a></h1>
+<h1>14. Hadoop WordCount<a class="headerlink" href="#hadoop-wordcount" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
 <dt>Number:</dt>
 <dd>Author: Tak-Lon Stephen Wu
@@ -961,7 +1038,7 @@ Improvements:</dd>
 <p>Version: 0.1
 Date: 2011-11-01</p>
 <div class="section" id="id2">
-<h2>Hadoop WordCount<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>14.1. Hadoop WordCount<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>WordCount is a simple program which counts the number of occurrences of
 each word in a given text input data set. WordCount fits very well with
 the MapReduce programming model making it a great eample to understand
@@ -975,7 +1052,7 @@ tutorial</a>.</p>
 </ul>
 </div>
 <div class="section" id="id3">
-<h2>Acknowledge<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>14.2. Acknowledge<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>This page was original designed by
 <a class="reference external" href="http://salsahpc.indiana.edu/">SalsaHPC</a> group for <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/">Big Data for
 Science Workshop</a>, you can see
@@ -983,7 +1060,7 @@ the original pages
 <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html">here</a>.</p>
 </div>
 <div class="section" id="id4">
-<h2>Requirement<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>14.3. Requirement<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Login to FutureGrid Cluster and obtain compute nodes.
 (<a class="reference external" href="https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#HPC_Nodes">HPC</a>/
@@ -998,7 +1075,7 @@ tutorial</a>.</li>
 </ol>
 </div>
 <div class="section" id="download-and-unzip-wordcount-under-hadoop-home">
-<h2>1. Download and unzip WordCount under $HADOOP_HOME<a class="headerlink" href="#download-and-unzip-wordcount-under-hadoop-home" title="Permalink to this headline">¶</a></h2>
+<h2>14.4. 1. Download and unzip WordCount under $HADOOP_HOME<a class="headerlink" href="#download-and-unzip-wordcount-under-hadoop-home" title="Permalink to this headline">¶</a></h2>
 <p>Assuming your start SalsaHadoop/Hadoop with setting
 $HADOOP_HOME=~/hadoop-0.20.203.0, and is running the master node on
 i55. Then, we download and unzip the <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip">WordCount source
@@ -1012,10 +1089,10 @@ under $HADOOP_HOME.</p>
 </div>
 </div>
 <div class="section" id="execute">
-<h2>2. Execute<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h2>
+<h2>14.5. 2. Execute<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id5">
-<h2>Hadoop-WordCount<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>14.6. Hadoop-WordCount<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>First, we need to uplaod the input files (any text format file) into
 Hadoop distributed file system (HDFS):</p>
 <div class="highlight-python"><pre>[taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -put $HADOOP_HOME/Hadoop-WordCount/input/ input
@@ -1043,7 +1120,7 @@ similar to the following:</p>
 </div>
 </div>
 <div class="section" id="id6">
-<h2>3. Monitoring Hadoop<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>14.7. 3. Monitoring Hadoop<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>We can also monitor the job status using lynx, a text browser, on i136
 based Hadoop monitoring console. Assuming the Hadoop Jobtracker is
 running on i55:9003:</p>
@@ -1051,7 +1128,7 @@ running on i55:9003:</p>
 </div>
 </div>
 <div class="section" id="check-the-result">
-<h2>4.&nbsp;Check the result<a class="headerlink" href="#check-the-result" title="Permalink to this headline">¶</a></h2>
+<h2>14.8. 4.&nbsp;Check the result<a class="headerlink" href="#check-the-result" title="Permalink to this headline">¶</a></h2>
 <p>After finishing the Job, please use the command to check the output:</p>
 <div class="highlight-python"><pre>[taklwu@i55 ~]$ cd $HADOOP_HOME
 [taklwu@i55 ~]$ bin/hadoop fs -ls output
@@ -1067,7 +1144,7 @@ https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptusyoung 42</p
 </div>
 </div>
 <div class="section" id="id7">
-<h2>5.&nbsp;Finishing the Map-Reduce process<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>14.9. 5.&nbsp;Finishing the Map-Reduce process<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>After finishing the Job, please use the command to kill the HDFS and
 Map-Reduce daemon:</p>
 <div class="highlight-python"><pre>[taklwu@i55 hadoop-0.20.203.0]$ bin/stop-all.sh</pre>
@@ -1075,11 +1152,11 @@ Map-Reduce daemon:</p>
 </div>
 </div>
 <div class="section" id="using-twister-on-futuregrid">
-<h1>Using Twister on FutureGrid<a class="headerlink" href="#using-twister-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>15. Using Twister on FutureGrid<a class="headerlink" href="#using-twister-on-futuregrid" title="Permalink to this headline">¶</a></h1>
 <p>PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.</p>
 <div class="section" id="what-is-twister">
-<h2>What is Twister?<a class="headerlink" href="#what-is-twister" title="Permalink to this headline">¶</a></h2>
+<h2>15.1. What is Twister?<a class="headerlink" href="#what-is-twister" title="Permalink to this headline">¶</a></h2>
 <p>MapReduce programming model has simplified the implementations of many
 data parallel applications. The simplicity of the programming model and
 the quality of services provided by many implementations of MapReduce
@@ -1135,11 +1212,11 @@ the&nbsp;<strong>`S&nbsp;A&nbsp;L&nbsp;S&nbsp; &lt;http://salsahpc.indiana.edu/&
 </table>
 </div>
 <div class="section" id="image114">
-<h2><a href="#id35"><span class="problematic" id="id36">|image114|</span></a><a class="headerlink" href="#image114" title="Permalink to this headline">¶</a></h2>
+<h2>15.2. <a href="#id35"><span class="problematic" id="id36">|image114|</span></a><a class="headerlink" href="#image114" title="Permalink to this headline">¶</a></h2>
 <p>Iterative MapReduce programming model using Twister</p>
 </div>
 <div class="section" id="running-twister-on-futuregrid">
-<h2>Running Twister on FutureGrid<a class="headerlink" href="#running-twister-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<h2>15.3. Running Twister on FutureGrid<a class="headerlink" href="#running-twister-on-futuregrid" title="Permalink to this headline">¶</a></h2>
 <p>Twister&nbsp;can be run in various modes within FG either in FutureGrid HPC
 and FutureGrid Cloud environment.</p>
 <ul class="simple">
@@ -1205,7 +1282,7 @@ Kmeans</a></li>
 </ul>
 </div>
 <div class="section" id="papers-and-presentations">
-<h2>Papers and Presentations<a class="headerlink" href="#papers-and-presentations" title="Permalink to this headline">¶</a></h2>
+<h2>15.4. Papers and Presentations<a class="headerlink" href="#papers-and-presentations" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="3%" />
@@ -1235,7 +1312,7 @@ Kmeans</a></li>
 </div>
 </div>
 <div class="section" id="twister-blast">
-<h1>Twister Blast<a class="headerlink" href="#twister-blast" title="Permalink to this headline">¶</a></h1>
+<h1>16. Twister Blast<a class="headerlink" href="#twister-blast" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
 <dt>Number:</dt>
 <dd>Author: Yang Ruan</dd>
@@ -1244,7 +1321,7 @@ Kmeans</a></li>
 Version: 0.1
 Date: 2011-11-07</p>
 <div class="section" id="id10">
-<h2>Twister Blast<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<h2>16.1. Twister Blast<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
 <p>BLAST (Basic Local Alignment Search Tool) is one of the most widely used
 bioinformatics applications written in C++, and&nbsp;the version we are using
 is v2.2.23. <a class="reference external" href="http://www.iterativemapreduce.org/">Twister</a>is an
@@ -1271,14 +1348,14 @@ tutorial</a>.</p>
 </ul>
 </div>
 <div class="section" id="id11">
-<h2>Acknowledge<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<h2>16.2. Acknowledge<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
 <p>This page was original designed by
 <a class="reference external" href="http://salsahpc.indiana.edu/">SalsaHPC</a> group for <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/">Big Data for
 Science Workshop</a>, you can see
 the original pages <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/">here</a>.</p>
 </div>
 <div class="section" id="id12">
-<h2>Requirement<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<h2>16.3. Requirement<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Login to FutureGrid Cluster and obtain compute nodes.
 (<a class="reference external" href="../../salsahadoop-futuregrid-hpc#HPC_Nodes">HPC</a>/
@@ -1294,10 +1371,10 @@ Source code.</li>
 </ol>
 </div>
 <div class="section" id="download-and-prepare-the">
-<h2>1. Download and prepare the<a class="headerlink" href="#download-and-prepare-the" title="Permalink to this headline">¶</a></h2>
+<h2>16.4. 1. Download and prepare the<a class="headerlink" href="#download-and-prepare-the" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="id13">
-<h2>Twister-Blast<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<h2>16.5. Twister-Blast<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
 <p>First, Download and unzip the <a class="reference external" href="http://salsahpc.indiana.edu/tutorial/apps/twister-blast.tar.gz">Twister
 Blast</a>
 package (named as $TWISTER_BLAST_PROGRAM here), then ​copy&nbsp;the
@@ -1321,7 +1398,7 @@ outop = -out</pre>
 </div>
 </div>
 <div class="section" id="prepare-twister-blast-input">
-<h2>2. Prepare Twister-Blast input<a class="headerlink" href="#prepare-twister-blast-input" title="Permalink to this headline">¶</a></h2>
+<h2>16.6. 2. Prepare Twister-Blast input<a class="headerlink" href="#prepare-twister-blast-input" title="Permalink to this headline">¶</a></h2>
 <p>Assume you have already download the input fasta file into some location
 called [input file path]. Use the
 $TWISTER_BLAST_PROGRAM/blast/bin/blastNewFileSpliter.sh to split the
@@ -1341,7 +1418,7 @@ partitions width and height.</li>
 </ul>
 </div>
 <div class="section" id="execute-twister-blast">
-<h2>3. Execute Twister-Blast<a class="headerlink" href="#execute-twister-blast" title="Permalink to this headline">¶</a></h2>
+<h2>16.7. 3. Execute Twister-Blast<a class="headerlink" href="#execute-twister-blast" title="Permalink to this headline">¶</a></h2>
 <p>After deploying those required files onto file system, run the
 twister-Blast program with the following commands:</p>
 <div class="highlight-python"><pre>./blastNew.sh 128 /N/dc/scratch/yangruan/fasta/cog/10000/400/ input_ .fa 400 /N/dc/scratch/yangruan/blast/result/cog/10k/eval_100_400p/ blastOut_</pre>
@@ -1396,7 +1473,7 @@ Total Time of BLAST : 28.12Seconds
 </div>
 </div>
 <div class="section" id="id14">
-<h2>4.&nbsp;Finishing the Map-Reduce process<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<h2>16.8. 4.&nbsp;Finishing the Map-Reduce process<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
 <p>After finishing the Job, please use the command to kill the Map-Reduce
 daemon and broker:</p>
 <div class="highlight-python"><pre>$TWISTER_HOME/bin/stop_twister.sh</pre>
@@ -1404,10 +1481,10 @@ daemon and broker:</p>
 </div>
 </div>
 <div class="section" id="eucalyptus-and-twister-on-futuregrid">
-<h1>Eucalyptus and Twister on FutureGrid<a class="headerlink" href="#eucalyptus-and-twister-on-futuregrid" title="Permalink to this headline">¶</a></h1>
+<h1>17. Eucalyptus and Twister on FutureGrid<a class="headerlink" href="#eucalyptus-and-twister-on-futuregrid" title="Permalink to this headline">¶</a></h1>
 </div>
 <div class="section" id="the-futuregrid-twister-tutorial">
-<h1>The FutureGrid Twister Tutorial<a class="headerlink" href="#the-futuregrid-twister-tutorial" title="Permalink to this headline">¶</a></h1>
+<h1>18. The FutureGrid Twister Tutorial<a class="headerlink" href="#the-futuregrid-twister-tutorial" title="Permalink to this headline">¶</a></h1>
 <p>SALSA Group
 PTI&nbsp;Indiana University</p>
 <p>This tutorial will show you how to use Twister under Eucalyptus on
