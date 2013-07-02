@@ -1,6 +1,12 @@
 Pegasus (Matts)
 ===========================
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+ 
+
 `Pegasus WMS <http://pegasus.isi.edu>`__ is a configurable system for
 mapping and executing abstract application workflows over a wide range
 of execution environments including a laptop, a campus cluster, a Grid,

@@ -1,6 +1,13 @@
+.. _s-eucalyptus:
+
 ===================================================
 Eucalyptus  (Allen)
 ===================================================
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 Eucalyptus is a software platform that implements
 `IaaS-style <http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_Service_.28IaaS.29>`__

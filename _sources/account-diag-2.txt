@@ -7,8 +7,7 @@
       D -> F;
 
       A [label = "1. Get Portal\n Account", 
-         description = "Apply for a portal account at
-         https://portal.futuregrid.org/user/register",
+         description = "Apply for a portal account at https://portal.futuregrid.org/user/register",
          color="lightgrey", shape = roundedbox];
 
       B [label = "Checks Identity", 

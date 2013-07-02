@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>21. RAIN &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>20. RAIN &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="22. Pegasus (Matts)" href="pegasus.html" />
-    <link rel="prev" title="20. Precip" href="precip.html" />
+    <link rel="next" title="21. Pegasus (Matts)" href="pegasus.html" />
+    <link rel="prev" title="19. Precip" href="precip.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -88,11 +88,12 @@
 <li class="toctree-l2"><a class="reference internal" href="account.html#terminology">6.1. Terminology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#quickstart">6.2. Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#projects-and-accounts-for-xsede-users">6.3. Projects and Accounts for XSEDE users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="account.html#in-depth-information">6.4. In Depth Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="account.html#upload-your-ssh-public-key-s">6.5. Upload Your SSH Public Key(s)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="account.html#openid-integration">6.6. OpenId Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="account.html#using-futuregrid-resources">6.7. Using FutureGrid Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="account.html#faq-about-accounts">6.8. FAQ about Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#project-management">6.4. Project Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#upload-a-ssh-public-key">6.5. Upload a SSH Public Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#upload-an-openid">6.6. Upload an OpenId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#accessing-futuregrid-resources">6.7. Accessing FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#manage-a-class-on-futuregrid">6.8. Manage a Class on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#mini-faq">6.9. Mini FAQ</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">7. Using SSH keys</a><ul>
@@ -130,189 +131,202 @@
 <li class="toctree-l2"><a class="reference internal" href="scalemp.html#developing-a-job-script">11.3. Developing a job script</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack.html">12. OpenStack (Gregor)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#get-a-cloud-account">12.1. Get a cloud account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#commandline-clients">12.2. commandline clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">12. OpenStack Essex with euca2ools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#prerequisits">12.1. Prerequisits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-india">12.2. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#system-variable-user">12.3. System Variable $USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#account-and-credentials">12.4. Account and Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#euca2ools-ec2-client-tools">12.5. Euca2ools (EC2 client tools)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#testing-your-setup">12.6. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#list-of-common-images">12.7. List of Common Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#vm-types">12.8. VM Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#key-management">12.9. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#image-instantiation">12.10. Image Instantiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#rename-server-names">12.11. Rename Server Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#monitoring-instances">12.12. Monitoring Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-your-vm">12.13. Log into your VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#nova-volumes-not-available">12.14. Nova Volumes (Not available)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#volume-snapshots">12.15. Volume Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#image-registration">12.16. Image Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#delete-your-images">12.17. Delete your images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#terminate-your-vms">12.18. Terminate your VMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#limitations">12.19. Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#troubleshooting">12.20. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#compatibility-between-nova-and-euca2ools-commands">12.21. Compatibility between nova and euca2ools commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack-essex.html">13. Using OpenStack on FutureGrid (Gregor)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#note">13.1. NOTE:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#summary">13.2. Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#getting-started">13.3. Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#log-into-india">13.4. Log into India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#account-and-credentials">13.5. Account and Credentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#euca2ools-ec2-client-tools">13.6. Euca2ools (EC2 client tools)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#testing-your-setup">13.7. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#list-of-common-images">13.8. List of Common Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#vm-types">13.9. VM Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#key-management">13.10. Key Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#image-instantiation">13.11. Image Instantiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#better-server-names">13.12. Better Server Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#monitoring-instances">13.13. Monitoring Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#log-into-your-vm">13.14. Log into your VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#nova-volumes-not-available">13.15. Nova Volumes (Not available)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#volume-snapshots">13.16. Volume Snapshots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#image-registration">13.17. Image Registration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#delete-your-images">13.18. Delete your images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#terminate-your-vms">13.19. Terminate your VMs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#limitations">13.20. Limitations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-essex.html#troubleshooting">13.21. Troubleshooting:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">13. OpenStack Grizzly (Gregor)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#from-zero-to-get-your-first-instance-running">13.1. From zero to get your first instance running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">13.2. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">13.3. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">13.4. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">13.5. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">13.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">13.7. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">13.8. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">13.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">14. OpenStack Grizzly (Gregor)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#from-zero-to-get-your-first-instance-running">14.1. From zero to get your first instance running</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">14.2. Use Block Storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">14.3. Set up external access to your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">14.4. Make a snapshot of an instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">14.5. Automate some initial configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">14.6. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">14.7. Delete your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">14.8. How to change your password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">14.9. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">14. Eucalyptus  (Allen)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">14.1. Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">14.2. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">14.3. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">14.4. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">14.5. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">14.6. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">14.7. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">14.8. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">14.9. Status of Deployments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">15. Eucalyptus  (Allen)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">15.1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">15.2. Account Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">15.3. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">15.4. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">15.5. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">15.6. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">15.7. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">15.8. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">15.9. Status of Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iaas.html">15. IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">15.1. Nimbus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">15.2. OpenStack Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#eucalyptus-clouds">15.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">15.4. Virtual Appliances for Training and Education</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="iaas.html">16. IaaS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">16.1. Nimbus Clouds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">16.2. OpenStack Clouds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iaas.html#eucalyptus-clouds">16.3. Eucalyptus Clouds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">16.4. Virtual Appliances for Training and Education</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus.html">16. Using Nimbus on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">16.1. Nimbus on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#getting-started">16.2. Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-the-cloud-client">16.3. Using the Cloud Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#virtual-clusters">16.4. Virtual Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloud-quick-start-launch-a-vm-with-1-command">16.5. Cloud Quick Start : Launch a VM with 1 command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">16.6. Launch A VM via Nimbus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-other-nimbus-clouds-on-futuregrid">16.7. Using Other Nimbus Clouds on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launching-multiple-vms">16.8. Launching Multiple VMs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nimbus.html">17. Using Nimbus on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">17.1. Nimbus on FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#getting-started">17.2. Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-the-cloud-client">17.3. Using the Cloud Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#virtual-clusters">17.4. Virtual Clusters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloud-quick-start-launch-a-vm-with-1-command">17.5. Cloud Quick Start : Launch a VM with 1 command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">17.6. Launch A VM via Nimbus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#using-other-nimbus-clouds-on-futuregrid">17.7. Using Other Nimbus Clouds on FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launching-multiple-vms">17.8. Launching Multiple VMs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">17. Nimbus Phantom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">18. cloudinit.d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="precip.html">19. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">19.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#api">19.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">19.3. Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">18. Nimbus Phantom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nimbus-cloudinitd.html">19. cloudinit.d</a></li>
-<li class="toctree-l1"><a class="reference internal" href="precip.html">20. Precip</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">20.1. Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#api">20.2. API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">20.3. Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">20. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">20.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#futuregrid-standalone-image-repository">20.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-image-customization">20.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rain-manual-pages">20.4. RAIN Manual Pages</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">21. RAIN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">21.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#futuregrid-standalone-image-repository">21.2. FutureGrid Standalone Image Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manual-image-customization">21.3. Manual Image Customization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rain-manual-pages">21.4. RAIN Manual Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pegasus.html">21. Pegasus (Matts)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">21.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">21.2. Using Pegasus on FutureGrid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pegasus.html">22. Pegasus (Matts)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">22.1. The Pegasus Run-Time Cloud Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">22.2. Using Pegasus on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vine.html">22. ViNe (Mauritsio/Renato)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unicore.html">23. Unicore</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#unicore-6-on-futuregrid-user-manual">23.1. UNICORE 6 on FutureGrid User Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#introduction">23.2. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#what-is-unicore">23.3. What is UNICORE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">23.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">23.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#running-jobs-on-unicore-sites">23.6. Running Jobs on UNICORE Sites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html#deploying-a-new-unicore-6-grid">23.7. Deploying a New UNICORE 6 Grid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="vine.html">23. ViNe (Mauritsio/Renato)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unicore.html">24. Unicore</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#unicore-6-on-futuregrid-user-manual">24.1. UNICORE 6 on FutureGrid User Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#introduction">24.2. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#what-is-unicore">24.3. What is UNICORE?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">24.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">24.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#running-jobs-on-unicore-sites">24.6. Running Jobs on UNICORE Sites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unicore.html#deploying-a-new-unicore-6-grid">24.7. Deploying a New UNICORE 6 Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genesis.html">24. Genesis II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#introduction">24.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#what-is-genesisii">24.2. What is GenesisII</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#connecting-to-the-genesisii-bes-endpoints">24.3. Connecting to the GenesisII BES Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html#using-the-futuregrid-genesisii-endpoints-as-a-client">24.4. Using the Futuregrid GenesisII Endpoints as a Client</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="genesis.html">25. Genesis II</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="genesis.html#introduction">25.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genesis.html#what-is-genesisii">25.2. What is GenesisII</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genesis.html#connecting-to-the-genesisii-bes-endpoints">25.3. Connecting to the GenesisII BES Endpoints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="genesis.html#using-the-futuregrid-genesisii-endpoints-as-a-client">25.4. Using the Futuregrid GenesisII Endpoints as a Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">25. Tutorials (Renato/Mauritsio)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-0-accessing-futuregrid-resources">25.1. Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-1-cloud-provisioning-platforms">25.2. Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-2-cloud-run-time-map-reduce-platforms">25.3. Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">25.4. Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-4-high-performance-computing">25.5. Tutorial Topic 4: High Performance Computing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-5-experiment-management">25.6. Tutorial Topic 5: Experiment Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-6-image-management-and-rain">25.7. Tutorial Topic 6: Image Management and Rain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-7-storage">25.8. Tutorial Topic 7:  Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#other-tutorials-and-educational-materials">25.9. Other Tutorials and Educational Materials</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials.html">26. Tutorials (Renato/Mauritsio)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-0-accessing-futuregrid-resources">26.1. Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-1-cloud-provisioning-platforms">26.2. Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-2-cloud-run-time-map-reduce-platforms">26.3. Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">26.4. Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-4-high-performance-computing">26.5. Tutorial Topic 4: High Performance Computing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-5-experiment-management">26.6. Tutorial Topic 5: Experiment Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-6-image-management-and-rain">26.7. Tutorial Topic 6: Image Management and Rain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#tutorial-topic-7-storage">26.8. Tutorial Topic 7:  Storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#other-tutorials-and-educational-materials">26.9. Other Tutorials and Educational Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="papi.html">26. PAPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">26.1. Availability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="papi.html#references">26.2. References</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="papi.html">27. PAPI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#availability">27.1. Availability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="papi.html#references">27.2. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">27. Delta GPU User Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">27.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">27.2. Running programs on a single GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">27.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="gpu.html">28. Delta GPU User Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">28.1. Running MPI/GPU program on the Delta cluster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">28.2. Running programs on a single GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">28.3. C-means clustering using CUDA on GPU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html">28. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">28.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#training-and-education">28.2. Training and Education</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">29. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">29.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">29.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">29.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">29.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">29.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#alamo">30. Alamo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">31. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">32. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">33. Management Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">34. Commandline clients</a></li>
 </ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">21. RAIN</a><ul>
-<li><a class="reference internal" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">21.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a><ul>
-<li><a class="reference internal" href="#request-access">21.1.1. Request access</a></li>
-<li><a class="reference internal" href="#log-into-india">21.1.2. Log into India</a></li>
-<li><a class="reference internal" href="#start-the-shell">21.1.3. Start the Shell</a></li>
-<li><a class="reference internal" href="#generate-the-image">21.1.4. Generate the Image</a></li>
-<li><a class="reference internal" href="#image-repository">21.1.5. Image Repository</a></li>
-<li><a class="reference internal" href="#register-image">21.1.6. Register Image</a></li>
-<li><a class="reference internal" href="#start-image">21.1.7. Start Image</a></li>
+<li><a class="reference internal" href="#">20. RAIN</a><ul>
+<li><a class="reference internal" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">20.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a><ul>
+<li><a class="reference internal" href="#request-access">20.1.1. Request access</a></li>
+<li><a class="reference internal" href="#log-into-india">20.1.2. Log into India</a></li>
+<li><a class="reference internal" href="#start-the-shell">20.1.3. Start the Shell</a></li>
+<li><a class="reference internal" href="#generate-the-image">20.1.4. Generate the Image</a></li>
+<li><a class="reference internal" href="#image-repository">20.1.5. Image Repository</a></li>
+<li><a class="reference internal" href="#register-image">20.1.6. Register Image</a></li>
+<li><a class="reference internal" href="#start-image">20.1.7. Start Image</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#futuregrid-standalone-image-repository">21.2. FutureGrid Standalone Image Repository</a><ul>
-<li><a class="reference internal" href="#requirement">21.2.1. Requirement</a></li>
-<li><a class="reference internal" href="#software">21.2.2. Software</a></li>
-<li><a class="reference internal" href="#documentation">21.2.3. Documentation</a><ul>
-<li><a class="reference internal" href="#user-manual">21.2.3.1. User Manual</a></li>
-<li><a class="reference internal" href="#installation">21.2.3.2. Installation</a></li>
-<li><a class="reference internal" href="#configuration">21.2.3.3. Configuration</a></li>
+<li><a class="reference internal" href="#futuregrid-standalone-image-repository">20.2. FutureGrid Standalone Image Repository</a><ul>
+<li><a class="reference internal" href="#requirement">20.2.1. Requirement</a></li>
+<li><a class="reference internal" href="#software">20.2.2. Software</a></li>
+<li><a class="reference internal" href="#documentation">20.2.3. Documentation</a><ul>
+<li><a class="reference internal" href="#user-manual">20.2.3.1. User Manual</a></li>
+<li><a class="reference internal" href="#installation">20.2.3.2. Installation</a></li>
+<li><a class="reference internal" href="#configuration">20.2.3.3. Configuration</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#manual-image-customization">21.3. Manual Image Customization</a><ul>
-<li><a class="reference internal" href="#logging-into-india">21.3.1. Logging into India</a></li>
-<li><a class="reference internal" href="#requesting-access">21.3.2. Requesting access</a></li>
-<li><a class="reference internal" href="#obtaining-the-image">21.3.3. Obtaining the image</a><ul>
-<li><a class="reference internal" href="#getting-an-image-from-the-repository">21.3.3.1. Getting an image from the repository</a></li>
-<li><a class="reference internal" href="#generating-a-new-image">21.3.3.2. Generating a new image</a></li>
+<li><a class="reference internal" href="#manual-image-customization">20.3. Manual Image Customization</a><ul>
+<li><a class="reference internal" href="#logging-into-india">20.3.1. Logging into India</a></li>
+<li><a class="reference internal" href="#requesting-access">20.3.2. Requesting access</a></li>
+<li><a class="reference internal" href="#obtaining-the-image">20.3.3. Obtaining the image</a><ul>
+<li><a class="reference internal" href="#getting-an-image-from-the-repository">20.3.3.1. Getting an image from the repository</a></li>
+<li><a class="reference internal" href="#generating-a-new-image">20.3.3.2. Generating a new image</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#customizing-the-image">21.3.4. Customizing the image</a></li>
-<li><a class="reference internal" href="#transfer-the-image-back-to-india">21.3.5. Transfer the image back to India</a></li>
-<li><a class="reference internal" href="#id1">21.3.6. Log into India</a></li>
-<li><a class="reference internal" href="#upload-the-image-to-the-repository">21.3.7. Upload the image to the repository</a></li>
-<li><a class="reference internal" href="#register-your-image-in-different-infrastructures">21.3.8. Register your image in different infrastructures</a><ul>
-<li><a class="reference internal" href="#register-the-image-in-openstack">21.3.8.1. Register the image in Openstack</a></li>
-<li><a class="reference internal" href="#register-the-image-in-eucalyptus">21.3.8.2. Register the image in Eucalyptus</a></li>
-<li><a class="reference internal" href="#register-the-image-in-hpc">21.3.8.3. Register the image in HPC</a></li>
+<li><a class="reference internal" href="#customizing-the-image">20.3.4. Customizing the image</a></li>
+<li><a class="reference internal" href="#transfer-the-image-back-to-india">20.3.5. Transfer the image back to India</a></li>
+<li><a class="reference internal" href="#id1">20.3.6. Log into India</a></li>
+<li><a class="reference internal" href="#upload-the-image-to-the-repository">20.3.7. Upload the image to the repository</a></li>
+<li><a class="reference internal" href="#register-your-image-in-different-infrastructures">20.3.8. Register your image in different infrastructures</a><ul>
+<li><a class="reference internal" href="#register-the-image-in-openstack">20.3.8.1. Register the image in Openstack</a></li>
+<li><a class="reference internal" href="#register-the-image-in-eucalyptus">20.3.8.2. Register the image in Eucalyptus</a></li>
+<li><a class="reference internal" href="#register-the-image-in-hpc">20.3.8.3. Register the image in HPC</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-your-registered-image">21.3.9. Using your Registered Image</a></li>
+<li><a class="reference internal" href="#using-your-registered-image">20.3.9. Using your Registered Image</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#rain-manual-pages">21.4. RAIN Manual Pages</a><ul>
-<li><a class="reference internal" href="#fg-portal-manage">21.4.1. fg-portal-manage</a></li>
+<li><a class="reference internal" href="#rain-manual-pages">20.4. RAIN Manual Pages</a><ul>
+<li><a class="reference internal" href="#fg-portal-manage">20.4.1. fg-portal-manage</a></li>
 </ul>
 </li>
 </ul>
@@ -324,9 +338,9 @@
             
               
   <li><a href="precip.html"
-         title="previous chapter">&laquo; 20. Precip</a></li>
+         title="previous chapter">&laquo; 19. Precip</a></li>
   <li><a href="pegasus.html"
-         title="next chapter">22. Pegasus (Matts) &raquo;</a></li>
+         title="next chapter">21. Pegasus (Matts) &raquo;</a></li>
             
             
               <li>
@@ -351,14 +365,67 @@
 <div class="container">
   
   <div class="section" id="rain">
-<h1>21. RAIN<a class="headerlink" href="#rain" title="Permalink to this headline">¶</a></h1>
+<h1>20. RAIN<a class="headerlink" href="#rain" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Page Contents</p>
+<div class="contents local last topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell" id="id2">Generate and Register an OS Image on FutureGrid using the FG Shell</a><ul>
+<li><a class="reference internal" href="#request-access" id="id3">Request access</a></li>
+<li><a class="reference internal" href="#log-into-india" id="id4">Log into India</a></li>
+<li><a class="reference internal" href="#start-the-shell" id="id5">Start the Shell</a></li>
+<li><a class="reference internal" href="#generate-the-image" id="id6">Generate the Image</a></li>
+<li><a class="reference internal" href="#image-repository" id="id7">Image Repository</a></li>
+<li><a class="reference internal" href="#register-image" id="id8">Register Image</a></li>
+<li><a class="reference internal" href="#start-image" id="id9">Start Image</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#futuregrid-standalone-image-repository" id="id10">FutureGrid Standalone Image Repository</a><ul>
+<li><a class="reference internal" href="#requirement" id="id11">Requirement</a></li>
+<li><a class="reference internal" href="#software" id="id12">Software</a></li>
+<li><a class="reference internal" href="#documentation" id="id13">Documentation</a><ul>
+<li><a class="reference internal" href="#user-manual" id="id14">User Manual</a></li>
+<li><a class="reference internal" href="#installation" id="id15">Installation</a></li>
+<li><a class="reference internal" href="#configuration" id="id16">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#manual-image-customization" id="id17">Manual Image Customization</a><ul>
+<li><a class="reference internal" href="#logging-into-india" id="id18">Logging into India</a></li>
+<li><a class="reference internal" href="#requesting-access" id="id19">Requesting access</a></li>
+<li><a class="reference internal" href="#obtaining-the-image" id="id20">Obtaining the image</a><ul>
+<li><a class="reference internal" href="#getting-an-image-from-the-repository" id="id21">Getting an image from the repository</a></li>
+<li><a class="reference internal" href="#generating-a-new-image" id="id22">Generating a new image</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customizing-the-image" id="id23">Customizing the image</a></li>
+<li><a class="reference internal" href="#transfer-the-image-back-to-india" id="id24">Transfer the image back to India</a></li>
+<li><a class="reference internal" href="#id1" id="id25">Log into India</a></li>
+<li><a class="reference internal" href="#upload-the-image-to-the-repository" id="id26">Upload the image to the repository</a></li>
+<li><a class="reference internal" href="#register-your-image-in-different-infrastructures" id="id27">Register your image in different infrastructures</a><ul>
+<li><a class="reference internal" href="#register-the-image-in-openstack" id="id28">Register the image in Openstack</a></li>
+<li><a class="reference internal" href="#register-the-image-in-eucalyptus" id="id29">Register the image in Eucalyptus</a></li>
+<li><a class="reference internal" href="#register-the-image-in-hpc" id="id30">Register the image in HPC</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-your-registered-image" id="id31">Using your Registered Image</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rain-manual-pages" id="id32">RAIN Manual Pages</a><ul>
+<li><a class="reference internal" href="#fg-portal-manage" id="id33">fg-portal-manage</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <p>FutureGrid image management defines the full lifecycle of the images
 in FutureGrid. It involves the process of creating, customizing,
 storing, sharing, and deploying images for different FutureGrid
 environments. For information and instructions on managing your images
 in FutureGrid, and the Rain environment, see the <a class="reference external" href="http://futuregrid.github.com/rain/quickstart.html">Quickstart Guide</a>.</p>
 <div class="section" id="generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">
-<h2>21.1. Generate and Register an OS Image on FutureGrid using the FG Shell<a class="headerlink" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">20.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a><a class="headerlink" href="#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell" title="Permalink to this headline">¶</a></h2>
 <p>Below, we summarize the different steps needed to create a new image
 and register it in a FutureGrid infrastructure. In this case, we will
 register the image in OpenStack, but it can be registered in any other
@@ -366,7 +433,7 @@ FutureGrid infrastructure, such as Eucalyptus, Nimbus, or HPC. Detailed
 information about these tools can be found
 in  <a class="reference external" href="http://futuregrid.github.com/rain/">http://futuregrid.github.com/rain/</a>.</p>
 <div class="section" id="request-access">
-<h3>21.1.1. Request access<a class="headerlink" href="#request-access" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">20.1.1. Request access</a><a class="headerlink" href="#request-access" title="Permalink to this headline">¶</a></h3>
 <p>Submit a ticket to request
 access <a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a></p>
 <p>Please use the subject: &#8220;Request to access FutureGrid Rain&#8221;. Include
@@ -378,13 +445,13 @@ take a business day for you to get added (a business day is 9am-5pm EST
 Mon-Fri).</p>
 </div>
 <div class="section" id="log-into-india">
-<h3>21.1.2. Log into India<a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">20.1.2. Log into India</a><a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>$ ssh &lt;username&gt;@india.futuregrid.org
 $ module load futuregrid</pre>
 </div>
 </div>
 <div class="section" id="start-the-shell">
-<h3>21.1.3. Start the Shell<a class="headerlink" href="#start-the-shell" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">20.1.3. Start the Shell</a><a class="headerlink" href="#start-the-shell" title="Permalink to this headline">¶</a></h3>
 <p>Execute the FG Shell. Please remember to replace &lt;username&gt; with your
 portal user name. Then, you will be asked for a password (which is your
 portal password):</p>
@@ -394,7 +461,7 @@ portal password):</p>
 your prompt is different, you need to execute &#8220;use rain&#8221;.</p>
 </div>
 <div class="section" id="generate-the-image">
-<h3>21.1.4. Generate the Image<a class="headerlink" href="#generate-the-image" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">20.1.4. Generate the Image</a><a class="headerlink" href="#generate-the-image" title="Permalink to this headline">¶</a></h3>
 <p>We are going to generate an Ubuntu 12.04 image. The -s parameter
 allows you to specify the software you want to install in your image.
 Currently, only the software available in the official repositories can
@@ -405,7 +472,7 @@ be installed:</p>
 image ID will be printed.</p>
 </div>
 <div class="section" id="image-repository">
-<h3>21.1.5. Image Repository<a class="headerlink" href="#image-repository" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">20.1.5. Image Repository</a><a class="headerlink" href="#image-repository" title="Permalink to this headline">¶</a></h3>
 <p>We can consult the information of the image by executing the following
 (please replace &lt;imageid&gt; with the ID that you got from the previous
 command):</p>
@@ -413,7 +480,7 @@ command):</p>
 </div>
 </div>
 <div class="section" id="register-image">
-<h3>21.1.6. Register Image<a class="headerlink" href="#register-image" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">20.1.6. Register Image</a><a class="headerlink" href="#register-image" title="Permalink to this headline">¶</a></h3>
 <p>Next, we need to register that image in the infrastructure we want to
 use. In this case, we will register the image in OpenStack (if you
 followed the FG Openstack tutorial, your novarc will probably be in
@@ -431,7 +498,7 @@ takes time to respond when the image is being uploaded (it is an
 OpenStack issue).</p>
 </div>
 <div class="section" id="start-image">
-<h3>21.1.7. Start Image<a class="headerlink" href="#start-image" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">20.1.7. Start Image</a><a class="headerlink" href="#start-image" title="Permalink to this headline">¶</a></h3>
 <p>Once the image is in &#8220;available&#8221; status, we can proceed to start a VM
 using the ami-ID that we got from the register command. In this case, we
 are going in Interative mode, which means that we are going to get
@@ -441,7 +508,7 @@ logged into the VM once it is running:</p>
 </div>
 </div>
 <div class="section" id="futuregrid-standalone-image-repository">
-<h2>21.2. FutureGrid Standalone Image Repository<a class="headerlink" href="#futuregrid-standalone-image-repository" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">20.2. FutureGrid Standalone Image Repository</a><a class="headerlink" href="#futuregrid-standalone-image-repository" title="Permalink to this headline">¶</a></h2>
 <p>The FutureGrid image repository is a standalone service that is not
 tied to FutureGrid nor to any IaaS infrastructure. This image repository
 offers a common interface that can distinguish image types for different
@@ -465,40 +532,40 @@ storage plugins not only increase the interoperability of the image
 repository, but can also be used by the community as templates to create
 their own plugins to support other storage systems.</p>
 <div class="section" id="requirement">
-<h3>21.2.1. Requirement<a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">20.2.1. Requirement</a><a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Python 2.6 or 2.7</li>
 <li>LDAP server for user authentication</li>
 </ul>
 </div>
 <div class="section" id="software">
-<h3>21.2.2. Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">20.2.2. Software</a><a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h3>
 <p>The software is open-source under an Apache 2 license. The image
 repository can be found in github as part of our Image Management and
 Rain
 software  <a class="reference external" href="https://github.com/futuregrid/rain">https://github.com/futuregrid/rain</a> .</p>
 </div>
 <div class="section" id="documentation">
-<h3>21.2.3. Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">20.2.3. Documentation</a><a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
 <p>The documentation can be found
 in  <a class="reference external" href="http://futuregrid.github.com/rain/index.html">http://futuregrid.github.com/rain/index.html</a>.
 Since this link provides information about all our tools, in this
 section we collect the links that refer to the image repository.</p>
 <div class="section" id="user-manual">
-<h4>21.2.3.1. User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id14">20.2.3.1. User Manual</a><a class="headerlink" href="#user-manual" title="Permalink to this headline">¶</a></h4>
 <p>Information about the command-line interface is found
 in  <a class="reference external" href="http://futuregrid.github.com/rain/man-repo.html">http://futuregrid.github.com/rain/man-repo.html</a>.
 If you are interested on using the shell, the manual is
 in  <a class="reference external" href="http://futuregrid.github.com/rain/man-shell.html">http://futuregrid.github.com/rain/man-shell.html</a>.</p>
 </div>
 <div class="section" id="installation">
-<h4>21.2.3.2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id15">20.2.3.2. Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h4>
 <p>You need to install the complete software, even if you only want to
 use the image repository. This information is found
 in  <a class="reference external" href="http://futuregrid.github.com/rain/install.html">http://futuregrid.github.com/rain/install.html</a>.</p>
 </div>
 <div class="section" id="configuration">
-<h4>21.2.3.3. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id16">20.2.3.3. Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h4>
 <p>The configuration information can be found
 in  <a class="reference external" href="http://futuregrid.github.com/rain/configure_futuregrid.html">http://futuregrid.github.com/rain/configure_futuregrid.html</a>.
 You will be interested in:</p>
@@ -514,7 +581,7 @@ Repository  <a class="reference external" href="http://futuregrid.github.com/rai
 </div>
 </div>
 <div class="section" id="manual-image-customization">
-<h2>21.3. Manual Image Customization<a class="headerlink" href="#manual-image-customization" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">20.3. Manual Image Customization</a><a class="headerlink" href="#manual-image-customization" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes users need to further customize their images by installing
 their own software-software which may not be able to be installed with
 the image generation tool. In this tutorial, we explain how users can
@@ -523,7 +590,7 @@ generation tool. Detailed information about FG image management tools
 can be found in
 <a class="reference external" href="http://futuregrid.github.com/rain/">http://futuregrid.github.com/rain/</a>.</p>
 <div class="section" id="logging-into-india">
-<h3>21.3.1. Logging into India<a class="headerlink" href="#logging-into-india" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">20.3.1. Logging into India</a><a class="headerlink" href="#logging-into-india" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>$ ssh &lt;username&gt;@india.futuregrid.org
 $ module load futuregrid</pre>
 </div>
@@ -532,20 +599,20 @@ $ module load futuregrid</pre>
 </ul>
 </div>
 <div class="section" id="requesting-access">
-<h3>21.3.2. Requesting access<a class="headerlink" href="#requesting-access" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">20.3.2. Requesting access</a><a class="headerlink" href="#requesting-access" title="Permalink to this headline">¶</a></h3>
 <p>Submit a ticket to request
 access  <a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a></p>
 </div>
 <div class="section" id="obtaining-the-image">
-<h3>21.3.3. Obtaining the image<a class="headerlink" href="#obtaining-the-image" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">20.3.3. Obtaining the image</a><a class="headerlink" href="#obtaining-the-image" title="Permalink to this headline">¶</a></h3>
 <p>You can get your image from our repository, or generate a new one.</p>
 <div class="section" id="getting-an-image-from-the-repository">
-<h4>21.3.3.1. Getting an image from the repository<a class="headerlink" href="#getting-an-image-from-the-repository" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id21">20.3.3.1. Getting an image from the repository</a><a class="headerlink" href="#getting-an-image-from-the-repository" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>$ fg-repo -u &lt;username&gt; -g &lt;imageId&gt;</pre>
 </div>
 </div>
 <div class="section" id="generating-a-new-image">
-<h4>21.3.3.2. Generating a new image<a class="headerlink" href="#generating-a-new-image" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id22">20.3.3.2. Generating a new image</a><a class="headerlink" href="#generating-a-new-image" title="Permalink to this headline">¶</a></h4>
 <p>We are going to generate an Ubuntu image. Since we want to modify the
 image, we have specified the -g parameter to retrieve the image after it
 is generated. By default, it is uploaded to the image repository:</p>
@@ -557,7 +624,7 @@ in <em>/N/u/&lt;username&gt;/123123123.tgz</em> .</p>
 </div>
 </div>
 <div class="section" id="customizing-the-image">
-<h3>21.3.4. Customizing the image<a class="headerlink" href="#customizing-the-image" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">20.3.4. Customizing the image</a><a class="headerlink" href="#customizing-the-image" title="Permalink to this headline">¶</a></h3>
 <p>To continue with the rest of the tutorial, we need a UNIX machine
 where we have root privileges.</p>
 <p>Assuming that we are in a UNIX machine with root privileges:</p>
@@ -611,18 +678,18 @@ $ tar vxfz mynewimage.tgz jdiaz859434.img jdiaz859434.manifest.xml</pre>
 </div>
 </div>
 <div class="section" id="transfer-the-image-back-to-india">
-<h3>21.3.5. Transfer the image back to India<a class="headerlink" href="#transfer-the-image-back-to-india" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">20.3.5. Transfer the image back to India</a><a class="headerlink" href="#transfer-the-image-back-to-india" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>$ scp mynewimage.tgz &lt;username&gt;@india.futuregrid.org:/N/u/&lt;username&gt;/</pre>
 </div>
 </div>
 <div class="section" id="id1">
-<h3>21.3.6. Log into India<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">20.3.6. Log into India</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>$ ssh &lt;username&gt;@india.futuregrid.org
 $ module load futuregrid</pre>
 </div>
 </div>
 <div class="section" id="upload-the-image-to-the-repository">
-<h3>21.3.7. Upload the image to the repository<a class="headerlink" href="#upload-the-image-to-the-repository" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">20.3.7. Upload the image to the repository</a><a class="headerlink" href="#upload-the-image-to-the-repository" title="Permalink to this headline">¶</a></h3>
 <p>We upload the image to the repository so we can reuse it and share it
 with other users. When uploading the image, you can specify some
 metadata to describe the properties of the image:</p>
@@ -632,7 +699,7 @@ metadata to describe the properties of the image:</p>
 This ID is needed for the next step.</p>
 </div>
 <div class="section" id="register-your-image-in-different-infrastructures">
-<h3>21.3.8. Register your image in different infrastructures<a class="headerlink" href="#register-your-image-in-different-infrastructures" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id27">20.3.8. Register your image in different infrastructures</a><a class="headerlink" href="#register-your-image-in-different-infrastructures" title="Permalink to this headline">¶</a></h3>
 <p>You now have your image ready to be registered in the different
 FutureGrid infrastructures. To use OpenStack
 (<a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">tutorial</a>) and
@@ -640,17 +707,17 @@ Eucalyptus
 (<a class="reference external" href="https://portal.futuregrid.org/tutorials/eucalyptus3">tutorial</a>),
 you need to indicate the location of you novarc and eucarc file.</p>
 <div class="section" id="register-the-image-in-openstack">
-<h4>21.3.8.1. Register the image in Openstack<a class="headerlink" href="#register-the-image-in-openstack" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id28">20.3.8.1. Register the image in Openstack</a><a class="headerlink" href="#register-the-image-in-openstack" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>$ fg-register -u &lt;username&gt; -r &lt;imageID&gt; -s india -v ~/novarc</pre>
 </div>
 </div>
 <div class="section" id="register-the-image-in-eucalyptus">
-<h4>21.3.8.2. Register the image in Eucalyptus<a class="headerlink" href="#register-the-image-in-eucalyptus" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id29">20.3.8.2. Register the image in Eucalyptus</a><a class="headerlink" href="#register-the-image-in-eucalyptus" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>$ fg-register -u &lt;username&gt; -r &lt;imageID&gt; -e india -v ~/eucarc</pre>
 </div>
 </div>
 <div class="section" id="register-the-image-in-hpc">
-<h4>21.3.8.3. Register the image in HPC<a class="headerlink" href="#register-the-image-in-hpc" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id30">20.3.8.3. Register the image in HPC</a><a class="headerlink" href="#register-the-image-in-hpc" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>$ fg-register -u &lt;username&gt; -r &lt;imageID&gt; -x india</pre>
 </div>
 <p>Each command will provide you with the ami-ID that your image has in
@@ -658,7 +725,7 @@ the specified infrastructure.</p>
 </div>
 </div>
 <div class="section" id="using-your-registered-image">
-<h3>21.3.9. Using your Registered Image<a class="headerlink" href="#using-your-registered-image" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id31">20.3.9. Using your Registered Image</a><a class="headerlink" href="#using-your-registered-image" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">fix the links in this section</p>
@@ -682,7 +749,7 @@ are logged into the machine):</p>
 </div>
 </div>
 <div class="section" id="rain-manual-pages">
-<h2>21.4. RAIN Manual Pages<a class="headerlink" href="#rain-manual-pages" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id32">20.4. RAIN Manual Pages</a><a class="headerlink" href="#rain-manual-pages" title="Permalink to this headline">¶</a></h2>
 <p>FutureGrid provides a number of manual pages, listed below.</p>
 <p>(For Rain, our up-to-date documentation of rain can be found at
 <a class="reference external" href="https://portal.futuregrid.org/doc/rain/index.html">https://portal.futuregrid.org/doc/rain/index.html</a>
@@ -696,7 +763,7 @@ and<a class="reference external" href="http://futuregrid.github.com/rain/index.h
 <li><a class="reference external" href="http://futuregrid.github.com/rain/man-shell.html">fg-shell</a></li>
 </ul>
 <div class="section" id="fg-portal-manage">
-<h3>21.4.1. fg-portal-manage<a class="headerlink" href="#fg-portal-manage" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id33">20.4.1. fg-portal-manage</a><a class="headerlink" href="#fg-portal-manage" title="Permalink to this headline">¶</a></h3>
 <p>The tool is for admin purpose only. An admin person or an system script
 can call this to get user/project information from the portal:</p>
 <div class="highlight-python"><pre>fg-portal-manage

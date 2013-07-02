@@ -2,15 +2,15 @@
 Introduction
 **********************************************************************
 
-.. todo::
-   
-   Introduction. FIx all hyperlinks
+.. sidebar:: Page Contents
 
+   .. contents::
+      :local:
 
 Executive Summary 
 ---------------------------------------------------------------------
 
-The FutureGrid Project (for citation see Section :ref:`my-how-to-cite`.) makes it possible for researchers to tackle complex research challenges in computer science related to the use and security of grids and clouds.  These include topics ranging from authentication, authorization, scheduling, virtualization, middleware design, interface design, and cybersecurity, to the optimization of grid-enabled and cloud-enabled computational schemes for researchers in astronomy, chemistry, biology, engineering, atmospheric science and epidemiology. The project team provides a significant new experimental computing grid and cloud test-bed, named FutureGrid, to the research community, together with user support for third-party researchers conducting experiments on FutureGrid.
+The FutureGrid Project (for citation see Section :ref:`my-how-to-cite`.) makes it possible for researchers to tackle complex research challenges in computer science related to the use and security of grids and clouds.  These include topics ranging from authentication, authorization, scheduling, virtualization, middleware design, interface design, and cybersecurity, to the optimization of grid-enabled and cloud-enabled computational schemes for researchers in astronomy, chemistry, biology, engineering, atmospheric science and epidemiology. The project team provides a significant new experimental computing grid and cloud test-bed, named FutureGrid, to the research community, together with user support for third-party researchers conducting experiments on FutureGrid.
 
 The test-bed makes it possible for researchers to conduct experiments by submitting an experiment plan that is then executed via a sophisticated workflow engine, preserving the provenance and state information necessary to allow reproducibility.
 
@@ -28,16 +28,14 @@ Project and Account Application
 
 FutureGrid allows you to easily create a project and use FG resources.
 All you need to do is to create a portal account and apply for a
-project. Detailed information is provided in the
-`manual <https://portal.futuregrid.org/manual/access>`__.
+project. Detailed information is provided in the section :ref:`s-accounts`.
 
 Services
 --------------------
 
 Currently, FutureGrid provides a number of different services. However, not all services
 are offerd on all of the FG resources. To find
-out how the machines are divided, we provide a convenient \ `status
-monitor <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__.
+out how the machines are used please see the Section :ref:`s-status`.
 The following services are most popular with our users
 
 OpenStack:
@@ -47,8 +45,7 @@ OpenStack:
     Swift), and OpenStack Image Service (called Glance). OpenStack is
     a new effort and has received considerable momentum due to its
     openness and the support of companies. Users can find more details
-    in the `OpenStack Tutorial
-    <https://portal.futuregrid.org/tutorials/openstack>`__.
+    in the section :ref:`s-openstack`.
 
 Nimbus:
     Nimbus is an open-source service package that allows users to run
@@ -59,8 +56,7 @@ Nimbus:
     SSH. You can then run services, perform computations, and
     configure the system as desired. After using and configuring the
     VM, you can save the modified VM image back to the Nimbus image
-    repository. Users can find more details in the \ `Nimbus tutorial
-    <https://portal.futuregrid.org/tutorials/nimbus>`__.
+    repository. Users can find more details in the section :ref:`s-nimbus`.
 
 Eucalyptus:
     Eucalyptus is an open-source software platform that implements
@@ -68,9 +64,8 @@ Eucalyptus:
     Services (AWS) compliant EC2-based web service interface for
     interacting with the Cloud service. Eucalyptus also provides
     services such as the AWS-compliant Walrus and a user interface for
-    managing users and images.  Users can find more details in the \
-    `Eucalyptus tutorial
-    <https://portal.futuregrid.org/tutorials/eucalyptus>`__.
+    managing users and images.  Users can find more details in the
+    section :ref:`s-eucalyptus`
 
 .. 
     OpenNebula:
@@ -86,36 +81,31 @@ Eucalyptus:
     Cloud interfaces to expose its functionality for virtual machine,
     storage, and network management. Users can find how to use this
     software in the `OpenNebula tutorial
-    <https://portal.futuregrid.org/tutorials/opennebula>`__. 
+    <https://portal.futuregrid.org/tutorials/opennebula>`__. 
 
 High Performance Computing:
     High Performance Computing can be defined as the application of
     supercomputing techniques to solve computational problems that are too
     large for standard computers or would take too much time. This is one of
-    the more important features that the scientific community needs to
+    the more important features that the scientific community needs to
     achieve their projects. Thus, FutureGrid provides users the possibility
     of executing their parallel applications or using scientific software. A
-    guide to accessing HPC services can be found in the \ `Accessing
-    FutureGrid <https://portal.futuregrid.org/manual/access>`__ and `HPC
-    services <https://portal.futuregrid.org/manual/hpcservices>`__ sections of
-    the \ `User Manual <https://portal.futuregrid.org/manual>`__.
+    guide to accessing HPC services can be found in the section :ref:`hpc`.
 
-Storage:
-    Users can find different storage systems to cover a wide number of
-    purposes. In the \ `Storage
-    Manual <https://portal.futuregrid.org/manual/services/storage>`__, users
-    can find the information needed to get access and learn the usage. A
-    summary of the external storage systems available can be found at:
-    `http://portal.futuregrid.org/manual/hardware <http://portal.futuregrid.org/manual/hardware>`__.
+Storage: 
+    Users can find different storage systems to cover a wide
+    number of purposes. In the section :ref:`s-storage`, users can
+    find the information needed to get access and learn the usage. A
+    summary of the external storage systems available can be found at
+    :ref:`s-hpc`.
+
 
 Information Services:
     These services gather the information of the different elements that
-    make up FutureGrid to provide accurate and complete knowledge of the
-    computational environment. This information is presented using different
-    web portals: \ `General System
-    Status <https://portal.futuregrid.org/status>`__, \ `Cloud, Cluster,
-    Services Status <http://inca.futuregrid.org/>`__ and `Network
-    Status <http://noc.futuregrid.org/>`__.
+    make up FutureGrid to provide accurate and complete knowledge of the
+    computational environment. This information is presented using different
+    web portals in our section about the FutureGrid :ref:`s-status`.
+
 
 Hardware
 ------------------
@@ -123,60 +113,45 @@ Hardware
 FutureGrid includes a geographically distributed set of heterogeneous
 computing systems, data management systems, and dedicated networks.
 These resources are provided by different institutions across the United
-States. Detailed information on the different sites can be
-found \ `here <https://portal.futuregrid.org/hardware>`__ and in
-the \ `User Manual <https://portal.futuregrid.org/manual>`__.
+States. Detailed information on the different sites can be found in
+the :ref:`s-hardware`.
+
+
 
 Support
 -------------
 
-The best place to start obtaining information about FutureGrid is to
-visit our expanding \ `FutureGrid User
-Manual <https://portal.futuregrid.org/manual>`__, of which this page is
-a part. To obtain support for FutureGrid via the portal [todo]
-which includes a collection of FAQs about FutureGrid. We also provide
-some user \ `Forums <https://portal.futuregrid.org/forum>`__. Please
-note that some information may already be outdated. We try our best,
-however, to keep the manual and the Knowledge Base as up to date as
-possible.
-
-If you need help or observe things that are not correct, see
-`https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
-
+Whe have the following activities that help you with FutureGrid.
 
 Manual:
-    We are creating gradually a manual for FutureGrid. This manual contains
-    contributions from the FG staff and FG users. The link for the manual is
-
-    -  `https://portal.futuregrid.org/manual <https://portal.futuregrid.org/manual>`__
+    The best place to start obtaining information about FutureGrid is this
+    expanding :ref:`s-manual`. 
 
     In case you have a useful contribution, you can simply comment on each
-    page, or if you like to create a chapter to be included, please create a
-    community page.  A community page can be created by clicking on the
-    following link
-
-    -  `Create a
-       Community Page <https://portal.futuregrid.org/node/add/page-community>`__
+    page, or if you like to create a chapter to be included, please  
+ 
+    - `create a community page <https://portal.futuregrid.org/node/add/page-community>`__
 
     Community pages can also be used to report on elaborate experiment
-    results. Once you are done with your contribution, please send a ticket
-    to us so we can make it more prominently visible in the portal:
+    results. Once you are done with your contribution, please 
 
-    -  `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__
+    - `send a ticket <https://portal.futuregrid.org/help>`__
+
+    to us so we can make it more prominently visible in the portal.
+
 
 User Forum:
-    Based on advice from other projects we have established a number of user
-    forums that are available while following this link
+    Based on advice from other projects we have established a number
+    of 
 
-    -  `User Forum <https://portal.futuregrid.org/forum>`__
+    -  `user forums <https://portal.futuregrid.org/forum>`__.
 
     To post to the forum, you must create a portal account.
 
 Help Ticketing System:
-    To create a ticket for FutureGrid support, please use out ticket form
-    from the web page at
+    To create a ticket for FutureGrid support, please use our 
 
-    -  `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__
+    - `ticket form <https://portal.futuregrid.org/help>`__
 
     in which you describe problems like feature request, or bug report. A
     ticket will be automatically generated and you'll receive an auto-reply
@@ -184,7 +159,7 @@ Help Ticketing System:
     be looking into the ticket and working on it. You will receive updates
     and resolution through email upon the completion of the investigation.
     Please be aware that feedback may not be instantaneous. Tickets you have
-    submitted can be seen at
+    submitted can viewed in your
 
-    -  `https://portal.futuregrid.org/tickets <https://portal.futuregrid.org/tickets>`__
+    -  `ticket list <https://portal.futuregrid.org/tickets>`__.
 

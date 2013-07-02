@@ -1,5 +1,13 @@
+.. _s-hpc:
+
+**********************************************************************
 HPC Services (assigned to Allen and Koji)
-==============================
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 Accessing Systems
 -----------------
@@ -515,17 +523,17 @@ the \ **showq** command::
 You can see the output is divided into three sections: \ **active
 jobs**, \ **eligible jobs**, and \ **blocked jobs**.
 
-**1. Active jobs** are jobs that are currently running on the resource.
+#. **Active jobs** are jobs that are currently running on the resource.
 
-**2.**\ **Eligible jobs** are jobs that are waiting for nodes to become
-available before they can run. As a general rule, jobs are listed in the
-order that they will be scheduled, but scheduling algorithms may change
-the order over time.
+#. **Eligible jobs** are jobs that are waiting for nodes to become
+   available before they can run. As a general rule, jobs are listed in the
+   order that they will be scheduled, but scheduling algorithms may change
+   the order over time.
 
-**3.**\ **Blocked jobs** are jobs that the scheduler cannot run for some
-reason. Usually a job becomes blocked because it is requesting something
-that is impossible, such as more nodes than currently exist, or more
-processors per node than are installed.
+#. **Blocked jobs** are jobs that the scheduler cannot run for some
+   reason. Usually a job becomes blocked because it is requesting something
+   that is impossible, such as more nodes than currently exist, or more
+   processors per node than are installed.
 
  
 
@@ -573,15 +581,14 @@ you had specified a job name (**jobname,o######**).
 Xray HPC Services
 ----------------------------------------------------------------------
 
-To log into the login node of xreay please use the command
+To log into the login node of xreay please use the command::
 
-    ssh yourportalname@xray.futuregrid.org
+    ssh portalname@xray.futuregrid.org
 
 Extensive documentation about the user environment of the Cray can be
 found at 
 
-- `Cray XTTM Programming Environment User's
-  Guide`<http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
+- `Cray XTTM Programming Environment User's Guide <http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21>`__
 
 For MPI jobs, use cc (pgcc). For best performance, add the xtpe-barcelona module::
 
@@ -687,6 +694,8 @@ into groups of eight, and the
 
 .. todo:: where is run.sh, is see job.sub but not run.sh
 
+.. _s-storage:
+
 Storage Services
 ----------------------------------------------------------------------
 
@@ -730,16 +739,12 @@ To use the HSI client on india:
 
 -  First, activate your SDA account as descreibed in the `MDSS Service Starter
    Kit <http://rc.uits.iu.edu/storage/mdss-starter-kit>`__ documentation.
--  Then, from india, load the HSI module as follows:
-
-::
+-  Then, from india, load the HSI module as follows::
 
     $ module load hsi
     hsi version 3.5.3 loaded
 
--  Connect to the SDA:
-
-::
+-  Connect to the SDA::
 
     $ hsi -A combo
     Principal: your_iu_userid                                
@@ -750,27 +755,19 @@ To use the HSI client on india:
 Your principal is your IU Network ID, and your password is
 the IU passphrase.
 
--  Enable firewall mode; otherwise, you will receive this error:
+-  Enable firewall mode; otherwise, you will receive this error::
 
-   ::
-
-       put: Error -5 on transfer
-
-::
+    put: Error -5 on transfer
 
     ? firewall -on
-    A: firewall mode set ON, I/O mode set to extended (parallel=off), autoscheduling currently set to OFF
+    A: firewall mode set ON, I/O mode s<et to extended (parallel=off), autoscheduling currently set to OFF
 
--  List local folder:
-
-::
+-  List local folder::
 
      ? lls
-    testfile.txt
+     testfile.txt
 
--  List the current directory in HPSS:
-
-::
+-  List the current directory in HPSS::
 
     ? pwd
     pwd0: /hpss/pathtoyouriuusername

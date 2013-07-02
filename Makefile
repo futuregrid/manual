@@ -1,6 +1,5 @@
 PATHNAME=$(shell pwd)
 BASENAME=$(shell basename $(PATHNAME))
-GITREPO=futuregrid
 
 TAG=`cat VERSION.txt`
 
@@ -23,7 +22,7 @@ gregor:
 	git config --global user.email laszewski@gmail.com
 
 git-ssh:
-	git remote set-url origin git@github.com:$(GITREPO)/$(BASENAME).git
+	git remote set-url origin git@github.com:cloudmesh/$(BASENAME).git
 
 
 ######################################################################
@@ -67,9 +66,9 @@ qc-install:
 	pip install pyflakes
 
 qc:
-	pep8 ./$(GITREPO)/virtual/cluster/
-	pylint ./$(GITREPO)/virtual/cluster/ | less
-	pyflakes ./$(GITREPO)/virtual/cluster/
+	pep8 ./cloudmesh/virtual/cluster/
+	pylint ./cloudmesh/virtual/cluster/ | less
+	pyflakes ./cloudmesh/virtual/cluster/
 
 # #####################################################################
 # CLEAN
@@ -128,7 +127,7 @@ pages: ghphtml ghpgit
 ghphtml:
 	cd /tmp
 	rm -rf $(DIR)
-	cd /tmp; git clone git://github.com/$(GITREPO)/$(PROJECT).git
+	cd /tmp; git clone git://github.com/cloudmesh/$(PROJECT).git
 	cp $(DIR)/Makefile .
 	cd $(DOC); ls; make html
 	rm -fr _static

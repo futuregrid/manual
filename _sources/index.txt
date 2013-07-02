@@ -20,7 +20,6 @@ FG Manual
    scalemp
    
    openstack
-   openstack-essex
    openstack-grizzly
    eucalyptus
    iaas
@@ -37,8 +36,8 @@ FG Manual
    papi
    gpu
 
-..
    fgmanual
+..
    part-2
    contributing
    python

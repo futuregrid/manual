@@ -1,6 +1,11 @@
 Upgrading Nimbus On FG clusters
 ===============================
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 Disclaimer
 ----------
 

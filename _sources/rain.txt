@@ -2,6 +2,11 @@
 RAIN
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 .. todo: just using the real manaual and possibly copy it via a fork
    into this one? Discuss with Gregor
 

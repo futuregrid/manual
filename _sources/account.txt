@@ -1,34 +1,24 @@
+.. _s-accounts:
+
 **********************************************************************
 Project and Account Management
 **********************************************************************
 
-.. todo:: all links to http://portal.futuregrid/my do not yet
-   work. Carrie must implement this as communicated to her  and
-   Barbara a while ago. We have not gotten feedback from Carrie yet.
-   If no feedback we may have to have Allan implement? This is needed
-   to make entire documentation easier on account management. This is
-   one of the root causes for confusion. Alternatively we coudl do 
-   my.futuregrid.org.
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 It is very easy to get a project and accounts associated with this
-project on FutureGrid. This section is structured as follows:
-
-- :ref:`s-account-terminology`: a list of terms relevant to the
-  account creation.
-- :ref:`s-account-quickstart`: a quickstart guide to remind those that
-  have previously used FutureGrid on what to do. 
-- :ref:`s-account-description`: an in depth description including
-  diagrams that help you understand the process of the account
-  application.
-
-  - :ref:`s-account-create-account`
-  - :ref:`s-account-create-project`
-  - :ref:`s-account-join-project`
-
-- :ref:`s-account-faq`: a list of Frequently Asked Questions related to Accounts 
-- :ref:`s-account-xsede`: a documentation tailored for XSEDE users to apply for FG through the
-  XSEDE portal (under development)
-
+project on FutureGrid. This section describes how to get access to
+FutureGrid. While it is possible to just execute the three steps in
+our quickstart guide, we have provided a more in-depth description
+based on user feedback. However, you have certain responsibilities
+including **managing project memberships** and **reporting
+results**. Thus it is a good idea to read this section more carefully.
+At the end of the section we also provided a mini-FAQ of information
+that may also be of help for issues you may have overlooked or have
+not yet been answered.
 
 .. _s-account-terminology:
 
@@ -48,11 +38,11 @@ Resource Account:
 
 Valid Project: 
   At least one project you belong to must be valid. A
-  valid project is one that is aproved by a comittee. If you are not
+  valid project is one that is approved by a committee. If you are not
   in an active project your access to FutureGrid will be
   blocked. Projects that do not report any progress will be blocked
-  after a while. Note that you aagree to update us with regular
-  resullts reportedvia the portal as this is part of your agreement to
+  after a while. Note that you agree to update us with regular
+  results reported via the portal as this is part of your agreement to
   use FutureGrid. 
 
 Uploaded SSH Key:
@@ -67,10 +57,8 @@ Uploaded SSH Key:
 Quickstart
 ============
 
-.. todo:: add the links
-
 If you have not created a project on FutureGrid before we recommend
-that you **do not use the quickstart quide** and instead read the full
+that you **do not use the quickstart guide** and instead read the full
 documentation. To remind you what you have to do here are a couple
 steps that you need to do:
 
@@ -82,6 +70,8 @@ For non XSEDE users:
    confirmation. Note that you must communicate with the project lead
    first before you can join a project.
 
+
+
  
 For XSEDE users:
 
@@ -90,7 +80,7 @@ For XSEDE users:
 #. Create a new project as documented in the `XSEDE portal allocations page
    <https://www.xsede.org/allocations>`__ or ask you XSEDE project lead
    to join you to the project.
-#. It will take some time to get youe account activated 
+#. It will take some time to get your account activated 
 
 
 .. _s-account-xsede:
@@ -103,15 +93,13 @@ Projects and Accounts for XSEDE users
 
 .. _s-account-description:
 
-In Depth Information
+Project Management
 =============================
 
 .. _s-account-create-account:
 
 Create a Portal account
 -------------------------
-
-.. todo:: update the links
 
 In order to utilize **any** FutureGrid resource, you must posses a
 FutureGrid **portal account**. Thus, *apply for your **portal
@@ -126,7 +114,7 @@ proceed.
 Please note that you cannot access FutureGrid resources until you
 complete the next steps.  
 
-.. sidebar:: Hint
+.. sidebar:: |info-image| Hint
 
    It may take a day or two to get a portal account. Portal
    accounts will not be created over the weekend.
@@ -136,7 +124,7 @@ Here are a few tips that make it easy for you
 -  On the portal's main page at
    `https://portal.futuregrid.org <https://portal.futuregrid.org>`__
    appears
-   a `Register <https://portal.futuregrid.org/user/register>`__ Link. 
+   a :menuselection:`Portal --> Register` `link <https://portal.futuregrid.org/user/register>`__. 
 -  Following you will be able to **Create a new account** on the
    portal. 
 -  Fill in **ALL** fields as much as you can.
@@ -151,11 +139,8 @@ Here are a few tips that make it easy for you
    services that we cannot trace back to your name or institution.
 -  Usage of all non institutional addresses will prolong the application
    process.
-     
 -  Please note that creating a portal account does not give you access
-   to any FutureGrid resources, for that you have to complete step 2 and
-   3.
-     
+   to any FutureGrid resources.     
 -  Please remember that checking your information will take time. Thus
    we recommend that you wait till you get a message that tells you that
    your portal account has been approved. Then continue to The next
@@ -166,13 +151,11 @@ Here are a few tips that make it easy for you
    will not notify you. 
      
 -  In case you are teaching a class class we have some special
-   instructions for you and after you apply for a portal account you may
-   want to get in contact with us via the `help
-   form <https://portal.futuregrid.org/help>`__
+   instructions for you in Section :ref:`s-account-class`.
 
 -  After your account has been approved, you can correct the
    information  as part of the portal account `User Profile
-   Management <https://portal.futuregrid.org/manage-my-portal-account>`__.
+   Management <https://portal.futuregrid.org/my>`__.
 
 
 
@@ -210,8 +193,7 @@ individuals agreement.
 Join a Project
 ------------------
 
-To join an
-existing project, ask the project lead or project manager for that
+To join an existing project, ask the project lead or project manager for that
 project to add you to their project using that same form. If the project
 is set to "accept public join request", you may also send a request in
 the portal. To do this, first view the `project list <https://portal.futuregrid.org/projects>`__ and go to the project
@@ -223,9 +205,64 @@ they can process your request.
 
 .. include:: account-diag-1.rst
 
- 
+.. _s-account-delete:
 
-Upload Your SSH Public Key(s)
+Delete or Deactivate a user form a Project
+-------------------------------------------
+
+Deletion of a user can be a complex process in case a user has used FG
+resources. However, the following is for most project leads
+sufficient: To remove a user from your project you simply can edit
+your project page and remove the user name from the list of members or
+alumni's. If the user is in no other valid project she will no longer
+be able to use FG.  If the user really needs to be removed from the
+system or from the portal, please fill out the `help form
+<https://portal.futuregrid.org/help>`__ with the username and the
+reason why he should be removed.  ​Naturally, if you detect that a user
+acts maliciously, please inform us immediately. We will disable
+access. Put in your subject line the prefix URGENT.
+
+Reporting Results
+----------------------------------------------------------------------
+
+It is important to report regularly results about your projects to
+FutureGrid. Please fill out this section and report upon the
+achievements of this project. You find your projects in a 
+
+* `list maintained in the portal <https://portal.futuregrid.org/manage-my-portal-account>`__ 
+
+Also upload references that you have produced for this project. You
+can upload when visiting your project and using the plus button in
+your projects. The reference will than be added and added for you to
+the portal.
+
+
+.. _s-account-closing:
+
+Close a Project
+----------------------------------------------------------------------
+
+Closing a project is an important responsibility of every project
+lead.  If you forgot which project you like to close or you have
+multiple projects, you can find a 
+
+* `list of projects you lead or manage <https://portal.futuregrid.org/manage-my-portal-account>`__
+
+on the Portal. Once you visit one of them, you have the option to add
+results.  Scroll down until you find the section "Project
+Results". Please fill out this section and report upon the
+achievements of this project.  Please also upload references that you
+have produced for this project. In each case, please make sure that
+you only upload/report references directly related to this project.
+After you have requested a project closing, our project committee will
+work with you to make sure we have sufficient results from you. Once a
+project is closed all members will be notified. The committee may ask
+you for additional results even after the project is closed.
+
+
+.. _s-portal-sshkey:
+
+Upload a SSH Public Key
 ======================================================================
 
 In order to be able to log into the started VMs, among other purposes,
@@ -237,7 +274,7 @@ after all.
 To upload the chosen public key:
 
 #. Copy your public identity into your system clipboard.
-#. Log into the FG portal `https://portal.futuregrid.org/my/ssh-keys <https://portal.futuregrid.org/my/ssh-keys>`__.
+#. Vist the `ssh-key panel of your account <https://portal.futuregrid.org/my/ssh-keys>`__.
 #. Click the link that says Add a public key.
 
 
@@ -249,73 +286,162 @@ services. You are not allowed to use password less keys.  Your account
 may be deactivated if you violate this policy.
 
 
-OpenId Integration
+Upload an OpenId 
 ==================
 
 Often users may not remember the pasword or username of the FG
 portal. However, they may have an easier time to remember their openid
 from for example google. It is possible to use your openid account and
-register it once you gain access to the portal. Please visit (https://portal.futuregrid.org/my/openid)
+register it once you gain access to the portal. Please visit your 
 
+* `OpenID Page <https://portal.futuregrid.org/my/openid>`__
 
+to add your favorite OpenID. For example, to add your Google OpenId you simply
+click on the Google icon.
 
-Using FutureGrid Resources
+.. _s-account-using-resources:
+
+Accessing FutureGrid Resources
 ===========================
 
-.. todo:: link in this section not yet set
-
-To use resources, you must have 
+To access and use resources, you must have 
 
 - a portal account
 - be part of a valid project
-- have uploaded a public key to the portal that you wll use to log
+- have uploaded a public key to the portal that you will use to log
   into some of its resources.
 
-Once these conditions are met, you will be able to
-access the resources and services that your project has requested and
-been authorized to use. See the `services <https://portal.futuregrid.org/???>`__ for a list
-of FutureGrid resources and services This includes cloud and HPC
-resources. Accounts to these resources will be automatically generated
-once you have conducted the above steps. The turnaround time for you getting access to the
-system is typically between 30 minutes and one day.
+Once these conditions are met, you will be able to access the
+resources and services that your project has requested and been
+authorized to use. See the section :ref:`s-services` for a list of FutureGrid
+resources and services This includes cloud and HPC resources. Accounts
+to these resources will be automatically generated once you have
+conducted the above steps. The turnaround time for you getting access
+to the system is typically between 30 minutes and one day.
 
 
+.. _s-account-manage-class:
+
+Manage a Class on FutureGrid
+===========================
+
+If you teach a class using FutureGrid resources we recommend you do the following:
+
+#. Create a portal account if you do not have one
+#. Apply for an educational project, carefully filling out the form
+   including how many students, broader impact, such
+   as support of minorities, what will be learned, the course syllabus
+   if available, a link to the course web page if available, the
+   duration of the course including a time when the course is
+   completed. We typically add a month so that incomplets can be done
+   easily. 
+#. Make sure you enable the join button of the project, this will
+   allow your students to join via a button click and you can easily
+   approve or reject join requests. Add a "signup code"
+#. Give your students a "signup code" signup code that you have tered
+   in the previous step. Communicate the signup code to the FutureGrid
+   support team via a ticket submitted through
+   https://portal.futuregrid.org/help. Make sure you specify your
+   project number. Often it is also helpful to send a list of students
+   to us s we can assist them easier during the application
+   process. 
+#. Make sure your students sign up for a FutureGrid portal account and
+   that they specify their profile information precisely. This
+   information is used later on to grant students accounts on
+   FutureGrid. Accounts will not automatically be created just because a
+   user has a portal account. Have the students add you as their advisor
+   in the advisor textarea.
+#. Remind the students to add their public ssh-keys to the
+   portal. Some students may not have the knowledge what this means or
+   what this is good for. We recommend that you in the first class
+   teach the why they need to do this and how the can do this. In the
+   portal users can add ssh keys when they go to the my portal
+   section.
+
+#. Wait.  It will take some time for the accounts to be created AFTER
+   an ssh key is uploaded, and the student is added to your approved
+   projects.  Communicate to the students to wait. We only approve
+   accounts during business hours and it can take up to 24 business
+   hours. Business hours are Mo-Fri 9am - 5pm EST. We will not answer
+   any questions on the weekends. 
+
+#. Once a student has an account on the portal, please make sure you
+   add the student to your project member. This is important as only people
+   that are assigned to a valid FutureGrid project can have accounts
+   on FutureGrid resources. Your project will have by default a
+   project join request that makes it easy to join your
+   project. Provide the link to the students so they join. A
+   convenient management button provided for you to verify that the
+   student is indeed a person that needs to be in your project. The
+   join button can be disabled by you and you could instead also add
+   your students by while entering their portal names.
+
+   Hence, You will be able to manage the join of students yourself. Be
+   careful that you only join those students that are in your
+   class. Please remember that a signup code is not really secret and
+   that students may exchange the code with others. Thus it is a good
+   idea to still verify if the user with the signup code is a member
+   of your class. Also be reminded that some students are forgetting
+   to specify the signup code at time of their account creation. You
+   have to deal with such forgetful students as a signup code can not
+   be added.
+#. If the student roster is changing, just edit the project details
+   and add, remove them or move them to the alumni status. 
+#. If student projects are due on Mondays remind them not to start
+   their project on Sunday night and they find out they do not have an
+   account ;-) Generally we recommend to make due dates of projects to
+   be Thursdays till 5pm or Friday mornings. Be reminded that the
+   first Tuesday of each month all machines will be shut down and all
+   VMs or ongoing work may be lost. Please plan around this.
+
+#. We have created some forums for the three services that you can
+   find at https://portal.futuregrid.org/forum. These forums are read
+   by the experts and the staff. We can create a forum for your class
+   if you like directly on the FutureGrid portal.
+
+#. In case you need more direct support, do not hesitate to ask for
+   help https://portal.futuregrid.org/help
+
+#. Make sure you write a results section after your class is over. 
+ 
+ 
+ 
 .. _s-account-faq:
 
-FAQ about Accounts
-====================
+Mini FAQ
+==============
 
-- Additional FAQ's
+* `Which Projects Do I Participate In? <https://portal.futuregrid.org/my/projects>`__
 
-   #. `Read some FAQs about the account creation <https://portal.futuregrid.org/faq>`__
+* How can I :ref:`s-account-join-project`?
 
+* How can I add people to a project? 
 
-- What do I need to get an account on resources?
+  - Go to your project, select the add member link and add the user
+    portal names. Alternative have your users use the join button and
+    you use the manage button.
 
-   #. A valid portal account
-   #. Be member of a valid project
-   #. You must upload your ssh key via the portal
+* Why Do I See in the Project Table "Please Sign Up"? 
 
+  - If you are owner of a project and see this information under
+    project lead or manager, you may not yet have signed up for a
+    portal account. Please sign up for one, and we will change it in
+    the project view for you.
 
-- What do I have to do if I am a teacher and want to apply for a
-  class project?
+* Why do I need to provide the email address from my university? 
 
-    #. Create a portal account if you do not have one
-    #. Apply for an educational project, carefuly filling out the form
-       including how many students, broader impact, such
-       as support of minorities, what will be learned, the course syllabus
-       if available, a link to the course web page if available, the
-       duration of the course including a time when the course is
-       completed. We typically add a month so that incomplets can be done
-       easily. 
-    #. Make sure you enable the join button of the project.
-    #. Determine a class "join code" that your students can use at time of
-       their portal registration. Communicate that join code with a help
-       ticket.
-    #. You will be able to manage the join of students yourself. Be
-       carefull that you only join those students that are in your class.
-    #. If the student roster is cahnging, just edit the project details
-       and add remove them. 
-    #. Make sure you write a results section after your class is over. 
+  - It may take longer to approve your account. see :ref:`s-account-create-account`
 
+* How long will it take for my portal account to be approved? 
+
+  - If you did everything and we can verify you exist two business
+    days.
+
+* How Do I Get an Account for Eucalyptus, Nimbus, or OpenStack? see :ref:`s-account-using-resources`
+
+* How can I :ref:`s-account-delete`
+* How do I :ref:`s-portal-sshkey`
+* How do I get a user account on FutureGrid resources? see :ref:`s-account-quickstart`
+
+.. |info-image| image:: images/glyphicons_195_circle_info.png 
 

@@ -2,6 +2,11 @@
 Precip 
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 
 The Pegasus Repeatable Experiments for the Cloud in Python (Precip), is a flexible exeperiment management API for running experiments on clouds. Precip was developed for use on FutureGrid infrastructures such as OpenStack, Eucalyptus (>=3.2), Nimbus, and at the same time commercial clouds such as Amazon EC2. The API allows you to easily provision resources, which you can then can run commands on and copy files to/from subsets of instances identified by tags. The goal of the API is to be flexible and simple to use in Python scripts to control your experiments.
 

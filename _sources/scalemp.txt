@@ -2,6 +2,11 @@
 ScaleMP vSMP
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 FutureGrid provides a new experimental distributed large memory SMP
 machine. 
 
