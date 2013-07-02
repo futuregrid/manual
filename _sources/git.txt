@@ -5,11 +5,10 @@ Git
 #. notify me about your accountant on it. 
 #. Once you have done this you need to know about how to use git. You can read the git manual. 
 
-
 Here a summary of the commands that are important for you::
 
   git clone
-  git commit -m
+  git commit -m "message" filename
   git commit -a
   git push 
   git pull

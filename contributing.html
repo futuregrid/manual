@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Building the Book &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>4. Building the Manual &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,6 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="1. Preface" href="preface.html" />
+    <link rel="prev" title="3. Git" href="git.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -62,9 +64,18 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">3. Git</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Building the Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python">4.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virtualenv">4.2. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-requirements">4.4. Install the Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
@@ -295,10 +306,12 @@
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Building the Book</a><ul>
-<li><a class="reference internal" href="#virtualenv">Virtualenv</a></li>
-<li><a class="reference internal" href="#theme">Theme</a></li>
-<li><a class="reference internal" href="#autorun">Autorun</a></li>
+<li><a class="reference internal" href="#">4. Building the Manual</a><ul>
+<li><a class="reference internal" href="#python">4.1. Python</a></li>
+<li><a class="reference internal" href="#virtualenv">4.2. Virtualenv</a></li>
+<li><a class="reference internal" href="#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
+<li><a class="reference internal" href="#install-the-requirements">4.4. Install the Requirements</a></li>
+<li><a class="reference internal" href="#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
 </ul>
 </li>
 </ul>
@@ -307,6 +320,10 @@
             
             
               
+  <li><a href="git.html"
+         title="previous chapter">&laquo; 3. Git</a></li>
+  <li><a href="preface.html"
+         title="next chapter">1. Preface &raquo;</a></li>
             
             
               <li>
@@ -330,29 +347,66 @@
 
 <div class="container">
   
-  <div class="section" id="building-the-book">
-<h1>Building the Book<a class="headerlink" href="#building-the-book" title="Permalink to this headline">¶</a></h1>
-<p>Make sure the is no book directory in your home</p>
+  <div class="section" id="building-the-manual">
+<h1>4. Building the Manual<a class="headerlink" href="#building-the-manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="python">
+<h2>4.1. Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Make sure you have python 2.7.2:</p>
+<div class="highlight-python"><pre>$ python --version</pre>
+</div>
+<p>Please note that we have not tried python version 3 for this.</p>
+</div>
 <div class="section" id="virtualenv">
-<h2>Virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Virtualenv<a class="headerlink" href="#virtualenv" title="Permalink to this headline">¶</a></h2>
+<p>Make sure the is no book directory in your home</p>
 <p>Use virtual env:</p>
-<div class="highlight-python"><pre>cd
-virtualenv book
-source book/bin/activate</pre>
+<div class="highlight-python"><pre>$ cd ~
+$ virtualenv MANUAL
+$ source MANUAL/bin/activate</pre>
+</div>
+<p>In case you were to use another terminal (for example quit this one
+and start a new one later), please remember to execute:</p>
+<div class="highlight-python"><pre>$ source MANUAL/bin/activate</pre>
 </div>
 </div>
-<div class="section" id="theme">
-<h2>Theme<a class="headerlink" href="#theme" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-a-github-local-directory-with-the-manual">
+<h2>4.3. Create a github local directory with the manual<a class="headerlink" href="#create-a-github-local-directory-with-the-manual" title="Permalink to this headline">¶</a></h2>
+<p>We assume you will install your local copy of the manual in
+~/github/manual. If you do not want to use the github dir, please use
+another directory name you like:</p>
+<div class="highlight-python"><pre>$ mkdir -p ~/github
+$ cd ~/github
+$ git clone https://github.com/futuregrid/manual.git</pre>
+</div>
+</div>
+<div class="section" id="install-the-requirements">
+<h2>4.4. Install the Requirements<a class="headerlink" href="#install-the-requirements" title="Permalink to this headline">¶</a></h2>
 <p>To build this book make sure you install the following module:</p>
-<div class="highlight-python"><pre>pip install sphinx_bootstrap_theme</pre>
+<div class="highlight-python"><pre>$ cd manual
+$ pip install -r requirements.txt</pre>
 </div>
+<p>This may take a while, so be patient.</p>
+<p>The files will be in:</p>
+<div class="highlight-python"><pre>./doc/source</pre>
 </div>
-<div class="section" id="autorun">
-<h2>Autorun<a class="headerlink" href="#autorun" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default">https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default</a></p>
-<div class="highlight-python"><pre>$ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
-$ cd sphinx-contrib/autorun
-$ python setup.py install</pre>
+<p>and have an rst ending. They use
+restructured text. For more info on rst see:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-doc.org/rest.html">http://sphinx-doc.org/rest.html</a></li>
+</ul>
+</div>
+<div class="section" id="all-in-one-setup-script">
+<h2>4.5. All-in-one setup script<a class="headerlink" href="#all-in-one-setup-script" title="Permalink to this headline">¶</a></h2>
+<p>Execute the following script only with care. Maybe its best if you
+copy one line at a time as documented earlier to avoid problems:</p>
+<div class="highlight-python"><pre>cd ~
+virtualenv MANUAL
+source MANUAL/bin/activate
+mkdir -p ~/github
+cd ~/github
+git clone https://github.com/futuregrid/manual.git
+cd manual
+pip install -r requirements.txt</pre>
 </div>
 </div>
 </div>

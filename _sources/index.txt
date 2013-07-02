@@ -28,6 +28,8 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    todolist
    plan
+   git
+   contributing
 
 **PART I. INTRODUCTION**
 

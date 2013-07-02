@@ -1,31 +1,85 @@
 **********************************************************************
-Building the Book
+Building the Manual
 **********************************************************************
 
-Make sure the is no book directory in your home
+Python
+-------
+
+Make sure you have python 2.7.2::
+
+    $ python --version
+
+Please note that we have not tried python version 3 for this.
 
 Virtualenv
 ----------------------------------------------------------------------
+Make sure the is no book directory in your home
+
 Use virtual env::
 
-    cd
-    virtualenv book
-    source book/bin/activate
+    $ cd ~
+    $ virtualenv MANUAL
+    $ source MANUAL/bin/activate
 
-Theme
+In case you were to use another terminal (for example quit this one
+and start a new one later), please remember to execute::
+
+    $ source MANUAL/bin/activate
+
+
+Create a github local directory with the manual
+----------------------------------------------------------------------
+We assume you will install your local copy of the manual in
+~/github/manual. If you do not want to use the github dir, please use
+another directory name you like::
+
+    $ mkdir -p ~/github
+    $ cd ~/github
+    $ git clone https://github.com/futuregrid/manual.git
+
+Install the Requirements
 ----------------------------------------------------------------------
 To build this book make sure you install the following module::
 
-    pip install sphinx_bootstrap_theme
+    $ cd manual
+    $ pip install -r requirements.txt
 
-Autorun
-----------------------------------------------------------------------
+This may take a while, so be patient.
 
-https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default
+The files will be in::
+
+   ./doc/source 
+
+and have an rst ending. They use
+restructured text. For more info on rst see:
+
+* http://sphinx-doc.org/rest.html
 
 
-::
 
-    $ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
-    $ cd sphinx-contrib/autorun
-    $ python setup.py install
+All-in-one setup script
+--------------------
+
+Execute the following script only with care. Maybe its best if you
+copy one line at a time as documented earlier to avoid problems::
+
+    cd ~
+    virtualenv MANUAL
+    source MANUAL/bin/activate
+    mkdir -p ~/github
+    cd ~/github
+    git clone https://github.com/futuregrid/manual.git
+    cd manual
+    pip install -r requirements.txt
+
+
+..
+    Autorun 
+    .. hint:: PLEASE SKIP THIS SECTION, WE ARE NOT USING AUTORUN
+    Autoran can be found at:
+    * https://bitbucket.org/birkenfeld/sphinx-contrib/src/c54749e503872d3f7a00c0561a115000dcc83565/autorun?at=default
+    To installit you need to do the following::
+	$ cd ~
+	$ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
+	$ cd sphinx-contrib/autorun
+	$ python setup.py install
