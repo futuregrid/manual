@@ -1,3 +1,5 @@
+.. _s-status:
+
 **********************************************************************
 Status
 **********************************************************************
@@ -11,11 +13,6 @@ resources and services, see the FutureGrid Inca server at:
 
 -  `http://inca.futuregrid.org <http://inca.futuregrid.org/>`__
 
-Activities during the regular maintenance window for FutureGrid machines
-are listed in the FutureGrid wiki at:
-
--  `https://wiki.futuregrid.org/index.php/Hw:MaintActivities <https://wiki.futuregrid.org/index.php/Hw:MaintActivities>`__.
-
 Scheduled outages and maintenance windows on the FutureGrid network are
 collected in the Network Operations Calendar at:
 
@@ -24,11 +21,11 @@ collected in the Network Operations Calendar at:
 The **first Tuesday of each month** is the standard maintenance
 window.
 
-You can find a list of previous outages `here </outages_all>`__
-including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
-
-.. todo:: fix the links
+You can find a list of outages `here <https://portal.futuregrid.org/outages_all>`__
+including an `RSS <https://portal.futuregrid.org/feeds/fg_outages_all_rss.xml>`__ feed.
+A subset of the most recent autages are posted on the frontpage. 
   
+
 .. list-table:: System Information
    :header-rows: 1
    :widths: 20,10,70
@@ -37,46 +34,45 @@ including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
      - Info
      - Description
    * - |image12| 
-     - System configuration
+     - `System configuration <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
      - The system is configured at this time using either HPC, Nimbus,
          or Eucalyptus services. The distribution used at this time can be
          found \ `here <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__ and `here <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=Info&xsl=info.xsl>`__.
    * - |image13| 
-     - Status of FutureGrid services
+     - `Status of FutureGrid services <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
      - Lists the status of keyFutureGrid services (e.g., SSH, Nimbus,
        Eucalyptus) in a sortable table.
    * - |image14| 
-     - Ganglia
-     - Cluster Monitoring  
-       crunchy, now would it?
+     - `Ganglia <http://ganglia.futuregrid.org>`__
+     - Cluster Monitoring 
    * - |image15|
-     - Network Status
+     - `WAN Network Status <http://noc.futuregrid.org>`__
      - The network status can be viewed via the \ `FutureGrid Network
        Operations Center page <http://noc.futuregrid.org>`__.
        Upcoming network events are maintained on the \ `Network Operations
        Calendar <http://noc.futuregrid.org/futuregrid/support/operations-calendar3.html>`__.
    * - |image16|
-     - Software Status
+     - `Software Status <http://inca.futuregrid.org>`__
      - The operational status of FutureGrid machines are continuously
        monitored via a number of tools. To view some of the contents,
        please visit \ `http://inca.futuregrid.org <http://inca.futuregrid.org>`__
    * - |image17|
-     - Cloud Status
-     - `Here <https://portal.futuregrid.org/monitoring/cloud>`__ you will find
-        information about how FG cloud services are currently used.
+     - `Cloud Status <https://portal.futuregrid.org/monitoring/cloud>`__
+     - Here you will find
+       information about how FG cloud services are currently used.
    * - |image18|
-     - FutureGrid Cloud Metrics
+     - `FutureGrid Cloud Metrics <https://portal.futuregrid.org/metrics>`__
      - Metric system provides an integrated accounting service to view
        cloud usage statistics and graphs regarding the utilization of
-       virtual machine (VM) instances.
+       virtual machine (VM) instances. Includes usage stats for
+       EUcalyptus, Nimbus, and OpenStack.
    * - |image19|
-     - System software version info
+     - `System software version info <http://inca.futuregrid.org:8080/inca/HTML/rest/HPC/FutureGrid>`__
      - The version info of the installed system software across
        all FG sites
    * - |image20|
-     - Nimbus Usage Reports
-     - `Displays <http://inca.futuregrid.org/nimbus-stats>`__ weekly usage
-        graphs of each of the FutureGrid Nimbus deployments.
+     - `Nimbus Usage Reports <http://inca.futuregrid.org/nimbus-stats>`__
+     - Displays weekly usage graphs of each of the FutureGrid Nimbus deployments.
 
 
 
@@ -100,12 +96,12 @@ including an `RSS </feeds/fg_outages_all_rss.xml>`__ feed.
    :width: 100px
    :height: 100px
 
-.. |image16| image:: images/Screen%20shot%202011-01-14%20at%207.48.06%20PM.png
+.. |image16| image:: images/inca-software-status.png
    :target: http://inca.futuregrid.org
    :width: 100px
    :height: 100px
 
-.. |image17| image:: images/Screen%20shot%202011-04-07%20at%203.23.05%20PM.png
+.. |image17| image:: images/inca-cloud-monitor.png
    :target: https://portal.futuregrid.org/monitoring/cloud
    :width: 100px
    :height: 100px

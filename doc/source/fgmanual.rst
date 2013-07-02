@@ -1,6 +1,11 @@
 Getting Started
 ===============
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 .. todo:: put the links to the sections here
 
 In order for you to gain access to the FutureGrid resources, you need to
@@ -22,7 +27,7 @@ Once you have access to FutureGrid resources, a good place to start
 learning about how to use FutureGrid are the tutorials, specifically the
 following:
 
--  The \ `Manual <http://portal.futuregrid.org/manual>`__ for detailed
+-  The `Manual <http://portal.futuregrid.org/manual>`__ for detailed
    information
 
 Our manual will include a variety of topics that are of interest to our
@@ -53,9 +58,9 @@ appliance, the Nimbus science cloud middleware, the IPOP/GroupVPN
 self-configuring virtual network, and the ViNe virtual network.
 
 For links to the initial appliance-based FutureGrid tutorials, see the
-FutureGrid \ `Education and Outreach
+FutureGrid `Education and Outreach
 page <https://portal.futuregrid.org/outreach>`__. Additionally, for
-video tutorials on the use of the appliances, see the \ `Grid appliance
+video tutorials on the use of the appliances, see the `Grid appliance
 YouTube
 channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__.
 
@@ -176,11 +181,11 @@ processors.  The OS is CentOS 5.8 and 6.3.  It runs Torque and Moab for
 scheduling.  Alamo has a QDR IB interconnect and 15 TB of attached disk
 storage.   Alamo is partitioned into different resources for Nimbus and
 HPC.  See the Alamo hardware page for more
-detail: \ `https://portal.futuregrid.org/hardware/alamo <https://portal.futuregrid.org/hardware/alamo>`__
+detail: `https://portal.futuregrid.org/hardware/alamo <https://portal.futuregrid.org/hardware/alamo>`__
 .
 
 **Nimbus partition -** see nimbus
-documentation: \ `https://portal.futuregrid.org/tutorials/nimbus <https://portal.futuregrid.org/tutorials/nimbus>`__
+documentation: `https://portal.futuregrid.org/tutorials/nimbus <https://portal.futuregrid.org/tutorials/nimbus>`__
 
 **HPC partition**
 
@@ -224,11 +229,11 @@ mounted from login node.
 
 Administrator: David Gignac
 For issues or questions please
-use \ `https://tickets.futuregrid.org <https://tickets.futuregrid.org>`__
+use `https://tickets.futuregrid.org <https://tickets.futuregrid.org>`__
 . You can conveniently submit a ticket
-via \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
+via `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
 To look at your previously submitted tickets you can
-use \ `https://portal.futuregrid.org/tickets <https://portal.futuregrid.org/tickets>`__
+use `https://portal.futuregrid.org/tickets <https://portal.futuregrid.org/tickets>`__
 .
 
   
@@ -275,6 +280,25 @@ experiments on FutureGrid. These services are curently under development
 and you are welcome to join the development teams by contacting
 `laszewski@gmail.com <mailto:laszewski@gmail.com>`__
 
+
+Commandline clients
+==================================================================
+
+Install the nova client::
+
+   pip install -e git+https://github.com/openstack/python-novaclient.git#egg=python-novaclient
+
+Get your novarc file::
+
+   todo
+
+Source your .novarc file::
+
+   $ source ~/.futuregrid/novarc
+
+No the first nova command::
+
+   $ nova list 
 
 
 .. |image0| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif

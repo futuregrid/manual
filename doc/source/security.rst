@@ -3,12 +3,18 @@
 Using SSH keys
 ======================================
 
-.. sidebar:: Tip
+.. sidebar:: Page Contents
 
-   If you do not know what ssh is we recommend that you `read up
-   on it <http://openssh.com/manual.html>`__ .
-   However, the simple material presented here will help you
-   getting started quickly on FutureGrid.
+   .. contents::
+      :local:
+
+   .. hint:: |info-image|
+
+      If you do not know what ssh is we recommend that you `read up on
+      it <http://openssh.com/manual.html>`__ .  However, the simple
+      material presented here will help you getting started quickly on
+      FutureGrid.
+
 
 To access the various FutureGrid resources, you need to provide a public
 ssh key to FutureGrid.  We explain how to generate a ssh
@@ -20,9 +26,7 @@ manual covers both UNIX and Windows Users.
 Using SSH from Windows
 ----------------------------------------------------------------------
 
-.. sidebar:: For Linux users
-
-   If you are a Linux user, please skip the section :ref:`s-using-ssh-windows`.
+.. hint:: |info-image| For Linux users, please skip to the section :ref:`s-ssh-generate` 
 
 
 Windows users need to have some special software to be able to use the
@@ -46,7 +50,7 @@ not, we have made it even easier for you as we prepared a special
 Cygwin version that is ready to use. Once you have installed it, you
 can follow the same instructions as given in the rest of the sections
 presented to access FutureGrid from ssh. You can install cygwin it with the
-following somple steps.
+following simple steps.
 
 
 .. list-table:: 
@@ -76,10 +80,15 @@ following somple steps.
      - |image23|
      
 
-
+.. _s-ssh-generate:
 
 Generate a SSH key
 -----------------------
+
+.. sidebar:: |info-image| Hint
+
+   In case you do not want to type in al the tyme your password,
+   please learn about ssh-agent and ssh-add.
 
 First we must generate a ssh key with the tool `ssh-keygen
 <http://linux.die.net/man/1/ssh-keygen>`__. This program is commonly
@@ -89,8 +98,8 @@ ask you for the location and name of the new key. It will also ask you
 for a passphrase, which you **MUST** provide. We have
 seen advise by teachers and teaching assistants to not use
 passphrases: this is **WRONG** as it allows someone that gains access
-to your computer to also gain access to all resources that have
-lso, please use a strong passphrase to protect it appropriately. 
+to your computer to also gain access to all resources that have the
+public key. Also, please use a strong passphrase to protect it appropriately. 
 We recommend using the default location ~/.ssh/ and the
 default name id\_rsa. If you already have a key with a passphrase, you
 naturally can reuse it, and skip this section. Otherwise, please
@@ -98,22 +107,22 @@ continue. To generate the key, please type::
 
 Example::
 
-    ssh-keygen -t rsa -C yourlocalusername@indiana.edu
+    ssh-keygen -t rsa -C localname@indiana.edu
 
 
 
 This command requires the interaction of the user. The first question is::
 
-    Enter file in which to save the key (/home/yourlocalusername/.ssh/id_rsa): 
+    Enter file in which to save the key (/home/localname/.ssh/id_rsa): 
 
 We recommend you use the default. To do so, just press the enter key. In
 case you already have a ssh key in your machine, you can skip this whole
 section or use a different file name.
 
-.. sidebar:: Tip
+.. sidebar:: |info-image| Hint 
 
-   Please note that your *localusername* is the username on
-   computer and may be different frm the *portalusername*.
+   Please note that your *localname* is the username on
+   your computer and may be different from your *portalusername*.
 
 
 The second and third question is to protect your ssh key with a
@@ -133,13 +142,13 @@ and::
 If executed correctly, you will see some output similar to::
 
     Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/localusername/.ssh/id_rsa): 
+    Enter file in which to save the key (/home/localname/.ssh/id_rsa): 
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again:
-    Your identification has been saved in /home/localusername/.ssh/id_rsa.
-    Your public key has been saved in /home/localusername/.ssh/id_rsa.pub.
+    Your identification has been saved in /home/localname/.ssh/id_rsa.
+    Your public key has been saved in /home/localname/.ssh/id_rsa.pub.
     The key fingerprint is:
-    34:87:67:ea:c2:49:ee:c2:81:d2:10:84:b1:3e:05:59 localusername@indiana.edu
+    34:87:67:ea:c2:49:ee:c2:81:d2:10:84:b1:3e:05:59 localname@indiana.edu
     The key's randomart image is::
 
     +--[ RSA 2048]----+
@@ -171,9 +180,9 @@ keys::
 
 You will see the following output once you have completed that step::
 
-    Enter file in which the key is (/home/localusername/.ssh/id_rsa):
+    Enter file in which the key is (/home/localname/.ssh/id_rsa):
     Enter old passphrase:
-    Key has comment '/home/localusername/.ssh/id_rsa'
+    Key has comment '/home/localname/.ssh/id_rsa'
     Enter new passphrase (empty for no passphrase):
     Enter same passphrase again:
     Your identification has been saved with the new passphrase.  
@@ -235,7 +244,7 @@ around 10 minutes to update the ssh keys.
 
 To log into india simply type the usual ssh command such as:: 
 
-    $ ssh yourportalname@india.futuregrid.org
+    $ ssh portalname@india.futuregrid.org
 
 The first time you ssh into a machine you will see a message like this::
 
@@ -258,11 +267,11 @@ onto Hotel.
 
 If you placed the ssh key in the default location::
 
-    $ ssh -A yourportalname@hotel.futuregrid.org
+    $ ssh -A portalname@hotel.futuregrid.org
 
-.. hint:: the presence of the -A argument above is required for Nimbus.
+.. hint:: |info-image| the presence of the -A argument above is required for Nimbus.
 
-.. hint:: If you are asked for a **password** when trying to ssh onto
+.. hint:: |info-image| If you are asked for a **password** when trying to ssh onto
    Hotel, do **NOT** type any password. This means that your ssh key is
    not updated yet. You need to wait a bit more.
 
@@ -288,3 +297,4 @@ If you placed the ssh key in the default location::
    :width: 200px
 
 
+.. |info-image| image:: images/glyphicons_195_circle_info.png 

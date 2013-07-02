@@ -2,6 +2,11 @@
 Genesis II 
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 Author: University of Virginia
 Version: 1.0
 Last Revision: 2011-11-02

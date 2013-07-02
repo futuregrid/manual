@@ -2,6 +2,11 @@
 IaaS
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 .. todo:: update links 
 .. todo:: update links to manual pages of rst doc
 

@@ -1,3 +1,4 @@
+.. _s-manual:
 
 ===========
 |image0|  Manual
@@ -21,7 +22,7 @@ Contributors:
     Koji Tanaka
     Alan Streib
     Archit Kulshrestha, 
-    Jonathan Bolte
+    Jonathan Bolte,
     Gregory Pike
 
 .. 
@@ -32,3 +33,4 @@ In case you need to cite Futuregrid, please do not use this manual,
 instead use the paper listed in Section :ref:`my-how-to-cite`.
 
 .. |image0| image:: /images/fg-logo-md.gif
+

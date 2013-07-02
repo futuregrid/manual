@@ -9,8 +9,8 @@
       approved -> members;
       approved -> results -> resultreview -> renewal;
 
-      create [label = "3a. Create new \nProject", 
-         description = "Fill out the project form at http:// .",
+      create [label = "3a. Create new\n Project", 
+         description = "Fill out the project form at https://portal.futuregrid.org/node/add/fg-projects",
          color="lightgrey", shape = roundedbox];
 
       review [label = "Review", 

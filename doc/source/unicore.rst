@@ -2,6 +2,11 @@
 Unicore
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 .. figure:: images/otf_0.png
 
    Unicore 6

@@ -1,6 +1,11 @@
 PaaS - Platform as a Service
 ============================
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 This chapter contains information in regards to Platform as a Service
 offerings on FutureGrid
 

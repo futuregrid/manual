@@ -1,8 +1,13 @@
-
+.. _s-nimbus:
  
-
+**********************************************************************
 Using Nimbus on FutureGrid
-==========================
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 .. figure:: images/nimbus_logo.png
    :width: 100px

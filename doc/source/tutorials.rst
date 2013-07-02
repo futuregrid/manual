@@ -394,43 +394,31 @@ corresponding scripts.
 
 
 
-Register Virtual Box Image on OpenStack
-=======================================
+Register a Virtual Box Image on OpenStack
+=========================================
 
-In this tutorial we explain how to convert a Virtual Box image to kvm
-format and then register it on OpenStack.
+.. hint:: This process has been tested with Ubuntu 12 and CentOS 6 using
+OpenStack Essex. 
 
-Prerequisites
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+It is possible to convert a Virtual Box image to the kvm format and
+then register it on OpenStack clouds running KVM. To do so, you can
+either use a RedHat- or ubuntu- based images.
 
-There is two main prerequisites for your images to work with OpenStack
 
-#. Disable SELinux (Only for RedHat-based Linux like CentOS). To do
-   that please Edit the file /etc/selinux/config and set the SELINUX option to disabled::
+* For RedHat based images, including CentOS disable SELinux (Only for
+  RedHat-based Linux like CentOS) by editing the file
+  /etc/selinux/config and set the SELINUX option to disabled::
 
     SELINUX=disabled
 
-#. Configuring the image network interface (eth0) for DHCP. In Ubuntu,
-   you edit the file /etc/network/interfaces and configure eth0 to::
-
-    auto eth0
-    iface eth0 inet dhcp
-
-   In CentOS, you edit the file /etc/sysconfig/network-scripts/ifcfg-eth0
+   In additon enable DHCP by editing the file /etc/sysconfig/network-scripts/ifcfg-eth0
    and make sure it contains::
 
     DEVICE=eth0
     BOOTPROTO=dhcp
     ONBOOT=yes
 
-Configure the image to allow OpenStack to inject the ssh key 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  Ubuntu (it may not be needed for Ubuntu, but it is recomended)::
-
-    $ sudo apt-get install cloud-init curl
-
--  CentOS. Edit the file /etc/rc.local::
+   For Centos to enable ssh ley injection, edit the file /etc/rc.local::
 
     route del -net 169.254.0.0 netmask 255.255.0.0 dev eth0
     # load pci hotplug for dynamic disk attach in KVM (for EBS)
@@ -446,14 +434,25 @@ Configure the image to allow OpenStack to inject the ssh key
     cat /root/.ssh/authorized_keys
     echo "************************"
 
-Configure udev persistent rules (only CentOS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Edit the file /etc/udev/rules.d/70-persistent-net.rules, delete
-everything and add::
+   To Configure the the udev persistent rules (only CentOS), edit the
+   file /etc/udev/rules.d/70-persistent-net.rules, delete everything and add::
 
     ACTION=="add",SUBSYSTEM=="net", IMPORT{program}="/lib/udev/rename_device"
     SUBSYSTEM=="net", RUN+="/etc/sysconfig/network-scripts/net.hotplug"
+
+
+* For ubuntu based images configuring the image network interface
+   (eth0) for DHCP. Edit the file /etc/network/interfaces and configure eth0 to::
+
+    auto eth0
+    iface eth0 inet dhcp
+  
+  We recommend that you also install cloud-int and curl as both tools
+  are very useful::
+
+    $ sudo apt-get install cloud-init curl
+
+The next steps are executed in the same way on Ubuntu and CentOS.
 
 Convert your virtual box image to raw format
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -492,40 +491,28 @@ or::
 From now on, we refer only to the rawimage.img, but it works in the same
 way with the qcow2image.img.
 
-Transfer your Image to India
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
+Transfer your Image to India::
 
     $ scp rawimage.img <username>@india.futuregrid.org:/N/u/<username>/
 
-Log into India
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
+Log into India::
 
     $ ssh <username>@india.futuregrid.org
 
-::
 
-Upload your image to OpenStack
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-First, we need to load the euca2ools module that contains the command
-line interface to interact with OpenStack. Then we need to load our own
-credentials that are typically in a novarc file. Finally you update and
-register the image. Although, we are going to briefly explain these
-steps here, this is part of the OpenStack tutorial that can be found
-in \ `https://portal.futuregrid.org/tutorials/openstack <https://portal.futuregrid.org/tutorials/openstack>`__.
-
-::
+Next you need to opload your image to OpenStack. First, we need to
+load the euca2ools module that contains the command line interface to
+interact with OpenStack. Then we need to load our own credentials that
+are typically in a novarc file. Finally you update and register the
+image. Although, we are going to briefly explain these steps here,
+this is part of the OpenStack tutorial that can be found in 
+`https://portal.futuregrid.org/tutorials/openstack
+<https://portal.futuregrid.org/tutorials/openstack>`__::
 
     $ module load euca2ools
     $ source ~/novarc
 
-Upload the image
-
-::
+Upload the image::
 
     $ euca-bundle-image -i rawimage.img 
 
@@ -591,22 +578,14 @@ Troubleshooting
 
 One problem of this way of using our images is that we cannot use
 euca-get-console-output command to debug the boot process of the images.
-Therefore it makes more complicated solving runtime problems. However,
+Therefore it makes it more complicated solving runtime problems. However,
 if your image boots properly when doing the "Test your Image" section,
 it should work also on OpenStack and the only problem could be wrong
 configuration of network interface or SELinux enabled.
 
-Notes:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This tutorial has been tested with Ubuntu 12 and CentOS 6 using
-OpenStack Essex. 
 
 Virtual Appliances
 ==================
-
-Overview:
-~~~~~~~~~~~~~
 
 Virtual appliances are virtual machine images encapsulating
 pre-installed, pre-configured software that can be easily deployed on
