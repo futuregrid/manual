@@ -77,6 +77,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    iaas
    openstack
    openstack-grizzly
+   openstack-virtualbox
    nimbus
    eucalyptus
 
