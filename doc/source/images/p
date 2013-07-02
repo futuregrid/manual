@@ -1,0 +1,10 @@
+sips -s format png bullet.GIF  --out bullet.png
+sips -s format png cmeans_ck.gif --out cmeans_ck.png
+sips -s format png cmeans_objective_function.gif --out cmeans_objective_function.png
+sips -s format png cmeans_stop_condition.gif --out cmeans_stop_condition.png
+sips -s format png cmeans_uij_ck.gif --out cmeans_uij_ck.png
+sips -s format png fg-logo-md.gif --out fg-logo-md.png
+sips -s format png icl_footer.gif --out icl_footer.png
+sips -s format png iu-logo-50x64.jpeg --out iu-logo-50x64.png
+sips -s format png lilly_endowment.jpg --out lilly_endowment.png
+sips -s format png nsf.jpg --out nsf.png

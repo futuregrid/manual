@@ -4,8 +4,13 @@ GITREPO=futuregrid
 
 TAG=`cat VERSION.txt`
 
+
+
 all:
-	make -f Makefile force
+	make -f Makefile sphinx
+
+view:
+	open doc/build/html/index.html
 
 ######################################################################
 # GIT INTERFACES
