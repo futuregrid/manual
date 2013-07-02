@@ -8,6 +8,7 @@ Unicore
       :local:
 
 .. figure:: images/otf_0.png
+   :scale: 50%
 
    Unicore 6
 

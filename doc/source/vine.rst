@@ -37,6 +37,7 @@ Setup:
         . /tmp/enablevine.sh
 
 Tutorial:
-    A step-by-step tutorial on connecting VMs to ViNe overlays is
-    `available <https://portal.futuregrid.org/contrib/simple-vine-tutorial>`__.
+    A step-by-step tutorial on connecting VMs to ViNe overlays can be
+    found in the setcion :ref:`s-vine-overlay`.
+
 

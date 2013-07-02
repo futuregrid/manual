@@ -72,7 +72,40 @@ copy one line at a time as documented earlier to avoid problems::
     cd manual
     pip install -r requirements.txt
 
+Transfering a page from the portal to RST
+----------------------------------------------------------------------
 
+Assume you like to transfer a page from the portal to rst. This can
+actually be done quite easily using a program called pandoc. First get
+the page and rename it to a page with html::
+
+    $ wget https://portal.futuregrid.org/contrib/simple-vine-tutorial
+    $ mv simple-vine-tutorial simple-vine-tutorial.html
+    $ pandoc simple-vine-tutorial.html -o simple-vine-tutorial.rst
+
+Than edit the page and remove the code related to the menues so only
+the bare code stays:
+
+* typically everything before **What links here** can be ignored.
+* typically everything after the words  **Your rating** and the rest
+   of the page can  be ignored.
+
+Creating the pages locally
+---------------------
+
+To create the pages locally simply go in the manual folder and saay
+make::
+
+    $ cd ~/github/manual
+    $ make
+
+Your index file will be in::
+
+     $ firefox ./doc/build/html/index.html
+
+On Osx you can simply say::
+
+     $ make view
 ..
     Autorun 
     .. hint:: PLEASE SKIP THIS SECTION, WE ARE NOT USING AUTORUN
