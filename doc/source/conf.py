@@ -36,7 +36,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.viewcode',
               'sphinxcontrib.actdiag']
 
-extensions.append('sphinxcontrib.autorun')
+# extensions.append('sphinxcontrib.autorun')
 actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
 
 todo_include_todos = True
