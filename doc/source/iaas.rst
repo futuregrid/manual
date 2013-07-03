@@ -29,10 +29,10 @@ supports "classic" virtual machines.
 
 For tutorials on getting started with Nimbus, see:
 
--  `Using Nimbus on
-   FutureGrid <https://portal.futuregrid.org/tutorials/nimbus>`__ [novice]
--  `Nimbus One-click Cluster
-   Guide <https://portal.futuregrid.org/tutorials/nm2>`__ [intermediate]
+-  :portal:`Using Nimbus on
+   FutureGrid <tutorials/nimbus>` [novice]
+-  :portal:`Nimbus One-click Cluster
+   Guide <tutorials/nm2>` [intermediate]
 
 OpenStack Clouds
 ----------------
@@ -52,14 +52,14 @@ stacks.
 
 For tutorials on getting started with OpenStack, see:
 
--  `Using OpenStack Nova on
-   FutureGrid <https://portal.futuregrid.org/tutorials/openstack>`__ [novice]
+-  :portal:`Using OpenStack Nova on
+   FutureGrid <tutorials/openstack>` [novice]
 
    -  This tutorial targets all users of OpenStack in FutureGrid; it
       describes how to get started with FutureGrid OpenStack resources.
 
--  `Running an OpenStack virtual appliance on
-   FutureGrid <https://portal.futuregrid.org/tutorials/os1>`__ [novice]
+-  :portal:`Running an OpenStack virtual appliance on
+   FutureGrid <tutorials/os1>` [novice]
 
    -  This tutorial targets users interested in education and training
       on OpenStack internals; it describes how to run a virtual, private
@@ -82,8 +82,8 @@ stacks.
 
 For tutorials on getting started with Eucalyptus, see:
 
--  `Using Eucalyptus on
-   FutureGrid <https://portal.futuregrid.org/tutorials/eucalyptus3>`__ [novice]
+-  :portal:`Using Eucalyptus on
+   FutureGrid <tutorials/eucalyptus3>` [novice]
 
 
 
@@ -101,15 +101,15 @@ For tutorials on getting started with educational virtual appliances,
 see:
 
 
--  `Running a Grid Appliance on your
-   desktop <https://portal.futuregrid.org/tutorials/ga1>`__  [novice]
--  `Running a Grid Appliance on
-   FutureGrid <https://portal.futuregrid.org/tutorials/ga9>`__ [novice]
--  `Running Condor tasks on the Grid
-   Appliance <https://portal.futuregrid.org/tutorials/ga8>`__ [novice]
--  `Running MPI tasks on the Grid
-   Appliance <https://portal.futuregrid.org/tutorials/mp1>`__ [novice]
--  `Running Hadoop tasks on the Grid
-   Appliance <https://portal.futuregrid.org/tutorials/ga10>`__ [novice]
--  `Running an OpenStack virtual appliance on
-   FutureGrid <https://portal.futuregrid.org/tutorials/os1>`__ [novice]
+-  :portal:`Running a Grid Appliance on your
+   desktop <tutorials/ga1>`  [novice]
+-  :portal:`Running a Grid Appliance on
+   FutureGrid <tutorials/ga9>` [novice]
+-  :portal:`Running Condor tasks on the Grid
+   Appliance <tutorials/ga8>` [novice]
+-  :portal:`Running MPI tasks on the Grid
+   Appliance <tutorials/mp1>` [novice]
+-  :portal:`Running Hadoop tasks on the Grid
+   Appliance <tutorials/ga10>` [novice]
+-  :portal:`Running an OpenStack virtual appliance on
+   FutureGrid <tutorials/os1>` [novice]

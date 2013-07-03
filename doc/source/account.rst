@@ -9,16 +9,15 @@ Project and Account Management
    .. contents::
       :local:
 
-It is very easy to get a project and accounts associated with this
-project on FutureGrid. This section describes how to get access to
-FutureGrid. While it is possible to just execute the three steps in
-our quickstart guide, we have provided a more in-depth description
-based on user feedback. However, you have certain responsibilities
-including **managing project memberships** and **reporting
-results**. Thus it is a good idea to read this section more carefully.
-At the end of the section we also provided a mini-FAQ of information
-that may also be of help for issues you may have overlooked or have
-not yet been answered.
+It is very easy to obtain a project and accounts on FutureGrid. While
+it is possible to just execute the three steps in our quickstart
+guide, we have provided a more in-depth description based on user
+feedback. As you have certain responsibilities including **managing
+project memberships** and **reporting results** that must be conducted
+while you use FutureGrid. Thus it is a good idea to read this section
+more carefully.  At the end of the section we also provided a mini-FAQ
+of information that may also be of help for issues you may have
+overlooked or have not yet been answered.
 
 .. _s-account-terminology:
 
@@ -64,9 +63,9 @@ steps that you need to do:
 
 For non XSEDE users:
 
-#. `Create a Portal account <https://portal.futuregrid.org/user/register>`__ and wait for confirmation via e-mail
+#. :portal:`Create a Portal account <user/register>` and wait for confirmation via e-mail
 
-#. Join a `project <https://portal.futuregrid.org/projects>`__ or `create a new project <https://portal.futuregrid.org/node/add/fg-projects>`__  and wait for
+#. Join a :portal:`project <projects>` or :portal:`create a new project <node/add/fg-projects>`  and wait for
    confirmation. Note that you must communicate with the project lead
    first before you can join a project.
 
@@ -122,9 +121,9 @@ complete the next steps.
 Here are a few tips that make it easy for you
 
 -  On the portal's main page at
-   `https://portal.futuregrid.org <https://portal.futuregrid.org>`__
+   :portal:`https://portal.futuregrid.org <`
    appears
-   a :menuselection:`Portal --> Register` `link <https://portal.futuregrid.org/user/register>`__. 
+   a :menuselection:`Portal --> Register` :portal:`link <user/register>`. 
 -  Following you will be able to **Create a new account** on the
    portal. 
 -  Fill in **ALL** fields as much as you can.
@@ -154,8 +153,8 @@ Here are a few tips that make it easy for you
    instructions for you in Section :ref:`s-account-class`.
 
 -  After your account has been approved, you can correct the
-   information  as part of the portal account `User Profile
-   Management <https://portal.futuregrid.org/my>`__.
+   information  as part of the portal account :portal:`User Profile
+   Management <my>`.
 
 
 
@@ -167,8 +166,8 @@ Here are a few tips that make it easy for you
 Create a Project 
 ------------------
 
-To apply for a new project, fill out the `project creation form
-<https://portal.futuregrid.org/node/add/fg-projects>`__.  Through this
+To apply for a new project, fill out the :portal:`project creation form
+<node/add/fg-projects>`.  Through this
 form we gather some important information about the project so we can
 review it for approval. This information is used to report and
 document not only to us but also to our sponsors which activities are

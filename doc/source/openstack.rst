@@ -36,7 +36,7 @@ username::
 
 If this command fails, please revisit the section
 :ref:`s-accounts`. If it still does not work, please contact via the
-`help form <https://portal.futuregrid.org/help>`__.
+:portal:`help form <help>`.
 
 It likely means one of the following:
 

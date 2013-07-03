@@ -116,3 +116,60 @@ On Osx you can simply say::
 	$ hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
 	$ cd sphinx-contrib/autorun
 	$ python setup.py install
+
+jira
+----------------------------------------------------------------------
+
+References to jira can be made with the tag::
+
+  :jira:`this issue <FG-1418>`
+
+It will result in an outpus such as
+
+:jira:`this issue <FG-1418>`
+
+To just refer to a text with the number use::
+
+   :jira:`FG-1418`
+
+and you will get 
+
+:jira:`FG-1418`
+
+It uses the extension http://sphinx-doc.org/latest/ext/extlinks.html
+and the tags must be specified in the conf.py file.
+
+Portal link
+----------------------------------------------------------------------
+
+to simplify access to a portal url you can use::
+
+    :portal:`my/ssh-keys`
+
+and it will return
+
+:portal:`my/ssh-keys`
+
+It uses the extension http://sphinx-doc.org/latest/ext/extlinks.html
+and the tags must be specified in the conf.py file.
+
+Screencast recording tips
+---------------------------
+
+OSX 
+~~~~
+
+Install OmniDazzle from:
+
+* http://www.omnigroup.com/products/omnidazzle/
+
+
+Hide the icons on OSX desktop::
+
+   $ defaults write com.apple.finder CreateDesktop -bool false
+   $ killall Finder
+
+Show the icons on OSX desktop::
+
+   $ defaults write com.apple.finder CreateDesktop -bool true
+   $ killall Finder

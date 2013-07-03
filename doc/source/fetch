@@ -2,6 +2,7 @@
 
 import sys
 import os
+import urlparse, urllib, os.path
 
 if len(sys.argv) < 2:
     sys.stderr.write('Usage: fetch link ')
@@ -11,11 +12,18 @@ link=sys.argv[1]
 
 print link
 
-filename = "x-%s.rst" % link
+pathname = os.path.dirname(urllib.url2pathname(urlparse.urlparse(link).path))
+filename = os.path.basename(link)
 
-os.system("curl -o %s.html -O https://portal.futuregrid.org/%s" %(link,link))
-os.system("pandoc -s --to rst %s.html -o x-%s.rst" % (link,link))
+print pathname
+print filename
+print link
 
+
+os.system("curl -o %s.html -O %s" %(filename,link))
+os.system("pandoc -s --to rst %s.html -o x-%s.rst" % (filename,filename))
+
+filename = "x-%s.rst" % filename
 
 with open(filename) as f:
     content = f.readlines()
@@ -25,10 +33,6 @@ with open(filename) as f:
 (content, junk)  = "".join(content).split("-  `About </about>`__")
 
 (content, junk)  = "".join(content).split("-  `Sponsors </sponsors>`__")
-
-
-
-
 
 
 file = open(filename, 'wb')

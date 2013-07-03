@@ -1,5 +1,5 @@
 **********************************************************************
-PaaS - Platform as a Service
+Using Map/Reduce in FutureGrid
 **********************************************************************
 
 .. sidebar:: Page Contents
@@ -10,8 +10,6 @@ PaaS - Platform as a Service
 This chapter contains information in regards to Platform as a Service
 offerings on FutureGrid
 
-Using Map/Reduce in FutureGrid
-==============================
 
 As the computing landscape becomes increasingly data-centric,
 data-intensive computing environments are poised to transform scientific
@@ -45,16 +43,10 @@ runtime, running on the HPC cluster.
 
 Associated tutorials:
 
--  `Basic High Performance
-   Computing <https://portal.futuregrid.org/tutorials/hpc>`__ [novice]
--  `Running Hadoop as a batch job using
-   MyHadoop <https://portal.futuregrid.org/tutorials/running-hadoop-batch-job-using-myhadoop>`__ [novice]
--  `Running SalsaHadoop (one-click Hadoop) on HPC
-   environment <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc>`__
-   [beginner]
--  `Running Twister on HPC
-   environment <https://portal.futuregrid.org/twister-futuregrid-hpc>`__
-   [beginner]
+-  :ref:`Basic High Performance Computing <s-hpc-access>` [novice]
+-  :ref:`Running Hadoop as a batch job using MyHadoop <s-myhadoop>` [novice]
+-  :ref:`Running SalsaHadoop (one-click Hadoop) on HPC environment <s-salsa-hadoop-hpc>` [beginner]
+-  :ref:`Running Twister on HPC environment <s-salsa-hadoop-hpc>`  [beginner]
 
 MapReduce on Virtual Machines
 ------------------------------
@@ -67,17 +59,10 @@ Currently, Hadoop images can be deployed on FutureGrid resources in the
 following ways:
 
 
--  `Using <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` Eucalyptus
-   on
-   FutureGrid <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` [novice] <https://portal.futuregrid.org/tutorials/eucalyptus>`__
--  `Running SalsaHadoop on
-   Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__
-   [intermediate]
--  `Running FG-Twister on
-   Eucalyptus <https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid>`__ [intermediate]
--  `Running Twister on
-   Eucalyptus <https://portal.futuregrid.org/twister-futuregrid-cloud-eucalyptus>`__
-   [intermediate]
+-  :ref:`s-eucalyptus` [novice] 
+-  :ref:`s-salsa-hadoop-eucalyptus` [intermediate]
+-  :ref:`s-twister-eucalyptus` [intermediate]
+-  :ref:`s-eucalyptus-twister` [intermediate]
 
 
 
@@ -109,13 +94,16 @@ resources in the following ways:
 -  `Running Twister Blast on
    FutureGrid <https://portal.futuregrid.org/twister-blast>`__ [novice]
 
+.. _s-myhadoop:
+
+**********************************************************************
 Running Hadoop as a Batch Job using MyHadoop
-============================================
+**********************************************************************
 
 |Hadoop logo|
 
 
-MapReduce is a programming model developed by Google\ **.**\ Their
+MapReduce is a programming model developed by Google. Their
 definition of MapReduce is as follows:  "MapReduce is a programming
 model and an associated implementation for processing and generating
 large data sets. Users specify a map function that processes a key/value
@@ -124,7 +112,7 @@ function that merges all intermediate values associated with the same
 intermediate key."  For more information about MapReduce, please see the
 Google paper `here <http://labs.google.com/papers/mapreduce.html>`__.
 
-The `Apache Hadoop Projec <http://hadoop.apache.org>`__\ t provides an
+The `Apache Hadoop Project <http://hadoop.apache.org>`__ provides an
 open source implementation of MapReduce and HDFS (Hadoop Distributed
 File System).   
 
@@ -319,8 +307,9 @@ More Information
 For more information about how myHadoop works, please see the
 documentation in $MY_HADOOP_HOME/docs/myHadoop.pdf 
 
+**********************************************************************
 Using SalsaHadoop on FutureGrid
-===============================
+**********************************************************************
 
 PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.
@@ -387,8 +376,9 @@ have experience with IaaS Eucalyptus.
 
    -  Run Hadoop with static FutureGrid-Bravo HDFS\*
 
+**********************************************************************
 Hadoop Blast
-============
+**********************************************************************
 
 Author: Tak-Lon Stephen Wu
 Version: 0.1
@@ -430,7 +420,7 @@ Requirement
    `Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__)
 #. Start SalsaHadoop/Hadoop on compute nodes. (`SalsaHadoop
    Tutorial <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#Configuration>`__)
-#. Download and unzip \ `Hadoop Blast source
+#. Download and unzip  `Hadoop Blast source
    code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip>`__
    from `Big Data for Science
    tutorial <http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html>`__.
@@ -685,8 +675,9 @@ Map-Reduce daemon::
 
     $ bin/stop-all.sh
 
+**********************************************************************
 Using Twister on FutureGrid
-===========================
+**********************************************************************
 
 PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.
@@ -708,22 +699,21 @@ enhancements.
 
 `Twister <http://www.iterativemapreduce.org/>`__ provides the following
 features to support MapReduce computations. (Twister is developed as
-part of \ `Jaliya
+part of  `Jaliya
 Ekanayake's <http://www.cs.indiana.edu/%7Ejekanaya/>`__ Ph.D. research
 and is supported by
-the \ **`S A L S  <http://salsahpc.indiana.edu/>`__**\ ****\ **`A <http://salsahpc.indiana.edu/>`__**\ Team
-@ \ `IU <http://www.iub.edu/>`__)
+the  **`S A L S  <http://salsahpc.indiana.edu/>`__** **** **`A <http://salsahpc.indiana.edu/>`__** Team
+@  `IU <http://www.iub.edu/>`__)
 
 
 * Distinction on static and variable data                                   
 * Configurable long running (cacheable) map/reduce tasks                    
 * Pub/sub messaging based communication/data transfers                     
-* Efficient support for Iterative MapReduce computations (extremely faster than\ `Hadoop <http://hadoop.apache.org/>`__ or `Dryad/DryadLINQ <http://research.microsoft.com/en-us/projects/DryadLINQ/>`__)   |
+* Efficient support for Iterative MapReduce computations (extremely faster than `Hadoop <http://hadoop.apache.org/>`__ or `Dryad/DryadLINQ <http://research.microsoft.com/en-us/projects/DryadLINQ/>`__)   |
 * Combine phase to collect all reduce outputs                               
 * Tools to manage data                                                      
 
 |image114|
-----------
 
 Iterative MapReduce programming model using Twister
 
@@ -795,21 +785,25 @@ Papers and Presentations
 ------------------------
 
 
-* Jaliya Ekanayake, Hui Li, Bingjing Zhang, Thilina Gunarathne, Seung-Hee Bae, Judy Qiu, Geoffrey Fox, \ `Twister: A Runtime for Iterative MapReduce <http://www.iterativemapreduce.org/hpdc-camera-ready-submission.pdf>`__," The First International Workshop on MapReduce and its Applications (MAPREDUCE'10) - HPDC2010                                                                                                                
+* Jaliya Ekanayake, Hui Li, Bingjing Zhang, Thilina Gunarathne, Seung-Hee Bae, Judy Qiu, Geoffrey Fox,  `Twister: A Runtime for Iterative MapReduce <http://www.iterativemapreduce.org/hpdc-camera-ready-submission.pdf>`__," The First International Workshop on MapReduce and its Applications (MAPREDUCE'10) - HPDC2010                                                                                                                
 
-* Jaliya Ekanayake, (Advisor: Geoffrey Fox) \ `Architecture and Performance of Runtime Environments for Data Intensive Scalable Computing <http://grids.ucs.indiana.edu/ptliupages/publications/SC09-abstract-jaliya-ekanayake.pdf>`__, Doctoral Showcase, SuperComputing2009. (`Presentation <http://www.slideshare.net/jaliyae/architecture-and-performance-of-runtime-environments-for-data-intensive-scalable-computing-2653554>`__)   
+* Jaliya Ekanayake, (Advisor: Geoffrey Fox)  `Architecture and Performance of Runtime Environments for Data Intensive Scalable Computing <http://grids.ucs.indiana.edu/ptliupages/publications/SC09-abstract-jaliya-ekanayake.pdf>`__, Doctoral Showcase, SuperComputing2009. (`Presentation <http://www.slideshare.net/jaliyae/architecture-and-performance-of-runtime-environments-for-data-intensive-scalable-computing-2653554>`__)   
 
 
-* Jaliya Ekanayake, Atilla Soner Balkir, Thilina Gunarathne, Geoffrey Fox, Christophe Poulain, Nelson Araujo, Roger Barga, \ `DryadLINQ for Scientific Analyses <http://grids.ucs.indiana.edu/ptliupages/publications/eScience09-camera-ready-submission.pdf>`__, Fifth IEEE International Conference on e-Science (eScience2009), Oxford, UK.                                                                                             
+* Jaliya Ekanayake, Atilla Soner Balkir, Thilina Gunarathne, Geoffrey Fox, Christophe Poulain, Nelson Araujo, Roger Barga,  `DryadLINQ for Scientific Analyses <http://grids.ucs.indiana.edu/ptliupages/publications/eScience09-camera-ready-submission.pdf>`__, Fifth IEEE International Conference on e-Science (eScience2009), Oxford, UK.                                                                                             
 
-* Jaliya Ekanayake, Geoffrey Fox, \ `High Performance Parallel Computing with Clouds and Cloud Technologies <http://grids.ucs.indiana.edu/ptliupages/publications/cloud_handbook_final-with-diagrams.pdf>`__, First International Conference on Cloud Computing (CloudComp09) Munich, Germany, 2009.                                                                                                                                       
+* Jaliya Ekanayake, Geoffrey Fox,  `High Performance Parallel Computing with Clouds and Cloud Technologies <http://grids.ucs.indiana.edu/ptliupages/publications/cloud_handbook_final-with-diagrams.pdf>`__, First International Conference on Cloud Computing (CloudComp09) Munich, Germany, 2009.                                                                                                                                       
 
-* Geoffrey Fox, Seung-Hee Bae, Jaliya Ekanayake, Xiaohong Qiu, and Huapeng Yuan,\ `Parallel Data Mining from Multicore to Cloudy Grids <http://grids.ucs.indiana.edu/ptliupages/publications/CetraroWriteupJan09_v12.pdf>`__, High Performance Computing and Grids workshop, 2008.                                                                                                                                                         
+* Geoffrey Fox, Seung-Hee Bae, Jaliya Ekanayake, Xiaohong Qiu, and Huapeng Yuan, `Parallel Data Mining from Multicore to Cloudy Grids <http://grids.ucs.indiana.edu/ptliupages/publications/CetraroWriteupJan09_v12.pdf>`__, High Performance Computing and Grids workshop, 2008.                                                                                                                                                         
 
-* Jaliya Ekanayake, Shrideep Pallickara, and Geoffrey Fox \ `MapReduce for Data Intensive Scientific Analysis <http://www.cs.indiana.edu/%7Ejekanaya/papers/eScience-final.pdf>`__, Fourth IEEE International Conference on eScience, 2008, pp.277-284.                                                                                                                                                                                    
-
+* Jaliya Ekanayake, Shrideep Pallickara, and Geoffrey Fox  `MapReduce
+  for Data Intensive Scientific Analysis
+  <http://www.cs.indiana.edu/%7Ejekanaya/papers/eScience-final.pdf>`__,
+  Fourth IEEE International Conference on eScience, 2008, pp.277-284.                                                                                                                                   
+                                                 
+**********************************************************************
 Twister Blast
-=============
+**********************************************************************
 
 Author: Yang Ruan
 Improvements: 
@@ -821,7 +815,7 @@ Twister Blast
 
 BLAST (Basic Local Alignment Search Tool) is one of the most widely used
 bioinformatics applications written in C++, and the version we are using
-is v2.2.23. `Twister <http://www.iterativemapreduce.org/>`__\ is an
+is v2.2.23. `Twister <http://www.iterativemapreduce.org/>`__ is an
 iterative mapreduce framework which can be used both for iterative and
 non-iterative applications. Twister Blast is an advanced Twister program
 which helps Blast, a bioinformatics application, utilizes the Computing
@@ -836,7 +830,7 @@ location. Output can also be collected by Twister-BLAST. Compared with
 other parallel BLAST applications, Twister-BLAST is efficient and with
 little overhead.
 
-You can download the\ `Twister
+You can download the `Twister
 Blast <http://salsahpc.indiana.edu/tutorial/apps/twister-blast.tar.gz>`__
 Source code and customized Blast program and Database archive
 (`BlastProgramAndDB.tar.gz <http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz>`__)
@@ -888,7 +882,7 @@ according to users' needs. However, Input option (-query) and output
 option (-out) are not set in execmd but in inop and outop in order to be
 compatible with both BLAST+ and BLAST. Twister-BLAST will merge these
 command options by itself when invoking BLAST+ parallel.
-The execution command template inside\ **twister_blast.properties**
+The execution command template inside **twister_blast.properties**
 is given below::
 
     execmd = time /N/u/yangruan/Quarry/workflow/ncbi-blast-2.2.23+/bin/blastp -db /N/dc/scratch/yangruan/blast/db/cog/10k/cog.10000 -evalue 100 -max_target_seqs 1000000 -num_alignments 1000000 -outfmt 6 -seg no
@@ -969,9 +963,9 @@ daemon and broker::
     $TWISTER_HOME/bin/stop_twister.sh
 
 
-
+**********************************************************************
 Eucalyptus and Twister on FutureGrid
-====================================
+**********************************************************************
 
 SALSA Group
 PTI Indiana University
@@ -1115,4 +1109,8 @@ The output is as follows:
 +===============================================================================================+===========+
 | `fgeucatwister.zip <https://portal.futuregrid.org/sites/default/files/fgeucatwister.zip>`__   | 4.38 KB   |
 +-----------------------------------------------------------------------------------------------+-----------+
-.. |image94| image:: images/myHadoop-300x70.pn.. |Hadoop logo| image:: images/hadoop-logo.jp.. |image114| image:: images/imrmodel.pn.. |image127| image:: images/start_twister.jp.. |image128| image:: images/twister_kmeans-906x257.jpg
+.. |image94| image:: images/myHadoop-300x70.png
+.. |Hadoop logo| image:: images/hadoop-logo.jpg
+.. |image114| image:: images/imrmodel.png
+.. |image127| image:: images/start_twister.jpg
+.. |image128| image:: images/twister_kmeans-906x257.jpg

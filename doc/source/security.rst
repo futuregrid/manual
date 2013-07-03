@@ -61,7 +61,7 @@ following simple steps.
      - Description
      - Supporting Screenshot
    * - Step 1
-     - Download Cygwin from our Portal \ `https://portal.futuregrid.org/sites/default/files/cygwin.zip <https://portal.futuregrid.org/sites/default/files/cygwin.zip>`__.
+     - Download Cygwin from our Portal \ :portal:`sites/default/files/cygwin.zip`.
      - 
    * - Step 2
      - Uncompress the file.

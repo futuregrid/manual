@@ -47,8 +47,8 @@ reference in your papers.
 .. [1]   Fox, G., G. von Laszewski, J. Diaz, K. Keahey, J. Fortes, R.
    Figueiredo, S. Smallen, W. Smith, and A. Grimshaw, "FutureGrid - a  reconfigurable testbed for Cloud, HPC and Grid Computing",
    Contemporary High Performance Computing: From Petascale toward
-   Exascale, April, 2013. Editor J. Vetter.    `[pdf]
-   <https://portal.futuregrid.org/sites/default/files/vonLaszewski-fg-bookchapter.pdf>`__
+   Exascale, April, 2013. Editor J. Vetter.    :portal:`[pdf]
+   <sites/default/files/vonLaszewski-fg-bookchapter.pdf>`
    Contemporary High Performance Computing: From Petascale toward
    Exascale, April, 2013. 
 

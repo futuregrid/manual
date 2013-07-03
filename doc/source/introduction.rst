@@ -114,7 +114,7 @@ FutureGrid includes a geographically distributed set of heterogeneous
 computing systems, data management systems, and dedicated networks.
 These resources are provided by different institutions across the United
 States. Detailed information on the different sites can be found in
-the :ref:`s-hardware`.
+the section :ref:`s-hardware`.
 
 
 

@@ -1,7 +1,7 @@
 .. _s-eucalyptus:
 
 ===================================================
-Eucalyptus  (Allen)
+Eucalyptus
 ===================================================
 
 .. sidebar:: Page Contents
@@ -24,23 +24,17 @@ Website <http://www.eucalyptus.com/eucalyptus-cloud/iaas>`__. A detail
 user guide is also available
 `here <http://www.eucalyptus.com/sites/all/modules/pubdlcnt/pubdlcnt.php?file=/sites/all/files/docs/latest/ug.pdf&nid=296>`__.
 
-Requirements
-----------------
-
-Users get access to the Eucalyptus features using the Eucalyptus EC2
-Interface, which is only available for GNU/Linux platforms. Therefore,
-the users will require a machine with a GNU/Linux installed on it.
-
-
-Eucalyptus 3
-''''''''''''
 
 As of May 15, 2012, FutureGrid is using `Eucalyptus version
 3 <http://www.eucalyptus.com/eucalyptus-cloud/iaas/features>`__ which
 requires `euca2ools
 2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ and python > 2.4
-(available by modules in india and sierra). Make sure to load "module
-load euca2ools/2.0.2" before using Eucalyptus. `euca2ools
+(available by modules in india and sierra). Make sure to load the
+euca2ools module::
+
+    $ module load euca2ools/2.0.2
+
+before using Eucalyptus. `euca2ools
 2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ is part of
 Eucalyptus Enterprise package. However, the source is available
 `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
@@ -102,13 +96,6 @@ not be used in another.
            $ source .bashrc
 
 
-Install Euca2tools
-
-    Older version of euca2ools is not compatible with Eucalyptus 3.
-    `euca2ools 2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__
-    is part of the Enterprise project so not available for all users.
-    However, the source is available
-    `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/files>`__.
 
 Resources Overview
 ----------------------
@@ -150,7 +137,7 @@ Testing Your Setup
 
 Use euca-describe-availability-zones to test the setup::
 
-        ssh sierra.futuregrid.org
+        $ ssh portalname@sierra.futuregrid.org
         Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
 
         Welcome to Sierra.FutureGrid.Org
@@ -160,8 +147,10 @@ Use euca-describe-availability-zones to test the setup::
 
         $ module load euca2ools/2.0.2
         euca2ools version 2.0.2 loaded
+
         $ euca-version
         euca2ools 2.0.2
+
         $ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
         $ euca-describe-availability-zones
         AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
@@ -187,29 +176,29 @@ List the existing images using euca-describe-images::
 Image Deployment
 --------------------
 
--  Before deploying a VM, you need to create at least one key pair. This
-   key pair will be injected into the VM, allowing you to SSH into the
-   instance. This is done using the euca-add-keypair command::
+Before deploying a VM, you need to create at least one key pair. This
+key pair will be injected into the VM, allowing you to SSH into the
+instance. This is done using the euca-add-keypair command::
 
         $ euca-add-keypair userkey   > userkey.pem
 
--  Fix the permissions on the generated private key::
+Fix the permissions on the generated private key::
 
         $ chmod 0600 userkey.pem 
 
--  Now you can start a VM using one of the pre-existing images. You need
-   the emi-id of the image you want to start. This was listed in the
-   output of euca-describe-images command that you saw earlier. Use the
-   euca-run-instances command to start the VM::
+Now you can start a VM using one of the pre-existing images. You need
+the emi-id of the image you want to start. This was listed in the
+output of euca-describe-images command that you saw earlier. Use the
+euca-run-instances command to start the VM::
 
         $ euca-run-instances -k userkey -n 1   emi-0B951139 -t c1.medium
 
         RESERVATION     r-4E730969      archit    archit-default
         INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255
 
--  The euca-describe-instances command can be used to check the status
-   of the request. The following image was assigned an ip address and is
-   starting up, as demonstrated by the "pending" status::
+The euca-describe-instances command can be used to check the status
+of the request. The following image was assigned an ip address and is
+starting up, as demonstrated by the "pending" status::
 
         $ euca-describe-instances 
 
@@ -217,7 +206,7 @@ Image Deployment
         INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0       
                   m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
--  Once started, the status will change to "running"::
+Once started, the status will change to "running"::
 
         $ euca-describe-instances
 
@@ -225,35 +214,35 @@ Image Deployment
         INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0       
                   m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
--  If you need to delete a deployed VM, you can use the
-   euca-terminate-instances command::
+If you need to delete a deployed VM, you can use the
+euca-terminate-instances command::
 
            $ euca-terminate-instances i-4FC40839
 
 Logging Into the VM
 -----------------------
 
--  Create rules to allow access to the VM over ssh and to allow ping
+Create rules to allow access to the VM over ssh and to allow ping
 
     $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
     $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
 
--  The ssh private key that was generated earlier can now be used to
-   login to the VM::
+The ssh private key that was generated earlier can now be used to
+login to the VM::
 
         $ssh -i userkey.pem root@149.165.146.153
 
-        -bash-3.2# uname -a
+        # uname -a
 
          Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux
 
 VM Network Info
 -------------------
 
--  The VM itself is visible from outside using the VM public IP. The
-   internal network will show the VM private IP address::
+The VM itself is visible from outside using the VM public IP. The
+internal network will show the VM private IP address::
 
-        -bash-3.2# /sbin/ifconfig
+        # /sbin/ifconfig
 
         eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40  
                 inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192
@@ -261,19 +250,19 @@ VM Network Info
 Image Management
 --------------------
 
--  We will use the example ubuntu 10 image to test uploading images.
-   Download the gzipped tar ball::
+We will use the example ubuntu 10 image to test uploading images.
+Download the gzipped tar ball::
 
         $ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz
 
--  Uncompress and untar the archive::
+Uncompress and untar the archive::
 
         $ tar zxf ubuntu-12.04-server-cloudimg-amd64.tar.gz
 
--  Bundle the image with a kernel and a ramdisk using the
-   euca-bundle-image command. In this example, we will use the xen
-   kernel already registered. euca-describe-images returns the kernel
-   and ramdisk IDs that we need::
+Bundle the image with a kernel and a ramdisk using the
+euca-bundle-image command. In this example, we will use the xen
+kernel already registered. euca-describe-images returns the kernel
+and ramdisk IDs that we need::
 
         $ euca-bundle-image -i   precise-server-cloudimg-amd64.img --kernel eki-78EF12D2 --ramdisk   eri-5BB61255
 
@@ -300,7 +289,7 @@ Image Management
         Part:   precise-server-cloudimg-amd64.img.part.16
         Generating manifest   /tmp/precise-server-cloudimg-amd64.img.manifest.xml
 
--  Use the generated manifest file to upload the image to Walrus::
+Use the generated manifest file to upload the image to Walrus::
 
         $ euca-upload-bundle -b ubuntu-image-bucket   -m /tmp/precise-server-cloudimg-amd64.img.manifest.xml
 
@@ -326,15 +315,15 @@ Image Management
         Uploading part:   precise-server-cloudimg-amd64.img.part.16
         Uploaded image as   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
 
--  Register the uploaded image::
+Register the uploaded image::
 
         $ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
 
         IMAGE   emi-FFC3154F
 
--  The returned image ID can now be used to start instances with
-   euca-run-instances as described earlier. euca-describe-images also
-   shows the new image now::
+The returned image ID can now be used to start instances with
+euca-run-instances as described earlier. euca-describe-images also
+shows the new image now::
 
         $ euca-describe-images 
 
@@ -342,7 +331,7 @@ Image Management
         IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine 
           ...
 
--  You can also delete your images::
+You can also delete your images::
 
     $ euca-deregister emi-FFC3154F
 
@@ -352,6 +341,7 @@ Status of Deployments
 At times you may ask if the Eucalyptus systems on FutureGrid are
 operational. You can find this out by visiting 
 
-a) The `Outage page <https://portal.futuregrid.org/metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`__
+a) The :portal:`Outage page <metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`
 b) The `Real Time Status monitor <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
 c) Our `Runtime History <http://inca.futuregrid.org:8080/inca/jsp/report.jsp?xml=cloudReport.xml>`__
+

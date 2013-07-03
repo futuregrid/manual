@@ -21,16 +21,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    If your name is missing please let us know and we will add it.
 
-**PART 0. PLAN**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   todolist
-   plan
-   git
-   contributing
 
 **PART I. INTRODUCTION**
 
@@ -39,7 +29,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    preface
-   summary-executive
    introduction
 
 **PART II. ACCOUNTS AND PROJECTS**
@@ -91,6 +80,11 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    mapreduce
+   x-salsahadoop-futuregrid-cloud-eucalyptus
+   x-salsahadoop-futuregrid-hpc
+   x-twister-futuregrid-cloud-eucalyptus
+   x-twister-futuregrid-hpc
+   x-eucalyptus-and-twister-futuregrid
 
 **PART VI. EXPERIMENT MANAGEMENT SERVICES**
 
@@ -128,5 +122,16 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 ..
    python
 
+
+**APPENDIX I. MAINTAINING THIS MANUAL**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   todolist
+   plan
+   git
+   contributing
 
 .. |image0| image:: /images/fg-logo-md.png

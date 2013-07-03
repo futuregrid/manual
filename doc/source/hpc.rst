@@ -1,13 +1,15 @@
 .. _s-hpc:
 
 **********************************************************************
-HPC Services (assigned to Allen and Koji)
+HPC Services 
 **********************************************************************
 
 .. sidebar:: Page Contents
 
    .. contents::
       :local:
+
+.. _s-hpc-access:
 
 Accessing Systems
 -----------------

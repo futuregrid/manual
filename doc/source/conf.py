@@ -29,6 +29,7 @@ import sphinx_bootstrap_theme
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.doctest',
               'sphinx.ext.todo',
+              'sphinx.ext.extlinks',
               'sphinx.ext.coverage',
               'sphinx.ext.pngmath',
               'sphinx.ext.mathjax',
@@ -40,6 +41,11 @@ extensions = ['sphinx.ext.autodoc',
 actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
 
 todo_include_todos = True
+
+
+extlinks = {'jira': ('https://jira.futuregrid.org/browse/%s','issue '),
+            'portal': ('https://portal.futuregrid.org/%s','https://portal.futuregrid.org/'),
+            }
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
