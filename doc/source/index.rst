@@ -13,7 +13,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    Fugang Wang,
    Javier Diaz, 
    Koji Tanaka,
-   Alan Streib,
+   Allan Streib,
    Renato Figurero
    Archit Kulshrestha, 
    Jonathan Bolte,
