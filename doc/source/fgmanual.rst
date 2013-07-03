@@ -388,41 +388,7 @@ No the first nova command::
 .. |image92| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/Screen%20Shot%202013-03-06%20at%2012.51.48%20PM-200x200.png
    :target: http://futuregrid.github.com/rain/quickstart.html
 .. |:!:| image:: http://www.opennebula.org/lib/images/smileys/icon_exclaim.gif
-.. |image94| image:: https://portal.futuregrid.orghttps://portal.futuregrid.org/sites/default/files/resize/myHadoop-300x70.png
-.. |Hadoop logo| image:: http://hadoop.apache.org/images/hadoop-logo.jpg
-.. |image96| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image97| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image98| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image99| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image100| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image101| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image102| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image103| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image104| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image105| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image106| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image107| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image108| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image109| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image110| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image111| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image112| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image113| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image114| image:: http://www.iterativemapreduce.org/images/imrmodel.png
-.. |image115| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image116| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image117| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image118| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image119| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image120| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image121| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image122| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image123| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image124| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image125| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image126| image:: http://www.iterativemapreduce.org/images/bullet.png
-.. |image127| image:: https://portal.futuregrid.orghttps://portal.futuregrid.org/sites/default/files/u192/start_twister.jpg
-.. |image128| image:: https://portal.futuregrid.orghttps://portal.futuregrid.org/sites/default/files/resize/u192/twister_kmeans-906x257.jpg
+
 .. |Cloud site sample layouts.| image:: https://pegasus.isi.edu/wms/docs/4.0/images/fg-pwms-prefio.3.png
 .. |image130| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif
 .. |image132| image:: https://portal.futuregrid.org/sites/default/files/u23/summerschool2012.png

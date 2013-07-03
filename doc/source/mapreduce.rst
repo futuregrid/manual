@@ -1,5 +1,6 @@
+**********************************************************************
 PaaS - Platform as a Service
-============================
+**********************************************************************
 
 .. sidebar:: Page Contents
 
@@ -17,16 +18,16 @@ data-intensive computing environments are poised to transform scientific
 research. In particular, MapReduce based programming models and run-time
 systems such as the open-source Hadoop system have increasingly been
 adopted by researchers with data-intensive problems, in areas including
-bio-informatics, data mining and analytics, and text processing. 
+bio-informatics, data mining and analytics, and text processing. 
 
-FutureGrid provides capabilities that allow users to experiment with
+FutureGrid provides capabilities that allow users to experiment with
 MapReduce applications and middleware, including the widely-used
-Hadoop platform and the iterative map/reduce Twister plaftorm. There are
+Hadoop platform and the iterative map/reduce Twister plaftorm. There are
 different ways you may want to use MapReduce platforms in the testbed.
 This page guides you in selecting from FutureGrid capabilities that are
-best suited depending on your goals, and links to respective tutorials:
+best suited depending on your goals, and links to respective tutorials.
 
- MapReduce on Physical Machines
+MapReduce on Physical Machines
 -------------------------------
 
 
@@ -38,24 +39,24 @@ deploying Hadoop on physical machines in FutureGrid: The first uses
 "MyHadoop", where Hadoop tasks are instantiated dynamically using an HPC
 scheduler (Torque). The second uses "SalsaHadoop", where Hadoop starts
 with a 'one-click script' automatically on obtained HPC nodes and
-tasks are submitted to the Hadoop master directly. In addition,
+tasks are submitted to the Hadoop master directly. In addition,
 FutureGrid also supports Twister, a lightweight iterative MapReduce
-runtime, running on the HPC cluster. 
+runtime, running on the HPC cluster.
 
 Associated tutorials:
 
 -  `Basic High Performance
-   Computing <https://portal.futuregrid.org/tutorials/hpc>`__ [novice]
+   Computing <https://portal.futuregrid.org/tutorials/hpc>`__ [novice]
 -  `Running Hadoop as a batch job using
-   MyHadoop <https://portal.futuregrid.org/tutorials/running-hadoop-batch-job-using-myhadoop>`__ [novice]
--  `Running SalsaHadoop (one-click Hadoop) on HPC
+   MyHadoop <https://portal.futuregrid.org/tutorials/running-hadoop-batch-job-using-myhadoop>`__ [novice]
+-  `Running SalsaHadoop (one-click Hadoop) on HPC
    environment <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc>`__
    [beginner]
 -  `Running Twister on HPC
    environment <https://portal.futuregrid.org/twister-futuregrid-hpc>`__
    [beginner]
 
- MapReduce on Virtual Machines
+MapReduce on Virtual Machines
 ------------------------------
 
 
@@ -66,14 +67,14 @@ Currently, Hadoop images can be deployed on FutureGrid resources in the
 following ways:
 
 
--  `Using <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` Eucalyptus
+-  `Using <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` Eucalyptus
    on
-   FutureGrid <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` [novice] <https://portal.futuregrid.org/tutorials/eucalyptus>`__
--  `Running SalsaHadoop on
+   FutureGrid <https://portal.futuregrid.org/tutorials/eucalyptus>`__\ ` [novice] <https://portal.futuregrid.org/tutorials/eucalyptus>`__
+-  `Running SalsaHadoop on
    Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__
    [intermediate]
 -  `Running FG-Twister on
-   Eucalyptus <https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid>`__ [intermediate]
+   Eucalyptus <https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid>`__ [intermediate]
 -  `Running Twister on
    Eucalyptus <https://portal.futuregrid.org/twister-futuregrid-cloud-eucalyptus>`__
    [intermediate]
@@ -93,12 +94,12 @@ resources in the following ways:
 
 
 -  `Running a Grid Appliance on
-   FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__ [novice]
+   FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__ [novice]
 -  `Running Condor tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga8>`__ [novice]
--  `Running Hadoop tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga10>`__ [novice]
--  `Running Hadoop WordCount on
+   Appliance <http://portal.futuregrid.org/tutorials/ga8>`__ [novice]
+-  `Running Hadoop tasks on the Grid
+   Appliance <http://portal.futuregrid.org/tutorials/ga10>`__ [novice]
+-  `Running Hadoop WordCount on
    FutureGrid <https://portal.futuregrid.org/hadoop-wordcount>`__
    [novice]
 -  `Running Hadoop Blast on
@@ -111,53 +112,42 @@ resources in the following ways:
 Running Hadoop as a Batch Job using MyHadoop
 ============================================
 
-|image94|          |Hadoop logo|
+|Hadoop logo|
 
- 
-=
-
-Overview
-========
 
 MapReduce is a programming model developed by Google\ **.**\ Their
-definition of MapReduce is as follows:  "MapReduce is a programming
+definition of MapReduce is as follows:  "MapReduce is a programming
 model and an associated implementation for processing and generating
 large data sets. Users specify a map function that processes a key/value
 pair to generate a set of intermediate key/value pairs, and a reduce
 function that merges all intermediate values associated with the same
-intermediate key."  For more information about MapReduce, please see the
+intermediate key."  For more information about MapReduce, please see the
 Google paper `here <http://labs.google.com/papers/mapreduce.html>`__.
 
-The `Apache Hadoop Projec <http://hadoop.apache.org>`__\ t provides an
-open source implementation of MapReduce and HDFS (Hadoop Distributed
-File System).   
+The `Apache Hadoop Projec <http://hadoop.apache.org>`__\ t provides an
+open source implementation of MapReduce and HDFS (Hadoop Distributed
+File System).   
 
 This tutorial illustrates how to run Apache Hadoop thru the batch
-systems on FutureGrid using the MyHadoop tool.  
+systems on FutureGrid using the MyHadoop tool.  
 
-Hadoop on FutureGrid
+myHadoop on FutureGrid
 ====================
 
-Hadoop 0.20.2 is currently installed on Alamo, Hotel, India, and Sierra
-FutureGrid systems.  Please see the `Getting Started
-guide <https://portal.futuregrid.org/gettingstarted>`__ to get accounts
-on those systems.
+`MyHadoop <http://sourceforge.net/projects/myhadoop/>`__ is a set of
+scripts that configure and instantiate Hadoop as a batch job. 
 
-What is myHadoop?
-=================
+myHadoop 0.20.2 is currently installed on Alamo, Hotel, India, and Sierra
+FutureGrid systems. 
 
-`MyHadoop <http://sourceforge.net/projects/myhadoop/>`__ is a set of
-scripts that configure and instantiate Hadoop as a batch job. 
 
 Running myHadoop on FutureGrid
-==============================
+----------------------------------------------------------------------
 
 To run the example, use the following steps.
 
-#. Log into a FutureGrid system that has myHadoop available.  In this
-   tutorial, we are executing from the Hotel machine.
-
-   ::
+#. Log into a FutureGrid system that has myHadoop available.  In this
+   tutorial, we are executing from the Hotel machine::
 
        $ ssh hotel.futuregrid.org
        This machine accepts SSH public key and One Time Password (OTP) logins only.
@@ -165,25 +155,20 @@ To run the example, use the following steps.
        This is *not* your FutureGrid password, but the One Time Password generated from your
        OTP token.  Do not type your FutureGrid password, it will not work.  If you do not
        have a token or public key, you will not be able to login.
-       [gvonlasz@login1 ~]$
 
-#. Load the myHadoop module.  On some FutureGrid systems, you may also
-   need to load the "torque" module as well if qstat is not already in
-   your environment.
+#. Load the myHadoop module.  On some FutureGrid systems, you may also
+   need to load the "torque" module as well if qstat is not already in
+   your environment::
 
-   ::
-
-       [gvonlasz@login1 ~]$ module load myhadoop
+       $ module load myhadoop
        SUN Java JDK version 1.6.0 (x86_64 architecture) loaded
        Apache Hadoop Common version 0.20.203.0 loaded
        myHadoop version 0.2a loaded
-       [gvonlasz@login1 ~]$ 
 
-#. To run the example now, skip to step 9.  Otherwise, view the
-   pbs-example.sh script located in $MY\_HADOOP\_HOME/pbs-example.sh.
-    At the top of the file, you will see standard batch directives
-   indicating which queue to run the Hadoop job, how many nodes, etc.
-#. ::
+#. To run the example now, skip to step 9.  Otherwise, view the
+   pbs-example.sh script located in $MY_HADOOP_HOME/pbs-example.sh.
+   At the top of the file, you will see standard batch directives
+   indicating which queue to run the Hadoop job, how many nodes, etc::
 
        #PBS -q batch
        #PBS -N hadoop_job
@@ -192,17 +177,13 @@ To run the example, use the following steps.
        #PBS -e hadoop_run.err
        #PBS -V
 
-#. Next, there is a line to load Java via modules under the above lines:
-
-   ::
+#. Next, there is a line to load Java via modules under the above lines::
 
        module add java
 
 #. In the example script, a temporary directory to store Hadoop
-   configuration files is specified as ${HOME}/myHadoop-config (although
-   any globally accessible place is fine):
-
-   ::
+   configuration files is specified as ${HOME}/myHadoop-config (although
+   any globally accessible place is fine)::
 
        #### Set this to the directory where Hadoop configs should be generated
        # Don't change the name of this variable (HADOOP_CONF_DIR) as it is
@@ -212,21 +193,17 @@ To run the example, use the following steps.
        export HADOOP_CONF_DIR="${HOME}/myHadoop-config"
 
 #. The pbs-example.sh script runs the "wordcount" program from
-   the hadoop-0.20.2-examples.jar.  There is sample text data from the
-   `Project Gutenberg website <http://www.gutenberg.org/>`__ located a
-   $MY\_HADOOP\_HOME/gutenberg.
+   the hadoop-0.20.2-examples.jar.  There is sample text data from the
+   `Project Gutenberg website <http://www.gutenberg.org/>`__ located a
+   $MY_HADOOP_HOME/gutenberg::
 
-   ::
-
-       -bash-3.2$ ls $MY_HADOOP_HOME/gutenberg
+       $ ls $MY_HADOOP_HOME/gutenberg
        1342.txt.utf8
 
 #. The following lines create a Data directory in HDFS (directory
-   specified in $MY\_HADOOP\_HOME/bin/setenv.sh), copies over the
+   specified in $MY_HADOOP_HOME/bin/setenv.sh), copies over the
    gutenberg data, executes the Hadoop job, and then copies the output
-   back your ${HOME}/Hadoop-Outputs directory.  
-
-   ::
+   back your ${HOME}/Hadoop-Outputs directory. ::
 
        #### Run your jobs here
        echo "Run some test Hadoop jobs"
@@ -237,42 +214,34 @@ To run the example, use the following steps.
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Outputs
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -copyToLocal Outputs ${HOME}/Hadoop-Outputs
 
-#. Now submit the pbs-example.sh script to Hotel:
+#. Now submit the pbs-example.sh script to Hotel::
 
-   ::
-
-       [gvonlasz@login1 ~]$ qsub $MY_HADOOP_HOME/pbs-example.sh 
+       $ qsub $MY_HADOOP_HOME/pbs-example.sh 
        40256.svc.uc.futuregrid.org
 
-#. The job will take about 5 minutes to complete.  To monitor its
-   status, type 'qstat'.  The "R" means the job is running.
+#. The job will take about 5 minutes to complete.  To monitor its
+   status, type 'qstat'.  The "R" means the job is running::
 
-   ::
-
-       [gvonlasz@login1 ~]$ qstat
+       $ qstat
        Job id                    Name             User            Time Use S Queue
        ------------------------- ---------------- --------------- -------- - -----
        40256.svc                  hadoop_job       gvonlasz               0 R batch                  
 
 #. When it is done, the status of the job will be "C" meaning the job
    has completed (or it will no longer be displayed in qstat output).
-    You should see a new hadoop\_run.out file and an "Hadoop-Outputs"
-   directory :
+   You should see a new hadoop_run.out file and an "Hadoop-Outputs"
+   directory ::
 
-   ::
-
-       [gvonlasz@login1 ~]$ qstat
+       $ qstat
        Job id                    Name             User            Time Use S Queue
        ------------------------- ---------------- --------------- -------- - -----
        40256.svc                  hadoop_job       gvonlasz       00:00:05 C batch                   
-       -bash-3.2$ ls
+       $ ls
        Hadoop-Outputs hadoop_run.out
 
-#. View results of the word count operation:
+#. View results of the word count operation::
 
-   ::
-
-       [gvonlasz@login1 ~]$ head Hadoop-Outputs/part-r-00000  
+       $ head Hadoop-Outputs/part-r-00000  
        "'After    1
        "'My   1
        "'Tis  2
@@ -285,68 +254,58 @@ To run the example, use the following steps.
        "All!  1
 
 Now to run you own custom Hadoop job, make a copy of the
-$MY\_HADOOP\_HOME/pbs-example.sh script and modify the lines described
+$MY_HADOOP_HOME/pbs-example.sh script and modify the lines described
 in Step 7.
 
 Persistent Mode
-===============
+----------------------------------------------------------------------
 
 The above example copies input to local HDFS scratch space you specified
-in $MY\_HADOOP\_HOME/bin/setenv.sh, runs MapReduce, and copies output
-from HDFS back to your home directory.  This is called non-persistent
-mode and is good for small amounts of data.  Alternatively, you can run
+in $MY_HADOOP_HOME/bin/setenv.sh, runs MapReduce, and copies output
+from HDFS back to your home directory.  This is called non-persistent
+mode and is good for small amounts of data.  Alternatively, you can run
 in persistent mode which is good if you have access to a parallel file
 system or have a large amount of data that will not fit in scratch
-space.  To enable persistent mode, follow the directions in
+space.  To enable persistent mode, follow the directions in
 pbs-example.sh.
 
-Customizing Hadoop Settings
-===========================
+Customizing Hadoop Settings
+----------------------------------------------------------------------
 
 To modify any of the Hadoop settings
-like maximum\_number\_of\_map\_task, maximum\_number\_of\_reduce\_task,
+like maximum_number_of_map_task, maximum_number_of_reduce_task,
 etc., make you own copy of myHadoop and customize the settings
-accordingly.  For example:
+accordingly.  For example:
 
-#. Copy the $MY\_HADOOP\_HOME directory to your home directory
+#. Copy the $MY_HADOOP_HOME directory to your home directory::
 
-   ::
-
-       -bash-3.2$ cp -r $MY_HADOOP_HOME $HOME/myHadoop
+       $ cp -r $MY_HADOOP_HOME $HOME/myHadoop
 
 #. Then edit $HOME/myHadoop/pbs-example.sh and on line 16, replace it
-   with:
-
-   ::
+   with::
 
        . ${HOME}/myHadoop/bin/setenv.sh
 
 #. Similarly edit $HOME/myHadoop/bin/setenv.sh and on line 4, replace it
-   with:
-
-   ::
+   with::
 
        export MY_HADOOP_HOME=$HOME/myHadoop
 
 #. Customize the settings in the Hadoop files as needed in
    $HOME/myHadoop/etc
 
-#. Submit your copy of pbs-example.sh:
+#. Submit your copy of pbs-example.sh::
 
-   ::
-
-       -bash-3.2$ qsub $HOME/myHadoop/pbs-example.sh
+       $ qsub $HOME/myHadoop/pbs-example.sh
 
 Using a Different Installation of Hadoop
-========================================
+----------------------------------------------------------------------
 
 If you would like to use a different version of my Hadoop or have
 customized the Hadoop code in some way, you can specify a different
-installation of Hadoop by redefining the HADOOP\_HOME variable after
-$MY\_HADOOP\_HOME/bin/setenv.sh is called within your own copy of
-pbs-example.sh.  
-
-::
+installation of Hadoop by redefining the HADOOP_HOME variable after
+$MY_HADOOP_HOME/bin/setenv.sh is called within your own copy of
+pbs-example.sh::
 
     ### Run the myHadoop environment script to set the appropriate variables
     #
@@ -355,45 +314,45 @@ pbs-example.sh.  
     export HADOOP_HOME=${HOME}/my-custom-hadoop
 
 More Information
-================
+----------------------------------------------------------------------
 
 For more information about how myHadoop works, please see the
-documentation in $MY\_HADOOP\_HOME/docs/myHadoop.pdf 
+documentation in $MY_HADOOP_HOME/docs/myHadoop.pdf 
 
 Using SalsaHadoop on FutureGrid
 ===============================
 
 PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN
 THE COMMENT SECTION.
- 
+ 
 
 SalsaHadoop Introduction
 ------------------------
 
 Apache Hadoop is widely used by domain scientists for running their
-scientific applications in parallel fashion. For our research
+scientific applications in parallel fashion. For our research
 convenience, SalsaHPC research group develops SalsaHadoop, an automatic
 method to start Hadoop without worrying the Hadoop configuration, can be
 running on any general cluster and multiple machines. SalsaHadoop has
-been used by `SalsaHPC research group <http://salsahpc.indiana.edu/>`__
+been used by `SalsaHPC research group <http://salsahpc.indiana.edu/>`__
 and a graduate-level course `CSCI B649 Cloud Computing for Data
-Intensive Sciences <http://salsahpc.indiana.edu/csci-b649-2011/>`__. 
+Intensive Sciences <http://salsahpc.indiana.edu/csci-b649-2011/>`__. 
 
 
 Running SalsaHadoop on FutureGrid
 ---------------------------------
 
-SalsaHadoop can be run in various modes within FG either in FutureGrid
+SalsaHadoop can be run in various modes within FG either in FutureGrid
 HPC and FutureGrid Cloud/IaaS environments. The following tutorials
 provide step-by-step instructions to use SalsaHadoop on these modes, and
 also it shows some examples of running Hadoop applications after
 starting Hadoop. In general, the HPC environment is easier if you do not
-have experience with IaaS Eucalyptus. 
+have experience with IaaS Eucalyptus. 
 
 -  SalsaHadoop on FutureGrid
 
    -  `SalsaHadoop with FutureGrid
-      HPC <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc>`__ [recommended]
+      HPC <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc>`__ [recommended]
 
       -  `Get HPC compute
          nodes <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#HPC_Nodes>`__
@@ -414,7 +373,7 @@ have experience with IaaS Eucalyptus. 
             configuration <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Euca_Disk>`__
 
       -  `Hadoop
-         Configuration <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Configuration>`__ (same
+         Configuration <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Configuration>`__ (same
          as above with different masters and slaves hostname)
       -  `Verify Hadoop HDFS and MapReduce Daemon
          status <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Verify>`__
@@ -426,14 +385,12 @@ have experience with IaaS Eucalyptus. 
       -  `Hadoop
          Blast <https://portal.futuregrid.org/manual/hadoop-blast>`__
 
-   -  Run Hadoop with static FutureGrid-Bravo HDFS\*
+   -  Run Hadoop with static FutureGrid-Bravo HDFS\*
 
 Hadoop Blast
 ============
 
-Number:
 Author: Tak-Lon Stephen Wu
-Improvements: 
 Version: 0.1
 Date: 2011-11-01
 
@@ -441,7 +398,7 @@ Hadoop Blast
 ------------
 
 BLAST (Basic Local Alignment Search Tool) is one of the most widely used
-bioinformatics applications written in C++, and the version we are using
+bioinformatics applications written in C++, and the version we are using
 is v2.2.23. Hadoop Blast is an advanced Hadoop program which helps
 Blast, a bioinformatics application, utilizes the Computing Capability
 of Hadoop. The database used in the following settings is a subset (241
@@ -456,14 +413,8 @@ and customized Blast program and Database archive
 from `Big Data for Science
 tutorial <http://salsahpc.indiana.edu/tutorial/hadoopblast.html>`__.
 
- 
--
-
- 
--
-
-Acknowledge
------------
+Acknowledgement
+----------------
 
 This page was original designed by
 `SalsaHPC <http://salsahpc.indiana.edu/>`__ group for `Big Data for
@@ -479,7 +430,7 @@ Requirement
    `Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__)
 #. Start SalsaHadoop/Hadoop on compute nodes. (`SalsaHadoop
    Tutorial <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#Configuration>`__)
-#. Download and unzip \ `Hadoop Blast source
+#. Download and unzip \ `Hadoop Blast source
    code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip>`__
    from `Big Data for Science
    tutorial <http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html>`__.
@@ -487,118 +438,104 @@ Requirement
    `BlastProgramAndDB.tar.gz <http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz>`__
 #. Linux command experience.
 
-1. Download Hadoop Blast under $
+Download Hadoop Blast under $
 --------------------------------
 
-HADOOP\_HOME
+HADOOP_HOME
 ------------
 
 Assuming your start SalsaHadoop/Hadoop with setting
-$HADOOP\_HOME=~/hadoop-0.20.203.0, and is running the master node on
+$HADOOP_HOME=~/hadoop-0.20.203.0, and is running the master node on
 i55. Then, we download the `Hadoop Blast source
 code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip>`__
 and customized Blast program and Database archive
 (`BlastProgramAndDB.tar.gz <http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz>`__)
 from `Big Data for Science
 tutorial <http://salsahpc.indiana.edu/tutorial/hadoopblast.html>`__ to
-$HADOOP\_HOME.
+$HADOOP_HOME::
 
-::
+    $ cd $HADOOP_HOME
+    $ wget http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip
+    $ wget http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz
+    $ unzip Hadoop-Blast.zip
 
-    [taklwu@i55 ~]$ cd $HADOOP_HOME
-    [taklwu@i55 hadoop-0.20.203.0]$ wget http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip
-    [taklwu@i55 hadoop-0.20.203.0]$ wget http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz
-    [taklwu@i55 hadoop-0.20.203.0]$ unzip Hadoop-Blast.zip
-
-2. Prepare Hadoop Blast
+Prepare Hadoop Blast
 -----------------------
 
-Assuming the program are already stored in $HADOOP\_HOME/Hadoop-Blast,
+Assuming the program are already stored in $HADOOP_HOME/Hadoop-Blast,
 we need to copy the input files, Blast program and Database archive
 (`BlastProgramAndDB.tar.gz <http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz>`__)
-onto HDFS.
+onto HDFS::
 
-::
-
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -put $HADOOP_HOME/Hadoop-Blast/blast_input HDFS_blast_input
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -ls HDFS_blast_input
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -copyFromLocal $HADOOP_HOME/BlastProgramAndDB.tar.gz BlastProgramAndDB.tar.gz
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -ls BlastProgramAndDB.tar.gz
+    $ bin/hadoop fs -put $HADOOP_HOME/Hadoop-Blast/blast_input HDFS_blast_input
+    $ bin/hadoop fs -ls HDFS_blast_input
+    $ bin/hadoop fs -copyFromLocal $HADOOP_HOME/BlastProgramAndDB.tar.gz BlastProgramAndDB.tar.gz
+    $ bin/hadoop fs -ls BlastProgramAndDB.tar.gz
 
 -  Line 1 push all the blast input files (FASTA formatted queries) onto
-   HDFS “HDFS\_blast\_input” directory from local disk.
--  Line 2 list the pushed files on HDFS directory "HDFS\_blast\_input"
+   HDFS “HDFS_blast_input” directory from local disk.
+-  Line 2 list the pushed files on HDFS directory "HDFS_blast_input"
 -  Line 3 copies the Blast program and database archive
-   (BlastProgramAndDB.tar.gz) from $HADOOP\_HOME onto the HDFS as
+   (BlastProgramAndDB.tar.gz) from $HADOOP_HOME onto the HDFS as
    distributed caches which will be used later.
 -  Line 4 double check the pushed Blast program and database archive
    "BlastProgramAndDB.tar.gz" on HDFS
 
-3. Execute Hadoop-Blast
+Execute Hadoop-Blast
 -----------------------
 
 After deploying those required files onto HDFS, run the Hadoop Blast
-program with the following commands:
+program with the following commands::
 
-::
+    $ bin/hadoop jar $HADOOP_HOME/Hadoop-Blast/executable/blast-hadoop.jar BlastProgramAndDB.tar.gz \
+     bin/blastx /tmp/hadoop-taklwu-test/ db nr HDFS_blast_input HDFS_blast_output '-query #_INPUTFILE_# -outfmt 6 -seg no -out #_OUTPUTFILE_#'
 
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop jar $HADOOP_HOME/Hadoop-Blast/executable/blast-hadoop.jar BlastProgramAndDB.tar.gz \
-     bin/blastx /tmp/hadoop-taklwu-test/ db nr HDFS_blast_input HDFS_blast_output '-query #_INPUTFILE_# -outfmt 6 -seg no -out #_OUTPUTFILE_#'
+Here is the description of the above command::
 
-Here is the description of the above command:
-
-::
-
-    bin/hadoop jar Executable BlastProgramAndDB_on_HDFS bin/blastx Local_Work_DIR db nr HDFS_Input_DIR Unique_HDFS_Output_DIR '-query #_INPUTFILE_# -outfmt 6 -seg no -out #_OUTPUTFILE_#'
+    bin/hadoop jar Executable BlastProgramAndDB_on_HDFS bin/blastx Local_Work_DIR db nr HDFS_Input_DIR Unique_HDFS_Output_DIR '-query #_INPUTFILE_# -outfmt 6 -seg no -out #_OUTPUTFILE_#'
 
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
 | **Parameter**                    | **Description**                                                                                                   |
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| Executable                       | The full path of the Hadoop-Blast Jar program, e.g. $HADOOP\_HOME/apps/Hadoop-Blast/executable/blast-hadoop.jar   |
+| Executable                       | The full path of the Hadoop-Blast Jar program, e.g. $HADOOP_HOME/apps/Hadoop-Blast/executable/blast-hadoop.jar   |
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| BlastProgramAndDB\_on\_HDFS      | The archive name of Blast Program and Database on HDFS, e.g. BlastProgramAndDB.tar.gz                             |
+| BlastProgramAndDB_on_HDFS      | The archive name of Blast Program and Database on HDFS, e.g. BlastProgramAndDB.tar.gz                             |
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| Local\_Work\_DIR                 | The local directory for storing temporary output of Blast Program, e.g. /tmp/hadoop-test/                         |
+| Local_Work_DIR                 | The local directory for storing temporary output of Blast Program, e.g. /tmp/hadoop-test/                         |
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| HDFS\_Input\_DIR                 | The HDFS remote directory where stored input files, e.g. HDFS\_blast\_input                                       |
+| HDFS_Input_DIR                 | The HDFS remote directory where stored input files, e.g. HDFS_blast_input                                       |
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| Unique\_HDFS\_Output\_DIR        | A Never used HDFS remote directory for storing output files, e.g. HDFS\_blast\_output                             |
+| Unique_HDFS_Output_DIR        | A Never used HDFS remote directory for storing output files, e.g. HDFS_blast_output                             |
 +----------------------------------+-------------------------------------------------------------------------------------------------------------------+
 
 | 
 If Hadoop is running correctly, it will print hadoop running messages
-similar to the following:
-
-::
+similar to the following::
 
     11/11/01 19:31:08 INFO input.FileInputFormat: Total input paths to process : 16
     11/11/01 19:31:08 INFO mapred.JobClient: Running job: job_201111021738_0002
-    11/11/01 19:31:09 INFO mapred.JobClient:  map 0% reduce 0%
-    11/11/01 19:31:31 INFO mapred.JobClient:  map 18% reduce 0%
-    11/11/01 19:31:34 INFO mapred.JobClient:  map 50% reduce 0%
-    11/11/01 19:31:53 INFO mapred.JobClient:  map 75% reduce 0%
-    11/11/01 19:32:04 INFO mapred.JobClient:  map 100% reduce 0%
+    11/11/01 19:31:09 INFO mapred.JobClient:  map 0% reduce 0%
+    11/11/01 19:31:31 INFO mapred.JobClient:  map 18% reduce 0%
+    11/11/01 19:31:34 INFO mapred.JobClient:  map 50% reduce 0%
+    11/11/01 19:31:53 INFO mapred.JobClient:  map 75% reduce 0%
+    11/11/01 19:32:04 INFO mapred.JobClient:  map 100% reduce 0%
     ...
     Job Finished in 191.376 seconds
 
-3. Monitoring Hadoop
+Monitoring Hadoop
 --------------------
 
 We can also monitor the job status using lynx, a text browser, on i136
 based Hadoop monitoring console. Assuming the Hadoop Jobtracker is
-running on i55:9003:
+running on i55:9003::
 
-::
-
-    [taklwu@i136 ~]$ lynx i55:9003
+    $ lynx i55:9003
 
 In addition, all the outputs will stored in the HDFS output directory
-(e.g. HDFS\_blast\_output).
+(e.g. HDFS_blast_output)::
 
-::
-
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -ls HDFS_blast_output
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -cat HDFS_blast_output/*
+    $ bin/hadoop fs -ls HDFS_blast_output
+    $ bin/hadoop fs -cat HDFS_blast_output/*
     BG3:2_30MNAAAXX:7:1:981:1318/1  gi|298916876|dbj|BAJ09735.1|    100.00  11      0       0       3       35      9       19      7.0     27.7
     BG3:2_30MNAAAXX:7:1:981:1318/1  gi|298708397|emb|CBJ48460.1|    100.00  11      0       0       3       35      37      47      7.0     27.7
     BG3:2_30MNAAAXX:7:1:981:1318/1  gi|298104210|gb|ADI54942.1|     100.00  11      0       0       3       35      11      21      7.0     27.7
@@ -612,22 +549,18 @@ In addition, all the outputs will stored in the HDFS output directory
 
     ...
 
-5. Finishing the Map-Reduce process
+Finishing the Map-Reduce process
 -----------------------------------
 
 After finishing the Job, please use the command to kill the HDFS and
-Map-Reduce daemon:
+Map-Reduce daemon::
 
-::
-
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/stop-all.sh
+    $ bin/stop-all.sh
 
 Hadoop WordCount
 ================
 
-Number:
- Author: Tak-Lon Stephen Wu
- Improvements: 
+Author: Tak-Lon Stephen Wu
 Version: 0.1
 Date: 2011-11-01
 
@@ -643,11 +576,9 @@ code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip>`__
 from `Big Data for Science
 tutorial <http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html>`__.
 
- 
--
 
-Acknowledge
------------
+Acknowledgement
+---------------
 
 This page was original designed by
 `SalsaHPC <http://salsahpc.indiana.edu/>`__ group for `Big Data for
@@ -669,53 +600,45 @@ Requirement
    tutorial <http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html>`__.
 #. Linux command experience.
 
-1. Download and unzip WordCount under $HADOOP\_HOME
+Download and unzip WordCount under $HADOOP_HOME
 ---------------------------------------------------
 
 Assuming your start SalsaHadoop/Hadoop with setting
-$HADOOP\_HOME=~/hadoop-0.20.203.0, and is running the master node on
+$HADOOP_HOME=~/hadoop-0.20.203.0, and is running the master node on
 i55. Then, we download and unzip the `WordCount source
 code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip>`__
-from  `Big Data for Science
+from  `Big Data for Science
 tutorial <http://salsahpc.indiana.edu/tutorial/hadoopwordcount.html>`__
-under $HADOOP\_HOME.
+under $HADOOP_HOME::
 
-::
+    $ cd $HADOOP_HOME
+    $ wget http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip
+    $ unzip Hadoop-WordCount.zip
 
-    [taklwu@i55 ~]$ cd $HADOOP_HOME
-    [taklwu@i55 hadoop-0.20.203.0]$ wget http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip
-    [taklwu@i55 hadoop-0.20.203.0]$ unzip Hadoop-WordCount.zip
-
-2. Execute
+Execute
 ----------
 
 Hadoop-WordCount
 ----------------
 
 First, we need to uplaod the input files (any text format file) into
-Hadoop distributed file system (HDFS):
+Hadoop distributed file system (HDFS)::
 
-::
+    $ bin/hadoop fs -put $HADOOP_HOME/Hadoop-WordCount/input/ input
+    $ bin/hadoop fs -ls input
 
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -put $HADOOP_HOME/Hadoop-WordCount/input/ input
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop fs -ls input
-
-Here, $HADOOP\_HOME/Hadoop-WordCount/input/ is the local directory where
+Here, $HADOOP_HOME/Hadoop-WordCount/input/ is the local directory where
 the program inputs are stored. The second "input" represents the remote
 destination directory on the HDFS.
 
 After uploading the inputs into HDFS, run the WordCount program with the
 following commands. We assume you have already compiled the word count
-program.
+program::
 
-::
-
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/hadoop jar $HADOOP_HOME/Hadoop-WordCount/wordcount.jar WordCount input output
+    $ bin/hadoop jar $HADOOP_HOME/Hadoop-WordCount/wordcount.jar WordCount input output
 
 If Hadoop is running correctly, it will print hadoop running messages
-similar to the following:
-
-::
+similar to the following::
 
     WARNING: org.apache.hadoop.metrics.jvm.EventCounter is deprecated. Please use org.apache.hadoop.log.metrics.EventCounter in all the log4j.properties files.
     11/11/02 18:34:46 INFO input.FileInputFormat: Total input paths to process : 1
@@ -727,32 +650,26 @@ similar to the following:
     11/11/02 18:35:18 INFO mapred.JobClient: Counters: 25
     ...
 
-3. Monitoring Hadoop
+Monitoring Hadoop
 --------------------
 
 We can also monitor the job status using lynx, a text browser, on i136
 based Hadoop monitoring console. Assuming the Hadoop Jobtracker is
-running on i55:9003:
+running on i55:9003::
 
-::
+    $ lynx i55:9003
 
-    [taklwu@i136 ~]$ lynx i55:9003
-
-4. Check the result
+Check the result
 -------------------
 
-After finishing the Job, please use the command to check the output:
+After finishing the Job, please use the command to check the output::
 
-::
-
-    [taklwu@i55 ~]$ cd $HADOOP_HOME
-    [taklwu@i55 ~]$ bin/hadoop fs -ls output
-    [taklwu@i55 ~]$ bin/hadoop fs -cat output/*
+    $ cd $HADOOP_HOME
+    $ bin/hadoop fs -ls output
+    $ bin/hadoop fs -cat output/*
 
 Here, "output" is the HDFS directory where the result stored. The result
-will look like as following:
-
-::
+will look like as following::
 
     you." 15
     you; 1
@@ -760,15 +677,13 @@ will look like as following:
     you?" 23
     https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptusyoung 42
 
-5. Finishing the Map-Reduce process
+Finishing the Map-Reduce process
 -----------------------------------
 
 After finishing the Job, please use the command to kill the HDFS and
-Map-Reduce daemon:
+Map-Reduce daemon::
 
-::
-
-    [taklwu@i55 hadoop-0.20.203.0]$ bin/stop-all.sh
+    $ bin/stop-all.sh
 
 Using Twister on FutureGrid
 ===========================
@@ -787,37 +702,25 @@ the years of experience in applying MapReduce programming model to
 various scientific applications we identified a set of extensions to the
 programming model and improvements to its architecture that will expand
 the applicability of MapReduce to more classes of
-applications. `Twister <http://www.iterativemapreduce.org/>`__ is a
+applications. `Twister <http://www.iterativemapreduce.org/>`__ is a
 lightweight MapReduce runtime we have developed by incorporating these
 enhancements.
 
 `Twister <http://www.iterativemapreduce.org/>`__ provides the following
-features to support MapReduce computations. (Twister is developed as
-part of \ `Jaliya
-Ekanayake's <http://www.cs.indiana.edu/%7Ejekanaya/>`__ Ph.D. research
+features to support MapReduce computations. (Twister is developed as
+part of \ `Jaliya
+Ekanayake's <http://www.cs.indiana.edu/%7Ejekanaya/>`__ Ph.D. research
 and is supported by
-the \ **`S A L S  <http://salsahpc.indiana.edu/>`__**\ ****\ **`A <http://salsahpc.indiana.edu/>`__**\ Team
-@ \ `IU <http://www.iub.edu/>`__)
+the \ **`S A L S  <http://salsahpc.indiana.edu/>`__**\ ****\ **`A <http://salsahpc.indiana.edu/>`__**\ Team
+@ \ `IU <http://www.iub.edu/>`__)
 
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image105|   | Distinction on static and variable data                                                                                                                                                                   |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image106|   | Configurable long running (cacheable) map/reduce tasks                                                                                                                                                    |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image107|   | Pub/sub messaging based communication/data transfers                                                                                                                                                      |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image108|   | Efficient support for Iterative MapReduce computations (extremely faster than\ `Hadoop <http://hadoop.apache.org/>`__ or `Dryad/DryadLINQ <http://research.microsoft.com/en-us/projects/DryadLINQ/>`__)   |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image109|   | Combine phase to collect all reduce outputs                                                                                                                                                               |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image110|   | Data access via local disks                                                                                                                                                                               |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image111|   | Lightweight (~5600 lines of Java code)                                                                                                                                                                    |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image112|   | Support for typical MapReduce computations                                                                                                                                                                |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image113|   | Tools to manage data                                                                                                                                                                                      |
-+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Distinction on static and variable data                                   
+* Configurable long running (cacheable) map/reduce tasks                    
+* Pub/sub messaging based communication/data transfers                     
+* Efficient support for Iterative MapReduce computations (extremely faster than\ `Hadoop <http://hadoop.apache.org/>`__ or `Dryad/DryadLINQ <http://research.microsoft.com/en-us/projects/DryadLINQ/>`__)   |
+* Combine phase to collect all reduce outputs                               
+* Tools to manage data                                                      
 
 |image114|
 ----------
@@ -827,12 +730,12 @@ Iterative MapReduce programming model using Twister
 Running Twister on FutureGrid
 -----------------------------
 
-Twister can be run in various modes within FG either in FutureGrid HPC
+Twister can be run in various modes within FG either in FutureGrid HPC
 and FutureGrid Cloud environment.
 
 -  Twister on FutureGrid
 
-   -  `Twister with FutureGrid
+   -  `Twister with FutureGrid
       HPC <https://portal.futuregrid.org/twister-futuregrid-hpc>`__
 
       -  `Get HPC compute
@@ -842,8 +745,8 @@ and FutureGrid Cloud environment.
 
          -  `Download Twister
             0.9 <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_Download>`__
-         -  `Set $TWISTER\_HOME and
-            $JAVA\_HOME <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_Set>`__
+         -  `Set $TWISTER_HOME and
+            $JAVA_HOME <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_Set>`__
          -  `Run
             TwisterPowerMakeUp.sh <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_PowerMakeUp>`__
          -  `Download and start ActiveMQ on specific
@@ -854,7 +757,7 @@ and FutureGrid Cloud environment.
       -  `Verify Twister MapReduce Daemon
          status <https://portal.futuregrid.org/twister-futuregrid-hpc#Verify>`__
 
-   -  `Twister with FutureGrid Cloud
+   -  `Twister with FutureGrid Cloud
       Eucalyptus <https://portal.futuregrid.org/twister-futuregrid-cloud-eucalyptus>`__
 
       -  `Get VM compute
@@ -870,7 +773,7 @@ and FutureGrid Cloud environment.
 
          -  `Download Twister
             0.9 <../../twister-futuregrid-cloud-eucalyptus#Twister_Conf_Download>`__
-         -  `Set $TWISTER\_HOME,  $JAVA\_HOME and Worker
+         -  `Set $TWISTER_HOME,  $JAVA_HOME and Worker
             Nodes <../../twister-futuregrid-cloud-eucalyptus#Twister_Conf_Set>`__
          -  `Run
             TwisterPowerMakeUp.sh <../../twister-futuregrid-cloud-eucalyptus#Twister_Conf_PowerMakeUp>`__
@@ -891,26 +794,25 @@ and FutureGrid Cloud environment.
 Papers and Presentations
 ------------------------
 
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image121|   | Jaliya Ekanayake, Hui Li, Bingjing Zhang, Thilina Gunarathne, Seung-Hee Bae, Judy Qiu, Geoffrey Fox, \ `Twister: A Runtime for Iterative MapReduce <http://www.iterativemapreduce.org/hpdc-camera-ready-submission.pdf>`__," The First International Workshop on MapReduce and its Applications (MAPREDUCE'10) - HPDC2010                                                                                                                |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image122|   | Jaliya Ekanayake, (Advisor: Geoffrey Fox) \ `Architecture and Performance of Runtime Environments for Data Intensive Scalable Computing <http://grids.ucs.indiana.edu/ptliupages/publications/SC09-abstract-jaliya-ekanayake.pdf>`__, Doctoral Showcase, SuperComputing2009. (`Presentation <http://www.slideshare.net/jaliyae/architecture-and-performance-of-runtime-environments-for-data-intensive-scalable-computing-2653554>`__)   |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image123|   | Jaliya Ekanayake, Atilla Soner Balkir, Thilina Gunarathne, Geoffrey Fox, Christophe Poulain, Nelson Araujo, Roger Barga, \ `DryadLINQ for Scientific Analyses <http://grids.ucs.indiana.edu/ptliupages/publications/eScience09-camera-ready-submission.pdf>`__, Fifth IEEE International Conference on e-Science (eScience2009), Oxford, UK.                                                                                             |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image124|   | Jaliya Ekanayake, Geoffrey Fox, \ `High Performance Parallel Computing with Clouds and Cloud Technologies <http://grids.ucs.indiana.edu/ptliupages/publications/cloud_handbook_final-with-diagrams.pdf>`__, First International Conference on Cloud Computing (CloudComp09) Munich, Germany, 2009.                                                                                                                                       |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image125|   | Geoffrey Fox, Seung-Hee Bae, Jaliya Ekanayake, Xiaohong Qiu, and Huapeng Yuan,\ `Parallel Data Mining from Multicore to Cloudy Grids <http://grids.ucs.indiana.edu/ptliupages/publications/CetraroWriteupJan09_v12.pdf>`__, High Performance Computing and Grids workshop, 2008.                                                                                                                                                         |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| |image126|   | Jaliya Ekanayake, Shrideep Pallickara, and Geoffrey Fox \ `MapReduce for Data Intensive Scientific Analysis <http://www.cs.indiana.edu/%7Ejekanaya/papers/eScience-final.pdf>`__, Fourth IEEE International Conference on eScience, 2008, pp.277-284.                                                                                                                                                                                    |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Jaliya Ekanayake, Hui Li, Bingjing Zhang, Thilina Gunarathne, Seung-Hee Bae, Judy Qiu, Geoffrey Fox, \ `Twister: A Runtime for Iterative MapReduce <http://www.iterativemapreduce.org/hpdc-camera-ready-submission.pdf>`__," The First International Workshop on MapReduce and its Applications (MAPREDUCE'10) - HPDC2010                                                                                                                
+
+* Jaliya Ekanayake, (Advisor: Geoffrey Fox) \ `Architecture and Performance of Runtime Environments for Data Intensive Scalable Computing <http://grids.ucs.indiana.edu/ptliupages/publications/SC09-abstract-jaliya-ekanayake.pdf>`__, Doctoral Showcase, SuperComputing2009. (`Presentation <http://www.slideshare.net/jaliyae/architecture-and-performance-of-runtime-environments-for-data-intensive-scalable-computing-2653554>`__)   
+
+
+* Jaliya Ekanayake, Atilla Soner Balkir, Thilina Gunarathne, Geoffrey Fox, Christophe Poulain, Nelson Araujo, Roger Barga, \ `DryadLINQ for Scientific Analyses <http://grids.ucs.indiana.edu/ptliupages/publications/eScience09-camera-ready-submission.pdf>`__, Fifth IEEE International Conference on e-Science (eScience2009), Oxford, UK.                                                                                             
+
+* Jaliya Ekanayake, Geoffrey Fox, \ `High Performance Parallel Computing with Clouds and Cloud Technologies <http://grids.ucs.indiana.edu/ptliupages/publications/cloud_handbook_final-with-diagrams.pdf>`__, First International Conference on Cloud Computing (CloudComp09) Munich, Germany, 2009.                                                                                                                                       
+
+* Geoffrey Fox, Seung-Hee Bae, Jaliya Ekanayake, Xiaohong Qiu, and Huapeng Yuan,\ `Parallel Data Mining from Multicore to Cloudy Grids <http://grids.ucs.indiana.edu/ptliupages/publications/CetraroWriteupJan09_v12.pdf>`__, High Performance Computing and Grids workshop, 2008.                                                                                                                                                         
+
+* Jaliya Ekanayake, Shrideep Pallickara, and Geoffrey Fox \ `MapReduce for Data Intensive Scientific Analysis <http://www.cs.indiana.edu/%7Ejekanaya/papers/eScience-final.pdf>`__, Fourth IEEE International Conference on eScience, 2008, pp.277-284.                                                                                                                                                                                    
 
 Twister Blast
 =============
 
-Number:
- Author: Yang Ruan
-Improvements: 
+Author: Yang Ruan
+Improvements: 
 Version: 0.1
 Date: 2011-11-07
 
@@ -918,7 +820,7 @@ Twister Blast
 -------------
 
 BLAST (Basic Local Alignment Search Tool) is one of the most widely used
-bioinformatics applications written in C++, and the version we are using
+bioinformatics applications written in C++, and the version we are using
 is v2.2.23. `Twister <http://www.iterativemapreduce.org/>`__\ is an
 iterative mapreduce framework which can be used both for iterative and
 non-iterative applications. Twister Blast is an advanced Twister program
@@ -941,11 +843,9 @@ Source code and customized Blast program and Database archive
 from `Big Data for Science
 tutorial <http://salsahpc.indiana.edu/tutorial/hadoopblast.html>`__.
 
- 
--
-
-Acknowledge
------------
+ 
+Acknowledgement
+---------------
 
 This page was original designed by
 `SalsaHPC <http://salsahpc.indiana.edu/>`__ group for `Big Data for
@@ -967,7 +867,7 @@ Requirement
    `BlastProgramAndDB.tar.gz <http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz>`__
 #. Linux command experience.
 
-1. Download and prepare the
+Download and prepare the
 ---------------------------
 
 Twister-Blast
@@ -975,63 +875,55 @@ Twister-Blast
 
 First, Download and unzip the `Twister
 Blast <http://salsahpc.indiana.edu/tutorial/apps/twister-blast.tar.gz>`__
-package (named as $TWISTER\_BLAST\_PROGRAM here), then ​copy the
-unzipped ​$TWISTER\_BLAST\_PROGRAM/blast/dist/Twister-Blast.jar to the
-$TWISTER\_HOME/apps. Also, we download and unzip the blast program and
+package (named as $TWISTER_BLAST_PROGRAM here), then ​copy the
+unzipped ​$TWISTER_BLAST_PROGRAM/blast/dist/Twister-Blast.jar to the
+$TWISTER_HOME/apps. Also, we download and unzip the blast program and
 the database
 `here <http://salsahpc.indiana.edu/tutorial/apps/BlastProgramAndDB.tar.gz>`__,
-and set $BLAST\_HOME=/path/to/BlastProgramAndDB/. Go to
-$TWISTER\_BLAST\_PROGRAM/blast/bin/, in **twister\_blast.properties**,
-set the BLAST+ execution command (execmd property)  to the BLAST program
-(blastx) under $BLAST\_HOME/bin/. Execution options can be reset
+and set $BLAST_HOME=/path/to/BlastProgramAndDB/. Go to
+$TWISTER_BLAST_PROGRAM/blast/bin/, in **twister_blast.properties**,
+set the BLAST+ execution command (execmd property)  to the BLAST program
+(blastx) under $BLAST_HOME/bin/. Execution options can be reset
 according to users' needs. However, Input option (-query) and output
 option (-out) are not set in execmd but in inop and outop in order to be
 compatible with both BLAST+ and BLAST. Twister-BLAST will merge these
 command options by itself when invoking BLAST+ parallel.
-The execution command template inside\ **twister\_blast.properties**
-is given below.
-
-::
+The execution command template inside\ **twister_blast.properties**
+is given below::
 
     execmd = time /N/u/yangruan/Quarry/workflow/ncbi-blast-2.2.23+/bin/blastp -db /N/dc/scratch/yangruan/blast/db/cog/10k/cog.10000 -evalue 100 -max_target_seqs 1000000 -num_alignments 1000000 -outfmt 6 -seg no
     inop = -query
     outop = -out
 
-2. Prepare Twister-Blast input
+Prepare Twister-Blast input
 ------------------------------
 
 Assume you have already download the input fasta file into some location
 called [input file path]. Use the
-$TWISTER\_BLAST\_PROGRAM/blast/bin/blastNewFileSpliter.sh to split the
+$TWISTER_BLAST_PROGRAM/blast/bin/blastNewFileSpliter.sh to split the
 input fasta file into multiple partitions. The parameters in as
-following:
+following::
 
-::
+    args:  [query_file] [sequence_count]  [num_partition] [data_dir] [output_prefix] [output_map_file]
 
-    args:  [query_file] [sequence_count]  [num_partition] [data_dir] [output_prefix] [output_map_file]
-
--  query\_file: input fasta file
--  sequence\_count: sequence count in the input fasta file
--  num\_partition: number of partitions, this number should be larger or
+-  query_file: input fasta file
+-  sequence_count: sequence count in the input fasta file
+-  num_partition: number of partitions, this number should be larger or
    equal to the total worker number started with twister
--  data\_dir: The output folder of partitioned fasta files
--  output\_prefix: The output prefix of partitioned fasta files
--  output\_map\_file: The file contains the information of all the
+-  data_dir: The output folder of partitioned fasta files
+-  output_prefix: The output prefix of partitioned fasta files
+-  output_map_file: The file contains the information of all the
    partitions width and height.
 
-3. Execute Twister-Blast
+Execute Twister-Blast
 ------------------------
 
 After deploying those required files onto file system, run the
-twister-Blast program with the following commands:
-
-::
+twister-Blast program with the following commands::
 
     ./blastNew.sh 128 /N/dc/scratch/yangruan/fasta/cog/10000/400/ input_ .fa 400 /N/dc/scratch/yangruan/blast/result/cog/10k/eval_100_400p/ blastOut_
 
-Here is the description of the above command:
-
-::
+Here is the description of the above command::
 
     args:  [map number] [input folder] [input prefix] [input postfix (None for none)] [partition number] [output folder] [output prefix]
 
@@ -1040,7 +932,7 @@ Here is the description of the above command:
 +--------------------+-----------------------------------------------------------------------------+
 | map number         | The map task number (usually equals to the number of worker started)        |
 +--------------------+-----------------------------------------------------------------------------+
-| input folder       | The folder of input fasta file partitions                                   |
+| input folder       | The folder of input fasta file partitions                                   |
 +--------------------+-----------------------------------------------------------------------------+
 | input prefix       | The prefix of input fasta file partitions                                   |
 +--------------------+-----------------------------------------------------------------------------+
@@ -1055,9 +947,7 @@ Here is the description of the above command:
 
 
 If Twister Blast is running correctly, it will print twister running
-messages similar to the following:
-
-::
+messages similar to the following::
 
     ./blastNew.sh 128 /N/dc/scratch/yangruan/fasta/cog/10000/400/ input_ .fa 400 /N/dc/scratch/yangruan/blast/result/cog/10k/eval_100_400p/ blastOut_ 
     time /N/u/yangruan/Quarry/workflow/ncbi-blast-2.2.23+/bin/blastp -db /N/dc/scratch/yangruan/blast/db/cog/10k/cog.10000 -evalue 100 -max_target_seqs 1000000 -num_alignments 1000000 -outfmt 6 -seg no
@@ -1070,13 +960,11 @@ messages similar to the following:
     Total Time of BLAST : 28.12Seconds
     2    [Thread-1] DEBUG cgl.imr.client.ShutdownHook  - Shutting down completed.
 
-4. Finishing the Map-Reduce process
+Finishing the Map-Reduce process
 -----------------------------------
 
 After finishing the Job, please use the command to kill the Map-Reduce
-daemon and broker:
-
-::
+daemon and broker::
 
     $TWISTER_HOME/bin/stop_twister.sh
 
@@ -1085,44 +973,39 @@ daemon and broker:
 Eucalyptus and Twister on FutureGrid
 ====================================
 
-The FutureGrid Twister Tutorial
-===============================
-
 SALSA Group
-PTI Indiana University
+PTI Indiana University
 
- 
+ 
 
-I. Introduction
+Introduction
 ~~~~~~~~~~~~~~~
 
 This tutorial will show you how to use Twister under Eucalyptus on
 India, FutureGrid.
- 
+ 
 
-II. Prerequisite
+Prerequisite
 ~~~~~~~~~~~~~~~~
 
 Follow tutorial `Using Eucalyptus on
 FutureGrid <http://portal.futuregrid.org/tutorials/eucalyptus>`__ to
 learn how to install and use the Eucalyptus client tool to access
 resources on India, FutureGrid.
- 
+ 
 
-III. Download FutureGrid Eucalyptus Twister Tool 
+Download FutureGrid Eucalyptus Twister Tool 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tool is a set of python scripts. They can provide a
 pre-configured Twister environment, and also can terminate the
-environment. Please 
+environment. Please 
 download the tool in the attachment below.
 
- IV. Start Twister Environment
+Start Twister Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To start a Twister environment, execute the following program: 
-
-.. code:: rteleft
+To start a Twister environment, execute the following program::
 
     $ python fg_euca_start_twister.py [-k user key] [-i public key file path] [-n number of instances][-t instance type]
 
@@ -1134,10 +1017,10 @@ Here,
 
 -  -k is the user key name generated by the **euca-add-keypair** step in
    the Eucalyptus tutorial.
--  -i  is the private key .pem file path. It is also generated in the
-   **euca-add-keypair** step in the Eucalyptus tutorial.
+-  -i  is the private key .pem file path. It is also generated in the
+   **euca-add-keypair** step in the Eucalyptus tutorial.
 -  -n is the number of instances for starting.
--  -t  is the type of image.
+-  -t  is the type of image.
 
 The following is an execution example:
 |image127|
@@ -1145,31 +1028,27 @@ The following is an execution example:
 Once the script is executed, the user can get a prepared Twister
 environment.
 Then, the user can follow the instructions provided by
-**fg\_euca\_start\_twister.py** to start ActiveMQ on the assigned node,
+**fg_euca_start_twister.py** to start ActiveMQ on the assigned node,
 and also start the Twister environment (could be on any node just
 applied).
- 
+ 
 
-V. Terminate Twister Environment
+Terminate Twister Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To terminate a Twister environment, execute the following command:
-
-.. code:: rteleft
+To terminate a Twister environment, execute the following command::
 
     $ python fg_euca_terminate_twister.py
 
- 
+ 
 
-VI. Run Twister-Kmeans
+Run Twister-Kmeans
 ~~~~~~~~~~~~~~~~~~~~~~
 
-1. Ant and Deploy Twister-Kmeans
+Ant and Deploy Twister-Kmeans
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Log into the node assigned for ActiveMQ broker. 
-
-::
+Log into the node assigned for ActiveMQ broker. ::
 
     $ cd /opt/Twister/samples/kmeans
     $ ant
@@ -1179,70 +1058,53 @@ Log into the node assigned for ActiveMQ broker. 
     $ chmod a+x twister.sh
     $ ./twister.sh cpj ../apps/Twister-Kmeans-0.9.jar
 
-2. Start Twister and ActiveMQ
+Start Twister and ActiveMQ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Open two terminals and log into the node mentioned above. One is for
 starting ActiveMQ; the other is for starting Twister.
 
-In Terminal 1:
-
-::
+In Terminal 1::
 
     $ cd /opt/apache-activemq-5.4.2/bin/
     $ activemq console
 
-In Terminal 2: 
-
-::
+In Terminal 2: ::
 
     $ cd /opt/Twister/bin
     $ ./start_twister.sh  
 
- 
+ 
 
-3. Create Twister-Kmeans Data Folder
+Create Twister-Kmeans Data Folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Open another terminal, and create a folder for operating kmeans data:
-
-::
+Open another terminal, and create a folder for operating kmeans data::
 
     $ cd /opt/Twister/bin
     $ ./twishter.sh mkdir kmeans 
 
-4. Generate Twister-Kmeans
+Generate Twister-Kmeans
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- 
-^
-
- 
-^
-
+ 
 Data
 ^^^^
 
-Open a new terminal:
-
-::
+Open a new terminal::
 
     $ cd /opt/Twister/samples/kmeans/bin/
     $./gen_data.sh init_clusters.txt 2 3 /kmeans km_data 3 30000
 
-In the terminal used in Step 3, do the following:
-
-::
+In the terminal used in Step 3, do the following::
 
     $ ./create_partition_file.sh kmeans km ../samples/kmeans/bin/p.pf
 
-Back in the terminal used in Step 4, do the following:
-
-::
+Back in the terminal used in Step 4, do the following::
 
     $ ./run_kmeans.sh init_clusters.txt 3 p.pf
 
- 
+ 
 
 The output is as follows:
 
@@ -1253,3 +1115,4 @@ The output is as follows:
 +===============================================================================================+===========+
 | `fgeucatwister.zip <https://portal.futuregrid.org/sites/default/files/fgeucatwister.zip>`__   | 4.38 KB   |
 +-----------------------------------------------------------------------------------------------+-----------+
+.. |image94| image:: images/myHadoop-300x70.pn.. |Hadoop logo| image:: images/hadoop-logo.jp.. |image114| image:: images/imrmodel.pn.. |image127| image:: images/start_twister.jp.. |image128| image:: images/twister_kmeans-906x257.jpg
