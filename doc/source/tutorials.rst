@@ -14,85 +14,85 @@ The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
 FutureGrid (novice, intermediate, advanced). (If you are a tutorial
 developer, for instructions on how to add a tutorial to this list,
-please \ `refer to the TEOS
-page <https://portal.futuregrid.org/outreach>`__).
+please \ :portal:`refer to the TEOS
+page <outreach>`).
 
 If you have corrections or suggestions related to our tutorial
-content, please `fill out a help
-request <https://portal.futuregrid.org/help>`__.
+content, please :portal:`fill out a help
+request <help>`.
 
 
 Tutorial Topic 0: Accessing FutureGrid Resources
 ------------------------------------------------
 
--  `https://portal.futuregrid.org/accessing-futuregrid-resources-ssh <https://portal.futuregrid.org/accessing-futuregrid-resources-ssh>`__ [novice]
+-  :portal:`accessing-futuregrid-resources-ssh <accessing-futuregrid-resources-ssh>` [novice]
 
 Tutorial Topic 1: Cloud Provisioning Platforms
 ----------------------------------------------
 
--  `Using Nimbus on
-   FutureGrid <https://portal.futuregrid.org/tutorials/nimbus>`__
+-  :portal:`Using Nimbus on
+   FutureGrid <tutorials/nimbus>`
    [novice]
--  `Nimbus One-click Cluster
-   Guide <https://portal.futuregrid.org/tutorials/nm2>`__ [intermediate]
--  `Using OpenStack Grizzly on
-   FutureGrid <https://portal.futuregrid.org/manual/openstack/grizzly>`__
+-  :portal:`Nimbus One-click Cluster
+   Guide <tutorials/nm2>` [intermediate]
+-  :portal:`Using OpenStack Grizzly on
+   FutureGrid <manual/openstack/grizzly>`
    [novice] 
--  `Using OpenStack Essex
-   on FutureGrid <https://portal.futuregrid.org/tutorials/openstack>`__ [novice]
--  `Using Eucalyptus on
-   FutureGrid <https://portal.futuregrid.org/tutorials/eucalyptus3>`__
+-  :portal:`Using OpenStack Essex
+   on FutureGrid <tutorials/openstack>` [novice]
+-  :portal:`Using Eucalyptus on
+   FutureGrid <tutorials/eucalyptus3>`
    [novice]
--  `Connecting private network VMs across Nimbus clusters using
-   ViNe <https://portal.futuregrid.org/contrib/simple-vine-tutorial>`__ [novice]
--  `IPOP1: (IP-over-P2P) Virtual Network Introductory
-   Tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ [novice]
--  `IPOP2: Deploying your Own P2P Overlay for IPOP
-   VPNs <https://portal.futuregrid.org/tutorials/ipop1>`__ [intermediate]
+-  :portal:`Connecting private network VMs across Nimbus clusters using
+   ViNe <contrib/simple-vine-tutorial>` [novice]
+-  :portal:`IPOP1: (IP-over-P2P) Virtual Network Introductory
+   Tutorial <tutorials/ipop1>` [novice]
+-  :portal:`IPOP2: Deploying your Own P2P Overlay for IPOP
+   VPNs <tutorials/ipop1>` [intermediate]
 
 Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 -----------------------------------------------------
 
--  `Running Hadoop as a batch job using
-   MyHadoop <https://portal.futuregrid.org/tutorials/running-hadoop-batch-job-using-myhadoop>`__ [novice]
--  `Running SalsaHadoop (one-click Hadoop) on HPC
-   environment <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc>`__ [beginner]
--  `Running Twister on HPC
-   environment <https://portal.futuregrid.org/twister-futuregrid-hpc>`__ [beginner]
--  `Running SalsaHadoop on
-   Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__ [intermediate]
--  `Running <https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid>`__\ `FG-Twister
+-  :portal:`Running Hadoop as a batch job using
+   MyHadoop <tutorials/running-hadoop-batch-job-using-myhadoop>` [novice]
+-  :portal:`Running SalsaHadoop (one-click Hadoop) on HPC
+   environment <salsahadoop-futuregrid-hpc>` [beginner]
+-  :portal:`Running Twister on HPC
+   environment <twister-futuregrid-hpc>` [beginner]
+-  :portal:`Running SalsaHadoop on
+   Eucalyptus <salsahadoop-futuregrid-cloud-eucalyptus>` [intermediate]
+-  :portal:`Running <tutorials/eucalyptus-and-twister-futuregrid>`\ :portal:`FG-Twister
    on
-   Eucalyptus <https://portal.futuregrid.org/tutorials/eucalyptus-and-twister-futuregrid>`__ [intermediate]
--  `Running One-click Hadoop WordCount on
-   Eucalyptus <https://portal.futuregrid.org/tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid>`__
+   Eucalyptus <tutorials/eucalyptus-and-twister-futuregrid>` [intermediate]
+-  :portal:`Running One-click Hadoop WordCount on
+   Eucalyptus <tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid>`
    [beginner]
--  `Running One-click Twister K-means on
-   Eucalyptus <https://portal.futuregrid.org/tutorials/one-click-twister-k-means-eucalyptus-futuregrid>`__
+-  :portal:`Running One-click Twister K-means on
+   Eucalyptus <tutorials/one-click-twister-k-means-eucalyptus-futuregrid>`
    [beginner]
 
 Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach
 -----------------------------------------------------------------------
 
--  `Running a Grid Appliance on your
-   desktop <https://portal.futuregrid.org/tutorials/ga1>`__  [novice]
--  `Running a Grid Appliance on
-   FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__ [novice]
+-  :portal:`Running a Grid Appliance on your
+   desktop <tutorials/ga1>`  [novice]
+-  :portal:`Running a Grid Appliance on
+   FutureGrid <http://portal.futuregrid.org/tutorials/ga9>` [novice]
 -  `Running an OpenStack virtual appliance on
    FutureGrid <http://portal.futuregrid.org/tutorials/os1>`__ [novice]
 -  `Running Condor tasks on the Grid
    Appliance <http://portal.futuregrid.org/tutorials/ga8>`__ [novice]
--  `Running MPI tasks on the Grid
-   Appliance <https://portal.futuregrid.org/tutorials/mp1>`__ [novice]
+-  :portal:`Running MPI tasks on the Grid
+   Appliance <tutorials/mp1>` [novice]
 -  `Running Hadoop tasks on the Grid
    Appliance <http://portal.futuregrid.org/tutorials/ga10>`__ [novice]
--  `Deploying virtual private Grid Appliance clusters using
-   Nimbus <https://portal.futuregrid.org/tutorials/ga4>`__
+-  :portal:`Deploying virtual private Grid Appliance clusters using
+   Nimbus <tutorials/ga4>`
    [intermediate]
--  `Building an educational appliance from Ubuntu
-   10.04 <https://portal.futuregrid.org/tutorials/ga3>`__ [intermediate]
--  `Customizing and registering Grid Appliance images using
-   Eucalyptus <https://portal.futuregrid.org/tutorials/ga7>`__
+-  :portal:`Building an educational appliance from Ubuntu
+   10.04 <tutorials/ga3>` [intermediate]
+-  :portal:`Customizing and registering Grid Appliance images using
+   Eucalyptus <tutorials/ga7>`
    [intermediate]
 
 Tutorial Topic 4: High Performance Computing
@@ -110,42 +110,42 @@ Tutorial Topic 4: High Performance Computing
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  `Running interactive
-   experiments <https://portal.futuregrid.org/tutorials/interactive-experiment-management>`__
+-  :portal:`Running interactive
+   experiments <tutorials/interactive-experiment-management>`
    [novice]
--  `Running workflow experiments using
-   Pegasus <https://portal.futuregrid.org/tutorials/workflow-experiment-management>`__ [novice]
--  `Pegasus 4.1 on FutureGrid
-   Tutorial <https://portal.futuregrid.org/tutorials/pegasus-on-futuregrid-tutorial>`__ [novice]
+-  :portal:`Running workflow experiments using
+   Pegasus <tutorials/workflow-experiment-management>` [novice]
+-  :portal:`Pegasus 4.1 on FutureGrid
+   Tutorial <tutorials/pegasus-on-futuregrid-tutorial>` [novice]
 
 Tutorial Topic 6: Image Management and Rain
 -------------------------------------------
 
 -  `Using Image Management and
    Rain <http://futuregrid.github.com/rain/quickstart.html>`__ [novice]
--  `Easy steps to generate and register an
-   Image <https://portal.futuregrid.org/generate-and-register-os-image-futuregrid-using-fg-shell>`__
+-  :portal:`Easy steps to generate and register an
+   Image <generate-and-register-os-image-futuregrid-using-fg-shell>`
    [novice]
--  `Manual Image
-   Customization <https://portal.futuregrid.org/manually-customize-image>`__
+-  :portal:`Manual Image
+   Customization <manually-customize-image>`
    [advanced]
--  `Register your VirtualBox image in
-   OpenStack <https://portal.futuregrid.org/register-virtual-box-image-openstack>`__
+-  :portal:`Register your VirtualBox image in
+   OpenStack <register-virtual-box-image-openstack>`
    [intermediate]
 
 Tutorial Topic 7:  Storage
 --------------------------
 
--  `Using HPSS from
-   FutureGrid <https://portal.futuregrid.org/tutorials/hpss>`__ [novice]
+-  :portal:`Using HPSS from
+   FutureGrid <tutorials/hpss>` [novice]
 
 Other Tutorials and Educational Materials
 -----------------------------------------
 
--  `Additional tutorials on FutureGrid-related
-   technologies <https://portal.futuregrid.org/additional_tutorials>`__
--  `FutureGrid community educational
-   materials <https://portal.futuregrid.org/community_edu_materials>`__
+-  :portal:`Additional tutorials on FutureGrid-related
+   technologies <additional_tutorials>`
+-  :portal:`FutureGrid community educational
+   materials <community_edu_materials>`
 -  `CI Tutor performance
    tutorials <http://www.citutor.org/browse.php?access=&category=-1&search=performance&include=all&filter=Filter>`__
    (requires brief registration to view content)
@@ -284,11 +284,11 @@ Eucalyptus platform of FutureGrid.
 Prerequisite
 ~~~~~~~~~~~~~~~~
 
-#. FutureGrid HPC account, please apply via \ `FutureGrid
-   portal <https://portal.futuregrid.org/user/register>`__ and `request a
-   HPC account <https://portal.futuregrid.org/request-hpc-account>`__.
-#. FutureGrid Eucalyptus account, please see \ `FutureGrid Eucalyptus
-   Tutorial <https://portal.futuregrid.org/tutorials/eucalyptus>`__ for
+#. FutureGrid HPC account, please apply via \ :portal:`FutureGrid
+   portal <user/register>` and :portal:`request a
+   HPC account <request-hpc-account>`.
+#. FutureGrid Eucalyptus account, please see \ :portal:`FutureGrid Eucalyptus
+   Tutorial <tutorials/eucalyptus>` for
    detailed instructions.
 #. FutureGrid Eucalyptus credentials zip file
    (euca2-[username]-x509.zip) stored under user's home directory.
@@ -437,8 +437,8 @@ for instructions.
 Eucalyptus: 
 ^^^^^^^^^^^^^^^^^^
 
-Please refer to `FutureGrid tutorial
-GA7 <https://portal.futuregrid.org/tutorials/ga7>`__.
+Please refer to :portal:`FutureGrid tutorial
+GA7 <tutorials/ga7>`.
 
 .. todo:: errors in portal page reported, seems not to work
 
@@ -458,8 +458,8 @@ Editing tips for the table:
 -  *If you make a mistake (e.g., deleting a row), you can undo it by
    pressing CTRL-Z*
 -  *You need to click on the Submit button so your changes take effect*
--  *You can `create a community
-   page <https://portal.futuregrid.org/node/add/page-community>`__
+-  *You can :portal:`create a community
+   page <node/add/page-community>`
    explaining your appliance and its usage in more depth, and can link
    to it from this page*
 
@@ -472,23 +472,23 @@ Editing tips for the table:
       - FutureGrid system(s) available   
       - Appliance ID                                          
       - Installed                  
-    * - `Grid Appliance <https://portal.futuregrid.org/tutorials/ga9>`__                              
+    * - :portal:`Grid Appliance <tutorials/ga9>`                              
       - Self-configures Condor/MPI/Hadoop virtual clusters for training/education                       
       - alamo, india                         
       - grid-appliance-2.05.03.gz (alamo), emi-E4ED1880 (india)   
       - panoat                       
-    * - `OpenStack Appliance <https://portal.futuregrid.org/tutorials/os1>`__                         
+    * - :portal:`OpenStack Appliance <tutorials/os1>`                         
       - Deploys a single-node OpenStack compute virtual cloud                                           
       - alamo                                
       - openstack-ubuntu-10.10-amd64.img                          
       - menghan                      
-    * - `ViNe Appliance <https://portal.futuregrid.org/contrib/simple-vine-tutorial>`__               
+    * - :portal:`ViNe Appliance <contrib/simple-vine-tutorial>`               
       - Deploys the ViNe virtual network overlay to connect
 	private-address VMs in sierra and foxtrot   
       - sierra, foxtrot                      
       - centos-5.5-x64-vine.gz                                    
       - menghan                      
-    * - `Twister Appliance <https://portal.futuregrid.org/contrib/fg-twister-appliance-tutorial>`__   
+    * - :portal:`Twister Appliance <contrib/fg-twister-appliance-tutorial>`   
       - Deploys a virtual private cluster running the Twister iterative
 	MapReduce system                
       - india                                

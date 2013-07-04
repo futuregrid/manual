@@ -78,21 +78,21 @@ Currently, Hadoop virtual appliances can be deployed on FutureGrid
 resources in the following ways:
 
 
--  `Running a Grid Appliance on
-   FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__ [novice]
--  `Running Condor tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga8>`__ [novice]
--  `Running Hadoop tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga10>`__ [novice]
+-  :portal:`Running a Grid Appliance on
+   FutureGrid <tutorials/ga9>` [novice]
+-  :portal:`Running Condor tasks on the Grid
+   Appliance <tutorials/ga8>` [novice]
+-  :portal:`Running Hadoop tasks on the Grid
+   Appliance <tutorials/ga10>` [novice]
 -  `Running Hadoop WordCount on
-   FutureGrid <https://portal.futuregrid.org/hadoop-wordcount>`__
+   FutureGrid </hadoop-wordcount>`__
    [novice]
--  `Running Hadoop Blast on
-   FutureGrid <https://portal.futuregrid.org/hadoop-blast>`__ [novice]
+-  :portal:`Running Hadoop Blast on
+   FutureGrid <hadoop-blast>` [novice]
 -  `Running Twister Kmeans on
-   FutureGrid <https://portal.futuregrid.org/twister-kmeans>`__ [novice]
--  `Running Twister Blast on
-   FutureGrid <https://portal.futuregrid.org/twister-blast>`__ [novice]
+   FutureGrid <twister-kmeans>`__ [novice]
+-  :portal:`Running Twister Blast on
+   FutureGrid <twister-blast>` [novice]
 
 .. _s-myhadoop:
 
@@ -340,39 +340,39 @@ have experience with IaaS Eucalyptus.
 
 -  SalsaHadoop on FutureGrid
 
-   -  `SalsaHadoop with FutureGrid
-      HPC <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc>`__ [recommended]
+   -  :portal:`SalsaHadoop with FutureGrid
+      HPC <salsahadoop-futuregrid-hpc>` [recommended]
 
       -  `Get HPC compute
-         nodes <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#HPC_Nodes>`__
-      -  `Hadoop
-         Configuration <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#Configuration>`__
-      -  `Verify Hadoop HDFS and MapReduce Daemon
-         status <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#Verify>`__
+         nodes <salsahadoop-futuregrid-hpc#HPC_Nodes>`__
+      -  :portal:`Hadoop
+         Configuration <salsahadoop-futuregrid-hpc#Configuration>`
+      -  :portal:`Verify Hadoop HDFS and MapReduce Daemon
+         status <salsahadoop-futuregrid-hpc#Verify>`
 
-   -  `SalsaHadoop with FutureGrid Cloud
-      Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__
+   -  :portal:`SalsaHadoop with FutureGrid Cloud
+      Eucalyptus <salsahadoop-futuregrid-cloud-eucalyptus>`
 
-      -  `Get VM compute
-         nodes <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#VM_Nodes>`__
+      -  :portal:`Get VM compute
+         nodes <salsahadoop-futuregrid-cloud-eucalyptus#VM_Nodes>`
 
-         -  `VM Hostname
-            setting <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#VM_Nodes_Set>`__
-         -  `VM attached disk
-            configuration <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Euca_Disk>`__
+         -  :portal:`VM Hostname
+            setting <salsahadoop-futuregrid-cloud-eucalyptus#VM_Nodes_Set>`
+         -  :portal:`VM attached disk
+            configuration <salsahadoop-futuregrid-cloud-eucalyptus#Euca_Disk>`
 
-      -  `Hadoop
-         Configuration <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Configuration>`__ (same
+      -  :portal:`Hadoop
+         Configuration <salsahadoop-futuregrid-cloud-eucalyptus#Configuration>` (same
          as above with different masters and slaves hostname)
-      -  `Verify Hadoop HDFS and MapReduce Daemon
-         status <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus#Verify>`__
+      -  :portal:`Verify Hadoop HDFS and MapReduce Daemon
+         status <salsahadoop-futuregrid-cloud-eucalyptus#Verify>`
 
    -  Run SalsaHadoop Applications
 
-      -  `Hadoop
-         WordCount <https://portal.futuregrid.org/tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid>`__
-      -  `Hadoop
-         Blast <https://portal.futuregrid.org/manual/hadoop-blast>`__
+      -  :portal:`Hadoop
+         WordCount <tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid>`
+      -  :portal:`Hadoop
+         Blast <manual/hadoop-blast>`
 
    -  Run Hadoop with static FutureGrid-Bravo HDFS\*
 
@@ -416,10 +416,10 @@ Requirement
 -----------
 
 #. Login to FutureGrid Cluster and obtain compute nodes.
-   (`HPC <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#HPC_Nodes>`__/
-   `Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__)
-#. Start SalsaHadoop/Hadoop on compute nodes. (`SalsaHadoop
-   Tutorial <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#Configuration>`__)
+   (:portal:`HPC <salsahadoop-futuregrid-hpc#HPC_Nodes>`/
+   :portal:`Eucalyptus <salsahadoop-futuregrid-cloud-eucalyptus>`)
+#. Start SalsaHadoop/Hadoop on compute nodes. (:portal:`SalsaHadoop
+   Tutorial <salsahadoop-futuregrid-hpc#Configuration>`)
 #. Download and unzip  `Hadoop Blast source
    code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-Blast.zip>`__
    from `Big Data for Science
@@ -580,10 +580,10 @@ Requirement
 -----------
 
 #. Login to FutureGrid Cluster and obtain compute nodes.
-   (`HPC <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#HPC_Nodes>`__/
-   `Eucalyptus <https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptus>`__)
-#. Start SalsaHadoop/Hadoop on compute nodes. (`SalsaHadoop
-   Tutorial <https://portal.futuregrid.org/salsahadoop-futuregrid-hpc#Configuration>`__)
+   (:portal:`HPC <salsahadoop-futuregrid-hpc#HPC_Nodes>`/
+   :portal:`Eucalyptus <salsahadoop-futuregrid-cloud-eucalyptus>`)
+#. Start SalsaHadoop/Hadoop on compute nodes. (:portal:`SalsaHadoop
+   Tutorial <salsahadoop-futuregrid-hpc#Configuration>`)
 #. Download and unzip `WordCount source
    code <http://salsahpc.indiana.edu/tutorial/source_code/Hadoop-WordCount.zip>`__
    from `Big Data for Science
@@ -665,7 +665,7 @@ will look like as following::
     you; 1
     you? 2
     you?" 23
-    https://portal.futuregrid.org/salsahadoop-futuregrid-cloud-eucalyptusyoung 42
+    salsahadoop-futuregrid-cloud-eucalyptusyoung 42
 
 Finishing the Map-Reduce process
 -----------------------------------
@@ -693,7 +693,7 @@ the years of experience in applying MapReduce programming model to
 various scientific applications we identified a set of extensions to the
 programming model and improvements to its architecture that will expand
 the applicability of MapReduce to more classes of
-applications. `Twister <http://www.iterativemapreduce.org/>`__ is a
+applications. :portal:`Twister <http://www.iterativemapreduce.org/>` is a
 lightweight MapReduce runtime we have developed by incorporating these
 enhancements.
 
@@ -725,30 +725,30 @@ and FutureGrid Cloud environment.
 
 -  Twister on FutureGrid
 
-   -  `Twister with FutureGrid
-      HPC <https://portal.futuregrid.org/twister-futuregrid-hpc>`__
+   -  :portal:`Twister with FutureGrid
+      HPC <twister-futuregrid-hpc>`
 
-      -  `Get HPC compute
-         nodes <https://portal.futuregrid.org/twister-futuregrid-hpc#HPC_Nodes>`__
-      -  `Twister
-         Configuration <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf>`__
+      -  :portal:`Get HPC compute
+         nodes <twister-futuregrid-hpc#HPC_Nodes>`
+      -  :portal:`Twister
+         Configuration <twister-futuregrid-hpc#Twister_Conf>`
 
-         -  `Download Twister
-            0.9 <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_Download>`__
-         -  `Set $TWISTER_HOME and
-            $JAVA_HOME <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_Set>`__
-         -  `Run
-            TwisterPowerMakeUp.sh <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_PowerMakeUp>`__
-         -  `Download and start ActiveMQ on specific
-            nodes <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_ActiveMQ>`__
-         -  `Start
-            Twister <https://portal.futuregrid.org/twister-futuregrid-hpc#Twister_Conf_Start>`__
+         -  :portal:`Download Twister
+            0.9 <twister-futuregrid-hpc#Twister_Conf_Download>`
+         -  :portal:`Set $TWISTER_HOME and
+            $JAVA_HOME <twister-futuregrid-hpc#Twister_Conf_Set>`
+         -  :portal:`Run
+            TwisterPowerMakeUp.sh <twister-futuregrid-hpc#Twister_Conf_PowerMakeUp>`
+         -  :portal:`Download and start ActiveMQ on specific
+            nodes <twister-futuregrid-hpc#Twister_Conf_ActiveMQ>`
+         -  :portal:`Start
+            Twister <twister-futuregrid-hpc#Twister_Conf_Start>`
 
-      -  `Verify Twister MapReduce Daemon
-         status <https://portal.futuregrid.org/twister-futuregrid-hpc#Verify>`__
+      -  :portal:`Verify Twister MapReduce Daemon
+         status <twister-futuregrid-hpc#Verify>`
 
-   -  `Twister with FutureGrid Cloud
-      Eucalyptus <https://portal.futuregrid.org/twister-futuregrid-cloud-eucalyptus>`__
+   -  :portal:`Twister with FutureGrid Cloud
+      Eucalyptus <twister-futuregrid-cloud-eucalyptus>`
 
       -  `Get VM compute
          nodes <../../twister-futuregrid-cloud-eucalyptus#VM_Nodes>`__
@@ -777,9 +777,9 @@ and FutureGrid Cloud environment.
 
    -  Run Twister Applications
 
-      -  `Twister
-         Kmeans <https://portal.futuregrid.org/twister-kmeans>`__
-      -  `Twister Blast <https://portal.futuregrid.org/twister-blast>`__
+      -  :portal:`Twister
+         Kmeans <twister-kmeans>`
+      -  :portal:`Twister Blast <twister-blast>`
 
 Papers and Presentations
 ------------------------
@@ -983,7 +983,7 @@ Prerequisite
 ~~~~~~~~~~~~~~~~
 
 Follow tutorial `Using Eucalyptus on
-FutureGrid <http://portal.futuregrid.org/tutorials/eucalyptus>`__ to
+FutureGrid <tutorials/eucalyptus>` to
 learn how to install and use the Eucalyptus client tool to access
 resources on India, FutureGrid.
  
@@ -1104,11 +1104,8 @@ The output is as follows:
 
 |image128|
 
-+-----------------------------------------------------------------------------------------------+-----------+
-| Attachment                                                                                    | Size      |
-+===============================================================================================+===========+
-| `fgeucatwister.zip <https://portal.futuregrid.org/sites/default/files/fgeucatwister.zip>`__   | 4.38 KB   |
-+-----------------------------------------------------------------------------------------------+-----------+
+:portal:`fgeucatwister.zip <sites/default/files/fgeucatwister.zip>`
+
 .. |image94| image:: images/myHadoop-300x70.png
 .. |Hadoop logo| image:: images/hadoop-logo.jpg
 .. |image114| image:: images/imrmodel.png

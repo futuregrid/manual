@@ -35,7 +35,9 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
-              'sphinxcontrib.actdiag']
+              'sphinxcontrib.actdiag',
+              'sphinxcontrib.exceltable',
+              ]
 
 # extensions.append('sphinxcontrib.autorun')
 actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"

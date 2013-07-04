@@ -76,8 +76,8 @@ For XSEDE users:
 
 #. Please go to the `XSEDE portal <http://www.xsede.org>`__ and apply for an XSEDE portal
    account.
-#. Create a new project as documented in the `XSEDE portal allocations page
-   <https://www.xsede.org/allocations>`__ or ask you XSEDE project lead
+#. Create a new project as documented in the :portal:`XSEDE portal allocations page
+   <ions>` or ask you XSEDE project lead
    to join you to the project.
 #. It will take some time to get your account activated 
 
@@ -120,8 +120,7 @@ complete the next steps.
 
 Here are a few tips that make it easy for you
 
--  On the portal's main page at
-   :portal:`https://portal.futuregrid.org <`
+-  On the portal's main page at https://portal.futuregri.org
    appears
    a :menuselection:`Portal --> Register` :portal:`link <user/register>`. 
 -  Following you will be able to **Create a new account** on the
@@ -195,7 +194,7 @@ Join a Project
 To join an existing project, ask the project lead or project manager for that
 project to add you to their project using that same form. If the project
 is set to "accept public join request", you may also send a request in
-the portal. To do this, first view the `project list <https://portal.futuregrid.org/projects>`__ and go to the project
+the portal. To do this, first view the :portal:`project list <projects>` and go to the project
 detail page by clicking the project title. If the project is set by the
 project lead to "accept join request", then you'll see a large gray
 'Join this project' button in the upper right corner of the page. Click

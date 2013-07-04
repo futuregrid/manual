@@ -114,8 +114,8 @@ Endpoint Connection Information
 India
 -------------------------------
 
--  **Endpoint EPR**: `click
-   here <https://portal.futuregrid.org/sites/default/files/india-epr-Nov-01-2011.txt>`__
+-  **Endpoint EPR**: :portal:`click
+   here <sites/default/files/india-epr-Nov-01-2011.txt>`
 
 -  **Security**: configured for username/password authentication;
    `Email <mailto:uvacse@virginia.edu>`__ for username token and CA
@@ -134,8 +134,8 @@ India
 Sierra
 ----------------------------------------------------------------------
 
--  **Endpoint EPR**: `click
-   here <https://portal.futuregrid.org/sites/default/files/sierra-epr-Mar-22-2012_0.txt>`__
+-  **Endpoint EPR**: :portal:`click
+   here <sites/default/files/sierra-epr-Mar-22-2012_0.txt>`
 
 -  **Security**: configured for username/password authentication;
    `Email <mailto:uvacse@virginia.edu>`__ for username token and CA
@@ -154,8 +154,8 @@ Sierra
 Alamo
 ~~~~~
 
--  **Endpoint EPR**: `click
-   here <https://portal.futuregrid.org/sites/default/files/alamo-epr-Mar-22-2012_0.txt>`__
+-  **Endpoint EPR**: :portal:`click
+   here </sites/default/files/alamo-epr-Mar-22-2012_0.txt>`
 
 -  **Security**: configured for username/password authentication;
    `Email <mailto:uvacse@virginia.edu>`__ for username token and CA
@@ -173,8 +173,8 @@ Alamo
 Hotel
 ~~~~~
 
--  **Endpoint EPR**: `click
-   here <https://portal.futuregrid.org/sites/default/files/hotel-epr-Apr-24-2012.txt>`__
+-  **Endpoint EPR**: :portal:`click
+   here </sites/default/files/hotel-epr-Apr-24-2012.txt>`
 
 -  **Security**: `Email <mailto:uvacse@virginia.edu>`__ for
    username/password authentication token and CA cert.
@@ -312,7 +312,7 @@ To get started using the XCG, you will need an XCG account - which is
 **not** the same as your local machine account or your FutureGrid
 resource account. To request an XCG account, fill out the XCG user
 application form located at
-`http://www.cs.virginia.edu/~vcgr/userrequest <https://www.cs.virginia.edu/~vcgr/userrequest/>`__.
+:portal:`http://www.cs.virginia.edu/~vcgr/userrequest <vcgr/userrequest/>`.
 
 Once you have an account and have the appropriate GenesisII software
 installed, you are ready to start a GenesisII grid shell and login.
@@ -389,8 +389,7 @@ Running Jobs
 ~~~~~~~~~~~~
 
 To learn how the basics about executing and monitoring jobs using
-GenesisII and the XCG, please refer to `XCG
-Tutorial <https://portal.futuregrid.org/sites/default/files/XCG%20Tutorial.pdf>`__
+GenesisII and the XCG, please refer to :portal:`XCG Tutorial <sites/default/files/XCG%20Tutorial.pdf>`
 document.
 
 Getting Help
@@ -407,11 +406,11 @@ to look at further documentation and FAQs
 +-------------------------------------------------------------------------------------------------------------------+-----------+
 | Endpoints                                                                                                        | Size      |
 +===================================================================================================================+===========+
-| `india-epr-Nov-01-2011.txt <https://portal.futuregrid.org/sites/default/files/india-epr-Nov-01-2011.txt>`__       | 7.8 KB    |
+| :portal:`india-epr-Nov-01-2011.txt </sites/default/files/india-epr-Nov-01-2011.txt>`       | 7.8 KB    |
 +-------------------------------------------------------------------------------------------------------------------+-----------+
-| `sierra-epr-Mar-22-2012.txt <https://portal.futuregrid.org/sites/default/files/sierra-epr-Mar-22-2012_0.txt>`__   | 7.8 KB    |
+| :portal:`sierra-epr-Mar-22-2012.txt </sites/default/files/sierra-epr-Mar-22-2012_0.txt>`   | 7.8 KB    |
 +-------------------------------------------------------------------------------------------------------------------+-----------+
-| `alamo-epr-Mar-22-2012.txt <https://portal.futuregrid.org/sites/default/files/alamo-epr-Mar-22-2012_0.txt>`__     | 7.82 KB   |
+| :portal:`alamo-epr-Mar-22-2012.txt </sites/default/files/alamo-epr-Mar-22-2012_0.txt>`     | 7.82 KB   |
 +-------------------------------------------------------------------------------------------------------------------+-----------+
-| `hotel-epr-Apr-24-2012.txt <https://portal.futuregrid.org/sites/default/files/hotel-epr-Apr-24-2012.txt>`__       | 7.86 KB   |
+| :portal:`hotel-epr-Apr-24-2012.txt </sites/default/files/hotel-epr-Apr-24-2012.txt>`       | 7.86 KB   |
 +-------------------------------------------------------------------------------------------------------------------+-----------+

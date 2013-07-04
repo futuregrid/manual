@@ -36,8 +36,8 @@ you to just list a view of them. Hence we provide you with a convenient
 link to our table of contents. Please note that the manual also contains
 links to our tutorials and our MOOC.
 
--  `Manual Table of
-   Contents <https://portal.futuregrid.org/manual/toc>`__
+-  :portal:`Manual Table of
+   Contents <manual/toc>`
 
 It will be also easy for you to search for some topics in our search box
 at the top of the Web page.
@@ -58,15 +58,15 @@ appliance, the Nimbus science cloud middleware, the IPOP/GroupVPN
 self-configuring virtual network, and the ViNe virtual network.
 
 For links to the initial appliance-based FutureGrid tutorials, see the
-FutureGrid `Education and Outreach
-page <https://portal.futuregrid.org/outreach>`__. Additionally, for
+FutureGrid :portal:`Education and Outreach
+page <outreach>`. Additionally, for
 video tutorials on the use of the appliances, see the `Grid appliance
 YouTube
 channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__.
 
  
 
-`‹ Quickstart <https://portal.futuregrid.org/gettingstarted>`__
+:portal:`‹ Quickstart <gettingstarted>`
 
 Guide to Using the FutureGrid Portal
 ====================================
@@ -121,8 +121,8 @@ FutureGrid portal account first. Then, while editing the project, you
 can type a user's first name, and the suggestion feature will pop up
 with the user's username to be added. If you have many members to add,
 click the 'Add another item' in the 'Project Members' section to add
-more. See also `this
-FAQ <https://portal.futuregrid.org/how-can-i-add-people-project>`__.
+more. See also :portal:`this
+FAQ <how-can-i-add-people-project>`.
 
 For updating your project results, there is a 'Project Results' section
 with a 'Results' window that supports WYSIWYG editing. It supports
@@ -133,8 +133,8 @@ images, you'll need to upload the image to the server first, and then
 insert it to the window, or alternatively refer to an external URL for
 an image hosted somewhere else.
 
-For more detailed info on how to include an image, please see `this
-FAQ <https://portal.futuregrid.org/how-upload-andor-include-image-while-creating-pagenews-etc>`__.
+For more detailed info on how to include an image, please see :portal:`this
+FAQ <how-upload-andor-include-image-while-creating-pagenews-etc>`.
 
 Contribute to the FutureGrid Community
 --------------------------------------
@@ -146,8 +146,8 @@ can learn from others. Emphasizing user participation and
 collaboration is one of the main goals shaping the portal to its current
 state.
 
-You can contribute by `creating a 'Community
-Page' <https://portal.futuregrid.org/node/add/page-community>`__. You
+You can contribute by :portal:`creating a 'Community
+Page' <node/add/page-community>`. You
 can find the link in the left side navigation block, under the 'Create
 content' menu. After entering the edit page, you'll see a 'Title' text
 box, where you put the content/article title, and a 'Body' window where
@@ -156,18 +156,18 @@ images, etc.
 
 You can cite FutureGrid references also, by enclosing a citekey within
 the 'bib' tag as stated under the editor window (NOTE: Please use '[]'
-instead of '<>'), where CITEKEY could be found in the `biblio
-page <https://portal.futuregrid.org/biblio>`__ (the content within but
+instead of '<>'), where CITEKEY could be found in the :portal:`biblio
+page <biblio>` (the content within but
 not including the '[ ]').
 
 An example of a user contributed page can be found
-`here <https://portal.futuregrid.org/contrib/testexample-page-user-contributed-page>`__.
+:portal:`here <contrib/testexample-page-user-contributed-page>`.
 
 File Upload and Attachment to a Page
 ------------------------------------
 
-Please see `this
-FAQ <https://portal.futuregrid.org/faq/how-uploadattach-file-page>`__
+Please see :portal:`this
+FAQ <faq/how-uploadattach-file-page>`
 for instructions on file upload.
 
 
@@ -181,11 +181,11 @@ processors.  The OS is CentOS 5.8 and 6.3.  It runs Torque and Moab for
 scheduling.  Alamo has a QDR IB interconnect and 15 TB of attached disk
 storage.   Alamo is partitioned into different resources for Nimbus and
 HPC.  See the Alamo hardware page for more
-detail: `https://portal.futuregrid.org/hardware/alamo <https://portal.futuregrid.org/hardware/alamo>`__
+detail: :portal:`Hardware alamo <hardware/alamo>`
 .
 
 **Nimbus partition -** see nimbus
-documentation: `https://portal.futuregrid.org/tutorials/nimbus <https://portal.futuregrid.org/tutorials/nimbus>`__
+documentation: :portal:`https://portal.futuregrid.org/tutorials/nimbus <tutorials/nimbus>`
 
 **HPC partition**
 
@@ -198,7 +198,7 @@ Available queues:
    long - 72 hours runtime limit
 
 After registering your .ssh key on the portal, go to
-`https://portal.futuregrid.org/manual/access <https://portal.futuregrid.org/manual/access>`__
+:portal:`https://portal.futuregrid.org/manual/access <manual/access>`
 .
 
 If you key has been uploaded, you can ssh to the login node using the
@@ -231,9 +231,9 @@ Administrator: David Gignac
 For issues or questions please
 use `https://tickets.futuregrid.org <https://tickets.futuregrid.org>`__
 . You can conveniently submit a ticket
-via `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
+via :portal:`help`.
 To look at your previously submitted tickets you can
-use `https://portal.futuregrid.org/tickets <https://portal.futuregrid.org/tickets>`__
+use :portal:`https://portal.futuregrid.org/tickets <tickets>`
 .
 
   
@@ -301,95 +301,95 @@ No the first nova command::
    $ nova list 
 
 
-.. |image0| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif
-.. |image4| image:: https://portal.futuregrid.org/sites/default/files/resize/images/FutureGrid_iDataPlex_Cray_IU-sm-640x425.jpg
-.. |image5| image:: https://portal.futuregrid.org/sites/default/files/resize/images/Cray_XT5m_Front_closed-small-427x640.jpg
-.. |image6| image:: https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png
-.. |image7| image:: https://portal.futuregrid.org/sites/default/files/resize/images/Juniper%20EX8208-140x184.png
-.. |image8| image:: https://portal.futuregrid.org/sites/default/files/u23/futuregrid-physical.png
-.. |image9| image:: https://portal.futuregrid.org/sites/default/files/u23/futuregrid-topology.png
-.. |image10| image:: https://portal.futuregrid.org/sites/default/files/images/Spirent%20XGEM.png
-.. |image11| image:: https://portal.futuregrid.org/sites/default/files/images/FutureGrid%20Logocal%20v3.png
-.. |image12| image:: https://portal.futuregrid.org/sites/default/files/images/status_incapart.PNG
+.. |image0| image:: images/fg-logo-md.gif
+.. |image4| image:: images/FutureGrid_iDataPlex_Cray_IU-sm-640x425.jpg
+.. |image5| image:: images/Cray_XT5m_Front_closed-small-427x640.jpg
+.. |image6| image:: images/FutureGrid%20Logocal%20v3.png
+.. |image7| image:: images/Juniper%20EX8208-140x184.png
+.. |image8| image:: images/futuregrid-physical.png
+.. |image9| image:: images/futuregrid-topology.png
+.. |image10| image:: images/Spirent%20XGEM.png
+.. |image11| image:: images/FutureGrid%20Logocal%20v3.png
+.. |image12| image:: images/status_incapart.PNG
    :target: http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp
-.. |image13| image:: https://portal.futuregrid.org/sites/default/files/ScreenSnapz.jpg
+.. |image13| image:: images/ScreenSnapz.jpg
    :target: http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid
-.. |image14| image:: https://portal.futuregrid.org/sites/default/files/ganglia.png
+.. |image14| image:: images/ganglia.png
    :target: http://ganglia.futuregrid.org
-.. |image15| image:: https://portal.futuregrid.org/sites/default/files/images/large_status_nocmap.PNG
+.. |image15| image:: images/large_status_nocmap.PNG
    :target: http://noc.futuregrid.org
-.. |image16| image:: https://portal.futuregrid.org/sites/default/files/u23/Screen%20shot%202011-01-14%20at%207.48.06%20PM.png
+.. |image16| image:: images/Screen%20shot%202011-01-14%20at%207.48.06%20PM.png
    :target: http://inca.futuregrid.org
-.. |image17| image:: https://portal.futuregrid.org/sites/default/files/u23/Screen%20shot%202011-04-07%20at%203.23.05%20PM.png
+.. |image17| image:: images/Screen%20shot%202011-04-07%20at%203.23.05%20PM.png
    :target: https://portal.futuregrid.org/monitoring/cloud
 .. |image18| image:: https://portal.futuregrid.org/sites/default/files/screenshot-for-status-small.png
    :target: https://portal.futuregrid.org/metrics
 .. |image19| image:: https://portal.futuregrid.org/sites/default/files/fg-sys-sw-ver.PNG
    :target: http://inca.futuregrid.org:8080/inca/HTML/rest/HPC/FutureGrid
-.. |image20| image:: https://portal.futuregrid.org/sites/default/files/u15/nimbus-usage.png
+.. |image20| image:: images/nimbus-usage.png
    :target: http://inca.futuregrid.org/nimbus-stats
 
 
-.. |image31| image:: https://portal.futuregrid.org/sites/default/files/images/open_file.png
-.. |image32| image:: https://portal.futuregrid.org/sites/default/files/images/cancel_loading_resize.png
-.. |image33| image:: https://portal.futuregrid.org/sites/default/files/images/Startup.png
-.. |image34| image:: https://portal.futuregrid.org/sites/default/files/images/Display_arranging_a.png
-.. |image35| image:: https://portal.futuregrid.org/sites/default/files/images/Display_arranging_b.png
-.. |image36| image:: https://portal.futuregrid.org/sites/default/files/images/Custom_arrangement.png
-.. |image37| image:: https://portal.futuregrid.org/sites/default/files/images/close_display.png
-.. |image38| image:: https://portal.futuregrid.org/sites/default/files/images/Undocking_1.png
-.. |image39| image:: https://portal.futuregrid.org/sites/default/files/images/Undocking_2.png
-.. |image40| image:: https://portal.futuregrid.org/sites/default/files/images/Resize_labels.png
-.. |image41| image:: https://portal.futuregrid.org/sites/default/files/images/Zooming.png
-.. |image42| image:: https://portal.futuregrid.org/sites/default/files/images/Zoom_toolbar.png
-.. |image43| image:: https://portal.futuregrid.org/sites/default/files/images/icon_master_tl.png
-.. |image44| image:: https://portal.futuregrid.org/sites/default/files/images/icon_process_tl.png
-.. |image45| image:: https://portal.futuregrid.org/sites/default/files/images/icon_counter_tl.png
-.. |image46| image:: https://portal.futuregrid.org/sites/default/files/images/icon_radar.png
-.. |image47| image:: https://portal.futuregrid.org/sites/default/files/images/icon_function_summ.png
-.. |image48| image:: https://portal.futuregrid.org/sites/default/files/images/icon_message_summ.png
-.. |image49| image:: https://portal.futuregrid.org/sites/default/files/images/icon_process_summ.png
-.. |image50| image:: https://portal.futuregrid.org/sites/default/files/images/icon_matrix.png
-.. |image51| image:: https://portal.futuregrid.org/sites/default/files/images/icon_calltree.png
-.. |image52| image:: https://portal.futuregrid.org/sites/default/files/images/icon_legend.png
-.. |image53| image:: https://portal.futuregrid.org/sites/default/files/images/icon_context.png
-.. |image54| image:: https://portal.futuregrid.org/sites/default/files/images/icon_marker.png
-.. |image55| image:: https://portal.futuregrid.org/sites/default/files/images/Master_timeline.png
-.. |image56| image:: https://portal.futuregrid.org/sites/default/files/images/Process_timeline.png
-.. |image57| image:: https://portal.futuregrid.org/sites/default/files/images/collectives.png
-.. |image58| image:: https://portal.futuregrid.org/sites/default/files/images/burst.png
-.. |image59| image:: https://portal.futuregrid.org/sites/default/files/images/marker-multiple.png
-.. |image60| image:: https://portal.futuregrid.org/sites/default/files/images/marker-template.png
-.. |image61| image:: https://portal.futuregrid.org/sites/default/files/images/io-multiple.png
-.. |image62| image:: https://portal.futuregrid.org/sites/default/files/images/io-single.png
-.. |image63| image:: https://portal.futuregrid.org/sites/default/files/images/io-single-selected.png
-.. |image64| image:: https://portal.futuregrid.org/sites/default/files/images/Counter_data_timeline.png
-.. |image65| image:: https://portal.futuregrid.org/sites/default/files/images/performance_radar_find_function.png
-.. |image66| image:: https://portal.futuregrid.org/sites/default/files/images/performance_radar_set_counter.png
-.. |image67| image:: https://portal.futuregrid.org/sites/default/files/images/Call_tree.png
-.. |image68| image:: https://portal.futuregrid.org/sites/default/files/images/Function_summary.png
-.. |image69| image:: https://portal.futuregrid.org/sites/default/files/images/Process_summary.png
-.. |image70| image:: https://portal.futuregrid.org/sites/default/files/images/Messagesummary.png
-.. |image71| image:: https://portal.futuregrid.org/sites/default/files/images/Communication_matrix_view.png
-.. |image72| image:: https://portal.futuregrid.org/sites/default/files/images/Function_legend.png
-.. |image73| image:: https://portal.futuregrid.org/sites/default/files/images/Marker_view.png
-.. |image74| image:: https://portal.futuregrid.org/sites/default/files/images/Context_view.png
-.. |image75| image:: https://portal.futuregrid.org/sites/default/files/images/context_compare.png
-.. |image76| image:: https://portal.futuregrid.org/sites/default/files/images/process_filter.png
-.. |image77| image:: https://portal.futuregrid.org/sites/default/files/images/pref_general.png
-.. |image78| image:: https://portal.futuregrid.org/sites/default/files/images/pref_appearance.png
-.. |image88| image:: https://portal.futuregrid.org/sites/default/files/resize/euca_fg_login-290x240.png
-.. |image89| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/Screen%20Shot%202013-03-06%20at%2012.47.32%20PM-201x200.png
+.. |image31| image:: images/open_file.png
+.. |image32| image:: images/cancel_loading_resize.png
+.. |image33| image:: images/Startup.png
+.. |image34| image:: images/Display_arranging_a.png
+.. |image35| image:: images/Display_arranging_b.png
+.. |image36| image:: images/Custom_arrangement.png
+.. |image37| image:: images/close_display.png
+.. |image38| image:: images/Undocking_1.png
+.. |image39| image:: images/Undocking_2.png
+.. |image40| image:: images/Resize_labels.png
+.. |image41| image:: images/Zooming.png
+.. |image42| image:: images/Zoom_toolbar.png
+.. |image43| image:: images/icon_master_tl.png
+.. |image44| image:: images/icon_process_tl.png
+.. |image45| image:: images/icon_counter_tl.png
+.. |image46| image:: images/icon_radar.png
+.. |image47| image:: images/icon_function_summ.png
+.. |image48| image:: images/icon_message_summ.png
+.. |image49| image:: images/icon_process_summ.png
+.. |image50| image:: images/icon_matrix.png
+.. |image51| image:: images/icon_calltree.png
+.. |image52| image:: images/icon_legend.png
+.. |image53| image:: images/icon_context.png
+.. |image54| image:: images/icon_marker.png
+.. |image55| image:: images/Master_timeline.png
+.. |image56| image:: images/Process_timeline.png
+.. |image57| image:: images/collectives.png
+.. |image58| image:: images/burst.png
+.. |image59| image:: images/marker-multiple.png
+.. |image60| image:: images/marker-template.png
+.. |image61| image:: images/io-multiple.png
+.. |image62| image:: images/io-single.png
+.. |image63| image:: images/io-single-selected.png
+.. |image64| image:: images/Counter_data_timeline.png
+.. |image65| image:: images/performance_radar_find_function.png
+.. |image66| image:: images/performance_radar_set_counter.png
+.. |image67| image:: images/Call_tree.png
+.. |image68| image:: images/Function_summary.png
+.. |image69| image:: images/Process_summary.png
+.. |image70| image:: images/Messagesummary.png
+.. |image71| image:: images/Communication_matrix_view.png
+.. |image72| image:: images/Function_legend.png
+.. |image73| image:: images/Marker_view.png
+.. |image74| image:: images/Context_view.png
+.. |image75| image:: images/context_compare.png
+.. |image76| image:: images/process_filter.png
+.. |image77| image:: images/pref_general.png
+.. |image78| image:: images/pref_appearance.png
+.. |image88| image:: images/euca_fg_login-290x240.png
+.. |image89| image:: images/Screen%20Shot%202013-03-06%20at%2012.47.32%20PM-201x200.png
    :target: http://futuregrid.github.com/rain/
-.. |image90| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/Screen%20Shot%202013-03-06%20at%2012.51.48%20PM-200x200.png
+.. |image90| image:: images/Screen%20Shot%202013-03-06%20at%2012.51.48%20PM-200x200.png
    :target: http://futuregrid.github.com/rain/quickstart.html
-.. |image91| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/Screen%20Shot%202013-03-06%20at%2012.47.32%20PM-201x200.png
+.. |image91| image:: images/Screen%20Shot%202013-03-06%20at%2012.47.32%20PM-201x200.png
    :target: http://futuregrid.github.com/rain/
-.. |image92| image:: https://portal.futuregrid.org/sites/default/files/resize/u23/Screen%20Shot%202013-03-06%20at%2012.51.48%20PM-200x200.png
+.. |image92| image:: images/Screen%20Shot%202013-03-06%20at%2012.51.48%20PM-200x200.png
    :target: http://futuregrid.github.com/rain/quickstart.html
 .. |:!:| image:: http://www.opennebula.org/lib/images/smileys/icon_exclaim.gif
 
 .. |Cloud site sample layouts.| image:: https://pegasus.isi.edu/wms/docs/4.0/images/fg-pwms-prefio.3.png
-.. |image130| image:: https://portal.futuregrid.org/sites/default/files/u30/fg-logo-md.gif
-.. |image132| image:: https://portal.futuregrid.org/sites/default/files/u23/summerschool2012.png
+.. |image130| image:: images/fg-logo-md.gif
+.. |image132| image:: images/summerschool2012.png
    :target: https://portal.futuregrid.org/projects/241

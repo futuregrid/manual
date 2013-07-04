@@ -470,7 +470,7 @@ first \ **#**, this line will specify the file name to be used for job
 output.
 
 Submitting Your Job
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can submit your job with the \ **qsub** or **msub** commands.
 The \ **msub** and **qsub** are almost identical, and can mostly be used
