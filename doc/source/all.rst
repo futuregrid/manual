@@ -1,6 +1,4 @@
 
-
-
 .. _s-manual:
 
 |image0|  Manual 
@@ -59,6 +57,8 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    hardware
    hpc
    scalemp
+   unicore
+   genesis
 
 **PART V. IAAS/CLOUD SERVICES**
 
@@ -70,7 +70,21 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    openstack
    openstack-grizzly
    openstack-virtualbox
+   nimbus
    eucalyptus
+
+**PART V. PAAS CLOUD SERVICES**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   mapreduce
+   x-salsahadoop-futuregrid-cloud-eucalyptus
+   x-salsahadoop-futuregrid-hpc
+   x-twister-futuregrid-cloud-eucalyptus
+   x-twister-futuregrid-hpc
+   x-eucalyptus-and-twister-futuregrid
 
 **PART VI. EXPERIMENT MANAGEMENT SERVICES**
 
@@ -78,7 +92,36 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :numbered:
    :maxdepth: -1
 
+   nimbus-phantom
+   nimbus-cloudinitd
+   pegasus
+   precip
    rain
+
+
+**PART VII. TUTORIALS**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   tutorials
+
+**PART VIII. MISCELANEOUS SERVICES**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   vine
+   vine-overlay
+   papi
+   gpu
+
+   fgmanual
+..
+   python
+
 
 **APPENDIX I. MAINTAINING THIS MANUAL**
 
@@ -91,11 +134,4 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    git
    contributing
 
-
-**APPENDIX II. OTHERS**
-
-* `A more complete Index with all sections can be found here <all.html>`__
-
-
 .. |image0| image:: /images/fg-logo-md.png
-
