@@ -16,7 +16,7 @@ Login Nodes
 
 Several of the clusters have High Performance Computing (HPC) services
 installed. Access to them is provided via a Linux Login node for each
-of the clusters.
+of the clusters on which these services are installed.
 
 To access the login nodes you need a FG resource account and an SSH
 public key you have uploaded to FutureGrid (this process is described
@@ -31,6 +31,8 @@ resources with ssh. The resources include the following login nodes:
 - india.futuregrid.org
 - sierra.futuregrid.org
 - xray.futuregrid.org
+
+.. todo:: what are login nodes for delta, echo
 
 For example, assume your portalname is "portalname", than you can
 login to sierra as follows::
@@ -255,54 +257,51 @@ status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC
    India        , OpenMPI 1.4.2     , Intel 11.1     , yes                      , openmpi                     
    Sierra       , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
    Xray         ,                   ,                , N/A                      ,                             
+
 Loading the OpenMPI module adds the MPI compilers to your $PATH
 environment variable and the OpenMPI shared library directory to your
 $LD_LIBRARY_PATH. This is an important step to ensure MPI applications
-will compile and run successfully. 
-
-In cases where the OpenMPI is compiled with the Intel compilers
-loading the OpenMPI module will automatically load the Intel compilers
-as a dependency::
+will compile and run successfully. In cases where the OpenMPI is
+compiled with the Intel compilers loading the OpenMPI module will
+automatically load the Intel compilers as a dependency. To load the
+default opnmpi module and associated compilers, just use::
 
     $ module load openmpi
-    Intel compiler suite version 11.1/072 loaded
-    OpenMPI version 1.4.3 loaded
 
-.. todo:: different section::
-   Loading the torque module allows you to submit jobs to the scheduler.
- 
 
 Compiling MPI Applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To compile MPI applications, users have two options:
+To compile MPI applications, users have two options, we recommend
+using the MPI compile scripts to avoid issues. This is accomplished by
+using the following commands:
 
-#. Use the MPI compilers instead of regular Intel/GNU compilers
-#. Use the regular compilers (Intel/GNU) with MPI compilation flags
+mpicc:
+   To compile C programs with the the CC/icc/gcc compilers
 
-We recommend using the MPI compilers to avoid compilation issues. This
-is accomplished by making the following replacements:
+mpicxx:
+   To compile c++ programs with CXX/icpc/g++ with mpicxx
 
--  CC/icc/gcc with mpicc
--  CXX/icpc/g++ with mpicxx
--  F90/F77/FC/ifort/gfortran with mpif90
+mpif90:
+   To compile prohgrams with F90/F77/FC/ifort/gfortran
 
-Alternatively, for some codes that require intricate compilation flags
-and complicated make systems, and where changing compilers is not an
-option, you can edit the compilation/linking options for your codes.
-These options are machine, compiler, and language dependent. To view the
-options required for C, C++ and Fortran on any machine, you can issue
-the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
-be taken when using these flags, as dependencies govern the order in
-which they appear in the link line. Should you run into compilation
-errors or problems, please submit a consulting ticket.
 
 Assuming you have loaded the openmpi module into your environment,
-you can compile a `simple MPI application </tutorials/hpc/ring>`__ as
+you can compile a `simple MPI application <ring>`__ with
 easily as executing::
 
     $ mpicc -o ring ring.c
 
+To see in detail what these commands do you can add a -show as an
+option. Hence::
+   
+   $ mpicc -show
+   $ mpicxx -show
+   $ mpif90 -show
+
+will show you the detail of each command. These details could be used
+to adapt compile flags in case the default settings are not suitable
+for you.
 
 
 Running MPI Applications

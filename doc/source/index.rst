@@ -91,8 +91,16 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    git
    contributing
 
+**APPENDIX II. MPI RING PROGRAM**
 
-**APPENDIX II. OTHERS**
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   ring
+
+
+**APPENDIX III. OTHERS**
 
 * `A more complete Index with all sections can be found here <all.html>`__
 
