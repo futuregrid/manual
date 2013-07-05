@@ -71,9 +71,10 @@ cloud. This can be easily done in the following way::
        +---------------+-------------------------------------------------+
        | Name          | Fingerprint                                     |
        +---------------+-------------------------------------------------+
-       | <USER>-key | ab:a6:63:82:dd:08:d3:bc:c0:21:56:4c:e2:bb:22:ac |
+       | <USER>-key    | ab:a6:63:82:dd:08:d3:bc:c0:21:56:4c:e2:bb:22:ac |
        +---------------+-------------------------------------------------+
-       Where USER is your ligin name on sierra
+
+Where USER is your login name on sierra.
 
 Make sure you are not already having the key with that name in order
 to avoid overwriting it in the cloud. Thus be extra careful to execute

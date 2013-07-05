@@ -1,0 +1,53 @@
+User 
+=====
+
+Firstname:
+Albert 
+
+Lastname:
+Elfstein
+
+email:
+albert11stein@gmail.com
+
+Address:
+Computer Science Departmet
+515 My Street
+Bloomington, IN 47408
+
+Advisor Contact:
+
+URL:
+https://plus.google.com/u/0/117090914094771717315
+
+Bio:
+Albert Elfstein is a profeesor at the Computer Science departement at the Space University. He isinterested in extraplanetary traveling above the speed of light. He has published over 100 papers in his field. 
+
+Project
+=====
+
+Title:
+Example Project: Accounting service for Heterogeneous Clouds
+
+Abstract:
+While using FG as a platform we will be designing, implementing and deploying an accounting service for FG that will collect in detail information about the actual utilization of FG in regards to provisioning, utilization of images and of distributed runtime frameworks (hadoop, mpi, ...). In addition this Information system can be used to implement application level monitoring for Grid and Cloud applications. 
+
+Intellectual Merrit:
+FutureGrid is offering a number of services that are not integrated into a holistic information about accounting. In addition systems such as Nimbus do not support project management which is a key need for many centers. Our accounting system tries to integrate the different services and enhances some soerbvices that do not provide such information by default.
+
+Broader Impact
+* The system can be used at sites other than FutureGrid
+* We are working with a number of undergraduadte minority students
+* Our code will be hosted on github at http://futuregrid.github.com
+
+Use of FutureGrid:
+We will be deploying a database service that collects the information from the various cloud systems. THe information will than be publically made accessible. We will also conduct experiments with dynamic provsioning of such a framework and use them in virtual machines. Our inial target services will include: OpenStack, Eucalyptus, and Nimbus 
+
+Scale of use:
+This tool will be integrated in all of IU FutureGrid resources. 
+We will be using in addition about 10 VMs that we will only run when needed.
+We are aware that our VMs will be terminated in case of an error and we have made provisions for backing up the needed contents locally at our end.
+
+
+
+

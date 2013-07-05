@@ -6,7 +6,7 @@ Status
 
 The status of the resources and services can be accessed through:
 
--  `https://portal.futuregrid.org/status <https://portal.futuregrid.org/status>`__
+-  :portal:`https://portal.futuregrid.org/status <status>`
 
 This page also contains a link to our operational status of FutureGrid
 resources and services, see the FutureGrid Inca server at:
@@ -21,8 +21,8 @@ collected in the Network Operations Calendar at:
 The **first Tuesday of each month** is the standard maintenance
 window.
 
-You can find a list of outages `here <https://portal.futuregrid.org/outages_all>`__
-including an `RSS <https://portal.futuregrid.org/feeds/fg_outages_all_rss.xml>`__ feed.
+You can find a list of outages :portal:`here <outages_all>`
+including an :portal:`RSS <feeds/fg_outages_all_rss.xml>` feed.
 A subset of the most recent autages are posted on the frontpage. 
   
 
@@ -57,11 +57,11 @@ A subset of the most recent autages are posted on the frontpage.
        monitored via a number of tools. To view some of the contents,
        please visit \ `http://inca.futuregrid.org <http://inca.futuregrid.org>`__
    * - |image17|
-     - `Cloud Status <https://portal.futuregrid.org/monitoring/cloud>`__
+     - :portal:`Cloud Status <monitoring/cloud>`
      - Here you will find
        information about how FG cloud services are currently used.
    * - |image18|
-     - `FutureGrid Cloud Metrics <https://portal.futuregrid.org/metrics>`__
+     - :portal:`FutureGrid Cloud Metrics <metrics>`
      - Metric system provides an integrated accounting service to view
        cloud usage statistics and graphs regarding the utilization of
        virtual machine (VM) instances. Includes usage stats for

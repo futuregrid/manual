@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5. Eucalyptus (Allen) &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>5. Eucalyptus &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="1. PaaS - Platform as a Service" href="mapreduce.html" />
+    <link rel="next" title="1. Using Map/Reduce in FutureGrid" href="mapreduce.html" />
     <link rel="prev" title="4. Using Nimbus on FutureGrid" href="nimbus.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -65,21 +65,6 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">3. Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">4. Building the Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">4.1. Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">4.2. Virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
-</ul>
-</li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">1.1. Citation for Publications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">1.2. Acknowledgement</a></li>
@@ -127,20 +112,16 @@
 <li class="toctree-l1"><a class="reference internal" href="hardware.html">1. Hardware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-resources">1.1. Compute Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hardware.html#networks">1.2. Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#network-impairments-device-nid">1.3. Network Impairments Device (NID)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services (assigned to Allen and Koji)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#accessing-systems">2.1. Accessing Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#filesystem-layout">2.2. Filesystem Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#modules">2.3. Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">2.4. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.5. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#mpi-libraries">2.6. MPI Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#compiling-mpi-applications">2.7. Compiling MPI Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#running-mpi-applications">2.8. Running MPI Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">2.9. Working with HPC Job Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.10. Xray HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.11. Storage Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">2.4. Working with HPC Job Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.5. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.6. Storage Services</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
@@ -221,83 +202,115 @@
 <li class="toctree-l2"><a class="reference internal" href="nimbus.html#launching-multiple-vms">4.8. Launching Multiple VMs</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">5. Eucalyptus  (Allen)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">5.1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#account-creation">5.2. Account Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#resources-overview">5.3. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-your-setup">5.4. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#image-deployment">5.5. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#logging-into-the-vm">5.6. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vm-network-info">5.7. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#image-management">5.8. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#status-of-deployments">5.9. Status of Deployments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#account-creation">5.1. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resources-overview">5.2. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-your-setup">5.3. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-deployment">5.4. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-into-the-vm">5.5. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vm-network-info">5.6. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#image-management">5.7. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status-of-deployments">5.8. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html">1. PaaS - Platform as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-map-reduce-in-futuregrid">2. Using Map/Reduce in FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#education-training-with-mapreduce">2.1. Education / Training with MapReduce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html">1. Using Map/Reduce in FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#mapreduce-on-physical-machines">1.1. MapReduce on Physical Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#mapreduce-on-virtual-machines">1.2. MapReduce on Virtual Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#education-training-with-mapreduce">1.3. Education / Training with MapReduce</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-hadoop-as-a-batch-job-using-myhadoop">3. Running Hadoop as a Batch Job using MyHadoop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#overview">4. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-on-futuregrid">5. Hadoop on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#what-is-myhadoop">6. What is myHadoop?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-myhadoop-on-futuregrid">7. Running myHadoop on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#persistent-mode">8. Persistent Mode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#customizing-hadoop-settings">9. Customizing Hadoop&nbsp;Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-a-different-installation-of-hadoop">10. Using a Different Installation of Hadoop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#more-information">11. More Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-salsahadoop-on-futuregrid">12. Using SalsaHadoop on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#salsahadoop-introduction">12.1. SalsaHadoop Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-salsahadoop-on-futuregrid">12.2. Running SalsaHadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-hadoop-as-a-batch-job-using-myhadoop">2. Running Hadoop as a Batch Job using MyHadoop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-myhadoop-on-futuregrid">2.1. Running myHadoop on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#persistent-mode">2.2. Persistent Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#customizing-hadoop-settings">2.3. Customizing Hadoop Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#using-a-different-installation-of-hadoop">2.4. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#more-information">2.5. More Information</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-blast">13. Hadoop Blast</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id1">13.1. Hadoop Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#acknowledge">13.2. Acknowledge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#requirement">13.3. Requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-hadoop-blast-under">13.4. 1. Download Hadoop Blast under $</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#hadoop-home">13.5. HADOOP_HOME</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-hadoop-blast">13.6. 2. Prepare Hadoop Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-hadoop-blast">13.7. 3. Execute Hadoop-Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#monitoring-hadoop">13.8. 3. Monitoring Hadoop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#finishing-the-map-reduce-process">13.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-salsahadoop-on-futuregrid">3. Using SalsaHadoop on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#salsahadoop-introduction">3.1. SalsaHadoop Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-salsahadoop-on-futuregrid">3.2. Running SalsaHadoop on FutureGrid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-wordcount">14. Hadoop WordCount</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id2">14.1. Hadoop WordCount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id3">14.2. Acknowledge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id4">14.3. Requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-unzip-wordcount-under-hadoop-home">14.4. 1. Download and unzip WordCount under $HADOOP_HOME</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute">14.5. 2. Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id5">14.6. Hadoop-WordCount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id6">14.7. 3. Monitoring Hadoop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#check-the-result">14.8. 4.&nbsp;Check the result</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id7">14.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-blast">4. Hadoop Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id1">4.1. Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#acknowledgement">4.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#requirement">4.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-hadoop-blast-under">4.4. Download Hadoop Blast under $</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#hadoop-home">4.5. HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-hadoop-blast">4.6. Prepare Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-hadoop-blast">4.7. Execute Hadoop-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#monitoring-hadoop">4.8. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#finishing-the-map-reduce-process">4.9. Finishing the Map-Reduce process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id2">4.10. Hadoop WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id3">4.11. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id4">4.12. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-unzip-wordcount-under-hadoop-home">4.13. Download and unzip WordCount under $HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute">4.14. Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id5">4.15. Hadoop-WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id6">4.16. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#check-the-result">4.17. Check the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id7">4.18. Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-twister-on-futuregrid">15. Using Twister on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#what-is-twister">15.1. What is Twister?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#image114">15.2. |image114|</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-twister-on-futuregrid">15.3. Running Twister on FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#papers-and-presentations">15.4. Papers and Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-twister-on-futuregrid">5. Using Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#what-is-twister">5.1. What is Twister?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-twister-on-futuregrid">5.2. Running Twister on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#papers-and-presentations">5.3. Papers and Presentations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#twister-blast">16. Twister Blast</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id10">16.1. Twister Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id11">16.2. Acknowledge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id12">16.3. Requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-prepare-the">16.4. 1. Download and prepare the</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id13">16.5. Twister-Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-twister-blast-input">16.6. 2. Prepare Twister-Blast input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-twister-blast">16.7. 3. Execute Twister-Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id14">16.8. 4.&nbsp;Finishing the Map-Reduce process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#twister-blast">6. Twister Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id10">6.1. Twister Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id11">6.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id12">6.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-prepare-the">6.4. Download and prepare the</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id13">6.5. Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-twister-blast-input">6.6. Prepare Twister-Blast input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-twister-blast">6.7. Execute Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id14">6.8. Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#eucalyptus-and-twister-on-futuregrid">17. Eucalyptus and Twister on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#the-futuregrid-twister-tutorial">18. The FutureGrid Twister Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#eucalyptus-and-twister-on-futuregrid">7. Eucalyptus and Twister on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html">8. SalsaHadoop with FutureGrid Cloud Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#requirement">8.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#get-vm-compute-nodes">8.2. Get VM compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#hadoop-configuration">8.3. Hadoop Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#verify-hadoop-hdfs-and-mapreduce-daemon-status">8.4. Verify Hadoop HDFS and MapReduce Daemon status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#run-hadoop-applications">8.5. Run Hadoop Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html">9. Salsa Hadoop with FutureGrid HPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#requirement">9.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#get-hpc-compute-nodes">9.2. Get HPC compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#hadoop-configuration">9.3. Hadoop Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#verify-hadoop-hdfs-and-mapreduce-daemon-status">9.4. Verify Hadoop HDFS and MapReduce Daemon status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#running-hadoop-applications">9.5. Running Hadoop Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html">10. Twister with FutureGrid Cloud Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#requirement">10.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#get-vm-compute-nodes">10.2. Get VM compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#twister-configuration">10.3. Twister Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#verify-twister-status">10.4. Verify Twister Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-twister-futuregrid-hpc.html">11. Twister with FutureGrid HPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#requirement">11.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#get-hpc-compute-nodes">11.2. Get HPC compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#twister-configuration">11.3. Twister Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#verify-twister-status">11.4. Verify Twister Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html">12. Eucalyptus and Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#i-introduction">12.1. I. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#ii-prerequisite">12.2. II. Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#iii-download-futuregrid-eucalyptus-twister-tool">12.3. III. Download FutureGrid&nbsp;Eucalyptus Twister Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#v-terminate-twister-environment">12.4. V. Terminate Twister Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#vi-run-twister-kmeans">12.5. VI. Run Twister-Kmeans</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">1. Nimbus Phantom</a></li>
@@ -372,24 +385,42 @@
 <li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">10. Management Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">11. Commandline clients</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">3. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">4. Building the Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">4.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">4.2. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.8. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.9. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.10. Screencast recording tips</a></li>
+</ul>
+</li>
+</ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">5. Eucalyptus  (Allen)</a><ul>
-<li><a class="reference internal" href="#requirements">5.1. Requirements</a><ul>
-<li><a class="reference internal" href="#eucalyptus-3">5.1.1. Eucalyptus 3</a></li>
+<li><a class="reference internal" href="#">5. Eucalyptus</a><ul>
+<li><a class="reference internal" href="#account-creation">5.1. Account Creation</a></li>
+<li><a class="reference internal" href="#resources-overview">5.2. Resources Overview</a><ul>
+<li><a class="reference internal" href="#india">5.2.1. INDIA:</a></li>
+<li><a class="reference internal" href="#sierra">5.2.2. SIERRA:</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#account-creation">5.2. Account Creation</a></li>
-<li><a class="reference internal" href="#resources-overview">5.3. Resources Overview</a></li>
-<li><a class="reference internal" href="#testing-your-setup">5.4. Testing Your Setup</a></li>
-<li><a class="reference internal" href="#image-deployment">5.5. Image Deployment</a></li>
-<li><a class="reference internal" href="#logging-into-the-vm">5.6. Logging Into the VM</a></li>
-<li><a class="reference internal" href="#vm-network-info">5.7. VM Network Info</a></li>
-<li><a class="reference internal" href="#image-management">5.8. Image Management</a></li>
-<li><a class="reference internal" href="#status-of-deployments">5.9. Status of Deployments</a></li>
+<li><a class="reference internal" href="#testing-your-setup">5.3. Testing Your Setup</a></li>
+<li><a class="reference internal" href="#image-deployment">5.4. Image Deployment</a></li>
+<li><a class="reference internal" href="#logging-into-the-vm">5.5. Logging Into the VM</a></li>
+<li><a class="reference internal" href="#vm-network-info">5.6. VM Network Info</a></li>
+<li><a class="reference internal" href="#image-management">5.7. Image Management</a></li>
+<li><a class="reference internal" href="#status-of-deployments">5.8. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -401,7 +432,7 @@
   <li><a href="nimbus.html"
          title="previous chapter">&laquo; 4. Using Nimbus on FutureGrid</a></li>
   <li><a href="mapreduce.html"
-         title="next chapter">1. PaaS - Platform as a Service &raquo;</a></li>
+         title="next chapter">1. Using Map/Reduce in FutureGrid &raquo;</a></li>
             
             
               <li>
@@ -425,18 +456,18 @@
 
 <div class="container">
   
-  <div class="section" id="eucalyptus-allen">
-<span id="s-eucalyptus"></span><h1>5. Eucalyptus  (Allen)<a class="headerlink" href="#eucalyptus-allen" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="eucalyptus">
+<span id="s-eucalyptus"></span><h1>5. Eucalyptus<a class="headerlink" href="#eucalyptus" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#requirements" id="id1">Requirements</a><ul>
-<li><a class="reference internal" href="#eucalyptus-3" id="id2">Eucalyptus 3</a></li>
+<li><a class="reference internal" href="#account-creation" id="id1">Account Creation</a></li>
+<li><a class="reference internal" href="#resources-overview" id="id2">Resources Overview</a><ul>
+<li><a class="reference internal" href="#india" id="id3">INDIA:</a></li>
+<li><a class="reference internal" href="#sierra" id="id4">SIERRA:</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#account-creation" id="id3">Account Creation</a></li>
-<li><a class="reference internal" href="#resources-overview" id="id4">Resources Overview</a></li>
 <li><a class="reference internal" href="#testing-your-setup" id="id5">Testing Your Setup</a></li>
 <li><a class="reference internal" href="#image-deployment" id="id6">Image Deployment</a></li>
 <li><a class="reference internal" href="#logging-into-the-vm" id="id7">Logging Into the VM</a></li>
@@ -460,26 +491,20 @@ documentation can be found in the <a class="reference external" href="http://www
 Website</a>. A detail
 user guide is also available
 <a class="reference external" href="http://www.eucalyptus.com/sites/all/modules/pubdlcnt/pubdlcnt.php?file=/sites/all/files/docs/latest/ug.pdf&amp;nid=296">here</a>.</p>
-<div class="section" id="requirements">
-<h2><a class="toc-backref" href="#id1">5.1. Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>Users get access to the Eucalyptus features using the Eucalyptus EC2
-Interface, which is only available for GNU/Linux platforms. Therefore,
-the users will require a machine with a GNU/Linux installed on it.</p>
-<div class="section" id="eucalyptus-3">
-<h3><a class="toc-backref" href="#id2">5.1.1. Eucalyptus 3</a><a class="headerlink" href="#eucalyptus-3" title="Permalink to this headline">¶</a></h3>
 <p>As of May 15, 2012, FutureGrid is using <a class="reference external" href="http://www.eucalyptus.com/eucalyptus-cloud/iaas/features">Eucalyptus version
 3</a> which
 requires <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
 2.0.2</a> and python &gt; 2.4
-(available by modules in india and sierra). Make sure to load &#8220;module
-load euca2ools/2.0.2&#8221; before using Eucalyptus. <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
+(available by modules in india and sierra). Make sure to load the
+euca2ools module:</p>
+<div class="highlight-python"><pre>$ module load euca2ools/2.0.2</pre>
+</div>
+<p>before using Eucalyptus. <a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools
 2.0.2</a> is part of
 Eucalyptus Enterprise package. However, the source is available
 <a class="reference external" href="http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/">here</a>.</p>
-</div>
-</div>
 <div class="section" id="account-creation">
-<h2><a class="toc-backref" href="#id3">5.2. Account Creation</a><a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">5.1. Account Creation</a><a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h2>
 <p>Eucalyptus 3 is now integrated with our LDAP. Each account is created by
 default for all FutureGrid users with valid portal account and project
 affiliation. There is no need apply for accounts.</p>
@@ -531,21 +556,16 @@ $ source .bashrc</pre>
 </div>
 </li>
 </ul>
-<p>Install Euca2tools</p>
-<blockquote>
-<div>Older version of euca2ools is not compatible with Eucalyptus 3.
-<a class="reference external" href="http://www.eucalyptus.com/download/euca2ools">euca2ools 2.0.2</a>
-is part of the Enterprise project so not available for all users.
-However, the source is available
-<a class="reference external" href="http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/files">here</a>.</div></blockquote>
 </div>
 <div class="section" id="resources-overview">
-<h2><a class="toc-backref" href="#id4">5.3. Resources Overview</a><a class="headerlink" href="#resources-overview" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">5.2. Resources Overview</a><a class="headerlink" href="#resources-overview" title="Permalink to this headline">¶</a></h2>
 <p>Eucalyptus is available to FutureGrid Users on the India and Sierra
 clusters. As we will see later, when we instantiate a Virtual Machine
 (VM) it is needed to select the type of VM Image that we are going to
 use. In this sense, the information of the VM Image types available in
 each cluster is summarized below:</p>
+<div class="section" id="india">
+<h3><a class="toc-backref" href="#id3">5.2.1. INDIA:</a><a class="headerlink" href="#india" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
 AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
 AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
@@ -554,6 +574,9 @@ AVAILABILITYZONE    |- m1.large    0091 / 0094   2   5120    10
 AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
 AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20</pre>
 </div>
+</div>
+<div class="section" id="sierra">
+<h3><a class="toc-backref" href="#id4">5.2.2. SIERRA:</a><a class="headerlink" href="#sierra" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
 AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
 AVAILABILITYZONE    |- m1.small    0051 / 0056   1    256     4
@@ -563,10 +586,11 @@ AVAILABILITYZONE    |- m1.xlarge    0012 / 0014   2   1024    12
 AVAILABILITYZONE    |- c1.xlarge    0009 / 0014   4   2048    15</pre>
 </div>
 </div>
+</div>
 <div class="section" id="testing-your-setup">
-<h2><a class="toc-backref" href="#id5">5.4. Testing Your Setup</a><a class="headerlink" href="#testing-your-setup" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">5.3. Testing Your Setup</a><a class="headerlink" href="#testing-your-setup" title="Permalink to this headline">¶</a></h2>
 <p>Use euca-describe-availability-zones to test the setup:</p>
-<div class="highlight-python"><pre>ssh sierra.futuregrid.org
+<div class="highlight-python"><pre>$ ssh portalname@sierra.futuregrid.org
 Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
 
 Welcome to Sierra.FutureGrid.Org
@@ -576,8 +600,10 @@ moab version 5.4.0 loaded
 
 $ module load euca2ools/2.0.2
 euca2ools version 2.0.2 loaded
+
 $ euca-version
 euca2ools 2.0.2
+
 $ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
 $ euca-describe-availability-zones
 AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/</pre>
@@ -599,19 +625,16 @@ IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml  
 </div>
 </div>
 <div class="section" id="image-deployment">
-<h2><a class="toc-backref" href="#id6">5.5. Image Deployment</a><a class="headerlink" href="#image-deployment" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Before deploying a VM, you need to create at least one key pair. This
+<h2><a class="toc-backref" href="#id6">5.4. Image Deployment</a><a class="headerlink" href="#image-deployment" title="Permalink to this headline">¶</a></h2>
+<p>Before deploying a VM, you need to create at least one key pair. This
 key pair will be injected into the VM, allowing you to SSH into the
 instance. This is done using the euca-add-keypair command:</p>
 <div class="highlight-python"><pre>$ euca-add-keypair userkey   &gt; userkey.pem</pre>
 </div>
-</li>
-<li><p class="first">Fix the permissions on the generated private key:</p>
+<p>Fix the permissions on the generated private key:</p>
 <div class="highlight-python"><pre>$ chmod 0600 userkey.pem</pre>
 </div>
-</li>
-<li><p class="first">Now you can start a VM using one of the pre-existing images. You need
+<p>Now you can start a VM using one of the pre-existing images. You need
 the emi-id of the image you want to start. This was listed in the
 output of euca-describe-images command that you saw earlier. Use the
 euca-run-instances command to start the VM:</p>
@@ -620,8 +643,7 @@ euca-run-instances command to start the VM:</p>
 RESERVATION     r-4E730969      archit    archit-default
 INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255</pre>
 </div>
-</li>
-<li><p class="first">The euca-describe-instances command can be used to check the status
+<p>The euca-describe-instances command can be used to check the status
 of the request. The following image was assigned an ip address and is
 starting up, as demonstrated by the &#8220;pending&#8221; status:</p>
 <div class="highlight-python"><pre>$ euca-describe-instances
@@ -630,68 +652,53 @@ RESERVATION     r-4E730969      archit    default
 INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0
           m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
 </div>
-</li>
-<li><p class="first">Once started, the status will change to &#8220;running&#8221;:</p>
+<p>Once started, the status will change to &#8220;running&#8221;:</p>
 <div class="highlight-python"><pre>$ euca-describe-instances
 
 RESERVATION     r-4E730969      archit    default
 INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0
           m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
 </div>
-</li>
-<li><p class="first">If you need to delete a deployed VM, you can use the
+<p>If you need to delete a deployed VM, you can use the
 euca-terminate-instances command:</p>
 <div class="highlight-python"><pre>$ euca-terminate-instances i-4FC40839</pre>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="logging-into-the-vm">
-<h2><a class="toc-backref" href="#id7">5.6. Logging Into the VM</a><a class="headerlink" href="#logging-into-the-vm" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Create rules to allow access to the VM over ssh and to allow ping</p>
+<h2><a class="toc-backref" href="#id7">5.5. Logging Into the VM</a><a class="headerlink" href="#logging-into-the-vm" title="Permalink to this headline">¶</a></h2>
+<p>Create rules to allow access to the VM over ssh and to allow ping</p>
 <blockquote>
-<div><p>$ euca-authorize -P tcp -p 22 -s 0.0.0.0/0&nbsp;&nbsp; default
-$ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default</p>
-</div></blockquote>
-</li>
-<li><p class="first">The ssh private key that was generated earlier can now be used to
+<div>$ euca-authorize -P tcp -p 22 -s 0.0.0.0/0&nbsp;&nbsp; default
+$ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default</div></blockquote>
+<p>The ssh private key that was generated earlier can now be used to
 login to the VM:</p>
 <div class="highlight-python"><pre>$ssh -i userkey.pem root@149.165.146.153
 
--bash-3.2# uname -a
+# uname -a
 
  Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux</pre>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="vm-network-info">
-<h2><a class="toc-backref" href="#id8">5.7. VM Network Info</a><a class="headerlink" href="#vm-network-info" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">The VM itself is visible from outside using the VM public IP. The
+<h2><a class="toc-backref" href="#id8">5.6. VM Network Info</a><a class="headerlink" href="#vm-network-info" title="Permalink to this headline">¶</a></h2>
+<p>The VM itself is visible from outside using the VM public IP. The
 internal network will show the VM private IP address:</p>
-<div class="highlight-python"><pre>-bash-3.2# /sbin/ifconfig
+<div class="highlight-python"><pre># /sbin/ifconfig
 
 eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40
         inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192</pre>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="image-management">
-<h2><a class="toc-backref" href="#id9">5.8. Image Management</a><a class="headerlink" href="#image-management" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">We will use the example ubuntu 10 image to test uploading images.
+<h2><a class="toc-backref" href="#id9">5.7. Image Management</a><a class="headerlink" href="#image-management" title="Permalink to this headline">¶</a></h2>
+<p>We will use the example ubuntu 10 image to test uploading images.
 Download the gzipped tar ball:</p>
 <div class="highlight-python"><pre>$ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz</pre>
 </div>
-</li>
-<li><p class="first">Uncompress and untar the archive:</p>
+<p>Uncompress and untar the archive:</p>
 <div class="highlight-python"><pre>$ tar zxf ubuntu-12.04-server-cloudimg-amd64.tar.gz</pre>
 </div>
-</li>
-<li><p class="first">Bundle the image with a kernel and a ramdisk using the
+<p>Bundle the image with a kernel and a ramdisk using the
 euca-bundle-image command. In this example, we will use the xen
 kernel already registered. euca-describe-images returns the kernel
 and ramdisk IDs that we need:</p>
@@ -720,8 +727,7 @@ Part:   precise-server-cloudimg-amd64.img.part.15
 Part:   precise-server-cloudimg-amd64.img.part.16
 Generating manifest   /tmp/precise-server-cloudimg-amd64.img.manifest.xml</pre>
 </div>
-</li>
-<li><p class="first">Use the generated manifest file to upload the image to Walrus:</p>
+<p>Use the generated manifest file to upload the image to Walrus:</p>
 <div class="highlight-python"><pre>$ euca-upload-bundle -b ubuntu-image-bucket   -m /tmp/precise-server-cloudimg-amd64.img.manifest.xml
 
 Checking bucket:   ubuntu-image-bucket
@@ -746,14 +752,12 @@ Uploading part:   precise-server-cloudimg-amd64.img.part.15
 Uploading part:   precise-server-cloudimg-amd64.img.part.16
 Uploaded image as   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml</pre>
 </div>
-</li>
-<li><p class="first">Register the uploaded image:</p>
+<p>Register the uploaded image:</p>
 <div class="highlight-python"><pre>$ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
 
 IMAGE   emi-FFC3154F</pre>
 </div>
-</li>
-<li><p class="first">The returned image ID can now be used to start instances with
+<p>The returned image ID can now be used to start instances with
 euca-run-instances as described earlier. euca-describe-images also
 shows the new image now:</p>
 <div class="highlight-python"><pre>$ euca-describe-images
@@ -762,15 +766,12 @@ IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manif
 IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine
   ...</pre>
 </div>
-</li>
-<li><p class="first">You can also delete your images:</p>
+<p>You can also delete your images:</p>
 <div class="highlight-python"><pre>$ euca-deregister emi-FFC3154F</pre>
 </div>
-</li>
-</ul>
 </div>
 <div class="section" id="status-of-deployments">
-<h2><a class="toc-backref" href="#id10">5.9. Status of Deployments</a><a class="headerlink" href="#status-of-deployments" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">5.8. Status of Deployments</a><a class="headerlink" href="#status-of-deployments" title="Permalink to this headline">¶</a></h2>
 <p>At times you may ask if the Eucalyptus systems on FutureGrid are
 operational. You can find this out by visiting</p>
 <ol class="loweralpha simple">

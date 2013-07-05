@@ -46,7 +46,7 @@ Nimbus is installed on four FutureGrid clusters:
 By default, users are limited to running 16 VMs simultaneously and
 claiming two cores per VM. If you have a good reason for this limitation
 to be lifted for your account,
-contact \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
+contact \ :portal:`help`.
 
 All FutureGrid users are allowed access to Nimbus on all sites.
 
@@ -73,7 +73,7 @@ on hotel because the correct version of Java is installed there.
     $ ssh -A hotel.futuregrid.org
 
 If this command fails, contact
-`https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__. 
+:portal:`https://portal.futuregrid.org/help <help>`. 
 It likely means one of the following:
 
 #. Your account is not yet set up.
@@ -114,7 +114,7 @@ nimbus\_creds.tar.gz:
     nimbus_creds.tar.gz
 
 If your credentials are not present on \ **Hotel**,
-contact \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
+contact \ :portal:`https://portal.futuregrid.org/help <help>`.
 
 Back on your system, download and unpack these files into your
 cloud-client's directory:
@@ -458,7 +458,7 @@ visible to this node as well.
 +--------------------------------------------------------------------------------------------------------------+-------------+
 | Attachment                                                                                                   | Size        |
 +==============================================================================================================+=============+
-| `tutorial-cluster.xml\_.gz <https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz>`__   | 342 bytes   |
+| :portal:`sites/default/files/tutorial-cluster.xml.gz`   | 342 bytes   |
 +--------------------------------------------------------------------------------------------------------------+-------------+
 
 Cloud Quick Start : Launch a VM with 1 command

@@ -31,7 +31,7 @@ Request access
 --------------
 
 Submit a ticket to request
-access `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__
+access :portal:`help <help>`
 
 Please use the subject: "Request to access FutureGrid Rain". Include
 in the body "I would like to obtain access to FutureGrid Rain".
@@ -161,7 +161,7 @@ Software
 The software is open-source under an Apache 2 license. The image
 repository can be found in github as part of our Image Management and
 Rain
-software  `https://github.com/futuregrid/rain <https://github.com/futuregrid/rain>`__ .
+software  :portal:`rain`.
 
 Documentation
 -------------
@@ -226,7 +226,7 @@ Requesting access
 -----------------
 
 Submit a ticket to request
-access  `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__
+access  :portal:`help <https://portal.futuregrid.org/help>`
 
 Obtaining the image
 -------------------
@@ -344,9 +344,9 @@ Register your image in different infrastructures
 
 You now have your image ready to be registered in the different
 FutureGrid infrastructures. To use OpenStack
-(`tutorial <https://portal.futuregrid.org/tutorials/openstack>`__) and
+(:portal:`tutorial <tutorials/openstack>`) and
 Eucalyptus
-(`tutorial <https://portal.futuregrid.org/tutorials/eucalyptus3>`__),
+(:portal:`tutorial <tutorials/eucalyptus3>`),
 you need to indicate the location of you novarc and eucarc file.
 
 Register the image in Openstack
@@ -379,17 +379,17 @@ Using your Registered Image
 
 .. todo:: fix the links in this section
 
-OpenStack (more info in  `https://portal.futuregrid.org/tutorials/openstack <https://portal.futuregrid.org/tutorials/openstack>`__)::
+OpenStack (more info in  :portal:`tutorials/openstack <tutorials/openstack>`)::
 
     source novarc
     euca-run-instance -k <keyname> <ami-ID>
 
-Eucalyptus (more info in  `https://portal.futuregrid.org/tutorials/eucalyptus3 <https://portal.futuregrid.org/tutorials/eucalyptus3>`__)::
+Eucalyptus (more info in  :portal:`tutorials/eucalyptus3 <https://portal.futuregrid.org/tutorials/eucalyptus3>`)::
 
     source eucarc
     euca-run-instance -k <keyname> <ami-ID>
 
-HPC (more info in  `https://portal.futuregrid.org/tutorials/hpc <https://portal.futuregrid.org/tutorials/hpc>`__):
+HPC (more info in  :portal:`tutorials/hpc <https://portal.futuregrid.org/tutorials/hpc>`):
 
 Provision a machine with our image and go into Interactive mode (you
 are logged into the machine)::
@@ -409,8 +409,8 @@ RAIN Manual Pages
 FutureGrid provides a number of manual pages, listed below.
 
 (For Rain, our up-to-date documentation of rain can be found at
-`https://portal.futuregrid.org/doc/rain/index.html <https://portal.futuregrid.org/doc/rain/index.html>`__
-and\ `http://futuregrid.github.com/rain/index.html <http://futuregrid.github.com/rain/index.html>`__
+:portal:`doc/rain/index.html <https://portal.futuregrid.org/doc/rain/index.html>`
+and\ :portal:`http://futuregrid.github.com/rain/index.html <http://futuregrid.github.com/rain/index.html>`
 .
 
 - `fg-repo <http://futuregrid.github.com/rain/man-repo.html>`__

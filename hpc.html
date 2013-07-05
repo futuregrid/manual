@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2. HPC Services (assigned to Allen and Koji) &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>2. HPC Services &mdash; Cloud Computing Book 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -65,21 +65,6 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">3. Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">4. Building the Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">4.1. Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">4.2. Virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
-</ul>
-</li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">1.1. Citation for Publications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">1.2. Acknowledgement</a></li>
@@ -127,20 +112,16 @@
 <li class="toctree-l1"><a class="reference internal" href="hardware.html">1. Hardware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-resources">1.1. Compute Resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hardware.html#networks">1.2. Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#network-impairments-device-nid">1.3. Network Impairments Device (NID)</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">2. HPC Services (assigned to Allen and Koji)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#accessing-systems">2.1. Accessing Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#filesystem-layout">2.2. Filesystem Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#modules">2.3. Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#managing-applications-with-torque">2.4. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#message-passing-interface-mpi">2.5. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mpi-libraries">2.6. MPI Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compiling-mpi-applications">2.7. Compiling MPI Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-mpi-applications">2.8. Running MPI Applications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#working-with-hpc-job-services">2.9. Working with HPC Job Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#xray-hpc-services">2.10. Xray HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#storage-services">2.11. Storage Services</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">2. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#login-nodes">2.1. Login Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-hpc-job-services">2.4. Working with HPC Job Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xray-hpc-services">2.5. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storage-services">2.6. Storage Services</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
@@ -221,83 +202,115 @@
 <li class="toctree-l2"><a class="reference internal" href="nimbus.html#launching-multiple-vms">4.8. Launching Multiple VMs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">5. Eucalyptus  (Allen)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#requirements">5.1. Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">5.2. Account Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">5.3. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">5.4. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">5.5. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.6. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">5.8. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.9. Status of Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">5. Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">5.1. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">5.2. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">5.3. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">5.4. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.5. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.6. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">5.7. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.8. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html">1. PaaS - Platform as a Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-map-reduce-in-futuregrid">2. Using Map/Reduce in FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#education-training-with-mapreduce">2.1. Education / Training with MapReduce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html">1. Using Map/Reduce in FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#mapreduce-on-physical-machines">1.1. MapReduce on Physical Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#mapreduce-on-virtual-machines">1.2. MapReduce on Virtual Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#education-training-with-mapreduce">1.3. Education / Training with MapReduce</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-hadoop-as-a-batch-job-using-myhadoop">3. Running Hadoop as a Batch Job using MyHadoop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#overview">4. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-on-futuregrid">5. Hadoop on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#what-is-myhadoop">6. What is myHadoop?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-myhadoop-on-futuregrid">7. Running myHadoop on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#persistent-mode">8. Persistent Mode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#customizing-hadoop-settings">9. Customizing Hadoop&nbsp;Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-a-different-installation-of-hadoop">10. Using a Different Installation of Hadoop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#more-information">11. More Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-salsahadoop-on-futuregrid">12. Using SalsaHadoop on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#salsahadoop-introduction">12.1. SalsaHadoop Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-salsahadoop-on-futuregrid">12.2. Running SalsaHadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#running-hadoop-as-a-batch-job-using-myhadoop">2. Running Hadoop as a Batch Job using MyHadoop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-myhadoop-on-futuregrid">2.1. Running myHadoop on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#persistent-mode">2.2. Persistent Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#customizing-hadoop-settings">2.3. Customizing Hadoop Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#using-a-different-installation-of-hadoop">2.4. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#more-information">2.5. More Information</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-blast">13. Hadoop Blast</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id1">13.1. Hadoop Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#acknowledge">13.2. Acknowledge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#requirement">13.3. Requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-hadoop-blast-under">13.4. 1. Download Hadoop Blast under $</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#hadoop-home">13.5. HADOOP_HOME</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-hadoop-blast">13.6. 2. Prepare Hadoop Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-hadoop-blast">13.7. 3. Execute Hadoop-Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#monitoring-hadoop">13.8. 3. Monitoring Hadoop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#finishing-the-map-reduce-process">13.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-salsahadoop-on-futuregrid">3. Using SalsaHadoop on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#salsahadoop-introduction">3.1. SalsaHadoop Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-salsahadoop-on-futuregrid">3.2. Running SalsaHadoop on FutureGrid</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-wordcount">14. Hadoop WordCount</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id2">14.1. Hadoop WordCount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id3">14.2. Acknowledge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id4">14.3. Requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-unzip-wordcount-under-hadoop-home">14.4. 1. Download and unzip WordCount under $HADOOP_HOME</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute">14.5. 2. Execute</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id5">14.6. Hadoop-WordCount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id6">14.7. 3. Monitoring Hadoop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#check-the-result">14.8. 4.&nbsp;Check the result</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id7">14.9. 5.&nbsp;Finishing the Map-Reduce process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#hadoop-blast">4. Hadoop Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id1">4.1. Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#acknowledgement">4.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#requirement">4.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-hadoop-blast-under">4.4. Download Hadoop Blast under $</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#hadoop-home">4.5. HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-hadoop-blast">4.6. Prepare Hadoop Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-hadoop-blast">4.7. Execute Hadoop-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#monitoring-hadoop">4.8. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#finishing-the-map-reduce-process">4.9. Finishing the Map-Reduce process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id2">4.10. Hadoop WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id3">4.11. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id4">4.12. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-unzip-wordcount-under-hadoop-home">4.13. Download and unzip WordCount under $HADOOP_HOME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute">4.14. Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id5">4.15. Hadoop-WordCount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id6">4.16. Monitoring Hadoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#check-the-result">4.17. Check the result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id7">4.18. Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-twister-on-futuregrid">15. Using Twister on FutureGrid</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#what-is-twister">15.1. What is Twister?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#image114">15.2. |image114|</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-twister-on-futuregrid">15.3. Running Twister on FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#papers-and-presentations">15.4. Papers and Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#using-twister-on-futuregrid">5. Using Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#what-is-twister">5.1. What is Twister?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#running-twister-on-futuregrid">5.2. Running Twister on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#papers-and-presentations">5.3. Papers and Presentations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#twister-blast">16. Twister Blast</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id10">16.1. Twister Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id11">16.2. Acknowledge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id12">16.3. Requirement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-prepare-the">16.4. 1. Download and prepare the</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id13">16.5. Twister-Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-twister-blast-input">16.6. 2. Prepare Twister-Blast input</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-twister-blast">16.7. 3. Execute Twister-Blast</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id14">16.8. 4.&nbsp;Finishing the Map-Reduce process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#twister-blast">6. Twister Blast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id10">6.1. Twister Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id11">6.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id12">6.3. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#download-and-prepare-the">6.4. Download and prepare the</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id13">6.5. Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#prepare-twister-blast-input">6.6. Prepare Twister-Blast input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#execute-twister-blast">6.7. Execute Twister-Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapreduce.html#id14">6.8. Finishing the Map-Reduce process</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#eucalyptus-and-twister-on-futuregrid">17. Eucalyptus and Twister on FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#the-futuregrid-twister-tutorial">18. The FutureGrid Twister Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapreduce.html#eucalyptus-and-twister-on-futuregrid">7. Eucalyptus and Twister on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html">8. SalsaHadoop with FutureGrid Cloud Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#requirement">8.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#get-vm-compute-nodes">8.2. Get VM compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#hadoop-configuration">8.3. Hadoop Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#verify-hadoop-hdfs-and-mapreduce-daemon-status">8.4. Verify Hadoop HDFS and MapReduce Daemon status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-cloud-eucalyptus.html#run-hadoop-applications">8.5. Run Hadoop Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html">9. Salsa Hadoop with FutureGrid HPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#requirement">9.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#get-hpc-compute-nodes">9.2. Get HPC compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#hadoop-configuration">9.3. Hadoop Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#verify-hadoop-hdfs-and-mapreduce-daemon-status">9.4. Verify Hadoop HDFS and MapReduce Daemon status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-salsahadoop-futuregrid-hpc.html#running-hadoop-applications">9.5. Running Hadoop Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html">10. Twister with FutureGrid Cloud Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#requirement">10.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#get-vm-compute-nodes">10.2. Get VM compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#twister-configuration">10.3. Twister Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-cloud-eucalyptus.html#verify-twister-status">10.4. Verify Twister Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-twister-futuregrid-hpc.html">11. Twister with FutureGrid HPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#requirement">11.1. Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#get-hpc-compute-nodes">11.2. Get HPC compute nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#twister-configuration">11.3. Twister Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-twister-futuregrid-hpc.html#verify-twister-status">11.4. Verify Twister Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html">12. Eucalyptus and Twister on FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#i-introduction">12.1. I. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#ii-prerequisite">12.2. II. Prerequisite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#iii-download-futuregrid-eucalyptus-twister-tool">12.3. III. Download FutureGrid&nbsp;Eucalyptus Twister Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#v-terminate-twister-environment">12.4. V. Terminate Twister Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="x-eucalyptus-and-twister-futuregrid.html#vi-run-twister-kmeans">12.5. VI. Run Twister-Kmeans</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nimbus-phantom.html">1. Nimbus Phantom</a></li>
@@ -372,35 +385,55 @@
 <li class="toctree-l1"><a class="reference internal" href="fgmanual.html#management-services">10. Management Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fgmanual.html#commandline-clients">11. Commandline clients</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">3. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">4. Building the Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">4.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">4.2. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.6. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.7. Creating the pages locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.8. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.9. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.10. Screencast recording tips</a></li>
+</ul>
+</li>
+</ul>
 </ul>
 </li>
               <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">2. HPC Services (assigned to Allen and Koji)</a><ul>
-<li><a class="reference internal" href="#accessing-systems">2.1. Accessing Systems</a></li>
-<li><a class="reference internal" href="#filesystem-layout">2.2. Filesystem Layout</a></li>
-<li><a class="reference internal" href="#modules">2.3. Modules</a></li>
-<li><a class="reference internal" href="#managing-applications-with-torque">2.4. Managing Applications with Torque</a></li>
-<li><a class="reference internal" href="#message-passing-interface-mpi">2.5. Message Passing Interface (MPI)</a></li>
-<li><a class="reference internal" href="#mpi-libraries">2.6. MPI Libraries</a></li>
-<li><a class="reference internal" href="#compiling-mpi-applications">2.7. Compiling MPI Applications</a></li>
-<li><a class="reference internal" href="#running-mpi-applications">2.8. Running MPI Applications</a></li>
-<li><a class="reference internal" href="#working-with-hpc-job-services">2.9. Working with HPC Job Services</a><ul>
-<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">2.9.1. Running Queued Jobs as Part of the HPC Services</a><ul>
-<li><a class="reference internal" href="#submitting-your-job">2.9.1.1. Submitting Your Job</a></li>
+<li><a class="reference internal" href="#">2. HPC Services</a><ul>
+<li><a class="reference internal" href="#login-nodes">2.1. Login Nodes</a><ul>
+<li><a class="reference internal" href="#modules">2.1.1. Modules</a></li>
+<li><a class="reference internal" href="#filesystem-layout">2.1.2. Filesystem Layout</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#monitoring-your-job">2.9.2. Monitoring Your Job</a></li>
-<li><a class="reference internal" href="#examining-your-job-output">2.9.3. Examining Your Job Output</a></li>
+<li><a class="reference internal" href="#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a><ul>
+<li><a class="reference internal" href="#mpi-libraries">2.2.1. MPI Libraries</a></li>
+<li><a class="reference internal" href="#compiling-mpi-applications">2.2.2. Compiling MPI Applications</a></li>
+<li><a class="reference internal" href="#running-mpi-applications">2.2.3. Running MPI Applications</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#xray-hpc-services">2.10. Xray HPC Services</a><ul>
-<li><a class="reference internal" href="#submitting-a-job-on-xray">2.10.1. Submitting a job on xray</a></li>
+<li><a class="reference internal" href="#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
+<li><a class="reference internal" href="#working-with-hpc-job-services">2.4. Working with HPC Job Services</a><ul>
+<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">2.4.1. Running Queued Jobs as Part of the HPC Services</a></li>
+<li><a class="reference internal" href="#submitting-your-job">2.4.2. Submitting Your Job</a></li>
+<li><a class="reference internal" href="#monitoring-your-job">2.4.3. Monitoring Your Job</a></li>
+<li><a class="reference internal" href="#examining-your-job-output">2.4.4. Examining Your Job Output</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#storage-services">2.11. Storage Services</a><ul>
-<li><a class="reference internal" href="#using-indiana-universities-storage-services-from-futuregrid">2.11.1. Using Indiana Universities Storage Services from FutureGrid</a></li>
+<li><a class="reference internal" href="#xray-hpc-services">2.5. Xray HPC Services</a><ul>
+<li><a class="reference internal" href="#submitting-a-job-on-xray">2.5.1. Submitting a job on xray</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#storage-services">2.6. Storage Services</a><ul>
+<li><a class="reference internal" href="#using-indiana-universities-storage-services-from-futuregrid">2.6.1. Using Indiana Universities Storage Services from FutureGrid</a></li>
 </ul>
 </li>
 </ul>
@@ -438,25 +471,27 @@
 
 <div class="container">
   
-  <div class="section" id="hpc-services-assigned-to-allen-and-koji">
-<span id="s-hpc"></span><h1>2. HPC Services (assigned to Allen and Koji)<a class="headerlink" href="#hpc-services-assigned-to-allen-and-koji" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="hpc-services">
+<span id="s-hpc"></span><h1>2. HPC Services<a class="headerlink" href="#hpc-services" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#accessing-systems" id="id1">Accessing Systems</a></li>
-<li><a class="reference internal" href="#filesystem-layout" id="id2">Filesystem Layout</a></li>
-<li><a class="reference internal" href="#modules" id="id3">Modules</a></li>
-<li><a class="reference internal" href="#managing-applications-with-torque" id="id4">Managing Applications with Torque</a></li>
-<li><a class="reference internal" href="#message-passing-interface-mpi" id="id5">Message Passing Interface (MPI)</a></li>
-<li><a class="reference internal" href="#mpi-libraries" id="id6">MPI Libraries</a></li>
-<li><a class="reference internal" href="#compiling-mpi-applications" id="id7">Compiling MPI Applications</a></li>
-<li><a class="reference internal" href="#running-mpi-applications" id="id8">Running MPI Applications</a></li>
-<li><a class="reference internal" href="#working-with-hpc-job-services" id="id9">Working with HPC Job Services</a><ul>
-<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services" id="id10">Running Queued Jobs as Part of the HPC Services</a><ul>
-<li><a class="reference internal" href="#submitting-your-job" id="id11">Submitting Your Job</a></li>
+<li><a class="reference internal" href="#login-nodes" id="id1">Login Nodes</a><ul>
+<li><a class="reference internal" href="#modules" id="id2">Modules</a></li>
+<li><a class="reference internal" href="#filesystem-layout" id="id3">Filesystem Layout</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#message-passing-interface-mpi" id="id4">Message Passing Interface (MPI)</a><ul>
+<li><a class="reference internal" href="#mpi-libraries" id="id5">MPI Libraries</a></li>
+<li><a class="reference internal" href="#compiling-mpi-applications" id="id6">Compiling MPI Applications</a></li>
+<li><a class="reference internal" href="#running-mpi-applications" id="id7">Running MPI Applications</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-applications-with-torque" id="id8">Managing Applications with Torque</a></li>
+<li><a class="reference internal" href="#working-with-hpc-job-services" id="id9">Working with HPC Job Services</a><ul>
+<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services" id="id10">Running Queued Jobs as Part of the HPC Services</a></li>
+<li><a class="reference internal" href="#submitting-your-job" id="id11">Submitting Your Job</a></li>
 <li><a class="reference internal" href="#monitoring-your-job" id="id12">Monitoring Your Job</a></li>
 <li><a class="reference internal" href="#examining-your-job-output" id="id13">Examining Your Job Output</a></li>
 </ul>
@@ -472,27 +507,15 @@
 </ul>
 </div>
 </div>
-<div class="section" id="accessing-systems">
-<h2><a class="toc-backref" href="#id1">2.1. Accessing Systems</a><a class="headerlink" href="#accessing-systems" title="Permalink to this headline">¶</a></h2>
-<p>Several of the clusters that are part of FutureGrid expose services that
-operate as High Performance Computing (HPC) systems. These
-services se batch queues, and are not virtualized, have computer nodes
-with fixed operating systems</p>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">Gregor: THIS IS WRONG.</p>
-</div>
-<p>and are suitable for running parallel
-applications.</p>
-<p>FutureGrid provides a <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">list of HPC
-partitions</a>
-that currently consists of nodes on Alamo, Hotel, India, Sierra, and
-Xray.</p>
-<p>To access the FutureGrid HPC partitions, you need a FutureGrid
-account and an SSH public key you have uploaded to FutureGrid (this
-process is described in the section about
-_:ref:<cite>s-account-management</cite>. After you are part of a valid project
-and have a FutureGrid account, you can log into the FutureGrid
+<div class="section" id="login-nodes">
+<span id="s-hpc-access"></span><h2><a class="toc-backref" href="#id1">2.1. Login Nodes</a><a class="headerlink" href="#login-nodes" title="Permalink to this headline">¶</a></h2>
+<p>Several of the clusters have High Performance Computing (HPC) services
+installed. Access to them is provided via a Linux Login node for each
+of the clusters.</p>
+<p>To access the login nodes you need a FG resource account and an SSH
+public key you have uploaded to FutureGrid (this process is described
+in the section about <a class="reference internal" href="account.html#s-accounts"><em>Project and Account Management</em></a>. After you are part of a valid
+project and have a FutureGrid account, you can log into the FutureGrid
 resources with ssh. The resources include the following login nodes:</p>
 <ul class="simple">
 <li>alamo.futuregrid.org</li>
@@ -503,65 +526,841 @@ resources with ssh. The resources include the following login nodes:</p>
 <li>sierra.futuregrid.org</li>
 <li>xray.futuregrid.org</li>
 </ul>
-<p>An example session follows:</p>
+<p>For example, assume your portalname is &#8220;portalname&#8221;, than you can
+login to sierra as follows:</p>
 <div class="highlight-python"><pre>$ ssh portalname@sierra.futuregrid.org
-Last login: Thu Aug 12 19:19:22 2010 from ....
-Welcome to Sierra.FutureGrid.Org</pre>
-</div>
-<p>Once you ssh into these nodes, you&#8217;ll have access to the HPC queuing
-services for the machine you have logged into. You will enter into a
-Unix/Linux shell in which you can enter the typical Unix commands.
-Access to the clusters is provided through Torque/Moab commands
-from the command line.</p>
-</div>
-<div class="section" id="filesystem-layout">
-<h2><a class="toc-backref" href="#id2">2.2. Filesystem Layout</a><a class="headerlink" href="#filesystem-layout" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><em>Home</em> ($HOME) directories are located at <em>/N/u/&lt;username&gt;</em>, with
-automated nightly backups. This is where users are encouraged to keep
-source files, configuration files and executables. Users should not
-run code from their $HOME directories. Please note that this is an
-NFS file system, and may result in slower access for some
-applications.</li>
-<li><em>Scratch</em> directories are located at different locations on the
-systems. To find out more about the file layout, please see <a class="reference external" href="http://portal.futuregrid.org/kb/document/bcgv">Storage
-information for FutureGrid
-hardware.</a></li>
-<li><em>System software</em> directories are located at<em>/N/soft,</em> with
-automated nightly backups. System and community software are
-typically installed here.</li>
-</ul>
+Welcome to sierra.futuregrid.org
+Last login: Thu Aug 12 19:19:22 2010 from ....</pre>
 </div>
 <div class="section" id="modules">
-<h2><a class="toc-backref" href="#id3">2.3. Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">the list of useful modules is missing</p>
-</div>
-<p>Resources in the FutureGrid HPC partitions have the Modules utility to
-let you dynamically control your environment. Modules allows you to load
-and unload packages and ensure a coherent working environment. The most
-basic Modules commands let you add and remove packages from your
-environment:</p>
-<div class="highlight-python"><pre>$ module load &lt;package name&gt;/&lt;optional package version&gt;
-$ module unload &lt;package name&gt;/&lt;optional package version&gt;</pre>
-</div>
+<h3><a class="toc-backref" href="#id2">2.1.1. Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+<p>The login nodes have the <a class="reference external" href="http://modules.sourceforge.net">modules</a>
+packace installed. It provides a convenient tool to adapt your
+environment and enables you to activate different packges and services
+dependent on your spcific needs. The Modules utility to let you
+dynamically control your environment. Modules allows you to load and
+unload packages and ensure a coherent working environment.
+This ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD, and other
+environment variables are properly set, and that you can access the
+programs and libraries you need. For additional information about the
+Modules package you can consult the <a class="reference external" href="http://modules.sourceforge.net/man/module.html">manual page</a>.</p>
 <p>To display the list of available modules:</p>
 <div class="highlight-python"><pre>$ module avail</pre>
 </div>
 <p>To display the list of currently loaded modules:</p>
 <div class="highlight-python"><pre>$ module list</pre>
 </div>
-<p>It is very important to make sure the proper modules are loaded in the
-environment before you try to use FutureGrid HPC partitions. This
-ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD and other
-environment variables are properly set and that you can access the
-programs and libraries you need. Additional information about the
-Modules utility is available via &#8216;man module&#8217; on any FutureGrid login
-node.</p>
+<p>To add and remove packages from your environment you can use the
+<em>module load</em> and <em>module unload</em> commands:</p>
+<div class="highlight-python"><pre>$ module load &lt;package name&gt;/&lt;optional package version&gt;
+$ module unload &lt;package name&gt;/&lt;optional package version&gt;</pre>
+</div>
+<p>The available command ar elisted in the next table:</p>
+<table border="1" class="docutils">
+<caption>Module commands</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>$ module avail</td>
+<td>List all software packages available on the system.</td>
+</tr>
+<tr class="row-odd"><td>$ module avail package</td>
+<td>List all versions of package available on the system</td>
+</tr>
+<tr class="row-even"><td>$ module list</td>
+<td>List all packages currently loaded in your environment.</td>
+</tr>
+<tr class="row-odd"><td>$ module load package/version</td>
+<td>Add the specified version of the package to your environment</td>
+</tr>
+<tr class="row-even"><td>$ module unload package</td>
+<td>Remove the specified package from your environment.</td>
+</tr>
+<tr class="row-odd"><td>$ module swap package_A package_B</td>
+<td>Swap the loaded package (package_A) with another package (package_B).</td>
+</tr>
+<tr class="row-even"><td>$ module show package</td>
+<td>Shows what changes will be made to your environment (e.g. paths to libraries and executables) by loading the specified package.</td>
+</tr>
+</tbody>
+</table>
+<p>Example - List the modules on sierra after login:</p>
+<div class="highlight-python"><pre>$module list
+
+Currently Loaded Modulefiles:
+  1) torque/2.4.8   2) moab/5.4.0</pre>
+</div>
+<p>Example - list the avialable modules on sierra:</p>
+<div class="highlight-python"><pre>$ module avail
+
+----------------- /opt/Modules/3.2.8/modulefiles/applications ------------------
+R/2.11.1(default)      hpcc/1.3.1(default)    velvet/1.0.15
+git/1.7.10             ncbi/2.2.23(default)   wgs/6.1
+gromacs/4.0.7(default) soapdenovo/1.04
+
+------------------- /opt/Modules/3.2.8/modulefiles/compilers -------------------
+cmake/2.8.1(default)       java/1.6.0-i586
+intel/10.1                 java/1.6.0-x86_64(default)
+intel/11.1(default)
+
+------------------- /opt/Modules/3.2.8/modulefiles/debuggers -------------------
+null                       totalview/8.8.0-2(default)
+
+------------------- /opt/Modules/3.2.8/modulefiles/libraries -------------------
+intelmpi/4.0.0.028(default)  openmpi/1.4.3-intel
+mkl/10.2.5.035(default)      otf/1.7.0(default)
+openmpi/1.4.2(default)       unimci/1.0.1(default)
+openmpi/1.4.3-gnu            vampirtrace/intel-11.1/5.8.2
+
+--------------------- /opt/Modules/3.2.8/modulefiles/tools ---------------------
+cinderclient/1.0.4(default)   moab/5.4.0(default)
+cloudmesh/0.8(default)        myhadoop/0.2a
+euca2ools/1.2                 novaclient/2.13.0(default)
+euca2ools/1.3.1               precip/0.1(default)
+euca2ools/2.0.2(default)      python/2.7(default)
+genesisII/2.7.0               python/2.7.2
+glanceclient/0.9.0(default)   torque/2.4.8(default)
+keystoneclient/0.2.3(default) vim/7.2
+marmot/2.4.0(default)</pre>
+</div>
+<p>Example - load the default cloudmesh module:</p>
+<div class="highlight-python"><pre>$ module load cloudmesh</pre>
+</div>
+<p>Please note that for loading the default you do not have to specify the version number.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Module</th>
+<th class="head">hotel</th>
+<th class="head">india</th>
+<th class="head">sierra</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>R</td>
+<td>&nbsp;</td>
+<td>2.11.1</td>
+<td>2.11.1</td>
+</tr>
+<tr class="row-odd"><td>atlas</td>
+<td>3.9.35</td>
+<td>3.10.1</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>cbench</td>
+<td>20110407-openmpi</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>cinderclient</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>1.0.4</td>
+</tr>
+<tr class="row-even"><td>cloudmesh</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0.8</td>
+</tr>
+<tr class="row-odd"><td>cmake</td>
+<td>2.8.4</td>
+<td>2.8.1</td>
+<td>2.8.1</td>
+</tr>
+<tr class="row-even"><td>ctool</td>
+<td>2.12</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>euca2ools</td>
+<td>&nbsp;</td>
+<td>2.1.2</td>
+<td>2.0.2</td>
+</tr>
+<tr class="row-even"><td>fftw</td>
+<td>3.2.2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>glanceclient</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0.9.0</td>
+</tr>
+<tr class="row-even"><td>globus</td>
+<td>5.0.3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>goto2</td>
+<td>1.13</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>gromacs</td>
+<td>4.5.4</td>
+<td>4.0.7</td>
+<td>4.0.7</td>
+</tr>
+<tr class="row-odd"><td>gsl</td>
+<td>1.14</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>hadoop</td>
+<td>0.20.203.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>hdf5</td>
+<td>1.8.7</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>hostlists</td>
+<td>0.2</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>hpcc</td>
+<td>&nbsp;</td>
+<td>1.3.1</td>
+<td>1.3.1</td>
+</tr>
+<tr class="row-even"><td>intel</td>
+<td>11.1</td>
+<td>11.1</td>
+<td>11.1</td>
+</tr>
+<tr class="row-odd"><td>intelmpi</td>
+<td>4.0.0.028</td>
+<td>4.0.0.028</td>
+<td>4.0.0.028</td>
+</tr>
+<tr class="row-even"><td>java</td>
+<td>1.6.0_31-x86_64</td>
+<td>1.6.0-x86_64</td>
+<td>1.6.0-x86_64</td>
+</tr>
+<tr class="row-odd"><td>keystoneclient</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0.2.3</td>
+</tr>
+<tr class="row-even"><td>lapack</td>
+<td>3.3.0</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>marmot</td>
+<td>2.4.0</td>
+<td>2.4.0</td>
+<td>2.4.0</td>
+</tr>
+<tr class="row-even"><td>mkl</td>
+<td>10.2.5.035</td>
+<td>10.2.5.035</td>
+<td>10.2.5.035</td>
+</tr>
+<tr class="row-odd"><td>moab</td>
+<td>&nbsp;</td>
+<td>5.4.0</td>
+<td>5.4.0</td>
+</tr>
+<tr class="row-even"><td>myhadoop</td>
+<td>0.2a</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>ncbi</td>
+<td>&nbsp;</td>
+<td>2.2.23</td>
+<td>2.2.23</td>
+</tr>
+<tr class="row-even"><td>novaclient</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>2.13.0</td>
+</tr>
+<tr class="row-odd"><td>openmpi</td>
+<td>1.4.5</td>
+<td>1.4.3-gnu</td>
+<td>1.4.2</td>
+</tr>
+<tr class="row-even"><td>otf</td>
+<td>1.7.1</td>
+<td>1.7.0</td>
+<td>1.7.0</td>
+</tr>
+<tr class="row-odd"><td>precip</td>
+<td>&nbsp;</td>
+<td>0.1</td>
+<td>0.1</td>
+</tr>
+<tr class="row-even"><td>python</td>
+<td>2.7</td>
+<td>2.7</td>
+<td>2.7</td>
+</tr>
+<tr class="row-odd"><td>szip</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>taktuk</td>
+<td>3.7.3</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>torque</td>
+<td>&nbsp;</td>
+<td>2.5.5</td>
+<td>2.4.8</td>
+</tr>
+<tr class="row-even"><td>totalview</td>
+<td>&nbsp;</td>
+<td>8.8.0-2</td>
+<td>8.8.0-2</td>
+</tr>
+<tr class="row-odd"><td>unimci</td>
+<td>1.0.1</td>
+<td>1.0.1</td>
+<td>1.0.1</td>
+</tr>
+<tr class="row-even"><td>vampirtrace</td>
+<td>5.9</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>zookeeper</td>
+<td>3.3.5</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="filesystem-layout">
+<h3><a class="toc-backref" href="#id3">2.1.2. Filesystem Layout</a><a class="headerlink" href="#filesystem-layout" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em>Home</em> directories:</dt>
+<dd>Home directories are accessible through the $HOME shell variable are
+located at <em>/N/u/&lt;username&gt;</em>. This is where users are encouraged to
+keep source files, configuration files and executables. Users
+should not run code from their $HOME directories. Please note that
+this is an NFS file system, and may result in slower access for
+some applications. We also advise the users to provide external
+backup storage at their home institution or a code repository. For
+example, we recommand that you use git or svn to make sure you
+backup your changes to the code. Also make sure you backup your
+data. As a testbed, we do not guarantee dataloss.</dd>
+<dt><em>Scratch</em> directories:</dt>
+<dd>Scratch directories are located at different locations on the
+systems. To find out more about the file layout, please see the
+section <a class="reference internal" href="#s-storage"><em>Storage Services</em></a></dd>
+<dt><em>System software</em> directories:</dt>
+<dd>System software directories are located at <em>/N/soft</em>. System and
+community software are typically installed here. Table
+<a class="reference internal" href="#t-storage-mountpoint"><em>Storage mountpoints on the CLusters</em></a> provides a summary of the various mount
+points.</dd>
+</dl>
+<table border="1" class="docutils" id="t-storage-mountpoint">
+<caption>Storage mountpoints on the CLusters</caption>
+<colgroup>
+<col width="9%" />
+<col width="12%" />
+<col width="4%" />
+<col width="8%" />
+<col width="12%" />
+<col width="10%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">    Clustername (site)</th>
+<th class="head">    Mountpoint</th>
+<th class="head">    Size</th>
+<th class="head">    Type</th>
+<th class="head">    Backups</th>
+<th class="head">    Use</th>
+<th class="head">    Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">    Sierra (UCSD/SDSC)</p>
+</td>
+<td><p class="first last">    /N/u/portalname</p>
+</td>
+<td><p class="first last">    40.6TB</p>
+</td>
+<td><p class="first last">    ZFS  (RAID2)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Home dir</p>
+</td>
+<td><p class="first last">    By default quotas on home directories are 50 GB and quotas on scratch directories are 100 GB.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Sierra (UCSD/SDSC)</p>
+</td>
+<td><p class="first last">    /N/scratch/portalname</p>
+</td>
+<td><p class="first last">    5.44TB</p>
+</td>
+<td><p class="first last">    ZFS  (RAID0)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Scratch</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    Sierra (UCSD/SDSC)</p>
+</td>
+<td><p class="first last">    /N/soft</p>
+</td>
+<td><p class="first last">    50GB</p>
+</td>
+<td><p class="first last">    ZFS  (RAID2)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Software installs</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Sierra (UCSD/SDSC)</p>
+</td>
+<td><p class="first last">    /N/images</p>
+</td>
+<td><p class="first last">    6TB</p>
+</td>
+<td><p class="first last">    ZFS  (RAID2)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    VM images</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    India  (IU)</p>
+</td>
+<td><p class="first last">    /N/u/portalname</p>
+</td>
+<td><p class="first last">    15TB</p>
+</td>
+<td><p class="first last">    NFS  (RAID5)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Home dir</p>
+</td>
+<td><p class="first last">    At the moment we do not have any quota implemented on India and we use the local/tmp  (77 GB) as scratch space.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    India  (IU)</p>
+</td>
+<td><p class="first last">    /share/project</p>
+</td>
+<td><p class="first last">    14TB</p>
+</td>
+<td><p class="first last">    NFS  (RAID5)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Shared/group folders</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    India  (IU)</p>
+</td>
+<td><p class="first last">    /tmp</p>
+</td>
+<td><p class="first last">    77GB</p>
+</td>
+<td><p class="first last">    local disk</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Scratch</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Bravo  (IU)</p>
+</td>
+<td><p class="first last">    /N/u/portalname</p>
+</td>
+<td><p class="first last">    15TB</p>
+</td>
+<td><p class="first last">    NFS  (RAID5)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Home dir</p>
+</td>
+<td><p class="first last">    The same NFS shares in India are mounted in Bravo   (users do not log in here; jobs are submitted through India). There  are two local partitions which are used for HDFS and swift tests.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    Bravo  (IU)</p>
+</td>
+<td><p class="first last">    /share/project</p>
+</td>
+<td><p class="first last">    14TB</p>
+</td>
+<td><p class="first last">    NFS  (RAID5)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Shared/group folders</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Delta  (IU)</p>
+</td>
+<td><p class="first last">    /N/u/portalname</p>
+</td>
+<td><p class="first last">    15TB</p>
+</td>
+<td><p class="first last">    NFS  (RAID5)</p>
+</td>
+<td><p class="first last">    Yes  (nightly incremental)</p>
+</td>
+<td><p class="first last">    Home dir</p>
+</td>
+<td><p class="first last">    Same as Bravo. The NFS shares are mounted for user and group share (users do not log in directly here; jobs are submitted through India).</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    Delta (IU)</p>
+</td>
+<td><p class="first last">    /share/project</p>
+</td>
+<td><p class="first last">    14TB</p>
+</td>
+<td><p class="first last">    NFS (RAID5)</p>
+</td>
+<td><p class="first last">    Yes (nightly incremental)</p>
+</td>
+<td><p class="first last">    Shared/group folders</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Hotel (UC)</p>
+</td>
+<td><p class="first last">    /gpfs/home</p>
+</td>
+<td><p class="first last">    15TB</p>
+</td>
+<td><p class="first last">    GPFS (RAID6)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Home dir</p>
+</td>
+<td><p class="first last">    By default quotas on home directories are 10 GB.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    Hotel (UC)</p>
+</td>
+<td><p class="first last">    /gpfs/scratch</p>
+</td>
+<td><p class="first last">    57TB</p>
+</td>
+<td><p class="first last">    GPFS (RAID6)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Scratch</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Hotel (UC)</p>
+</td>
+<td><p class="first last">    /gpfs/software</p>
+</td>
+<td><p class="first last">    7.1GB</p>
+</td>
+<td><p class="first last">    GPFS (RAID6)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Software installs</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    Hotel (UC)</p>
+</td>
+<td><p class="first last">    /gpfs/images</p>
+</td>
+<td><p class="first last">    7.1TB</p>
+</td>
+<td><p class="first last">    GPFS (RAID6)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    VM images</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">    Hotel (UC)</p>
+</td>
+<td><p class="first last">    /scratch/local</p>
+</td>
+<td><p class="first last">    862GB</p>
+</td>
+<td><p class="first last">    ext3 (local disk)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Local scratch</p>
+</td>
+<td><p class="first last">  </p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last">    Foxtrot (UFL)</p>
+</td>
+<td><p class="first last">    /N/u/portalname</p>
+</td>
+<td><p class="first last">    16TiB</p>
+</td>
+<td><p class="first last">    NFS (RAID5)</p>
+</td>
+<td><p class="first last">    No</p>
+</td>
+<td><p class="first last">    Home dir</p>
+</td>
+<td><p class="first last">    At the moment we do not have any quota implemented on Foxtrot.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="message-passing-interface-mpi">
+<h2><a class="toc-backref" href="#id4">2.2. Message Passing Interface (MPI)</a><a class="headerlink" href="#message-passing-interface-mpi" title="Permalink to this headline">¶</a></h2>
+<p>Message Passing Interface Standard (MPI) is the <em>de facto</em> standard communication library for
+almost many HPC systems, and is available in a variety of
+implementations. It has been created through consensus of the MPI Forum, which has
+dozens of participating organizations, including vendors, researchers,
+software library developers, and users. The goal of the Message Passing
+Interface is to establish a portable, efficient, and flexible standard
+for message passing that will be widely used for writing message passing
+programs. For more information about MPI, please visit:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.mpi-forum.org/">http://www.mpi-forum.org/</a></li>
+<li><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/">http://www.mcs.anl.gov/research/projects/mpi/tutorial/</a></li>
+<li><a class="reference external" href="http://www.open-mpi.org/">http://www.open-mpi.org/</a></li>
+</ul>
+<div class="section" id="mpi-libraries">
+<h3><a class="toc-backref" href="#id5">2.2.1. MPI Libraries</a><a class="headerlink" href="#mpi-libraries" title="Permalink to this headline">¶</a></h3>
+<p>Several FutureGrid systems support MPI as part of their HPC services.
+An up to date status about it can be retrieved via our <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC,HPC_Tests,Benchmarks&amp;resourceIds=FG_BATCH">Inca
+status pages</a>.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">this table is outdated.</p>
+</div>
+<table border="1" class="docutils">
+<caption>MPI versions installed on FutureGrid HPC services</caption>
+<colgroup>
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">System</th>
+<th class="head">MPI version</th>
+<th class="head">Compiler</th>
+<th class="head">Infiniband Support</th>
+<th class="head">Module</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Alamo</td>
+<td>OpenMPI 1.4.5</td>
+<td>Intel 11.1</td>
+<td>yes</td>
+<td>openmpi</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Bravo</td>
+<td>OpenMPI 1.4.2</td>
+<td>Intel 11.1</td>
+<td>no</td>
+<td>openmpi</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>OpenMPI 1.4.3</td>
+<td>gcc 4.4.6</td>
+<td>no</td>
+<td>openmpi/1.4.3-gnu</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>OpenMPI 1.4.3</td>
+<td>Intel 11.1</td>
+<td>no</td>
+<td>openmpi/1.4.3-intel</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>OpenMPI 1.5.4</td>
+<td>gcc 4.4.6</td>
+<td>no</td>
+<td>openmpi/1.5.4-[gnu</td>
+<td>intel]</td>
+</tr>
+<tr class="row-odd"><td>Hotel</td>
+<td>OpenMPI 1.4.3</td>
+<td>gcc 4.1.2</td>
+<td>yes</td>
+<td>openmpi</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>India</td>
+<td>OpenMPI 1.4.2</td>
+<td>Intel 11.1</td>
+<td>yes</td>
+<td>openmpi</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Sierra</td>
+<td>OpenMPI 1.4.2</td>
+<td>Intel 11.1</td>
+<td>no</td>
+<td>openmpi</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Xray</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>N/A</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Loading the OpenMPI module adds the MPI compilers to your $PATH
+environment variable and the OpenMPI shared library directory to your
+$LD_LIBRARY_PATH. This is an important step to ensure MPI applications
+will compile and run successfully.</p>
+<p>In cases where the OpenMPI is compiled with the Intel compilers
+loading the OpenMPI module will automatically load the Intel compilers
+as a dependency:</p>
+<div class="highlight-python"><pre>$ module load openmpi
+Intel compiler suite version 11.1/072 loaded
+OpenMPI version 1.4.3 loaded</pre>
+</div>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">different section::
+Loading the torque module allows you to submit jobs to the scheduler.</p>
+</div>
+</div>
+<div class="section" id="compiling-mpi-applications">
+<h3><a class="toc-backref" href="#id6">2.2.2. Compiling MPI Applications</a><a class="headerlink" href="#compiling-mpi-applications" title="Permalink to this headline">¶</a></h3>
+<p>To compile MPI applications, users have two options:</p>
+<ol class="arabic simple">
+<li>Use the MPI compilers instead of regular Intel/GNU compilers</li>
+<li>Use the regular compilers (Intel/GNU) with MPI compilation flags</li>
+</ol>
+<p>We recommend using the MPI compilers to avoid compilation issues. This
+is accomplished by making the following replacements:</p>
+<ul class="simple">
+<li>CC/icc/gcc with mpicc</li>
+<li>CXX/icpc/g++ with mpicxx</li>
+<li>F90/F77/FC/ifort/gfortran with mpif90</li>
+</ul>
+<p>Alternatively, for some codes that require intricate compilation flags
+and complicated make systems, and where changing compilers is not an
+option, you can edit the compilation/linking options for your codes.
+These options are machine, compiler, and language dependent. To view the
+options required for C, C++ and Fortran on any machine, you can issue
+the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
+be taken when using these flags, as dependencies govern the order in
+which they appear in the link line. Should you run into compilation
+errors or problems, please submit a consulting ticket.</p>
+<p>Assuming you have loaded the openmpi module into your environment,
+you can compile a <a class="reference external" href="/tutorials/hpc/ring">simple MPI application</a> as
+easily as executing:</p>
+<div class="highlight-python"><pre>$ mpicc -o ring ring.c</pre>
+</div>
+</div>
+<div class="section" id="running-mpi-applications">
+<h3><a class="toc-backref" href="#id7">2.2.3. Running MPI Applications</a><a class="headerlink" href="#running-mpi-applications" title="Permalink to this headline">¶</a></h3>
+<p>Once your MPI application is compiled, you run it on the compute nodes
+of a cluster via Torque. An example of an MPI parallel job script for
+India, Sierra, and Alamo that runs the ring application is:</p>
+<div class="highlight-python"><pre>#!/bin/bash
+
+#PBS -N ring_test
+#PBS -o ring_$PBS_JOBID.out
+#PBS -e ring_$PBS_JOBID.err
+#PBS -q short
+#PBS -l nodes=4:ppn=8
+#PBS -l walltime=00:20:00
+
+# make sure MPI is in the environment
+module load openmpi
+
+# launch the parallel application with the correct number of processs
+# Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;
+mpirun -np 32 ring -t 1000</pre>
+</div>
+<p>There are two important differences between this script and the submit
+script shown previously. The first is that :ppn=8 is added to the
+request for four nodes. What this does is indicate that your application
+wants to allocate eight virtual processors per node. A virtual processor
+corresponds to a processing core. Alamo, Hotel, India, and Sierra all
+have eight cores per node, so the script above asks for exclusive access
+to four nodes with a total of 32 cores. The second importand difference
+from the previous submit script is that it executes mpirun with
+arguments that describe your MPI application. Note that the number of
+processes specified to mpirun is 32—matching the 32 cores allocated by
+Torque.</p>
+<p>A minor difference between this script and the previous one is that
+the environment variable $PBS_JOBID is used when creating the stdin and
+stdout files. Torque sets a number of environment variables that you can
+use in your submit script, starting with PBS.</p>
+</div>
 </div>
 <div class="section" id="managing-applications-with-torque">
-<h2><a class="toc-backref" href="#id4">2.4. Managing Applications with Torque</a><a class="headerlink" href="#managing-applications-with-torque" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">2.3. Managing Applications with Torque</a><a class="headerlink" href="#managing-applications-with-torque" title="Permalink to this headline">¶</a></h2>
+<p>FutureGrid provides a <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">list of HPC
+services</a>
+that currently consists of nodes on Alamo, Hotel, India, Sierra, and
+Xray.</p>
+<p>Once you ssh into these nodes, you&#8217;ll have access to the HPC queuing
+services for the machine you have logged into. You will enter into a
+Unix/Linux shell in which you can enter the typical Unix commands.
+Access to the clusters is provided through Torque/Moab commands
+from the command line.</p>
 <dl class="docutils">
 <dt>HPC Job Queue Information:</dt>
 <dd><table border="1" class="first last docutils">
@@ -651,7 +1450,7 @@ node.</p>
 </table>
 </dd>
 </dl>
-<p>To run any jobs on resources within FutureGrid HPC partitions (single
+<p>To run any jobs on resources within FutureGrid HPC services (single
 core, OpenMP or MPI jobs), users must use the job scheduler and a job
 submission script. Users should NOT run jobs on the login or headnodes.
 On FutureGrid machines, the job scheduler is the Torque (a variant of
@@ -725,187 +1524,10 @@ nodes it&#8217;s running on, and deleted from the queue.</p>
 <p>A list of all available Torque commands is available from the <a class="reference external" href="http://www.clusterresources.com/torquedocs21/">Torque
 manual page</a>.</p>
 </div>
-<div class="section" id="message-passing-interface-mpi">
-<h2><a class="toc-backref" href="#id5">2.5. Message Passing Interface (MPI)</a><a class="headerlink" href="#message-passing-interface-mpi" title="Permalink to this headline">¶</a></h2>
-<p>The Message Passing Interface Standard (MPI) is a message passing
-library standard based on the consensus of the MPI Forum, which has
-dozens of participating organizations, including vendors, researchers,
-software library developers, and users. The goal of the Message Passing
-Interface is to establish a portable, efficient, and flexible standard
-for message passing that will be widely used for writing message passing
-programs. MPI is the <em>de facto</em> standard communication library for
-almost all HPC systems, and is available in a variety of
-implementations.</p>
-<p>For more information, please visit:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.mpi-forum.org/">http://www.mpi-forum.org/</a></li>
-<li><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/">http://www.mcs.anl.gov/research/projects/mpi/tutorial/</a></li>
-</ul>
-<p>For more information on OpenMPI, the default MPI distribution on
-FutureGrid, please visit:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.open-mpi.org/">http://www.open-mpi.org/</a></li>
-</ul>
-</div>
-<div class="section" id="mpi-libraries">
-<h2><a class="toc-backref" href="#id6">2.6. MPI Libraries</a><a class="headerlink" href="#mpi-libraries" title="Permalink to this headline">¶</a></h2>
-<p>The FutureGrid systems that support HPC-style usage have an MPI
-implementation. In most cases, it is OpenMPI-1.4.x compiled with Intel
-11.1 compilers.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="13%" />
-<col width="18%" />
-<col width="15%" />
-<col width="25%" />
-<col width="28%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>System</strong></td>
-<td><strong>MPI version</strong></td>
-<td><strong>Compiler</strong></td>
-<td><strong>Infiniband Support</strong></td>
-<td><strong>Module</strong></td>
-</tr>
-<tr class="row-even"><td>Alamo</td>
-<td>OpenMPI 1.4.3</td>
-<td>Intel 11.1</td>
-<td>yes</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-odd"><td>Bravo</td>
-<td>OpenMPI 1.4.2</td>
-<td>Intel 11.1</td>
-<td>no</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>OpenMPI 1.4.3</td>
-<td>gcc 4.4.6</td>
-<td>no</td>
-<td>openmpi/1.4.3-gnu</td>
-</tr>
-<tr class="row-odd"><td>&nbsp;</td>
-<td>OpenMPI 1.4.3</td>
-<td>Intel 11.1</td>
-<td>no</td>
-<td>openmpi/1.4.3-intel</td>
-</tr>
-<tr class="row-even"><td>&nbsp;</td>
-<td>OpenMPI 1.5.4</td>
-<td>gcc 4.4.6</td>
-<td>no</td>
-<td>openmpi/1.5.4-[gnu,intel]</td>
-</tr>
-<tr class="row-odd"><td>Hotel</td>
-<td>OpenMPI 1.4.3</td>
-<td>gcc 4.1.2</td>
-<td>yes</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-even"><td>India</td>
-<td>OpenMPI 1.4.2</td>
-<td>Intel 11.1</td>
-<td>yes</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-odd"><td>Sierra</td>
-<td>OpenMPI 1.4.2</td>
-<td>Intel 11.1</td>
-<td>no</td>
-<td>openmpi</td>
-</tr>
-<tr class="row-even"><td>Xray</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>N/A</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>In cases where the OpenMPI is compiled with the Intel compilers,
-loading the OpenMPI module will automatically load the Intel compilers
-as a dependency:</p>
-<div class="highlight-python"><pre>$ module load openmpi
-Intel compiler suite version 11.1/072 loaded
-OpenMPI version 1.4.3 loaded</pre>
-</div>
-<p>Loading the OpenMPI module adds the MPI compilers to your $PATH
-environment variable and the OpenMPI shared library directory to your
-$LD_LIBRARY_PATH. This is an important step to ensure MPI applications
-will compile and run successfully. Loading the torque module allows you
-to submit jobs to the scheduler.</p>
-</div>
-<div class="section" id="compiling-mpi-applications">
-<h2><a class="toc-backref" href="#id7">2.7. Compiling MPI Applications</a><a class="headerlink" href="#compiling-mpi-applications" title="Permalink to this headline">¶</a></h2>
-<p>To compile MPI applications, users have two options:</p>
-<ol class="arabic simple">
-<li>Use the MPI compilers instead of regular Intel/GNU compilers</li>
-<li>Use the regular compilers (Intel/GNU) with MPI compilation flags</li>
-</ol>
-<p>We recommend using the MPI compilers to avoid compilation issues. This
-is accomplished by making the following replacements:</p>
-<ul class="simple">
-<li>CC/icc/gcc with mpicc</li>
-<li>CXX/icpc/g++ with mpicxx</li>
-<li>F90/F77/FC/ifort/gfortran with mpif90</li>
-</ul>
-<p>Alternatively, for some codes that require intricate compilation flags
-and complicated make systems, and where changing compilers is not an
-option, you can edit the compilation/linking options for your codes.
-These options are machine, compiler, and language dependent. To view the
-options required for C, C++ and Fortran on any machine, you can issue
-the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
-be taken when using these flags, as dependencies govern the order in
-which they appear in the link line. Should you run into compilation
-errors or problems, please submit a consulting ticket.</p>
-<p>Assuming you have loaded the openmpi module into your environment,
-you can compile a <a class="reference external" href="/tutorials/hpc/ring">simple MPI application</a> as
-easily as executing:</p>
-<div class="highlight-python"><pre>$ mpicc -o ring ring.c</pre>
-</div>
-</div>
-<div class="section" id="running-mpi-applications">
-<h2><a class="toc-backref" href="#id8">2.8. Running MPI Applications</a><a class="headerlink" href="#running-mpi-applications" title="Permalink to this headline">¶</a></h2>
-<p>Once your MPI application is compiled, you run it on the compute nodes
-of a cluster via Torque. An example of an MPI parallel job script for
-India, Sierra, and Alamo that runs the ring application is:</p>
-<div class="highlight-python"><pre>#!/bin/bash
-
-#PBS -N ring_test
-#PBS -o ring_$PBS_JOBID.out
-#PBS -e ring_$PBS_JOBID.err
-#PBS -q short
-#PBS -l nodes=4:ppn=8
-#PBS -l walltime=00:20:00
-
-# make sure MPI is in the environment
-module load openmpi
-
-# launch the parallel application with the correct number of processs
-# Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;
-mpirun -np 32 ring -t 1000</pre>
-</div>
-<p>There are two important differences between this script and the submit
-script shown previously. The first is that :ppn=8 is added to the
-request for four nodes. What this does is indicate that your application
-wants to allocate eight virtual processors per node. A virtual processor
-corresponds to a processing core. Alamo, Hotel, India, and Sierra all
-have eight cores per node, so the script above asks for exclusive access
-to four nodes with a total of 32 cores. The second importand difference
-from the previous submit script is that it executes mpirun with
-arguments that describe your MPI application. Note that the number of
-processes specified to mpirun is 32—matching the 32 cores allocated by
-Torque.</p>
-<p>A minor difference between this script and the previous one is that
-the environment variable $PBS_JOBID is used when creating the stdin and
-stdout files. Torque sets a number of environment variables that you can
-use in your submit script, starting with PBS_ .</p>
-</div>
 <div class="section" id="working-with-hpc-job-services">
-<h2><a class="toc-backref" href="#id9">2.9. Working with HPC Job Services</a><a class="headerlink" href="#working-with-hpc-job-services" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">2.4. Working with HPC Job Services</a><a class="headerlink" href="#working-with-hpc-job-services" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="running-queued-jobs-as-part-of-the-hpc-services">
-<h3><a class="toc-backref" href="#id10">2.9.1. Running Queued Jobs as Part of the HPC Services</a><a class="headerlink" href="#running-queued-jobs-as-part-of-the-hpc-services" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">2.4.1. Running Queued Jobs as Part of the HPC Services</a><a class="headerlink" href="#running-queued-jobs-as-part-of-the-hpc-services" title="Permalink to this headline">¶</a></h3>
 <p>To run a job in the HPC service, you need to create a job script that
 tells the job manager how to run the job and how to handle things like
 output and notifications. You can then submit your job to the scheduler,
@@ -933,9 +1555,9 @@ sleep 10
 ## End of job script
 ##</pre>
 </div>
-<p>In the job script, lines that begin with <strong>#PBS</strong> are directives to
+<p>In the job script, lines that begin with  <strong>#PBS</strong> are directives to
 the job scheduler. You can disable any of these lines by adding an
-extra <strong>#</strong>character at the beginning of the line, for example:</p>
+extra  <strong>#</strong> character at the beginning of the line, for example:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
 </pre></div>
 </div>
@@ -953,7 +1575,7 @@ standard bash shell to run your script:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -N testjob</span>
 </pre></div>
 </div>
-<p>This line gives your job a name of <strong>testjob</strong>. This name will be used
+<p>This line gives your job a name of  <strong>testjob</strong>. This name will be used
 by the job manager when it shows a job listing, and will be used for
 your output file(s) unless you explicitly specify an output file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -l nodes=1:ppn=1</span>
@@ -982,56 +1604,56 @@ locate error messages in the single error file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
 </pre></div>
 </div>
-<p>Note that this line is a comment since it starts with <strong>##</strong> instead
-of <strong>#PBS</strong>. If you remove the first <strong>#</strong>, this line will set the
+<p>Note that this line is a comment since it starts with  <strong>##</strong> instead
+of  <strong>#PBS</strong>. If you remove the first  <strong>#</strong>, this line will set the
 email address that will get notified about events related to this job.
 The events that get reported are set by the next line:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -m ae</span>
 </pre></div>
 </div>
 <p>Again, note that this line is commented out. If you remove the
-first <strong>#</strong>, this line will send email whenever the job fails
-(or <strong>a</strong>borts) (<strong>a</strong> option), and when the job ends (<strong>e</strong> option).
+first  <strong>#</strong>, this line will send email whenever the job fails
+(or <strong>a</strong> borts) (<strong>a</strong> option), and when the job ends (<strong>e</strong> option).
 This is particularly helpful if your job has to wait a long time in the
 queue before it runs:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -o testjob.out</span>
 </pre></div>
 </div>
 <p>Again, note that this line is commented out. If you remove the
-first <strong>#</strong>, this line will specify the file name to be used for job
+first  <strong>#</strong>, this line will specify the file name to be used for job
 output.</p>
+</div>
 <div class="section" id="submitting-your-job">
-<h4><a class="toc-backref" href="#id11">2.9.1.1. Submitting Your Job</a><a class="headerlink" href="#submitting-your-job" title="Permalink to this headline">¶</a></h4>
-<p>You can submit your job with the <strong>qsub</strong> or <strong>msub</strong> commands.
-The <strong>msub</strong> and <strong>qsub</strong> are almost identical, and can mostly be used
+<h3><a class="toc-backref" href="#id11">2.4.2. Submitting Your Job</a><a class="headerlink" href="#submitting-your-job" title="Permalink to this headline">¶</a></h3>
+<p>You can submit your job with the  <strong>qsub</strong> or <strong>msub</strong> commands.
+The  <strong>msub</strong> and <strong>qsub</strong> are almost identical, and can mostly be used
 interchangeably. See the respective man pages for specific differences.
 Neither submission command provides much output. Examples of a job
 submission using both commands follows:</p>
-<p>Using <strong>msub</strong>:</p>
+<p>Using  <strong>msub</strong>:</p>
 <div class="highlight-python"><pre>$ msub testjob.pbs
 292250</pre>
 </div>
-<p>Using <strong>qsub</strong>:</p>
+<p>Using  <strong>qsub</strong>:</p>
 <div class="highlight-python"><pre>$ qsub testjob.pbs
 292251.s82</pre>
 </div>
 <p>In both cases, the number that gets returned is the job number that the
-scheduler assigned to your job. In the case of <strong>qsub</strong>, the job
+scheduler assigned to your job. In the case of  <strong>qsub</strong>, the job
 number is followed by the host name where you submitted the job.</p>
 </div>
-</div>
 <div class="section" id="monitoring-your-job">
-<h3><a class="toc-backref" href="#id12">2.9.2. Monitoring Your Job</a><a class="headerlink" href="#monitoring-your-job" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">2.4.3. Monitoring Your Job</a><a class="headerlink" href="#monitoring-your-job" title="Permalink to this headline">¶</a></h3>
 <p>To monitor your job after it has been submitted, you can use
-the <strong>qstat</strong> or <strong>showq</strong> commands. Both commands will show you the
+the  <strong>qstat</strong> or <strong>showq</strong> commands. Both commands will show you the
 state of the job manager, but the information is displayed in different
-formats. In general, the <strong>showq</strong> command gives more complete
+formats. In general, the  <strong>showq</strong> command gives more complete
 information, and in a form that is a bit easier to read.
-The <strong>qstat</strong> command gives a very concise listing of the job queue,
+The  <strong>qstat</strong> command gives a very concise listing of the job queue,
 and in some instances this may give you a better quick overview of the
 resource.</p>
 <p>Using the test job script as an example, here is the output from
-the <strong>showq</strong> command:</p>
+the  <strong>showq</strong> command:</p>
 <div class="highlight-python"><pre>$ showq
 active jobs
 ------------------------
@@ -1047,8 +1669,8 @@ JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
 0 blocked jobs
 Total job: 1</pre>
 </div>
-<p>You can see the output is divided into three sections: <strong>active
-jobs</strong>, <strong>eligible jobs</strong>, and <strong>blocked jobs</strong>.</p>
+<p>You can see the output is divided into three sections:  <strong>active
+jobs</strong>,  <strong>eligible jobs</strong>, and  <strong>blocked jobs</strong>.</p>
 <ol class="arabic simple">
 <li><strong>Active jobs</strong> are jobs that are currently running on the resource.</li>
 <li><strong>Eligible jobs</strong> are jobs that are waiting for nodes to become
@@ -1061,14 +1683,14 @@ that is impossible, such as more nodes than currently exist, or more
 processors per node than are installed.</li>
 </ol>
 <p>Using the test job as an example again, here is the output from
-the <strong>qstat</strong> command:</p>
+the  <strong>qstat</strong> command:</p>
 <div class="highlight-python"><pre>$ qstat
 Job id                             Name               User          Time Use S Queue
 ------------------------- --------------------- ------------------- -------- - -----
 1981.i136                       sub19327.sub      inca               00:00:00 C batch
 1982.i136                       testjob           yourusername                      0 R batch</pre>
 </div>
-<p>The <strong>qstat</strong> command provides output in six columns:</p>
+<p>The  <strong>qstat</strong> command provides output in six columns:</p>
 <ol class="arabic simple">
 <li>Job id is the identifier assigned to your job.</li>
 <li>Name is the name that you assigned to your job.</li>
@@ -1081,14 +1703,14 @@ completed, and H for a job that is being held.</li>
 </ol>
 </div>
 <div class="section" id="examining-your-job-output">
-<h3><a class="toc-backref" href="#id13">2.9.3. Examining Your Job Output</a><a class="headerlink" href="#examining-your-job-output" title="Permalink to this headline">¶</a></h3>
-<p>If you gave your job a name with the <strong>#PBS -N &lt;jobname&gt;</strong> directive
+<h3><a class="toc-backref" href="#id13">2.4.4. Examining Your Job Output</a><a class="headerlink" href="#examining-your-job-output" title="Permalink to this headline">¶</a></h3>
+<p>If you gave your job a name with the  <strong>#PBS -N &lt;jobname&gt;</strong> directive
 in your job script or by specifying the job name on the command line,
-your job output will be available in a file named <strong>jobname.o######</strong>,
-where the <strong>######</strong> is the job number assigned by the job manager.
-You can type <strong>ls jobname.o*</strong> to see all output files from the same
+your job output will be available in a file named  <strong>jobname.o######</strong>,
+where the  <strong>######</strong> is the job number assigned by the job manager.
+You can type  <strong>ls jobname.o*</strong> to see all output files from the same
 job name.</p>
-<p>If you explicitly name an output file with the <strong>#PBS -o
+<p>If you explicitly name an output file with the  <strong>#PBS -o
 &lt;outfile&gt;</strong> directive in your job script or by specifying the output
 file on the command line, your output will be in the file you specified.
 If you run the job again, the output file will be overwritten.</p>
@@ -1098,7 +1720,7 @@ you had specified a job name (<strong>jobname,o######</strong>).</p>
 </div>
 </div>
 <div class="section" id="xray-hpc-services">
-<h2><a class="toc-backref" href="#id14">2.10. Xray HPC Services</a><a class="headerlink" href="#xray-hpc-services" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">2.5. Xray HPC Services</a><a class="headerlink" href="#xray-hpc-services" title="Permalink to this headline">¶</a></h2>
 <p>To log into the login node of xreay please use the command:</p>
 <div class="highlight-python"><pre>ssh portalname@xray.futuregrid.org</pre>
 </div>
@@ -1120,7 +1742,7 @@ Cray, and all jobs are automatically routed to that queue.</p>
 <div class="highlight-python"><pre>/opt/moab/default/bin/showq</pre>
 </div>
 <div class="section" id="submitting-a-job-on-xray">
-<h3><a class="toc-backref" href="#id15">2.10.1. Submitting a job on xray</a><a class="headerlink" href="#submitting-a-job-on-xray" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">2.5.1. Submitting a job on xray</a><a class="headerlink" href="#submitting-a-job-on-xray" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-todo admonition" id="index-2">
 <p class="first admonition-title">Todo</p>
 <p class="last">this example is incomplete and connfusing. we cat the job. submit but do
@@ -1199,185 +1821,9 @@ into groups of eight, and the</p>
 </div>
 </div>
 <div class="section" id="storage-services">
-<span id="s-storage"></span><h2><a class="toc-backref" href="#id16">2.11. Storage Services</a><a class="headerlink" href="#storage-services" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>Clustername (site)</td>
-<td>Mountpoint</td>
-<td>Size</td>
-<td>Type</td>
-<td>Backups</td>
-<td>Use</td>
-<td>Notes</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Sierra (UCSD/SDSC)</td>
-<td>/N/u/<em>username</em></td>
-<td>40.6TB</td>
-<td>ZFS  (RAID2)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Home dir</td>
-<td>By default quotas on home directories are 50 GB and quotas on scratch directories are 100 GB.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Sierra (UCSD/SDSC)</td>
-<td>/N/scratch/<em>username</em></td>
-<td>5.44TB</td>
-<td>ZFS  (RAID0)</td>
-<td>No</td>
-<td>Scratch</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Sierra (UCSD/SDSC)</td>
-<td>/N/soft</td>
-<td>50GB</td>
-<td>ZFS  (RAID2)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Software installs</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Sierra (UCSD/SDSC)</td>
-<td>/N/images</td>
-<td>6TB</td>
-<td>ZFS  (RAID2)</td>
-<td>Yes  (nightly incremental)</td>
-<td>VM images</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>India  (IU)</td>
-<td>/N/u/<em>username</em></td>
-<td>15TB</td>
-<td>NFS  (RAID5)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Home dir</td>
-<td>At the moment we do not have any quota implemented on India and we use the local/tmp  (77 GB) as scratch space.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>India  (IU)</td>
-<td>/share/project</td>
-<td>14TB</td>
-<td>NFS  (RAID5)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Shared/group folders</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>India  (IU)</td>
-<td>/tmp</td>
-<td>77GB</td>
-<td>local disk</td>
-<td>No</td>
-<td>Scratch</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Bravo  (IU)</td>
-<td>/N/u/<em>username</em></td>
-<td>15TB</td>
-<td>NFS  (RAID5)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Home dir</td>
-<td>The same NFS shares in India are mounted in Bravo   (users do not log in here; jobs are submitted through India). There  are two local partitions which are used for HDFS and swift tests.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Bravo  (IU)</td>
-<td>/share/project</td>
-<td>14TB</td>
-<td>NFS  (RAID5)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Shared/group folders</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Delta  (IU)</td>
-<td>/N/u/<em>username</em></td>
-<td>15TB</td>
-<td>NFS  (RAID5)</td>
-<td>Yes  (nightly incremental)</td>
-<td>Home dir</td>
-<td>Same as Bravo. The NFS shares are mounted for user and group share (users do not log in directly here; jobs are submitted through India).</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Delta (IU)</td>
-<td>/share/project</td>
-<td>14TB</td>
-<td>NFS (RAID5)</td>
-<td>Yes (nightly incremental)</td>
-<td>Shared/group folders</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Hotel (UC)</td>
-<td>/gpfs/home</td>
-<td>15TB</td>
-<td>GPFS (RAID6)</td>
-<td>No</td>
-<td>Home dir</td>
-<td>By default quotas on home directories are 10 GB.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Hotel (UC)</td>
-<td>/gpfs/scratch</td>
-<td>57TB</td>
-<td>GPFS (RAID6)</td>
-<td>No</td>
-<td>Scratch</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Hotel (UC)</td>
-<td>/gpfs/software</td>
-<td>7.1GB</td>
-<td>GPFS (RAID6)</td>
-<td>No</td>
-<td>Software installs</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Hotel (UC)</td>
-<td>/gpfs/images</td>
-<td>7.1TB</td>
-<td>GPFS (RAID6)</td>
-<td>No</td>
-<td>VM images</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Hotel (UC)</td>
-<td>/scratch/local</td>
-<td>862GB</td>
-<td>ext3 (local disk)</td>
-<td>No</td>
-<td>Local scratch</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Foxtrot (UFL)</td>
-<td>/N/u/<em>username</em></td>
-<td>16TiB</td>
-<td>NFS (RAID5)</td>
-<td>No</td>
-<td>Home dir</td>
-<td>At the moment we do not have any quota implemented on Foxtrot.</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+<span id="s-storage"></span><h2><a class="toc-backref" href="#id16">2.6. Storage Services</a><a class="headerlink" href="#storage-services" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="using-indiana-universities-storage-services-from-futuregrid">
-<h3><a class="toc-backref" href="#id17">2.11.1. Using Indiana Universities Storage Services from FutureGrid</a><a class="headerlink" href="#using-indiana-universities-storage-services-from-futuregrid" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">2.6.1. Using Indiana Universities Storage Services from FutureGrid</a><a class="headerlink" href="#using-indiana-universities-storage-services-from-futuregrid" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-todo admonition" id="index-4">
 <p class="first admonition-title">Todo</p>
 <p class="last">This section has not be tested recently</p>

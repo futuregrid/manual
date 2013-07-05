@@ -9,80 +9,47 @@ Hardware
    .. contents::
       :local:
 
-FutureGrid is build out of a number of clusters that are interconected
-with up to a 10GB Ethernet among its sites.
+FutureGrid is build out of a number of clusters of different type and
+size that are interconected with up to a 10GB Ethernet among its sites.
+
+The sites include Indiana University, University of Chicago, San Diego
+Supercomputing Center, Texas Advanced Computing Center, and University
+of Florida.
+
 
 Compute Resources
 ==================
 
-.. csv-table:: Compute Resources			
-   :header: Name, System Type           , # Nodes, # CPUS, # Cores, TFLOPS , RAM (GB), Storage (TB), Site
-						 
-   india        , IBM iDataplex          , 128        , 256         , 1024        , 11        , 3072       , 335 , IU    
-   hotel        , IBM iDataplex          , 84         , 168         , 672         , 7         , 2016       , 120 , UC     
-   sierra       , IBM iDataplex          , 84         , 168         , 672         , 7         , 2688       , 96  , SDSC   
-   foxtrot      , IBM iDataplex          , 32         , 64          , 256         , 3         , 768        , 0   , UF    
-   alamo        , Dell Poweredge         , 96         , 192         , 768         , 8         , 1152       , 30  , TACC   
-   xray         , Cray XT5m              , 1          , 166         , 664         , 6         , 1328       , 5.4 , IU     
-   bravo        , HP Proliant            , 16         , 32          , 128         , 1.7       , 3072       , 128 , IU     
-   delta        , SuperMicro GPU Cluster , 16         , 32          , 192         ,           , 1333       , 144 , IU     
-   lima         , Aeon Eclipse64         , 8          , 16          , 128         , 1.3       , 512        , 3.8 , SDSC   
-   echo         , SuperMicro ScaleMP Cluster, 16      , 32          ,  192  , 2 , 6144, 192, IU
+The tables :ref:`t-clusters` and :ref:`t-clusters-details` show an
+overview of some imporatnt information about these clusters.
 
-.. csv-table:: 
-   :header:   Name , Alamo, Bravo, Delta, Foxtrot, Hotel, India, Sierra, xray
+.. _t-clusters:
 
-   Image,a,b,d,f,h,|image-india-cray|,s,|image-cray|
-   Organization, Texas Advanced Computing Center, Indiana University, Indiana University, University of Florida, University of Chicago, Indiana University, San Diego Supercomputer Center, Indiana University
-   Machine Type                           , Cluster                               , Cluster                               , Cluster                           , Cluster                               , Cluster                               , Cluster                                , Cluster                                                                       , Cluster                         
-   System Type                            , Dell PowerEdge M610 Blade             , HP Proliant                           ,, IBM iDataPlex dx 360 M2               , IBM iDataPlex dx 360 M2               , IBM iDataPlex dx 360 M2                , IBM iDataPlex dx 340                                                          , Cray XT5m                       
-   CPU type                               , Intel Xeon X5550                      , Intel Xeon E5620                      , Intel Xeon 5660                   , Intel Xeon X5520                      , Intel Xeon X5550                      , Intel Xeon X5550                       , Intel Xeon L5420                                                              , AMD Opteron 2378                
-   Host Name                              , alamo                                 , bravo                                 , delta                             , foxtrot                               , hotel                                 , india                                  , sierra                                                                        , xray                            
-   CPU Speed                              , 2.66GHz                               , 2.40GHz                               , 2.80 GHz                          , 2.26GHz                               , 2.66GHz                               , 2.66GHz                                , 2.5GHz                                                                        , 2.4GHz                          
-   Number of CPUs                         ,192,32,32,64,168,256,168,168
-   Number of nodes                        ,96,16,16,32,84,128,84,1
-   RAM                                    , 12 GB DDR3 1333Mhz                    , 192 GB DDR3 1333Mhz                   , 192 GB DDR3 1333 Mhz               , 24 GB DDR3 1333Mhz                    , 24 GB DDR3 1333Mhz                    , 24 GB DDR3 1333Mhz                     , 32 GB DDR2-667                                                                , 8 GB DDR2-800                   
-   Total RAM (GB)                         ,1152,3072,3072,768,2016,3072,2688,1344
-   Number of cores                        ,768,128,,256,672,1024,672,672
-   Operating System                       , Linux                                 , Linux                                 ,Linux, Linux                                 , Linux                                 , Linux                                  , Linux                                                                         , Linux                           
-   Tflops                                 ,8,1.7,,3,7,11,7,6
-   Disk Size (TB)                         ,48,,15,20,120,335,72,335
-   Hard Drives                            , 500 GB Internal 7200 RPM SAS Drive    , 6x2TB Internal 7200 RPM SATA Drive    , Seagate Constellation 7.2 K RPM     64 MB Cache SATA 92GB   , 500 GB Internal 7200 RPM SATA Drive   , 1 TB Internal 7200 RPM SATA Drive     , 3000 GB Internal 7200 RPM SATA Drive   , 160 GB Internal 7200 RPM SATA Drive                                           , 6 TB Internal Lustre Storage    
-   Primary storage shared by all nodes  , NFS                                   , NFS                                   ,NFS, NFS                                  , GPFS                                  ,  NFS                                   , ZFS filesystem with 76.8 TB raid2 storage and 5.4 TB of raid0 (for scratch)   , NFS                             
-   Storage details                        ,,, RAID 9260-4i 1pt SAS2  512 MB SGL  ,,,,,
-   Connection configuration               , Mellanox 4x QDR InfiniBand adapters   , Mellanox 4x DDR InfiniBand adapters   ,,, Mellanox 4x DDR InfiniBand adapters   , Mellanox 4x DDR InfiniBand adapters    , Mellanox 4x DDR InfiniBand adapters                                           , Cray SeaStar Interconnect       
-   Primary storage shared by all nodes   ,,,92 ????,,,,,
-   CPUs (cores) per node                  ,,,2,,,,,
-   Cores per CPU,,,6,,,,,
-   Total number of GPU cores,,,192,,,,,
-   GPU type                               ,,, nVIDIA Tesla C2070                ,,,,,
-   Cores per GPU,,,448,,,,,
-   GPUs per node,,,2,,,,,
-   Batch system                           ,,, Torque                            ,,,,, 
+.. exceltable:: Overview of the Clusters
+   :file: fg-cluster-details.xls
+   :header: 1
+   :selection: A1:I11
+   :sheet: fg-cluster
 
+.. _t-clusters-details:
 
+.. exceltable:: Selected Details of the Clusters
+   :file: fg-cluster-details.xls
+   :header: 1
+   :selection: A1:J28
+   :sheet: fg-cluster-details
 
-.. todo:: add the exho node
+FutureGrid systems team members are working on enhancements that could lead to increases in the number of cores, memory size, and scratch space.  We will keep you up to date on developments.
 
-   144 Cores available on Echo
+.. csv-table:: Storage Resources
+   :header:  System Type   , Capacity (TB)      , File System   , Site    
 
-   FutureGrid's Echo cluster, located at Indiana University, offers users access to 12 machines which operate virtually as one machine.
-
-   Echo
-   4262523580 Bytes memory (which is more than 4TB)
-   144 core with "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz"
-   2.8T scratch space
-
-   FutureGrid systems team members are working on enhancements that could lead to increases in the number of cores, memory size, and scratch space.  We will keep you up to date on developments.
-   .. csv-table:: Storage Resources
-      :header:  System Type   , Capacity (TB)      , File System   , Site    
-
-       DDN 9550          , 339 shared with IU +   , Luster            , IU        
-       Data Capacitor    ,  16 TB dedicated       ,                   ,            
-       DDN 6620          , 120                    , GPFS              , UC         
-       SunFire x4540     , 96                     , ZFS               , SDSC       
-       Dell MD3000       , 30                     , NFS               , TACC       
-       IBM dx360 M3      , 24                     , NFS               , UF         
+   DDN 9550          , 339 shared with IU +   , Luster            , IU        
+   Data Capacitor    ,  16 TB dedicated       ,                   ,            
+   DDN 6620          , 120                    , GPFS              , UC         
+   SunFire x4540     , 96                     , ZFS               , SDSC       
+   Dell MD3000       , 30                     , NFS               , TACC       
+   IBM dx360 M3      , 24                     , NFS               , UF         
 
 
 
@@ -237,7 +204,7 @@ Below is further information about networking:
  
 
 Network Impairments Device (NID)
-----------------------------------------------------------------------
+======================================================================
 
 Researchers on FutureGrid may perodically employ the use of a Spirent
 XGEM, a Network Impairments Emulator.  The XGEM allows users to

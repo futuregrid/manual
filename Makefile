@@ -9,6 +9,11 @@ TAG=`cat VERSION.txt`
 all:
 	make -f Makefile sphinx
 
+FILE=index
+
+watchdog:
+	watchmedo shell-command --patterns="*.rst" --recursive --command="make; open doc/build/html/$(FILE).html" . 
+
 view:
 	open doc/build/html/index.html
 
