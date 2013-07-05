@@ -72,6 +72,18 @@ copy one line at a time as documented earlier to avoid problems::
     cd manual
     pip install -r requirements.txt
 
+Watchdog
+-------------
+
+You may be interested in using watchdog when you are in the process of
+editing a page. Upon chnage it will update the changed html output
+into the browser. For example, assume you edit the page
+openstack.rst. If you are running in another window::
+
+   make watchdog FILE=openstack
+
+For more details, please see the Makefile.
+
 Transfering a page from the portal to RST
 ----------------------------------------------------------------------
 
