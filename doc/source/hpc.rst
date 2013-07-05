@@ -14,44 +14,88 @@ HPC Services
 Accessing Systems
 -----------------
 
-Several of the clusters that are part of FutureGrid expose services that 
-operate as High Performance Computing (HPC) systems. These
-services se batch queues, and are not virtualized, have computer nodes
-with fixed operating systems
+Several of the clusters have High Performance Computing (HPC) services
+installed. Access to them is provided via a Linux Login node for each
+of the clusters.
 
-.. todo:: Gregor: THIS IS WRONG.
+To access ligin you need a FG resource account and an SSH public key you have uploaded to FutureGrid (this
+process is described in the section about 
+:ref:`s-accounts`. After you are part of a valid project
+and have a FutureGrid account, you can log into the FutureGrid
+resources with ssh. The resources include the following login nodes:
 
-and are suitable for running parallel
-applications. 
+- alamo.futuregrid.org
+- bravo.futuregrid.org
+- foxtrot.futuregrid.org
+- hotel.futuregrid.org
+- india.futuregrid.org
+- sierra.futuregrid.org
+- xray.futuregrid.org
+
+For example, assume your portalname is "portalname", than you can
+login to sierra as follows::
+
+        $ ssh portalname@sierra.futuregrid.org
+        Welcome to sierra.futuregrid.org
+        Last login: Thu Aug 12 19:19:22 2010 from ....
+
+Modules
+-------
+
+The login nodes have the `modules <http://modules.sourceforge.net>`__
+packace installed. It provides a convenient tool to adapt your
+environment and enables you to activate different packges and services
+dependent on your spcific needs. The Modules utility to let you
+dynamically control your environment. Modules allows you to load and
+unload packages and ensure a coherent working environment. 
+This ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD, and other
+environment variables are properly set, and that you can access the
+programs and libraries you need. For additional information about the
+Modules package you can consult the manual page on a login node with::
+
+    $ man module
+
+The available command ar elisted in the next table:
+
+
+To display the list of available modules::
+
+    $ module avail
+
+To display the list of currently loaded modules::
+
+    $ module list
+
+To add and remove packages from your environment you can use the
+*module load* and *module unload* commands::
+
+    $ module load <package name>/<optional package version>
+    $ module unload <package name>/<optional package version>
+
+
+.. csv-table:: Module commands
+   :header: Command, Description
+
+   $ module avail,	List all software packages available on the system.
+   $ module avail package,	List all versions of package available on the system
+   $ module list,	List all packages currently loaded in your environment.
+   $ module load package/version,	Add the specified version of the package to your environment
+   $ module unload package,	Remove the specified package from your environment.
+   $ module swap package_A package_B,	Swap the loaded package (package_A) with another package (package_B).
+   $ module show package,	Shows what changes will be made to your environment (e.g. paths to libraries and executables) by loading the specified package.
+
+
+WRONG TEXT hallo test test
+
 
 
 FutureGrid provides a `list of HPC
-partitions <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
+services <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
 that currently consists of nodes on Alamo, Hotel, India, Sierra, and
 Xray.
 
 .. todo: this list is incomplete
 
-To access the FutureGrid HPC partitions, you need a FutureGrid
-account and an SSH public key you have uploaded to FutureGrid (this
-process is described in the section about 
-_:ref:`s-account-management`. After you are part of a valid project
-and have a FutureGrid account, you can log into the FutureGrid
-resources with ssh. The resources include the following login nodes:
-
--  alamo.futuregrid.org
--  bravo.futuregrid.org
--  foxtrot.futuregrid.org
--  hotel.futuregrid.org
--  india.futuregrid.org
--  sierra.futuregrid.org
--  xray.futuregrid.org
-
-An example session follows::
-
-        $ ssh portalname@sierra.futuregrid.org
-        Last login: Thu Aug 12 19:19:22 2010 from ....
-        Welcome to Sierra.FutureGrid.Org
 
 Once you ssh into these nodes, you'll have access to the HPC queuing
 services for the machine you have logged into. You will enter into a
@@ -71,44 +115,14 @@ Filesystem Layout
    applications.
     
 -  *Scratch* directories are located at different locations on the
-   systems. To find out more about the file layout, please see `Storage
-   information for FutureGrid
-   hardware. <http://portal.futuregrid.org/kb/document/bcgv>`__
+   systems. To find out more about the file layout, please see the
+   section :ref:`s-storage`
     
--  *System software* directories are located at\ */N/soft,* with
+-  *System software* directories are located at */N/soft,* with
    automated nightly backups. System and community software are
-   typically installed here.
+   typically installed here. Tbale :ref:`t-storage-mountpoint`
+   provides a summary of the various mount points.
 
-Modules
--------
-
-.. todo:: the list of useful modules is missing
-
-Resources in the FutureGrid HPC partitions have the Modules utility to
-let you dynamically control your environment. Modules allows you to load
-and unload packages and ensure a coherent working environment. The most
-basic Modules commands let you add and remove packages from your
-environment::
-
-
-    $ module load <package name>/<optional package version>
-    $ module unload <package name>/<optional package version>
-
-To display the list of available modules::
-
-    $ module avail
-
-To display the list of currently loaded modules::
-
-    $ module list
-
-It is very important to make sure the proper modules are loaded in the
-environment before you try to use FutureGrid HPC partitions. This
-ensures that your $PATH, $LD\_LIBRARY\_PATH, $LD\_PRELOAD and other
-environment variables are properly set and that you can access the
-programs and libraries you need. Additional information about the
-Modules utility is available via 'man module' on any FutureGrid login
-node.
 
 
 Managing Applications with Torque
@@ -132,7 +146,7 @@ HPC Job Queue Information:
 
 
 
-To run any jobs on resources within FutureGrid HPC partitions (single
+To run any jobs on resources within FutureGrid HPC services (single
 core, OpenMP or MPI jobs), users must use the job scheduler and a job
 submission script. Users should NOT run jobs on the login or headnodes.
 On FutureGrid machines, the job scheduler is the Torque (a variant of
@@ -400,9 +414,9 @@ An example job script looks like this::
         ## End of job script 
         ##
 
-In the job script, lines that begin with \ **#PBS** are directives to
+In the job script, lines that begin with  **#PBS** are directives to
 the job scheduler. You can disable any of these lines by adding an
-extra \ **#**\ character at the beginning of the line, for example::
+extra  **#** character at the beginning of the line, for example::
 
 
         ##PBS -M username@example.com
@@ -421,7 +435,7 @@ standard bash shell to run your script::
 
         #PBS -N testjob 
 
-This line gives your job a name of \ **testjob**. This name will be used
+This line gives your job a name of  **testjob**. This name will be used
 by the job manager when it shows a job listing, and will be used for
 your output file(s) unless you explicitly specify an output file::
 
@@ -450,62 +464,62 @@ locate error messages in the single error file::
 
         ##PBS -M username@example.com 
 
-Note that this line is a comment since it starts with \ **##** instead
-of \ **#PBS**. If you remove the first \ **#**, this line will set the
+Note that this line is a comment since it starts with  **##** instead
+of  **#PBS**. If you remove the first  **#**, this line will set the
 email address that will get notified about events related to this job.
 The events that get reported are set by the next line::
 
         ##PBS -m ae 
 
 Again, note that this line is commented out. If you remove the
-first \ **#**, this line will send email whenever the job fails
-(or **a**\ borts) (**a** option), and when the job ends (**e** option).
+first  **#**, this line will send email whenever the job fails
+(or **a** borts) (**a** option), and when the job ends (**e** option).
 This is particularly helpful if your job has to wait a long time in the
 queue before it runs::
 
         ##PBS -o testjob.out 
 
 Again, note that this line is commented out. If you remove the
-first \ **#**, this line will specify the file name to be used for job
+first  **#**, this line will specify the file name to be used for job
 output.
 
 Submitting Your Job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can submit your job with the \ **qsub** or **msub** commands.
-The \ **msub** and **qsub** are almost identical, and can mostly be used
+You can submit your job with the  **qsub** or **msub** commands.
+The  **msub** and **qsub** are almost identical, and can mostly be used
 interchangeably. See the respective man pages for specific differences.
 Neither submission command provides much output. Examples of a job
 submission using both commands follows:
 
-Using \ **msub**::
+Using  **msub**::
 
         $ msub testjob.pbs 
         292250 
 
-Using \ **qsub**::
+Using  **qsub**::
 
         $ qsub testjob.pbs 
         292251.s82 
 
 In both cases, the number that gets returned is the job number that the
-scheduler assigned to your job. In the case of \ **qsub**, the job
+scheduler assigned to your job. In the case of  **qsub**, the job
 number is followed by the host name where you submitted the job.
 
 Monitoring Your Job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To monitor your job after it has been submitted, you can use
-the \ **qstat** or **showq** commands. Both commands will show you the
+the  **qstat** or **showq** commands. Both commands will show you the
 state of the job manager, but the information is displayed in different
-formats. In general, the \ **showq** command gives more complete
+formats. In general, the  **showq** command gives more complete
 information, and in a form that is a bit easier to read.
-The \ **qstat** command gives a very concise listing of the job queue,
+The  **qstat** command gives a very concise listing of the job queue,
 and in some instances this may give you a better quick overview of the
 resource.
 
 Using the test job script as an example, here is the output from
-the \ **showq** command::
+the  **showq** command::
 
         $ showq 
         active jobs
@@ -522,8 +536,8 @@ the \ **showq** command::
         0 blocked jobs 
         Total job: 1 
 
-You can see the output is divided into three sections: \ **active
-jobs**, \ **eligible jobs**, and \ **blocked jobs**.
+You can see the output is divided into three sections:  **active
+jobs**,  **eligible jobs**, and  **blocked jobs**.
 
 #. **Active jobs** are jobs that are currently running on the resource.
 
@@ -540,7 +554,7 @@ jobs**, \ **eligible jobs**, and \ **blocked jobs**.
  
 
 Using the test job as an example again, here is the output from
-the \ **qstat** command::
+the  **qstat** command::
 
         $ qstat 
         Job id                             Name               User          Time Use S Queue 
@@ -548,7 +562,7 @@ the \ **qstat** command::
         1981.i136                       sub19327.sub      inca               00:00:00 C batch 
         1982.i136                       testjob           yourusername                      0 R batch 
 
-The \ **qstat** command provides output in six columns:
+The  **qstat** command provides output in six columns:
 
 #. Job id is the identifier assigned to your job.
 #. Name is the name that you assigned to your job.
@@ -564,14 +578,14 @@ The \ **qstat** command provides output in six columns:
 Examining Your Job Output
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you gave your job a name with the \ **#PBS -N <jobname>** directive
+If you gave your job a name with the  **#PBS -N <jobname>** directive
 in your job script or by specifying the job name on the command line,
-your job output will be available in a file named \ **jobname.o######**,
-where the \ **######** is the job number assigned by the job manager.
-You can type \ **ls jobname.o\*** to see all output files from the same
+your job output will be available in a file named  **jobname.o######**,
+where the  **######** is the job number assigned by the job manager.
+You can type  **ls jobname.o\*** to see all output files from the same
 job name.
 
-If you explicitly name an output file with the \ **#PBS -o
+If you explicitly name an output file with the  **#PBS -o
 <outfile>** directive in your job script or by specifying the output
 file on the command line, your output will be in the file you specified.
 If you run the job again, the output file will be overwritten.
@@ -698,29 +712,19 @@ into groups of eight, and the
 
 .. _s-storage:
 
+
+
 Storage Services
 ----------------------------------------------------------------------
 
-.. csv-table::
+.. _t-storage-mountpoint:
 
-    Clustername (site),    Mountpoint,    Size,    Type,    Backups,    Use,    Notes,
-    Sierra (UCSD/SDSC),    /N/u/*username*,    40.6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    Home dir,    By default quotas on home directories are 50 GB and quotas on scratch directories are 100 GB.,
-    Sierra (UCSD/SDSC),    /N/scratch/*username*,    5.44TB,    ZFS  (RAID0),    No,    Scratch,  
-    Sierra (UCSD/SDSC),    /N/soft,    50GB,    ZFS  (RAID2),    Yes  (nightly incremental),    Software installs,  
-    Sierra (UCSD/SDSC),    /N/images,    6TB,    ZFS  (RAID2),    Yes  (nightly incremental),    VM images,  
-    India  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    At the moment we do not have any quota implemented on India and we use the local/tmp  (77 GB) as scratch space.,
-    India  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
-    India  (IU),    /tmp,    77GB,    local disk,    No,    Scratch,  
-    Bravo  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    The same NFS shares in India are mounted in Bravo   (users do not log in here; jobs are submitted through India). There  are two local partitions which are used for HDFS and swift tests.,
-    Bravo  (IU),    /share/project,    14TB,    NFS  (RAID5),    Yes  (nightly incremental),    Shared/group folders,  
-    Delta  (IU),    /N/u/*username*,    15TB,    NFS  (RAID5),    Yes  (nightly incremental),    Home dir,    Same as Bravo. The NFS shares are mounted for user and group share (users do not log in directly here; jobs are submitted through India).,
-    Delta (IU),    /share/project,    14TB,    NFS (RAID5),    Yes (nightly incremental),    Shared/group folders,  
-    Hotel (UC),    /gpfs/home,    15TB,    GPFS (RAID6),    No,    Home dir,    By default quotas on home directories are 10 GB.,
-    Hotel (UC),    /gpfs/scratch,    57TB,    GPFS (RAID6),    No,    Scratch,  
-    Hotel (UC),    /gpfs/software,    7.1GB,    GPFS (RAID6),    No,    Software installs,  
-    Hotel (UC),    /gpfs/images,    7.1TB,    GPFS (RAID6),    No,    VM images,  
-    Hotel (UC),    /scratch/local,    862GB,    ext3 (local disk),    No,    Local scratch,  
-    Foxtrot (UFL),    /N/u/*username*,    16TiB,    NFS (RAID5),    No,    Home dir,    At the moment we do not have any quota implemented on Foxtrot.,
+.. exceltable:: Storage mountpoints on the CLusters
+   :file: fg-cluster-details.xls
+   :header: 1
+   :selection: A1:G18
+   :sheet: fg-storage
+
 
 
 
