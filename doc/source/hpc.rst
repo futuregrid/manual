@@ -51,12 +51,7 @@ unload packages and ensure a coherent working environment.
 This ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD, and other
 environment variables are properly set, and that you can access the
 programs and libraries you need. For additional information about the
-Modules package you can consult the manual page on a login node with::
-
-    $ man module
-
-The available command ar elisted in the next table:
-
+Modules package you can consult the `manual page <http://modules.sourceforge.net/man/module.html>`__.
 
 To display the list of available modules::
 
@@ -72,6 +67,7 @@ To add and remove packages from your environment you can use the
     $ module load <package name>/<optional package version>
     $ module unload <package name>/<optional package version>
 
+The available command ar elisted in the next table:
 
 .. csv-table:: Module commands
    :header: Command, Description
@@ -85,9 +81,133 @@ To add and remove packages from your environment you can use the
    $ module show package,	Shows what changes will be made to your environment (e.g. paths to libraries and executables) by loading the specified package.
 
 
-WRONG TEXT hallo test test
+
+Example - List the modules on sierra after login:: 
+
+   $module list
+
+   Currently Loaded Modulefiles:
+     1) torque/2.4.8   2) moab/5.4.0
 
 
+Example - list the avialable modules on sierra::
+
+
+   $ module avail
+
+   ----------------- /opt/Modules/3.2.8/modulefiles/applications ------------------
+   R/2.11.1(default)      hpcc/1.3.1(default)    velvet/1.0.15
+   git/1.7.10             ncbi/2.2.23(default)   wgs/6.1
+   gromacs/4.0.7(default) soapdenovo/1.04
+
+   ------------------- /opt/Modules/3.2.8/modulefiles/compilers -------------------
+   cmake/2.8.1(default)       java/1.6.0-i586
+   intel/10.1                 java/1.6.0-x86_64(default)
+   intel/11.1(default)
+
+   ------------------- /opt/Modules/3.2.8/modulefiles/debuggers -------------------
+   null                       totalview/8.8.0-2(default)
+
+   ------------------- /opt/Modules/3.2.8/modulefiles/libraries -------------------
+   intelmpi/4.0.0.028(default)  openmpi/1.4.3-intel
+   mkl/10.2.5.035(default)      otf/1.7.0(default)
+   openmpi/1.4.2(default)       unimci/1.0.1(default)
+   openmpi/1.4.3-gnu            vampirtrace/intel-11.1/5.8.2
+
+   --------------------- /opt/Modules/3.2.8/modulefiles/tools ---------------------
+   cinderclient/1.0.4(default)   moab/5.4.0(default)
+   cloudmesh/0.8(default)        myhadoop/0.2a
+   euca2ools/1.2                 novaclient/2.13.0(default)
+   euca2ools/1.3.1               precip/0.1(default)
+   euca2ools/2.0.2(default)      python/2.7(default)
+   genesisII/2.7.0               python/2.7.2
+   glanceclient/0.9.0(default)   torque/2.4.8(default)
+   keystoneclient/0.2.3(default) vim/7.2
+   marmot/2.4.0(default)
+
+Example - load the default cloudmesh module::
+
+   $ module load cloudmesh
+
+Please note that for loading the default you do not have to specify the version number.
+
+
+
+.. csv-table::
+   :header: Module,hotel,india,sierra
+
+   R,,2.11.1,2.11.1
+   atlas,3.9.35,3.10.1,
+   cbench,20110407-openmpi,,
+   cinderclient,,,1.0.4
+   cloudmesh,,,0.8
+   cmake,2.8.4,2.8.1,2.8.1
+   ctool,2.12,,
+   euca2ools,,2.1.2,2.0.2
+   fftw,3.2.2,,
+   glanceclient,,,0.9.0
+   globus,5.0.3,,
+   goto2,1.13,,
+   gromacs,4.5.4,4.0.7,4.0.7
+   gsl,1.14,,
+   hadoop,0.20.203.0,,
+   hdf5,1.8.7,,
+   hostlists,0.2,,
+   hpcc,,1.3.1,1.3.1
+   intel,11.1,11.1,11.1
+   intelmpi,4.0.0.028,4.0.0.028,4.0.0.028
+   java,1.6.0_31-x86_64,1.6.0-x86_64,1.6.0-x86_64
+   keystoneclient,,,0.2.3
+   lapack,3.3.0,,
+   marmot,2.4.0,2.4.0,2.4.0
+   mkl,10.2.5.035,10.2.5.035,10.2.5.035
+   moab,,5.4.0,5.4.0
+   myhadoop,0.2a,,
+   ncbi,,2.2.23,2.2.23
+   novaclient,,,2.13.0
+   openmpi,1.4.5,1.4.3-gnu,1.4.2
+   otf,1.7.1,1.7.0,1.7.0
+   precip,,0.1,0.1
+   python,2.7,2.7,2.7
+   szip,2.1,,
+   taktuk,3.7.3,,
+   torque,,2.5.5,2.4.8
+   totalview,,8.8.0-2,8.8.0-2
+   unimci,1.0.1,1.0.1,1.0.1
+   vampirtrace,5.9,,
+   zookeeper,3.3.5,,
+
+ 
+Filesystem Layout
+-----------------
+
+*Home* directories:
+   Home directories are accessible through the $HOME shell variable are
+   located at */N/u/<username>*. This is where users are encouraged to
+   keep source files, configuration files and executables. Users
+   should not run code from their $HOME directories. Please note that
+   this is an NFS file system, and may result in slower access for
+   some applications. We also advise the users to provide external
+   backup storage at their home institution or a code repository. For
+   example, we recommand that you use git or svn to make sure you
+   backup your changes to the code. Also make sure you backup your
+   data. As a testbed, we do not guarantee dataloss.
+    
+*Scratch* directories:
+   Scratch directories are located at different locations on the
+   systems. To find out more about the file layout, please see the
+   section :ref:`s-storage`
+    
+*System software* directories: 
+   System software directories are located at */N/soft*. System and
+   community software are typically installed here. Table
+   :ref:`t-storage-mountpoint` provides a summary of the various mount
+   points.
+
+
+
+Managing Applications with Torque
+---------------------------------
 
 FutureGrid provides a `list of HPC
 services <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
@@ -103,34 +223,11 @@ Unix/Linux shell in which you can enter the typical Unix commands.
 Access to the clusters is provided through Torque/Moab commands
 from the command line. 
 
- 
-Filesystem Layout
------------------
 
--  *Home* ($HOME) directories are located at */N/u/<username>*, with
-   automated nightly backups. This is where users are encouraged to keep
-   source files, configuration files and executables. Users should not
-   run code from their $HOME directories. Please note that this is an
-   NFS file system, and may result in slower access for some
-   applications.
-    
--  *Scratch* directories are located at different locations on the
-   systems. To find out more about the file layout, please see the
-   section :ref:`s-storage`
-    
--  *System software* directories are located at */N/soft,* with
-   automated nightly backups. System and community software are
-   typically installed here. Tbale :ref:`t-storage-mountpoint`
-   provides a summary of the various mount points.
-
-
-
-Managing Applications with Torque
----------------------------------
 
 HPC Job Queue Information:
     .. csv-table:: 
-       :header: Resource   , Queue name   , Default Wallclock Limit   , Max Wallclock Limit   , NOTES                 
+       :header: Resource   , Queue name   , Default Wallclock Limit   , Max Wallclock Limit   , NOTES                
 
 	india      , batch        , 4 hours                   , 24 hours              ,                       
 		   , long         , 8 hours                   , 168 hours             ,                       
@@ -261,33 +358,23 @@ MPI Libraries
 
 
 The FutureGrid systems that support HPC-style usage have an MPI
-implementation. In most cases, it is OpenMPI-1.4.x compiled with Intel
-11.1 compilers. 
+implementation. An up to date status can be retrieved via our `Inca
+status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC,HPC_Tests,Benchmarks&resourceIds=FG_BATCH>`__.
 
+.. csv-table:: MPI versions installed on FutureGrid HPC services
+   :header:   System   , MPI version   , Compiler   , Infiniband Support   , Module                  
 
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| **System**   | **MPI version**   | **Compiler**   | **Infiniband Support**   | **Module**                  |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| Alamo        | OpenMPI 1.4.3     | Intel 11.1     | yes                      | openmpi                     |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| Bravo        | OpenMPI 1.4.2     | Intel 11.1     | no                       | openmpi                     |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-|              | OpenMPI 1.4.3     | gcc 4.4.6      | no                       | openmpi/1.4.3-gnu           |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-|              | OpenMPI 1.4.3     | Intel 11.1     | no                       | openmpi/1.4.3-intel         |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-|              | OpenMPI 1.5.4     | gcc 4.4.6      | no                       | openmpi/1.5.4-[gnu,intel]   |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| Hotel        | OpenMPI 1.4.3     | gcc 4.1.2      | yes                      | openmpi                     |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| India        | OpenMPI 1.4.2     | Intel 11.1     | yes                      | openmpi                     |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| Sierra       | OpenMPI 1.4.2     | Intel 11.1     | no                       | openmpi                     |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
-| Xray         |                   |                | N/A                      |                             |
-+--------------+-------------------+----------------+--------------------------+-----------------------------+
+   Alamo        , OpenMPI 1.4.5     , Intel 11.1     , yes                      , openmpi                     
+   Bravo        , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
+		, OpenMPI 1.4.3     , gcc 4.4.6      , no                       , openmpi/1.4.3-gnu           
+		, OpenMPI 1.4.3     , Intel 11.1     , no                       , openmpi/1.4.3-intel         
+		, OpenMPI 1.5.4     , gcc 4.4.6      , no                       , openmpi/1.5.4-[gnu,intel]   
+   Hotel        , OpenMPI 1.4.3     , gcc 4.1.2      , yes                      , openmpi                     
+   India        , OpenMPI 1.4.2     , Intel 11.1     , yes                      , openmpi                     
+   Sierra       , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
+   Xray         ,                   ,                , N/A                      ,                             
 
-In cases where the OpenMPI is compiled with the Intel compilers,
+In cases where the OpenMPI is compiled with the Intel compilers
 loading the OpenMPI module will automatically load the Intel compilers
 as a dependency::
 
