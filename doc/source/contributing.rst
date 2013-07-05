@@ -129,6 +129,15 @@ On Osx you can simply say::
 	$ cd sphinx-contrib/autorun
 	$ python setup.py install
 
+Publishing the pages
+-----------------------
+
+The pages can be published to github with::
+
+    make gh-pages
+
+
+
 jira
 ----------------------------------------------------------------------
 
