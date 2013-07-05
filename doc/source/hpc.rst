@@ -268,7 +268,7 @@ as a dependency::
     Intel compiler suite version 11.1/072 loaded
     OpenMPI version 1.4.3 loaded
 
-.. todo:: differnt section::
+.. todo:: different section::
    Loading the torque module allows you to submit jobs to the scheduler.
  
 
