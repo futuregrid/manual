@@ -11,17 +11,17 @@ HPC Services
 
 .. _s-hpc-access:
 
-Accessing Systems
+Login Nodes
 -----------------
 
 Several of the clusters have High Performance Computing (HPC) services
 installed. Access to them is provided via a Linux Login node for each
 of the clusters.
 
-To access ligin you need a FG resource account and an SSH public key you have uploaded to FutureGrid (this
-process is described in the section about 
-:ref:`s-accounts`. After you are part of a valid project
-and have a FutureGrid account, you can log into the FutureGrid
+To access the login nodes you need a FG resource account and an SSH
+public key you have uploaded to FutureGrid (this process is described
+in the section about :ref:`s-accounts`. After you are part of a valid
+project and have a FutureGrid account, you can log into the FutureGrid
 resources with ssh. The resources include the following login nodes:
 
 - alamo.futuregrid.org
@@ -40,7 +40,7 @@ login to sierra as follows::
         Last login: Thu Aug 12 19:19:22 2010 from ....
 
 Modules
--------
+^^^^^^^^^^^^^^^
 
 The login nodes have the `modules <http://modules.sourceforge.net>`__
 packace installed. It provides a convenient tool to adapt your
@@ -179,7 +179,7 @@ Please note that for loading the default you do not have to specify the version 
 
  
 Filesystem Layout
------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Home* directories:
    Home directories are accessible through the $HOME shell variable are
@@ -204,6 +204,146 @@ Filesystem Layout
    :ref:`t-storage-mountpoint` provides a summary of the various mount
    points.
 
+.. _t-storage-mountpoint:
+
+.. exceltable:: Storage mountpoints on the CLusters
+   :file: fg-cluster-details.xls
+   :header: 1
+   :selection: A1:G18
+   :sheet: fg-storage
+
+
+
+
+Message Passing Interface (MPI)
+-------------------------------
+
+Message Passing Interface Standard (MPI) is the *de facto* standard communication library for
+almost many HPC systems, and is available in a variety of
+implementations. It has been created through consensus of the MPI Forum, which has
+dozens of participating organizations, including vendors, researchers,
+software library developers, and users. The goal of the Message Passing
+Interface is to establish a portable, efficient, and flexible standard
+for message passing that will be widely used for writing message passing
+programs. For more information about MPI, please visit:
+
+-  `http://www.mpi-forum.org/ <http://www.mpi-forum.org/>`__
+-  `http://www.mcs.anl.gov/research/projects/mpi/tutorial/ <http://www.mcs.anl.gov/research/projects/mpi/tutorial/>`__
+-  `http://www.open-mpi.org/ <http://www.open-mpi.org/>`__
+
+
+
+MPI Libraries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Several FutureGrid systems support MPI as part of their HPC services. 
+An up to date status about it can be retrieved via our `Inca
+status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC,HPC_Tests,Benchmarks&resourceIds=FG_BATCH>`__.
+
+.. todo:: this table is outdated.
+
+.. csv-table:: MPI versions installed on FutureGrid HPC services
+   :header:   System   , MPI version   , Compiler   , Infiniband Support   , Module                  
+
+   Alamo        , OpenMPI 1.4.5     , Intel 11.1     , yes                      , openmpi                     
+   Bravo        , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
+		, OpenMPI 1.4.3     , gcc 4.4.6      , no                       , openmpi/1.4.3-gnu           
+		, OpenMPI 1.4.3     , Intel 11.1     , no                       , openmpi/1.4.3-intel         
+		, OpenMPI 1.5.4     , gcc 4.4.6      , no                       , openmpi/1.5.4-[gnu,intel]   
+   Hotel        , OpenMPI 1.4.3     , gcc 4.1.2      , yes                      , openmpi                     
+   India        , OpenMPI 1.4.2     , Intel 11.1     , yes                      , openmpi                     
+   Sierra       , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
+   Xray         ,                   ,                , N/A                      ,                             
+Loading the OpenMPI module adds the MPI compilers to your $PATH
+environment variable and the OpenMPI shared library directory to your
+$LD_LIBRARY_PATH. This is an important step to ensure MPI applications
+will compile and run successfully. 
+
+In cases where the OpenMPI is compiled with the Intel compilers
+loading the OpenMPI module will automatically load the Intel compilers
+as a dependency::
+
+    $ module load openmpi
+    Intel compiler suite version 11.1/072 loaded
+    OpenMPI version 1.4.3 loaded
+
+.. todo:: differnt section::
+   Loading the torque module allows you to submit jobs to the scheduler.
+ 
+
+Compiling MPI Applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To compile MPI applications, users have two options:
+
+#. Use the MPI compilers instead of regular Intel/GNU compilers
+#. Use the regular compilers (Intel/GNU) with MPI compilation flags
+
+We recommend using the MPI compilers to avoid compilation issues. This
+is accomplished by making the following replacements:
+
+-  CC/icc/gcc with mpicc
+-  CXX/icpc/g++ with mpicxx
+-  F90/F77/FC/ifort/gfortran with mpif90
+
+Alternatively, for some codes that require intricate compilation flags
+and complicated make systems, and where changing compilers is not an
+option, you can edit the compilation/linking options for your codes.
+These options are machine, compiler, and language dependent. To view the
+options required for C, C++ and Fortran on any machine, you can issue
+the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
+be taken when using these flags, as dependencies govern the order in
+which they appear in the link line. Should you run into compilation
+errors or problems, please submit a consulting ticket.
+
+Assuming you have loaded the openmpi module into your environment,
+you can compile a `simple MPI application </tutorials/hpc/ring>`__ as
+easily as executing::
+
+    $ mpicc -o ring ring.c
+
+
+
+Running MPI Applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once your MPI application is compiled, you run it on the compute nodes
+of a cluster via Torque. An example of an MPI parallel job script for
+India, Sierra, and Alamo that runs the ring application is::
+
+    #!/bin/bash
+
+    #PBS -N ring_test
+    #PBS -o ring_$PBS_JOBID.out
+    #PBS -e ring_$PBS_JOBID.err
+    #PBS -q short
+    #PBS -l nodes=4:ppn=8
+    #PBS -l walltime=00:20:00
+
+    # make sure MPI is in the environment
+    module load openmpi
+
+    # launch the parallel application with the correct number of processs
+    # Typical usage: mpirun -np <number of processes> <executable> <arguments>
+    mpirun -np 32 ring -t 1000
+
+There are two important differences between this script and the submit
+script shown previously. The first is that :ppn=8 is added to the
+request for four nodes. What this does is indicate that your application
+wants to allocate eight virtual processors per node. A virtual processor
+corresponds to a processing core. Alamo, Hotel, India, and Sierra all
+have eight cores per node, so the script above asks for exclusive access
+to four nodes with a total of 32 cores. The second importand difference
+from the previous submit script is that it executes mpirun with
+arguments that describe your MPI application. Note that the number of
+processes specified to mpirun is 32—matching the 32 cores allocated by
+Torque.
+
+A minor difference between this script and the previous one is that
+the environment variable $PBS_JOBID is used when creating the stdin and
+stdout files. Torque sets a number of environment variables that you can
+use in your submit script, starting with PBS.
 
 
 Managing Applications with Torque
@@ -213,8 +353,6 @@ FutureGrid provides a `list of HPC
 services <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
 that currently consists of nodes on Alamo, Hotel, India, Sierra, and
 Xray.
-
-.. todo: this list is incomplete
 
 
 Once you ssh into these nodes, you'll have access to the HPC queuing
@@ -326,142 +464,6 @@ A list of all available Torque commands is available from the `Torque
 manual page <http://www.clusterresources.com/torquedocs21/>`__.
 
  
-
-Message Passing Interface (MPI)
--------------------------------
-
-The Message Passing Interface Standard (MPI) is a message passing
-library standard based on the consensus of the MPI Forum, which has
-dozens of participating organizations, including vendors, researchers,
-software library developers, and users. The goal of the Message Passing
-Interface is to establish a portable, efficient, and flexible standard
-for message passing that will be widely used for writing message passing
-programs. MPI is the *de facto* standard communication library for
-almost all HPC systems, and is available in a variety of
-implementations.
-
-For more information, please visit:
-
--  `http://www.mpi-forum.org/ <http://www.mpi-forum.org/>`__
--  `http://www.mcs.anl.gov/research/projects/mpi/tutorial/ <http://www.mcs.anl.gov/research/projects/mpi/tutorial/>`__
-
-
-For more information on OpenMPI, the default MPI distribution on
-FutureGrid, please visit:
-
--  `http://www.open-mpi.org/ <http://www.open-mpi.org/>`__
-
-
-
-MPI Libraries
--------------
-
-
-The FutureGrid systems that support HPC-style usage have an MPI
-implementation. An up to date status can be retrieved via our `Inca
-status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC,HPC_Tests,Benchmarks&resourceIds=FG_BATCH>`__.
-
-.. csv-table:: MPI versions installed on FutureGrid HPC services
-   :header:   System   , MPI version   , Compiler   , Infiniband Support   , Module                  
-
-   Alamo        , OpenMPI 1.4.5     , Intel 11.1     , yes                      , openmpi                     
-   Bravo        , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
-		, OpenMPI 1.4.3     , gcc 4.4.6      , no                       , openmpi/1.4.3-gnu           
-		, OpenMPI 1.4.3     , Intel 11.1     , no                       , openmpi/1.4.3-intel         
-		, OpenMPI 1.5.4     , gcc 4.4.6      , no                       , openmpi/1.5.4-[gnu,intel]   
-   Hotel        , OpenMPI 1.4.3     , gcc 4.1.2      , yes                      , openmpi                     
-   India        , OpenMPI 1.4.2     , Intel 11.1     , yes                      , openmpi                     
-   Sierra       , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
-   Xray         ,                   ,                , N/A                      ,                             
-
-In cases where the OpenMPI is compiled with the Intel compilers
-loading the OpenMPI module will automatically load the Intel compilers
-as a dependency::
-
-    $ module load openmpi
-    Intel compiler suite version 11.1/072 loaded
-    OpenMPI version 1.4.3 loaded
-
-Loading the OpenMPI module adds the MPI compilers to your $PATH
-environment variable and the OpenMPI shared library directory to your
-$LD\_LIBRARY\_PATH. This is an important step to ensure MPI applications
-will compile and run successfully. Loading the torque module allows you
-to submit jobs to the scheduler.
- 
-
-Compiling MPI Applications
---------------------------
-
-To compile MPI applications, users have two options:
-
-#. Use the MPI compilers instead of regular Intel/GNU compilers
-#. Use the regular compilers (Intel/GNU) with MPI compilation flags
-
-We recommend using the MPI compilers to avoid compilation issues. This
-is accomplished by making the following replacements:
-
--  CC/icc/gcc with mpicc
--  CXX/icpc/g++ with mpicxx
--  F90/F77/FC/ifort/gfortran with mpif90
-
-Alternatively, for some codes that require intricate compilation flags
-and complicated make systems, and where changing compilers is not an
-option, you can edit the compilation/linking options for your codes.
-These options are machine, compiler, and language dependent. To view the
-options required for C, C++ and Fortran on any machine, you can issue
-the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
-be taken when using these flags, as dependencies govern the order in
-which they appear in the link line. Should you run into compilation
-errors or problems, please submit a consulting ticket.
-
-Assuming you have loaded the openmpi module into your environment,
-you can compile a `simple MPI application </tutorials/hpc/ring>`__ as
-easily as executing::
-
-    $ mpicc -o ring ring.c
-
-
-
-Running MPI Applications
-------------------------
-
-Once your MPI application is compiled, you run it on the compute nodes
-of a cluster via Torque. An example of an MPI parallel job script for
-India, Sierra, and Alamo that runs the ring application is::
-
-    #!/bin/bash
-
-    #PBS -N ring_test
-    #PBS -o ring_$PBS_JOBID.out
-    #PBS -e ring_$PBS_JOBID.err
-    #PBS -q short
-    #PBS -l nodes=4:ppn=8
-    #PBS -l walltime=00:20:00
-
-    # make sure MPI is in the environment
-    module load openmpi
-
-    # launch the parallel application with the correct number of processs
-    # Typical usage: mpirun -np <number of processes> <executable> <arguments>
-    mpirun -np 32 ring -t 1000
-
-There are two important differences between this script and the submit
-script shown previously. The first is that :ppn=8 is added to the
-request for four nodes. What this does is indicate that your application
-wants to allocate eight virtual processors per node. A virtual processor
-corresponds to a processing core. Alamo, Hotel, India, and Sierra all
-have eight cores per node, so the script above asks for exclusive access
-to four nodes with a total of 32 cores. The second importand difference
-from the previous submit script is that it executes mpirun with
-arguments that describe your MPI application. Note that the number of
-processes specified to mpirun is 32—matching the 32 cores allocated by
-Torque.
-
-A minor difference between this script and the previous one is that
-the environment variable $PBS\_JOBID is used when creating the stdin and
-stdout files. Torque sets a number of environment variables that you can
-use in your submit script, starting with PBS\_ .
-
  
 
 Working with HPC Job Services
@@ -803,16 +805,6 @@ into groups of eight, and the
 
 Storage Services
 ----------------------------------------------------------------------
-
-.. _t-storage-mountpoint:
-
-.. exceltable:: Storage mountpoints on the CLusters
-   :file: fg-cluster-details.xls
-   :header: 1
-   :selection: A1:G18
-   :sheet: fg-storage
-
-
 
 
 Using Indiana Universities Storage Services from FutureGrid
