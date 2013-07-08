@@ -25,7 +25,7 @@ Terminology
 ============
 
 Portal Account:
-  A portal account is necessary to comunicate information about
+  A portal account is necessary to communicate information about
   yourself to the FutureGrid team s they can verify that you exist and
   you are a community member with need to use FutureGrid. Once you
   have a portal account approved you can apply for a project.
@@ -179,7 +179,7 @@ The Project PI has agreed to certain reporting requirements to provide
 information to FutureGrid. He will be responsible to make sure that they
 are completed and also implemented with the users joining the project.
 Thus the user is responsible to comply with the terms of the project in
-regards to reporting and acknowledgements in case of publications. Each
+regards to reporting and acknowledgments in case of publications. Each
 project PI has the responsibility to communicate such requirements to
 the members and managers. The project agreements overwrite the
 individuals agreement. 
@@ -216,7 +216,7 @@ alumni's. If the user is in no other valid project she will no longer
 be able to use FG.  If the user really needs to be removed from the
 system or from the portal, please fill out the `help form
 <https://portal.futuregrid.org/help>`__ with the username and the
-reason why he should be removed.  ​Naturally, if you detect that a user
+reason why he should be removed.  Naturally, if you detect that a user
 acts maliciously, please inform us immediately. We will disable
 access. Put in your subject line the prefix URGENT.
 
@@ -272,7 +272,7 @@ after all.
 To upload the chosen public key:
 
 #. Copy your public identity into your system clipboard.
-#. Vist the `ssh-key panel of your account <https://portal.futuregrid.org/my/ssh-keys>`__.
+#. Visit the `ssh-key panel of your account <https://portal.futuregrid.org/my/ssh-keys>`__.
 #. Click the link that says Add a public key.
 
 
@@ -325,7 +325,7 @@ Manage a Class on FutureGrid
 
 If you teach a class using FutureGrid resources we recommend you do the following:
 
-#. Create a portal account if you do not have one
+#. Create a portal account if you do not have one.
 #. Apply for an educational project, carefully filling out the form
    including how many students, broader impact, such
    as support of minorities, what will be learned, the course syllabus
@@ -335,8 +335,9 @@ If you teach a class using FutureGrid resources we recommend you do the followin
    easily. 
 #. Make sure you enable the join button of the project, this will
    allow your students to join via a button click and you can easily
-   approve or reject join requests. Add a "signup code"
-#. Give your students a "signup code" signup code that you have tered
+   approve or reject join requests. Come up with a "signup code" to be
+   shared with the students.
+#. Give your students the signup code that you have chosen
    in the previous step. Communicate the signup code to the FutureGrid
    support team via a ticket submitted through
    https://portal.futuregrid.org/help. Make sure you specify your
@@ -390,7 +391,7 @@ If you teach a class using FutureGrid resources we recommend you do the followin
    account ;-) Generally we recommend to make due dates of projects to
    be Thursdays till 5pm or Friday mornings. Be reminded that the
    first Tuesday of each month all machines will be shut down and all
-   VMs or ongoing work may be lost. Please plan around this.
+   unsaved running VMs or ongoing work may be lost. Please plan around this.
 
 #. We have created some forums for the three services that you can
    find at https://portal.futuregrid.org/forum. These forums are read
