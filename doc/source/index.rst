@@ -1,5 +1,5 @@
 
-
+.. highlight:: bash
 
 .. _s-manual:
 

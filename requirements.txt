@@ -9,3 +9,4 @@ sphinxcontrib-blockdiag
 sphinxcontrib-actdiag
 sphinxcontrib-exceltable
 watchdog
+Pygments

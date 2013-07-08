@@ -34,7 +34,7 @@ Services and High Performance Computing at Technische Universität
 Dresden. The principal investigator is Dr. Geoffrey C. Fox, Director of
 the `Digital Science Center <http://pti.iu.edu/dsc>`__ at the
 IU `Pervasive Technology Institute <http://pti.iu.edu/>`__.
-
+ 
 
 .. _my-how-to-cite:
 
@@ -118,17 +118,24 @@ Gregor von Laszewski
 Conventions
 ============
 
+.. role:: rubric
+
+.. highlight:: bash
+
 $
     When showing examples of commands, the $ symbol precedes the
     actual command. So, the other lines are the output obtained after
-    executing the command.
+    executing the command. An example invoking the ls command
+    follows::
+
+       $ ls
 
 portalname:
-    In some examples we refer to your portal name as *yourportalname*
+    In some examples we refer to your portal name as |portalname|
 
 localname: 
     In some examples we refer to your local computers name as
-    *localname*. Your portal name and your local name may be
+    |localname|. Your portal name and your local name may be
     different.
 
 Menu selections:
@@ -136,3 +143,9 @@ Menu selections:
 
 Man page:
     :manpage:`ls(1)`
+
+.. role:: rubric
+
+.. |portalname| replace:: **portalname** :rubric:`red`
+
+.. |localname| replace:: **localname**
