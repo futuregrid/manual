@@ -1,3 +1,5 @@
+.. highlight:: bash
+
 .. _s-hpc:
 
 **********************************************************************
@@ -16,7 +18,7 @@ Login Nodes
 
 Several of the clusters have High Performance Computing (HPC) services
 installed. Access to them is provided via a Linux Login node for each
-of the clusters.
+of the clusters on which these services are installed.
 
 To access the login nodes you need a FG resource account and an SSH
 public key you have uploaded to FutureGrid (this process is described
@@ -32,6 +34,8 @@ resources with ssh. The resources include the following login nodes:
 - sierra.futuregrid.org
 - xray.futuregrid.org
 
+.. todo:: what are login nodes for delta, echo
+
 For example, assume your portalname is "portalname", than you can
 login to sierra as follows::
 
@@ -43,9 +47,9 @@ Modules
 ^^^^^^^^^^^^^^^
 
 The login nodes have the `modules <http://modules.sourceforge.net>`__
-packace installed. It provides a convenient tool to adapt your
-environment and enables you to activate different packges and services
-dependent on your spcific needs. The Modules utility to let you
+package installed. It provides a convenient tool to adapt your
+environment and enables you to activate different packages and services
+dependent on your specific needs. The Modules utility to let you
 dynamically control your environment. Modules allows you to load and
 unload packages and ensure a coherent working environment. 
 This ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD, and other
@@ -67,30 +71,30 @@ To add and remove packages from your environment you can use the
     $ module load <package name>/<optional package version>
     $ module unload <package name>/<optional package version>
 
-The available command ar elisted in the next table:
+The available command are listed in the next table:
 
 .. csv-table:: Module commands
    :header: Command, Description
 
-   $ module avail,	List all software packages available on the system.
-   $ module avail package,	List all versions of package available on the system
-   $ module list,	List all packages currently loaded in your environment.
-   $ module load package/version,	Add the specified version of the package to your environment
-   $ module unload package,	Remove the specified package from your environment.
-   $ module swap package_A package_B,	Swap the loaded package (package_A) with another package (package_B).
-   $ module show package,	Shows what changes will be made to your environment (e.g. paths to libraries and executables) by loading the specified package.
+   module avail,	List all software packages available on the system.
+   module avail package,	List all versions of package available on the system
+   module list,	List all packages currently loaded in your environment.
+   module load package/version,	Add the specified version of the package to your environment
+   module unload package,	Remove the specified package from your environment.
+   module swap package_A package_B,	Swap the loaded package (package_A) with another package (package_B).
+   module show package,	Shows what changes will be made to your environment (e.g. paths to libraries and executables) by loading the specified package.
 
 
 
-Example - List the modules on sierra after login:: 
+**Example** - List the currently loaded modules on sierra after login:: 
 
-   $module list
+   $ module list
 
    Currently Loaded Modulefiles:
      1) torque/2.4.8   2) moab/5.4.0
 
 
-Example - list the avialable modules on sierra::
+**Example** - list the avialable modules on sierra::
 
 
    $ module avail
@@ -125,13 +129,14 @@ Example - list the avialable modules on sierra::
    keystoneclient/0.2.3(default) vim/7.2
    marmot/2.4.0(default)
 
-Example - load the default cloudmesh module::
+**Example** - load a default module (in thi case cloudmesh)::
 
    $ module load cloudmesh
 
 Please note that for loading the default you do not have to specify the version number.
 
-
+List of Available Modules on Various Machines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table::
    :header: Module,hotel,india,sierra
@@ -189,7 +194,7 @@ Filesystem Layout
    this is an NFS file system, and may result in slower access for
    some applications. We also advise the users to provide external
    backup storage at their home institution or a code repository. For
-   example, we recommand that you use git or svn to make sure you
+   example, we recommend that you use git or svn to make sure you
    backup your changes to the code. Also make sure you backup your
    data. As a testbed, we do not guarantee dataloss.
     
@@ -206,7 +211,7 @@ Filesystem Layout
 
 .. _t-storage-mountpoint:
 
-.. exceltable:: Storage mountpoints on the CLusters
+.. exceltable:: Storage mountpoints on the Clusters
    :file: fg-cluster-details.xls
    :header: 1
    :selection: A1:G18
@@ -218,14 +223,14 @@ Filesystem Layout
 Message Passing Interface (MPI)
 -------------------------------
 
-Message Passing Interface Standard (MPI) is the *de facto* standard communication library for
-almost many HPC systems, and is available in a variety of
-implementations. It has been created through consensus of the MPI Forum, which has
-dozens of participating organizations, including vendors, researchers,
-software library developers, and users. The goal of the Message Passing
-Interface is to establish a portable, efficient, and flexible standard
-for message passing that will be widely used for writing message passing
-programs. For more information about MPI, please visit:
+The *Message Passing Interface Standard (MPI)* is the *de facto*
+standard communication library for almost many HPC systems, and is
+available in a variety of implementations. It has been created through
+consensus of the MPI Forum, which has dozens of participating
+organizations, including vendors, researchers, software library
+developers, and users. The goal of the Message Passing Interface is to
+provide a portable, efficient, and flexible standard for programs
+using message passing. For more information about MPI, please visit:
 
 -  `http://www.mpi-forum.org/ <http://www.mpi-forum.org/>`__
 -  `http://www.mcs.anl.gov/research/projects/mpi/tutorial/ <http://www.mcs.anl.gov/research/projects/mpi/tutorial/>`__
@@ -236,7 +241,6 @@ programs. For more information about MPI, please visit:
 MPI Libraries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 Several FutureGrid systems support MPI as part of their HPC services. 
 An up to date status about it can be retrieved via our `Inca
 status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC,HPC_Tests,Benchmarks&resourceIds=FG_BATCH>`__.
@@ -246,74 +250,97 @@ status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC
 .. csv-table:: MPI versions installed on FutureGrid HPC services
    :header:   System   , MPI version   , Compiler   , Infiniband Support   , Module                  
 
-   Alamo        , OpenMPI 1.4.5     , Intel 11.1     , yes                      , openmpi                     
-   Bravo        , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
-		, OpenMPI 1.4.3     , gcc 4.4.6      , no                       , openmpi/1.4.3-gnu           
-		, OpenMPI 1.4.3     , Intel 11.1     , no                       , openmpi/1.4.3-intel         
-		, OpenMPI 1.5.4     , gcc 4.4.6      , no                       , openmpi/1.5.4-[gnu,intel]   
-   Hotel        , OpenMPI 1.4.3     , gcc 4.1.2      , yes                      , openmpi                     
-   India        , OpenMPI 1.4.2     , Intel 11.1     , yes                      , openmpi                     
-   Sierra       , OpenMPI 1.4.2     , Intel 11.1     , no                       , openmpi                     
-   Xray         ,                   ,                , N/A                      ,                             
+   Alamo        , OpenMPI 1.4.5     , Intel 11.1     , yes   , openmpi           
+   Bravo        , OpenMPI 1.4.2     , Intel 11.1     , no    , openmpi                
+		, OpenMPI 1.4.3     , gcc 4.4.6      , no    , openmpi/1.4.3-gnu      
+		, OpenMPI 1.4.3     , Intel 11.1     , no    , openmpi/1.4.3-intel    
+		, OpenMPI 1.5.4     , gcc 4.4.6      , no    , openmpi/1.5.4-[gnu,intel]   
+   Hotel        , OpenMPI 1.4.3     , gcc 4.1.2      , yes   , openmpi                
+   India        , OpenMPI 1.4.2     , Intel 11.1     , yes   , openmpi                
+   Sierra       , OpenMPI 1.4.2     , Intel 11.1     , no    , openmpi                
+   Xray         ,                   ,                , N/A   ,                             
+
 Loading the OpenMPI module adds the MPI compilers to your $PATH
 environment variable and the OpenMPI shared library directory to your
 $LD_LIBRARY_PATH. This is an important step to ensure MPI applications
-will compile and run successfully. 
-
-In cases where the OpenMPI is compiled with the Intel compilers
-loading the OpenMPI module will automatically load the Intel compilers
-as a dependency::
+will compile and run successfully. In cases where the OpenMPI is
+compiled with the Intel compilers loading the OpenMPI module will
+automatically load the Intel compilers as a dependency. To load the
+default openmpi module and associated compilers, just use::
 
     $ module load openmpi
-    Intel compiler suite version 11.1/072 loaded
-    OpenMPI version 1.4.3 loaded
 
-.. todo:: different section::
-   Loading the torque module allows you to submit jobs to the scheduler.
- 
 
 Compiling MPI Applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To compile MPI applications, users have two options:
+To compile MPI applications, users can simply use the available mpi
+compile commands:
 
-#. Use the MPI compilers instead of regular Intel/GNU compilers
-#. Use the regular compilers (Intel/GNU) with MPI compilation flags
+mpicc:
+   To compile C programs with the the CC/icc/gcc compilers
 
-We recommend using the MPI compilers to avoid compilation issues. This
-is accomplished by making the following replacements:
+mpicxx:
+   To compile c++ programs with CXX/icpc/g++ with mpicxx
 
--  CC/icc/gcc with mpicc
--  CXX/icpc/g++ with mpicxx
--  F90/F77/FC/ifort/gfortran with mpif90
+mpif90:
+   To compile programs with F90/F77/FC/ifort/gfortran
 
-Alternatively, for some codes that require intricate compilation flags
-and complicated make systems, and where changing compilers is not an
-option, you can edit the compilation/linking options for your codes.
-These options are machine, compiler, and language dependent. To view the
-options required for C, C++ and Fortran on any machine, you can issue
-the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
-be taken when using these flags, as dependencies govern the order in
-which they appear in the link line. Should you run into compilation
-errors or problems, please submit a consulting ticket.
+
+To see in detail what these commands do you can add a *-show*  as an
+option. Thus the following commands::
+   
+   $ mpicc -show
+   $ mpicxx -show
+   $ mpif90 -show
+
+will show you the detail of each of them. The resulting output can be
+used as a template to adapt compile flags in case the default settings are
+not suitable for you.
+
 
 Assuming you have loaded the openmpi module into your environment,
-you can compile a `simple MPI application </tutorials/hpc/ring>`__ as
+you can compile a `simple MPI application <ring>`__ with
 easily as executing::
 
     $ mpicc -o ring ring.c
 
 
+Users MUST NOT run jobs on the login or headnodes. These nodes are
+reserved for editing and compiling programs. Furthermore running your
+commands on such nodes will not provide any useful information as you
+actually do not use the standard cluster node. 
 
-Running MPI Applications
+Batch Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once your MPI application is compiled, you run it on the compute nodes
-of a cluster via Torque. An example of an MPI parallel job script for
-India, Sierra, and Alamo that runs the ring application is::
+of a cluster via a batch processing. With the help of a batch
+processing services a job is run on the cluster without the users
+intervention via a job queue. The user does not have to worry much
+about the internal details of the job queue, but must provide the
+scheduler with some guidance about the job so it can be efficiently
+scheduled on the system.  
 
-    #!/bin/bash
+To run jobs on resources with the HPC services, users must first
+activate their environment to use the job scheduler::
 
+    $ module load torque
+
+A complete manual for the torque scheduler can be found in the `Torque
+manual<http://www.clusterresources.com/torquedocs21/>`__.
+
+Next we need to create a script so we can run the program on the
+cluster.  We will be using our simple ring example to illustrate some
+of the parameters you need to adjust:
+
+.. code-block:: bash
+   :linenos:
+
+    #! /bin/bash
+
+    # OPTIONS FOR THE SCRIPT
+    #PBS -M username@example.com 
     #PBS -N ring_test
     #PBS -o ring_$PBS_JOBID.out
     #PBS -e ring_$PBS_JOBID.err
@@ -321,46 +348,42 @@ India, Sierra, and Alamo that runs the ring application is::
     #PBS -l nodes=4:ppn=8
     #PBS -l walltime=00:20:00
 
+
     # make sure MPI is in the environment
     module load openmpi
 
-    # launch the parallel application with the correct number of processs
+    # launch the parallel application with the correct number of process
     # Typical usage: mpirun -np <number of processes> <executable> <arguments>
     mpirun -np 32 ring -t 1000
 
-There are two important differences between this script and the submit
-script shown previously. The first is that :ppn=8 is added to the
-request for four nodes. What this does is indicate that your application
-wants to allocate eight virtual processors per node. A virtual processor
-corresponds to a processing core. Alamo, Hotel, India, and Sierra all
-have eight cores per node, so the script above asks for exclusive access
-to four nodes with a total of 32 cores. The second importand difference
-from the previous submit script is that it executes mpirun with
-arguments that describe your MPI application. Note that the number of
-processes specified to mpirun is 32—matching the 32 cores allocated by
-Torque.
+    echo "Nodes allocated to this job: " 
+    cat $PBS_NODEFILE 
 
-A minor difference between this script and the previous one is that
-the environment variable $PBS_JOBID is used when creating the stdin and
-stdout files. Torque sets a number of environment variables that you can
-use in your submit script, starting with PBS.
+In the job script, lines that begin with  **#PBS** are directives to
+the job scheduler. You can disable any of these lines by adding an
+extra  **#** character at the beginning of the line, as *##* is
+interpreted to be a comment. Common options include:
+
+-  -M: specify a mail address that is notified upon completion
+-  -N: To specify a job name
+-  -o: The name of the file to write stdout to
+-  -e: The name of the file to write stderr to
+-  -q: The queue to submit the job to
+-  -l: Resources specifications to execute the job
 
 
-Managing Applications with Torque
----------------------------------
+The first parameters are rather obvious, so let us focus on the
+*-q* option. Each batch service is configured with a number of
+queues that are targeting different classes of jobs to more
+efficiently schedule them. These queues can be switch on or of,
+modified or new queues can be added to the system. It is useful to get
+a list of available queues on the system where you like to submit your
+jobs and inspect which would be most suitable to use for your
+purpose with the qstat command on the appropriate login node::
 
-FutureGrid provides a `list of HPC
-services <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__
-that currently consists of nodes on Alamo, Hotel, India, Sierra, and
-Xray.
+   $ qstat -q 
 
-
-Once you ssh into these nodes, you'll have access to the HPC queuing
-services for the machine you have logged into. You will enter into a
-Unix/Linux shell in which you can enter the typical Unix commands.
-Access to the clusters is provided through Torque/Moab commands
-from the command line. 
-
+Currently we have the following queues:
 
 
 HPC Job Queue Information:
@@ -380,291 +403,155 @@ HPC Job Queue Information:
 	foxtrot    , batch        , 1 hour                    , none                  , not for general use   
 
 
+.. todo:: remove the queue ajyounge from the system, can this be done
+   by preserving the logs?
 
-To run any jobs on resources within FutureGrid HPC services (single
-core, OpenMP or MPI jobs), users must use the job scheduler and a job
-submission script. Users should NOT run jobs on the login or headnodes.
-On FutureGrid machines, the job scheduler is the Torque (a variant of
-PBS). To load torque into your environment, execute::
+.. todo:: remove the queue b534 from the system, can this be done
+   while preserving the logs?
 
-    $ module load torque
+Next we focus on the -l option that specifies the resources. The
+term::
 
+  nodes=4
 
-To run a serial job, you start by creating a job submission script
-that both describes your job and will be executed on the compute nodes
-by Torque. An example of a job script for India, Sierra, and Alamo that
-runs */bin/hostname* is::
+means that we specify 4 servers on which we execute the job. The
+term::
 
-    #!/bin/bash
+  ppn=8 
 
-    #PBS -N hostname_test
-    #PBS -o hostname.out
-    #PBS -e hostname.err
-    #PBS -q short
-    #PBS -l nodes=1
-    #PBS -l walltime=00:20:00
+means that we use 8 virtual processors per node, while a virtual
+processor is typically executed on a core of the server. Thus it is
+advisable not to exceed the number of cores per server. For some
+programs choosing the best performing number of servers and cores may
+be dependent on factors such as memory needs, IO access and other
+resource bounded properties. You may have to experiment with the
+parameters. To identify the number of servers and cores available
+please see Tables :ref:`t-clusters` and :ref:`t-clusters-details`.
+For example, Alamo, Hotel, India, and Sierra have 8 cores per node,
+thus 4 servers would provide you access to 32 processing units.
 
-    /bin/hostname
+Often you may just want to have the stdout and stderr in one file,
+than you simply can replace the line with -e in it with:: 
 
-Options are passed to Torque on lines that begin with #PBS. The options
-above are:
+        #PBS -j oe 
 
--  -N: An optional job name
--  -o: The name of the file to write stdout to
--  -e: The name of the file to write stderr to
--  -q: The queue to submit the job to
--  -l: The resources needed by the job (in the case above, 1 node for 20
-   minutes)
+which simply means that you *join* stdout and stderr. Here j stands
+for join, o for stdout and e for stderr. In case you like to have
+e-mail send to you based on the status of the job, you can achieve
+this with adding::
 
-Additional information about the options that can be specified in a
-submit script is available in the qsub manual page via 'man qsub'. Note
-that there are multiple queues available on each FutureGrid system:
+        #PBS -m ae 
 
--  Alamo: short, long, default
--  Hotel: extended, batch, long and route
--  India: scalemp, batch, long and b534
--  Sierra: batch and long
--  Xray: batch
+to your script. It will send you mail when the job aborts (indicated
+by a), or when the job ends (indicated by e).
 
-You can find information (such as limits) that will help you select
-which queue to use by running qstat -q on the login node for the system
-you are interested in.
+Job Management
+---------------------------------
 
-Once you have created a submission script, you can then use the Torque
+A list of all available  scheduler commands is available from the `Torque
+manual page <http://www.clusterresources.com/torquedocs21/>`__. We
+describe next the use of some typical interactions to manage your jobs
+in the batch queue.
+
+Job Submission
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once you have created a submission script, you can then use the 
 qsub command to submit this job to be executed on the compute nodes::
 
-    $ qsub ring.sh
-    19095.master1.cm.cluster
+    $ qsub ring.pbs
+    20311.i136
 
 The qsub command outputs either a job identifier or an error message
-describing why Torque would not accept your job. If your job is
-submitted successfully, you can track its execution using the qstat
-command::
+describing why the scheduler would not accept your job. Alternatively,
+you can also use the msub command, which is very similar to the qsub
+command. For differences we ask you to consult the man pages.
 
-    $ qstat
-    Job id                    Name             User            Time Use S Queue
-    ------------------------- ---------------- --------------- -------- - -----
-    ...
-    19095.master1             hostname_test    user            00:00:00 R short
-    ...
+Job Deletion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sometimes you may want to delete a job from the queue, which can be
+easily done with the qdel command, followed by the id::
 
-If the system is busy, your job will initially be queued (Q) waiting for
-resources to become available. It will then be in the running state (R),
-and finally it will complete and not be visible in the qstat output. The
-full set of Torque job states is provided in the qstat manual page via
-man qstat on a FutureGrid login node. The stdout and stderr from your
-job will be placed in the files you specified in your submission script.
+   $ qdel 20311
 
-A final Torque command you will use occasionally is the qdel command
-that asks Torque to delete a job. If the job hasn't begun running, it is
-simply deleted from the queue. If the job has begun, it is killed on the
-nodes it's running on, and deleted from the queue.
-
-A list of all available Torque commands is available from the `Torque
-manual page <http://www.clusterresources.com/torquedocs21/>`__.
-
- 
- 
-
-Working with HPC Job Services
-----------------------------------------------------------------------
-
- 
-
-Running Queued Jobs as Part of the HPC Services
+Job Monitoring
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To run a job in the HPC service, you need to create a job script that
-tells the job manager how to run the job and how to handle things like
-output and notifications. You can then submit your job to the scheduler,
-monitor its progress in the job queue, and examine the output when it
-finishes.
-
-An example job script looks like this::
-
-        #!/bin/bash
-        #PBS -N testjob 
-        #PBS -l nodes=1:ppn=1 
-        #PBS -q batch 
-        #PBS -j oe 
-        ##PBS -M username@example.com 
-        ##PBS -m ae ##PBS -o testjob.out 
-        ## 
-        ## Everything following is run by the scheduler 
-        ## 
-        sleep 10 
-        echo -n "Host operating system version: " 
-        uname -a 
-        echo "Nodes allocated to this job: " 
-        cat $PBS_NODEFILE 
-        echo 
-        sleep 10 
-        ## 
-        ## End of job script 
-        ##
-
-In the job script, lines that begin with  **#PBS** are directives to
-the job scheduler. You can disable any of these lines by adding an
-extra  **#** character at the beginning of the line, for example::
+If your job is submitted successfully, you can track its execution
+using the qstat or showq commands. Both commands will show you the
+state of the jobs submitted to the scheduler. The difference is mostly
+in their output format.
 
 
-        ##PBS -M username@example.com
 
-This job script shows some common examples of directives that you might
-want to use in your job scripts. The directives in this job script are
-described below::
+showq:
+    divides the output into three sections:  active
+    jobs,  eligible jobs, and blocked jobs::
 
-        #!/bin/bash 
+       $ showq 
+       active jobs
+       ------------------------ 
+       JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME 
+       20311   yourusername       Running     16        3:59:59 Tue Aug 17 09:02:40 
+       1 active job 16 of 264 processors in use by local jobs (6.06%) 
+                         2 of 33 nodes active (6.06%) eligible jobs
+       ----------------------
+       JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
+       0 eligible jobs blocked jobs
+       ----------------------- 
+       JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
+       0 blocked jobs 
+       Total job: 1 
 
-This line isn't strictly required, but it is added as a fail-safe in
-case something unexpected happens. Normally, the job manager reads your
-script and processes the directives, and then runs your script as a
-normal shell script. This simply ensures that the system uses the
-standard bash shell to run your script::
+    Legend:
+       Active jobs:
+	  are jobs that are currently running on resources.
 
-        #PBS -N testjob 
+       Eligible jobs: 
+	  are jobs that are waiting for nodes to become available before
+	  they can run. As a general rule, jobs are listed in the order
+	  that they will be scheduled, but scheduling algorithms may
+	  change the order over time.
 
-This line gives your job a name of  **testjob**. This name will be used
-by the job manager when it shows a job listing, and will be used for
-your output file(s) unless you explicitly specify an output file::
+       Blocked jobs:
+	  are jobs that the scheduler cannot run for some reason. Usually
+	  a job becomes blocked because it is requesting something that
+	  is impossible, such as more nodes than currently exist, or more
+	  processors per node than are installed.
 
-        #PBS -l nodes=1:ppn=1 
-
-This line tells the job manager what your job requires for resources. In
-this case, your job is asking for one node (**nodes=1**) and at least
-one processor per node (**ppn=1**). See the
-[[Sw:Manual/PBSDirectives\|PBSDirectives] page for other options you can
-specify here::
-
-        #PBS -q batch 
-
-This line tells the job manager which job queue your job should be sent
-to. Each job queue has different characteristics, such as the maximum
-time a job is allowed to run, or the maximum number of nodes a job can
-use::
-
-        #PBS -j oe 
-
-This line tells the job manager to join the job standard output and
-standard error into a single file. For jobs with a small amount of
-output, this is usually helpful. If your job produces a lot of standard
-output, it may be helpful to keep the files separate so you can easily
-locate error messages in the single error file::
-
-        ##PBS -M username@example.com 
-
-Note that this line is a comment since it starts with  **##** instead
-of  **#PBS**. If you remove the first  **#**, this line will set the
-email address that will get notified about events related to this job.
-The events that get reported are set by the next line::
-
-        ##PBS -m ae 
-
-Again, note that this line is commented out. If you remove the
-first  **#**, this line will send email whenever the job fails
-(or **a** borts) (**a** option), and when the job ends (**e** option).
-This is particularly helpful if your job has to wait a long time in the
-queue before it runs::
-
-        ##PBS -o testjob.out 
-
-Again, note that this line is commented out. If you remove the
-first  **#**, this line will specify the file name to be used for job
-output.
-
-Submitting Your Job
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can submit your job with the  **qsub** or **msub** commands.
-The  **msub** and **qsub** are almost identical, and can mostly be used
-interchangeably. See the respective man pages for specific differences.
-Neither submission command provides much output. Examples of a job
-submission using both commands follows:
-
-Using  **msub**::
-
-        $ msub testjob.pbs 
-        292250 
-
-Using  **qsub**::
-
-        $ qsub testjob.pbs 
-        292251.s82 
-
-In both cases, the number that gets returned is the job number that the
-scheduler assigned to your job. In the case of  **qsub**, the job
-number is followed by the host name where you submitted the job.
-
-Monitoring Your Job
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To monitor your job after it has been submitted, you can use
-the  **qstat** or **showq** commands. Both commands will show you the
-state of the job manager, but the information is displayed in different
-formats. In general, the  **showq** command gives more complete
-information, and in a form that is a bit easier to read.
-The  **qstat** command gives a very concise listing of the job queue,
-and in some instances this may give you a better quick overview of the
-resource.
-
-Using the test job script as an example, here is the output from
-the  **showq** command::
-
-        $ showq 
-        active jobs
-        ------------------------ 
-        JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME 
-        292252   yourusername       Running     16        3:59:59 Tue Aug 17 09:02:40 
-        1 active job 16 of 264 processors in use by local jobs (6.06%) 
-                          2 of 33 nodes active (6.06%) eligible jobs
-        ----------------------
-        JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-        0 eligible jobs blocked jobs
-        ----------------------- 
-        JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-        0 blocked jobs 
-        Total job: 1 
-
-You can see the output is divided into three sections:  **active
-jobs**,  **eligible jobs**, and  **blocked jobs**.
-
-#. **Active jobs** are jobs that are currently running on the resource.
-
-#. **Eligible jobs** are jobs that are waiting for nodes to become
-   available before they can run. As a general rule, jobs are listed in the
-   order that they will be scheduled, but scheduling algorithms may change
-   the order over time.
-
-#. **Blocked jobs** are jobs that the scheduler cannot run for some
-   reason. Usually a job becomes blocked because it is requesting something
-   that is impossible, such as more nodes than currently exist, or more
-   processors per node than are installed.
-
- 
-
-Using the test job as an example again, here is the output from
-the  **qstat** command::
+qstat:
+    provides a single table view, where the status of each job is
+    added via a status column called S::
 
         $ qstat 
         Job id                             Name               User          Time Use S Queue 
         ------------------------- --------------------- ------------------- -------- - ----- 
         1981.i136                       sub19327.sub      inca               00:00:00 C batch 
-        1982.i136                       testjob           yourusername                      0 R batch 
+        20311.i136                      testjob           yourusername              0 R batch 
 
-The  **qstat** command provides output in six columns:
+    Legend:
+       Job id:
+	  is the identifier assigned to your job.
+       Name:
+	  is the name that you assigned to your job.
+       User:
+	  is the username of the person who submitted the job.
+       Time:
+	  is the amount of time the job has been running.
+       S:
+	  shows the job state. Common job states are R for a running job, Q
+	  for a job that is queued and waiting to run, C for a job that has
+	  completed, and H for a job that is being held.
+       Queue: 
+	  is the name of the job queue where your job will run.
 
-#. Job id is the identifier assigned to your job.
-#. Name is the name that you assigned to your job.
-#. User is the username of the person who submitted the job.
-#. Time Use is the amount of time the job has been running.
-#. S shows the job state. Common job states are R for a running job, Q
-   for a job that is queued and waiting to run, C for a job that has
-   completed, and H for a job that is being held.
-#. Queue is the name of the job queue where your job will run.
+If you are interested in only your job by for example using grep::
+
+    $ qstat | grep 20311
 
  
 
-Examining Your Job Output
+Job Output
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you gave your job a name with the  **#PBS -N <jobname>** directive
@@ -700,10 +587,9 @@ For MPI jobs, use cc (pgcc). For best performance, add the xtpe-barcelona module
     % module add xtpe-module
 
 Currently there is only one queue (batch) available to users on the
-Cray, and all jobs are automatically routed to that queue.
-
-
-To list the queues please use::
+Cray, and all jobs are automatically routed to that queue.  You can
+use the same commands as introduced in the previous sections. Thus, to
+list the queues please use::
 
          qstat -Q
 
@@ -711,44 +597,40 @@ To obtain details of running jobs and available processors, use the showq comman
 
         /opt/moab/default/bin/showq
 
-Submitting a job on xray
+Submitting a Job on xray
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: this example is incomplete and connfusing. we cat the job. submit but do
-   not show how we submit ;-)
+To execute an MPI program on xray we use a special program called aprun in
+the submit script. Additionally we have some special resource
+specifications that we can pass along, such as mppwidth and
+mppppn. An example is the following program that will use 16
+processors on 2 nodes::
 
-
-**MPI run cmd**:  aprun
-
-Example job script (16 processors / 2 nodes)::
-
-        % cat job.sub 
+        $ cat job.pbs
 
 ::
 
-        #!/bin/sh
+        #! /bin/sh
+        
         #PBS -l mppwidth=16 
         #PBS -l mppnppn=8 
         #PBS -N hpcc-16 
         #PBS -j oe 
         #PBS -l walltime=7:00:00 
+        
         #cd to directory where job was submitted from 
         cd $PBS_O_WORKDIR 
         export MPICH_FAST_MEMCPY=1 
         export MPICH_PTL_MATCH_OFF=1 
         aprun -n 16 -N 8 -ss -cc cpu hpcc
-        % qsub job.sub 
 
-Looking at the Queue ::
-
-        % qstat
+        $ qsub job.pbs 
 
 The XT5m is a 2D mesh of nodes. Each node has two sockets, and each
-socket has four cores.
-
-The batch scheduler interfaces with a Cray resource scheduler called
-APLS. When you submit a job, the batch scheduler talks to ALPS to find
-out what resources are available, and ALPS then makes the reservation.
+socket has four cores. The batch scheduler interfaces with a Cray
+resource scheduler called APLS. When you submit a job, the batch
+scheduler talks to ALPS to find out what resources are available, and
+ALPS then makes the reservation.
 
 Currently ALPS is a "gang scheduler" and only allows one "job" per node.
 If a user submits a job in the format aprun -n 1 a.out , ALPS will put
@@ -779,10 +661,10 @@ will not work::
         OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 7 ./my-binary
 
 This will run a job on each core, but not at the same time. To run all
-jobs at the same time, you need to first bury all the binaries under
+jobs at the same time, you need to first add all the binaries within 
 one aprun command::
 
-        $ more run.sh
+        $ cat run-all.pbs
         ./my-binary1
         ./my-binary2
         ./my-binary3
@@ -791,13 +673,11 @@ one aprun command::
         ./my-binary6
         ./my-binary7
         ./my-binary8
-        $ aprun -n 1 run.sh
+        $ aprun -n 1 run.pbs
 
-Alternatively, use the command aprun -n 1 -d 8 run.sh. To run multiple
+Alternatively, use the command aprun -n 1 -d 8 run.pbs. To run multiple
 serial jobs, you must build a batch script to divide the number of jobs
 into groups of eight, and the
-
-.. todo:: where is run.sh, is see job.sub but not run.sh
 
 .. _s-storage:
 
@@ -859,3 +739,18 @@ the IU passphrase.
 
 -  For transferring files (*put* and *get*), search the `IU Knowledge
    Base <http://kb.iu.edu/?search=hsi>`__.
+
+
+DELETED
+========
+
+The second importand difference
+from the previous submit script is that it executes mpirun with
+arguments that describe your MPI application. Note that the number of
+processes specified to mpirun is 32—matching the 32 cores allocated by
+Torque.
+
+A minor difference between this script and the previous one is that
+the environment variable $PBS_JOBID is used when creating the stdin and
+stdout files. Torque sets a number of environment variables that you can
+use in your submit script, starting with PBS.

@@ -82,7 +82,7 @@ not be used in another.
 -  Find your credential zip file in cd
    $HOME/.futuregrid/eucalyptus/fgprojectnumber::
 
-           $ unzip euca3-{username}-{cluster}-fgprojectnumber.zip  
+           $ unzip euca3-{username}-{cluster}-fgprojectnumber.zip  
 
 -  Apply the eucarc file::
 
@@ -104,33 +104,27 @@ Eucalyptus is available to FutureGrid Users on the India and Sierra
 clusters. As we will see later, when we instantiate a Virtual Machine
 (VM) it is needed to select the type of VM Image that we are going to
 use. In this sense, the information of the VM Image types available in
-each cluster is summarized below:
+each cluster is summarized next.
 
-INDIA: 
-^^^^^^^
+India::
 
-::
+    AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
+    AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
+    AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
+    AVAILABILITYZONE    |- c1.medium    0170 / 0171   1   2048     7
+    AVAILABILITYZONE    |- m1.large    0091 / 0094   2   5120    10
+    AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
+    AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20
 
-    AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
-    AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
-    AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
-    AVAILABILITYZONE    |- c1.medium    0170 / 0171   1   2048     7
-    AVAILABILITYZONE    |- m1.large    0091 / 0094   2   5120    10
-    AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
-    AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20
+Sierr::
 
-SIERRA: 
-^^^^^^^^
-
-::
-
-    AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
-    AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
-    AVAILABILITYZONE    |- m1.small    0051 / 0056   1    256     4
-    AVAILABILITYZONE    |- c1.medium    0037 / 0042   1    512     5
-    AVAILABILITYZONE    |- m1.large    0012 / 0014   2   1024    10
-    AVAILABILITYZONE    |- m1.xlarge    0012 / 0014   2   1024    12
-    AVAILABILITYZONE    |- c1.xlarge    0009 / 0014   4   2048    15
+    AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
+    AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
+    AVAILABILITYZONE    |- m1.small    0051 / 0056   1    256     4
+    AVAILABILITYZONE    |- c1.medium    0037 / 0042   1    512     5
+    AVAILABILITYZONE    |- m1.large    0012 / 0014   2   1024    10
+    AVAILABILITYZONE    |- m1.xlarge    0012 / 0014   2   1024    12
+    AVAILABILITYZONE    |- c1.xlarge    0009 / 0014   4   2048    15
 
 Testing Your Setup
 ----------------------
@@ -153,7 +147,7 @@ Use euca-describe-availability-zones to test the setup::
 
         $ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
         $ euca-describe-availability-zones
-        AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
+        AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
 
 Available Images
 
@@ -161,16 +155,16 @@ List the existing images using euca-describe-images::
 
         $ euca-describe-images 
 
-        IMAGE    emi-8E1C3B69    euca-centos-2012/euca-centos-2012.1.14-x86_64.img.manifest.xml    available    public    
-        IMAGE    emi-D21D3F6C    euca3/ubuntu-natty.img.manifest.xml    available    public    
-        IMAGE    emi-1A413C95    centos/centos.5-3.x86-64.img.manifest.xml    available    public    
-        IMAGE    eki-9F293A6A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        IMAGE    emi-0FA13B83    inca/centos5inca3128800784.img.manifest.xml    available    public    
-        IMAGE    emi-A9D33917    ubuntu/ubuntu.9-04.x86-64.img.manifest.xml    available    public    
-        IMAGE    eri-D1513DBA    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public    
-        IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
+        IMAGE    emi-8E1C3B69    euca-centos-2012/euca-centos-2012.1.14-x86_64.img.manifest.xml    available    public    
+        IMAGE    emi-D21D3F6C    euca3/ubuntu-natty.img.manifest.xml    available    public    
+        IMAGE    emi-1A413C95    centos/centos.5-3.x86-64.img.manifest.xml    available    public    
+        IMAGE    eki-9F293A6A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
+        IMAGE    emi-0FA13B83    inca/centos5inca3128800784.img.manifest.xml    available    public    
+        IMAGE    emi-A9D33917    ubuntu/ubuntu.9-04.x86-64.img.manifest.xml    available    public    
+        IMAGE    eri-D1513DBA    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
+        IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
+        IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public    
+        IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
 
 
 Image Deployment
@@ -180,7 +174,7 @@ Before deploying a VM, you need to create at least one key pair. This
 key pair will be injected into the VM, allowing you to SSH into the
 instance. This is done using the euca-add-keypair command::
 
-        $ euca-add-keypair userkey   > userkey.pem
+        $ euca-add-keypair userkey   > userkey.pem
 
 Fix the permissions on the generated private key::
 
@@ -193,8 +187,8 @@ euca-run-instances command to start the VM::
 
         $ euca-run-instances -k userkey -n 1   emi-0B951139 -t c1.medium
 
-        RESERVATION     r-4E730969      archit    archit-default
-        INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255
+        RESERVATION     r-4E730969      archit    archit-default
+        INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255
 
 The euca-describe-instances command can be used to check the status
 of the request. The following image was assigned an ip address and is
@@ -202,17 +196,17 @@ starting up, as demonstrated by the "pending" status::
 
         $ euca-describe-instances 
 
-        RESERVATION     r-4E730969      archit    default
-        INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0       
-                  m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
+        RESERVATION     r-4E730969      archit    default
+        INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0       
+                  m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
 Once started, the status will change to "running"::
 
         $ euca-describe-instances
 
-        RESERVATION     r-4E730969      archit    default
-        INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0       
-                  m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
+        RESERVATION     r-4E730969      archit    default
+        INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0       
+                  m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
 If you need to delete a deployed VM, you can use the
 euca-terminate-instances command::
@@ -224,7 +218,7 @@ Logging Into the VM
 
 Create rules to allow access to the VM over ssh and to allow ping
 
-    $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
+    $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
     $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
 
 The ssh private key that was generated earlier can now be used to
@@ -234,7 +228,7 @@ login to the VM::
 
         # uname -a
 
-         Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux
+         Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux
 
 VM Network Info
 -------------------
@@ -244,8 +238,8 @@ internal network will show the VM private IP address::
 
         # /sbin/ifconfig
 
-        eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40  
-                inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192
+        eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40  
+                inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192
 
 Image Management
 --------------------
@@ -253,7 +247,7 @@ Image Management
 We will use the example ubuntu 10 image to test uploading images.
 Download the gzipped tar ball::
 
-        $ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz
+        $ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz
 
 Uncompress and untar the archive::
 
@@ -319,7 +313,7 @@ Register the uploaded image::
 
         $ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
 
-        IMAGE   emi-FFC3154F
+        IMAGE   emi-FFC3154F
 
 The returned image ID can now be used to start instances with
 euca-run-instances as described earlier. euca-describe-images also
@@ -339,7 +333,7 @@ Status of Deployments
 ---------------------
 
 At times you may ask if the Eucalyptus systems on FutureGrid are
-operational. You can find this out by visiting 
+operational. You can find this out by visiting 
 
 a) The :portal:`Outage page <metrics/html/results/realtime.html#total-count-of-running-vm-instances-updated-every-5-seconds>`
 b) The `Real Time Status monitor <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__

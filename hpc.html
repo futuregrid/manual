@@ -118,10 +118,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. HPC Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#login-nodes">2.1. Login Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#working-with-hpc-job-services">2.4. Working with HPC Job Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#xray-hpc-services">2.5. Xray HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#storage-services">2.6. Storage Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#job-management">2.3. Job Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xray-hpc-services">2.4. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storage-services">2.5. Storage Services</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
@@ -208,11 +207,15 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">4.6. Watchdog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.9. jira</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.10. Portal link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.11. Screencast recording tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.12. Screencast recording tips</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
 </ul>
 </li>
@@ -222,29 +225,32 @@
 <li><a class="reference internal" href="#">2. HPC Services</a><ul>
 <li><a class="reference internal" href="#login-nodes">2.1. Login Nodes</a><ul>
 <li><a class="reference internal" href="#modules">2.1.1. Modules</a></li>
-<li><a class="reference internal" href="#filesystem-layout">2.1.2. Filesystem Layout</a></li>
+<li><a class="reference internal" href="#list-of-available-modules-on-various-machines">2.1.2. List of Available Modules on Various Machines</a></li>
+<li><a class="reference internal" href="#filesystem-layout">2.1.3. Filesystem Layout</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a><ul>
 <li><a class="reference internal" href="#mpi-libraries">2.2.1. MPI Libraries</a></li>
 <li><a class="reference internal" href="#compiling-mpi-applications">2.2.2. Compiling MPI Applications</a></li>
-<li><a class="reference internal" href="#running-mpi-applications">2.2.3. Running MPI Applications</a></li>
+<li><a class="reference internal" href="#batch-jobs">2.2.3. Batch Jobs</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
-<li><a class="reference internal" href="#working-with-hpc-job-services">2.4. Working with HPC Job Services</a><ul>
-<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services">2.4.1. Running Queued Jobs as Part of the HPC Services</a></li>
-<li><a class="reference internal" href="#submitting-your-job">2.4.2. Submitting Your Job</a></li>
-<li><a class="reference internal" href="#monitoring-your-job">2.4.3. Monitoring Your Job</a></li>
-<li><a class="reference internal" href="#examining-your-job-output">2.4.4. Examining Your Job Output</a></li>
+<li><a class="reference internal" href="#job-management">2.3. Job Management</a><ul>
+<li><a class="reference internal" href="#job-submission">2.3.1. Job Submission</a></li>
+<li><a class="reference internal" href="#job-deletion">2.3.2. Job Deletion</a></li>
+<li><a class="reference internal" href="#job-monitoring">2.3.3. Job Monitoring</a></li>
+<li><a class="reference internal" href="#job-output">2.3.4. Job Output</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#xray-hpc-services">2.5. Xray HPC Services</a><ul>
-<li><a class="reference internal" href="#submitting-a-job-on-xray">2.5.1. Submitting a job on xray</a></li>
+<li><a class="reference internal" href="#xray-hpc-services">2.4. Xray HPC Services</a><ul>
+<li><a class="reference internal" href="#submitting-a-job-on-xray">2.4.1. Submitting a Job on xray</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#storage-services">2.6. Storage Services</a><ul>
-<li><a class="reference internal" href="#using-indiana-universities-storage-services-from-futuregrid">2.6.1. Using Indiana Universities Storage Services from FutureGrid</a></li>
+<li><a class="reference internal" href="#storage-services">2.5. Storage Services</a><ul>
+<li><a class="reference internal" href="#using-indiana-universities-storage-services-from-futuregrid">2.5.1. Using Indiana Universities Storage Services from FutureGrid</a><ul>
+<li><a class="reference internal" href="#deleted">2.5.1.1. DELETED</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -288,41 +294,44 @@
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#login-nodes" id="id1">Login Nodes</a><ul>
-<li><a class="reference internal" href="#modules" id="id2">Modules</a></li>
-<li><a class="reference internal" href="#filesystem-layout" id="id3">Filesystem Layout</a></li>
+<li><a class="reference internal" href="#login-nodes" id="id3">Login Nodes</a><ul>
+<li><a class="reference internal" href="#modules" id="id4">Modules</a></li>
+<li><a class="reference internal" href="#list-of-available-modules-on-various-machines" id="id5">List of Available Modules on Various Machines</a></li>
+<li><a class="reference internal" href="#filesystem-layout" id="id6">Filesystem Layout</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#message-passing-interface-mpi" id="id4">Message Passing Interface (MPI)</a><ul>
-<li><a class="reference internal" href="#mpi-libraries" id="id5">MPI Libraries</a></li>
-<li><a class="reference internal" href="#compiling-mpi-applications" id="id6">Compiling MPI Applications</a></li>
-<li><a class="reference internal" href="#running-mpi-applications" id="id7">Running MPI Applications</a></li>
+<li><a class="reference internal" href="#message-passing-interface-mpi" id="id7">Message Passing Interface (MPI)</a><ul>
+<li><a class="reference internal" href="#mpi-libraries" id="id8">MPI Libraries</a></li>
+<li><a class="reference internal" href="#compiling-mpi-applications" id="id9">Compiling MPI Applications</a></li>
+<li><a class="reference internal" href="#batch-jobs" id="id10">Batch Jobs</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#managing-applications-with-torque" id="id8">Managing Applications with Torque</a></li>
-<li><a class="reference internal" href="#working-with-hpc-job-services" id="id9">Working with HPC Job Services</a><ul>
-<li><a class="reference internal" href="#running-queued-jobs-as-part-of-the-hpc-services" id="id10">Running Queued Jobs as Part of the HPC Services</a></li>
-<li><a class="reference internal" href="#submitting-your-job" id="id11">Submitting Your Job</a></li>
-<li><a class="reference internal" href="#monitoring-your-job" id="id12">Monitoring Your Job</a></li>
-<li><a class="reference internal" href="#examining-your-job-output" id="id13">Examining Your Job Output</a></li>
+<li><a class="reference internal" href="#job-management" id="id11">Job Management</a><ul>
+<li><a class="reference internal" href="#job-submission" id="id12">Job Submission</a></li>
+<li><a class="reference internal" href="#job-deletion" id="id13">Job Deletion</a></li>
+<li><a class="reference internal" href="#job-monitoring" id="id14">Job Monitoring</a></li>
+<li><a class="reference internal" href="#job-output" id="id15">Job Output</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#xray-hpc-services" id="id14">Xray HPC Services</a><ul>
-<li><a class="reference internal" href="#submitting-a-job-on-xray" id="id15">Submitting a job on xray</a></li>
+<li><a class="reference internal" href="#xray-hpc-services" id="id16">Xray HPC Services</a><ul>
+<li><a class="reference internal" href="#submitting-a-job-on-xray" id="id17">Submitting a Job on xray</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#storage-services" id="id16">Storage Services</a><ul>
-<li><a class="reference internal" href="#using-indiana-universities-storage-services-from-futuregrid" id="id17">Using Indiana Universities Storage Services from FutureGrid</a></li>
+<li><a class="reference internal" href="#storage-services" id="id18">Storage Services</a><ul>
+<li><a class="reference internal" href="#using-indiana-universities-storage-services-from-futuregrid" id="id19">Using Indiana Universities Storage Services from FutureGrid</a><ul>
+<li><a class="reference internal" href="#deleted" id="id20">DELETED</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="login-nodes">
-<span id="s-hpc-access"></span><h2><a class="toc-backref" href="#id1">2.1. Login Nodes</a><a class="headerlink" href="#login-nodes" title="Permalink to this headline">¶</a></h2>
+<span id="s-hpc-access"></span><h2><a class="toc-backref" href="#id3">2.1. Login Nodes</a><a class="headerlink" href="#login-nodes" title="Permalink to this headline">¶</a></h2>
 <p>Several of the clusters have High Performance Computing (HPC) services
 installed. Access to them is provided via a Linux Login node for each
-of the clusters.</p>
+of the clusters on which these services are installed.</p>
 <p>To access the login nodes you need a FG resource account and an SSH
 public key you have uploaded to FutureGrid (this process is described
 in the section about <a class="reference internal" href="account.html#s-accounts"><em>Project and Account Management</em></a>. After you are part of a valid
@@ -337,18 +346,23 @@ resources with ssh. The resources include the following login nodes:</p>
 <li>sierra.futuregrid.org</li>
 <li>xray.futuregrid.org</li>
 </ul>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">what are login nodes for delta, echo</p>
+</div>
 <p>For example, assume your portalname is &#8220;portalname&#8221;, than you can
 login to sierra as follows:</p>
-<div class="highlight-python"><pre>$ ssh portalname@sierra.futuregrid.org
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ssh portalname@sierra.futuregrid.org
 Welcome to sierra.futuregrid.org
-Last login: Thu Aug 12 19:19:22 2010 from ....</pre>
+Last login: Thu Aug 12 19:19:22 2010 from ....
+</pre></div>
 </div>
 <div class="section" id="modules">
-<h3><a class="toc-backref" href="#id2">2.1.1. Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">2.1.1. Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
 <p>The login nodes have the <a class="reference external" href="http://modules.sourceforge.net">modules</a>
-packace installed. It provides a convenient tool to adapt your
-environment and enables you to activate different packges and services
-dependent on your spcific needs. The Modules utility to let you
+package installed. It provides a convenient tool to adapt your
+environment and enables you to activate different packages and services
+dependent on your specific needs. The Modules utility to let you
 dynamically control your environment. Modules allows you to load and
 unload packages and ensure a coherent working environment.
 This ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD, and other
@@ -356,17 +370,20 @@ environment variables are properly set, and that you can access the
 programs and libraries you need. For additional information about the
 Modules package you can consult the <a class="reference external" href="http://modules.sourceforge.net/man/module.html">manual page</a>.</p>
 <p>To display the list of available modules:</p>
-<div class="highlight-python"><pre>$ module avail</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module avail
+</pre></div>
 </div>
 <p>To display the list of currently loaded modules:</p>
-<div class="highlight-python"><pre>$ module list</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module list
+</pre></div>
 </div>
 <p>To add and remove packages from your environment you can use the
 <em>module load</em> and <em>module unload</em> commands:</p>
-<div class="highlight-python"><pre>$ module load &lt;package name&gt;/&lt;optional package version&gt;
-$ module unload &lt;package name&gt;/&lt;optional package version&gt;</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module load &lt;package name&gt;/&lt;optional package version&gt;
+<span class="nv">$ </span>module unload &lt;package name&gt;/&lt;optional package version&gt;
+</pre></div>
 </div>
-<p>The available command ar elisted in the next table:</p>
+<p>The available command are listed in the next table:</p>
 <table border="1" class="docutils">
 <caption>Module commands</caption>
 <colgroup>
@@ -379,72 +396,78 @@ $ module unload &lt;package name&gt;/&lt;optional package version&gt;</pre>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>$ module avail</td>
+<tr class="row-even"><td>module avail</td>
 <td>List all software packages available on the system.</td>
 </tr>
-<tr class="row-odd"><td>$ module avail package</td>
+<tr class="row-odd"><td>module avail package</td>
 <td>List all versions of package available on the system</td>
 </tr>
-<tr class="row-even"><td>$ module list</td>
+<tr class="row-even"><td>module list</td>
 <td>List all packages currently loaded in your environment.</td>
 </tr>
-<tr class="row-odd"><td>$ module load package/version</td>
+<tr class="row-odd"><td>module load package/version</td>
 <td>Add the specified version of the package to your environment</td>
 </tr>
-<tr class="row-even"><td>$ module unload package</td>
+<tr class="row-even"><td>module unload package</td>
 <td>Remove the specified package from your environment.</td>
 </tr>
-<tr class="row-odd"><td>$ module swap package_A package_B</td>
+<tr class="row-odd"><td>module swap package_A package_B</td>
 <td>Swap the loaded package (package_A) with another package (package_B).</td>
 </tr>
-<tr class="row-even"><td>$ module show package</td>
+<tr class="row-even"><td>module show package</td>
 <td>Shows what changes will be made to your environment (e.g. paths to libraries and executables) by loading the specified package.</td>
 </tr>
 </tbody>
 </table>
-<p>Example - List the modules on sierra after login:</p>
-<div class="highlight-python"><pre>$module list
+<p><strong>Example</strong> - List the currently loaded modules on sierra after login:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module list
 
 Currently Loaded Modulefiles:
-  1) torque/2.4.8   2) moab/5.4.0</pre>
+  1<span class="o">)</span> torque/2.4.8   2<span class="o">)</span> moab/5.4.0
+</pre></div>
 </div>
-<p>Example - list the avialable modules on sierra:</p>
-<div class="highlight-python"><pre>$ module avail
+<p><strong>Example</strong> - list the avialable modules on sierra:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module avail
 
 ----------------- /opt/Modules/3.2.8/modulefiles/applications ------------------
-R/2.11.1(default)      hpcc/1.3.1(default)    velvet/1.0.15
-git/1.7.10             ncbi/2.2.23(default)   wgs/6.1
-gromacs/4.0.7(default) soapdenovo/1.04
+R/2.11.1<span class="o">(</span>default<span class="o">)</span>      hpcc/1.3.1<span class="o">(</span>default<span class="o">)</span>    velvet/1.0.15
+git/1.7.10             ncbi/2.2.23<span class="o">(</span>default<span class="o">)</span>   wgs/6.1
+gromacs/4.0.7<span class="o">(</span>default<span class="o">)</span> soapdenovo/1.04
 
 ------------------- /opt/Modules/3.2.8/modulefiles/compilers -------------------
-cmake/2.8.1(default)       java/1.6.0-i586
-intel/10.1                 java/1.6.0-x86_64(default)
-intel/11.1(default)
+cmake/2.8.1<span class="o">(</span>default<span class="o">)</span>       java/1.6.0-i586
+intel/10.1                 java/1.6.0-x86_64<span class="o">(</span>default<span class="o">)</span>
+intel/11.1<span class="o">(</span>default<span class="o">)</span>
 
 ------------------- /opt/Modules/3.2.8/modulefiles/debuggers -------------------
-null                       totalview/8.8.0-2(default)
+null                       totalview/8.8.0-2<span class="o">(</span>default<span class="o">)</span>
 
 ------------------- /opt/Modules/3.2.8/modulefiles/libraries -------------------
-intelmpi/4.0.0.028(default)  openmpi/1.4.3-intel
-mkl/10.2.5.035(default)      otf/1.7.0(default)
-openmpi/1.4.2(default)       unimci/1.0.1(default)
+intelmpi/4.0.0.028<span class="o">(</span>default<span class="o">)</span>  openmpi/1.4.3-intel
+mkl/10.2.5.035<span class="o">(</span>default<span class="o">)</span>      otf/1.7.0<span class="o">(</span>default<span class="o">)</span>
+openmpi/1.4.2<span class="o">(</span>default<span class="o">)</span>       unimci/1.0.1<span class="o">(</span>default<span class="o">)</span>
 openmpi/1.4.3-gnu            vampirtrace/intel-11.1/5.8.2
 
 --------------------- /opt/Modules/3.2.8/modulefiles/tools ---------------------
-cinderclient/1.0.4(default)   moab/5.4.0(default)
-cloudmesh/0.8(default)        myhadoop/0.2a
-euca2ools/1.2                 novaclient/2.13.0(default)
-euca2ools/1.3.1               precip/0.1(default)
-euca2ools/2.0.2(default)      python/2.7(default)
+cinderclient/1.0.4<span class="o">(</span>default<span class="o">)</span>   moab/5.4.0<span class="o">(</span>default<span class="o">)</span>
+cloudmesh/0.8<span class="o">(</span>default<span class="o">)</span>        myhadoop/0.2a
+euca2ools/1.2                 novaclient/2.13.0<span class="o">(</span>default<span class="o">)</span>
+euca2ools/1.3.1               precip/0.1<span class="o">(</span>default<span class="o">)</span>
+euca2ools/2.0.2<span class="o">(</span>default<span class="o">)</span>      python/2.7<span class="o">(</span>default<span class="o">)</span>
 genesisII/2.7.0               python/2.7.2
-glanceclient/0.9.0(default)   torque/2.4.8(default)
-keystoneclient/0.2.3(default) vim/7.2
-marmot/2.4.0(default)</pre>
+glanceclient/0.9.0<span class="o">(</span>default<span class="o">)</span>   torque/2.4.8<span class="o">(</span>default<span class="o">)</span>
+keystoneclient/0.2.3<span class="o">(</span>default<span class="o">)</span> vim/7.2
+marmot/2.4.0<span class="o">(</span>default<span class="o">)</span>
+</pre></div>
 </div>
-<p>Example - load the default cloudmesh module:</p>
-<div class="highlight-python"><pre>$ module load cloudmesh</pre>
+<p><strong>Example</strong> - load a default module (in thi case cloudmesh):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module load cloudmesh
+</pre></div>
 </div>
 <p>Please note that for loading the default you do not have to specify the version number.</p>
+</div>
+<div class="section" id="list-of-available-modules-on-various-machines">
+<h3><a class="toc-backref" href="#id5">2.1.2. List of Available Modules on Various Machines</a><a class="headerlink" href="#list-of-available-modules-on-various-machines" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="25%" />
@@ -664,7 +687,7 @@ marmot/2.4.0(default)</pre>
 </table>
 </div>
 <div class="section" id="filesystem-layout">
-<h3><a class="toc-backref" href="#id3">2.1.2. Filesystem Layout</a><a class="headerlink" href="#filesystem-layout" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">2.1.3. Filesystem Layout</a><a class="headerlink" href="#filesystem-layout" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt><em>Home</em> directories:</dt>
 <dd>Home directories are accessible through the $HOME shell variable are
@@ -674,7 +697,7 @@ should not run code from their $HOME directories. Please note that
 this is an NFS file system, and may result in slower access for
 some applications. We also advise the users to provide external
 backup storage at their home institution or a code repository. For
-example, we recommand that you use git or svn to make sure you
+example, we recommend that you use git or svn to make sure you
 backup your changes to the code. Also make sure you backup your
 data. As a testbed, we do not guarantee dataloss.</dd>
 <dt><em>Scratch</em> directories:</dt>
@@ -684,11 +707,11 @@ section <a class="reference internal" href="#s-storage"><em>Storage Services</em
 <dt><em>System software</em> directories:</dt>
 <dd>System software directories are located at <em>/N/soft</em>. System and
 community software are typically installed here. Table
-<a class="reference internal" href="#t-storage-mountpoint"><em>Storage mountpoints on the CLusters</em></a> provides a summary of the various mount
+<a class="reference internal" href="#t-storage-mountpoint"><em>Storage mountpoints on the Clusters</em></a> provides a summary of the various mount
 points.</dd>
 </dl>
 <table border="1" class="docutils" id="t-storage-mountpoint">
-<caption>Storage mountpoints on the CLusters</caption>
+<caption>Storage mountpoints on the Clusters</caption>
 <colgroup>
 <col width="9%" />
 <col width="12%" />
@@ -969,26 +992,26 @@ points.</dd>
 </div>
 </div>
 <div class="section" id="message-passing-interface-mpi">
-<h2><a class="toc-backref" href="#id4">2.2. Message Passing Interface (MPI)</a><a class="headerlink" href="#message-passing-interface-mpi" title="Permalink to this headline">¶</a></h2>
-<p>Message Passing Interface Standard (MPI) is the <em>de facto</em> standard communication library for
-almost many HPC systems, and is available in a variety of
-implementations. It has been created through consensus of the MPI Forum, which has
-dozens of participating organizations, including vendors, researchers,
-software library developers, and users. The goal of the Message Passing
-Interface is to establish a portable, efficient, and flexible standard
-for message passing that will be widely used for writing message passing
-programs. For more information about MPI, please visit:</p>
+<h2><a class="toc-backref" href="#id7">2.2. Message Passing Interface (MPI)</a><a class="headerlink" href="#message-passing-interface-mpi" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Message Passing Interface Standard (MPI)</em> is the <em>de facto</em>
+standard communication library for almost many HPC systems, and is
+available in a variety of implementations. It has been created through
+consensus of the MPI Forum, which has dozens of participating
+organizations, including vendors, researchers, software library
+developers, and users. The goal of the Message Passing Interface is to
+provide a portable, efficient, and flexible standard for programs
+using message passing. For more information about MPI, please visit:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.mpi-forum.org/">http://www.mpi-forum.org/</a></li>
 <li><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/">http://www.mcs.anl.gov/research/projects/mpi/tutorial/</a></li>
 <li><a class="reference external" href="http://www.open-mpi.org/">http://www.open-mpi.org/</a></li>
 </ul>
 <div class="section" id="mpi-libraries">
-<h3><a class="toc-backref" href="#id5">2.2.1. MPI Libraries</a><a class="headerlink" href="#mpi-libraries" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">2.2.1. MPI Libraries</a><a class="headerlink" href="#mpi-libraries" title="Permalink to this headline">¶</a></h3>
 <p>Several FutureGrid systems support MPI as part of their HPC services.
 An up to date status about it can be retrieved via our <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC,HPC_Tests,Benchmarks&amp;resourceIds=FG_BATCH">Inca
 status pages</a>.</p>
-<div class="admonition-todo admonition" id="index-0">
+<div class="admonition-todo admonition" id="index-1">
 <p class="first admonition-title">Todo</p>
 <p class="last">this table is outdated.</p>
 </div>
@@ -1080,98 +1103,133 @@ status pages</a>.</p>
 <p>Loading the OpenMPI module adds the MPI compilers to your $PATH
 environment variable and the OpenMPI shared library directory to your
 $LD_LIBRARY_PATH. This is an important step to ensure MPI applications
-will compile and run successfully.</p>
-<p>In cases where the OpenMPI is compiled with the Intel compilers
-loading the OpenMPI module will automatically load the Intel compilers
-as a dependency:</p>
-<div class="highlight-python"><pre>$ module load openmpi
-Intel compiler suite version 11.1/072 loaded
-OpenMPI version 1.4.3 loaded</pre>
-</div>
-<div class="admonition-todo admonition" id="index-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">different section::
-Loading the torque module allows you to submit jobs to the scheduler.</p>
+will compile and run successfully. In cases where the OpenMPI is
+compiled with the Intel compilers loading the OpenMPI module will
+automatically load the Intel compilers as a dependency. To load the
+default openmpi module and associated compilers, just use:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module load openmpi
+</pre></div>
 </div>
 </div>
 <div class="section" id="compiling-mpi-applications">
-<h3><a class="toc-backref" href="#id6">2.2.2. Compiling MPI Applications</a><a class="headerlink" href="#compiling-mpi-applications" title="Permalink to this headline">¶</a></h3>
-<p>To compile MPI applications, users have two options:</p>
-<ol class="arabic simple">
-<li>Use the MPI compilers instead of regular Intel/GNU compilers</li>
-<li>Use the regular compilers (Intel/GNU) with MPI compilation flags</li>
-</ol>
-<p>We recommend using the MPI compilers to avoid compilation issues. This
-is accomplished by making the following replacements:</p>
-<ul class="simple">
-<li>CC/icc/gcc with mpicc</li>
-<li>CXX/icpc/g++ with mpicxx</li>
-<li>F90/F77/FC/ifort/gfortran with mpif90</li>
-</ul>
-<p>Alternatively, for some codes that require intricate compilation flags
-and complicated make systems, and where changing compilers is not an
-option, you can edit the compilation/linking options for your codes.
-These options are machine, compiler, and language dependent. To view the
-options required for C, C++ and Fortran on any machine, you can issue
-the commands mpicc-show, mpicxx-show, and mpif90-show. Extra care must
-be taken when using these flags, as dependencies govern the order in
-which they appear in the link line. Should you run into compilation
-errors or problems, please submit a consulting ticket.</p>
+<h3><a class="toc-backref" href="#id9">2.2.2. Compiling MPI Applications</a><a class="headerlink" href="#compiling-mpi-applications" title="Permalink to this headline">¶</a></h3>
+<p>To compile MPI applications, users can simply use the available mpi
+compile commands:</p>
+<dl class="docutils">
+<dt>mpicc:</dt>
+<dd>To compile C programs with the the CC/icc/gcc compilers</dd>
+<dt>mpicxx:</dt>
+<dd>To compile c++ programs with CXX/icpc/g++ with mpicxx</dd>
+<dt>mpif90:</dt>
+<dd>To compile programs with F90/F77/FC/ifort/gfortran</dd>
+</dl>
+<p>To see in detail what these commands do you can add a <em>-show</em>  as an
+option. Thus the following commands:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>mpicc -show
+<span class="nv">$ </span>mpicxx -show
+<span class="nv">$ </span>mpif90 -show
+</pre></div>
+</div>
+<p>will show you the detail of each of them. The resulting output can be
+used as a template to adapt compile flags in case the default settings are
+not suitable for you.</p>
 <p>Assuming you have loaded the openmpi module into your environment,
-you can compile a <a class="reference external" href="/tutorials/hpc/ring">simple MPI application</a> as
+you can compile a <a class="reference external" href="ring">simple MPI application</a> with
 easily as executing:</p>
-<div class="highlight-python"><pre>$ mpicc -o ring ring.c</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>mpicc -o ring ring.c
+</pre></div>
 </div>
+<p>Users MUST NOT run jobs on the login or headnodes. These nodes are
+reserved for editing and compiling programs. Furthermore running your
+commands on such nodes will not provide any useful information as you
+actually do not use the standard cluster node.</p>
 </div>
-<div class="section" id="running-mpi-applications">
-<h3><a class="toc-backref" href="#id7">2.2.3. Running MPI Applications</a><a class="headerlink" href="#running-mpi-applications" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="batch-jobs">
+<h3><a class="toc-backref" href="#id10">2.2.3. Batch Jobs</a><a class="headerlink" href="#batch-jobs" title="Permalink to this headline">¶</a></h3>
 <p>Once your MPI application is compiled, you run it on the compute nodes
-of a cluster via Torque. An example of an MPI parallel job script for
-India, Sierra, and Alamo that runs the ring application is:</p>
-<div class="highlight-python"><pre>#!/bin/bash
-
-#PBS -N ring_test
-#PBS -o ring_$PBS_JOBID.out
-#PBS -e ring_$PBS_JOBID.err
-#PBS -q short
-#PBS -l nodes=4:ppn=8
-#PBS -l walltime=00:20:00
-
-# make sure MPI is in the environment
-module load openmpi
-
-# launch the parallel application with the correct number of processs
-# Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;
-mpirun -np 32 ring -t 1000</pre>
+of a cluster via a batch processing. With the help of a batch
+processing services a job is run on the cluster without the users
+intervention via a job queue. The user does not have to worry much
+about the internal details of the job queue, but must provide the
+scheduler with some guidance about the job so it can be efficiently
+scheduled on the system.</p>
+<p>To run jobs on resources with the HPC services, users must first
+activate their environment to use the job scheduler:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module load torque
+</pre></div>
 </div>
-<p>There are two important differences between this script and the submit
-script shown previously. The first is that :ppn=8 is added to the
-request for four nodes. What this does is indicate that your application
-wants to allocate eight virtual processors per node. A virtual processor
-corresponds to a processing core. Alamo, Hotel, India, and Sierra all
-have eight cores per node, so the script above asks for exclusive access
-to four nodes with a total of 32 cores. The second importand difference
-from the previous submit script is that it executes mpirun with
-arguments that describe your MPI application. Note that the number of
-processes specified to mpirun is 32—matching the 32 cores allocated by
-Torque.</p>
-<p>A minor difference between this script and the previous one is that
-the environment variable $PBS_JOBID is used when creating the stdin and
-stdout files. Torque sets a number of environment variables that you can
-use in your submit script, starting with PBS.</p>
+<p>A complete manual for the torque scheduler can be found in the <a href="#id1"><span class="problematic" id="id2">`Torque
+manual&lt;http://www.clusterresources.com/torquedocs21/&gt;`__</span></a>.</p>
+<p>Next we need to create a script so we can run the program on the
+cluster.  We will be using our simple ring example to illustrate some
+of the parameters you need to adjust:</p>
+<div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre> <span class="c">#! /bin/bash</span>
+
+ <span class="c"># OPTIONS FOR THE SCRIPT</span>
+ <span class="c">#PBS -M username@example.com</span>
+ <span class="c">#PBS -N ring_test</span>
+ <span class="c">#PBS -o ring_$PBS_JOBID.out</span>
+ <span class="c">#PBS -e ring_$PBS_JOBID.err</span>
+ <span class="c">#PBS -q short</span>
+ <span class="c">#PBS -l nodes=4:ppn=8</span>
+ <span class="c">#PBS -l walltime=00:20:00</span>
+
+
+ <span class="c"># make sure MPI is in the environment</span>
+ module load openmpi
+
+ <span class="c"># launch the parallel application with the correct number of process</span>
+ <span class="c"># Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;</span>
+ mpirun -np 32 ring -t 1000
+
+ <span class="nb">echo</span> <span class="s2">&quot;Nodes allocated to this job: &quot;</span>
+ cat <span class="nv">$PBS_NODEFILE</span>
+</pre></div>
+</td></tr></table></div>
+<p>In the job script, lines that begin with  <strong>#PBS</strong> are directives to
+the job scheduler. You can disable any of these lines by adding an
+extra  <strong>#</strong> character at the beginning of the line, as <em>##</em> is
+interpreted to be a comment. Common options include:</p>
+<ul class="simple">
+<li>-M: specify a mail address that is notified upon completion</li>
+<li>-N: To specify a job name</li>
+<li>-o: The name of the file to write stdout to</li>
+<li>-e: The name of the file to write stderr to</li>
+<li>-q: The queue to submit the job to</li>
+<li>-l: Resources specifications to execute the job</li>
+</ul>
+<p>The first parameters are rather obvious, so let us focus on the
+<em>-q</em> option. Each batch service is configured with a number of
+queues that are targeting different classes of jobs to more
+efficiently schedule them. These queues can be switch on or of,
+modified or new queues can be added to the system. It is useful to get
+a list of available queues on the system where you like to submit your
+jobs and inspect which would be most suitable to use for your
+purpose with the qstat command on the appropriate login node:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>qstat -q
+</pre></div>
 </div>
-</div>
-<div class="section" id="managing-applications-with-torque">
-<h2><a class="toc-backref" href="#id8">2.3. Managing Applications with Torque</a><a class="headerlink" href="#managing-applications-with-torque" title="Permalink to this headline">¶</a></h2>
-<p>FutureGrid provides a <a class="reference external" href="http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp">list of HPC
-services</a>
-that currently consists of nodes on Alamo, Hotel, India, Sierra, and
-Xray.</p>
-<p>Once you ssh into these nodes, you&#8217;ll have access to the HPC queuing
-services for the machine you have logged into. You will enter into a
-Unix/Linux shell in which you can enter the typical Unix commands.
-Access to the clusters is provided through Torque/Moab commands
-from the command line.</p>
+<p>Currently we have the following queues:</p>
 <dl class="docutils">
 <dt>HPC Job Queue Information:</dt>
 <dd><table border="1" class="first last docutils">
@@ -1261,260 +1319,163 @@ from the command line.</p>
 </table>
 </dd>
 </dl>
-<p>To run any jobs on resources within FutureGrid HPC services (single
-core, OpenMP or MPI jobs), users must use the job scheduler and a job
-submission script. Users should NOT run jobs on the login or headnodes.
-On FutureGrid machines, the job scheduler is the Torque (a variant of
-PBS). To load torque into your environment, execute:</p>
-<div class="highlight-python"><pre>$ module load torque</pre>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">remove the queue ajyounge from the system, can this be done
+by preserving the logs?</p>
 </div>
-<p>To run a serial job, you start by creating a job submission script
-that both describes your job and will be executed on the compute nodes
-by Torque. An example of a job script for India, Sierra, and Alamo that
-runs <em>/bin/hostname</em> is:</p>
-<div class="highlight-python"><pre>#!/bin/bash
-
-#PBS -N hostname_test
-#PBS -o hostname.out
-#PBS -e hostname.err
-#PBS -q short
-#PBS -l nodes=1
-#PBS -l walltime=00:20:00
-
-/bin/hostname</pre>
+<div class="admonition-todo admonition" id="index-3">
+<p class="first admonition-title">Todo</p>
+<p class="last">remove the queue b534 from the system, can this be done
+while preserving the logs?</p>
 </div>
-<p>Options are passed to Torque on lines that begin with #PBS. The options
-above are:</p>
-<ul class="simple">
-<li>-N: An optional job name</li>
-<li>-o: The name of the file to write stdout to</li>
-<li>-e: The name of the file to write stderr to</li>
-<li>-q: The queue to submit the job to</li>
-<li>-l: The resources needed by the job (in the case above, 1 node for 20
-minutes)</li>
-</ul>
-<p>Additional information about the options that can be specified in a
-submit script is available in the qsub manual page via &#8216;man qsub&#8217;. Note
-that there are multiple queues available on each FutureGrid system:</p>
-<ul class="simple">
-<li>Alamo: short, long, default</li>
-<li>Hotel: extended, batch, long and route</li>
-<li>India: scalemp, batch, long and b534</li>
-<li>Sierra: batch and long</li>
-<li>Xray: batch</li>
-</ul>
-<p>You can find information (such as limits) that will help you select
-which queue to use by running qstat -q on the login node for the system
-you are interested in.</p>
-<p>Once you have created a submission script, you can then use the Torque
+<p>Next we focus on the -l option that specifies the resources. The
+term:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">nodes</span><span class="o">=</span>4
+</pre></div>
+</div>
+<p>means that we specify 4 servers on which we execute the job. The
+term:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">ppn</span><span class="o">=</span>8
+</pre></div>
+</div>
+<p>means that we use 8 virtual processors per node, while a virtual
+processor is typically executed on a core of the server. Thus it is
+advisable not to exceed the number of cores per server. For some
+programs choosing the best performing number of servers and cores may
+be dependent on factors such as memory needs, IO access and other
+resource bounded properties. You may have to experiment with the
+parameters. To identify the number of servers and cores available
+please see Tables <a class="reference internal" href="hardware.html#t-clusters"><em>Overview of the Clusters</em></a> and <a class="reference internal" href="hardware.html#t-clusters-details"><em>Selected Details of the Clusters</em></a>.
+For example, Alamo, Hotel, India, and Sierra have 8 cores per node,
+thus 4 servers would provide you access to 32 processing units.</p>
+<p>Often you may just want to have the stdout and stderr in one file,
+than you simply can replace the line with -e in it with:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c">#PBS -j oe</span>
+</pre></div>
+</div>
+<p>which simply means that you <em>join</em> stdout and stderr. Here j stands
+for join, o for stdout and e for stderr. In case you like to have
+e-mail send to you based on the status of the job, you can achieve
+this with adding:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c">#PBS -m ae</span>
+</pre></div>
+</div>
+<p>to your script. It will send you mail when the job aborts (indicated
+by a), or when the job ends (indicated by e).</p>
+</div>
+</div>
+<div class="section" id="job-management">
+<h2><a class="toc-backref" href="#id11">2.3. Job Management</a><a class="headerlink" href="#job-management" title="Permalink to this headline">¶</a></h2>
+<p>A list of all available  scheduler commands is available from the <a class="reference external" href="http://www.clusterresources.com/torquedocs21/">Torque
+manual page</a>. We
+describe next the use of some typical interactions to manage your jobs
+in the batch queue.</p>
+<div class="section" id="job-submission">
+<h3><a class="toc-backref" href="#id12">2.3.1. Job Submission</a><a class="headerlink" href="#job-submission" title="Permalink to this headline">¶</a></h3>
+<p>Once you have created a submission script, you can then use the
 qsub command to submit this job to be executed on the compute nodes:</p>
-<div class="highlight-python"><pre>$ qsub ring.sh
-19095.master1.cm.cluster</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>qsub ring.pbs
+20311.i136
+</pre></div>
 </div>
 <p>The qsub command outputs either a job identifier or an error message
-describing why Torque would not accept your job. If your job is
-submitted successfully, you can track its execution using the qstat
-command:</p>
-<div class="highlight-python"><pre>$ qstat
-Job id                    Name             User            Time Use S Queue
-------------------------- ---------------- --------------- -------- - -----
-...
-19095.master1             hostname_test    user            00:00:00 R short
-...</pre>
+describing why the scheduler would not accept your job. Alternatively,
+you can also use the msub command, which is very similar to the qsub
+command. For differences we ask you to consult the man pages.</p>
 </div>
-<p>If the system is busy, your job will initially be queued (Q) waiting for
-resources to become available. It will then be in the running state (R),
-and finally it will complete and not be visible in the qstat output. The
-full set of Torque job states is provided in the qstat manual page via
-man qstat on a FutureGrid login node. The stdout and stderr from your
-job will be placed in the files you specified in your submission script.</p>
-<p>A final Torque command you will use occasionally is the qdel command
-that asks Torque to delete a job. If the job hasn&#8217;t begun running, it is
-simply deleted from the queue. If the job has begun, it is killed on the
-nodes it&#8217;s running on, and deleted from the queue.</p>
-<p>A list of all available Torque commands is available from the <a class="reference external" href="http://www.clusterresources.com/torquedocs21/">Torque
-manual page</a>.</p>
-</div>
-<div class="section" id="working-with-hpc-job-services">
-<h2><a class="toc-backref" href="#id9">2.4. Working with HPC Job Services</a><a class="headerlink" href="#working-with-hpc-job-services" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="running-queued-jobs-as-part-of-the-hpc-services">
-<h3><a class="toc-backref" href="#id10">2.4.1. Running Queued Jobs as Part of the HPC Services</a><a class="headerlink" href="#running-queued-jobs-as-part-of-the-hpc-services" title="Permalink to this headline">¶</a></h3>
-<p>To run a job in the HPC service, you need to create a job script that
-tells the job manager how to run the job and how to handle things like
-output and notifications. You can then submit your job to the scheduler,
-monitor its progress in the job queue, and examine the output when it
-finishes.</p>
-<p>An example job script looks like this:</p>
-<div class="highlight-python"><pre>#!/bin/bash
-#PBS -N testjob
-#PBS -l nodes=1:ppn=1
-#PBS -q batch
-#PBS -j oe
-##PBS -M username@example.com
-##PBS -m ae ##PBS -o testjob.out
-##
-## Everything following is run by the scheduler
-##
-sleep 10
-echo -n "Host operating system version: "
-uname -a
-echo "Nodes allocated to this job: "
-cat $PBS_NODEFILE
-echo
-sleep 10
-##
-## End of job script
-##</pre>
-</div>
-<p>In the job script, lines that begin with  <strong>#PBS</strong> are directives to
-the job scheduler. You can disable any of these lines by adding an
-extra  <strong>#</strong> character at the beginning of the line, for example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
+<div class="section" id="job-deletion">
+<h3><a class="toc-backref" href="#id13">2.3.2. Job Deletion</a><a class="headerlink" href="#job-deletion" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes you may want to delete a job from the queue, which can be
+easily done with the qdel command, followed by the id:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>qdel 20311
 </pre></div>
 </div>
-<p>This job script shows some common examples of directives that you might
-want to use in your job scripts. The directives in this job script are
-described below:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
-</pre></div>
 </div>
-<p>This line isn&#8217;t strictly required, but it is added as a fail-safe in
-case something unexpected happens. Normally, the job manager reads your
-script and processes the directives, and then runs your script as a
-normal shell script. This simply ensures that the system uses the
-standard bash shell to run your script:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -N testjob</span>
-</pre></div>
-</div>
-<p>This line gives your job a name of  <strong>testjob</strong>. This name will be used
-by the job manager when it shows a job listing, and will be used for
-your output file(s) unless you explicitly specify an output file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -l nodes=1:ppn=1</span>
-</pre></div>
-</div>
-<p>This line tells the job manager what your job requires for resources. In
-this case, your job is asking for one node (<strong>nodes=1</strong>) and at least
-one processor per node (<strong>ppn=1</strong>). See the
-[[Sw:Manual/PBSDirectives|PBSDirectives] page for other options you can
-specify here:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -q batch</span>
-</pre></div>
-</div>
-<p>This line tells the job manager which job queue your job should be sent
-to. Each job queue has different characteristics, such as the maximum
-time a job is allowed to run, or the maximum number of nodes a job can
-use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#PBS -j oe</span>
-</pre></div>
-</div>
-<p>This line tells the job manager to join the job standard output and
-standard error into a single file. For jobs with a small amount of
-output, this is usually helpful. If your job produces a lot of standard
-output, it may be helpful to keep the files separate so you can easily
-locate error messages in the single error file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -M username@example.com</span>
-</pre></div>
-</div>
-<p>Note that this line is a comment since it starts with  <strong>##</strong> instead
-of  <strong>#PBS</strong>. If you remove the first  <strong>#</strong>, this line will set the
-email address that will get notified about events related to this job.
-The events that get reported are set by the next line:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -m ae</span>
-</pre></div>
-</div>
-<p>Again, note that this line is commented out. If you remove the
-first  <strong>#</strong>, this line will send email whenever the job fails
-(or <strong>a</strong> borts) (<strong>a</strong> option), and when the job ends (<strong>e</strong> option).
-This is particularly helpful if your job has to wait a long time in the
-queue before it runs:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">##PBS -o testjob.out</span>
-</pre></div>
-</div>
-<p>Again, note that this line is commented out. If you remove the
-first  <strong>#</strong>, this line will specify the file name to be used for job
-output.</p>
-</div>
-<div class="section" id="submitting-your-job">
-<h3><a class="toc-backref" href="#id11">2.4.2. Submitting Your Job</a><a class="headerlink" href="#submitting-your-job" title="Permalink to this headline">¶</a></h3>
-<p>You can submit your job with the  <strong>qsub</strong> or <strong>msub</strong> commands.
-The  <strong>msub</strong> and <strong>qsub</strong> are almost identical, and can mostly be used
-interchangeably. See the respective man pages for specific differences.
-Neither submission command provides much output. Examples of a job
-submission using both commands follows:</p>
-<p>Using  <strong>msub</strong>:</p>
-<div class="highlight-python"><pre>$ msub testjob.pbs
-292250</pre>
-</div>
-<p>Using  <strong>qsub</strong>:</p>
-<div class="highlight-python"><pre>$ qsub testjob.pbs
-292251.s82</pre>
-</div>
-<p>In both cases, the number that gets returned is the job number that the
-scheduler assigned to your job. In the case of  <strong>qsub</strong>, the job
-number is followed by the host name where you submitted the job.</p>
-</div>
-<div class="section" id="monitoring-your-job">
-<h3><a class="toc-backref" href="#id12">2.4.3. Monitoring Your Job</a><a class="headerlink" href="#monitoring-your-job" title="Permalink to this headline">¶</a></h3>
-<p>To monitor your job after it has been submitted, you can use
-the  <strong>qstat</strong> or <strong>showq</strong> commands. Both commands will show you the
-state of the job manager, but the information is displayed in different
-formats. In general, the  <strong>showq</strong> command gives more complete
-information, and in a form that is a bit easier to read.
-The  <strong>qstat</strong> command gives a very concise listing of the job queue,
-and in some instances this may give you a better quick overview of the
-resource.</p>
-<p>Using the test job script as an example, here is the output from
-the  <strong>showq</strong> command:</p>
-<div class="highlight-python"><pre>$ showq
-active jobs
+<div class="section" id="job-monitoring">
+<h3><a class="toc-backref" href="#id14">2.3.3. Job Monitoring</a><a class="headerlink" href="#job-monitoring" title="Permalink to this headline">¶</a></h3>
+<p>If your job is submitted successfully, you can track its execution
+using the qstat or showq commands. Both commands will show you the
+state of the jobs submitted to the scheduler. The difference is mostly
+in their output format.</p>
+<dl class="docutils">
+<dt>showq:</dt>
+<dd><p class="first">divides the output into three sections:  active
+jobs,  eligible jobs, and blocked jobs:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>showq
+active <span class="nb">jobs</span>
 ------------------------
 JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-292252   yourusername       Running     16        3:59:59 Tue Aug 17 09:02:40
-1 active job 16 of 264 processors in use by local jobs (6.06%)
-                  2 of 33 nodes active (6.06%) eligible jobs
+20311   yourusername       Running     16        3:59:59 Tue Aug 17 09:02:40
+1 active job 16 of 264 processors in use by <span class="nb">local jobs</span> <span class="o">(</span>6.06%<span class="o">)</span>
+                  2 of 33 nodes active <span class="o">(</span>6.06%<span class="o">)</span> eligible <span class="nb">jobs</span>
 ----------------------
 JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-0 eligible jobs blocked jobs
+0 eligible <span class="nb">jobs </span>blocked <span class="nb">jobs</span>
 -----------------------
 JOBID    USERNAME       STATE PROCS    REMAINING            STARTTIME
-0 blocked jobs
-Total job: 1</pre>
+0 blocked <span class="nb">jobs</span>
+Total job: 1
+</pre></div>
 </div>
-<p>You can see the output is divided into three sections:  <strong>active
-jobs</strong>,  <strong>eligible jobs</strong>, and  <strong>blocked jobs</strong>.</p>
-<ol class="arabic simple">
-<li><strong>Active jobs</strong> are jobs that are currently running on the resource.</li>
-<li><strong>Eligible jobs</strong> are jobs that are waiting for nodes to become
-available before they can run. As a general rule, jobs are listed in the
-order that they will be scheduled, but scheduling algorithms may change
-the order over time.</li>
-<li><strong>Blocked jobs</strong> are jobs that the scheduler cannot run for some
-reason. Usually a job becomes blocked because it is requesting something
-that is impossible, such as more nodes than currently exist, or more
-processors per node than are installed.</li>
-</ol>
-<p>Using the test job as an example again, here is the output from
-the  <strong>qstat</strong> command:</p>
-<div class="highlight-python"><pre>$ qstat
+<dl class="last docutils">
+<dt>Legend:</dt>
+<dd><dl class="first last docutils">
+<dt>Active jobs:</dt>
+<dd>are jobs that are currently running on resources.</dd>
+<dt>Eligible jobs:</dt>
+<dd>are jobs that are waiting for nodes to become available before
+they can run. As a general rule, jobs are listed in the order
+that they will be scheduled, but scheduling algorithms may
+change the order over time.</dd>
+<dt>Blocked jobs:</dt>
+<dd>are jobs that the scheduler cannot run for some reason. Usually
+a job becomes blocked because it is requesting something that
+is impossible, such as more nodes than currently exist, or more
+processors per node than are installed.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>qstat:</dt>
+<dd><p class="first">provides a single table view, where the status of each job is
+added via a status column called S:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>qstat
 Job id                             Name               User          Time Use S Queue
 ------------------------- --------------------- ------------------- -------- - -----
 1981.i136                       sub19327.sub      inca               00:00:00 C batch
-1982.i136                       testjob           yourusername                      0 R batch</pre>
+20311.i136                      testjob           yourusername              0 R batch
+</pre></div>
 </div>
-<p>The  <strong>qstat</strong> command provides output in six columns:</p>
-<ol class="arabic simple">
-<li>Job id is the identifier assigned to your job.</li>
-<li>Name is the name that you assigned to your job.</li>
-<li>User is the username of the person who submitted the job.</li>
-<li>Time Use is the amount of time the job has been running.</li>
-<li>S shows the job state. Common job states are R for a running job, Q
+<dl class="last docutils">
+<dt>Legend:</dt>
+<dd><dl class="first last docutils">
+<dt>Job id:</dt>
+<dd>is the identifier assigned to your job.</dd>
+<dt>Name:</dt>
+<dd>is the name that you assigned to your job.</dd>
+<dt>User:</dt>
+<dd>is the username of the person who submitted the job.</dd>
+<dt>Time:</dt>
+<dd>is the amount of time the job has been running.</dd>
+<dt>S:</dt>
+<dd>shows the job state. Common job states are R for a running job, Q
 for a job that is queued and waiting to run, C for a job that has
-completed, and H for a job that is being held.</li>
-<li>Queue is the name of the job queue where your job will run.</li>
-</ol>
+completed, and H for a job that is being held.</dd>
+<dt>Queue:</dt>
+<dd>is the name of the job queue where your job will run.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>If you are interested in only your job by for example using grep:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>qstat | grep 20311
+</pre></div>
 </div>
-<div class="section" id="examining-your-job-output">
-<h3><a class="toc-backref" href="#id13">2.4.4. Examining Your Job Output</a><a class="headerlink" href="#examining-your-job-output" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="job-output">
+<h3><a class="toc-backref" href="#id15">2.3.4. Job Output</a><a class="headerlink" href="#job-output" title="Permalink to this headline">¶</a></h3>
 <p>If you gave your job a name with the  <strong>#PBS -N &lt;jobname&gt;</strong> directive
 in your job script or by specifying the job name on the command line,
 your job output will be available in a file named  <strong>jobname.o######</strong>,
@@ -1531,9 +1492,10 @@ you had specified a job name (<strong>jobname,o######</strong>).</p>
 </div>
 </div>
 <div class="section" id="xray-hpc-services">
-<h2><a class="toc-backref" href="#id14">2.5. Xray HPC Services</a><a class="headerlink" href="#xray-hpc-services" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">2.4. Xray HPC Services</a><a class="headerlink" href="#xray-hpc-services" title="Permalink to this headline">¶</a></h2>
 <p>To log into the login node of xreay please use the command:</p>
-<div class="highlight-python"><pre>ssh portalname@xray.futuregrid.org</pre>
+<div class="highlight-bash"><div class="highlight"><pre>ssh portalname@xray.futuregrid.org
+</pre></div>
 </div>
 <p>Extensive documentation about the user environment of the Cray can be
 found at</p>
@@ -1541,49 +1503,52 @@ found at</p>
 <li><a class="reference external" href="http://docs.cray.com/cgi-bin/craydoc.cgi?mode=View;id=S-2396-21">Cray XTTM Programming Environment User&#8217;s Guide</a></li>
 </ul>
 <p>For MPI jobs, use cc (pgcc). For best performance, add the xtpe-barcelona module:</p>
-<div class="highlight-python"><pre>% module add xtpe-module</pre>
+<div class="highlight-bash"><div class="highlight"><pre>% module add xtpe-module
+</pre></div>
 </div>
 <p>Currently there is only one queue (batch) available to users on the
-Cray, and all jobs are automatically routed to that queue.</p>
-<p>To list the queues please use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">qstat</span> <span class="o">-</span><span class="n">Q</span>
+Cray, and all jobs are automatically routed to that queue.  You can
+use the same commands as introduced in the previous sections. Thus, to
+list the queues please use:</p>
+<div class="highlight-bash"><div class="highlight"><pre>qstat -Q
 </pre></div>
 </div>
 <p>To obtain details of running jobs and available processors, use the showq command:</p>
-<div class="highlight-python"><pre>/opt/moab/default/bin/showq</pre>
+<div class="highlight-bash"><div class="highlight"><pre>/opt/moab/default/bin/showq
+</pre></div>
 </div>
 <div class="section" id="submitting-a-job-on-xray">
-<h3><a class="toc-backref" href="#id15">2.5.1. Submitting a job on xray</a><a class="headerlink" href="#submitting-a-job-on-xray" title="Permalink to this headline">¶</a></h3>
-<div class="admonition-todo admonition" id="index-2">
-<p class="first admonition-title">Todo</p>
-<p class="last">this example is incomplete and connfusing. we cat the job. submit but do
-not show how we submit ;-)</p>
+<h3><a class="toc-backref" href="#id17">2.4.1. Submitting a Job on xray</a><a class="headerlink" href="#submitting-a-job-on-xray" title="Permalink to this headline">¶</a></h3>
+<p>To execute an MPI program on xray we use a special program called aprun in
+the submit script. Additionally we have some special resource
+specifications that we can pass along, such as mppwidth and
+mppppn. An example is the following program that will use 16
+processors on 2 nodes:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>cat job.pbs
+</pre></div>
 </div>
-<p><strong>MPI run cmd</strong>:  aprun</p>
-<p>Example job script (16 processors / 2 nodes):</p>
-<div class="highlight-python"><pre>% cat job.sub</pre>
-</div>
-<div class="highlight-python"><pre>#!/bin/sh
-#PBS -l mppwidth=16
-#PBS -l mppnppn=8
-#PBS -N hpcc-16
-#PBS -j oe
-#PBS -l walltime=7:00:00
-#cd to directory where job was submitted from
-cd $PBS_O_WORKDIR
-export MPICH_FAST_MEMCPY=1
-export MPICH_PTL_MATCH_OFF=1
+<div class="highlight-bash"><div class="highlight"><pre><span class="c">#! /bin/sh</span>
+
+<span class="c">#PBS -l mppwidth=16</span>
+<span class="c">#PBS -l mppnppn=8</span>
+<span class="c">#PBS -N hpcc-16</span>
+<span class="c">#PBS -j oe</span>
+<span class="c">#PBS -l walltime=7:00:00</span>
+
+<span class="c">#cd to directory where job was submitted from</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+<span class="nb">export </span><span class="nv">MPICH_FAST_MEMCPY</span><span class="o">=</span>1
+<span class="nb">export </span><span class="nv">MPICH_PTL_MATCH_OFF</span><span class="o">=</span>1
 aprun -n 16 -N 8 -ss -cc cpu hpcc
-% qsub job.sub</pre>
-</div>
-<p>Looking at the Queue</p>
-<div class="highlight-python"><pre>% qstat</pre>
+
+<span class="nv">$ </span>qsub job.pbs
+</pre></div>
 </div>
 <p>The XT5m is a 2D mesh of nodes. Each node has two sockets, and each
-socket has four cores.</p>
-<p>The batch scheduler interfaces with a Cray resource scheduler called
-APLS. When you submit a job, the batch scheduler talks to ALPS to find
-out what resources are available, and ALPS then makes the reservation.</p>
+socket has four cores. The batch scheduler interfaces with a Cray
+resource scheduler called APLS. When you submit a job, the batch
+scheduler talks to ALPS to find out what resources are available, and
+ALPS then makes the reservation.</p>
 <p>Currently ALPS is a &#8220;gang scheduler&#8221; and only allows one &#8220;job&#8221; per node.
 If a user submits a job in the format aprun -n 1 a.out , ALPS will put
 that job on one core of one node and leave the other seven cores empty.
@@ -1599,19 +1564,20 @@ scheduled to one node and have eight threads running, one on each core.</p>
 <p>You can run multiple, different binaries at the same time on the same
 node, but only from one submission. Submitting a script like this
 will not work:</p>
-<div class="highlight-python"><pre>OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 0 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 1 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 2 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 3 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 4 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 5 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 6 ./my-binary
-OMP_NUM_THREADS=1 aprun -n 1 -d 1 -cc 7 ./my-binary</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 0 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 1 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 2 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 3 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 4 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 5 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 6 ./my-binary
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>1 aprun -n 1 -d 1 -cc 7 ./my-binary
+</pre></div>
 </div>
 <p>This will run a job on each core, but not at the same time. To run all
-jobs at the same time, you need to first bury all the binaries under
+jobs at the same time, you need to first add all the binaries within
 one aprun command:</p>
-<div class="highlight-python"><pre>$ more run.sh
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>cat run-all.pbs
 ./my-binary1
 ./my-binary2
 ./my-binary3
@@ -1620,21 +1586,18 @@ one aprun command:</p>
 ./my-binary6
 ./my-binary7
 ./my-binary8
-$ aprun -n 1 run.sh</pre>
+<span class="nv">$ </span>aprun -n 1 run.pbs
+</pre></div>
 </div>
-<p>Alternatively, use the command aprun -n 1 -d 8 run.sh. To run multiple
+<p>Alternatively, use the command aprun -n 1 -d 8 run.pbs. To run multiple
 serial jobs, you must build a batch script to divide the number of jobs
 into groups of eight, and the</p>
-<div class="admonition-todo admonition" id="index-3">
-<p class="first admonition-title">Todo</p>
-<p class="last">where is run.sh, is see job.sub but not run.sh</p>
-</div>
 </div>
 </div>
 <div class="section" id="storage-services">
-<span id="s-storage"></span><h2><a class="toc-backref" href="#id16">2.6. Storage Services</a><a class="headerlink" href="#storage-services" title="Permalink to this headline">¶</a></h2>
+<span id="s-storage"></span><h2><a class="toc-backref" href="#id18">2.5. Storage Services</a><a class="headerlink" href="#storage-services" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="using-indiana-universities-storage-services-from-futuregrid">
-<h3><a class="toc-backref" href="#id17">2.6.1. Using Indiana Universities Storage Services from FutureGrid</a><a class="headerlink" href="#using-indiana-universities-storage-services-from-futuregrid" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">2.5.1. Using Indiana Universities Storage Services from FutureGrid</a><a class="headerlink" href="#using-indiana-universities-storage-services-from-futuregrid" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-todo admonition" id="index-4">
 <p class="first admonition-title">Todo</p>
 <p class="last">This section has not be tested recently</p>
@@ -1653,16 +1616,18 @@ use the following services from india:</p>
 Kit</a> documentation.</p>
 </li>
 <li><p class="first">Then, from india, load the HSI module as follows:</p>
-<div class="highlight-python"><pre>$ module load hsi
-hsi version 3.5.3 loaded</pre>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>module load hsi
+hsi version 3.5.3 loaded
+</pre></div>
 </div>
 </li>
 <li><p class="first">Connect to the SDA:</p>
-<div class="highlight-python"><pre>$ hsi -A combo
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>hsi -A combo
 Principal: your_iu_userid
-[youriuid]Password:
-Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewall: off [hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009]
-?</pre>
+<span class="o">[</span>youriuid<span class="o">]</span>Password:
+Username: your_iu_userid  UID: 1122636  Acct: 1122636<span class="o">(</span>1122636<span class="o">)</span> Copies: 1 Firewall: off <span class="o">[</span>hsi.3.5.3 Fri Nov 20 10:01:25 EST 2009<span class="o">]</span>
+?
+</pre></div>
 </div>
 </li>
 </ul>
@@ -1670,26 +1635,41 @@ Username: your_iu_userid  UID: 1122636  Acct: 1122636(1122636) Copies: 1 Firewal
 the IU passphrase.</p>
 <ul>
 <li><p class="first">Enable firewall mode; otherwise, you will receive this error:</p>
-<div class="highlight-python"><pre>put: Error -5 on transfer
+<div class="highlight-bash"><div class="highlight"><pre>put: Error -5 on transfer
 
 ? firewall -on
-A: firewall mode set ON, I/O mode s&lt;et to extended (parallel=off), autoscheduling currently set to OFF</pre>
+A: firewall mode <span class="nb">set </span>ON, I/O mode s&lt;et to extended <span class="o">(</span><span class="nv">parallel</span><span class="o">=</span>off<span class="o">)</span>, autoscheduling currently <span class="nb">set </span>to OFF
+</pre></div>
 </div>
 </li>
 <li><p class="first">List local folder:</p>
-<div class="highlight-python"><pre>? lls
-testfile.txt</pre>
+<div class="highlight-bash"><div class="highlight"><pre>? lls
+testfile.txt
+</pre></div>
 </div>
 </li>
 <li><p class="first">List the current directory in HPSS:</p>
-<div class="highlight-python"><pre>? pwd
-pwd0: /hpss/pathtoyouriuusername</pre>
+<div class="highlight-bash"><div class="highlight"><pre>? <span class="nb">pwd</span>
+pwd0: /hpss/pathtoyouriuusername
+</pre></div>
 </div>
 </li>
 <li><p class="first">For transferring files (<em>put</em> and <em>get</em>), search the <a class="reference external" href="http://kb.iu.edu/?search=hsi">IU Knowledge
 Base</a>.</p>
 </li>
 </ul>
+<div class="section" id="deleted">
+<h4><a class="toc-backref" href="#id20">2.5.1.1. DELETED</a><a class="headerlink" href="#deleted" title="Permalink to this headline">¶</a></h4>
+<p>The second importand difference
+from the previous submit script is that it executes mpirun with
+arguments that describe your MPI application. Note that the number of
+processes specified to mpirun is 32—matching the 32 cores allocated by
+Torque.</p>
+<p>A minor difference between this script and the previous one is that
+the environment variable $PBS_JOBID is used when creating the stdin and
+stdout files. Torque sets a number of environment variables that you can
+use in your submit script, starting with PBS.</p>
+</div>
 </div>
 </div>
 </div>

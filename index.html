@@ -117,10 +117,9 @@
 <li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">2.4. Working with HPC Job Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.5. Xray HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.6. Storage Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.5. Storage Services</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
@@ -207,11 +206,15 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">4.6. Watchdog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.9. jira</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.10. Portal link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.11. Screencast recording tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.12. Screencast recording tips</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
 </ul>
 </li>
@@ -342,29 +345,32 @@ Gregory Pike</p>
 <li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="hpc.html#modules">2.1.1. Modules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#filesystem-layout">2.1.2. Filesystem Layout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#list-of-available-modules-on-various-machines">2.1.2. List of Available Modules on Various Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#filesystem-layout">2.1.3. Filesystem Layout</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="hpc.html#mpi-libraries">2.2.1. MPI Libraries</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hpc.html#compiling-mpi-applications">2.2.2. Compiling MPI Applications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#running-mpi-applications">2.2.3. Running MPI Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#batch-jobs">2.2.3. Batch Jobs</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">2.4. Working with HPC Job Services</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#running-queued-jobs-as-part-of-the-hpc-services">2.4.1. Running Queued Jobs as Part of the HPC Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#submitting-your-job">2.4.2. Submitting Your Job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#monitoring-your-job">2.4.3. Monitoring Your Job</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#examining-your-job-output">2.4.4. Examining Your Job Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-submission">2.3.1. Job Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-deletion">2.3.2. Job Deletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-monitoring">2.3.3. Job Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-output">2.3.4. Job Output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.5. Xray HPC Services</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#submitting-a-job-on-xray">2.5.1. Submitting a job on xray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#submitting-a-job-on-xray">2.4.1. Submitting a Job on xray</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.6. Storage Services</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="hpc.html#using-indiana-universities-storage-services-from-futuregrid">2.6.1. Using Indiana Universities Storage Services from FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.5. Storage Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#using-indiana-universities-storage-services-from-futuregrid">2.5.1. Using Indiana Universities Storage Services from FutureGrid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#deleted">2.5.1.1. DELETED</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -446,11 +452,7 @@ Gregory Pike</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">4. Eucalyptus</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">4.1. Account Creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">4.2. Resources Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#india">4.2.1. INDIA:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#sierra">4.2.2. SIERRA:</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">4.2. Resources Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">4.3. Testing Your Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">4.4. Image Deployment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">4.5. Logging Into the VM</a></li>
@@ -530,17 +532,24 @@ Gregory Pike</p>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">4.6. Watchdog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.9. jira</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.10. Portal link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.11. Screencast recording tips</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="contributing.html#osx">4.11.1. OSX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.12. Screencast recording tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#osx">4.12.1. OSX</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
-<p><strong>APPENDIX II. OTHERS</strong></p>
+<p><strong>APPENDIX II. MPI RING PROGRAM</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
+</ul>
+</div>
+<p><strong>APPENDIX III. OTHERS</strong></p>
 <ul class="simple">
 <li><a class="reference external" href="all.html">A more complete Index with all sections can be found here</a></li>
 </ul>

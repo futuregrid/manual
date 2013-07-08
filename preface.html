@@ -118,10 +118,9 @@
 <li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">2.4. Working with HPC Job Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.5. Xray HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.6. Storage Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.5. Storage Services</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
@@ -208,11 +207,15 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">4.6. Watchdog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.9. jira</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.10. Portal link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.11. Screencast recording tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.12. Screencast recording tips</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
 </ul>
 </li>
@@ -384,14 +387,19 @@ additional contributors and editors to this manual.</p>
 <h2><a class="toc-backref" href="#id9">1.5. Conventions</a><a class="headerlink" href="#conventions" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>$</dt>
-<dd>When showing examples of commands, the $ symbol precedes the
+<dd><p class="first">When showing examples of commands, the $ symbol precedes the
 actual command. So, the other lines are the output obtained after
-executing the command.</dd>
+executing the command. An example invoking the ls command
+follows:</p>
+<div class="last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ls
+</pre></div>
+</div>
+</dd>
 <dt>portalname:</dt>
-<dd>In some examples we refer to your portal name as <em>yourportalname</em></dd>
+<dd>In some examples we refer to your portal name as <strong>portalname</strong> <span class="rubric">red</span></dd>
 <dt>localname:</dt>
 <dd>In some examples we refer to your local computers name as
-<em>localname</em>. Your portal name and your local name may be
+<strong>localname</strong>. Your portal name and your local name may be
 different.</dd>
 <dt>Menu selections:</dt>
 <dd><em class="menuselection">Start ‣ Programs</em></dd>

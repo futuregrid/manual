@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. MPI Ring Program &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="prev" title="4. Building the Manual" href="contributing.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">1.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">1.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#sponsors">1.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#about-this-manual">1.4. About this Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preface.html#conventions">1.5. Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">2.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">2.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">2.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">2.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">2.5. Support</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="account.html">1. Project and Account Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="account.html#terminology">1.1. Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#quickstart">1.2. Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#projects-and-accounts-for-xsede-users">1.3. Projects and Accounts for XSEDE users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#project-management">1.4. Project Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#upload-a-ssh-public-key">1.5. Upload a SSH Public Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#upload-an-openid">1.6. Upload an OpenId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#accessing-futuregrid-resources">1.7. Accessing FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#manage-a-class-on-futuregrid">1.8. Manage a Class on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#mini-faq">1.9. Mini FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">2. Using SSH keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#using-ssh-from-windows">2.1. Using SSH from Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#generate-a-ssh-key">2.2. Generate a SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">2.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#upload-the-key-to-the-futuregrid-portal">2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#testing-your-ssh-key">2.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#testing-your-ssh-key-for-hotel">2.6. Testing your ssh key for Hotel</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="status.html">1. Status</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware.html">1. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#compute-resources">1.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#networks">1.2. Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html#network-impairments-device-nid">1.3. Network Impairments Device (NID)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.5. Storage Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#accessing-scalemp">3.1. Accessing ScaleMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#submitting-a-job">3.2. Submitting a job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#developing-a-job-script">3.3. Developing a job script</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="iaas.html">1. IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">1.1. Nimbus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">1.2. OpenStack Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#eucalyptus-clouds">1.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">1.4. Virtual Appliances for Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack.html">2. OpenStack Essex with euca2ools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#prerequisits">2.1. Prerequisits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-india">2.2. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#system-variable-user">2.3. System Variable $USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#account-and-credentials">2.4. Account and Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#euca2ools-ec2-client-tools">2.5. Euca2ools (EC2 client tools)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#testing-your-setup">2.6. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#list-of-common-images">2.7. List of Common Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#vm-types">2.8. VM Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#key-management">2.9. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#image-instantiation">2.10. Image Instantiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#rename-server-names">2.11. Rename Server Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#monitoring-instances">2.12. Monitoring Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-your-vm">2.13. Log into your VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#nova-volumes-not-available">2.14. Nova Volumes (Not available)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#volume-snapshots">2.15. Volume Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#image-registration">2.16. Image Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#delete-your-images">2.17. Delete your images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#terminate-your-vms">2.18. Terminate your VMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#limitations">2.19. Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#troubleshooting">2.20. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#compatibility-between-nova-and-euca2ools-commands">2.21. Compatibility between nova and euca2ools commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">3. OpenStack Grizzly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">3.1. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">3.2. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">3.3. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">3.4. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">3.6. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">3.7. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.8. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">4. Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">4.1. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">4.2. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">4.3. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">4.4. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">4.5. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">4.6. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">4.7. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">4.8. Status of Deployments</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">1. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">1.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">1.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">1.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">1.4. RAIN Manual Pages</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">3. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">4. Building the Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">4.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">4.2. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">4.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">4.4. Install the Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">4.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">4.6. Watchdog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">4.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">4.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">4.12. Screencast recording tips</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. MPI Ring Program</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">1. MPI Ring Program</a></li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="contributing.html"
+         title="previous chapter">&laquo; 4. Building the Manual</a></li>
+            
+            
+              <li>
+  <a href="_sources/ring.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="mpi-ring-program">
+<h1>1. MPI Ring Program<a class="headerlink" href="#mpi-ring-program" title="Permalink to this headline">¶</a></h1>
+<p>Download the <a class="reference download internal" href="_downloads/ring.c"><tt class="xref download docutils literal"><span class="pre">ring.c</span></tt></a> program.</p>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;stdlib.h&gt;</span>
+<span class="cp">#include &lt;string.h&gt;</span>
+<span class="cp">#include &lt;mpi.h&gt;</span>
+
+<span class="cm">/* command line configurables */</span>
+<span class="kt">int</span> <span class="n">Ntrips</span><span class="p">;</span>  <span class="cm">/* -t &lt;ntrips&gt; */</span>
+<span class="kt">int</span> <span class="n">Verbose</span><span class="p">;</span> <span class="cm">/* -v */</span>
+
+<span class="kt">int</span> <span class="nf">parse_command_line_args</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="kt">int</span> <span class="n">my_id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">error</span><span class="p">;</span>
+
+  <span class="cm">/* default values */</span>
+  <span class="n">Ntrips</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="n">Verbose</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">error</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">!</span><span class="n">error</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">argc</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s">&quot;-t&quot;</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">argc</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">Ntrips</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">i</span> <span class="o">++</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">strcmp</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s">&quot;-v&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">Verbose</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">my_id</span><span class="p">)</span> <span class="p">{</span>
+      <span class="cm">/* only Master prints usage message */</span>
+      <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\n\t</span><span class="s">usage: %s {-t &lt;ntrips&gt;} {-v}</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+      <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;where</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">-t &lt;ntrips&gt;</span><span class="se">\t</span><span class="s">- Number of trips around the ring.  Default value 1.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">-v</span><span class="se">\t\t</span><span class="s">- Verbose.  Master and all slaves log each step. </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+      <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;</span><span class="se">\t\t\t</span><span class="s">  Default value is FALSE.</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">error</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kt">int</span> <span class="n">numprocs</span><span class="p">,</span> <span class="n">my_id</span><span class="p">,</span> <span class="n">passed_num</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">trip</span><span class="p">;</span>
+  <span class="n">MPI_Status</span> <span class="n">status</span><span class="p">;</span>
+
+  <span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span>
+  <span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">numprocs</span><span class="p">);</span>
+  <span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">my_id</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">parse_command_line_args</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="n">my_id</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">MPI_Finalize</span><span class="p">();</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;my_id %d numprocs %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">my_id</span><span class="p">,</span> <span class="n">numprocs</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">numprocs</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">my_id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+
+      <span class="cm">/* I am the Master */</span>
+
+      <span class="n">passed_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+      <span class="k">for</span> <span class="p">(</span><span class="n">trip</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">trip</span> <span class="o">&lt;=</span> <span class="n">Ntrips</span><span class="p">;</span> <span class="n">trip</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">passed_num</span> <span class="o">++</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Master: starting trip %d of %d: before sending num=%d to dest=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+                 <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="n">passed_num</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">MPI_Send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">passed_num</span><span class="p">,</span>    <span class="cm">/* buff  */</span>
+                <span class="mi">1</span><span class="p">,</span>               <span class="cm">/* count */</span>
+                <span class="n">MPI_INT</span><span class="p">,</span>         <span class="cm">/* type  */</span>
+                <span class="mi">1</span><span class="p">,</span>               <span class="cm">/* dest  */</span>
+                <span class="mi">0</span><span class="p">,</span>               <span class="cm">/* tag   */</span>
+                <span class="n">MPI_COMM_WORLD</span><span class="p">);</span> <span class="cm">/* comm  */</span>
+     
+        <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Master: inside trip %d of %d: before receiving from source=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+                 <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="n">numprocs</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">MPI_Recv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">passed_num</span><span class="p">,</span>    <span class="cm">/* buff   */</span>
+                <span class="mi">1</span><span class="p">,</span>               <span class="cm">/* count  */</span>
+                <span class="n">MPI_INT</span><span class="p">,</span>         <span class="cm">/* type   */</span>
+                <span class="n">numprocs</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>      <span class="cm">/* source */</span>
+                <span class="mi">0</span><span class="p">,</span>               <span class="cm">/* tag    */</span>
+                <span class="n">MPI_COMM_WORLD</span><span class="p">,</span>  <span class="cm">/* comm   */</span>
+                <span class="o">&amp;</span><span class="n">status</span><span class="p">);</span>        <span class="cm">/* status */</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Master: end of trip %d of %d: after receiving passed_num=%d &quot;</span>
+               <span class="s">&quot;(should be =trip*numprocs=%d) from source=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+               <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="n">passed_num</span><span class="p">,</span> <span class="n">trip</span><span class="o">*</span><span class="n">numprocs</span><span class="p">,</span> <span class="n">numprocs</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="cm">/* I am a Slave */</span>
+
+      <span class="k">for</span> <span class="p">(</span><span class="n">trip</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">trip</span> <span class="o">&lt;=</span> <span class="n">Ntrips</span><span class="p">;</span> <span class="n">trip</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Slave %d: top of trip %d of %d: before receiving from source=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+                 <span class="n">my_id</span><span class="p">,</span> <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="n">my_id</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">MPI_Recv</span><span class="p">(</span><span class="o">&amp;</span><span class="n">passed_num</span><span class="p">,</span>    <span class="cm">/* buff   */</span>
+                <span class="mi">1</span><span class="p">,</span>               <span class="cm">/* count  */</span>
+                <span class="n">MPI_INT</span><span class="p">,</span>         <span class="cm">/* type   */</span>
+                <span class="n">my_id</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>         <span class="cm">/* source */</span>
+                <span class="mi">0</span><span class="p">,</span>               <span class="cm">/* tag    */</span>
+                <span class="n">MPI_COMM_WORLD</span><span class="p">,</span>  <span class="cm">/* comm   */</span>
+                <span class="o">&amp;</span><span class="n">status</span><span class="p">);</span>        <span class="cm">/* status */</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Slave %d: inside trip %d of %d: after receiving passed_num=%d from source=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+                 <span class="n">my_id</span><span class="p">,</span> <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="n">passed_num</span><span class="p">,</span> <span class="n">my_id</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">passed_num</span><span class="o">++</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Slave %d: inside trip %d of %d: before sending passed_num=%d to dest=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+                 <span class="n">my_id</span><span class="p">,</span> <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="n">passed_num</span><span class="p">,</span> <span class="p">(</span><span class="n">my_id</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">numprocs</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">MPI_Send</span><span class="p">(</span><span class="o">&amp;</span><span class="n">passed_num</span><span class="p">,</span>       <span class="cm">/* buff  */</span>
+                <span class="mi">1</span><span class="p">,</span>                  <span class="cm">/* count */</span>
+                <span class="n">MPI_INT</span><span class="p">,</span>            <span class="cm">/* type  */</span>
+                <span class="p">(</span><span class="n">my_id</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">numprocs</span><span class="p">,</span> <span class="cm">/* dest  */</span>
+                <span class="mi">0</span><span class="p">,</span>                  <span class="cm">/* tag   */</span>
+                <span class="n">MPI_COMM_WORLD</span><span class="p">);</span>    <span class="cm">/* comm  */</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">Verbose</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Slave %d: bottom of trip %d of %d: after send to dest=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+                 <span class="n">my_id</span><span class="p">,</span> <span class="n">trip</span><span class="p">,</span> <span class="n">Ntrips</span><span class="p">,</span> <span class="p">(</span><span class="n">my_id</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="n">numprocs</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;numprocs = %d, should be run with numprocs &gt; 1</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">numprocs</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">MPI_Finalize</span><span class="p">();</span>
+
+  <span class="c1">//exit(0);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

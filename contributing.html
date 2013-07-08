@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="next" title="1. MPI Ring Program" href="ring.html" />
     <link rel="prev" title="3. Git" href="git.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -117,10 +118,9 @@
 <li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#managing-applications-with-torque">2.3. Managing Applications with Torque</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#working-with-hpc-job-services">2.4. Working with HPC Job Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.5. Xray HPC Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.6. Storage Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#storage-services">2.5. Storage Services</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
@@ -207,11 +207,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#watchdog">4.6. Watchdog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#jira">4.9. jira</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#portal-link">4.10. Portal link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#screencast-recording-tips">4.11. Screencast recording tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jira">4.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#portal-link">4.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#screencast-recording-tips">4.12. Screencast recording tips</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
 </ul>
 </li>
@@ -227,10 +231,11 @@
 <li><a class="reference internal" href="#watchdog">4.6. Watchdog</a></li>
 <li><a class="reference internal" href="#transfering-a-page-from-the-portal-to-rst">4.7. Transfering a page from the portal to RST</a></li>
 <li><a class="reference internal" href="#creating-the-pages-locally">4.8. Creating the pages locally</a></li>
-<li><a class="reference internal" href="#jira">4.9. jira</a></li>
-<li><a class="reference internal" href="#portal-link">4.10. Portal link</a></li>
-<li><a class="reference internal" href="#screencast-recording-tips">4.11. Screencast recording tips</a><ul>
-<li><a class="reference internal" href="#osx">4.11.1. OSX</a></li>
+<li><a class="reference internal" href="#publishing-the-pages">4.9. Publishing the pages</a></li>
+<li><a class="reference internal" href="#jira">4.10. jira</a></li>
+<li><a class="reference internal" href="#portal-link">4.11. Portal link</a></li>
+<li><a class="reference internal" href="#screencast-recording-tips">4.12. Screencast recording tips</a><ul>
+<li><a class="reference internal" href="#osx">4.12.1. OSX</a></li>
 </ul>
 </li>
 </ul>
@@ -243,6 +248,8 @@
               
   <li><a href="git.html"
          title="previous chapter">&laquo; 3. Git</a></li>
+  <li><a href="ring.html"
+         title="next chapter">1. MPI Ring Program &raquo;</a></li>
             
             
               <li>
@@ -374,8 +381,14 @@ $ make</pre>
 <div class="highlight-python"><pre>$ make view</pre>
 </div>
 </div>
+<div class="section" id="publishing-the-pages">
+<h2>4.9. Publishing the pages<a class="headerlink" href="#publishing-the-pages" title="Permalink to this headline">¶</a></h2>
+<p>The pages can be published to github with:</p>
+<div class="highlight-python"><pre>make gh-pages</pre>
+</div>
+</div>
 <div class="section" id="jira">
-<h2>4.9. jira<a class="headerlink" href="#jira" title="Permalink to this headline">¶</a></h2>
+<h2>4.10. jira<a class="headerlink" href="#jira" title="Permalink to this headline">¶</a></h2>
 <p>References to jira can be made with the tag:</p>
 <div class="highlight-python"><pre>:jira:`this issue &lt;FG-1418&gt;`</pre>
 </div>
@@ -390,7 +403,7 @@ $ make</pre>
 and the tags must be specified in the conf.py file.</p>
 </div>
 <div class="section" id="portal-link">
-<h2>4.10. Portal link<a class="headerlink" href="#portal-link" title="Permalink to this headline">¶</a></h2>
+<h2>4.11. Portal link<a class="headerlink" href="#portal-link" title="Permalink to this headline">¶</a></h2>
 <p>to simplify access to a portal url you can use:</p>
 <div class="highlight-python"><pre>:portal:`my/ssh-keys`</pre>
 </div>
@@ -400,9 +413,9 @@ and the tags must be specified in the conf.py file.</p>
 and the tags must be specified in the conf.py file.</p>
 </div>
 <div class="section" id="screencast-recording-tips">
-<h2>4.11. Screencast recording tips<a class="headerlink" href="#screencast-recording-tips" title="Permalink to this headline">¶</a></h2>
+<h2>4.12. Screencast recording tips<a class="headerlink" href="#screencast-recording-tips" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="osx">
-<h3>4.11.1. OSX<a class="headerlink" href="#osx" title="Permalink to this headline">¶</a></h3>
+<h3>4.12.1. OSX<a class="headerlink" href="#osx" title="Permalink to this headline">¶</a></h3>
 <p>Install OmniDazzle from:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://www.omnigroup.com/products/omnidazzle/">http://www.omnigroup.com/products/omnidazzle/</a></li>
