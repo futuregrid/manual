@@ -61,12 +61,12 @@ Obtaining Credentials
    dashboard in `india <https://eucalyptus.india.futuregrid.org:8443>`__
    and `sierra <https://eucalyptus.sierra.futuregrid.org:8443>`__. To
    login to the dashboard use your FutureGrid project number (in the
-   format of *fgnumber)*\ as "Account" and your portal user name as
+   format of *fgprojectnumber)*\ as "Account" and your portal user name as
    "User". Then use the FutureGrid portal password. (If you download the
    file from the dashboard by default the system will name the file
    euca2-{username}-x509). We are using a slightly different naming
    scheme. The credential file will be found under the menu tab
-   username@fgnumber.)
+   username@fgprojectnumber.)
 
 NOTICE: Due to an incompatibility problem introduced during the
 upgrade to the Eucalyptus 3.1 system, accessing the dashboard of

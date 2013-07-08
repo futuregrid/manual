@@ -19,7 +19,7 @@ components for a cloud infrastructure solution. This tutorial provides
 an overview of OpenStack Nova installation on FutureGrid, as well as
 steps for deploying virtual machines.
 
-Prerequisits
+Prerequisites
 =============
 
 Be sure you have a valid portal account (see section :ref:`s-accounts`) and
@@ -30,7 +30,7 @@ Log into India
 ==============
 
 The first step is to ssh into india.futuregrid.org using your FG
-username::
+username (Make sure to replace the 'portalname' with your actual FG username)::
 
     $ ssh portalname@india.futuregrid.org
 
@@ -126,7 +126,7 @@ Following are the current images uploaded in essex::
 VM Types
 ========
 
-Unfortuunately euca2ools does not provide a command to list the
+Unfortunately euca2ools does not provide a command to list the
 flavors, so we simply use the OpenStack nova client to do so.
 To find out which flavors are available you can use the command::
 

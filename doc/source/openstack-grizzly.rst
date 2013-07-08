@@ -1,8 +1,9 @@
 OpenStack Grizzly
 ===================
 
-Currently we have OpenSTack Grizzly installed on Sierra. To use it you
-need to first log into sierra and prepare your openstack credentials::
+Currently we have OpenStack Grizzly installed on Sierra. To use it you
+need to first log into sierra and prepare your openstack credentials
+(Make sure to replace the 'username' with your actual FG username)::
 
        $ ssh username@sierra.futuregrid.org
 
@@ -138,7 +139,7 @@ If everything went correctly, you will see an output similar to::
        | config_drive                |                                      |
        +-----------------------------+--------------------------------------+
 
-To chheck if your instance is active you can repeatedly issue the list
+To check if your instance is active you can repeatedly issue the list
 command and monitor the Status field in the table::
 
        $ nova list
@@ -149,7 +150,7 @@ command and monitor the Status field in the table::
        | e15ad5b6-c3f0-4c07-996c-3bbe709a63b7 | <USER>-001    | ACTIVE | private=10.35.23.18 |
        +--------------------------------------+---------------+--------+---------------------+
 
-Once it hase changed from for example BUILD to ACTIVE, you can log
+Once it has changed from for example BUILD to ACTIVE, you can log
 in. Pleas use the IP address provided under networks. Note that the
 first address is private and can not be reached from outside sierra.
 
@@ -262,7 +263,7 @@ To allow snapshots, you must use the following convention:
 
 Let us assume your project is fg101 and you want to save the image
 with by reminding you it was a my-ubuntu-01 image you want to
-keey. Than you can issue on sierra the  following command::
+key. Than you can issue on sierra the following command::
 
        $ nova image-create $USER-001 fg101/$USER/my-ubuntu-01
        $ nova image-list
@@ -348,7 +349,7 @@ Delete your instance
 
        $ nova delete $USER-002
 
-   Please do not forgetto also delete your 001 vm if you no longer need
+   Please do not forget to also delete your 001 vm if you no longer need
    it
 
    
@@ -356,7 +357,7 @@ Delete your instance
 How to change your password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Sometimes, users accidentally send password to a corablator/support
+#. Sometimes, users accidentally send password to a collaborator/support
    for debugging, and then regret. When you put yourself in the
    situation by mistake, don't worry. Just use keystone client and reset
    your password with::
@@ -365,7 +366,7 @@ How to change your password
 
    \* Remember, you will also need to change it in your novarc. This can
    be achieved by either editing your novarc file directly, or by
-   editing the file ~/.futuregrid/cloudmesh.yaml annd recreating your
+   editing the file ~/.futuregrid/cloudmesh.yaml and recreating your
    novarc file.
 
 Things to do when you need Euca2ools or EC2 interfaces
