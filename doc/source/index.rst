@@ -59,7 +59,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    hardware
    hpc
    scalemp
-   storage
 
 **PART V. IAAS/CLOUD SERVICES**
 
