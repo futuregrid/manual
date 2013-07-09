@@ -62,7 +62,7 @@ Obtaining Credentials
    *NOTICE:* Due to an compatibility problem introduced during the
    upgrade to the Eucalyptus 3.1 system, accessing the GUI dashboard of
    Eucalyptus on india is temporarily unavailable. However, your credential
-   will be in place so you can execute the later steps of this manual.
+   will be in place so you can execute the steps of this tutorial using euca2ools.
 
 -  Find your credential zip file in cd
    $HOME/.futuregrid/eucalyptus/fgprojectnumber::
