@@ -44,20 +44,19 @@ Account Creation
 --------------------
 
 Eucalyptus 3.1 accounts are provisioned for all FutureGrid users with a
-valid portal account and project affiliation. There is no need apply
+valid portal account and project affiliation. There is no need to apply
 for Eucalyptus accounts separately.
 
 Obtaining Credentials
 
--  Credentials files are created by default and placed in user's home
-   directory under *.futuregrid* folder on india.  To leverage
-   LDAP groups we created separate credentials for each FutureGrid
-   project. For instance, if you are part of FutureGrid project number
-   100 and 200, there will be two folders (fg100 and fg200) in
-   *.futuregrid/eucalyptus*. Each project folder contains corresponding
-   credentials zip files. So fg100:username and fg200:username in
-   Eucalyptus are two different identities, but they are tied to the same LDAP
-   user.
+-  Credentials files are created by default and placed in your home
+   directory under *.futuregrid* folder on india.  There are separate
+   credentials for each FutureGrid project. For instance, if you are
+   part of FutureGrid project numbers 100 and 200, there will be two
+   folders (fg100 and fg200) in *.futuregrid/eucalyptus*. Each project
+   folder contains a corresponding credentials zip file. So
+   fg100:username and fg200:username in Eucalyptus are two different
+   identities, but they are tied to the same FutureGrid user.
 
    *NOTICE:* Due to an compatibility problem introduced during the
    upgrade to the Eucalyptus 3.1 system, accessing the GUI dashboard of
