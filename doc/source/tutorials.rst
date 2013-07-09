@@ -40,9 +40,7 @@ Tutorial Topic 1: Cloud Provisioning Platforms
    [novice] 
 -  :portal:`Using OpenStack Essex
    on FutureGrid <tutorials/openstack>` [novice]
--  :portal:`Using Eucalyptus on
-   FutureGrid <tutorials/eucalyptus3>`
-   [novice]
+-  :ref:`Using Eucalyptus on FutureGrid <s-eucalyptus>` [novice]
 -  :portal:`Connecting private network VMs across Nimbus clusters using
    ViNe <contrib/simple-vine-tutorial>` [novice]
 -  :portal:`IPOP1: (IP-over-P2P) Virtual Network Introductory
