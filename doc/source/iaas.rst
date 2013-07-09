@@ -82,8 +82,8 @@ stacks.
 
 For tutorials on getting started with Eucalyptus, see:
 
--  :portal:`Using Eucalyptus on
-   FutureGrid <tutorials/eucalyptus3>` [novice]
+-  :ref:`Using Eucalyptus on
+   FutureGrid <s-eucalyptus>` [novice]
 
 
 
