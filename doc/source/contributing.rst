@@ -194,3 +194,17 @@ Show the icons on OSX desktop::
 
    $ defaults write com.apple.finder CreateDesktop -bool true
    $ killall Finder
+
+Changing the prompt
+~~~~~~~~~~~~~~~~~~~
+
+To change the prompt you can do something like::
+
+    $ PS1="$ "
+
+Recording
+~~~~~~~~~~
+
+Simply use::
+
+    $ script file.log
