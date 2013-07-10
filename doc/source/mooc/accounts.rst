@@ -107,14 +107,15 @@ Exercises
 
 #. Create a portal account on FutureGrid.
    
-   
-
+   See section :ref:`s-accounts`.   
 
 #. Identify an interesting project that you can conduct on FutureGrids Cloud, HPC, or Grid resources.
 
+   See examples at https://portal.futuregrid.org/projects/all
+
 #. Apply for a FutureGrid project or join a project.
 
-   See section :ref:`s-accounts`.
+   See section :ref:`s-account-join-project`.
 
 #. Read up on what a ssh key is.
 
