@@ -444,3 +444,41 @@ Mini FAQ
 
 .. |info-image| image:: images/glyphicons_195_circle_info.png 
 
+Example Project:
+--------------
+
+Title: 
+
+Project Keywords: 
+
+Project Lead: 
+
+Project Manager: 
+
+Project Members:
+ 
+Project Alumni:
+
+
+Project Orientation: *
+ Research
+ Education
+ Industry
+ Government
+
+Primary Discipline: *
+
+Abstract: *
+
+Please provide a short abstract of your proposed research or educational activity using FutureGrid.
+
+Intellectual Merit: *
+
+Broader Impact: *
+
+Scale of use: *
+
+Results:
+
+
+

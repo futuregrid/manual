@@ -1,5 +1,5 @@
-Screencast: Account Creation 
-===================
+Screencast: Account and Project Management
+==============================
 Instructor name:
   Gregor von Laszewski
 
@@ -73,8 +73,8 @@ Units
 
    * - Video
      - Length
-     - Lessons
-     - Title of the contribution, 
+     - Titles of the Lessons
+     - Description of the Lessons
    * - |video-portal-account| 
      - 5:10 min
      - Create a portal account
@@ -87,7 +87,10 @@ Units
      - 2:39 min
      - Upload an SSH key
      - This lesson explains you how to Upload and use an SSH key to login into the FutureGrid resources
-
+   * - |video-portal-join-proj| 
+     - 1:28 min
+     - Join a project
+     - This lesson explains you how to Join a FutureGrid Project.
 
 
 
@@ -106,48 +109,16 @@ Exercises
 
 #. Register your OpenID in the portal (for example if you use google).
 
+#. Upload a 220x220 pixel portrait of yours to the portal.
+
+#. MAke sure you have uploaded a small Bio written in third person.
+
 .. |video-image| image:: /images/glyphicons_402_youtube.png 
 
 .. |video-portal-account| replace:: |video-image| :youtube:`c7mjKI8mJws`
 
 .. |video-portal-openid| replace:: |video-image| :youtube:`rZzpCYWDEpI`
 .. |video-portal-sshkey| replace:: |video-image| :youtube:`4wjVwQbOlSU`
-
-Example Project:
---------------
-
-Title: 
-
-Project Keywords: 
-
-Project Lead: 
-
-Project Manager: 
-
-Project Members:
- 
-Project Alumni:
-
-
-Project Orientation: *
- Research
- Education
- Industry
- Government
-
-Primary Discipline: *
-
-Abstract: *
-
-Please provide a short abstract of your proposed research or educational activity using FutureGrid.
-
-Intellectual Merit: *
-
-Broader Impact: *
-
-Scale of use: *
-
-Results:
-
+.. |video-portal-join-proj| replace:: |video-image| :youtube:`5xQiPBwt58s`
 
 
