@@ -1,3 +1,5 @@
+.. _s-screencast-accounts:
+
 Screencast: Account and Project Management
 ==============================
 Instructor name:
@@ -54,7 +56,8 @@ FAQ
 -----
 * Is there written material about this?
 
-  * http://manual.futuregrid.org
+  * See sections :ref:`s-accounts` and :ref:`s-using-ssh`.
+
 
 Course Content
 --------------
@@ -103,20 +106,33 @@ Exercises
 ----------------------------------------------------------------------
 
 #. Create a portal account on FutureGrid.
+   
+   
+
 
 #. Identify an interesting project that you can conduct on FutureGrids Cloud, HPC, or Grid resources.
 
 #. Apply for a FutureGrid project or join a project.
 
+   See section :ref:`s-accounts`.
+
 #. Read up on what a ssh key is.
 
+   See section :ref:`s-using-ssh`.
+
 #. Upload a ssh key.
+
+   Do this via https://portal.futuregrid.org/my/ssh-keys
 
 #. Register your OpenID in the portal (for example if you use google).
 
 #. Upload a 220x220 pixel portrait of yours to the portal.
 
-#. MAke sure you have uploaded a small Bio written in third person.
+   Do this via https://portal.futuregrid.org/my/edit
+
+#. Make sure you have uploaded a small Bio written in third person.
+
+   Do this via https://portal.futuregrid.org/my/Contact
 
 .. |video-image| image:: /images/glyphicons_402_youtube.png 
 
