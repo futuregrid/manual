@@ -12,12 +12,12 @@ Project and Account Management
 It is very easy to obtain a project and accounts on FutureGrid. While
 it is possible to just execute the three steps in our quickstart
 guide, we have provided a more in-depth description based on user
-feedback. As you have certain responsibilities including **managing
+feedback. You have certain responsibilities including **managing
 project memberships** and **reporting results** that must be conducted
-while you use FutureGrid. Thus it is a good idea to read this section
-more carefully.  At the end of the section we also provided a mini-FAQ
-of information that may also be of help for issues you may have
-overlooked or have not yet been answered.  Some screencasts about this
+while you use FutureGrid, thus it is a good idea to read this section
+carefully.  At the end of the section we also provide a mini-FAQ
+of information that may be of help for issues you may have
+overlooked or that have not yet been answered.  Some screencasts about this
 topic are available in section :ref:`s-screencast-accounts`.
 
 .. _s-account-terminology:
@@ -27,29 +27,29 @@ Terminology
 
 Portal Account:
   A portal account is necessary to communicate information about
-  yourself to the FutureGrid team s they can verify that you exist and
-  you are a community member with need to use FutureGrid. Once you
+  yourself to the FutureGrid team so they can verify that you exist and
+  you are a community member with a need to use FutureGrid. Once you
   have a portal account approved you can apply for a project.
 
 Resource Account:
   A portal account will not give you access to the FutureGrid
   resources. You will have to go to the portal and join a
-  project or create one.
+  project, or create a new one.
 
 Valid Project: 
   At least one project you belong to must be valid. A
   valid project is one that is approved by a committee. If you are not
-  in an active project your access to FutureGrid will be
+  in a valid, active project your access to FutureGrid will be
   blocked. Projects that do not report any progress will be blocked
   after a while. Note that you agree to update us with regular
-  results reported via the portal as this is part of your agreement to
+  results reported via the portal as part of your agreement to
   use FutureGrid. 
 
 Uploaded SSH Key:
   As you are using remote compute resources we will require that you
   are very familiar with ssh key management. You will need to upload
   a public ssh key to the portal so we can create you an account and use
-  that public ssh key so you log into the resources.
+  that public ssh key to allow you to log in to the resources.
 
 
 .. _s-account-quickstart:
@@ -66,7 +66,7 @@ For non XSEDE users:
 
 #. :portal:`Create a Portal account <user/register>` and wait for confirmation via e-mail
 
-#. Join a :portal:`project <projects>` or :portal:`create a new project <node/add/fg-projects>`  and wait for
+#. Join a :portal:`project <projects>` or :portal:`create a new project <node/add/fg-projects>` and wait for
    confirmation. Note that you must communicate with the project lead
    first before you can join a project.
 
@@ -101,9 +101,9 @@ Project Management
 Create a Portal account
 -------------------------
 
-In order to utilize **any** FutureGrid resource, you must posses a
-FutureGrid **portal account**. Thus, *apply for your **portal
-account ** before you attempt anything else. This account is used to
+In order to utilize **any** FutureGrid resource, you must posess a
+FutureGrid **portal account**. Thus, *apply for your portal
+account* before you attempt anything else. This account is used to
 gather some information that we will use in the next steps. You must
 make sure that the information is complete before you proceed to the
 second step.  FutureGrid performs basic verification of the information
@@ -130,7 +130,7 @@ Here are a few tips that make it easy for you
 -  Note that fields with **\*** are mandatory
 -  It is important that you specify your address information completely.
 -  If you are a graduate or undergraduate student please fill out your
-   advisors contact information in the field specially dedicated for it.
+   advisor's contact information in the field specially dedicated for it.
    If he has a FutureGrid Portal name, please also add his portal name
    if you know it in that field.
 -  If you have an e-mail address from your institution, we ask that you
@@ -144,18 +144,15 @@ Here are a few tips that make it easy for you
    we recommend that you wait till you get a message that tells you that
    your portal account has been approved. Then continue to The next
    step. We are not conducting any portal approval outside of 10am-4pm
-   EST. If you are easily to be identified your approval will take 1-2
-   days, if not, we have either problems verifying your data or
-   something else is not right. In case you appear to be a spammer we
-   will not notify you. 
-     
--  In case you are teaching a class class we have some special
+   EST. If there are no problems verifying your information your
+   approval will take 1-2 days; if we have problems verifying your
+   data or something else is not right your approval will be
+   delayed. If you appear to be a spammer we will not notify you.
+-  If you are teaching a class class we have some special
    instructions for you in Section :ref:`s-account-class`.
-
 -  After your account has been approved, you can correct the
-   information  as part of the portal account :portal:`User Profile
+   information as part of the portal account :portal:`User Profile
    Management <my>`.
-
 
 
 .. include:: account-diag-create-account.rst
@@ -182,7 +179,7 @@ are completed and also implemented with the users joining the project.
 Thus the user is responsible to comply with the terms of the project in
 regards to reporting and acknowledgments in case of publications. Each
 project PI has the responsibility to communicate such requirements to
-the members and managers. The project agreements overwrite the
+the members and managers. The project agreements override the
 individuals agreement. 
 
 .. include:: account-diag-create-project.rst
@@ -190,15 +187,14 @@ individuals agreement.
 Example Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When applying for a project, yo may directly visit the project
-creation page and fill it out. However, we find it useful to prepare
-such a project in a separate text (ASCII, or MS word) document as to
-take advantage of spell and grammar checkers. Furthermore, as filling
-out the form may take some time, it seems best to just paste and copy
-from your document into that form. This way you may avoid issues such
-as that your laptop runs out of power or you get a network
-interruption and for some reason you lose the information that is
-requested from you by the form. 
+When applying for a project, you may directly visit the project
+creation page and fill it out. However, you may find it useful to
+prepare a separate (ASCII, or MS word) document and take advantage of
+spelling and grammar checkers. Furthermore, as filling out the form
+may take some time, it seems best to just copy and paste from your
+document into the form. This way you may avoid issues such as power
+failures or network interruptions which could cause you to lose the
+information that has been entered on the form but not yet submitted.
 
 Examples for a project can be found also on the portal itself
 when looking at the list of projects conducted on Futuregrid:
@@ -208,7 +204,7 @@ when looking at the list of projects conducted on Futuregrid:
 
 Recently we have increased the requirements for project
 approval. Hence it is important that you write a couple of paragraphs
-in the application a single sentence such as *I want to learn cloud
+in the application.  A single sentence such as *I want to learn cloud
 computing* will typically no longer be approved. Please examine a
 sample example class project which could be an inspiration
 for your own class projects::
@@ -229,7 +225,6 @@ for your own class projects::
      Albert Elfstein (use portalname)
 
    Project Alumni:
-
 
    Project Orientation: *
    - [ ] Research
@@ -381,16 +376,16 @@ they can process your request.
 Delete or Deactivate a user form a Project
 -------------------------------------------
 
-Deletion of a user can be a complex process in case a user has used FG
+Deletion of a user can be a complex process if a user has used FG
 resources. However, the following is for most project leads
 sufficient: To remove a user from your project you simply can edit
 your project page and remove the user name from the list of members or
-alumni's. If the user is in no other valid project she will no longer
+alumni. If the user is in no other valid project she will no longer
 be able to use FG.  If the user really needs to be removed from the
 system or from the portal, please fill out the `help form
 <https://portal.futuregrid.org/help>`__ with the username and the
 reason why he should be removed.  Naturally, if you detect that a user
-acts maliciously, please inform us immediately. We will disable
+is acting maliciously, please inform us immediately. We will disable
 access. Put in your subject line the prefix URGENT.
 
 Reporting Results
