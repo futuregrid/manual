@@ -1,6 +1,6 @@
 .. _s-using-ssh:
 
-Using SSH keys
+Using SSH Keys
 ======================================
 
 .. sidebar:: Page Contents
@@ -13,7 +13,8 @@ Using SSH keys
       If you do not know what ssh is we recommend that you `read up on
       it <http://openssh.com/manual.html>`__ .  However, the simple
       material presented here will help you getting started quickly on
-      FutureGrid.
+      FutureGrid. Some screencasts about this topic are available in
+      section :ref:`s-screencast-accounts`.
 
 
 To access the various FutureGrid resources, you need to provide a public

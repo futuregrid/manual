@@ -17,7 +17,8 @@ project memberships** and **reporting results** that must be conducted
 while you use FutureGrid. Thus it is a good idea to read this section
 more carefully.  At the end of the section we also provided a mini-FAQ
 of information that may also be of help for issues you may have
-overlooked or have not yet been answered.
+overlooked or have not yet been answered.  Some screencasts about this
+topic are available in section :ref:`s-screencast-accounts`.
 
 .. _s-account-terminology:
 
@@ -120,7 +121,7 @@ complete the next steps.
 
 Here are a few tips that make it easy for you
 
--  On the portal's main page at https://portal.futuregri.org
+-  On the portal's main page at https://portal.futuregrid.org
    appears
    a :menuselection:`Portal --> Register` :portal:`link <user/register>`. 
 -  Following you will be able to **Create a new account** on the
@@ -157,7 +158,7 @@ Here are a few tips that make it easy for you
 
 
 
-.. include:: account-diag-2.rst
+.. include:: account-diag-create-account.rst
 
 
 .. _s-account-create-project:
@@ -184,7 +185,179 @@ project PI has the responsibility to communicate such requirements to
 the members and managers. The project agreements overwrite the
 individuals agreement. 
 
-.. include:: account-diag-3.rst
+.. include:: account-diag-create-project.rst
+
+Example Project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When applying for a project, yo may directly visit the project
+creation page and fill it out. However, we find it useful to prepare
+such a project in a separate text (ASCII, or MS word) document as to
+take advantage of spell and grammar checkers. Furthermore, as filling
+out the form may take some time, it seems best to just paste and copy
+from your document into that form. This way you may avoid issues such
+as that your laptop runs out of power or you get a network
+interruption and for some reason you lose the information that is
+requested from you by the form. 
+
+Examples for a project can be found also on the portal itself
+when looking at the list of projects conducted on Futuregrid:
+
+* All projects: https://portal.futuregrid.org/projects/all
+* Class Projects: https://portal.futuregrid.org/projects/keywords/course
+
+Recently we have increased the requirements for project
+approval. Hence it is important that you write a couple of paragraphs
+in the application a single sentence such as *I want to learn cloud
+computing* will typically no longer be approved. Please examine a
+sample example class project which could be an inspiration
+for your own class projects::
+
+   Title: Course: Example Course On Advanced Cloud Computing
+
+   Project Keywords: 
+      Course, Cloud, OpenStack, Eucalyptus
+
+   Project Lead: 
+      Gregor von Laszewski (portalname)
+
+   Project Manager: 
+      Gregor von Laszewski (portalname)
+
+   Project Members: 
+     Fugang Wang (use portalname)
+     Albert Elfstein (use portalname)
+
+   Project Alumni:
+
+
+   Project Orientation: *
+   - [ ] Research
+   - [x] Education
+   - [ ] Industry
+   - [ ]  Government
+
+   Primary Discipline: *
+     Computer Science
+
+   Abstract: *
+   =========
+   
+   Note: this is an example project and is not a real project,
+   although the contents presented in this material is available.
+
+   This course will introduce the students at Indiana University as
+   part of the Summer Semester 2012 into the essentials of Cloud
+   Computing and HPC. We will start the course by teaching the
+   students within one week python. As cloud computing framework we
+   have chosen OpenStack, as it has become one of the ubiquitous IaaS
+   frameworks and is available on FutureGrid (Sierra). Additionally,
+   we will teach the students how to program a simple MPI application
+   so that they can further develop the virtual cluster code available
+   from github (https://github.com/futuregrid/virtual-cluster).
+   We will compare the performance between the virtualized and non
+   virtualized environment as develop with the help of our cloud
+   metrics system a scheduler that enables us to use bare metal
+   provisioned clusters and virtualized clusters on-demand based on
+   resource requirements and specifications. We are aware that the
+   FutureGrid team is developing such an environment, and like to join
+   the efforts throughout our course with the contributions conducted
+   by the students. 
+
+   Course Dates:
+
+   This class will be taught in 10 weeks as part of the Indiana
+   University CS curriculum. The following dates are important
+
+	 Start: July 13, 2013
+	 End:   Sept 23, 2013
+	 Extension: 1 month for students with programming in-completes.
+
+   Course Outline (tentative):
+
+      1. Introduction and Overview
+      2. Essential Python for the Cloud
+      3. Introduction to OpenStack
+      4. Programming OpenStack
+      5. Programming a HPC Cluster
+      6. Creating a Virtual Cluster
+      7. Performance Comparision
+      8. Cloud Metrics
+      9. Cloudmesh
+      10. Joining FutureGrid Software Developments
+
+   Grading Policies:
+      Class participation and contribution: 5%
+      Homework assignments, reading summary, and paper presentation: 50%
+         Programming assignments: (30%)
+         Reading Summaries: (10%)
+         Paper Presentation: (10%)
+      Course Project: 50%
+         Proposal: (10%)
+         Midterm Presentation: (10%)
+         Final Presentation and Demo: (15%)
+         Final Report: (15%)
+
+      Note: 
+        Homework and programming assignments are due by 11:59pm
+        Thursdays (unless announced in class otherwise). Late homework
+        (non-programming) will NOT be accepted. Late program penalty
+        is 10% per day, according to the timestamp of your online
+        submission. Only when verifiable extenuating circumstances can
+        be demonstrated will extended assignment due dates be
+        considered. Verifiable extenuating circumstances must be
+        reasons beyond control of the students, such as illness or
+        accidental injury. Poor performance in class is not an
+        extenuating circumstance. Inform your instructor of the
+        verifiable extenuating circumstances in advance or as soon as
+        possible. In such situations, the date and nature of the
+        extended due dates for the assignments will be decided by the
+        instructor.
+
+    Please note that FutureGrid does not approve accounts on the
+    weekends. Regular support hours are Mo-Fri 9am - 5pm. Please
+    note that answering support questions does take time. Do not
+    start the night before the homework is due. Plan your
+    programming assignments to be done early.
+
+   Intellectual Merit: *
+   ===================
+
+   The course will be introducing the students to cloud computing and
+   will aslo be used to derive new class materiel that we will be
+   using in subsequent lessons.
+
+   Broader Impact: *
+   ===============
+
+   This class will be educating a number of students in cloud
+   computing programming. Cloud computing is an important factor in
+   job availability after graduation of students, thus this course
+   will be useful to increase marketability of the students. In
+   addition we have in tha past also been able to increase
+   participation of minority students. In tha past we had 10 minority
+   students and 9 female students taking this class. We intend to work
+   together with Gregor von Laszewski and improve the FutureGrid
+   manual and to make our course material available via FutureGrid
+   through its github and community portal pages.
+
+   Scale of use: *
+   =============
+
+   We anticipate the the course will have 30-35 students. The course
+   will be using OpenStack and HPC compute resources and requires for
+   selected students access to bare metal provisioning.  The course
+   will not require to run computationally intense
+   applications. However, we require that students be able to run up
+   to 30 VMs at a time. We know that this may in peak hours be beyond
+   the capabilities of FutureGrid and are advising our students to
+   kill machines if they are not used. The maximum duration of a
+   single VM will typically be less than 5 minutes.
+
+   Results:
+   ========
+
+
 
 .. _s-account-join-project:
 
@@ -201,7 +374,7 @@ project lead to "accept join request", then you'll see a large gray
 the button to send the join request to the project lead and manager so
 they can process your request.
 
-.. include:: account-diag-1.rst
+.. include:: account-diag-join-project.rst
 
 .. _s-account-delete:
 
@@ -283,6 +456,7 @@ Changes to keys will take up to 1 hour to propagate through the system
 services. You are not allowed to use password less keys.  Your account
 may be deactivated if you violate this policy.
 
+.. _s-account-openid:
 
 Upload an OpenId 
 ==================
@@ -443,4 +617,7 @@ Mini FAQ
 * How do I get a user account on FutureGrid resources? see :ref:`s-account-quickstart`
 
 .. |info-image| image:: images/glyphicons_195_circle_info.png 
+
+
+.. _s-account-example-project:
 

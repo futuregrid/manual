@@ -4,6 +4,9 @@
 
    actdiag {
 
+      default_fontsize=14;
+      node_width=300;
+
       F -> G -> H;
       G -> I -> J -> M;
       M -> K -> L; 
@@ -12,13 +15,13 @@
          description = "Join an existing Project.",
          color="lightgrey", shape = roundedbox];
 
-      G [label = "Get Permission", 
+      G [label = "Get Permission", width=200,
          description = "Get permission from the project lead to join
          the project."];
 
-      H [label = "Delete Join Request", 
+      H [label = "Delete Join Request",  width=200,
          description = "Project leads will carefully evaluate if the
-         person requesting to join is elidgeble. If not join requests will be
+         person requesting to join is eligible. If not join requests will be
          deleted without notification requires to those that want to join."];
 
 
@@ -27,18 +30,18 @@
          the project. Go to the project page and press the join button/link.",
          color = "lightgreen"];
 
-      J [label = "Project Active", 
-         description = "Checks if the project is actve
+      J [label = "Project Active",  width=200,
+         description = "Checks if the project is active
          the project."];
 
-      M [label = "3b.2. SSH key\n uploaded?", description = "You must have
-         uploaded your ssh key to use Futuregrid resources",
+      M [label = "3b.2. SSH key uploaded?", description = "You must have
+         uploaded your ssh key to use FutureGrid resources",
          color = "lightgreen"];
 
-      K [label = "Generate Accounts", description = "Generate accounts
-         to resources"]
+      K [label = "Generate Accounts",  width=200,
+         description = "Generate accounts to resources"]
 
-      L [label = "3b.3. Wait for\n e-mail", description = "Wait for an e-mail
+      L [label = "3b.3. Wait for e-mail", description = "Wait for an e-mail
          that you have an account", 
          color="lightgrey", shape = roundedbox];
       
