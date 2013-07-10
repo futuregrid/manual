@@ -7,7 +7,8 @@ e-mail:
   laszewski@gmail.com
 
 Course material website:
-   http://manual.futuregrid.org
+   Supporting material about this lesson is avalable in the FutureGrid
+   Manual in section :ref:`s-accounts`.
 
 Overview
 ----------
@@ -55,10 +56,6 @@ FAQ
 
   * http://manual.futuregrid.org
 
-* Is the video available on youtube?
-
-  * https://www.youtube.com/watch?v=c7mjKI8mJws
-
 Course Content
 --------------
 
@@ -78,19 +75,27 @@ Units
    * - |video-portal-account| 
      - 5:10 min
      - Create a portal account
-     - This lesson explains you how to create a portal account which is the first step in getting access to FutureGrid
+     - This lesson explains you how to create a portal account which
+       is the first step in getting access to FutureGrid. 
+       For written material, see section :ref:`s-account-create-account`.
    * - |video-portal-openid| 
      - 1:35 min
      - Upload an OpenID
-     - This lesson explains you how to Upload and use an OpenID to login easily into the FutureGrid Portal
+     - This lesson explains you how to Upload and use an OpenID to
+       login easily into the FutureGrid Portal.
+       For written material, see section :ref:`s-account-openid`.
    * - |video-portal-sshkey| 
      - 2:39 min
      - Upload an SSH key
-     - This lesson explains you how to Upload and use an SSH key to login into the FutureGrid resources
+     - This lesson explains you how to Upload and use an SSH key to
+       login into the FutureGrid resources.
+       For written material, see section :ref:`s-portal-sshkey`.
    * - |video-portal-join-proj| 
      - 1:28 min
      - Join a project
      - This lesson explains you how to Join a FutureGrid Project.
+       For written material, see section :ref:`s-account-join-project`.
+
 
 
 
