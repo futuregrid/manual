@@ -120,7 +120,7 @@ complete the next steps.
 
 Here are a few tips that make it easy for you
 
--  On the portal's main page at https://portal.futuregri.org
+-  On the portal's main page at https://portal.futuregrid.org
    appears
    a :menuselection:`Portal --> Register` :portal:`link <user/register>`. 
 -  Following you will be able to **Create a new account** on the
@@ -283,6 +283,7 @@ Changes to keys will take up to 1 hour to propagate through the system
 services. You are not allowed to use password less keys.  Your account
 may be deactivated if you violate this policy.
 
+.. _s-account-openid:
 
 Upload an OpenId 
 ==================
