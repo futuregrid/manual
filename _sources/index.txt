@@ -80,7 +80,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    rain
 
-**APPENDIX I. MAINTAINING THIS MANUAL**
+**APPENDIX I. SCREENCASTS**
 
 .. toctree::
    :numbered:
