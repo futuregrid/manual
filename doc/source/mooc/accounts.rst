@@ -113,7 +113,41 @@ Exercises
 .. |video-portal-openid| replace:: |video-image| :youtube:`rZzpCYWDEpI`
 .. |video-portal-sshkey| replace:: |video-image| :youtube:`4wjVwQbOlSU`
 
+Example Project:
+--------------
 
-   
+Title: 
+
+Project Keywords: 
+
+Project Lead: 
+
+Project Manager: 
+
+Project Members:
+ 
+Project Alumni:
+
+
+Project Orientation: *
+ Research
+ Education
+ Industry
+ Government
+
+Primary Discipline: *
+
+Abstract: *
+
+Please provide a short abstract of your proposed research or educational activity using FutureGrid.
+
+Intellectual Merit: *
+
+Broader Impact: *
+
+Scale of use: *
+
+Results:
+
 
 
