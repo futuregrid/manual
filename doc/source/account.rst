@@ -101,7 +101,7 @@ Project Management
 Create a Portal account
 -------------------------
 
-In order to utilize **any** FutureGrid resource, you must posess a
+In order to utilize **any** FutureGrid resource, you must possess a
 FutureGrid **portal account**. Thus, *apply for your portal
 account* before you attempt anything else. This account is used to
 gather some information that we will use in the next steps. You must
