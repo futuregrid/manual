@@ -17,7 +17,8 @@ project memberships** and **reporting results** that must be conducted
 while you use FutureGrid. Thus it is a good idea to read this section
 more carefully.  At the end of the section we also provided a mini-FAQ
 of information that may also be of help for issues you may have
-overlooked or have not yet been answered.
+overlooked or have not yet been answered.  Some screencasts about this
+topic are available in section :ref:`s-screencast-accounts`.
 
 .. _s-account-terminology:
 
