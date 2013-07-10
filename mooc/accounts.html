@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Screencast: Account Creation &mdash; Cloud Computing Book 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="../index.html" />
+    <link rel="next" title="1. Todo List" href="../todolist.html" />
+    <link rel="prev" title="4. RAIN" href="../rain.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="../index.html">Contents</a>
+        <span class="navbar-text pull-left"><b>0.1</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="../index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">1. Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#citation-for-publications">1.1. Citation for Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#acknowledgement">1.2. Acknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#sponsors">1.3. Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#about-this-manual">1.4. About this Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preface.html#conventions">1.5. Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">2. Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#executive-summary">2.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#project-and-account-application">2.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#services">2.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#hardware">2.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html#support">2.5. Support</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../account.html">1. Project and Account Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#terminology">1.1. Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#quickstart">1.2. Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#projects-and-accounts-for-xsede-users">1.3. Projects and Accounts for XSEDE users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#project-management">1.4. Project Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#upload-a-ssh-public-key">1.5. Upload a SSH Public Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#upload-an-openid">1.6. Upload an OpenId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#accessing-futuregrid-resources">1.7. Accessing FutureGrid Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#manage-a-class-on-futuregrid">1.8. Manage a Class on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../account.html#mini-faq">1.9. Mini FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">2. Using SSH keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../security.html#using-ssh-from-windows">2.1. Using SSH from Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html#generate-a-ssh-key">2.2. Generate a SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html#add-or-replace-passphrase-for-an-already-generated-key">2.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html#upload-the-key-to-the-futuregrid-portal">2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html#testing-your-ssh-key">2.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../security.html#testing-your-ssh-key-for-hotel">2.6. Testing your ssh key for Hotel</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../status.html">1. Status</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware.html">1. Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#compute-resources">1.1. Compute Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#networks">1.2. Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware.html#network-impairments-device-nid">1.3. Network Impairments Device (NID)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc.html">2. HPC Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hpc.html#login-nodes">2.1. Login Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpc.html#job-management">2.3. Job Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hpc.html#xray-hpc-services">2.4. Xray HPC Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scalemp.html">3. ScaleMP vSMP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scalemp.html#accessing-scalemp">3.1. Accessing ScaleMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scalemp.html#submitting-a-job">3.2. Submitting a job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scalemp.html#developing-a-job-script">3.3. Developing a job script</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../iaas.html">1. IaaS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../iaas.html#nimbus-clouds">1.1. Nimbus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iaas.html#openstack-clouds">1.2. OpenStack Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iaas.html#eucalyptus-clouds">1.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iaas.html#virtual-appliances-for-training-and-education">1.4. Virtual Appliances for Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../openstack.html">2. OpenStack Essex with euca2ools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#prerequisites">2.1. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#log-into-india">2.2. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#system-variable-user">2.3. System Variable $USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#account-and-credentials">2.4. Account and Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#euca2ools-ec2-client-tools">2.5. Euca2ools (EC2 client tools)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#testing-your-setup">2.6. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#list-of-common-images">2.7. List of Common Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#vm-types">2.8. VM Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#key-management">2.9. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#image-instantiation">2.10. Image Instantiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#rename-server-names">2.11. Rename Server Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#monitoring-instances">2.12. Monitoring Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#log-into-your-vm">2.13. Log into your VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#nova-volumes-not-available">2.14. Nova Volumes (Not available)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#volume-snapshots">2.15. Volume Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#image-registration">2.16. Image Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#delete-your-images">2.17. Delete your images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#terminate-your-vms">2.18. Terminate your VMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#limitations">2.19. Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#troubleshooting">2.20. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack.html#compatibility-between-nova-and-euca2ools-commands">2.21. Compatibility between nova and euca2ools commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../openstack-grizzly.html">3. OpenStack Grizzly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#use-block-storage">3.1. Use Block Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#set-up-external-access-to-your-instance">3.2. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#make-a-snapshot-of-an-instance">3.3. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#automate-some-initial-configuration">3.4. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.5. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#delete-your-instance">3.6. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#how-to-change-your-password">3.7. How to change your password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.8. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../eucalyptus.html">5. Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#account-creation">5.1. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#resources-overview">5.2. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#testing-your-setup">5.3. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#image-deployment">5.4. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#logging-into-the-vm">5.5. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#vm-network-info">5.6. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#image-management">5.7. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eucalyptus.html#status-of-deployments">5.8. Status of Deployments</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rain.html">4. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rain.html#futuregrid-standalone-image-repository">4.2. FutureGrid Standalone Image Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rain.html#manual-image-customization">4.3. Manual Image Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rain.html#rain-manual-pages">4.4. RAIN Manual Pages</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. Screencast: Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">1.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">1.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instructor-bio">1.3. Instructor Bio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq">1.4. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#course-content">1.5. Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises">1.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-project">1.7. Example Project:</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../todolist.html">1. Todo List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plan.html">2. Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">13. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">11. Building the Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#python">11.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#virtualenv">11.2. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#create-a-github-local-directory-with-the-manual">11.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#install-the-requirements">11.4. Install the Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#all-in-one-setup-script">11.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#watchdog">11.6. Watchdog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#transfering-a-page-from-the-portal-to-rst">11.7. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#creating-the-pages-locally">11.8. Creating the pages locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#publishing-the-pages">11.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#jira">11.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#portal-link">11.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html#screencast-recording-tips">11.12. Screencast recording tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mooc.html">5. Template: Module/Unit Title</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mooc.html#overview">5.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mooc.html#prerequisites">5.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mooc.html#instructor-bio">5.3. Instructor Bio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mooc.html#faq">5.4. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mooc.html#course-content">5.5. Course Content</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ring.html">1. MPI Ring Program</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">1. Screencast: Account Creation</a><ul>
+<li><a class="reference internal" href="#overview">1.1. Overview</a></li>
+<li><a class="reference internal" href="#prerequisites">1.2. Prerequisites</a></li>
+<li><a class="reference internal" href="#instructor-bio">1.3. Instructor Bio</a></li>
+<li><a class="reference internal" href="#faq">1.4. FAQ</a></li>
+<li><a class="reference internal" href="#course-content">1.5. Course Content</a><ul>
+<li><a class="reference internal" href="#units">1.5.1. Units</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exercises">1.6. Exercises</a></li>
+<li><a class="reference internal" href="#example-project">1.7. Example Project:</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="../rain.html"
+         title="previous chapter">&laquo; 4. RAIN</a></li>
+  <li><a href="../todolist.html"
+         title="next chapter">1. Todo List &raquo;</a></li>
+            
+            
+              <li>
+  <a href="../_sources/mooc/accounts.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="../search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="screencast-account-creation">
+<h1>1. Screencast: Account Creation<a class="headerlink" href="#screencast-account-creation" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Instructor name:</dt>
+<dd>Gregor von Laszewski</dd>
+<dt>e-mail:</dt>
+<dd><a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a></dd>
+<dt>Course material website:</dt>
+<dd><a class="reference external" href="http://manual.futuregrid.org">http://manual.futuregrid.org</a></dd>
+</dl>
+<div class="section" id="overview">
+<h2>1.1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This series of screencasts will walk you through the account and
+project creation processes of FutureGrid. We have targeted the
+following areas:</p>
+<ul class="simple">
+<li>creating a portal account</li>
+<li>creating a project</li>
+<li>joining a project</li>
+<li>creating a class project</li>
+<li>add an ssh key</li>
+<li>add an OpenID to the portal account</li>
+</ul>
+<p>The material will allow you to easily get onto FutureGrid and either
+create your own project or join an existing one</p>
+</div>
+<div class="section" id="prerequisites">
+<h2>1.2. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Internet Access</li>
+<li>Web browser</li>
+<li>Need for using FutureGrid Resources</li>
+</ul>
+</div>
+<div class="section" id="instructor-bio">
+<h2>1.3. Instructor Bio<a class="headerlink" href="#instructor-bio" title="Permalink to this headline">¶</a></h2>
+<p>Gregor von Laszewski is the Assistant Director of CGL and DSC in the
+Pervasive Technology Institute and an Adjunct Associate Professor at
+Indiana University in the Computer Science department. He is currently
+conducting research in Cloud computing as part of the FutureGrid
+project in which he also serves as software architect. He held a
+position at Argonne National Laboratory from Nov. 1996 – Aug. 2009
+where he was last a scientist and a fellow of the Computation
+Institute at University of Chicago and initiated and lead the Java CoG
+Kit efforts.  He received a Masters Degree in 1990 from the University
+of Bonn, Germany, and a Ph.D. in 1996 from Syracuse University in
+computer science. Current research interests are in the areas of Cloud
+computing.  His Web page is located at <a class="reference external" href="http://gregor.cyberaide.org">http://gregor.cyberaide.org</a>.
+To contact me please send mail to <a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</div>
+<div class="section" id="faq">
+<h2>1.4. FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Is there written material about this?<ul>
+<li><a class="reference external" href="http://manual.futuregrid.org">http://manual.futuregrid.org</a></li>
+</ul>
+</li>
+<li>Is the video available on youtube?<ul>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=c7mjKI8mJws">https://www.youtube.com/watch?v=c7mjKI8mJws</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="course-content">
+<h2>1.5. Course Content<a class="headerlink" href="#course-content" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="units">
+<h3>1.5.1. Units<a class="headerlink" href="#units" title="Permalink to this headline">¶</a></h3>
+<p>(each unit should have a brief summary of its component information with title. If there are multiple lessons/videos in a unit, they must be clearly separated from each other)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="5%" />
+<col width="15%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Video</th>
+<th class="head">Length</th>
+<th class="head">Lessons</th>
+<th class="head">Title of the contribution,</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="video-image" src="../_images/glyphicons_402_youtube.png" /> <a class="reference external" href="http://www.youtube.com/watch?v=c7mjKI8mJws">c7mjKI8mJws</a></td>
+<td>5:10 min</td>
+<td>Create a portal account</td>
+<td>This lesson explains you how to create a portal account which is the first step in getting access to FutureGrid</td>
+</tr>
+<tr class="row-odd"><td><img alt="video-image" src="../_images/glyphicons_402_youtube.png" /> <a class="reference external" href="http://www.youtube.com/watch?v=rZzpCYWDEpI">rZzpCYWDEpI</a></td>
+<td>1:35 min</td>
+<td>Upload an OpenID</td>
+<td>This lesson explains you how to Upload and use an OpenID to login easily into the FutureGrid Portal</td>
+</tr>
+<tr class="row-even"><td><img alt="video-image" src="../_images/glyphicons_402_youtube.png" /> <a class="reference external" href="http://www.youtube.com/watch?v=4wjVwQbOlSU">4wjVwQbOlSU</a></td>
+<td>2:39 min</td>
+<td>Upload an SSH key</td>
+<td>This lesson explains you how to Upload and use an SSH key to login into the FutureGrid resources</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="exercises">
+<h2>1.6. Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a portal account on FutureGrid.</li>
+<li>Identify an interesting project that you can conduct on FutureGrids Cloud, HPC, or Grid resources.</li>
+<li>Apply for a FutureGrid project or join a project.</li>
+<li>Read up on what a ssh key is.</li>
+<li>Upload a ssh key.</li>
+<li>Register your OpenID in the portal (for example if you use google).</li>
+</ol>
+</div>
+<div class="section" id="example-project">
+<h2>1.7. Example Project:<a class="headerlink" href="#example-project" title="Permalink to this headline">¶</a></h2>
+<p>Title:</p>
+<p>Project Keywords:</p>
+<p>Project Lead:</p>
+<p>Project Manager:</p>
+<p>Project Members:</p>
+<p>Project Alumni:</p>
+<dl class="docutils">
+<dt>Project Orientation: *</dt>
+<dd>Research
+Education
+Industry
+Government</dd>
+</dl>
+<p>Primary Discipline: *</p>
+<p>Abstract: *</p>
+<p>Please provide a short abstract of your proposed research or educational activity using FutureGrid.</p>
+<p>Intellectual Merit: *</p>
+<p>Broader Impact: *</p>
+<p>Scale of use: *</p>
+<p>Results:</p>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

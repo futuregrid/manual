@@ -84,14 +84,23 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
 .. toctree::
    :numbered:
+   :maxdepth: 1
+
+   mooc/accounts
+
+**APPENDIX II. MAINTAINING THIS MANUAL**
+
+.. toctree::
+   :numbered:
    :maxdepth: -1
 
    todolist
    plan
    git
    contributing
+   mooc
 
-**APPENDIX II. MPI RING PROGRAM**
+**APPENDIX III. MPI RING PROGRAM**
 
 .. toctree::
    :numbered:
@@ -100,7 +109,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    ring
 
 
-**APPENDIX III. OTHERS**
+**APPENDIX IV. OTHERS**
 
 * `A more complete Index with all sections can be found here <all.html>`__
 

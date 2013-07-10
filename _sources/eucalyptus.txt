@@ -12,30 +12,30 @@ Eucalyptus
 Eucalyptus is a software platform that implements
 `IaaS-style <http://en.wikipedia.org/wiki/Cloud_computing#Infrastructure_as_a_Service_.28IaaS.29>`__
 cloud computing. Eucalyptus provides an Amazon Web Services
-(`AWS <http://aws.amazon.com/>`__) complaint EC2 based web service
+(`AWS <http://aws.amazon.com/>`__) compliant EC2 based web service
 interface for interacting with the Cloud service. Additionally,
-Eucalyptus provides services such as the AWS Complaint Walrus and a user
+Eucalyptus provides services such as the AWS Compliant Walrus and a user
 interface for managing users and images. The aim of this tutorial is to
 give users an introduction of how to interact with Eucalyptus using the
 Eucalyptus EC2 Interface
 (`Euca2ools <https://launchpad.net/euca2ools>`__). A more detailed
 documentation can be found in the `Eucalyptus
-Website <http://www.eucalyptus.com/eucalyptus-cloud/iaas>`__. A detail
+Website <http://www.eucalyptus.com/eucalyptus-cloud/iaas>`__. A detailed
 user guide is also available
 `here <http://www.eucalyptus.com/sites/all/modules/pubdlcnt/pubdlcnt.php?file=/sites/all/files/docs/latest/ug.pdf&nid=296>`__.
 
 
 As of May 15, 2012, FutureGrid is using `Eucalyptus version
-3 <http://www.eucalyptus.com/eucalyptus-cloud/iaas/features>`__ which
+3.1 <http://www.eucalyptus.com/eucalyptus-cloud/iaas/features>`__ which
 requires `euca2ools
-2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ and python > 2.4
-(available by modules in india and sierra). Make sure to load the
+2.1.2 <http://www.eucalyptus.com/download/euca2ools>`__ and python > 2.4
+(available by modules on india). Make sure to load the
 euca2ools module::
 
-    $ module load euca2ools/2.0.2
+    $ module load euca2ools
 
 before using Eucalyptus. `euca2ools
-2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ is part of
+2.1.2 <http://www.eucalyptus.com/download/euca2ools>`__ is part of
 Eucalyptus Enterprise package. However, the source is available
 `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
 
@@ -43,41 +43,25 @@ Eucalyptus Enterprise package. However, the source is available
 Account Creation
 --------------------
 
-Eucalyptus 3 is now integrated with our LDAP. Each account is created by
-default for all FutureGrid users with valid portal account and project
-affiliation. There is no need apply for accounts.
+Eucalyptus 3.1 accounts are provisioned for all FutureGrid users with a
+valid portal account and project affiliation. There is no need to apply
+for Eucalyptus accounts separately.
 
 Obtaining Credentials
 
--  Credentials files are created by default and placed in user's home
-   directory under *.futuregrid* folder in india and sierra. To leverage
-   LDAP group we created separate credentials for each FutureGrid
-   project. For instance, if you are part of FutureGrid project number
-   100 and 200, there will be two folders (fg100 and fg200) in
-   *.futuregrid/eucalyptus*. Each project folder contains corresponding
-   credentials zip files. So fg100:username and fg200:username in
-   Eucalyptus are two different identities however tied to the same LDAP
-   user. User can also download the credential file from the Eucalyptus
-   dashboard in `india <https://eucalyptus.india.futuregrid.org:8443>`__
-   and `sierra <https://eucalyptus.sierra.futuregrid.org:8443>`__. To
-   login to the dashboard use your FutureGrid project number (in the
-   format of *fgnumber)*\ as "Account" and your portal user name as
-   "User". Then use the FutureGrid portal password. (If you download the
-   file from the dashboard by default the system will name the file
-   euca2-{username}-x509). We are using a slightly different naming
-   scheme. The credential file will be found under the menu tab
-   username@fgnumber.)
+-  Credentials files are created by default and placed in your home
+   directory under *.futuregrid* folder on india.  There are separate
+   credentials for each FutureGrid project. For instance, if you are
+   part of FutureGrid project numbers 100 and 200, there will be two
+   folders (fg100 and fg200) in *.futuregrid/eucalyptus*. Each project
+   folder contains a corresponding credentials zip file. So
+   fg100:username and fg200:username in Eucalyptus are two different
+   identities, but they are tied to the same FutureGrid user.
 
-NOTICE: Due to an incompatibility problem introduced during the
-upgrade to the Eucalyptus 3.1 system, accessing the dashboard of
-Eucalyptus on india is tempararily unavailable. However, your credential
-will be in place so you can execute the later steps of this manual.
-
-On Sierra, the access is still available so you could download the
-credential zip file. Make sure to put it to Sierra first and then set up
-the environment as the following steps.
-Please be reminded that the credential for one cluster should/could
-not be used in another.
+   *NOTICE:* Due to an compatibility problem introduced during the
+   upgrade to the Eucalyptus 3.1 system, accessing the GUI dashboard of
+   Eucalyptus on india is temporarily unavailable. However, your credential
+   will be in place so you can execute the steps of this tutorial using euca2ools.
 
 -  Find your credential zip file in cd
    $HOME/.futuregrid/eucalyptus/fgprojectnumber::
@@ -100,11 +84,10 @@ not be used in another.
 Resources Overview
 ----------------------
 
-Eucalyptus is available to FutureGrid Users on the India and Sierra
-clusters. As we will see later, when we instantiate a Virtual Machine
-(VM) it is needed to select the type of VM Image that we are going to
-use. In this sense, the information of the VM Image types available in
-each cluster is summarized next.
+Eucalyptus is available to FutureGrid Users on the India
+cluster. As we will see later, when we instantiate a Virtual Machine
+(VM) we must select the type of VM Image that we are going to
+use. The VM Image types available are:
 
 India::
 
@@ -116,38 +99,29 @@ India::
     AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
     AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20
 
-Sierr::
-
-    AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
-    AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
-    AVAILABILITYZONE    |- m1.small    0051 / 0056   1    256     4
-    AVAILABILITYZONE    |- c1.medium    0037 / 0042   1    512     5
-    AVAILABILITYZONE    |- m1.large    0012 / 0014   2   1024    10
-    AVAILABILITYZONE    |- m1.xlarge    0012 / 0014   2   1024    12
-    AVAILABILITYZONE    |- c1.xlarge    0009 / 0014   4   2048    15
 
 Testing Your Setup
 ----------------------
 
 Use euca-describe-availability-zones to test the setup::
 
-        $ ssh portalname@sierra.futuregrid.org
+        $ ssh portalname@india.futuregrid.org
         Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
 
-        Welcome to Sierra.FutureGrid.Org
+        Welcome to India.FutureGrid.Org
 
-        torque/2.4.8 version 2.4.8 loaded
+        torque/2.5.5 version 2.5.5 loaded
         moab version 5.4.0 loaded 
 
-        $ module load euca2ools/2.0.2
-        euca2ools version 2.0.2 loaded
+        $ module load euca2ools
+        euca2ools version 2.1.2 loaded
 
         $ euca-version
-        euca2ools 2.0.2
+        euca2ools 2.1.2 (Limbo)
 
         $ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
         $ euca-describe-availability-zones
-        AVAILABILITYZONE    euca3sierra    198.202.120.90 arn:euca:eucalyptus:euca3sierra:cluster:euca3sierraCC/
+        AVAILABILITYZONE  euca3india  149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
 
 Available Images
 

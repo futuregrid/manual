@@ -138,7 +138,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. OpenStack Essex with euca2ools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#prerequisits">2.1. Prerequisits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">2.1. Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#log-into-india">2.2. Log into India</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#system-variable-user">2.3. System Variable $USER</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#account-and-credentials">2.4. Account and Credentials</a></li>
@@ -194,6 +194,18 @@
 </li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="mooc/accounts.html">1. Screencast: Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#overview">1.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#prerequisites">1.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#instructor-bio">1.3. Instructor Bio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#faq">1.4. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#course-content">1.5. Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#exercises">1.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#example-project">1.7. Example Project:</a></li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">13. Git</a></li>
@@ -212,6 +224,14 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">11.12. Screencast recording tips</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="mooc.html">5. Template: Module/Unit Title</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#overview">5.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#prerequisites">5.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#instructor-bio">5.3. Instructor Bio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#faq">5.4. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#course-content">5.5. Course Content</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
@@ -222,7 +242,7 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">2. OpenStack Essex with euca2ools</a><ul>
-<li><a class="reference internal" href="#prerequisits">2.1. Prerequisits</a></li>
+<li><a class="reference internal" href="#prerequisites">2.1. Prerequisites</a></li>
 <li><a class="reference internal" href="#log-into-india">2.2. Log into India</a></li>
 <li><a class="reference internal" href="#system-variable-user">2.3. System Variable $USER</a></li>
 <li><a class="reference internal" href="#account-and-credentials">2.4. Account and Credentials</a></li>
@@ -299,7 +319,7 @@
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#prerequisits" id="id1">Prerequisits</a></li>
+<li><a class="reference internal" href="#prerequisites" id="id1">Prerequisites</a></li>
 <li><a class="reference internal" href="#log-into-india" id="id2">Log into India</a></li>
 <li><a class="reference internal" href="#system-variable-user" id="id3">System Variable $USER</a></li>
 <li><a class="reference internal" href="#account-and-credentials" id="id4">Account and Credentials</a></li>
@@ -347,15 +367,15 @@ projects</a> that deliver various
 components for a cloud infrastructure solution. This tutorial provides
 an overview of OpenStack Nova installation on FutureGrid, as well as
 steps for deploying virtual machines.</p>
-<div class="section" id="prerequisits">
-<h2><a class="toc-backref" href="#id1">2.1. Prerequisits</a><a class="headerlink" href="#prerequisits" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prerequisites">
+<h2><a class="toc-backref" href="#id1">2.1. Prerequisites</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>Be sure you have a valid portal account (see section <a class="reference internal" href="account.html#s-accounts"><em>Project and Account Management</em></a>) and
 are part of a valid FG project.</p>
 </div>
 <div class="section" id="log-into-india">
 <h2><a class="toc-backref" href="#id2">2.2. Log into India</a><a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h2>
 <p>The first step is to ssh into india.futuregrid.org using your FG
-username:</p>
+username (Make sure to replace the &#8216;portalname&#8217; with your actual FG username):</p>
 <div class="highlight-python"><pre>$ ssh portalname@india.futuregrid.org</pre>
 </div>
 <p>If this command fails, please revisit the section
@@ -437,7 +457,7 @@ IMAGE   ami-000000b4   common/precise-server-cloudimg-amd64.img.manifest.xml   a
 </div>
 <div class="section" id="vm-types">
 <h2><a class="toc-backref" href="#id8">2.8. VM Types</a><a class="headerlink" href="#vm-types" title="Permalink to this headline">¶</a></h2>
-<p>Unfortuunately euca2ools does not provide a command to list the
+<p>Unfortunately euca2ools does not provide a command to list the
 flavors, so we simply use the OpenStack nova client to do so.
 To find out which flavors are available you can use the command:</p>
 <div class="highlight-python"><pre>$ nova flavor-list</pre>

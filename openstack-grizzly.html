@@ -138,7 +138,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="openstack.html">2. OpenStack Essex with euca2ools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#prerequisits">2.1. Prerequisits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstack.html#prerequisites">2.1. Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-india">2.2. Log into India</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstack.html#system-variable-user">2.3. System Variable $USER</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstack.html#account-and-credentials">2.4. Account and Credentials</a></li>
@@ -194,6 +194,18 @@
 </li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="mooc/accounts.html">1. Screencast: Account Creation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#overview">1.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#prerequisites">1.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#instructor-bio">1.3. Instructor Bio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#faq">1.4. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#course-content">1.5. Course Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#exercises">1.6. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc/accounts.html#example-project">1.7. Example Project:</a></li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">13. Git</a></li>
@@ -210,6 +222,14 @@
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">11.10. jira</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">11.11. Portal link</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">11.12. Screencast recording tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mooc.html">5. Template: Module/Unit Title</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#overview">5.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#prerequisites">5.2. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#instructor-bio">5.3. Instructor Bio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#faq">5.4. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#course-content">5.5. Course Content</a></li>
 </ul>
 </li>
 </ul>
@@ -267,8 +287,9 @@
   
   <div class="section" id="openstack-grizzly">
 <h1>3. OpenStack Grizzly<a class="headerlink" href="#openstack-grizzly" title="Permalink to this headline">¶</a></h1>
-<p>Currently we have OpenSTack Grizzly installed on Sierra. To use it you
-need to first log into sierra and prepare your openstack credentials:</p>
+<p>Currently we have OpenStack Grizzly installed on Sierra. To use it you
+need to first log into sierra and prepare your openstack credentials
+(Make sure to replace the &#8216;username&#8217; with your actual FG username):</p>
 <div class="highlight-python"><pre>$ ssh username@sierra.futuregrid.org</pre>
 </div>
 <p>Next you need to create your novarc file with our cloudmesh tools:</p>
@@ -386,7 +407,7 @@ $ nova secgroup-list-rules default</pre>
 | config_drive                |                                      |
 +-----------------------------+--------------------------------------+</pre>
 </div>
-<p>To chheck if your instance is active you can repeatedly issue the list
+<p>To check if your instance is active you can repeatedly issue the list
 command and monitor the Status field in the table:</p>
 <div class="highlight-python"><pre>$ nova list
 
@@ -396,7 +417,7 @@ command and monitor the Status field in the table:</p>
 | e15ad5b6-c3f0-4c07-996c-3bbe709a63b7 | &lt;USER&gt;-001    | ACTIVE | private=10.35.23.18 |
 +--------------------------------------+---------------+--------+---------------------+</pre>
 </div>
-<p>Once it hase changed from for example BUILD to ACTIVE, you can log
+<p>Once it has changed from for example BUILD to ACTIVE, you can log
 in. Pleas use the IP address provided under networks. Note that the
 first address is private and can not be reached from outside sierra.</p>
 <blockquote>
@@ -496,7 +517,7 @@ the project number.</li>
 </ul>
 <p>Let us assume your project is fg101 and you want to save the image
 with by reminding you it was a my-ubuntu-01 image you want to
-keey. Than you can issue on sierra the  following command:</p>
+key. Than you can issue on sierra the following command:</p>
 <div class="highlight-python"><pre>$ nova image-create $USER-001 fg101/$USER/my-ubuntu-01
 $ nova image-list
 +--------------------------------------+----------------------------+--------+--------------------------------------+
@@ -574,7 +595,7 @@ available when the status become &#8220;ACTIVE&#8221;.</p>
 <li><p class="first">You can delete your instance with:</p>
 <div class="highlight-python"><pre>$ nova delete $USER-002</pre>
 </div>
-<p>Please do not forgetto also delete your 001 vm if you no longer need
+<p>Please do not forget to also delete your 001 vm if you no longer need
 it</p>
 </li>
 </ol>
@@ -582,7 +603,7 @@ it</p>
 <div class="section" id="how-to-change-your-password">
 <h2>3.7. How to change your password<a class="headerlink" href="#how-to-change-your-password" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Sometimes, users accidentally send password to a corablator/support
+<li><p class="first">Sometimes, users accidentally send password to a collaborator/support
 for debugging, and then regret. When you put yourself in the
 situation by mistake, don&#8217;t worry. Just use keystone client and reset
 your password with:</p>
@@ -590,7 +611,7 @@ your password with:</p>
 </div>
 <p>* Remember, you will also need to change it in your novarc. This can
 be achieved by either editing your novarc file directly, or by
-editing the file ~/.futuregrid/cloudmesh.yaml annd recreating your
+editing the file ~/.futuregrid/cloudmesh.yaml and recreating your
 novarc file.</p>
 </li>
 </ol>
