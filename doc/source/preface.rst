@@ -87,7 +87,7 @@ sponsors of FutureGrid include:
    :header: "Logo", "Sponsor"
    :widths: 15, 80
 
-   |image1|, "National Sciens Foundation"
+   |image1|, "National Science Foundation"
    |image2|, "Lilly Endowment"
    |image3|, "Indiana University Pervasive Technology Institute"
 
