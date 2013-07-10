@@ -210,8 +210,8 @@ Recently we have increased the requirements for project
 approval. Hence it is important that you write a couple of paragraphs
 in the application a single sentence such as *I want to learn cloud
 computing* will typically no longer be approved. Please examine a
-sample example class project which could be an inspiration
-for your own class projects::
+sample class project which could be an inspiration
+for your own class projects (:download:`project.txt`)::
 
    Title: Course: Example Course On Advanced Cloud Computing
 
