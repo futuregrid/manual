@@ -23,7 +23,7 @@
 
       D [label = "2. Wait for e-mail", 
          description = "Wait for the e-mail that approves your portal
-         account. If you have not head from us within 2 buisiness days
+         account. If you have not heard from us within 2 buisiness days
          use the help form on the portal to contact us.",
          color="lightgreen"];
 

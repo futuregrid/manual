@@ -23,7 +23,7 @@ following areas:
 * creating a project
 * joining a project
 * creating a class project
-* add an ssh key
+* add a ssh key
 * add an OpenID to the portal account
 
 The material will allow you to easily get onto FutureGrid and either
@@ -84,19 +84,24 @@ Units
    * - |video-portal-openid| 
      - 1:35 min
      - Upload an OpenID
-     - This lesson explains you how to Upload and use an OpenID to
-       login easily into the FutureGrid Portal.
+     - This lesson explains you how to upload and use an OpenID to
+       login easily into the FutureGrid portal.
        For written material, see section :ref:`s-account-openid`.
    * - |video-portal-sshkey| 
      - 2:39 min
-     - Upload an SSH key
-     - This lesson explains you how to Upload and use an SSH key to
+     - Upload a SSH key
+     - This lesson explains you how to upload and use a SSH key to
        login into the FutureGrid resources.
        For written material, see section :ref:`s-portal-sshkey`.
+   * - |video-portal-create-proj|
+     - 6:25 min
+     - Create a project
+     - This lesson explains you how to craete a FutureGrid project.
+       For written material, see section :ref:`s-account-create-account`.
    * - |video-portal-join-proj| 
      - 1:28 min
      - Join a project
-     - This lesson explains you how to Join a FutureGrid Project.
+     - This lesson explains you how to Join a FutureGrid project.
        For written material, see section :ref:`s-account-join-project`.
 
 
@@ -142,5 +147,5 @@ Exercises
 .. |video-portal-openid| replace:: |video-image| :youtube:`rZzpCYWDEpI`
 .. |video-portal-sshkey| replace:: |video-image| :youtube:`4wjVwQbOlSU`
 .. |video-portal-join-proj| replace:: |video-image| :youtube:`5xQiPBwt58s`
-
+.. |video-portal-create-proj| replace:: |video-image| :youtube:`_y9avxkczIU`
 
