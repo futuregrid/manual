@@ -1,6 +1,6 @@
 .. _s-using-ssh:
 
-Using SSH keys
+Using SSH Keys
 ======================================
 
 .. sidebar:: Page Contents

@@ -32,7 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
-    <link rel="next" title="2. Using SSH keys" href="security.html" />
+    <link rel="next" title="2. Using SSH Keys" href="security.html" />
     <link rel="prev" title="2. Overview" href="introduction.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#mini-faq">1.9. Mini FAQ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="security.html">2. Using SSH keys</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="security.html">2. Using SSH Keys</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="security.html#using-ssh-from-windows">2.1. Using SSH from Windows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html#generate-a-ssh-key">2.2. Generate a SSH key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">2.3. Add or Replace Passphrase for an Already Generated Key</a></li>
@@ -246,7 +246,10 @@
 <li><a class="reference internal" href="#projects-and-accounts-for-xsede-users">1.3. Projects and Accounts for XSEDE users</a></li>
 <li><a class="reference internal" href="#project-management">1.4. Project Management</a><ul>
 <li><a class="reference internal" href="#create-a-portal-account">1.4.1. Create a Portal account</a></li>
-<li><a class="reference internal" href="#create-a-project">1.4.2. Create a Project</a></li>
+<li><a class="reference internal" href="#create-a-project">1.4.2. Create a Project</a><ul>
+<li><a class="reference internal" href="#example-project">1.4.2.1. Example Project</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#join-a-project">1.4.3. Join a Project</a></li>
 <li><a class="reference internal" href="#delete-or-deactivate-a-user-form-a-project">1.4.4. Delete or Deactivate a user form a Project</a></li>
 <li><a class="reference internal" href="#reporting-results">1.4.5. Reporting Results</a></li>
@@ -257,10 +260,7 @@
 <li><a class="reference internal" href="#upload-an-openid">1.6. Upload an OpenId</a></li>
 <li><a class="reference internal" href="#accessing-futuregrid-resources">1.7. Accessing FutureGrid Resources</a></li>
 <li><a class="reference internal" href="#manage-a-class-on-futuregrid">1.8. Manage a Class on FutureGrid</a></li>
-<li><a class="reference internal" href="#mini-faq">1.9. Mini FAQ</a><ul>
-<li><a class="reference internal" href="#example-project">1.9.1. Example Project:</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#mini-faq">1.9. Mini FAQ</a></li>
 </ul>
 </li>
 </ul>
@@ -272,7 +272,7 @@
   <li><a href="introduction.html"
          title="previous chapter">&laquo; 2. Overview</a></li>
   <li><a href="security.html"
-         title="next chapter">2. Using SSH keys &raquo;</a></li>
+         title="next chapter">2. Using SSH Keys &raquo;</a></li>
             
             
               <li>
@@ -307,21 +307,21 @@
 <li><a class="reference internal" href="#projects-and-accounts-for-xsede-users" id="id3">Projects and Accounts for XSEDE users</a></li>
 <li><a class="reference internal" href="#project-management" id="id4">Project Management</a><ul>
 <li><a class="reference internal" href="#create-a-portal-account" id="id5">Create a Portal account</a></li>
-<li><a class="reference internal" href="#create-a-project" id="id6">Create a Project</a></li>
-<li><a class="reference internal" href="#join-a-project" id="id7">Join a Project</a></li>
-<li><a class="reference internal" href="#delete-or-deactivate-a-user-form-a-project" id="id8">Delete or Deactivate a user form a Project</a></li>
-<li><a class="reference internal" href="#reporting-results" id="id9">Reporting Results</a></li>
-<li><a class="reference internal" href="#close-a-project" id="id10">Close a Project</a></li>
+<li><a class="reference internal" href="#create-a-project" id="id6">Create a Project</a><ul>
+<li><a class="reference internal" href="#example-project" id="id7">Example Project</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#upload-a-ssh-public-key" id="id11">Upload a SSH Public Key</a></li>
-<li><a class="reference internal" href="#upload-an-openid" id="id12">Upload an OpenId</a></li>
-<li><a class="reference internal" href="#accessing-futuregrid-resources" id="id13">Accessing FutureGrid Resources</a></li>
-<li><a class="reference internal" href="#manage-a-class-on-futuregrid" id="id14">Manage a Class on FutureGrid</a></li>
-<li><a class="reference internal" href="#mini-faq" id="id15">Mini FAQ</a><ul>
-<li><a class="reference internal" href="#example-project" id="id16">Example Project:</a></li>
+<li><a class="reference internal" href="#join-a-project" id="id8">Join a Project</a></li>
+<li><a class="reference internal" href="#delete-or-deactivate-a-user-form-a-project" id="id9">Delete or Deactivate a user form a Project</a></li>
+<li><a class="reference internal" href="#reporting-results" id="id10">Reporting Results</a></li>
+<li><a class="reference internal" href="#close-a-project" id="id11">Close a Project</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#upload-a-ssh-public-key" id="id12">Upload a SSH Public Key</a></li>
+<li><a class="reference internal" href="#upload-an-openid" id="id13">Upload an OpenId</a></li>
+<li><a class="reference internal" href="#accessing-futuregrid-resources" id="id14">Accessing FutureGrid Resources</a></li>
+<li><a class="reference internal" href="#manage-a-class-on-futuregrid" id="id15">Manage a Class on FutureGrid</a></li>
+<li><a class="reference internal" href="#mini-faq" id="id16">Mini FAQ</a></li>
 </ul>
 </div>
 </div>
@@ -447,7 +447,7 @@ information  as part of the portal account <a class="reference external" href="h
 Management</a>.</li>
 </ul>
 <p class="actdiag">
-<img src="_images/actdiag-28d1c6b9b35c94310482db3de47241e32369d70a.png" alt="None" width="832" height="440" />
+<img src="_images/actdiag-ba167badc213fa1a0b4a23067ba8bd183953a72e.png" alt="None" width="1220" height="440" />
 </p>
 <table border="1" class="docutils">
 <colgroup>
@@ -461,7 +461,7 @@ Management</a>.</li>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><ol class="first last arabic simple">
-<li>Get Portaln Account</li>
+<li>Get Portal Account</li>
 </ol>
 </td>
 <td>Apply for a portal account at <a class="reference external" href="https://portal.futuregrid.org/user/register">https://portal.futuregrid.org/user/register</a></td>
@@ -508,7 +508,7 @@ project PI has the responsibility to communicate such requirements to
 the members and managers. The project agreements overwrite the
 individuals agreement.</p>
 <p class="actdiag">
-<img src="_images/actdiag-88a6dbc7e9a44be9abd75a453f313a61142c04bb.png" alt="None" width="640" height="680" />
+<img src="_images/actdiag-fefe670cf51a7222ffc6db774fda917b92e264e5.png" alt="None" width="1056" height="680" />
 </p>
 <table border="1" class="docutils">
 <colgroup>
@@ -521,36 +521,207 @@ individuals agreement.</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>3a. Create newn Project</td>
+<tr class="row-even"><td>3a. Create new Project</td>
 <td>Fill out the project form at <a class="reference external" href="https://portal.futuregrid.org/node/add/fg-projects">https://portal.futuregrid.org/node/add/fg-projects</a></td>
 </tr>
 <tr class="row-odd"><td>Review</td>
-<td>Comittee reviews the project and corresponds with project lead to improve</td>
+<td>Committee reviews the project and corresponds with project lead to improve</td>
 </tr>
-<tr class="row-even"><td>3a.1.. Wait for n e-mail</td>
+<tr class="row-even"><td>3a.1. Wait for e-mail</td>
 <td>Wait for an e-mail
       that you have an account</td>
 </tr>
-<tr class="row-odd"><td>3a.2. Projectn Approved</td>
+<tr class="row-odd"><td>3a.2. Project Approved</td>
 <td>The project has been approved.</td>
 </tr>
-<tr class="row-even"><td>3a.3.i. Membersn add, del., alumni</td>
+<tr class="row-even"><td>3a.3.i. Members add, del., alumni</td>
 <td>manage the project members</td>
 </tr>
-<tr class="row-odd"><td>3a.3.ii. Reportn Results</td>
+<tr class="row-odd"><td>3a.3.ii. Report Results</td>
 <td>Make project member Alumni</td>
 </tr>
 <tr class="row-even"><td>Review Results</td>
-<td>Comittee recieves results for review</td>
+<td>Committee receives results for review</td>
 </tr>
-<tr class="row-odd"><td>4.Renewal</td>
-<td>Renewla of the project</td>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="4">
+<li>Renewal</li>
+</ol>
+</td>
+<td>Renewal of the project</td>
 </tr>
 </tbody>
 </table>
+<div class="section" id="example-project">
+<h4><a class="toc-backref" href="#id7">1.4.2.1. Example Project</a><a class="headerlink" href="#example-project" title="Permalink to this headline">¶</a></h4>
+<p>When applying for a project, yo may directly visit the project
+creation page and fill it out. However, we find it useful to prepare
+such a project in a separate text (ASCII, or MS word) document as to
+take advantage of spell and grammar checkers. Furthermore, as filling
+out the form may take some time, it seems best to just paste and copy
+from your document into that form. This way you may avoid issues such
+as that your laptop runs out of power or you get a network
+interruption and for some reason you lose the information that is
+requested from you by the form.</p>
+<p>Examples for a project can be found also on the portal itself
+when looking at the list of projects conducted on Futuregrid:</p>
+<ul class="simple">
+<li>All projects: <a class="reference external" href="https://portal.futuregrid.org/projects/all">https://portal.futuregrid.org/projects/all</a></li>
+<li>Class Projects: <a class="reference external" href="https://portal.futuregrid.org/projects/keywords/course">https://portal.futuregrid.org/projects/keywords/course</a></li>
+</ul>
+<p>Recently we have increased the requirements for project
+approval. Hence it is important that you write a couple of paragraphs
+in the application a single sentence such as <em>I want to learn cloud
+computing</em> will typically no longer be approved. Please examine a
+sample example class project which could be an inspiration
+for your own class projects:</p>
+<div class="highlight-python"><pre>Title: Course: Example Course On Advanced Cloud Computing
+
+Project Keywords:
+   Course, Cloud, OpenStack, Eucalyptus
+
+Project Lead:
+   Gregor von Laszewski (portalname)
+
+Project Manager:
+   Gregor von Laszewski (portalname)
+
+Project Members:
+  Fugang Wang (use portalname)
+  Albert Elfstein (use portalname)
+
+Project Alumni:
+
+
+Project Orientation: *
+- [ ] Research
+- [x] Education
+- [ ] Industry
+- [ ]  Government
+
+Primary Discipline: *
+  Computer Science
+
+Abstract: *
+=========
+
+Note: this is an example project and is not a real project,
+although the contents presented in this material is available.
+
+This course will introduce the students at Indiana University as
+part of the Summer Semester 2012 into the essentials of Cloud
+Computing and HPC. We will start the course by teaching the
+students within one week python. As cloud computing framework we
+have chosen OpenStack, as it has become one of the ubiquitous IaaS
+frameworks and is available on FutureGrid (Sierra). Additionally,
+we will teach the students how to program a simple MPI application
+so that they can further develop the virtual cluster code available
+from github (https://github.com/futuregrid/virtual-cluster).
+We will compare the performance between the virtualized and non
+virtualized environment as develop with the help of our cloud
+metrics system a scheduler that enables us to use bare metal
+provisioned clusters and virtualized clusters on-demand based on
+resource requirements and specifications. We are aware that the
+FutureGrid team is developing such an environment, and like to join
+the efforts throughout our course with the contributions conducted
+by the students.
+
+Course Dates:
+
+This class will be taught in 10 weeks as part of the Indiana
+University CS curriculum. The following dates are important
+
+      Start: July 13, 2013
+      End:   Sept 23, 2013
+      Extension: 1 month for students with programming in-completes.
+
+Course Outline (tentative):
+
+   1. Introduction and Overview
+   2. Essential Python for the Cloud
+   3. Introduction to OpenStack
+   4. Programming OpenStack
+   5. Programming a HPC Cluster
+   6. Creating a Virtual Cluster
+   7. Performance Comparision
+   8. Cloud Metrics
+   9. Cloudmesh
+   10. Joining FutureGrid Software Developments
+
+Grading Policies:
+   Class participation and contribution: 5%
+   Homework assignments, reading summary, and paper presentation: 50%
+      Programming assignments: (30%)
+      Reading Summaries: (10%)
+      Paper Presentation: (10%)
+   Course Project: 50%
+      Proposal: (10%)
+      Midterm Presentation: (10%)
+      Final Presentation and Demo: (15%)
+      Final Report: (15%)
+
+   Note:
+     Homework and programming assignments are due by 11:59pm
+     Thursdays (unless announced in class otherwise). Late homework
+     (non-programming) will NOT be accepted. Late program penalty
+     is 10% per day, according to the timestamp of your online
+     submission. Only when verifiable extenuating circumstances can
+     be demonstrated will extended assignment due dates be
+     considered. Verifiable extenuating circumstances must be
+     reasons beyond control of the students, such as illness or
+     accidental injury. Poor performance in class is not an
+     extenuating circumstance. Inform your instructor of the
+     verifiable extenuating circumstances in advance or as soon as
+     possible. In such situations, the date and nature of the
+     extended due dates for the assignments will be decided by the
+     instructor.
+
+ Please note that FutureGrid does not approve accounts on the
+ weekends. Regular support hours are Mo-Fri 9am - 5pm. Please
+ note that answering support questions does take time. Do not
+ start the night before the homework is due. Plan your
+ programming assignments to be done early.
+
+Intellectual Merit: *
+===================
+
+The course will be introducing the students to cloud computing and
+will aslo be used to derive new class materiel that we will be
+using in subsequent lessons.
+
+Broader Impact: *
+===============
+
+This class will be educating a number of students in cloud
+computing programming. Cloud computing is an important factor in
+job availability after graduation of students, thus this course
+will be useful to increase marketability of the students. In
+addition we have in tha past also been able to increase
+participation of minority students. In tha past we had 10 minority
+students and 9 female students taking this class. We intend to work
+together with Gregor von Laszewski and improve the FutureGrid
+manual and to make our course material available via FutureGrid
+through its github and community portal pages.
+
+Scale of use: *
+=============
+
+We anticipate the the course will have 30-35 students. The course
+will be using OpenStack and HPC compute resources and requires for
+selected students access to bare metal provisioning.  The course
+will not require to run computationally intense
+applications. However, we require that students be able to run up
+to 30 VMs at a time. We know that this may in peak hours be beyond
+the capabilities of FutureGrid and are advising our students to
+kill machines if they are not used. The maximum duration of a
+single VM will typically be less than 5 minutes.
+
+Results:
+========</pre>
+</div>
+</div>
 </div>
 <div class="section" id="join-a-project">
-<span id="s-account-join-project"></span><h3><a class="toc-backref" href="#id7">1.4.3. Join a Project</a><a class="headerlink" href="#join-a-project" title="Permalink to this headline">¶</a></h3>
+<span id="s-account-join-project"></span><h3><a class="toc-backref" href="#id8">1.4.3. Join a Project</a><a class="headerlink" href="#join-a-project" title="Permalink to this headline">¶</a></h3>
 <p>To join an existing project, ask the project lead or project manager for that
 project to add you to their project using that same form. If the project
 is set to &#8220;accept public join request&#8221;, you may also send a request in
@@ -561,7 +732,7 @@ project lead to &#8220;accept join request&#8221;, then you&#8217;ll see a large
 the button to send the join request to the project lead and manager so
 they can process your request.</p>
 <p class="actdiag">
-<img src="_images/actdiag-78f93bc4c0c468bea725c1ff8c84d9b529fcf2f2.png" alt="None" width="832" height="680" />
+<img src="_images/actdiag-ed5fd6c655d9c9871543a14c4430af766aeb64b0.png" alt="None" width="1220" height="680" />
 </p>
 <table border="1" class="docutils">
 <colgroup>
@@ -583,7 +754,7 @@ they can process your request.</p>
 </tr>
 <tr class="row-even"><td>Delete Join Request</td>
 <td>Project leads will carefully evaluate if the
-      person requesting to join is elidgeble. If not join requests will be
+      person requesting to join is eligible. If not join requests will be
       deleted without notification requires to those that want to join.</td>
 </tr>
 <tr class="row-odd"><td>3b.1. Join Approved</td>
@@ -591,18 +762,17 @@ they can process your request.</p>
       the project. Go to the project page and press the join button/link.</td>
 </tr>
 <tr class="row-even"><td>Project Active</td>
-<td>Checks if the project is actve
+<td>Checks if the project is active
       the project.</td>
 </tr>
-<tr class="row-odd"><td>3b.2. SSH keyn uploaded?</td>
+<tr class="row-odd"><td>3b.2. SSH key uploaded?</td>
 <td>You must have
-      uploaded your ssh key to use Futuregrid resources</td>
+      uploaded your ssh key to use FutureGrid resources</td>
 </tr>
 <tr class="row-even"><td>Generate Accounts</td>
-<td>Generate accounts
-      to resources</td>
+<td>Generate accounts to resources</td>
 </tr>
-<tr class="row-odd"><td>3b.3. Wait forn e-mail</td>
+<tr class="row-odd"><td>3b.3. Wait for e-mail</td>
 <td>Wait for an e-mail
       that you have an account</td>
 </tr>
@@ -610,7 +780,7 @@ they can process your request.</p>
 </table>
 </div>
 <div class="section" id="delete-or-deactivate-a-user-form-a-project">
-<span id="s-account-delete"></span><h3><a class="toc-backref" href="#id8">1.4.4. Delete or Deactivate a user form a Project</a><a class="headerlink" href="#delete-or-deactivate-a-user-form-a-project" title="Permalink to this headline">¶</a></h3>
+<span id="s-account-delete"></span><h3><a class="toc-backref" href="#id9">1.4.4. Delete or Deactivate a user form a Project</a><a class="headerlink" href="#delete-or-deactivate-a-user-form-a-project" title="Permalink to this headline">¶</a></h3>
 <p>Deletion of a user can be a complex process in case a user has used FG
 resources. However, the following is for most project leads
 sufficient: To remove a user from your project you simply can edit
@@ -623,7 +793,7 @@ acts maliciously, please inform us immediately. We will disable
 access. Put in your subject line the prefix URGENT.</p>
 </div>
 <div class="section" id="reporting-results">
-<h3><a class="toc-backref" href="#id9">1.4.5. Reporting Results</a><a class="headerlink" href="#reporting-results" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">1.4.5. Reporting Results</a><a class="headerlink" href="#reporting-results" title="Permalink to this headline">¶</a></h3>
 <p>It is important to report regularly results about your projects to
 FutureGrid. Please fill out this section and report upon the
 achievements of this project. You find your projects in a</p>
@@ -636,7 +806,7 @@ your projects. The reference will than be added and added for you to
 the portal.</p>
 </div>
 <div class="section" id="close-a-project">
-<span id="s-account-closing"></span><h3><a class="toc-backref" href="#id10">1.4.6. Close a Project</a><a class="headerlink" href="#close-a-project" title="Permalink to this headline">¶</a></h3>
+<span id="s-account-closing"></span><h3><a class="toc-backref" href="#id11">1.4.6. Close a Project</a><a class="headerlink" href="#close-a-project" title="Permalink to this headline">¶</a></h3>
 <p>Closing a project is an important responsibility of every project
 lead.  If you forgot which project you like to close or you have
 multiple projects, you can find a</p>
@@ -656,7 +826,7 @@ you for additional results even after the project is closed.</p>
 </div>
 </div>
 <div class="section" id="upload-a-ssh-public-key">
-<span id="s-portal-sshkey"></span><h2><a class="toc-backref" href="#id11">1.5. Upload a SSH Public Key</a><a class="headerlink" href="#upload-a-ssh-public-key" title="Permalink to this headline">¶</a></h2>
+<span id="s-portal-sshkey"></span><h2><a class="toc-backref" href="#id12">1.5. Upload a SSH Public Key</a><a class="headerlink" href="#upload-a-ssh-public-key" title="Permalink to this headline">¶</a></h2>
 <p>In order to be able to log into the started VMs, among other purposes,
 you need to provide FG with a secure-shell (ssh) public key. If you are
 already a frequent user of ssh, and have a private and public key pair,
@@ -669,13 +839,13 @@ after all.</p>
 <li>Click the link that says Add a public key.</li>
 </ol>
 <p>If you are not familiar with ssh keys we have provided a more
-elaborate section about <a class="reference internal" href="security.html#s-using-ssh"><em>Using SSH keys</em></a></p>
+elaborate section about <a class="reference internal" href="security.html#s-using-ssh"><em>Using SSH Keys</em></a></p>
 <p>Changes to keys will take up to 1 hour to propagate through the system
 services. You are not allowed to use password less keys.  Your account
 may be deactivated if you violate this policy.</p>
 </div>
 <div class="section" id="upload-an-openid">
-<span id="s-account-openid"></span><h2><a class="toc-backref" href="#id12">1.6. Upload an OpenId</a><a class="headerlink" href="#upload-an-openid" title="Permalink to this headline">¶</a></h2>
+<span id="s-account-openid"></span><h2><a class="toc-backref" href="#id13">1.6. Upload an OpenId</a><a class="headerlink" href="#upload-an-openid" title="Permalink to this headline">¶</a></h2>
 <p>Often users may not remember the pasword or username of the FG
 portal. However, they may have an easier time to remember their openid
 from for example google. It is possible to use your openid account and
@@ -687,7 +857,7 @@ register it once you gain access to the portal. Please visit your</p>
 click on the Google icon.</p>
 </div>
 <div class="section" id="accessing-futuregrid-resources">
-<span id="s-account-using-resources"></span><h2><a class="toc-backref" href="#id13">1.7. Accessing FutureGrid Resources</a><a class="headerlink" href="#accessing-futuregrid-resources" title="Permalink to this headline">¶</a></h2>
+<span id="s-account-using-resources"></span><h2><a class="toc-backref" href="#id14">1.7. Accessing FutureGrid Resources</a><a class="headerlink" href="#accessing-futuregrid-resources" title="Permalink to this headline">¶</a></h2>
 <p>To access and use resources, you must have</p>
 <ul class="simple">
 <li>a portal account</li>
@@ -704,7 +874,7 @@ conducted the above steps. The turnaround time for you getting access
 to the system is typically between 30 minutes and one day.</p>
 </div>
 <div class="section" id="manage-a-class-on-futuregrid">
-<span id="s-account-manage-class"></span><h2><a class="toc-backref" href="#id14">1.8. Manage a Class on FutureGrid</a><a class="headerlink" href="#manage-a-class-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<span id="s-account-manage-class"></span><h2><a class="toc-backref" href="#id15">1.8. Manage a Class on FutureGrid</a><a class="headerlink" href="#manage-a-class-on-futuregrid" title="Permalink to this headline">¶</a></h2>
 <p>If you teach a class using FutureGrid resources we recommend you do the following:</p>
 <ol class="arabic">
 <li><p class="first">Create a portal account if you do not have one.</p>
@@ -794,7 +964,7 @@ help <a class="reference external" href="https://portal.futuregrid.org/help">htt
 </ol>
 </div>
 <div class="section" id="mini-faq">
-<span id="s-account-faq"></span><h2><a class="toc-backref" href="#id15">1.9. Mini FAQ</a><a class="headerlink" href="#mini-faq" title="Permalink to this headline">¶</a></h2>
+<span id="s-account-faq"></span><h2><a class="toc-backref" href="#id16">1.9. Mini FAQ</a><a class="headerlink" href="#mini-faq" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://portal.futuregrid.org/my/projects">Which Projects Do I Participate In?</a></li>
 <li>How can I <a class="reference internal" href="#s-account-join-project"><em>Join a Project</em></a>?</li>
@@ -825,30 +995,7 @@ days.</li>
 <li>How do I <a class="reference internal" href="#s-portal-sshkey"><em>Upload a SSH Public Key</em></a></li>
 <li>How do I get a user account on FutureGrid resources? see <a class="reference internal" href="#s-account-quickstart"><em>Quickstart</em></a></li>
 </ul>
-<div class="section" id="example-project">
-<h3><a class="toc-backref" href="#id16">1.9.1. Example Project:</a><a class="headerlink" href="#example-project" title="Permalink to this headline">¶</a></h3>
-<p>Title:</p>
-<p>Project Keywords:</p>
-<p>Project Lead:</p>
-<p>Project Manager:</p>
-<p>Project Members:</p>
-<p>Project Alumni:</p>
-<dl class="docutils">
-<dt>Project Orientation: *</dt>
-<dd>Research
-Education
-Industry
-Government</dd>
-</dl>
-<p>Primary Discipline: *</p>
-<p>Abstract: *</p>
-<p>Please provide a short abstract of your proposed research or educational activity using FutureGrid.</p>
-<p>Intellectual Merit: *</p>
-<p>Broader Impact: *</p>
-<p>Scale of use: *</p>
-<p>Results:</p>
-</div>
-</div>
+<span class="target" id="s-account-example-project"></span></div>
 </div>
 
 
