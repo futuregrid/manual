@@ -380,8 +380,7 @@ how you can access them.
 #. Create a directory for putting eucarc, and create pk.pem, cert.pem
    and cacert.pem::
 
-       mkdir ~/eucacreds
-       cd ~/eucacreds
+       cd ~/.futuregrid/
        nova x509-create-cert
        nova x509-get-root-cert
        ls -la
@@ -390,9 +389,11 @@ how you can access them.
 
        keystone ec2-credentials-create
 
-#. Create eucarc file and put your EC2_ACCESS_KEY and
-   EC2_SECRET_KEY like this::
+#. Create the file calle *~/.futuregrid/eucarc*   and put your EC2_ACCESS_KEY and
+   EC2_SECRET_KEY that you obtained from the previous command into
+   this file::
 
+       EXPORT NOVA_KEY_DIR=$HOME/.futuregrid
        export EC2_ACCESS_KEY="Your EC2_ACCESS_KEY"
        export EC2_SECRET_KEY="Your EC2_SECRET_KEY"
        export EC2_URL="http://s77r.idp.sdsc.futuregrid.org:8773/services/Cloud"
@@ -404,7 +405,7 @@ how you can access them.
        alias ec2-bundle-image="ec2-bundle-image --cert ${EC2_CERT} --privatekey ${EC2_PRIVATE_KEY} --user 42 --ec2cert ${NOVA_CERT}"
        alias ec2-upload-bundle="ec2-upload-bundle -a ${EC2_ACCESS_KEY} -s ${EC2_SECRET_KEY} --url ${S3_URL} --ec2cert ${NOVA_CERT}"
 
-#. Confirm if euca2ools works fine::
+#. Confirm if euca2ools works::
 
        module load euca2ools
        source ~/eucacreds/eucarc
