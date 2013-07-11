@@ -393,7 +393,7 @@ how you can access them.
    EC2_SECRET_KEY that you obtained from the previous command into
    this file::
 
-       EXPORT NOVA_KEY_DIR=$HOME/.futuregrid
+       export NOVA_KEY_DIR=$HOME/.futuregrid
        export EC2_ACCESS_KEY="Your EC2_ACCESS_KEY"
        export EC2_SECRET_KEY="Your EC2_SECRET_KEY"
        export EC2_URL="http://s77r.idp.sdsc.futuregrid.org:8773/services/Cloud"

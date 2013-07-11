@@ -147,5 +147,5 @@ Exercises
 .. |video-portal-openid| replace:: |video-image| :youtube:`rZzpCYWDEpI`
 .. |video-portal-sshkey| replace:: |video-image| :youtube:`4wjVwQbOlSU`
 .. |video-portal-join-proj| replace:: |video-image| :youtube:`5xQiPBwt58s`
-.. |video-portal-create-proj| replace:: |video-image| :youtube:`_y9avxkczIU`
+.. |video-portal-create-proj| replace:: |video-image| :youtube:`DzbLS6iCeTE`
 
