@@ -202,9 +202,34 @@ To change the prompt you can do something like::
 
     $ PS1="$ "
 
-Recording
-~~~~~~~~~~
+Recording of typed in commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Simply use::
 
     $ script file.log
+
+Setup quicktime sound recording
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Start up quicktime you will see the following window:
+
+|i-quicktime-1|
+
+Click on the little arrow on the right and you will see
+
+|i-quicktime-2|
+
+Checkon the microphone you like to activate. This is  most likely the 
+*Build-in-Input: Internal microphone*. Also click on *Show mouse click
+in Recording*:
+
+|i-quicktime-3|
+
+Then start regording. Be careful that you wait in the rcordng till you
+see a little timer on the left quicktime needs a bit of startup time
+when recording sound and images.
+
+.. |i-quicktime-1| image:: /images/quicktime-1.png
+.. |i-quicktime-2| image:: /images/quicktime-2.png
+.. |i-quicktime-3| image:: /images/quicktime-3.png

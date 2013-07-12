@@ -1,11 +1,24 @@
+.. _s-openstack-grizzly:
+
 OpenStack Grizzly
 ===================
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+ 
+Login
+-------
 
 Currently we have OpenStack Grizzly installed on Sierra. To use it you
 need to first log into sierra and prepare your openstack credentials
 (Make sure to replace the 'username' with your actual FG username)::
 
        $ ssh username@sierra.futuregrid.org
+
+Creating the novarc file
+-------------------------
 
 Next you need to create your novarc file with our cloudmesh tools::
 
@@ -17,6 +30,9 @@ location::
 
     ~/.futuregrid/novarc 
 
+Activate OpenStack tools
+--------------------------
+
 To activate your your OpenStack environment and load the openstack
 tools you will need to source the novarc file and load the novaclient module::
 
@@ -25,6 +41,9 @@ tools you will need to source the novarc file and load the novaclient module::
 
 To check if your nova client works we use a simple command to list the
 flavors::
+
+List flavors
+--------------
 
        $ nova flavor-list
 
@@ -44,6 +63,9 @@ If not your environment may not be set up correctly. Make sure that
 you follow the steps in this section and the account management
 section carefully.
 
+List images
+------------
+
 After you got the flavor list, you can list the current set of
 uploaded images with the nova image-list command::
 
@@ -62,6 +84,8 @@ You will see an output similar to::
 
    $USER is your username on sierra machine. 
 
+Key management
+--------------
 To start a virtual machine you must first upload a key to the
 cloud. This can be easily done in the following way::
 
@@ -83,7 +107,9 @@ this step twice. Often it is the case that you already have a key in
 your ~/.ssh directory that you may want to use. For example if you use
 rsa, your key will be located at ~/.ssh/id_rsa.pub. 
 
-    
+Managing security groups
+----------------------------------------------------------------------
+
 In the next step we need to make sure that the security groups allow
 us to log into the VMs. To do so we create the following policies as
 part of our default security policies. Not that whne you are in a
@@ -102,6 +128,9 @@ You will see the following output if everything went correctly::
        | icmp        | -1        | -1      | 0.0.0.0/0 |              |
        | tcp         | 22        | 22      | 0.0.0.0/0 |              |
        +-------------+-----------+---------+-----------+--------------+
+
+Booting an image
+----------------------------------------------------------------------
 
 To boot an instance you simply can now use the command::
 
@@ -139,6 +168,9 @@ If everything went correctly, you will see an output similar to::
        | config_drive                |                                      |
        +-----------------------------+--------------------------------------+
 
+List running images
+----------------------------------------------------------------------
+
 To check if your instance is active you can repeatedly issue the list
 command and monitor the Status field in the table::
 
@@ -163,8 +195,8 @@ If you see a warning similar to::
 
 you need to delete the offending host key from .ssh/known_hosts.
 
-Use Block Storage
-~~~~~~~~~~~~~~~~~
+Use block storage
+----------------------------------------------------------------------
 
 You can create a block storage with the volume-create command. A
 valume is useful as you can store data in it and associate that
@@ -222,7 +254,7 @@ login node and execute volume-detach::
        $ nova volume-detach $USER-001 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Set up external access to your instance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 So far we only used the internal IP address, but you can also assign
 an external address, so that you can log in from other machines than
@@ -251,7 +283,7 @@ Now you should be able to ping and ssh from external and can use the
 given ip address.
 
 Make a snapshot of an instance
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 To allow snapshots, you must use the following convention: 
 
@@ -284,7 +316,7 @@ If you want to download your customized image, you can do it with this::
    Please note that images not following this convention will be deleted.
 
 Automate some initial configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 You may want to install some packages into the iamge, enable root, and
 add ssh authorized_keys. With the OpenStack cloud-init such steps can
@@ -318,7 +350,7 @@ Now boot your instance with --user-data mycloudinit.txt like this::
 You should be able to login to <USER>-002 as root, and the added packages are installed.
 
 Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------------------------------
 
 .. todo:: In future we will just host these images so we do not
    duplicate them on the server
@@ -343,7 +375,7 @@ Now your new image is listed on ``nova image-list``\ and will be
 available when the status become "ACTIVE".
 
 Delete your instance
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 #. You can delete your instance with::
 
@@ -355,7 +387,7 @@ Delete your instance
    
 
 How to change your password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 #. Sometimes, users accidentally send password to a collaborator/support
    for debugging, and then regret. When you put yourself in the
@@ -370,7 +402,7 @@ How to change your password
    novarc file.
 
 Things to do when you need Euca2ools or EC2 interfaces
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------
 
 Even though the nova client and protocols will provide you with more
 advanced features, some users still want to access OpenStack with EC2
@@ -411,4 +443,25 @@ how you can access them.
        source ~/eucacreds/eucarc
        euca-describe-images
        euca-describe-instances
+
+Horizon GUI
+---------------------------
+
+.. list-table:: Horizon endpoints
+   :header-rows: 1
+   :widths: 10,10,70
+
+
+   * - Image
+     - Machine
+     - Description
+   * - |image-horizon| 
+     - `Sierra <http://openstack.sierra.futuregrid.org/horizon>`__
+     - Sierra offers a Graphical user interface to access
+       OpenStack. For those interested in only managing a view images
+       this may be a good way to start. The link to the GUI is 
+       http://openstack.sierra.futuregrid.org/horizon
+
+
+.. |image-horizon| image:: /images/fg-horizon.png 
 
