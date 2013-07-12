@@ -84,9 +84,9 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
 .. toctree::
    :numbered:
-   :maxdepth: 1
+   :maxdepth: 3
 
-   mooc/accounts
+   mooc
 
 **APPENDIX II. MAINTAINING THIS MANUAL**
 
@@ -98,7 +98,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    plan
    git
    contributing
-   mooc
 
 **APPENDIX III. MPI RING PROGRAM**
 
