@@ -131,6 +131,12 @@ how you can use OpenStack on FutureGrid:
      - This lesson explains you how to use the OpenStack Commandline
        tools on the FutureGrid cluster called sierra.futuregrid.org. 
        For written material, see section :ref:`s-openstack-grizzly`.
+   * - |video-horizon| 
+     - 8:30 min
+     - Using OpenStack horizon GUI
+     - This lesson explains you how to use the OpenStack Horizon to
+       access the FutureGrid OpenStack IaaS framework on sierra.futuregrid.org. 
+       For written material, see section :ref:`s-openstack-horizon`.
 
 Exercises
 --------------
@@ -180,6 +186,7 @@ Creating FutureGrid Accounts and Projects
 .. |video-portal-join-proj| replace:: |video-image| :youtube:`5xQiPBwt58s`
 .. |video-portal-create-proj| replace:: |video-image| :youtube:`DzbLS6iCeTE`
 .. |video-openstack| replace:: |video-image| :youtube:`xRVJfOaR23w`
+.. |video-horizon| replace:: |video-image| :youtube:`JkNlWAUlxF0`
 
 
  
