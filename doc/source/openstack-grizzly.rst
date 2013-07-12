@@ -444,6 +444,8 @@ how you can access them.
        euca-describe-images
        euca-describe-instances
 
+.. _s-openstack-horizon:
+
 Horizon GUI
 ---------------------------
 
