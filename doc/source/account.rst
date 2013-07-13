@@ -45,6 +45,27 @@ Valid Project:
   results reported via the portal as part of your agreement to
   use FutureGrid. 
 
+Project Lead:
+   The Project Lead submits a project and is responsible for updating
+   the project page and project members. There is exactly one Project
+   Lead.  
+
+Project Manager:
+   The Project Lead can assign editing and management roles to a
+   Project Manager. He will have the same rights in regards to
+   updating page content and members as the Project Lead.  
+
+Project  Member:
+   The Project Lead or Manager can add additional members to the
+   project. A member must have a portal account.
+
+Project  Alumni:
+   Sometimes project members leave a project before it is
+   completed. SUch members are no longer part of the project and
+   should not have access to the project. However they can still be
+   acknowledged to have played a role as part of the project while
+   they are placed into the alumni role.
+
 Uploaded SSH Key:
   As you are using remote compute resources we will require that you
   are very familiar with ssh key management. You will need to upload

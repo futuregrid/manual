@@ -485,5 +485,7 @@ Horizon GUI
 
 
 .. |image-horizon| image:: /images/fg-horizon.png 
-.. |image-horizon-alamo| image:: /images/fg-horizon-alamo.png 
+   :width: 100px
 
+.. |image-horizon-alamo| image:: /images/fg-horizon-alamo.png 
+   :width: 100px
