@@ -353,8 +353,8 @@ flavors:</p>
 </div>
 <div class="section" id="list-flavors">
 <h2><a class="toc-backref" href="#id4">3.4. List flavors</a><a class="headerlink" href="#list-flavors" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>$ nova flavor-list</div></blockquote>
+<div class="highlight-python"><pre>$ nova flavor-list</pre>
+</div>
 <p>Everything is fine, if you se an output similar to:</p>
 <div class="highlight-python"><pre>+----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
 | ID | Name      | Memory_MB | Disk | Ephemeral | Swap | VCPUs | RXTX_Factor | Is_Public | extra_specs |
@@ -480,9 +480,9 @@ command and monitor the Status field in the table:</p>
 </div>
 <p>Once it has changed from for example BUILD to ACTIVE, you can log
 in. Pleas use the IP address provided under networks. Note that the
-first address is private and can not be reached from outside sierra.</p>
-<blockquote>
-<div>$ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18</div></blockquote>
+first address is private and can not be reached from outside sierra:</p>
+<div class="highlight-python"><pre>$ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18</pre>
+</div>
 <p>If you see a warning similar to:</p>
 <div class="highlight-python"><pre>Add correct host key in /home/&lt;USER&gt;/.ssh/known_hosts to get rid of this message.
 Offending key in /home/&lt;$USER&gt;/.ssh/known_hosts:3</pre>
@@ -738,12 +738,25 @@ euca-describe-instances</pre>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><img alt="image-horizon" src="_images/fg-horizon.png" /></td>
+<tr class="row-even"><td><a class="reference internal" href="_images/fg-horizon.png"><img alt="image-horizon" src="_images/fg-horizon.png" style="width: 100px;" /></a></td>
 <td><a class="reference external" href="http://openstack.sierra.futuregrid.org/horizon">Sierra</a></td>
 <td>Sierra offers a Graphical user interface to access
 OpenStack. For those interested in only managing a view images
 this may be a good way to start. The link to the GUI is
 <a class="reference external" href="http://openstack.sierra.futuregrid.org/horizon">http://openstack.sierra.futuregrid.org/horizon</a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="_images/fg-horizon-alamo.png"><img alt="image-horizon-alamo" src="_images/fg-horizon-alamo.png" style="width: 100px;" /></a></td>
+<td><a class="reference external" href="https://openstack.futuregrid.tacc.utexas.edu/horizon">Alamo</a></td>
+<td>Alamo offers a horizon interface to OpenSTack, but in contrast
+to Sierra it uses the FG portal name and password. Due to this
+reason, Indiana University recommnds that you are not storing
+that password in any file on your local or remote hosts due to
+security reasosn. Instead we recommend that if you need to use
+the password, to optain it interactively via the shell command
+read. Further more we recommend  not to store this password in
+a shell variable, but to ask for it every time it is needed.
+The link to the GUI is
+<a class="reference external" href="https://openstack.futuregrid.tacc.utexas.edu/horizon">https://openstack.futuregrid.tacc.utexas.edu/horizon</a></td>
 </tr>
 </tbody>
 </table>

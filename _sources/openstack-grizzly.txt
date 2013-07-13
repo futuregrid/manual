@@ -45,7 +45,9 @@ flavors::
 List flavors
 --------------
 
-       $ nova flavor-list
+::
+
+    $ nova flavor-list
 
 Everything is fine, if you se an output similar to::
 
@@ -184,7 +186,7 @@ command and monitor the Status field in the table::
 
 Once it has changed from for example BUILD to ACTIVE, you can log
 in. Pleas use the IP address provided under networks. Note that the
-first address is private and can not be reached from outside sierra.
+first address is private and can not be reached from outside sierra::
 
        $ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18
 
@@ -463,7 +465,27 @@ Horizon GUI
        OpenStack. For those interested in only managing a view images
        this may be a good way to start. The link to the GUI is 
        http://openstack.sierra.futuregrid.org/horizon
+   * - |image-horizon-alamo|
+     - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`__
+     - Alamo offers a horizon interface to OpenSTack, but in contrast
+       to Sierra it uses the FG portal name and password. Due to this
+       reason, Indiana University recommnds that you are not storing
+       that password in any file on your local or remote hosts due to
+       security reasosn. Instead we recommend that if you need to use
+       the password, to optain it interactively via the shell command
+       read. Further more we recommend  not to store this password in
+       a shell variable, but to ask for it every time it is needed.
+       The link to the GUI is 
+       https://openstack.futuregrid.tacc.utexas.edu/horizon
+
+
+
+
+
 
 
 .. |image-horizon| image:: /images/fg-horizon.png 
+   :width: 100px
 
+.. |image-horizon-alamo| image:: /images/fg-horizon-alamo.png 
+   :width: 100px
