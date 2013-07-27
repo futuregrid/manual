@@ -67,8 +67,8 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    iaas
-   openstack
    openstack-grizzly
+   openstack
    openstack-virtualbox
    eucalyptus
 

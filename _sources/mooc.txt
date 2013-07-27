@@ -115,7 +115,14 @@ OpenStack on FutureGrid
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This series of screencasts will walk you through the various ways on
-how you can use OpenStack on FutureGrid:
+how you can use OpenStack on FutureGrid. This includes the following:
+
+* using openstack client command line tools to 
+  * start, stop, assign ips, and query virtual machines
+  * list images and flavors
+  * to create security groups for login 
+  * to log in to your virtual machine while using a key
+* using the openstack horizon interface
 
 .. list-table::
    :widths: 15 5 15 65

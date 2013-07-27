@@ -451,21 +451,29 @@ how you can access them.
 Horizon GUI
 ---------------------------
 
+Horizon is a graphical user interface/dashbooard for OpenStack. For
+starting up VMs and stoping them by hand horizon may be a good
+mechanism to manage your Virtual machines.  We have currently the
+following horizon deployments available. However, please note that on
+Alamo an older version of openstack is run.
+ 
 .. list-table:: Horizon endpoints
    :header-rows: 1
-   :widths: 10,10,70
-
+   :widths: 10,10,10,70
 
    * - Image
+     - Version
      - Machine
      - Description
    * - |image-horizon| 
+     - Grizzly
      - `Sierra <http://openstack.sierra.futuregrid.org/horizon>`__
      - Sierra offers a Graphical user interface to access
        OpenStack. For those interested in only managing a view images
        this may be a good way to start. The link to the GUI is 
        http://openstack.sierra.futuregrid.org/horizon
    * - |image-horizon-alamo|
+     - Folsom
      - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`__
      - Alamo offers a horizon interface to OpenSTack, but in contrast
        to Sierra it uses the FG portal name and password. Due to this
