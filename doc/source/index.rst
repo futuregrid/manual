@@ -80,6 +80,14 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    rain
 
+**PART VII. EDUCATIONAL MATERIAL**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   books
+
 **APPENDIX I. SCREENCASTS**
 
 .. toctree::
