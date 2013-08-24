@@ -118,8 +118,15 @@ Books
      - TBD
    * - .. image:: http://www.greenteapress.com/thinkstats/think_stats_comp.png
           :width: 100px
-	  :target: 7116 http://www.greenteapress.com/thinkstats/thinkstats.pdf
+	  :target: http://www.greenteapress.com/thinkstats/thinkstats.pdf
      - Think Stats - Probability and Statistics for Programmers
      - `e-Pub <http://www.greenteapress.com/thinkstats/thinkstats.pdf>`_
      - http://www.greenteapress.com/thinkstats/index.html
      - TBD
+   * - .. image:: http://infolab.stanford.edu/~ullman/gifs/mmd_cover.jpg
+          :width: 100px
+	  :target: http://infolab.stanford.edu/~ullman/mmds/book.pdf
+     - Mining of Massive Datasets
+     - `e-Pub <http://infolab.stanford.edu/~ullman/mmds/book.pdf>`_
+     - http://infolab.stanford.edu/~ullman/mmds.html
+     - TBD     
