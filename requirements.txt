@@ -10,3 +10,5 @@ sphinxcontrib-actdiag
 sphinxcontrib-exceltable
 watchdog
 Pygments
+numpy
+matplotlib
