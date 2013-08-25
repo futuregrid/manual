@@ -115,6 +115,13 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    ring
 
+**APPENDIX III. Just Enough Python**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   python
 
 **APPENDIX IV. OTHERS**
 
