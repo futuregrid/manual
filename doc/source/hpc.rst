@@ -332,32 +332,37 @@ manual<http://www.clusterresources.com/torquedocs21/>`__.
 
 Next we need to create a script so we can run the program on the
 cluster.  We will be using our simple ring example to illustrate some
-of the parameters you need to adjust:
+of the parameters you need to adjust. Please save the following content to
+a file called ring.pbs.:
 
 .. code-block:: bash
    :linenos:
 
-    #! /bin/bash
+   #! /bin/bash
 
-    # OPTIONS FOR THE SCRIPT
-    #PBS -M username@example.com 
-    #PBS -N ring_test
-    #PBS -o ring_$PBS_JOBID.out
-    #PBS -e ring_$PBS_JOBID.err
-    #PBS -q short
-    #PBS -l nodes=4:ppn=8
-    #PBS -l walltime=00:20:00
+   # OPTIONS FOR THE SCRIPT
+   #PBS -M username@example.com 
+   #PBS -N ring_test
+   #PBS -o ring_$PBS_JOBID.out
+   #PBS -e ring_$PBS_JOBID.err
+   #PBS -q batch
+   #PBS -l nodes=4:ppn=8
+   #PBS -l walltime=00:20:00
 
 
-    # make sure MPI is in the environment
-    module load openmpi
+   # make sure MPI is in the environment
+   module load openmpi
 
-    # launch the parallel application with the correct number of process
-    # Typical usage: mpirun -np <number of processes> <executable> <arguments>
-    mpirun -np 32 ring -t 1000
+   # launch the parallel application with the correct number of process
+   # Typical usage: mpirun -np <number of processes> <executable> <arguments>
+   mpirun -np 32 ring -t 1000
 
-    echo "Nodes allocated to this job: " 
-    cat $PBS_NODEFILE 
+   echo "Nodes allocated to this job: " 
+   cat $PBS_NODEFILE 
+
+This file can be used to submit a job to the queueing system by calling the command::
+
+   qsub ring.pbs
 
 In the job script, lines that begin with  **#PBS** are directives to
 the job scheduler. You can disable any of these lines by adding an

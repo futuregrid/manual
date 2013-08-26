@@ -112,12 +112,19 @@ Use euca-describe-availability-zones to test the setup::
 
         torque/2.5.5 version 2.5.5 loaded
         moab version 5.4.0 loaded 
-
+      
+        
+::
+        
         $ module load euca2ools
         euca2ools version 2.1.2 loaded
 
+::
+
         $ euca-version
         euca2ools 2.1.2 (Limbo)
+
+::
 
         $ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
         $ euca-describe-availability-zones
@@ -139,7 +146,10 @@ List the existing images using euca-describe-images::
         IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
         IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public    
         IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
-
+        ...
+        
+This command may take quite a bit of time as there are currently many images available. On sierra, we observed more than 40 seconds before the command returned.
+ 
 
 Image Deployment
 --------------------
@@ -148,20 +158,55 @@ Before deploying a VM, you need to create at least one key pair. This
 key pair will be injected into the VM, allowing you to SSH into the
 instance. This is done using the euca-add-keypair command::
 
-        $ euca-add-keypair userkey   > userkey.pem
+        $ euca-add-keypair $USER-key   > $USER-key.pem
+
 
 Fix the permissions on the generated private key::
 
-        $ chmod 0600 userkey.pem 
+        $ chmod 0600 $USER-key.pem 
 
-Now you can start a VM using one of the pre-existing images. You need
-the emi-id of the image you want to start. This was listed in the
-output of euca-describe-images command that you saw earlier. Use the
+When executing the euca-add-keypair command you will however run into
+problems. To see if you have done this, please cat the key with::
+
+    $ cat $USER-key.pem
+
+If you see a message that starts with::
+
+    -----BEGIN RSA PRIVATE KEY-----
+
+things should be fine. However, if you see::
+
+    CreateKeyPairType: Keypair already exists: gvonlasz-key: Could not execute JDBC batch update
+
+You have created the key multiple times and you may encounter
+problems later on. The best thing to do is to check if your key is
+already  in the keypair list. This can 
+such as::
+
+        $ euca-describe-keypairs
+
+If it is, you probably have uploaded it already. If you need to create
+a new key however, you can delete the old one by 
+
+        $ euca-delete-keypair $USER-key
+
+After that you naturally need to create a new one as described above.
+
+Now you can start a VM using one of the pre-existing images.  We have uploaded an ubuntu image for you that you can find out more
+about with::
+
+   $ euca-describe-images | fgrep futuregrid
+
+It will show you an id starting with the prefix "emi-"::
+
+    IMAGE	emi-FE9838AC	futuregrid/ubuntu-13.04v2.img.manifest.xml	...
+
+we use this id in the next step. Use the
 euca-run-instances command to start the VM::
 
-        $ euca-run-instances -k userkey -n 1   emi-0B951139 -t c1.medium
+        $ euca-run-instances -k $USER-key -n 1   emi-FE9838AC c1.medium
 
-        RESERVATION     r-4E730969      archit    archit-default
+        RESERVATION     r-4E730969      $USER-key    $USER-key-default
         INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255
 
 The euca-describe-instances command can be used to check the status
@@ -170,7 +215,7 @@ starting up, as demonstrated by the "pending" status::
 
         $ euca-describe-instances 
 
-        RESERVATION     r-4E730969      archit    default
+        RESERVATION     r-4E730969      $USER-key    default
         INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0       
                   m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
@@ -178,7 +223,7 @@ Once started, the status will change to "running"::
 
         $ euca-describe-instances
 
-        RESERVATION     r-4E730969      archit    default
+        RESERVATION     r-4E730969      $USER-key    default
         INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0       
                   m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
 
@@ -295,7 +340,7 @@ shows the new image now::
 
         $ euca-describe-images 
 
-        IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml archit available public   x86_64 machine eri-5BB61255 eki-78EF12D2 
+        IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml $USER-key available public   x86_64 machine eri-5BB61255 eki-78EF12D2 
         IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine 
           ...
 
