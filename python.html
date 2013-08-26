@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="prev" title="1. MPI Ring Program" href="ring.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -237,6 +238,17 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">12. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#terminal">12.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#os-specific">12.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lanaguage-features">12.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local">12.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ecosystem">12.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#excersises">12.6. Excersises</a></li>
+</ul>
+</li>
+</ul>
 </ul>
 </li>
               <li class="dropdown">
@@ -267,6 +279,8 @@
 <li><a class="reference internal" href="#functions-for-string-manipulation">12.3.9. Functions for String Manipulation</a></li>
 <li><a class="reference internal" href="#if-condition">12.3.10. If Condition</a></li>
 <li><a class="reference internal" href="#for">12.3.11. For</a></li>
+<li><a class="reference internal" href="#class">12.3.12. Class</a></li>
+<li><a class="reference internal" href="#plots">12.3.13. Plots</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#local">12.4. Local</a></li>
@@ -284,6 +298,8 @@
             
             
               
+  <li><a href="ring.html"
+         title="previous chapter">&laquo; 1. MPI Ring Program</a></li>
             
             
               <li>
@@ -326,6 +342,7 @@
 <h2>12.2. OS Specific<a class="headerlink" href="#os-specific" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="linux">
 <h3>12.2.1. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>Todo</p>
 </div>
 <div class="section" id="os-x">
 <h3>12.2.2. OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h3>
@@ -347,11 +364,18 @@ Darwin pro-2013.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan 6 22:37:10 PS
 <h2>12.3. Lanaguage Features<a class="headerlink" href="#lanaguage-features" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="print">
 <h3>12.3.1. Print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s">&quot;Hello Cloud&quot;</span>
+<span class="go">Hello Cloud</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="comments">
 <h3>12.3.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="simple-comment">
 <h4>12.3.2.1. Simple comment<a class="headerlink" href="#simple-comment" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c"># this is a comment</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="multiline-comment-with">
 <h4>12.3.2.2. Multiline Comment with &#8220;<a class="headerlink" href="#multiline-comment-with" title="Permalink to this headline">¶</a></h4>
@@ -372,30 +396,169 @@ Darwin pro-2013.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan 6 22:37:10 PS
 </div>
 <div class="section" id="variables">
 <h3>12.3.3. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">flavor</span> <span class="o">=</span> <span class="s">&quot;tiny&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">flavor</span>
+<span class="go">tiny</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="changing-the-variable-value">
 <h3>12.3.4. Changing the variable Value<a class="headerlink" href="#changing-the-variable-value" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">flavor</span> <span class="o">=</span> <span class="s">&quot;large&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">flavor</span>
+<span class="go">large</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="list">
 <h3>12.3.5. List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">[3, 4, 5]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="for-loop">
 <h3>12.3.6. For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="k">print</span> <span class="n">element</span>
+<span class="gp">... </span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">5</span>
+<span class="go">6</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="arithmetic-operators">
 <h3>12.3.7. Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">21</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">min</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+<span class="go">3.5</span>
+</pre></div>
+</div>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="s">&quot;C&quot;</span><span class="p">,</span> <span class="s">&quot;D&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;E&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span>
+<span class="go">[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">[&#39;C&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">[&#39;C&#39;, &#39;D&#39;, &#39;E&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[&#39;A&#39;, &#39;B&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">[&#39;E&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">A</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="function-to-do-calculations">
 <h3>12.3.8. Function to do calculations<a class="headerlink" href="#function-to-do-calculations" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">62</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="functions-for-string-manipulation">
 <h3>12.3.9. Functions for String Manipulation<a class="headerlink" href="#functions-for-string-manipulation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">reversename</span><span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">, </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lastname</span><span class="p">,</span> <span class="n">firstname</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">name</span><span class="p">(</span><span class="s">&#39;Gregor&#39;</span><span class="p">,</span> <span class="s">&#39;von Laszewski&#39;</span><span class="p">)</span>
+<span class="go">Gregor von Laszewski</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">reversename</span><span class="p">(</span><span class="s">&#39;Gregor&#39;</span><span class="p">,</span> <span class="s">&#39;von Laszewski&#39;</span><span class="p">)</span>
+<span class="go">von Laszewski, Gregor</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="if-condition">
 <h3>12.3.10. If Condition<a class="headerlink" href="#if-condition" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">flavor</span> <span class="o">=</span> <span class="s">&quot;tiny&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">flavor</span> <span class="o">==</span> <span class="s">&quot;tiny&quot;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="s">&quot;vanilla has a tiny flavor&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">flavor</span> <span class="o">==</span> <span class="s">&quot;large&quot;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="s">&quot;chocolate has a large flavor&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="s">&quot;other flavors I do not like&quot;</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="go">vanilla has a tiny flavor</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="for">
 <h3>12.3.11. For<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">flavors</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;tiny&#39;</span><span class="p">,</span> <span class="s">&#39;medium&#39;</span><span class="p">,</span> <span class="s">&#39;large&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">flavor</span> <span class="ow">in</span> <span class="n">flavors</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="k">print</span> <span class="n">flavor</span>
+<span class="gp">... </span>
+<span class="go">tiny</span>
+<span class="go">medium</span>
+<span class="go">large</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="class">
+<h3>12.3.12. Class<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">person</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>  <span class="c"># self.name</span>
+    <span class="k">def</span> <span class="nf">__init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">name</span>
+
+    <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="n">gregor</span> <span class="o">=</span> <span class="n">person</span><span class="p">(</span><span class="s">&quot;Gregor von Laszewski&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">gregor</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Gregor</span> <span class="n">von</span> <span class="n">Laszewski</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plots">
+<h3>12.3.13. Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span> <span class="n">x</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">r&#39;Normal: $\mu=</span><span class="si">%.2f</span><span class="s">, \sigma=</span><span class="si">%.2f</span><span class="s">$&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">std</span><span class="p">()))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href=".//python-1.py">Source code</a>, <a class="reference external" href=".//python-1.png">png</a>, <a class="reference external" href=".//python-1.hires.png">hires.png</a>, <a class="reference external" href=".//python-1.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="_images/python-1.png" src="_images/python-1.png" />
+</div>
 </div>
 </div>
 <div class="section" id="local">
@@ -405,9 +568,12 @@ Darwin pro-2013.local 12.3.0 Darwin Kernel Version 12.3.0: Sun Jan 6 22:37:10 PS
 </div>
 <div class="section" id="ecosystem">
 <h2>12.5. Ecosystem<a class="headerlink" href="#ecosystem" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-todo admonition" id="index-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">mind the virtualenv</p>
+<ul class="simple">
+<li>pip</li>
+<li>virtualenv</li>
+</ul>
+<div class="highlight-python"><pre>easy_install pip
+pip install virtualenv</pre>
 </div>
 <div class="section" id="pypi">
 <h3>12.5.1. pypi<a class="headerlink" href="#pypi" title="Permalink to this headline">¶</a></h3>

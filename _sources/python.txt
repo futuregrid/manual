@@ -21,6 +21,8 @@ OS Specific
 Linux
 ----------------------------------------------------------------------
 
+Todo 
+
 OS X
 ----------------------------------------------------------------------
 
@@ -43,6 +45,9 @@ todo
 
 Lanaguage Features
 ==================================================================
+
+
+
 
 Print
 -----------------------------------------------------------------
@@ -119,6 +124,19 @@ Arithmetic Operators
     ... print sum(list)/len(list)
     ... print sum(list)/float(len(list))
 
+.. runblock:: pycon
+
+    >>> list = ["A", "B", "C", "D"]
+
+    ... list.append("E")
+    ... print list
+    ... print list[2:3]
+    ... print list[2:]
+    ... print list[:2]
+    ... print list[-1:]
+    ... print list[0]
+    ... print len(list)    
+
 Function to do calculations
 -----------------------------------------------------------------
 .. runblock:: pycon
@@ -148,9 +166,9 @@ If Condition
 .. runblock:: pycon
 
    >>> flavor = "tiny"
-   ... if flavor -- "tiny":
+   ... if flavor == "tiny":
    ...    print("vanilla has a tiny flavor")
-   ... elif flavor -- "large":
+   ... elif flavor == "large":
    ...    print("chocolate has a large flavor")
    ... else:
    ...    print("other flavors I do not like")
@@ -159,10 +177,55 @@ For
 ------------------------------------------------------------------
 .. runblock:: pycon
 
-   ... flavors = ['tiny', 'medium', 'large']
+   >>> flavors = ['tiny', 'medium', 'large']
    ... for flavor in flavors:
    ...   print flavor
 
+Class
+------------------------------------------------------------------
+
+::
+
+   class person:
+       name = None  # self.name
+       def __init(self, name=name):
+           self.name = name
+   
+       def __str__(self):
+           return name
+   
+       if __name__ == "__main__":
+           gregor = person("Gregor von Laszewski")
+           print gregor
+
+::
+
+    >>> Gregor von Laszewski
+
+Plots
+-----------------------------------------------------------------
+
+::
+
+   import matplotlib.pyplot as plt
+   import numpy as np
+   x = np.random.randn(1000)
+   plt.hist( x, 20)
+   plt.grid()
+   plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
+   plt.show()
+
+.. plot::
+
+   import matplotlib.pyplot as plt
+   import numpy as np
+   x = np.random.randn(1000)
+   plt.hist( x, 20)
+   plt.grid()
+   plt.title(r'Normal: $\mu=%.2f, \sigma=%.2f$'%(x.mean(), x.std()))
+   plt.show()
+
+   
 Local
 ===================================================================
 ::
@@ -172,7 +235,14 @@ Local
 Ecosystem
 ===================================================================
 
-.. todo:: mind the virtualenv
+* pip
+* virtualenv
+
+::
+
+    easy_install pip
+    pip install virtualenv
+
 
 pypi
 ----------------------------------------------------------------------

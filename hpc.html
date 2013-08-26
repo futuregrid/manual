@@ -239,6 +239,17 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python.html">12. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">12.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">12.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">12.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">12.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">12.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">12.6. Excersises</a></li>
+</ul>
+</li>
+</ul>
 </ul>
 </li>
               <li class="dropdown">
@@ -1170,7 +1181,8 @@ activate their environment to use the job scheduler:</p>
 manual&lt;http://www.clusterresources.com/torquedocs21/&gt;`__</span></a>.</p>
 <p>Next we need to create a script so we can run the program on the
 cluster.  We will be using our simple ring example to illustrate some
-of the parameters you need to adjust:</p>
+of the parameters you need to adjust. Please save the following content to
+a file called ring.pbs.:</p>
 <div class="highlight-bash"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -1191,29 +1203,33 @@ of the parameters you need to adjust:</p>
 18
 19
 20
-21</pre></div></td><td class="code"><div class="highlight"><pre> <span class="c">#! /bin/bash</span>
+21</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#! /bin/bash</span>
 
- <span class="c"># OPTIONS FOR THE SCRIPT</span>
- <span class="c">#PBS -M username@example.com</span>
- <span class="c">#PBS -N ring_test</span>
- <span class="c">#PBS -o ring_$PBS_JOBID.out</span>
- <span class="c">#PBS -e ring_$PBS_JOBID.err</span>
- <span class="c">#PBS -q short</span>
- <span class="c">#PBS -l nodes=4:ppn=8</span>
- <span class="c">#PBS -l walltime=00:20:00</span>
+<span class="c"># OPTIONS FOR THE SCRIPT</span>
+<span class="c">#PBS -M username@example.com</span>
+<span class="c">#PBS -N ring_test</span>
+<span class="c">#PBS -o ring_$PBS_JOBID.out</span>
+<span class="c">#PBS -e ring_$PBS_JOBID.err</span>
+<span class="c">#PBS -q batch</span>
+<span class="c">#PBS -l nodes=4:ppn=8</span>
+<span class="c">#PBS -l walltime=00:20:00</span>
 
 
- <span class="c"># make sure MPI is in the environment</span>
- module load openmpi
+<span class="c"># make sure MPI is in the environment</span>
+module load openmpi
 
- <span class="c"># launch the parallel application with the correct number of process</span>
- <span class="c"># Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;</span>
- mpirun -np 32 ring -t 1000
+<span class="c"># launch the parallel application with the correct number of process</span>
+<span class="c"># Typical usage: mpirun -np &lt;number of processes&gt; &lt;executable&gt; &lt;arguments&gt;</span>
+mpirun -np 32 ring -t 1000
 
- <span class="nb">echo</span> <span class="s2">&quot;Nodes allocated to this job: &quot;</span>
- cat <span class="nv">$PBS_NODEFILE</span>
+<span class="nb">echo</span> <span class="s2">&quot;Nodes allocated to this job: &quot;</span>
+cat <span class="nv">$PBS_NODEFILE</span>
 </pre></div>
 </td></tr></table></div>
+<p>This file can be used to submit a job to the queueing system by calling the command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>qsub ring.pbs
+</pre></div>
+</div>
 <p>In the job script, lines that begin with  <strong>#PBS</strong> are directives to
 the job scheduler. You can disable any of these lines by adding an
 extra  <strong>#</strong> character at the beginning of the line, as <em>##</em> is

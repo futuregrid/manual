@@ -239,6 +239,17 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python.html">12. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">12.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">12.2. OS Specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">12.3. Lanaguage Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">12.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">12.5. Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">12.6. Excersises</a></li>
+</ul>
+</li>
+</ul>
 </ul>
 </li>
               <li class="dropdown">
@@ -394,15 +405,15 @@ Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
 Welcome to India.FutureGrid.Org
 
 torque/2.5.5 version 2.5.5 loaded
-moab version 5.4.0 loaded
-
-$ module load euca2ools
-euca2ools version 2.1.2 loaded
-
-$ euca-version
-euca2ools 2.1.2 (Limbo)
-
-$ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
+moab version 5.4.0 loaded</pre>
+</div>
+<div class="highlight-python"><pre>$ module load euca2ools
+euca2ools version 2.1.2 loaded</pre>
+</div>
+<div class="highlight-python"><pre>$ euca-version
+euca2ools 2.1.2 (Limbo)</pre>
+</div>
+<div class="highlight-python"><pre>$ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
 $ euca-describe-availability-zones
 AVAILABILITYZONE  euca3india  149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/</pre>
 </div>
@@ -419,26 +430,54 @@ IMAGE    emi-A9D33917    ubuntu/ubuntu.9-04.x86-64.img.manifest.xml    available
 IMAGE    eri-D1513DBA    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public
 IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public
 IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public
-IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public</pre>
+IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public
+...</pre>
 </div>
+<p>This command may take quite a bit of time as there are currently many images available. On sierra, we observed more than 40 seconds before the command returned.</p>
 </div>
 <div class="section" id="image-deployment">
 <h2><a class="toc-backref" href="#id4">5.4. Image Deployment</a><a class="headerlink" href="#image-deployment" title="Permalink to this headline">¶</a></h2>
 <p>Before deploying a VM, you need to create at least one key pair. This
 key pair will be injected into the VM, allowing you to SSH into the
 instance. This is done using the euca-add-keypair command:</p>
-<div class="highlight-python"><pre>$ euca-add-keypair userkey   &gt; userkey.pem</pre>
+<div class="highlight-python"><pre>$ euca-add-keypair $USER-key   &gt; $USER-key.pem</pre>
 </div>
 <p>Fix the permissions on the generated private key:</p>
-<div class="highlight-python"><pre>$ chmod 0600 userkey.pem</pre>
+<div class="highlight-python"><pre>$ chmod 0600 $USER-key.pem</pre>
 </div>
-<p>Now you can start a VM using one of the pre-existing images. You need
-the emi-id of the image you want to start. This was listed in the
-output of euca-describe-images command that you saw earlier. Use the
+<p>When executing the euca-add-keypair command you will however run into
+problems. To see if you have done this, please cat the key with:</p>
+<div class="highlight-python"><pre>$ cat $USER-key.pem</pre>
+</div>
+<p>If you see a message that starts with:</p>
+<div class="highlight-python"><pre>-----BEGIN RSA PRIVATE KEY-----</pre>
+</div>
+<p>things should be fine. However, if you see:</p>
+<div class="highlight-python"><pre>CreateKeyPairType: Keypair already exists: gvonlasz-key: Could not execute JDBC batch update</pre>
+</div>
+<p>You have created the key multiple times and you may encounter
+problems later on. The best thing to do is to check if your key is
+already  in the keypair list. This can
+such as:</p>
+<div class="highlight-python"><pre>$ euca-describe-keypairs</pre>
+</div>
+<p>If it is, you probably have uploaded it already. If you need to create
+a new key however, you can delete the old one by</p>
+<blockquote>
+<div>$ euca-delete-keypair $USER-key</div></blockquote>
+<p>After that you naturally need to create a new one as described above.</p>
+<p>Now you can start a VM using one of the pre-existing images.  We have uploaded an ubuntu image for you that you can find out more
+about with:</p>
+<div class="highlight-python"><pre>$ euca-describe-images | fgrep futuregrid</pre>
+</div>
+<p>It will show you an id starting with the prefix &#8220;emi-&#8221;:</p>
+<div class="highlight-python"><pre>IMAGE       emi-FE9838AC    futuregrid/ubuntu-13.04v2.img.manifest.xml      ...</pre>
+</div>
+<p>we use this id in the next step. Use the
 euca-run-instances command to start the VM:</p>
-<div class="highlight-python"><pre>$ euca-run-instances -k userkey -n 1   emi-0B951139 -t c1.medium
+<div class="highlight-python"><pre>$ euca-run-instances -k $USER-key -n 1   emi-FE9838AC c1.medium
 
-RESERVATION     r-4E730969      archit    archit-default
+RESERVATION     r-4E730969      $USER-key    $USER-key-default
 INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255</pre>
 </div>
 <p>The euca-describe-instances command can be used to check the status
@@ -446,14 +485,14 @@ of the request. The following image was assigned an ip address and is
 starting up, as demonstrated by the &#8220;pending&#8221; status:</p>
 <div class="highlight-python"><pre>$ euca-describe-instances
 
-RESERVATION     r-4E730969      archit    default
+RESERVATION     r-4E730969      $USER-key    default
 INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0
           m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
 </div>
 <p>Once started, the status will change to &#8220;running&#8221;:</p>
 <div class="highlight-python"><pre>$ euca-describe-instances
 
-RESERVATION     r-4E730969      archit    default
+RESERVATION     r-4E730969      $USER-key    default
 INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0
           m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255</pre>
 </div>
@@ -560,7 +599,7 @@ euca-run-instances as described earlier. euca-describe-images also
 shows the new image now:</p>
 <div class="highlight-python"><pre>$ euca-describe-images
 
-IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml archit available public   x86_64 machine eri-5BB61255 eki-78EF12D2
+IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml $USER-key available public   x86_64 machine eri-5BB61255 eki-78EF12D2
 IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine
   ...</pre>
 </div>
