@@ -221,6 +221,10 @@ euca-run-instances command to start the VM::
         RESERVATION     r-4E730969      $USER-key    $USER-key-default
         INSTANCE        i-4FC40839      emi-63F93D41    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-743D3CFA   eri-4E163AA8
 
+        OR (for Ubuntu 13.04)
+        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-D90D3974
+
+      
 The euca-describe-instances command can be used to check the status
 of the request. The following image was assigned an ip address and is
 starting up, as demonstrated by the "pending" status::
