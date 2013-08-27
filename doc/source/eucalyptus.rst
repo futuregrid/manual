@@ -195,11 +195,23 @@ After that you naturally need to create a new one as described above.
 Now you can start a VM using one of the pre-existing images.  We have uploaded an ubuntu image for you that you can find out more
 about with::
 
+   Ubuntu 12.04.3 LTS (Precise Pangolin)
    $ euca-describe-images | fgrep futuregrid\/precise
+   
+   OR 
+   
+   Ubuntu 13.04 (Raring Ringtail)
+   $ euca-describe-images | fgrep futuregrid\/raring
 
 It will show you an id starting with the prefix "emi-"::
 
+    Ubuntu 12.04.3 LTS (Precise Pangolin)
     IMAGE	emi-63F93D41	futuregrid/precise-server-cloudimg-amd64.img.manifest.xml	...
+
+    OR
+   
+    Ubuntu 13.04 (Raring Ringtail) 
+    IMAGE   emi-D90D3974    futuregrid/raring-server-cloudimg-amd64.img.manifest.xml   ...
 
 we use this id in the next step. Use the
 euca-run-instances command to start the VM::
