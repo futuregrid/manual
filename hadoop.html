@@ -342,12 +342,14 @@ FutureGrid systems.</p>
 <ol class="arabic">
 <li><p class="first">Log into a FutureGrid system that has myHadoop available.  In this
 tutorial, we are executing from the Hotel machine:</p>
-<div class="highlight-python"><pre>$ ssh hotel.futuregrid.org
+<div class="highlight-python"><pre>$ ssh portalname@india.futuregrid.org
 This machine accepts SSH public key and One Time Password (OTP) logins only.
 If you do not have a public key set up, you will be prompted for a password.
 This is *not* your FutureGrid password, but the One Time Password generated from your
 OTP token.  Do not type your FutureGrid password, it will not work.  If you do not
-have a token or public key, you will not be able to login.</pre>
+have a token or public key, you will not be able to login.
+The portalname is your account name that allows you to log into
+the FutureGrid portal..</pre>
 </div>
 </li>
 <li><p class="first">Load the myHadoop module.  On some FutureGrid systems, you may also
@@ -510,9 +512,8 @@ export HADOOP_HOME=${HOME}/my-custom-hadoop</pre>
 </div>
 <div class="section" id="more-information">
 <h3>2.1.5. More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
-<p>For more information about how myHadoop works, please see the
-documentation in $MY_HADOOP_HOME/docs/myHadoop.pdf</p>
-<p>Gregor: naturally we should place a real http link. make sure this happens. for example, upload myHadoop to portal and use that link</p>
+<p>Much of this information is copied from
+<a class="reference external" href="https://portal.futuregrid.org/sites/default/files/myHadoop.pdf">The MyHadoop Instalation Instructions</a></p>
 </div>
 </div>
 </div>
