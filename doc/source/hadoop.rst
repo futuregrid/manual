@@ -224,10 +224,8 @@ pbs-example.sh::
 More Information
 ----------------------------------------------------------------------
 
-For more information about how myHadoop works, please see the
-documentation in $MY_HADOOP_HOME/docs/myHadoop.pdf 
-
-Gregor: naturally we should place a real http link. make sure this happens. for example, upload myHadoop to portal and use that link
+Much of this information is copied from 
+`The MyHadoop Instalation Instructions <https://portal.futuregrid.org/sites/default/files/myHadoop.pdf>`__ 
 
 
 .. |Hadoop-logo| image:: images/hadoop-logo.jpg
