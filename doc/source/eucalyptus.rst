@@ -195,20 +195,36 @@ After that you naturally need to create a new one as described above.
 Now you can start a VM using one of the pre-existing images.  We have uploaded an ubuntu image for you that you can find out more
 about with::
 
-   $ euca-describe-images | fgrep futuregrid
+   Ubuntu 12.04.3 LTS (Precise Pangolin)
+   $ euca-describe-images | fgrep futuregrid\/precise
+   
+   OR 
+   
+   Ubuntu 13.04 (Raring Ringtail)
+   $ euca-describe-images | fgrep futuregrid\/raring
 
 It will show you an id starting with the prefix "emi-"::
 
-    IMAGE	emi-FE9838AC	futuregrid/ubuntu-13.04v2.img.manifest.xml	...
+    Ubuntu 12.04.3 LTS (Precise Pangolin)
+    IMAGE	emi-63F93D41	futuregrid/precise-server-cloudimg-amd64.img.manifest.xml	...
+
+    OR
+   
+    Ubuntu 13.04 (Raring Ringtail) 
+    IMAGE   emi-D90D3974    futuregrid/raring-server-cloudimg-amd64.img.manifest.xml   ...
 
 we use this id in the next step. Use the
 euca-run-instances command to start the VM::
 
-        $ euca-run-instances -k $USER-key -n 1   emi-FE9838AC c1.medium
+        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-63F93D41
 
         RESERVATION     r-4E730969      $USER-key    $USER-key-default
-        INSTANCE        i-4FC40839      emi-0B951139    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-78EF12D2   eri-5BB61255
+        INSTANCE        i-4FC40839      emi-63F93D41    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-743D3CFA   eri-4E163AA8
 
+        OR (for Ubuntu 13.04)
+        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-D90D3974
+
+      
 The euca-describe-instances command can be used to check the status
 of the request. The following image was assigned an ip address and is
 starting up, as demonstrated by the "pending" status::
@@ -216,16 +232,16 @@ starting up, as demonstrated by the "pending" status::
         $ euca-describe-instances 
 
         RESERVATION     r-4E730969      $USER-key    default
-        INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      pending         userkey         0       
-                  m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
+        INSTANCE        i-4FC40839      emi-63F93D41    149.165.146.153 10.0.2.194      pending         userkey         0       
+                  m1.small        2010-07-20T20:35:47.015Z        india   eki-743D3CFA    eri-4E163AA8
 
 Once started, the status will change to "running"::
 
         $ euca-describe-instances
 
         RESERVATION     r-4E730969      $USER-key    default
-        INSTANCE        i-4FC40839      emi-0B951139    149.165.146.153 10.0.2.194      running         userkey         0       
-                  m1.small        2010-07-20T20:35:47.015Z        india   eki-78EF12D2    eri-5BB61255
+        INSTANCE        i-4FC40839      emi-63F93D41    149.165.146.153 10.0.2.194      running         userkey         0       
+                  m1.small        2010-07-20T20:35:47.015Z        india   eki-743D3CFA    eri-4E163AA8
 
 If you need to delete a deployed VM, you can use the
 euca-terminate-instances command::
