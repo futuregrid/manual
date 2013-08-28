@@ -72,6 +72,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    openstack-virtualbox
    eucalyptus
 
+
 **PART VI. EXPERIMENT MANAGEMENT SERVICES**
 
 .. toctree::
@@ -79,6 +80,14 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    rain
+
+**PART V. PAAS/PLATFORM AS A SERVICES**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   hadoop
 
 **PART VII. EDUCATIONAL MATERIAL**
 
