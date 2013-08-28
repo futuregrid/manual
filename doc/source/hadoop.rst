@@ -54,12 +54,14 @@ To run the example, use the following steps.
 #. Log into a FutureGrid system that has myHadoop available.  In this
    tutorial, we are executing from the Hotel machine::
 
-       $ ssh hotel.futuregrid.org
+       $ ssh portalname@india.futuregrid.org
        This machine accepts SSH public key and One Time Password (OTP) logins only.
        If you do not have a public key set up, you will be prompted for a password.
        This is *not* your FutureGrid password, but the One Time Password generated from your
        OTP token.  Do not type your FutureGrid password, it will not work.  If you do not
        have a token or public key, you will not be able to login.
+       The portalname is your account name that allows you to log into
+       the FutureGrid portal..
 
 #. Load the myHadoop module.  On some FutureGrid systems, you may also
    need to load the "torque" module as well if qstat is not already in
