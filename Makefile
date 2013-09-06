@@ -3,11 +3,14 @@ BASENAME=$(shell basename $(PATHNAME))
 GITREPO=futuregrid
 
 TAG=`cat VERSION.txt`
-
+MANUALDIR=`pwd`
 
 
 all:
 	make -f Makefile sphinx
+
+setup:
+	make -f Makefile setupbuild_ubuntu
 
 FILE=index
 
@@ -93,6 +96,28 @@ clean:
 	cd doc; make clean
 	rm -rf *.egg-info
 
+#############################################################################
+# SETUP SPHINX BUILD ENVIRONMENT
+###############################################################################
+
+setupbuild_ubuntu:
+	#essential system packages/libraries required
+	sudo apt-get install g++ python-dev python-pip virtualenv git libfreetype6-dev libpng-dev mercurial make
+	# has to activate virtuan env first
+	cd ~
+	virtualenv MANUAL
+	source MANUAL/bin/activate	
+	#manually install sphinxcontrib-autorun
+	mkdir -p ~/hg
+	cd ~/hg
+	hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
+	cd sphinx-contrib/autorun
+	python setup.py install
+	#setting up essential building requirements
+	cd $(MANUALDIR)
+	pip install -r requirements_pre.txt
+	easy_install -U distribute
+	pip install -r requirements.txt
 
 #############################################################################
 # SPHINX DOC
