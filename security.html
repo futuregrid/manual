@@ -1,3 +1,11 @@
+
+
+  
+ 
+  
+ 
+
+
 <!DOCTYPE html>
 
 
@@ -9,14 +17,12 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -29,7 +35,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
     <link rel="next" title="1. Status" href="status.html" />
@@ -42,22 +48,23 @@
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <a class="navbar-brand" href="index.html">Contents</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
 
-        <a class="brand" href="index.html">Contents</a>
-        <span class="navbar-text pull-left"><b>0.1</b></span>
-
-        <div class="nav-collapse">
-          <ul class="nav">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             <li class="divider-vertical"></li>
+            
             
               <li class="dropdown globaltoc-container">
   <a href="index.html"
@@ -259,7 +266,8 @@
 </ul>
 </ul>
 </li>
-              <li class="dropdown">
+              
+                <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">2. Using SSH Keys</a><ul>
@@ -274,13 +282,18 @@
 </ul>
 </ul>
 </li>
+              
             
             
               
+                
   <li><a href="account.html"
-         title="previous chapter">&laquo; 1. Project and Account Management</a></li>
+         title="Previous Chapter: 1. Project and Account Management">&laquo; 1. Project and A...</a></li>
   <li><a href="status.html"
-         title="next chapter">1. Status &raquo;</a></li>
+         title="Next Chapter: 1. Status">1. Status &raquo;</a></li>
+              
+            
+            
             
             
               <li>
@@ -291,19 +304,22 @@
 
           
             
-<form class="navbar-search pull-right" action="search.html" method="get">
-  <input type="text" name="q" class="search-query" placeholder="Search" />
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
 </form>
           
         </div>
-      </div>
     </div>
   </div>
 
 <div class="container">
-  
+  <div class="row">
+    <div class="span12">
+      
   <div class="section" id="using-ssh-keys">
 <span id="s-using-ssh"></span><h1>2. Using SSH Keys<a class="headerlink" href="#using-ssh-keys" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
@@ -378,7 +394,7 @@ following simple steps.</p>
 </tr>
 <tr class="row-odd"><td>Step 2</td>
 <td>Uncompress the file.</td>
-<td><a class="reference internal" href="_images/cygwim1.png"><img alt="image21" src="_images/cygwim1.png" style="width: 200px;" /></a></td>
+<td><img alt="image21" src="_images/cygwim1.png" style="width: 200px;" /></td>
 </tr>
 <tr class="row-even"><td>Step 3</td>
 <td>Execute the file the &#8216;Windows Batch File&#8217; called Cygwin.bat</td>
@@ -386,14 +402,14 @@ following simple steps.</p>
 </tr>
 <tr class="row-odd"><td>Step 4</td>
 <td>You may get a warning. Click in the Run button</td>
-<td><a class="reference internal" href="_images/cygwin2.png"><img alt="image22" src="_images/cygwin2.png" style="width: 200px;" /></a></td>
+<td><img alt="image22" src="_images/cygwin2.png" style="width: 200px;" /></td>
 </tr>
 <tr class="row-even"><td>Step 5</td>
 <td>You get a Linux-like terminal that will allow you to continue
 with this manual. Hint: When showing examples of commands, the $ symbol precedes the
 actual command. So, the other lines are the output obtained after
 executing the command.</td>
-<td><a class="reference internal" href="_images/cygwinfirst.png"><img alt="image23" src="_images/cygwinfirst.png" style="width: 200px;" /></a></td>
+<td><img alt="image23" src="_images/cygwinfirst.png" style="width: 200px;" /></td>
 </tr>
 </tbody>
 </table>
@@ -505,15 +521,15 @@ Your identification has been saved with the new passphrase.</pre>
 <tbody valign="top">
 <tr class="row-even"><td>Step 1</td>
 <td>Log into the portal</td>
-<td><a class="reference internal" href="_images/portalLogin_0.png"><img alt="image25" src="_images/portalLogin_0.png" style="width: 200px;" /></a></td>
+<td><img alt="image25" src="_images/portalLogin_0.png" style="width: 200px;" /></td>
 </tr>
 <tr class="row-odd"><td>Step 2</td>
 <td>Click in the &#8220;ssh key&#8221; button. or go directly to <a class="reference external" href="https://portal.futuregrid.org/my/ssh-keys">https://portal.futuregrid.org/my/ssh-keys</a></td>
-<td><a class="reference internal" href="_images/portalsshkey.png"><img alt="image26" src="_images/portalsshkey.png" style="width: 200px;" /></a></td>
+<td><img alt="image26" src="_images/portalsshkey.png" style="width: 200px;" /></td>
 </tr>
 <tr class="row-even"><td>Step 3</td>
 <td>Click in the &#8220;add a public key&#8221; link.</td>
-<td><a class="reference internal" href="_images/portalclikaddkey_0.png"><img alt="image27" src="_images/portalclikaddkey_0.png" style="width: 200px;" /></a></td>
+<td><img alt="image27" src="_images/portalclikaddkey_0.png" style="width: 200px;" /></td>
 </tr>
 <tr class="row-odd"><td>Step 4</td>
 <td>Paste your ssh key into the box marked Key. Use a text editor
@@ -521,7 +537,7 @@ to open the “id_rsa.pub”. Copy the entire contents of this file
 into the ssh key field as part of your profile
 information. Many errors are introduced by users in this step
 as they do not paste and copy correctly.</td>
-<td><a class="reference internal" href="_images/portalkeypaste_0.png"><img alt="image28" src="_images/portalkeypaste_0.png" style="width: 200px;" /></a></td>
+<td><img alt="image28" src="_images/portalkeypaste_0.png" style="width: 200px;" /></td>
 </tr>
 <tr class="row-even"><td>Step 5</td>
 <td>Click the submit button. <strong>IMPORTANT</strong>: Leave the Title field blank.
@@ -582,6 +598,9 @@ not updated yet. You need to wait a bit more.</p>
 </div>
 
 
+    </div>
+      
+  </div>
 </div>
 <footer class="footer">
   <div class="container">

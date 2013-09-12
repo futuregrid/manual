@@ -1,3 +1,11 @@
+
+
+  
+ 
+  
+ 
+
+
 <!DOCTYPE html>
 
 
@@ -9,14 +17,12 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -29,7 +35,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
     <link rel="next" title="2. HPC Services" href="hpc.html" />
@@ -42,22 +48,23 @@
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <a class="navbar-brand" href="index.html">Contents</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
 
-        <a class="brand" href="index.html">Contents</a>
-        <span class="navbar-text pull-left"><b>0.1</b></span>
-
-        <div class="nav-collapse">
-          <ul class="nav">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             <li class="divider-vertical"></li>
+            
             
               <li class="dropdown globaltoc-container">
   <a href="index.html"
@@ -259,7 +266,8 @@
 </ul>
 </ul>
 </li>
-              <li class="dropdown">
+              
+                <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">1. Hardware</a><ul>
@@ -271,13 +279,18 @@
 </ul>
 </ul>
 </li>
+              
             
             
               
+                
   <li><a href="status.html"
-         title="previous chapter">&laquo; 1. Status</a></li>
+         title="Previous Chapter: 1. Status">&laquo; 1. Status</a></li>
   <li><a href="hpc.html"
-         title="next chapter">2. HPC Services &raquo;</a></li>
+         title="Next Chapter: 2. HPC Services">2. HPC Services &raquo;</a></li>
+              
+            
+            
             
             
               <li>
@@ -288,19 +301,22 @@
 
           
             
-<form class="navbar-search pull-right" action="search.html" method="get">
-  <input type="text" name="q" class="search-query" placeholder="Search" />
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
 </form>
           
         </div>
-      </div>
     </div>
   </div>
 
 <div class="container">
-  
+  <div class="row">
+    <div class="span12">
+      
   <div class="section" id="hardware">
 <span id="s-hardware"></span><h1>1. Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
@@ -1222,11 +1238,11 @@ providers (see <a class="reference internal" href="#f-network-logical"><em>Figur
 Gigapop, Internet2 and NLR extend access to FutureGrid resources to
 researchers nationally and internationally.</p>
 <div class="figure align-left" id="f-network-logical">
-<a class="reference internal image-reference" href="_images/FutureGrid-Logocal-v3.png"><img alt="_images/FutureGrid-Logocal-v3.png" src="_images/FutureGrid-Logocal-v3.png" style="width: 400px; height: 300px;" /></a>
+<img alt="_images/FutureGrid-Logocal-v3.png" src="_images/FutureGrid-Logocal-v3.png" style="width: 400px; height: 300px;" />
 <p class="caption">Figure: Logigal Network Diagram</p>
 </div>
 <div class="figure align-right" id="f-network-juniper">
-<a class="reference internal image-reference" href="_images/Juniper-EX8208-140x184.png"><img alt="_images/Juniper-EX8208-140x184.png" src="_images/Juniper-EX8208-140x184.png" style="width: 100px; height: 100px;" /></a>
+<img alt="_images/Juniper-EX8208-140x184.png" src="_images/Juniper-EX8208-140x184.png" style="width: 100px; height: 100px;" />
 <p class="caption">Figure: Juniper EX8208</p>
 </div>
 <div class="admonition-todo admonition" id="index-0">
@@ -1261,27 +1277,27 @@ wan information can be found at <a class="reference external" href="http://noc.f
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="_images/gnoc-traffic.png"><img alt="image-gnoc-traffic" src="_images/gnoc-traffic.png" style="width: 100px;" /></a></td>
+<tr class="row-even"><td><img alt="image-gnoc-traffic" src="_images/gnoc-traffic.png" style="width: 100px;" /></td>
 <td><a class="reference external" href="http://noc.futuregrid.org/futuregrid/live-network-status/maps--graphs/futuregrid-atlas.html">FutureGrid Atlas</a></td>
 <td>View the current level of FutureGrid Network traffic as displayed on a
 geographical map.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="_images/gnoc-snap.png"><img alt="image-gnoc-snap" src="_images/gnoc-snap.png" style="width: 100px;" /></a></td>
+<tr class="row-odd"><td><img alt="image-gnoc-snap" src="_images/gnoc-snap.png" style="width: 100px;" /></td>
 <td><a class="reference external" href="http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/futuregrid-snapp-trafic-graphs2.html">SNAPP Traffic Graphs</a></td>
 <td>View high-speed traffic graphs collected at one-minute samples using the
 Indiana University-developed SNAPP tool. Create custom views of the
 FutureGrid network and view historic utilization with greater data
 resolution.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="_images/gnoc-proxy.png"><img alt="image-gnoc-proxy" src="_images/gnoc-proxy.png" style="width: 100px;" /></a></td>
+<tr class="row-even"><td><img alt="image-gnoc-proxy" src="_images/gnoc-proxy.png" style="width: 100px;" /></td>
 <td><a class="reference external" href="http://noc.futuregrid.org/futuregrid/live-network-status/traffic-statistics/router-proxy3.html">FutureGrid NOC Router Proxy</a></td>
 <td>Submit show commands to the FutureGrid router.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="_images/futuregrid-physical.png"><img alt="image8" src="_images/futuregrid-physical.png" style="width: 100px;" /></a></td>
+<tr class="row-odd"><td><img alt="image8" src="_images/futuregrid-physical.png" style="width: 100px;" /></td>
 <td><a class="reference external" href="http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Physical%20Map">FutureGrid Physical Map</a></td>
 <td>TBD</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="_images/futuregrid-topology.png"><img alt="image9" src="_images/futuregrid-topology.png" style="width: 100px;" /></a></td>
+<tr class="row-even"><td><img alt="image9" src="_images/futuregrid-topology.png" style="width: 100px;" /></td>
 <td><a class="reference external" href="http://noc.futuregrid.org/futuregrid/maps--documentation/maps.html#FutureGrid%20Topology%20Map">FutureGrid Topology Map</a></td>
 <td>TBD</td>
 </tr>
@@ -1377,7 +1393,7 @@ production networks for validating and evaluating new products and
 technologies.  The XGEM supports a variety of impairments with the most
 common being delay, packet loss, jitter and re-ordering.</p>
 <div class="figure align-right">
-<a class="reference internal image-reference" href="_images/Spirent-XGEM.png"><img alt="_images/Spirent-XGEM.png" src="_images/Spirent-XGEM.png" style="width: 200px;" /></a>
+<img alt="_images/Spirent-XGEM.png" src="_images/Spirent-XGEM.png" style="width: 200px;" />
 <p class="caption">Figure: Spirent XGEM</p>
 </div>
 <p>The XGEM contains two blades, each with a 10GE interface.  Traffic
@@ -1403,6 +1419,9 @@ the participants&#8217; individual sites for impairments to occur locally.</p>
 </div>
 
 
+    </div>
+      
+  </div>
 </div>
 <footer class="footer">
   <div class="container">
