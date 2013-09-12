@@ -13,5 +13,4 @@ Pygments
 numpy
 numpydoc
 ipython
-matplotlib
 pillow
