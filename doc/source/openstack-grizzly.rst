@@ -472,7 +472,7 @@ Alamo an older version of openstack is run.
      - Sierra offers a Graphical user interface to access
        OpenStack. For those interested in only managing a view images
        this may be a good way to start. The link to the GUI is 
-       http://openstack.sierra.futuregrid.org/horizon
+       http://openstack-sierra.futuregrid.org/horizon
    * - |image-horizon-alamo|
      - Folsom
      - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`__
