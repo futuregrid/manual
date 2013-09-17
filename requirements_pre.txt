@@ -10,7 +10,7 @@ sphinxcontrib-actdiag
 sphinxcontrib-exceltable
 watchdog
 Pygments
-numpy
+numpy>=1.1
 numpydoc
 ipython
 pillow
