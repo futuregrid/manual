@@ -34,6 +34,28 @@ sys.path.insert(0, os.path.abspath('../../..'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+extensions = ['sphinx.ext.autodoc',
+              'sphinx.ext.doctest',
+              'sphinx.ext.todo',
+              'sphinx.ext.extlinks',
+              'sphinx.ext.coverage',
+              'sphinx.ext.pngmath',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.ifconfig',
+              'sphinx.ext.viewcode',
+              'sphinxcontrib.actdiag',
+              'sphinxcontrib.exceltable',
+              'matplotlib.sphinxext.mathmpl',
+              'matplotlib.sphinxext.only_directives',
+              'matplotlib.sphinxext.plot_directive',
+              'matplotlib.sphinxext.ipython_directive',
+              'sphinx.ext.autodoc',
+              'sphinx.ext.doctest',
+              'matplotlib.sphinxext.ipython_console_highlighting',
+              #'inheritance_diagram',
+              'numpydoc'
+              ]
+"""
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
@@ -44,8 +66,19 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinxcontrib.webmocks',
     'sphinxjp.shibukawa']
+"""
 
 extensions.append('sphinxcontrib.autorun')
+
+actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
+
+todo_include_todos = True
+
+
+extlinks = {'jira': ('https://jira.futuregrid.org/browse/%s','issue '),
+            'portal': ('https://portal.futuregrid.org/%s','https://portal.futuregrid.org/'),
+            'youtube': ('http://www.youtube.com/watch?v=%s',''),
+            }
 
 # 'sphinxcontrib.issuetracker']
 # issuetracker = 'none',
