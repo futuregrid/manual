@@ -20,8 +20,8 @@ install_virtualenv(){
 
 #manually install sphinxcontrib-autorun
 install_autorun(){
-    mkdir -p ~/hg
-    cd ~/hg
+    mkdir -p /tmp/hg
+    cd /tmp/hg
     hg clone http://bitbucket.org/birkenfeld/sphinx-contrib/
     cd sphinx-contrib/autorun
     python setup.py install
@@ -34,18 +34,20 @@ install_manual_source(){
     git clone https://github.com/futuregrid/manual.git
 }
 
+
 #setting up essential python libraries
 install_requirements(){
-    cd ~/github/manual
+    pip install numpy
     pip install -r requirements_pre.txt
-    easy_install -U distribute
+    #easy_install -U distribute
     pip install -r requirements.txt
-    pip uninstall PIL
+    #pip uninstall PIL
 }
 
 #install_ubuntu_packages
 
-install_virtualenv
+git pull
+#install_virtualenv
 install_autorun
-install_manual_source
-install_requirements
+#install_manual_source
+#install_requirements
