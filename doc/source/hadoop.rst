@@ -14,9 +14,8 @@ We have various platforms that support Hadoop on FutureGrid. MyHadoop is probabl
 .. _s-myhadoop:
 
 
-**********************************************************************
 Running Hadoop as a Batch Job using MyHadoop
-**********************************************************************
+======================================================================
 
 |Hadoop-logo|
 
@@ -37,7 +36,7 @@ This tutorial illustrates how to run Apache Hadoop thru the batch
 systems on FutureGrid using the MyHadoop tool.  
 
 myHadoop on FutureGrid
-====================
+----------------------------------------------------------------------
 
 `MyHadoop <http://sourceforge.net/projects/myhadoop/>`__ is a set of
 scripts that configure and instantiate Hadoop as a batch job. 
@@ -47,50 +46,69 @@ FutureGrid systems.
 
 
 Running myHadoop on FutureGrid
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To run the example, use the following steps.
+To run the example we need to firts log into a FutureGrid system that
+has myHadoop available.  In this tutorial, we are executing from the sierral machine::
 
-#. Log into a FutureGrid system that has myHadoop available.  In this
-   tutorial, we are executing from the Hotel machine::
+       $ ssh portalname@sierra.futuregrid.org
 
-       $ ssh portalname@india.futuregrid.org
-       This machine accepts SSH public key and One Time Password (OTP) logins only.
-       If you do not have a public key set up, you will be prompted for a password.
-       This is *not* your FutureGrid password, but the One Time Password generated from your
-       OTP token.  Do not type your FutureGrid password, it will not work.  If you do not
-       have a token or public key, you will not be able to login.
-       The portalname is your account name that allows you to log into
-       the FutureGrid portal..
+This machine accepts SSH public key and One Time Password (OTP) logins
+only.  If you do not have a public key set up, you will be prompted
+for a password.  This is *not* your FutureGrid password, but the One
+Time Password generated from your OTP token.  Do not type your
+FutureGrid password, it will not work.  If you do not have a token or
+public key, you will not be able to login.  The portalname is your
+account name that allows you to log into the FutureGrid portal.
 
-#. Load the myHadoop module.  On some FutureGrid systems, you may also
-   need to load the "torque" module as well if qstat is not already in
-   your environment::
+Next, we need to load the myHadoop module.  On some FutureGrid
+systems, you may also need to load the "torque" module as well if
+qstat is not already in your environment::
 
        $ module load myhadoop
        SUN Java JDK version 1.6.0 (x86_64 architecture) loaded
        Apache Hadoop Common version 0.20.203.0 loaded
        myHadoop version 0.2a loaded
 
-#. To run the example now, skip to step 9.  Otherwise, view the
-   pbs-example.sh script located in $MY_HADOOP_HOME/pbs-example.sh.
-   At the top of the file, you will see standard batch directives
-   indicating which queue to run the Hadoop job, how many nodes, etc::
-
-       #PBS -q batch
-       #PBS -N hadoop_job
-       #PBS -l nodes=4:ppn=8
-       #PBS -o hadoop_run.out
-       #PBS -e hadoop_run.err
-       #PBS -V
-
-#. Next, there is a line to load Java via modules under the above lines::
+Before we can submit it we still need to load the module java as
+Haddop relies on java::
 
        module add java
 
-#. In the example script, a temporary directory to store Hadoop
-   configuration files is specified as ${HOME}/myHadoop-config (although
-   any globally accessible place is fine)::
+To run the example we need to create a script to tell the queing
+system how to run it. We are providing the following script that you
+can store in a file hadoop.pbs. This script includes information about
+which queue hadoop should be run in. To find out more about the
+queuing system, please see the HPC services section. The hadoop.pbs
+script we use in this example looks as follows::
+
+    #!/bin/bash
+
+    #PBS -q batch
+    #PBS -N hadoop_job
+    #PBS -l nodes=4:ppn=8
+    #PBS -o hadoop_run.out
+    #PBS -j oe
+    #PBS -V
+
+    module add java
+
+    ### Run the myHadoop environment script to set the appropriate variables
+    #
+    # Note: ensure that the variables are set correctly in bin/setenv.sh
+    . /N/soft/myHadoop/bin/setenv.sh
+
+    #### Set this to the directory where Hadoop configs should be generated
+    # Don't change the name of this variable (HADOOP_CONF_DIR) as it is
+    # required by Hadoop - all config files will be picked up from here
+    #
+    # Make sure that this is accessible to all nodes
+    export HADOOP_CONF_DIR="${HOME}/myHadoop-config"
+
+
+In the example script, a temporary directory to store Hadoop
+configuration files is specified as ${HOME}/myHadoop-config (although
+any globally accessible place is fine)::
 
        #### Set this to the directory where Hadoop configs should be generated
        # Don't change the name of this variable (HADOOP_CONF_DIR) as it is
@@ -99,18 +117,18 @@ To run the example, use the following steps.
        # Make sure that this is accessible to all nodes
        export HADOOP_CONF_DIR="${HOME}/myHadoop-config"
 
-#. The pbs-example.sh script runs the "wordcount" program from
-   the hadoop-0.20.2-examples.jar.  There is sample text data from the
-   `Project Gutenberg website <http://www.gutenberg.org/>`__ located a
-   $MY_HADOOP_HOME/gutenberg::
+The hadoop.pbs script runs the "wordcount" program from
+the hadoop-0.20.2-examples.jar.  There is sample text data from the
+`Project Gutenberg website <http://www.gutenberg.org/>`__ located a
+$MY_HADOOP_HOME/gutenberg::
 
        $ ls $MY_HADOOP_HOME/gutenberg
        1342.txt.utf8
 
-#. The following lines create a Data directory in HDFS (directory
-   specified in $MY_HADOOP_HOME/bin/setenv.sh), copies over the
-   gutenberg data, executes the Hadoop job, and then copies the output
-   back your ${HOME}/Hadoop-Outputs directory. ::
+The following lines create a data directory in HDFS (directory
+specified in $MY_HADOOP_HOME/bin/setenv.sh), copies over the
+gutenberg data, executes the Hadoop job, and then copies the output
+back your ${HOME}/Hadoop-Outputs directory. ::
 
        #### Run your jobs here
        echo "Run some test Hadoop jobs"
@@ -121,32 +139,32 @@ To run the example, use the following steps.
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Outputs
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -copyToLocal Outputs ${HOME}/Hadoop-Outputs
 
-#. Now submit the pbs-example.sh script to Hotel::
+Now submit the pbs-example.sh script to Hotel::
 
        $ qsub $MY_HADOOP_HOME/pbs-example.sh 
        40256.svc.uc.futuregrid.org
 
-#. The job will take about 5 minutes to complete.  To monitor its
-   status, type 'qstat'.  The "R" means the job is running::
+The job will take about 5 minutes to complete.  To monitor its
+status, type 'qstat'.  The "R" means the job is running::
 
        $ qstat
        Job id                    Name             User            Time Use S Queue
        ------------------------- ---------------- --------------- -------- - -----
-       40256.svc                  hadoop_job       gvonlasz               0 R batch                  
+       40256.svc                  hadoop_job       albert                0 R batch                  
 
-#. When it is done, the status of the job will be "C" meaning the job
-   has completed (or it will no longer be displayed in qstat output).
-   You should see a new hadoop_run.out file and an "Hadoop-Outputs"
-   directory ::
+When it is done, the status of the job will be "C" meaning the job has
+completed (or it will no longer be displayed in qstat output).  You
+should see a new hadoop_run.out file and an "Hadoop-Outputs" directory
+::
 
        $ qstat
        Job id                    Name             User            Time Use S Queue
        ------------------------- ---------------- --------------- -------- - -----
-       40256.svc                  hadoop_job       gvonlasz       00:00:05 C batch                   
+       40256.svc                  hadoop_job       albert         00:00:05 C batch                   
        $ ls
        Hadoop-Outputs hadoop_run.out
 
-#. View results of the word count operation::
+View results of the word count operation::
 
        $ head Hadoop-Outputs/part-r-00000  
        "'After    1
@@ -165,7 +183,7 @@ $MY_HADOOP_HOME/pbs-example.sh script and modify the lines described
 in Step 7.
 
 Persistent Mode
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The above example copies input to local HDFS scratch space you specified
 in $MY_HADOOP_HOME/bin/setenv.sh, runs MapReduce, and copies output
@@ -178,7 +196,7 @@ pbs-example.sh.
 
 
 Customizing Hadoop Settings
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To modify any of the Hadoop settings
 like maximum_number_of_map_task, maximum_number_of_reduce_task,
@@ -207,7 +225,7 @@ accordingly.  For example:
        $ qsub $HOME/myHadoop/pbs-example.sh
 
 Using a Different Installation of Hadoop
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you would like to use a different version of my Hadoop or have
 customized the Hadoop code in some way, you can specify a different
@@ -222,7 +240,7 @@ pbs-example.sh::
     export HADOOP_HOME=${HOME}/my-custom-hadoop
 
 More Information
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Much of this information is copied from 
 `The MyHadoop Instalation Instructions <https://portal.futuregrid.org/sites/default/files/myHadoop.pdf>`__ 

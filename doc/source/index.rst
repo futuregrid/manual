@@ -68,7 +68,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    iaas
    openstack-grizzly
    openstack
-   openstack-virtualbox
    eucalyptus
 
 
@@ -80,7 +79,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    rain
 
-**PART V. PAAS/PLATFORM AS A SERVICES**
+**PART VII. PAAS/PLATFORM AS A SERVICES**
 
 .. toctree::
    :numbered:
@@ -88,7 +87,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    hadoop
 
-**PART VII. EDUCATIONAL MATERIAL**
+**PART VIII. EDUCATIONAL MATERIAL**
 
 .. toctree::
    :numbered:
