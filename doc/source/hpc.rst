@@ -300,10 +300,20 @@ not suitable for you.
 
 
 Assuming you have loaded the openmpi module into your environment,
-you can compile a `simple MPI application <ring>`__ with
-easily as executing::
+you can compile a simple MPI application `ring`__ with easily as executing::
 
     $ mpicc -o ring ring.c
+
+
+MPI Ring Program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Download the :download:`ring.c <code/ring.c>` program.
+
+.. literalinclude:: code/ring.c
+   :language: c
+   :linenos:
+
 
 
 Users MUST NOT run jobs on the login or headnodes. These nodes are
