@@ -16,7 +16,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    Javier Diaz, 
    Koji Tanaka,
    Allan Streib,
-   Renato Figurero
+   Renato Figurero,
    Archit Kulshrestha, 
    Jonathan Bolte,
    Gregory Pike
@@ -66,8 +66,8 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    iaas
-   openstack-grizzly
-   openstack
+   openstackgrizzly
+   openstackessex0
    eucalyptus
 
 
@@ -109,8 +109,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :numbered:
    :maxdepth: -1
 
-   todolist
-   plan
    git
    contributing
 
@@ -122,7 +120,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    ring
 
-**APPENDIX III. Just Enough Python**
+**APPENDIX IV. Just Enough Python**
 
 .. toctree::
    :numbered:
@@ -130,9 +128,9 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    python
 
-**APPENDIX IV. OTHERS**
+**APPENDIX V. OTHERS SECTIONS**
 
-* `A more complete Index with all sections can be found here <all.html>`__
+* `Not yet integrated sections can be found here <all.html>`__
 
 
 .. |image0| image:: /images/fg-logo-md.png
