@@ -68,7 +68,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Cloudmesh'
+project = u'FutureGrid'
 copyright = u'2013, Gregor von Laszewski for  FutureGrid'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -132,7 +132,7 @@ html_theme = 'bootstrap'
 # html_theme_options = {}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Cloudmesh",
+    'navbar_title': "FutureGrid",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Site",
@@ -240,7 +240,7 @@ html_show_sphinx = False
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Cloudmeshdoc'
+htmlhelp_basename = 'FutureGriddoc'
 
 
 # -- Options for LaTeX output --------------------------------------------
@@ -259,7 +259,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-    ('index', 'Cloudmesh.tex', u'Cloudmesh Plan Documentation',
+    ('index', 'FutureGrid.tex', u'FutureGrid Documentation',
      u'Gregor von Laszewski', 'manual'),
 ]
 
@@ -289,7 +289,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'cloudmeshplan', u'Cloudmesh Plan Documentation',
+    ('index', 'cloudmesh', u'FutureGrid Documentation',
      [u'Gregor von Laszewski'], 1)
 ]
 
@@ -303,8 +303,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'Cloudmesh', u'Cloudmesh Plan Documentation',
-     u'Gregor von Laszewski', 'Cloudmesh', 'One line description of project.',
+    ('index', 'FutureGrid', u'FutureGrid Documentation',
+     u'Gregor von Laszewski', 'FutureGrid', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -324,7 +324,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Cloudmesh Plan'
+epub_title = u'FutureGrid'
 epub_author = u'Gregor von Laszewski'
 epub_publisher = u'Gregor von Laszewski'
 epub_copyright = u'2013, Gregor von Laszewski'
