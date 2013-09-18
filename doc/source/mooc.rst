@@ -110,7 +110,6 @@ create your own project or join an existing one
        For written material, see section :ref:`s-account-join-project`.
 
 
-
 OpenStack on FutureGrid
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -144,6 +143,44 @@ how you can use OpenStack on FutureGrid. This includes the following:
      - This lesson explains you how to use the OpenStack Horizon to
        access the FutureGrid OpenStack IaaS framework on sierra.futuregrid.org. 
        For written material, see section :ref:`s-openstack-horizon`.
+
+Batch Jobs including Hadoop  on FutureGrid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This series of screencasts will walk you through the various ways on
+how you can use batch jobs on FutureGrid. This includes the following:
+
+* using OpenMPI batch jobs including 
+  * start, stop a job
+  * monitoring a job
+* using Hadoop as part of a batch job
+* using ssh add and ssh-agent to conveniently log into machines.
+
+.. list-table::
+   :widths: 15 5 15 65
+   :header-rows: 1
+
+   * - Video
+     - Length
+     - Titles of the Lessons
+     - Description of the Lessons
+   * - |video-batch| 
+     - 7:41 min
+     - Using Batch Jobs on FutureGrid
+     - This lesson explains you to use batch jobs on FutureGrid.
+       For written material, see section :ref:`s-hpc`.
+   * - |video-hadoop| 
+     - 7:23 min
+     - Using MyHadoop on FutureGrid
+     - This lesson explains you to use MyHadoop on FutureGrid.
+       For written material, see section :ref:`s-hadoop`.
+   * - |video-sshadd| 
+     - 3:03 min
+     - Using SSH add and agent
+     - This lesson explains you to use ssh add and agent. 
+       For written material, see section :ref:`s-sshadd`.
+
+
 
 Exercises
 --------------
@@ -195,5 +232,7 @@ Creating FutureGrid Accounts and Projects
 .. |video-openstack| replace:: |video-image| :youtube:`xRVJfOaR23w`
 .. |video-horizon| replace:: |video-image| :youtube:`JkNlWAUlxF0`
 
-
+.. |video-batch| replace:: |video-image| :youtube:`6oUsMyDt7gU`
+.. |video-hadoop| replace:: |video-image| :youtube:`PC8h1CtVzH4`
+.. |video-sshadd| replace:: |video-image| :youtube:`OwOKw3xKmEI`
  

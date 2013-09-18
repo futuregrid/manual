@@ -45,13 +45,15 @@ myHadoop 0.20.2 is currently installed on Alamo, Hotel, India, and Sierra
 FutureGrid systems. 
 
 
-Running myHadoop on FutureGrid
+Login into a machine tha has myHadoop installed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To run the example we need to firts log into a FutureGrid system that
 has myHadoop available.  In this tutorial, we are executing from the sierral machine::
 
        $ ssh portalname@sierra.futuregrid.org
+
+Note that this also works on other FutureGrid machines such as india.
 
 This machine accepts SSH public key and One Time Password (OTP) logins
 only.  If you do not have a public key set up, you will be prompted
@@ -60,6 +62,9 @@ Time Password generated from your OTP token.  Do not type your
 FutureGrid password, it will not work.  If you do not have a token or
 public key, you will not be able to login.  The portalname is your
 account name that allows you to log into the FutureGrid portal.
+
+Load the needed modules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, we need to load the myHadoop module.  On some FutureGrid
 systems, you may also need to load the "torque" module as well if
@@ -75,12 +80,22 @@ Haddop relies on java::
 
        module add java
 
+Run the Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 To run the example we need to create a script to tell the queing
 system how to run it. We are providing the following script that you
-can store in a file hadoop.pbs. This script includes information about
+can store in a file pbs-example.sh. 
+
+You can paste and copy it from here, or just copy it via::
+
+    cp $MY_HADOOP_HOME/pbs-example.sh .
+
+This script includes information about
 which queue hadoop should be run in. To find out more about the
-queuing system, please see the HPC services section. The hadoop.pbs
+queuing system, please see the HPC services section. The pbs-example.sh
 script we use in this example looks as follows::
+
 
     #!/bin/bash
 
@@ -105,10 +120,52 @@ script we use in this example looks as follows::
     # Make sure that this is accessible to all nodes
     export HADOOP_CONF_DIR="${HOME}/myHadoop-config"
 
+    #### Set up the configuration
+    # Make sure number of nodes is the same as what you have requested from PBS
+    # usage: $MY_HADOOP_HOME/bin/pbs-configure.sh -h
+    echo "Set up the configurations for myHadoop"
+    # this is the non-persistent mode
+    $MY_HADOOP_HOME/bin/pbs-configure.sh -n 4 -c $HADOOP_CONF_DIR
+    # this is the persistent mode
+    # $MY_HADOOP_HOME/bin/pbs-configure.sh -n 4 -c $HADOOP_CONF_DIR -p -d /oasis/cloudstor-group/HDFS
+    echo
 
-In the example script, a temporary directory to store Hadoop
-configuration files is specified as ${HOME}/myHadoop-config (although
-any globally accessible place is fine)::
+    #### Format HDFS, if this is the first time or not a persistent instance
+    echo "Format HDFS"
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR namenode -format
+    echo
+
+    #### Start the Hadoop cluster
+    echo "Start all Hadoop daemons"
+    $HADOOP_HOME/bin/start-all.sh
+    #$HADOOP_HOME/bin/hadoop dfsadmin -safemode leave
+    echo
+
+    #### Run your jobs here
+    echo "Run some test Hadoop jobs"
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -mkdir Data
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -copyFromLocal $MY_HADOOP_HOME/gutenberg Data
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Data/gutenberg
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR jar $HADOOP_HOME/hadoop-0.20.2-examples.jar wordcount Data/gutenberg Outputs
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Outputs
+    $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -copyToLocal Outputs ${HOME}/Hadoop-Outputs
+    echo
+
+    #### Stop the Hadoop cluster
+    echo "Stop all Hadoop daemons"
+    $HADOOP_HOME/bin/stop-all.sh
+    echo
+
+    #### Clean up the working directories after job completion
+    echo "Clean up"
+    $MY_HADOOP_HOME/bin/pbs-cleanup.sh -n 4 -c $HADOOP_CONF_DIR
+    echo
+
+Deatails of the Script
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Let us examine this script in more detail. In the example script, a temporary directory to store Hadoop
+configuration files is specified as ${HOME}/myHadoop-config::
 
        #### Set this to the directory where Hadoop configs should be generated
        # Don't change the name of this variable (HADOOP_CONF_DIR) as it is
@@ -117,7 +174,7 @@ any globally accessible place is fine)::
        # Make sure that this is accessible to all nodes
        export HADOOP_CONF_DIR="${HOME}/myHadoop-config"
 
-The hadoop.pbs script runs the "wordcount" program from
+The pbs-example.sh script runs the "wordcount" program from
 the hadoop-0.20.2-examples.jar.  There is sample text data from the
 `Project Gutenberg website <http://www.gutenberg.org/>`__ located a
 $MY_HADOOP_HOME/gutenberg::
@@ -125,10 +182,15 @@ $MY_HADOOP_HOME/gutenberg::
        $ ls $MY_HADOOP_HOME/gutenberg
        1342.txt.utf8
 
-The following lines create a data directory in HDFS (directory
-specified in $MY_HADOOP_HOME/bin/setenv.sh), copies over the
-gutenberg data, executes the Hadoop job, and then copies the output
-back your ${HOME}/Hadoop-Outputs directory. ::
+The following lines in the script create a data directory in HDFS. This directory is
+specified in $MY_HADOOP_HOME/bin/setenv.sh. To activate the
+environment, pleas execute::
+
+    source $MY_HADOOP_HOME/bin/setenv.sh 
+
+The next lines in the script will copy over the gutenberg data, executes the Hadoop
+job, and then copies the output back your ${HOME}/Hadoop-Outputs
+directory. ::
 
        #### Run your jobs here
        echo "Run some test Hadoop jobs"
@@ -138,6 +200,9 @@ back your ${HOME}/Hadoop-Outputs directory. ::
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR jar $HADOOP_HOME/hadoop-0.20.2-examples.jar wordcount Data/gutenberg Outputs
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Outputs
        $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -copyToLocal Outputs ${HOME}/Hadoop-Outputs
+
+Submission of the Hadoop job
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now submit the pbs-example.sh script to Hotel::
 

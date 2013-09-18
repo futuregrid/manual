@@ -43,6 +43,44 @@ login to sierra as follows::
         Welcome to sierra.futuregrid.org
         Last login: Thu Aug 12 19:19:22 2010 from ....
 
+.. _s-sshadd:
+
+SSH Add
+^^^^^^^^^
+
+Sometimes you may wish to log in repeatedly in other machines while
+using a cahced password. To do that you can use ssh agent and ssh
+add. First strt the agent::
+
+  eval `ssh-agent`
+
+Than add your key with 
+
+  ssh-add
+
+Follow the instructions on the screen. Thus before you ssh in you may
+want to use ssh agent. This way you do not have to repeatedly type in
+your key password.
+
+SSH Config
+^^^^^^^^^^^
+
+Also you may want to set your ~/.ssh/config file to create shortcust
+for the username and hosts on which you want to log in. Let us assume
+your username is albert, than the folloing lines in the .ssh/config
+file::
+
+    Host india
+          Hostname india.futuregrid.org
+          User albert
+
+willl allow you to log into the machine just while typing in::
+
+   ssh india
+
+
+
+
 Modules
 ^^^^^^^^^^^^^^^
 

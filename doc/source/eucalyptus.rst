@@ -40,7 +40,7 @@ Eucalyptus Enterprise package. However, the source is available
 `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
 
 
-Account Creation
+Account Setup
 --------------------
 
 Eucalyptus 3.1 accounts are provisioned for all FutureGrid users with a
@@ -77,7 +77,7 @@ Obtaining Credentials
    platforms, it is probably better to use source::
 
            $ cat eucarc >> $HOME/.bashrc
-           $ source .bashrc
+           $ source $HOME/.bashrc
 
 
 
