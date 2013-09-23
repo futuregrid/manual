@@ -102,7 +102,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FutureGrid'
-copyright = u'2013, Gregor von Laszewski for  FutureGrid'
+copyright = u'2013, FutureGrid, please contact Gregor von Laszewski about this manual.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

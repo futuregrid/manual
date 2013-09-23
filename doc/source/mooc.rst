@@ -7,7 +7,7 @@ Screencast: Using FutureGrid
 
    .. contents::
       :local:
- 
+    
 Instructor name:
   Gregor von Laszewski
 
@@ -144,6 +144,31 @@ how you can use OpenStack on FutureGrid. This includes the following:
        access the FutureGrid OpenStack IaaS framework on sierra.futuregrid.org. 
        For written material, see section :ref:`s-openstack-horizon`.
 
+Eucalyptus on FutureGrid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The next video will introduce you to 
+
+* creation of eucalyptus instances
+* creation of keypairs
+* loggin into your images
+
+.. list-table::
+   :widths: 15 5 15 65
+   :header-rows: 1
+
+   * - Video
+     - Length
+     - Titles of the Lessons
+     - Description of the Lessons
+   * - |video-eucalyptus| 
+     - 11:44 min
+     - Using Eucalyptus on FutureGrid
+     - This lesson explains you how to use the Eucalyptus Commandline
+       tools on the FutureGrid cluster called india.futuregrid.org. 
+       For written material, see section :ref:`s-eucalyptus`.
+
+
 Batch Jobs including Hadoop  on FutureGrid
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -231,8 +256,8 @@ Creating FutureGrid Accounts and Projects
 .. |video-portal-create-proj| replace:: |video-image| :youtube:`DzbLS6iCeTE`
 .. |video-openstack| replace:: |video-image| :youtube:`xRVJfOaR23w`
 .. |video-horizon| replace:: |video-image| :youtube:`JkNlWAUlxF0`
-
 .. |video-batch| replace:: |video-image| :youtube:`6oUsMyDt7gU`
 .. |video-hadoop| replace:: |video-image| :youtube:`PC8h1CtVzH4`
 .. |video-sshadd| replace:: |video-image| :youtube:`OwOKw3xKmEI`
+.. |video-eucalyptus| replace:: |video-image| :youtube:`D1v_twqWIxg`
  

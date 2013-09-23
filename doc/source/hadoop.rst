@@ -4,7 +4,7 @@
 Using Hadoop in FutureGrid
 **********************************************************************
 
-.. sidebar:: Page Contents
+.. sidebar:: Page Contents |video-hadoop|
 
    .. contents::
       :local:
@@ -304,11 +304,15 @@ pbs-example.sh::
     . /opt/myHadoop/bin/setenv.sh
     export HADOOP_HOME=${HOME}/my-custom-hadoop
 
-More Information
+Refernces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Much of this information is copied from 
-`The MyHadoop Instalation Instructions <https://portal.futuregrid.org/sites/default/files/myHadoop.pdf>`__ 
+  * Much of this information is copied from 
+    `The MyHadoop Instalation Instructions <https://portal.futuregrid.org/sites/default/files/myHadoop.pdf>`__ 
+  * A screnncast of a subset of the information presented her is
+    avalable at |video-hadoop|.
 
 
 .. |Hadoop-logo| image:: images/hadoop-logo.jpg
+.. |video-hadoop| replace:: |video-image| :youtube:`PC8h1CtVzH4`
+.. |video-image| image:: /images/glyphicons_402_youtube.png 

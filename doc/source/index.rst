@@ -77,6 +77,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :numbered:
    :maxdepth: -1
 
+   experiment-interactive
    rain
 
 **PART VII. PAAS/PLATFORM AS A SERVICES**
