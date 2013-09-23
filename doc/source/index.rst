@@ -68,6 +68,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    iaas
    openstackgrizzly
    openstackessex0
+   os-virtualbox
    nimbus
    eucalyptus
    
