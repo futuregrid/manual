@@ -1,7 +1,9 @@
 
 
   
+  
  
+  
   
  
 
@@ -13,12 +15,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. Using Nimbus on FutureGrid &mdash; Cloud Computing Book 0.1 documentation</title>
+    <title>4. Nimbus &mdash; FutureGrid 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.0/cosmo/bootstrap.min.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -37,7 +40,9 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Cloud Computing Book 0.1 documentation" href="index.html" />
+    <link rel="top" title="FutureGrid 0.1 documentation" href="index.html" />
+    <link rel="next" title="5. Eucalyptus" href="eucalyptus.html" />
+    <link rel="prev" title="3. OpenStack Essex with euca2ools" href="openstackessex0.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -46,7 +51,7 @@
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -55,7 +60,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Contents</a>
+        <a class="navbar-brand" href="index.html">FutureGrid</a>
         <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
       </div>
 
@@ -78,12 +83,12 @@
 <li class="toctree-l2"><a class="reference internal" href="preface.html#conventions">1.5. Conventions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">2. Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">2.1. Executive Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">2.2. Project and Account Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">2.3. Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">2.4. Hardware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">2.5. Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#executive-summary">1.1. Executive Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#project-and-account-application">1.2. Project and Account Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#services">1.3. Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#hardware">1.4. Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#support">1.5. Support</a></li>
 </ul>
 </li>
 </ul>
@@ -92,7 +97,18 @@
 <li class="toctree-l2"><a class="reference internal" href="account.html#terminology">1.1. Terminology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#quickstart">1.2. Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#projects-and-accounts-for-xsede-users">1.3. Projects and Accounts for XSEDE users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="account.html#project-management">1.4. Project Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="account.html#project-management">1.4. Project Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="account.html#create-a-portal-account">1.4.1. Create a Portal account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#create-a-project">1.4.2. Create a Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="account.html#example-project">1.4.2.1. Example Project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#join-a-project">1.4.3. Join a Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#delete-or-deactivate-a-user-form-a-project">1.4.4. Delete or Deactivate a user form a Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#reporting-results">1.4.5. Reporting Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#close-a-project">1.4.6. Close a Project</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#upload-a-ssh-public-key">1.5. Upload a SSH Public Key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#upload-an-openid">1.6. Upload an OpenId</a></li>
 <li class="toctree-l2"><a class="reference internal" href="account.html#accessing-futuregrid-resources">1.7. Accessing FutureGrid Resources</a></li>
@@ -121,20 +137,48 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hpc.html">2. HPC Services</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#login-nodes">2.1. Login Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#ssh-add">2.1.1. SSH Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#ssh-config">2.1.2. SSH Config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#modules">2.1.3. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#list-of-available-modules-on-various-machines">2.1.4. List of Available Modules on Various Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#filesystem-layout">2.1.5. Filesystem Layout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">2.2. Message Passing Interface (MPI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#mpi-libraries">2.2.1. MPI Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#compiling-mpi-applications">2.2.2. Compiling MPI Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#batch-jobs">2.2.3. Batch Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#job-management">2.3. Job Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-submission">2.3.1. Job Submission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-deletion">2.3.2. Job Deletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-monitoring">2.3.3. Job Monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-output">2.3.4. Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#xray-hpc-services">2.4. Xray HPC Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#submitting-a-job-on-xray">2.4.1. Submitting a Job on xray</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scalemp.html">3. ScaleMP vSMP</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="scalemp.html#accessing-scalemp">3.1. Accessing ScaleMP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scalemp.html#submitting-a-job">3.2. Submitting a job</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scalemp.html#developing-a-job-script">3.3. Developing a job script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html#developing-a-job-script">3.3. Developing a job script</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#mpi">3.3.1. MPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#openmp">3.3.2. OpenMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#threaded">3.3.3. Threaded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#throughput">3.3.4. Throughput</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#serial">3.3.5. Serial</a></li>
 </ul>
 </li>
 </ul>
-<ul>
+</li>
+</ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="iaas.html">1. IaaS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">1.1. Nimbus Clouds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">1.2. OpenStack Clouds</a></li>
@@ -142,53 +186,108 @@
 <li class="toctree-l2"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">1.4. Virtual Appliances for Training and Education</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack-grizzly.html">3. OpenStack Grizzly</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#login">3.1. Login</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#creating-the-novarc-file">3.2. Creating the novarc file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#activate-openstack-tools">3.3. Activate OpenStack tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#list-flavors">3.4. List flavors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#list-images">3.5. List images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#key-management">3.6. Key management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#managing-security-groups">3.7. Managing security groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#booting-an-image">3.8. Booting an image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#list-running-images">3.9. List running images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#use-block-storage">3.10. Use block storage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#set-up-external-access-to-your-instance">3.11. Set up external access to your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#make-a-snapshot-of-an-instance">3.12. Make a snapshot of an instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#automate-some-initial-configuration">3.13. Automate some initial configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">3.14. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#delete-your-instance">3.15. Delete your instance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#how-to-change-your-password">3.16. How to change your password</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">3.17. Things to do when you need Euca2ools or EC2 interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack-grizzly.html#horizon-gui">3.18. Horizon GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstackgrizzly.html">2. OpenStack Grizzly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#login">2.1. Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#creating-the-novarc-file">2.2. Creating the novarc file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#activate-openstack-tools">2.3. Activate OpenStack tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#list-flavors">2.4. List flavors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#list-images">2.5. List images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#key-management">2.6. Key management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#managing-security-groups">2.7. Managing security groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#booting-an-image">2.8. Booting an image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#list-running-images">2.9. List running images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#use-block-storage">2.10. Use block storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#set-up-external-access-to-your-instance">2.11. Set up external access to your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#make-a-snapshot-of-an-instance">2.12. Make a snapshot of an instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#automate-some-initial-configuration">2.13. Automate some initial configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">2.14. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#delete-your-instance">2.15. Delete your instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#how-to-change-your-password">2.16. How to change your password</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">2.16.1. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="openstack.html">2. OpenStack Essex with euca2ools</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#prerequisites">2.1. Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-india">2.2. Log into India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#system-variable-user">2.3. System Variable $USER</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#account-and-credentials">2.4. Account and Credentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#euca2ools-ec2-client-tools">2.5. Euca2ools (EC2 client tools)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#testing-your-setup">2.6. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#list-of-common-images">2.7. List of Common Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#vm-types">2.8. VM Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#key-management">2.9. Key Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#image-instantiation">2.10. Image Instantiation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#rename-server-names">2.11. Rename Server Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#monitoring-instances">2.12. Monitoring Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#log-into-your-vm">2.13. Log into your VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#nova-volumes-not-available">2.14. Nova Volumes (Not available)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#volume-snapshots">2.15. Volume Snapshots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#image-registration">2.16. Image Registration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#delete-your-images">2.17. Delete your images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#terminate-your-vms">2.18. Terminate your VMs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#limitations">2.19. Limitations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#troubleshooting">2.20. Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="openstack.html#compatibility-between-nova-and-euca2ools-commands">2.21. Compatibility between nova and euca2ools commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html#horizon-gui">2.17. Horizon GUI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstackessex0.html">3. OpenStack Essex with euca2ools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#prerequisites">3.1. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#log-into-india">3.2. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#system-variable-user">3.3. System Variable $USER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#account-and-credentials">3.4. Account and Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#euca2ools-ec2-client-tools">3.5. Euca2ools (EC2 client tools)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#testing-your-setup">3.6. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#list-of-common-images">3.7. List of Common Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#vm-types">3.8. VM Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#key-management">3.9. Key Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#image-instantiation">3.10. Image Instantiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#rename-server-names">3.11. Rename Server Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#monitoring-instances">3.12. Monitoring Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#log-into-your-vm">3.13. Log into your VM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#making-a-snapshot-with-nova-client">3.13.1. Making a snapshot with nova client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#nova-volumes-not-available">3.14. Nova Volumes (Not available)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#list-available-volumes">3.14.1. List available Volumes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#create-a-volume">3.14.2. Create a Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#attach-volume">3.14.3. Attach Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#using-the-new-disk">3.14.4. Using the new Disk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#detach-volumes">3.14.5. Detach Volumes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#volume-snapshots">3.15. Volume Snapshots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#create-snapshot">3.15.1. Create Snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#list-snapshot">3.15.2. List Snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackessex0.html#create-volume-from-snapshot-not-yet-functional-in-openstack-essex">3.15.3. Create Volume from Snapshot (not yet functional in OpenStack Essex)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#image-registration">3.16. Image Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#delete-your-images">3.17. Delete your images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#terminate-your-vms">3.18. Terminate your VMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#limitations">3.19. Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#troubleshooting">3.20. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#compatibility-between-nova-and-euca2ools-commands">3.21. Compatibility between nova and euca2ools commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Nimbus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nimbus-iaas">4.1. Nimbus IaaS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image0">4.1.1. </a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-nimbus">4.1.2. What is Nimbus?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nimbus-on-futuregrid">4.1.3. Nimbus on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">4.1.4. Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#log-into-hotel">4.1.4.1. Log into hotel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-and-install-cloud-client">4.1.4.2. Download and install cloud-client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#obtain-your-nimbus-credentials-and-configuration-files">4.1.4.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-your-ssh-key">4.1.4.4. Check Your ssh Key</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-cloud-client">4.1.5. Using the Cloud Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-out-the-various-futuregrid-clouds">4.1.5.1. Check out the various FutureGrid clouds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-a-virtual-machine">4.1.5.2. Run a Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-vm-image">4.1.5.3. Create a New VM Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-the-changes-to-a-new-vm">4.1.5.4. Save the Changes to a New VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launch-your-new-vm">4.1.5.5. Launch Your New VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#terminate-the-vm">4.1.5.6. Terminate the VM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-clusters">4.1.6. Virtual Clusters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cluster-definition-file">4.1.6.1. Cluster Definition File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-the-cluster">4.1.6.2. Start the Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#check-out-the-virtual-cluster">4.1.6.3. Check Out the Virtual Cluster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#launch-a-vm-via-nimbus">4.2. Launch A VM via Nimbus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#options">4.2.1. Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-happens">4.2.2. What Happens</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cloudinit-d">4.3. cloudinit.d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#phantom">4.4. Phantom</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">5. Eucalyptus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-creation">5.1. Account Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-setup">5.1. Account Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">5.2. Resources Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">5.3. Testing Your Setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">5.4. Image Deployment</a></li>
@@ -200,18 +299,107 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="rain.html">4. RAIN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">4.2. FutureGrid Standalone Image Repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">4.3. Manual Image Customization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">4.4. RAIN Manual Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="experiment-interactive.html">1. Interactive Experiment Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment-interactive.html#host-list-manager">1.1. Host List Manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#host-list-manager-setup">1.1.1. Host List Manager Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#provisioning-hosts">1.1.2. Provisioning Hosts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#managing-host-lists">1.1.3. Managing Host Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="experiment-interactive.html#taktuk">1.2. TakTuk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#running-experiments-with-taktuk">1.2.1. Running Experiments with TakTuk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#host-list-manager-commands">1.2.2. Host List Manager Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#hupdate">1.2.2.1. hupdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#hmanage">1.2.2.2. hmanage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#hshow">1.2.2.3. hshow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#htag">1.2.2.4. htag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#hlist">1.2.2.5. hlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#htaktuk">1.2.2.6. htaktuk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#taktuk-commands">1.2.3. TakTuk Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="precip.html">5. Precip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#installation">5.1. Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#api">5.2. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html#examples">5.3. Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#hello-world">5.3.1. Hello World</a></li>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#resources-from-mulitple-infrastructures">5.3.2. Resources from mulitple infrastructures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#setting-up-a-condor-pool-and-running-a-pegasus-workflow">5.3.3. Setting up a Condor pool and running a Pegasus workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rain.html">3. RAIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">3.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#request-access">3.1.1. Request access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#log-into-india">3.1.2. Log into India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#start-the-shell">3.1.3. Start the Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#generate-the-image">3.1.4. Generate the Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#image-repository">3.1.5. Image Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#register-image">3.1.6. Register Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#start-image">3.1.7. Start Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">3.2. FutureGrid Standalone Image Repository</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#requirement">3.2.1. Requirement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#software">3.2.2. Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#documentation">3.2.3. Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#user-manual">3.2.3.1. User Manual</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#installation">3.2.3.2. Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#configuration">3.2.3.3. Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#manual-image-customization">3.3. Manual Image Customization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#logging-into-india">3.3.1. Logging into India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#requesting-access">3.3.2. Requesting access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#obtaining-the-image">3.3.3. Obtaining the image</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#getting-an-image-from-the-repository">3.3.3.1. Getting an image from the repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#generating-a-new-image">3.3.3.2. Generating a new image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#customizing-the-image">3.3.4. Customizing the image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#transfer-the-image-back-to-india">3.3.5. Transfer the image back to India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#id1">3.3.6. Log into India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#upload-the-image-to-the-repository">3.3.7. Upload the image to the repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#register-your-image-in-different-infrastructures">3.3.8. Register your image in different infrastructures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-the-image-in-openstack">3.3.8.1. Register the image in Openstack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-the-image-in-eucalyptus">3.3.8.2. Register the image in Eucalyptus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-the-image-in-hpc">3.3.8.3. Register the image in HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#using-your-registered-image">3.3.9. Using your Registered Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html#rain-manual-pages">3.4. RAIN Manual Pages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#fg-portal-manage">3.4.1. fg-portal-manage</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="hadoop.html">1. Using Hadoop in FutureGrid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hadoop.html#running-hadoop-as-a-batch-job-using-myhadoop">2. Running Hadoop as a Batch Job using MyHadoop</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hadoop.html#myhadoop-on-futuregrid">2.1. myHadoop on FutureGrid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hadoop.html">1. Using Hadoop in FutureGrid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hadoop.html#running-hadoop-as-a-batch-job-using-myhadoop">1.1. Running Hadoop as a Batch Job using MyHadoop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hadoop.html#myhadoop-on-futuregrid">1.1.1. myHadoop on FutureGrid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#login-into-a-machine-tha-has-myhadoop-installed">1.1.1.1. Login into a machine tha has myHadoop installed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#load-the-needed-modules">1.1.1.2. Load the needed modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#run-the-example">1.1.1.3. Run the Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#deatails-of-the-script">1.1.1.4. Deatails of the Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#submission-of-the-hadoop-job">1.1.1.5. Submission of the Hadoop job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#persistent-mode">1.1.1.6. Persistent Mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#customizing-hadoop-settings">1.1.1.7. Customizing Hadoop Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#using-a-different-installation-of-hadoop">1.1.1.8. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#refernces">1.1.1.9. Refernces</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -223,28 +411,41 @@
 <li class="toctree-l2"><a class="reference internal" href="mooc.html#overview">1.1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mooc.html#prerequisites">1.2. Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mooc.html#instructor-bio">1.3. Instructor Bio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mooc.html#course-content">1.4. Course Content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mooc.html#exercises">1.5. Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#course-content">1.4. Course Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#creating-futuregrid-accounts-and-projects">1.4.1. Creating FutureGrid Accounts and Projects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#openstack-on-futuregrid">1.4.2. OpenStack on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#eucalyptus-on-futuregrid">1.4.3. Eucalyptus on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#batch-jobs-including-hadoop-on-futuregrid">1.4.4. Batch Jobs including Hadoop  on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html#exercises">1.5. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#id1">1.5.1. Creating FutureGrid Accounts and Projects</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">1. Todo List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plan.html">2. Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">13. Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">11. Building the Manual</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">11.1. Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">11.2. Virtualenv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">11.3. Create a github local directory with the manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">11.4. Install the Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">11.5. All-in-one setup script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">11.6. Watchdog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">11.7. Transfering a page from the portal to RST</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">11.8. Creating the pages locally</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">11.9. Publishing the pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">11.10. jira</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">11.11. Portal link</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">11.12. Screencast recording tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">1. Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">2. Building the Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#python">2.1. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#virtualenv">2.2. Virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">2.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#install-the-requirements">2.4. Install the Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#all-in-one-setup-script">2.5. All-in-one setup script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#watchdog">2.6. Watchdog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">2.7. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#creating-the-pages-locally">2.8. Creating the pages locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publishing-the-pages">2.9. Publishing the pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#jira">2.10. jira</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#portal-link">2.11. Portal link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#screencast-recording-tips">2.12. Screencast recording tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#osx">2.12.1. OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#changing-the-prompt">2.12.2. Changing the prompt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#recording-of-typed-in-commands">2.12.3. Recording of typed in commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#setup-quicktime-sound-recording">2.12.4. Setup quicktime sound recording</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -252,13 +453,42 @@
 <li class="toctree-l1"><a class="reference internal" href="ring.html">1. MPI Ring Program</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="python.html">12. Just Enough Python for the Cloud</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">12.1. Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">12.2. OS Specific</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">12.3. Lanaguage Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#local">12.4. Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">12.5. Ecosystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">12.6. Excersises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">1. Just Enough Python for the Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="python.html#terminal">1.1. Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#os-specific">1.2. OS Specific</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python.html#linux">1.2.1. Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#os-x">1.2.2. OS X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#windows">1.2.3. Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#lanaguage-features">1.3. Lanaguage Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python.html#print">1.3.1. Print</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#comments">1.3.2. Comments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="python.html#simple-comment">1.3.2.1. Simple comment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python.html#multiline-comment-with">1.3.2.2. Multiline Comment with &#8220;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="python.html#id1">1.3.2.3. Multiline Comment with &#8216;</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#variables">1.3.3. Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#changing-the-variable-value">1.3.4. Changing the variable Value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#list">1.3.5. List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#for-loop">1.3.6. For Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#arithmetic-operators">1.3.7. Arithmetic Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#function-to-do-calculations">1.3.8. Function to do calculations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#functions-for-string-manipulation">1.3.9. Functions for String Manipulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#if-condition">1.3.10. If Condition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#for">1.3.11. For</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#class">1.3.12. Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#plots">1.3.13. Plots</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#local">1.4. Local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#ecosystem">1.5. Ecosystem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="python.html#pypi">1.5.1. pypi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html#github">1.5.2. github</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html#excersises">1.6. Excersises</a></li>
 </ul>
 </li>
 </ul>
@@ -268,34 +498,42 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">4. Using Nimbus on FutureGrid</a><ul>
-<li><a class="reference internal" href="#nimbus-on-futuregrid">4.1. Nimbus on FutureGrid</a></li>
-<li><a class="reference internal" href="#getting-started">4.2. Getting Started</a><ul>
-<li><a class="reference internal" href="#log-into-hotel">4.2.1. Log into hotel</a></li>
-<li><a class="reference internal" href="#download-and-install-cloud-client">4.2.2. Download and install cloud-client</a></li>
-<li><a class="reference internal" href="#obtain-your-nimbus-credentials-and-configuration-files">4.2.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
-<li><a class="reference internal" href="#check-your-ssh-key">4.2.4. Check Your ssh Key</a></li>
+<li><a class="reference internal" href="#">4. Nimbus</a><ul>
+<li><a class="reference internal" href="#nimbus-iaas">4.1. Nimbus IaaS</a><ul>
+<li><a class="reference internal" href="#image0">4.1.1. </a></li>
+<li><a class="reference internal" href="#what-is-nimbus">4.1.2. What is Nimbus?</a></li>
+<li><a class="reference internal" href="#nimbus-on-futuregrid">4.1.3. Nimbus on FutureGrid</a></li>
+<li><a class="reference internal" href="#getting-started">4.1.4. Getting Started</a><ul>
+<li><a class="reference internal" href="#log-into-hotel">4.1.4.1. Log into hotel</a></li>
+<li><a class="reference internal" href="#download-and-install-cloud-client">4.1.4.2. Download and install cloud-client</a></li>
+<li><a class="reference internal" href="#obtain-your-nimbus-credentials-and-configuration-files">4.1.4.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li><a class="reference internal" href="#check-your-ssh-key">4.1.4.4. Check Your ssh Key</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-the-cloud-client">4.3. Using the Cloud Client</a><ul>
-<li><a class="reference internal" href="#check-out-the-various-futuregrid-clouds">4.3.1. Check out the various FutureGrid clouds</a></li>
-<li><a class="reference internal" href="#run-a-virtual-machine">4.3.2. Run a Virtual Machine</a></li>
-<li><a class="reference internal" href="#create-a-new-vm-image">4.3.3. Create a New VM Image</a></li>
-<li><a class="reference internal" href="#save-the-changes-to-a-new-vm">4.3.4. Save the Changes to a New VM</a></li>
-<li><a class="reference internal" href="#launch-your-new-vm">4.3.5. Launch Your New VM</a></li>
-<li><a class="reference internal" href="#terminate-the-vm">4.3.6. Terminate the VM</a></li>
+<li><a class="reference internal" href="#using-the-cloud-client">4.1.5. Using the Cloud Client</a><ul>
+<li><a class="reference internal" href="#check-out-the-various-futuregrid-clouds">4.1.5.1. Check out the various FutureGrid clouds</a></li>
+<li><a class="reference internal" href="#run-a-virtual-machine">4.1.5.2. Run a Virtual Machine</a></li>
+<li><a class="reference internal" href="#create-a-new-vm-image">4.1.5.3. Create a New VM Image</a></li>
+<li><a class="reference internal" href="#save-the-changes-to-a-new-vm">4.1.5.4. Save the Changes to a New VM</a></li>
+<li><a class="reference internal" href="#launch-your-new-vm">4.1.5.5. Launch Your New VM</a></li>
+<li><a class="reference internal" href="#terminate-the-vm">4.1.5.6. Terminate the VM</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#virtual-clusters">4.4. Virtual Clusters</a><ul>
-<li><a class="reference internal" href="#cluster-definition-file">4.4.1. Cluster Definition File</a></li>
-<li><a class="reference internal" href="#start-the-cluster">4.4.2. Start the Cluster</a></li>
-<li><a class="reference internal" href="#check-out-the-virtual-cluster">4.4.3. Check Out the Virtual Cluster</a></li>
+<li><a class="reference internal" href="#virtual-clusters">4.1.6. Virtual Clusters</a><ul>
+<li><a class="reference internal" href="#cluster-definition-file">4.1.6.1. Cluster Definition File</a></li>
+<li><a class="reference internal" href="#start-the-cluster">4.1.6.2. Start the Cluster</a></li>
+<li><a class="reference internal" href="#check-out-the-virtual-cluster">4.1.6.3. Check Out the Virtual Cluster</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#cloud-quick-start-launch-a-vm-with-1-command">4.5. Cloud Quick Start : Launch a VM with 1 command</a></li>
-<li><a class="reference internal" href="#launch-a-vm-via-nimbus">4.6. Launch A VM via Nimbus</a></li>
-<li><a class="reference internal" href="#using-other-nimbus-clouds-on-futuregrid">4.7. Using Other Nimbus Clouds on FutureGrid</a></li>
-<li><a class="reference internal" href="#launching-multiple-vms">4.8. Launching Multiple VMs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#launch-a-vm-via-nimbus">4.2. Launch A VM via Nimbus</a><ul>
+<li><a class="reference internal" href="#options">4.2.1. Options</a></li>
+<li><a class="reference internal" href="#what-happens">4.2.2. What Happens</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cloudinit-d">4.3. cloudinit.d</a></li>
+<li><a class="reference internal" href="#phantom">4.4. Phantom</a></li>
 </ul>
 </li>
 </ul>
@@ -306,14 +544,20 @@
             
               
                 
+  <li><a href="openstackessex0.html"
+         title="Previous Chapter: 3. OpenStack Essex with euca2ools">&laquo; 3. OpenStack Ess...</a></li>
+  <li><a href="eucalyptus.html"
+         title="Next Chapter: 5. Eucalyptus">5. Eucalyptus &raquo;</a></li>
               
             
             
             
             
               <li>
+<div id="sourcelink">
   <a href="_sources/nimbus.txt"
-     rel="nofollow">Source</a></li>
+     rel="nofollow">Source</a>
+</div></li>
             
           </ul>
 
@@ -333,48 +577,17 @@
 
 <div class="container">
   <div class="row">
-    <div class="span12">
+    <div class="col-md-12">
       
-  <div class="section" id="using-nimbus-on-futuregrid">
-<span id="s-nimbus"></span><h1>4. Using Nimbus on FutureGrid<a class="headerlink" href="#using-nimbus-on-futuregrid" title="Permalink to this headline">¶</a></h1>
-<div class="sidebar">
-<p class="first sidebar-title">Page Contents</p>
-<div class="contents local last topic" id="contents">
-<ul class="simple">
-<li><a class="reference internal" href="#nimbus-on-futuregrid" id="id9">Nimbus on FutureGrid</a></li>
-<li><a class="reference internal" href="#getting-started" id="id10">Getting Started</a><ul>
-<li><a class="reference internal" href="#log-into-hotel" id="id11">Log into hotel</a></li>
-<li><a class="reference internal" href="#download-and-install-cloud-client" id="id12">Download and install cloud-client</a></li>
-<li><a class="reference internal" href="#obtain-your-nimbus-credentials-and-configuration-files" id="id13">Obtain Your Nimbus Credentials and Configuration Files</a></li>
-<li><a class="reference internal" href="#check-your-ssh-key" id="id14">Check Your ssh Key</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#using-the-cloud-client" id="id15">Using the Cloud Client</a><ul>
-<li><a class="reference internal" href="#check-out-the-various-futuregrid-clouds" id="id16">Check out the various FutureGrid clouds</a></li>
-<li><a class="reference internal" href="#run-a-virtual-machine" id="id17">Run a Virtual Machine</a></li>
-<li><a class="reference internal" href="#create-a-new-vm-image" id="id18">Create a New VM Image</a></li>
-<li><a class="reference internal" href="#save-the-changes-to-a-new-vm" id="id19">Save the Changes to a New VM</a></li>
-<li><a class="reference internal" href="#launch-your-new-vm" id="id20">Launch Your New VM</a></li>
-<li><a class="reference internal" href="#terminate-the-vm" id="id21">Terminate the VM</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#virtual-clusters" id="id22">Virtual Clusters</a><ul>
-<li><a class="reference internal" href="#cluster-definition-file" id="id23">Cluster Definition File</a></li>
-<li><a class="reference internal" href="#start-the-cluster" id="id24">Start the Cluster</a></li>
-<li><a class="reference internal" href="#check-out-the-virtual-cluster" id="id25">Check Out the Virtual Cluster</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#cloud-quick-start-launch-a-vm-with-1-command" id="id26">Cloud Quick Start : Launch a VM with 1 command</a></li>
-<li><a class="reference internal" href="#launch-a-vm-via-nimbus" id="id27">Launch A VM via Nimbus</a></li>
-<li><a class="reference internal" href="#using-other-nimbus-clouds-on-futuregrid" id="id28">Using Other Nimbus Clouds on FutureGrid</a></li>
-<li><a class="reference internal" href="#launching-multiple-vms" id="id29">Launching Multiple VMs</a></li>
-</ul>
+  <div class="section" id="nimbus">
+<h1>4. Nimbus<a class="headerlink" href="#nimbus" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nimbus-iaas">
+<h2>4.1. Nimbus IaaS<a class="headerlink" href="#nimbus-iaas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="image0">
+<h3>4.1.1. <a class="reference external" href="http://www.nimbusproject.org/"><img alt="image0" src="sites/default/files/images/nimbus_logo.png" /></a><a class="headerlink" href="#image0" title="Permalink to this headline">¶</a></h3>
 </div>
-</div>
-<div class="figure align-right">
-<a class="reference external image-reference" href="http://www.nimbusproject.org/"><img alt="_images/nimbus_logo.png" src="_images/nimbus_logo.png" style="width: 100px;" /></a>
-<p class="caption">Nimbus</p>
-</div>
+<div class="section" id="what-is-nimbus">
+<h3>4.1.2. What is Nimbus?<a class="headerlink" href="#what-is-nimbus" title="Permalink to this headline">¶</a></h3>
 <p>Nimbus is an open source service package that allows users to run
 virtual machines on FutureGrid hardware. You can easily upload your own
 VM image or customize an image provided by us. When you boot a VM, it is
@@ -383,31 +596,31 @@ are authorized to log in as root via SSH. You can then run services,
 perform computations, and configure the system as desired. After using
 and configuring the VM, you can save the modified VM image back to the
 Nimbus image repository.</p>
+</div>
 <div class="section" id="nimbus-on-futuregrid">
-<h2><a class="toc-backref" href="#id9">4.1. Nimbus on FutureGrid</a><a class="headerlink" href="#nimbus-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<h3>4.1.3. Nimbus on FutureGrid<a class="headerlink" href="#nimbus-on-futuregrid" title="Permalink to this headline">¶</a></h3>
 <p>Nimbus is installed on four FutureGrid clusters:</p>
 <ol class="arabic">
 <li><dl class="first docutils">
 <dt><strong>Hotel</strong> (University of Chicago)</dt>
-<dd><p class="first last">41 nodes, 328 cores</p>
+<dd><p class="first last">42 nodes, 336 cores</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><strong>Foxtrot</strong> (University of Florida)</dt>
-<dd><p class="first last">26 nodes, 208 cores</p>
+<dd><p class="first last">24 nodes, 192 cores</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><strong>Sierra</strong> (San Diego Supercomputer Center)</dt>
-<dd><p class="first last">18 nodes, 144 cores. Note Sierra uses FG dynamic provisioning and
-the number of assigned nodes in Nimbus is flexible.</p>
+<dd><p class="first last">18 nodes, 144 cores</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt><strong>Alamo</strong> (Texas Advanced Computing Center)</dt>
+<dt><strong>Alamo</strong>(Texas Advanced Computing Center)</dt>
 <dd><p class="first last">15 nodes, 120 cores</p>
 </dd>
 </dl>
@@ -420,7 +633,7 @@ contact <a class="reference external" href="https://portal.futuregrid.org/help">
 <p>All FutureGrid users are allowed access to Nimbus on all sites.</p>
 </div>
 <div class="section" id="getting-started">
-<h2><a class="toc-backref" href="#id10">4.2. Getting Started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<h3>4.1.4. Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
 <p>Nimbus provides services that can be controlled remotely using a variety
 of clients. In this tutorial, we will use a simple command line tool
 called the <strong>cloud-client</strong>. If you&#8217;d rather have programmatic
@@ -429,7 +642,7 @@ supported</a>,
 which have a variety of excellent clients available for many
 languages.</p>
 <div class="section" id="log-into-hotel">
-<h3><a class="toc-backref" href="#id11">4.2.1. Log into hotel</a><a class="headerlink" href="#log-into-hotel" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.4.1. Log into hotel<a class="headerlink" href="#log-into-hotel" title="Permalink to this headline">¶</a></h4>
 <p>The first step is to ssh into hotel.futuregrid.org.  While you can use
 Nimbus clients from anywhere in the world, we recommend that you start
 on hotel because the correct version of Java is installed there.</p>
@@ -440,28 +653,26 @@ on hotel because the correct version of Java is installed there.</p>
 It likely means one of the following:</p>
 <ol class="arabic simple">
 <li>Your account is not yet set up.</li>
-<li>You provide no public key or an corrupted public key.</li>
+<li>You provide no public key or a corrupted public key.</li>
 <li>The private key you are using does not match the public one you
 registered with FutureGrid.</li>
 </ol>
 </div>
 <div class="section" id="download-and-install-cloud-client">
-<h3><a class="toc-backref" href="#id12">4.2.2. Download and install cloud-client</a><a class="headerlink" href="#download-and-install-cloud-client" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.4.2. Download and install cloud-client<a class="headerlink" href="#download-and-install-cloud-client" title="Permalink to this headline">¶</a></h4>
 <p>Download the Nimbus cloud client from the <a class="reference external" href="http://www.nimbusproject.org/downloads/">Nimbus
 website</a>.</p>
 <div class="highlight-python"><pre>$ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-021.tar.gz</pre>
 </div>
-<p>Unpack the archive onto your system. You can also use one of the
-FutureGrid login nodes directly.</p>
+<p>Unpack the archive into your home directory.</p>
 <div class="highlight-python"><pre>$ tar xzf nimbus-cloud-client-021.tar.gz
 $ ls nimbus-cloud-client-021/
 CHANGES.txt README.txt  conf        lib
-LICENSE.txt bin     history     samples
-Obtain your Nimbus credentials and configuration files</pre>
+LICENSE.txt bin     history     samples</pre>
 </div>
 </div>
 <div class="section" id="obtain-your-nimbus-credentials-and-configuration-files">
-<h3><a class="toc-backref" href="#id13">4.2.3. Obtain Your Nimbus Credentials and Configuration Files</a><a class="headerlink" href="#obtain-your-nimbus-credentials-and-configuration-files" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.4.3. Obtain Your Nimbus Credentials and Configuration Files<a class="headerlink" href="#obtain-your-nimbus-credentials-and-configuration-files" title="Permalink to this headline">¶</a></h4>
 <p>In your home directory on hotel, you will find the file
 nimbus_creds.tar.gz:</p>
 <div class="highlight-python"><pre> username@hotel $ ls ~/nimbus_creds.tar.gz
@@ -469,8 +680,7 @@ nimbus_creds.tar.gz</pre>
 </div>
 <p>If your credentials are not present on <strong>Hotel</strong>,
 contact <a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.</p>
-<p>Back on your system, download and unpack these files into your
-cloud-client&#8217;s directory:</p>
+<p>Download and unpack these files into your cloud-client&#8217;s directory:</p>
 <div class="highlight-python"><pre>$ cd nimbus-cloud-client-021/conf/
 $ tar xvzf ~/nimbus_creds.tar.gz
 usercert.pem
@@ -489,7 +699,7 @@ help text and file.</p>
 </div>
 </div>
 <div class="section" id="check-your-ssh-key">
-<h3><a class="toc-backref" href="#id14">4.2.4. Check Your ssh Key</a><a class="headerlink" href="#check-your-ssh-key" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.4.4. Check Your ssh Key<a class="headerlink" href="#check-your-ssh-key" title="Permalink to this headline">¶</a></h4>
 <p>In order to use Nimbus clouds effectively, you need to have your ssh
 public key in a known place so that it can be injected into your VM, and
 thus allow you (and only you) root access to your VM. When creating your
@@ -507,9 +717,9 @@ command to display some information about your security environment:</p>
 </div>
 </div>
 <div class="section" id="using-the-cloud-client">
-<h2><a class="toc-backref" href="#id15">4.3. Using the Cloud Client</a><a class="headerlink" href="#using-the-cloud-client" title="Permalink to this headline">¶</a></h2>
+<h3>4.1.5. Using the Cloud Client<a class="headerlink" href="#using-the-cloud-client" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="check-out-the-various-futuregrid-clouds">
-<h3><a class="toc-backref" href="#id16">4.3.1. Check out the various FutureGrid clouds</a><a class="headerlink" href="#check-out-the-various-futuregrid-clouds" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.5.1. Check out the various FutureGrid clouds<a class="headerlink" href="#check-out-the-various-futuregrid-clouds" title="Permalink to this headline">¶</a></h4>
 <p>When the credentials file was untarred in a step above, a
 configuration file for each of the four FutureGrid clouds was put in
 your <em>conf/</em>directory.  Now let&#8217;s take a look at accessing each of
@@ -518,8 +728,9 @@ This will require two options to cloud client.  The first is &#8211;conf ;
 this is used to select the cloud you wish to use.  Simply provide a path
 to the cloud configuration file.  This &#8211;conf switch will be used in all
 commands to direct cloud-client at the cloud of interest.</p>
-<p>The second option is &#8211;list.  This will simply provide a listing of
-all the available virtual machines:</p>
+<blockquote>
+<div>The second option is &#8211;list.  This will simply provide a listing of</div></blockquote>
+<p>all the available virtual machines:</p>
 <div class="highlight-python"><pre>$ bin/cloud-client.sh --conf conf/hotel.conf --list</pre>
 </div>
 <p>This command should list the available images on the system.  Notice the
@@ -530,20 +741,27 @@ tutorial:</p>
 </div>
 </div>
 <div class="section" id="run-a-virtual-machine">
-<h3><a class="toc-backref" href="#id17">4.3.2. Run a Virtual Machine</a><a class="headerlink" href="#run-a-virtual-machine" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.5.2. Run a Virtual Machine<a class="headerlink" href="#run-a-virtual-machine" title="Permalink to this headline">¶</a></h4>
 <p>Next, try to boot a virtual machine:</p>
 <div class="highlight-python"><pre>$ bin/cloud-client.sh --conf conf/hotel.conf --run --name hello-cloud --hours 2
-Launching workspace.
-Workspace Factory Service:
-     https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
-Creating workspace "vm-001"... done.
-       IP address: 149.165.148.253
-         Hostname: vm-253.uc.futuregrid.org
-       Start time: Wed Jul 25 15:44:33 CDT 2012
-    Shutdown time: Wed Jul 25 17:44:33 CDT 2012
- Termination time: Wed Jul 25 17:46:33 CDT 2012
-Waiting for updates.
-"vm-001" reached target state: Running</pre>
+Launching workspace.</pre>
+</div>
+<div class="highlight-python"><pre>Workspace Factory Service:
+     https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService</pre>
+</div>
+<div class="highlight-python"><pre>::</pre>
+</div>
+<blockquote>
+<div>Creating workspace &#8220;vm-001&#8221;... done.</div></blockquote>
+<div class="highlight-python"><pre>      IP address: 149.165.148.122
+        Hostname: vm-148-122.uc.futuregrid.org
+      Start time: Wed Jul 25 15:44:33 CDT 2012
+   Shutdown time: Wed Jul 25 17:44:33 CDT 2012
+Termination time: Wed Jul 25 17:46:33 CDT 2012</pre>
+</div>
+<div class="highlight-python"><pre>Waiting for updates.</pre>
+</div>
+<div class="highlight-python"><pre>"vm-001" reached target state: Running</pre>
 </div>
 <p>Once the image is running, you should be able to log into it with SSH.
 Note that you may need to wait another minute or so before you can
@@ -553,12 +771,13 @@ command.  Note that you <strong>must</strong>run this command in a location that
 has access to your private key.  This means it must be in the <em>~/.ssh/</em>
 directory on the file system from where you launch this command, or you
 must have used the -A option to ssh when logging into hotel (as is shown
-above).</p>
-<div class="highlight-python"><pre>$ ssh root@vm-253.uc.futuregrid.org</pre>
+above). Make sure you replace the hostname of the VM by the one printed
+out by cloud client.</p>
+<div class="highlight-python"><pre>$ ssh root@vm-148-122.uc.futuregrid.org</pre>
 </div>
 </div>
 <div class="section" id="create-a-new-vm-image">
-<h3><a class="toc-backref" href="#id18">4.3.3. Create a New VM Image</a><a class="headerlink" href="#create-a-new-vm-image" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.5.3. Create a New VM Image<a class="headerlink" href="#create-a-new-vm-image" title="Permalink to this headline">¶</a></h4>
 <p>Once you have a root shell on your VM, you may modify it as through it
 were a real machine.  Here we encourage you to make some changes.
 Create a new user, install some additional software, or simply create a
@@ -569,8 +788,8 @@ text file in the root user&#8217;s account:</p>
 </div>
 </div>
 <div class="section" id="save-the-changes-to-a-new-vm">
-<h3><a class="toc-backref" href="#id19">4.3.4. Save the Changes to a New VM</a><a class="headerlink" href="#save-the-changes-to-a-new-vm" title="Permalink to this headline">¶</a></h3>
-<p>Now that you have modified the VM ,you can save it back into your
+<h4>4.1.5.4. Save the Changes to a New VM<a class="headerlink" href="#save-the-changes-to-a-new-vm" title="Permalink to this headline">¶</a></h4>
+<p>Now that you have modified the VM, you can save it back into your
 personal repository.  To do this, you will use the &#8211;save and &#8211;newname
 options.  You will also need the VM handle as it was displayed in the
 output from the run command.  If you have forgotten what this was, you
@@ -614,28 +833,36 @@ available for launch:</p>
 </div>
 </div>
 <div class="section" id="launch-your-new-vm">
-<h3><a class="toc-backref" href="#id20">4.3.5. Launch Your New VM</a><a class="headerlink" href="#launch-your-new-vm" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.5.5. Launch Your New VM<a class="headerlink" href="#launch-your-new-vm" title="Permalink to this headline">¶</a></h4>
 <p>You can now launch your new VM just like you did the hello-cloud VM
 above, simply changing the name from <em>hello-cloud</em> to <a href="#id1"><span class="problematic" id="id2">*</span></a>myvm <a href="#id3"><span class="problematic" id="id4">*</span></a>:</p>
 <div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/hotel.conf --run --name myvm --hours 2
 
 Launching workspace.
+
 Workspace Factory Service:
     https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
+
 Creating workspace "vm-002"... done.
-       IP address: 149.165.148.151
-         Hostname: vm-151.uc.futuregrid.org
+
+
+       IP address: 149.165.148.122
+         Hostname: vm-148-122.uc.futuregrid.org
        Start time: Wed Jul 25 15:58:31 CDT 2012
     Shutdown time: Wed Jul 25 17:58:31 CDT 2012
  Termination time: Wed Jul 25 18:08:31 CDT 2012
+
 Waiting for updates.
+
+
 "vm-002" reached target state: Running
+
 Running: 'vm-002'</pre>
 </div>
 <p>SSH into the machine and verify that your changes persisted.</p>
 </div>
 <div class="section" id="terminate-the-vm">
-<h3><a class="toc-backref" href="#id21">4.3.6. Terminate the VM</a><a class="headerlink" href="#terminate-the-vm" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.5.6. Terminate the VM<a class="headerlink" href="#terminate-the-vm" title="Permalink to this headline">¶</a></h4>
 <p>Your VM will terminate after its allocated time expires.  In our
 examples here, this is after 2 hours.  However, you may wish to
 terminate it earlier.  You can do so by again using the &#8211;handle option
@@ -644,17 +871,20 @@ as you did in the <em>save a new VM step</em> and the &#8211;terminate option:</
 
 Terminating workspace.
   - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-021/history/vm-002/vw-epr.xml'
+
 Destroying vm-002... destroyed.</pre>
 </div>
 </div>
 </div>
 <div class="section" id="virtual-clusters">
-<h2><a class="toc-backref" href="#id22">4.4. Virtual Clusters</a><a class="headerlink" href="#virtual-clusters" title="Permalink to this headline">¶</a></h2>
+<h3>4.1.6. Virtual Clusters<a class="headerlink" href="#virtual-clusters" title="Permalink to this headline">¶</a></h3>
 <p>This is a basic walkthrough of how to run a sample virtual cluster.
 For more information on how they work, see
-- <a class="reference external" href="http://www.nimbusproject.org/docs/current/clouds/clusters2.html">http://www.nimbusproject.org/docs/current/clouds/clusters2.html</a></p>
+<em>http://www.nimbusproject.org/docs/current/clouds/clusters2.html .</em></p>
+<div class="highlight-python"><pre>::</pre>
+</div>
 <div class="section" id="cluster-definition-file">
-<h3><a class="toc-backref" href="#id23">4.4.1. Cluster Definition File</a><a class="headerlink" href="#cluster-definition-file" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.6.1. Cluster Definition File<a class="headerlink" href="#cluster-definition-file" title="Permalink to this headline">¶</a></h4>
 <p>For this example, we will use a modification of the sample cluster file
 that is distributed with the cloud client.  The file can be found at
 <a href="#id5"><span class="problematic" id="id6">*</span></a><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz">https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz</a> <a href="#id7"><span class="problematic" id="id8">*</span></a>.
@@ -670,7 +900,7 @@ cluster.  This has the role of being a nfs client.</li>
 </ol>
 </div>
 <div class="section" id="start-the-cluster">
-<h3><a class="toc-backref" href="#id24">4.4.2. Start the Cluster</a><a class="headerlink" href="#start-the-cluster" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.6.2. Start the Cluster<a class="headerlink" href="#start-the-cluster" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/sierra.conf --run --hours 2 --cluster &lt;path to your cluster document&gt;
 SSH known_hosts contained tilde:
   - '~/.ssh/known_hosts' --&gt; '/N/u/bresnaha/.ssh/known_hosts'
@@ -706,7 +936,9 @@ Waiting for context broker updates.
   - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-ctx'
 
 SSH trusts new key for vm-40.sdsc.futuregrid.org   head-node
+
 SSH trusts new key for vm-41.sdsc.futuregrid.org   compute-nodes #0
+
 SSH trusts new key for vm-42.sdsc.futuregrid.org   compute-nodes #1</pre>
 </div>
 <p>This command takes a bit of time.  What is happening is cloud-client
@@ -720,10 +952,11 @@ clients use this mechanism to provide the nfs server with their IP
 addresses.  The NFS server then gets this information out of the context
 broker and uses it to authorize those IP addresses to remotely mount its
 disks.</p>
-<p>When it is complete, your virtual cluster will be ready to go.</p>
+<blockquote>
+<div>When it is complete, your virtual cluster will be ready to go.</div></blockquote>
 </div>
 <div class="section" id="check-out-the-virtual-cluster">
-<h3><a class="toc-backref" href="#id25">4.4.3. Check Out the Virtual Cluster</a><a class="headerlink" href="#check-out-the-virtual-cluster" title="Permalink to this headline">¶</a></h3>
+<h4>4.1.6.3. Check Out the Virtual Cluster<a class="headerlink" href="#check-out-the-virtual-cluster" title="Permalink to this headline">¶</a></h4>
 <p>Now ssh into one of the worker nodes and check out the file system.</p>
 <div class="highlight-python"><pre>$ df -h
 df -h
@@ -745,21 +978,44 @@ visible to this node as well.</p>
 <div class="highlight-python"><pre>$cat /home/test_file
 Hello FutureGrid</pre>
 </div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="89%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attachment</th>
+<th class="head">Size</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz">tutorial-cluster.xml_.gz</a></td>
+<td>342 bytes</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><a class="reference external" href="/manual/nimbus/cloud-quick-start-launch-vm-1-command">Cloud Quick Start : Launch a VM with 1
+command</a></li>
+<li><a class="reference external" href="/tutorials/nm2">FutureGrid Tutorial NM2 - Nimbus One-Click Cluster
+Guide</a></li>
+</ul>
+<p><a class="reference external" href="/manual/openstack/grizzly">‹ OpenStack Grizzly on FutureGrid</a>
+<a class="reference external" href="/manual/iaas">up</a> <a class="reference external" href="/manual/nimbus/cloud-quick-start-launch-vm-1-command">Cloud Quick Start : Launch a VM with 1 command
+›</a></p>
 </div>
 </div>
-<div class="section" id="cloud-quick-start-launch-a-vm-with-1-command">
-<h2><a class="toc-backref" href="#id26">4.5. Cloud Quick Start : Launch a VM with 1 command</a><a class="headerlink" href="#cloud-quick-start-launch-a-vm-with-1-command" title="Permalink to this headline">¶</a></h2>
-<p>This page explains how to very simply run a virtual machine (VM) on
-FutureGrid Nimbus.  The VM launched will mount your home files system on
-hotel so data can be exchanged with the VM easily.  Users new to cloud
+</div>
+<div class="section" id="launch-a-vm-via-nimbus">
+<h2>4.2. Launch A VM via Nimbus<a class="headerlink" href="#launch-a-vm-via-nimbus" title="Permalink to this headline">¶</a></h2>
+<p>It  simple to run a virtual machine (VM) on
+FutureGrid Nimbus.&nbsp; The VM launched will mount your home files system on
+hotel so data can be exchanged with the VM easily.&nbsp; Users new to cloud
 computing, particularly those coming from Grid computing, and those who
 are interested in getting a quick hands-on introduction to FutureGrid
 clouds, should find this useful.</p>
-</div>
-<div class="section" id="launch-a-vm-via-nimbus">
-<h2><a class="toc-backref" href="#id27">4.6. Launch A VM via Nimbus</a><a class="headerlink" href="#launch-a-vm-via-nimbus" title="Permalink to this headline">¶</a></h2>
 <p>Once you have a FutureGrid Nimbus account and ssh access to
-hotel.futuregrid.org, you can easily begin using the cloud.  All you
+hotel.futuregrid.org, you can easily begin using the cloud.&nbsp; All you
 need to do is ssh into hotel with ssh forwarding enabled, and type a
 single command:</p>
 <div class="highlight-python"><pre>$ ssh -A hotel.futuregrid.org
@@ -769,51 +1025,135 @@ Success!
 Access your VM with: ssh root@vm-156.uc.futuregrid.org
 Terminate your VM with: /soft/nimbus/tools/bin/cloudinitd.sh terminate 9ec20044</pre>
 </div>
-<p>Notice the output from the above command.  It tells you how to access
-the VM, and how to clean it up when you are finished with it.  First
-let&#8217;s access the VM and check out its file system.  The VM should have
-remotely mounted your home file system on FutureGrid.  This will allow
-you to easily copy data in and out of your VM.</p>
+<p>Notice the output from the above command.&nbsp; It tells you how to access
+the VM, and how to clean it up when you are finished with it.&nbsp; First
+let&#8217;s access the VM and check out its file system.&nbsp; The VM should have
+remotely mounted your home file system on FutureGrid.&nbsp; This will allow
+you to easily copy data in and out of your VM:</p>
 <div class="highlight-python"><pre>$ ssh root@vm-156.uc.futuregrid.org
 $ vm-156:~# df -h
-Filesystem            Size  Used Avail Use% Mounted on
-tmpfs                 1.1G     0  1.1G   0% /lib/init/rw
-udev                   10M  1.1M  9.0M  11% /dev
-tmpfs                 1.1G     0  1.1G   0% /dev/shm
-rootfs                1.9G  731M  1.1G  42% /
+Filesystem            Size  Used Avail Use% Mounted on
+tmpfs                 1.1G     0  1.1G   0% /lib/init/rw
+udev                   10M  1.1M  9.0M  11% /dev
+tmpfs                 1.1G     0  1.1G   0% /dev/shm
+rootfs                1.9G  731M  1.1G  42% /
 sshfs#bresnaha@hotel.futuregrid.org:
-                     1000G     0 1000G   0% /mnt/hotel.futuregrid.org
+                     1000G     0 1000G   0% /mnt/hotel.futuregrid.org
 
 $ ls /mnt/hotel.futuregrid.org
 ..... &lt;a listing of your FutureGrid home directory&gt;</pre>
 </div>
-</div>
-<div class="section" id="using-other-nimbus-clouds-on-futuregrid">
-<h2><a class="toc-backref" href="#id28">4.7. Using Other Nimbus Clouds on FutureGrid</a><a class="headerlink" href="#using-other-nimbus-clouds-on-futuregrid" title="Permalink to this headline">¶</a></h2>
-<p>By default, the VMs are launched on hotel&#8217;s Nimbus cloud.  However,
+<div class="section" id="options">
+<h3>4.2.1. Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<p>By default, the VMs are launched on hotel&#8217;s Nimbus cloud.&nbsp; However,
 you can use this script to launch a VM on any cloud to which you have
 access, including all of FutureGrid&#8217;s Nimbus clouds, FutureGrid&#8217;s
-Eucalytpus clouds, and FutureGrid&#8217;s OpenStack clouds.  To run on a
+Eucalytpus clouds, and FutureGrid&#8217;s OpenStack clouds.&nbsp; To run on a
 different FutureGrid Nimbus cloud, set the
-env <em>CLOUDINITD_IAAS_URL</em> to one of the following:</p>
+env&nbsp;<em>CLOUDINITD_IAAS_URL</em>&nbsp;to one of the following:</p>
 <ul class="simple">
 <li>Hotel:
 <a class="reference external" href="https://svc.uc.futuregrid.org:8444">https://svc.uc.futuregrid.org:8444</a></li>
 <li>Sierra:
 <a class="reference external" href="https://s83r.idp.sdsc.futuregrid.org:8444">https://s83r.idp.sdsc.futuregrid.org:8444</a></li>
 <li>Foxtrot:
-<a class="reference external" href="https://f1r.idp.ufl.futuregrid.org:9444">https://f1r.idp.ufl.futuregrid.org:9444</a>
-(coming soon)</li>
+<a class="reference external" href="https://f1r.idp.ufl.futuregrid.org:9444">https://f1r.idp.ufl.futuregrid.org:9444</a></li>
 <li>Alamo:
-<a class="reference external" href="https://master1.futuregrid.tacc.utexas.edu:8444">https://master1.futuregrid.tacc.utexas.edu:8444</a>
-(coming soon)</li>
+<a class="reference external" href="https://nimbus.futuregrid.tacc.utexas.edu:8444">https://nimbus.futuregrid.tacc.utexas.edu:8444</a></li>
 </ul>
-</div>
-<div class="section" id="launching-multiple-vms">
-<h2><a class="toc-backref" href="#id29">4.8. Launching Multiple VMs</a><a class="headerlink" href="#launching-multiple-vms" title="Permalink to this headline">¶</a></h2>
 <p>To launch many VMs at once, set the env
 <em>CLOUDINITD_SSHFS_REPLICA_COUNT</em> to the Number of VMs that you would
 like launched</p>
+<p>In order to use the tool with Eucalyptus, the following envs must be
+set:</p>
+<ul class="simple">
+<li>export
+CLOUDINITD_IAAS_URL=&#8217;<a class="reference external" href="http://149.165.146.135:8773/services/Eucalyptus">http://149.165.146.135:8773/services/Eucalyptus</a>&#8216;</li>
+<li>export CLOUDINITD_IAAS_ACCESS_KEY=&lt;your access key&gt;</li>
+<li>export CLOUDINITD_IAAS_SECRET_KEY=&lt;your access secret&gt;</li>
+<li>export CLOUDINITD_IAAS_IMAGE=&#8217;emi-5F4F1B49&#8217;</li>
+</ul>
+<p>You may have trouble registering your keys.&nbsp; This is due to Eucalyptus
+not yet supporting the latest version of the EC2 API.&nbsp; To circumvent
+this, create a key pair named &#8216;futuregrid&#8217;, and set the env
+<em>CLOUDINITD_IAAS_SSHKEYNAME</em>to &#8216;futuregrid&#8217;.&nbsp; Then, set the env
+<em>CLOUDINITD_IAAS_SSHKEY</em> to point to the private key associated with
+that key name.</p>
+</div>
+<div class="section" id="what-happens">
+<h3>4.2.2. What Happens<a class="headerlink" href="#what-happens" title="Permalink to this headline">¶</a></h3>
+<p>This script uses the program cloudinit.d
+(<a class="reference external" href="http://www.nimbusproject.org/doc/cloudinitd/latest/">http://www.nimbusproject.org/doc/cloudinitd/latest/)</a>.
+This is a Nimbus Platform multi-cloud tool for running cloud
+applications.&nbsp; In this case, it runs a very simple 1 VM application.&nbsp; It
+can launch any debian-based VM and install sshfs on it.&nbsp; Then it runs
+sshfs inside of the VM to remotely mount your FutureGrid home directory.</p>
+<p><a class="reference external" href="/tutorials/nimbus">‹ Using Nimbus on FutureGrid</a>
+<a class="reference external" href="/tutorials/nimbus">up</a> <a class="reference external" href="/tutorials/nm2">FutureGrid Tutorial NM2 - Nimbus One-Click
+Cluster Guide ›</a></p>
+</div>
+</div>
+<div class="section" id="cloudinit-d">
+<h2>4.3. cloudinit.d<a class="headerlink" href="#cloudinit-d" title="Permalink to this headline">¶</a></h2>
+<p>cloudinit.d is a tool designed for launching, controlling, and
+monitoring complex environments in the cloud.</p>
+<blockquote>
+<div>Its most important feature is repeatable, one-click, deployment of sets</div></blockquote>
+<p>of VMs configured with launch plans. &nbsp;These sets of VMs can be deployed
+over multiple clouds (Eucalyptus, Nimbus, OpenStack, and Amazon EC2 are
+currently supported), and can also include non-virtualized resources.
+Like the Unix init.d process, cloudinit.d can manage dependencies
+between deployed VMs. It also provides mechanisms for testing,
+monitoring, and repairing a launch.</p>
+<blockquote>
+<div>For more information about cloudinit.d, see our&nbsp;<a href="#id9"><span class="problematic" id="id10">`</span></a>Teragrid 2011</div></blockquote>
+<p>paper &lt;<a class="reference external" href="http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf">http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf</a>&gt;`__.&nbsp;For
+repeatable experiment management with cloudinit.d, read the&nbsp;<a class="reference external" href="http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf">report
+on</a>&nbsp;<a class="reference external" href="http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf">support
+for experimental computer
+science</a>.
+<a class="reference external" href="/manual/precip">‹ Precip - Pegasus Repeatable Experiments for the Cloud in
+Python</a> <a class="reference external" href="/manual/management-services">up</a> <a class="reference external" href="/manual/grid-services">Grid
+Services ›</a></p>
+</div>
+<div class="section" id="phantom">
+<h2>4.4. Phantom<a class="headerlink" href="#phantom" title="Permalink to this headline">¶</a></h2>
+<p>Nimbus Phantom is a hosted service running on FutureGrid that makes it
+easy to leverage on-demand resources provided by infrastructure clouds.
+Phantom allows the user to deploy a set of virtual machines over
+multiple private, community, and commercial clouds, and then
+automatically grows or shrinks this set based on policies defined by the
+user. This elastic set of virtual machines can then be used to implement
+scalable and highly available services. An example of such a service is
+a caching service that stands up more workers on more resources as the
+number of requests to the service increases. Another example is a
+scheduler that grows its set of resources as demand grows.</p>
+<p>Currently Phantom works with all FutureGrid Nimbus and OpenStack
+clouds as well as Amazon and the XSEDE wispy cloud (the only XSEDE cloud
+for now). A user can access it via two types of clients: an easy-to-use
+web application and a scripting client. The scripting client is the boto
+autoscale client as Phantom currently implements Amazon Autscaling API –
+so you can think of it as Amazon Autoscale for FutureGrid clouds that
+also allows for cloudburst to XSEDE and commercial clouds and is easy to
+extend with your own policies and sensors.</p>
+<p>The simplest scenario for using Phantom is as a gateway for deploying
+and monitoring groups of virtual machines spread over multiple
+FutureGrid clouds. In a more complex scenario you can use it to
+cloudburst from FutureGrid clouds to Amazon. Finally, you can use it to
+explore policies that will automate cloudbursting and VM allocations
+between multiple clouds.</p>
+<p>For more information and/or to use the service, go to
+<a class="reference external" href="http://www.nimbusproject.org/phantom">www.nimbusproject.org/phantom</a>.
+It should take no more than 10-15 minutes to start your own VMs.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://phantom.nimbusproject.org/accounts/login/?next=/">Phantom web
+interface</a></li>
+<li><a class="reference external" href="http://www.nimbusproject.org/files/keahey_wcs_ocs_2012.pdf">Phantom
+publication</a></li>
+</ul>
+<p><a class="reference external" href="/manual/management-services">‹ Management Services</a>
+<a class="reference external" href="/manual/management-services">up</a> <a class="reference external" href="/manual/precip">Precip - Pegasus Repeatable
+Experiments for the Cloud in Python ›</a></p>
 </div>
 </div>
 
@@ -829,6 +1169,7 @@ like launched</p>
       
     </p>
     <p>
+        &copy; Copyright 2013, FutureGrid, please contact Gregor von Laszewski about this manual..<br/>
     </p>
   </div>
 </footer>

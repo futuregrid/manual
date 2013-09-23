@@ -1,0 +1,1 @@
+rsync -rlpv --chmod=Dg+s,ug+rwX,o+rX --delete ./doc/build/html/ gregor@collaboration.futuregrid.org:/var/www/manual.futuregrid.org/

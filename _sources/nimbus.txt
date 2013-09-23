@@ -1,21 +1,17 @@
-.. _s-nimbus:
+**********************************************************************
+Nimbus
+**********************************************************************
+
+Nimbus IaaS
+====================================================================== 
+
+|image0|
+--------
+
  
-**********************************************************************
-Using Nimbus on FutureGrid
-**********************************************************************
 
-.. sidebar:: Page Contents
-
-   .. contents::
-      :local:
-
-.. figure:: images/nimbus_logo.png
-   :width: 100px
-   :align: right
-   :target: http://www.nimbusproject.org/
-
-   Nimbus
-
+What is Nimbus?
+---------------
 
 Nimbus is an open source service package that allows users to run
 virtual machines on FutureGrid hardware. You can easily upload your own
@@ -25,7 +21,6 @@ are authorized to log in as root via SSH. You can then run services,
 perform computations, and configure the system as desired. After using
 and configuring the VM, you can save the modified VM image back to the
 Nimbus image repository.
-
  
 
 Nimbus on FutureGrid
@@ -34,19 +29,18 @@ Nimbus on FutureGrid
 Nimbus is installed on four FutureGrid clusters:
 
 #. **Hotel** (University of Chicago)
-    41 nodes, 328 cores
+    42 nodes, 336 cores
 #. **Foxtrot** (University of Florida)
-    26 nodes, 208 cores
+    24 nodes, 192 cores
 #. **Sierra** (San Diego Supercomputer Center)
-    18 nodes, 144 cores. Note Sierra uses FG dynamic provisioning and
-    the number of assigned nodes in Nimbus is flexible.
-#. **Alamo** (Texas Advanced Computing Center)
+    18 nodes, 144 cores
+#. **Alamo**\ (Texas Advanced Computing Center)
     15 nodes, 120 cores
 
 By default, users are limited to running 16 VMs simultaneously and
 claiming two cores per VM. If you have a good reason for this limitation
 to be lifted for your account,
-contact \ :portal:`help`.
+contact \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
 
 All FutureGrid users are allowed access to Nimbus on all sites.
 
@@ -73,11 +67,11 @@ on hotel because the correct version of Java is installed there.
     $ ssh -A hotel.futuregrid.org
 
 If this command fails, contact
-:portal:`https://portal.futuregrid.org/help <help>`. 
+`https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__. 
 It likely means one of the following:
 
 #. Your account is not yet set up.
-#. You provide no public key or an corrupted public key.
+#. You provide no public key or a corrupted public key.
 #. The private key you are using does not match the public one you
    registered with FutureGrid.
 
@@ -91,8 +85,7 @@ website <http://www.nimbusproject.org/downloads/>`__.
 
     $ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-021.tar.gz
 
-Unpack the archive onto your system. You can also use one of the
-FutureGrid login nodes directly.
+Unpack the archive into your home directory.
 
 ::
 
@@ -100,7 +93,6 @@ FutureGrid login nodes directly.
     $ ls nimbus-cloud-client-021/
     CHANGES.txt README.txt  conf        lib
     LICENSE.txt bin     history     samples
-    Obtain your Nimbus credentials and configuration files
 
 Obtain Your Nimbus Credentials and Configuration Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,10 +106,9 @@ nimbus\_creds.tar.gz:
     nimbus_creds.tar.gz
 
 If your credentials are not present on \ **Hotel**,
-contact \ :portal:`https://portal.futuregrid.org/help <help>`.
+contact \ `https://portal.futuregrid.org/help <https://portal.futuregrid.org/help>`__.
 
-Back on your system, download and unpack these files into your
-cloud-client's directory:
+Download and unpack these files into your cloud-client's directory:
 
 ::
 
@@ -180,7 +171,7 @@ this is used to select the cloud you wish to use.  Simply provide a path
 to the cloud configuration file.  This --conf switch will be used in all
 commands to direct cloud-client at the cloud of interest.
 
-The second option is --list.  This will simply provide a listing of
+ The second option is --list.  This will simply provide a listing of
 all the available virtual machines:
 
 ::
@@ -205,15 +196,34 @@ Next, try to boot a virtual machine:
 
     $ bin/cloud-client.sh --conf conf/hotel.conf --run --name hello-cloud --hours 2
     Launching workspace.
+
+::
+
     Workspace Factory Service:
          https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
+
+::
+
+     
+
+::
+
     Creating workspace "vm-001"... done.
-           IP address: 149.165.148.253         
-             Hostname: vm-253.uc.futuregrid.org       
+
+::
+
+           IP address: 149.165.148.122 
+             Hostname: vm-148-122.uc.futuregrid.org       
            Start time: Wed Jul 25 15:44:33 CDT 2012
         Shutdown time: Wed Jul 25 17:44:33 CDT 2012
      Termination time: Wed Jul 25 17:46:33 CDT 2012
+
+::
+
     Waiting for updates.
+
+::
+
     "vm-001" reached target state: Running
 
 Once the image is running, you should be able to log into it with SSH.
@@ -224,11 +234,12 @@ command.  Note that you **must**\ run this command in a location that
 has access to your private key.  This means it must be in the *~/.ssh/*
 directory on the file system from where you launch this command, or you
 must have used the -A option to ssh when logging into hotel (as is shown
-above).
+above). Make sure you replace the hostname of the VM by the one printed
+out by cloud client.
 
 ::
 
-    $ ssh root@vm-253.uc.futuregrid.org
+    $ ssh root@vm-148-122.uc.futuregrid.org 
 
 Create a New VM Image
 ~~~~~~~~~~~~~~~~~~~~~
@@ -246,7 +257,7 @@ text file in the root user's account:
 Save the Changes to a New VM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that you have modified the VM ,you can save it back into your
+Now that you have modified the VM, you can save it back into your
 personal repository.  To do this, you will use the --save and --newname
 options.  You will also need the VM handle as it was displayed in the
 output from the run command.  If you have forgotten what this was, you
@@ -308,16 +319,24 @@ above, simply changing the name from *hello-cloud* to *myvm *:
     $ ./bin/cloud-client.sh --conf conf/hotel.conf --run --name myvm --hours 2
 
     Launching workspace.
+
     Workspace Factory Service:
         https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
+
     Creating workspace "vm-002"... done.
-           IP address: 149.165.148.151
-             Hostname: vm-151.uc.futuregrid.org
+
+
+           IP address: 149.165.148.122
+             Hostname: vm-148-122.uc.futuregrid.org
            Start time: Wed Jul 25 15:58:31 CDT 2012
         Shutdown time: Wed Jul 25 17:58:31 CDT 2012
      Termination time: Wed Jul 25 18:08:31 CDT 2012
+
     Waiting for updates.
+
+
     "vm-002" reached target state: Running
+
     Running: 'vm-002'
 
 SSH into the machine and verify that your changes persisted.
@@ -328,12 +347,15 @@ Terminate the VM
 Your VM will terminate after its allocated time expires.  In our
 examples here, this is after 2 hours.  However, you may wish to
 terminate it earlier.  You can do so by again using the --handle option
-as you did in the *save a new VM step* and the --terminate option::
+as you did in the *save a new VM step* and the --terminate option:
+
+::
 
     $ ./bin/cloud-client.sh --conf conf/hotel.conf --terminate --handle vm-002
 
     Terminating workspace.
       - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-021/history/vm-002/vw-epr.xml'
+
     Destroying vm-002... destroyed.
 
  
@@ -343,7 +365,11 @@ Virtual Clusters
 
 This is a basic walkthrough of how to run a sample virtual cluster. 
 For more information on how they work, see
-- http://www.nimbusproject.org/docs/current/clouds/clusters2.html 
+*http://www.nimbusproject.org/docs/current/clouds/clusters2.html .*
+
+::
+
+::
 
 Cluster Definition File
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -401,7 +427,9 @@ Start the Cluster
       - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-ctx'
 
     SSH trusts new key for vm-40.sdsc.futuregrid.org   head-node 
+
     SSH trusts new key for vm-41.sdsc.futuregrid.org   compute-nodes #0 
+
     SSH trusts new key for vm-42.sdsc.futuregrid.org   compute-nodes #1 
 
 This command takes a bit of time.  What is happening is cloud-client
@@ -416,7 +444,7 @@ addresses.  The NFS server then gets this information out of the context
 broker and uses it to authorize those IP addresses to remotely mount its
 disks. 
 
-When it is complete, your virtual cluster will be ready to go.
+ When it is complete, your virtual cluster will be ready to go.
 
 Check Out the Virtual Cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -458,29 +486,36 @@ visible to this node as well.
 +--------------------------------------------------------------------------------------------------------------+-------------+
 | Attachment                                                                                                   | Size        |
 +==============================================================================================================+=============+
-| :portal:`sites/default/files/tutorial-cluster.xml.gz`   | 342 bytes   |
+| `tutorial-cluster.xml\_.gz <https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz>`__   | 342 bytes   |
 +--------------------------------------------------------------------------------------------------------------+-------------+
 
-Cloud Quick Start : Launch a VM with 1 command
-----------------------------------------------------------------------
+-  `Cloud Quick Start : Launch a VM with 1
+   command </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
+-  `FutureGrid Tutorial NM2 - Nimbus One-Click Cluster
+   Guide </tutorials/nm2>`__
 
-This page explains how to very simply run a virtual machine (VM) on
-FutureGrid Nimbus.  The VM launched will mount your home files system on
-hotel so data can be exchanged with the VM easily.  Users new to cloud
+`‹ OpenStack Grizzly on FutureGrid </manual/openstack/grizzly>`__
+`up </manual/iaas>`__ `Cloud Quick Start : Launch a VM with 1 command
+› </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
+
+.. |image0| image:: /sites/default/files/images/nimbus_logo.png
+   :target: http://www.nimbusproject.org/
+
+
+Launch A VM via Nimbus
+======================
+
+It  simple to run a virtual machine (VM) on
+FutureGrid Nimbus.  The VM launched will mount your home files system on
+hotel so data can be exchanged with the VM easily.  Users new to cloud
 computing, particularly those coming from Grid computing, and those who
 are interested in getting a quick hands-on introduction to FutureGrid
 clouds, should find this useful.
 
-Launch A VM via Nimbus
-----------------------------------------------------------------------
-
 Once you have a FutureGrid Nimbus account and ssh access to
-hotel.futuregrid.org, you can easily begin using the cloud.  All you
+hotel.futuregrid.org, you can easily begin using the cloud.  All you
 need to do is ssh into hotel with ssh forwarding enabled, and type a
-single command:
-
-
-::
+single command::
 
     $ ssh -A hotel.futuregrid.org
     $ /soft/nimbus/tools/bin/launch-vm.sh
@@ -489,36 +524,38 @@ single command:
     Access your VM with: ssh root@vm-156.uc.futuregrid.org
     Terminate your VM with: /soft/nimbus/tools/bin/cloudinitd.sh terminate 9ec20044
 
-Notice the output from the above command.  It tells you how to access
-the VM, and how to clean it up when you are finished with it.  First
-let's access the VM and check out its file system.  The VM should have
-remotely mounted your home file system on FutureGrid.  This will allow
-you to easily copy data in and out of your VM.
-
-::
+Notice the output from the above command.  It tells you how to access
+the VM, and how to clean it up when you are finished with it.  First
+let's access the VM and check out its file system.  The VM should have
+remotely mounted your home file system on FutureGrid.  This will allow
+you to easily copy data in and out of your VM::
 
     $ ssh root@vm-156.uc.futuregrid.org
     $ vm-156:~# df -h
-    Filesystem            Size  Used Avail Use% Mounted on
-    tmpfs                 1.1G     0  1.1G   0% /lib/init/rw
-    udev                   10M  1.1M  9.0M  11% /dev
-    tmpfs                 1.1G     0  1.1G   0% /dev/shm
-    rootfs                1.9G  731M  1.1G  42% /
+    Filesystem            Size  Used Avail Use% Mounted on
+    tmpfs                 1.1G     0  1.1G   0% /lib/init/rw
+    udev                   10M  1.1M  9.0M  11% /dev
+    tmpfs                 1.1G     0  1.1G   0% /dev/shm
+    rootfs                1.9G  731M  1.1G  42% /
     sshfs#bresnaha@hotel.futuregrid.org:
-                         1000G     0 1000G   0% /mnt/hotel.futuregrid.org
+                         1000G     0 1000G   0% /mnt/hotel.futuregrid.org
 
     $ ls /mnt/hotel.futuregrid.org
     ..... <a listing of your FutureGrid home directory>
 
-Using Other Nimbus Clouds on FutureGrid
+Options
 ----------------------------------------------------------------------
 
-By default, the VMs are launched on hotel's Nimbus cloud.  However,
+Using Other Nimbus Clouds on FutureGrid
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+By default, the VMs are launched on hotel's Nimbus cloud.  However,
 you can use this script to launch a VM on any cloud to which you have
 access, including all of FutureGrid's Nimbus clouds, FutureGrid's
-Eucalytpus clouds, and FutureGrid's OpenStack clouds.  To run on a
+Eucalytpus clouds, and FutureGrid's OpenStack clouds.  To run on a
 different FutureGrid Nimbus cloud, set the
-env \ *CLOUDINITD\_IAAS\_URL* to one of the following:
+env \ *CLOUDINITD\_IAAS\_URL* to one of the following:
 
 -  Hotel:
    `https://svc.uc.futuregrid.org:8444 <https://svc.uc.futuregrid.org:8444>`__
@@ -526,15 +563,113 @@ env \ *CLOUDINITD\_IAAS\_URL* to one of the following:
    `https://s83r.idp.sdsc.futuregrid.org:8444 <https://s83r.idp.sdsc.futuregrid.org:8444>`__
 -  Foxtrot:
    `https://f1r.idp.ufl.futuregrid.org:9444 <https://f1r.idp.ufl.futuregrid.org:9444>`__
-   (coming soon)
 -  Alamo:
-   `https://master1.futuregrid.tacc.utexas.edu:8444 <https://master1.futuregrid.tacc.utexas.edu:8444>`__
-   (coming soon)
+   `https://nimbus.futuregrid.tacc.utexas.edu:8444 <https://nimbus.futuregrid.tacc.utexas.edu:8444>`__
 
 Launching Multiple VMs
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To launch many VMs at once, set the env
 *CLOUDINITD\_SSHFS\_REPLICA\_COUNT* to the Number of VMs that you would
 like launched
 
+Using with Eucalyptus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to use the tool with Eucalyptus, the following envs must be
+set:
+
+-  export
+   CLOUDINITD\_IAAS\_URL='http://149.165.146.135:8773/services/Eucalyptus'
+-  export CLOUDINITD\_IAAS\_ACCESS\_KEY=<your access key>
+-  export CLOUDINITD\_IAAS\_SECRET\_KEY=<your access secret>
+-  export CLOUDINITD\_IAAS\_IMAGE='emi-5F4F1B49'
+     
+
+You may have trouble registering your keys.  This is due to Eucalyptus
+not yet supporting the latest version of the EC2 API.  To circumvent
+this, create a key pair named 'futuregrid', and set the env
+*CLOUDINITD\_IAAS\_SSHKEYNAME*\ to 'futuregrid'.  Then, set the env
+*CLOUDINITD\_IAAS\_SSHKEY* to point to the private key associated with
+that key name.
+
+What Happens
+----------------------------------------------------------------------
+
+This script uses the program cloudinit.d
+(`http://www.nimbusproject.org/doc/cloudinitd/latest/) <http://www.nimbusproject.org/doc/cloudinitd/latest/>`__. 
+This is a Nimbus Platform multi-cloud tool for running cloud
+applications.  In this case, it runs a very simple 1 VM application.  It
+can launch any debian-based VM and install sshfs on it.  Then it runs
+sshfs inside of the VM to remotely mount your FutureGrid home directory.
+
+`‹ Using Nimbus on FutureGrid </tutorials/nimbus>`__
+`up </tutorials/nimbus>`__ `FutureGrid Tutorial NM2 - Nimbus One-Click
+Cluster Guide › </tutorials/nm2>`__
+
+
+cloudinit.d
+======================================================================
+
+cloudinit.d is a tool designed for launching, controlling, and
+monitoring complex environments in the cloud.
+ Its most important feature is repeatable, one-click, deployment of sets
+of VMs configured with launch plans.  These sets of VMs can be deployed
+over multiple clouds (Eucalyptus, Nimbus, OpenStack, and Amazon EC2 are
+currently supported), and can also include non-virtualized resources.
+Like the Unix init.d process, cloudinit.d can manage dependencies
+between deployed VMs. It also provides mechanisms for testing,
+monitoring, and repairing a launch.
+ For more information about cloudinit.d, see our \ `Teragrid 2011
+paper <http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf>`__. For
+repeatable experiment management with cloudinit.d, read the \ `report
+on <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__ `support
+for experimental computer
+science <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__.
+`‹ Precip - Pegasus Repeatable Experiments for the Cloud in
+Python </manual/precip>`__ `up </manual/management-services>`__ `Grid
+Services › </manual/grid-services>`__
+
+
+Phantom
+==================================================
+
+Nimbus Phantom is a hosted service running on FutureGrid that makes it
+easy to leverage on-demand resources provided by infrastructure clouds.
+Phantom allows the user to deploy a set of virtual machines over
+multiple private, community, and commercial clouds, and then
+automatically grows or shrinks this set based on policies defined by the
+user. This elastic set of virtual machines can then be used to implement
+scalable and highly available services. An example of such a service is
+a caching service that stands up more workers on more resources as the
+number of requests to the service increases. Another example is a
+scheduler that grows its set of resources as demand grows.
+
+Currently Phantom works with all FutureGrid Nimbus and OpenStack
+clouds as well as Amazon and the XSEDE wispy cloud (the only XSEDE cloud
+for now). A user can access it via two types of clients: an easy-to-use
+web application and a scripting client. The scripting client is the boto
+autoscale client as Phantom currently implements Amazon Autscaling API –
+so you can think of it as Amazon Autoscale for FutureGrid clouds that
+also allows for cloudburst to XSEDE and commercial clouds and is easy to
+extend with your own policies and sensors.
+
+The simplest scenario for using Phantom is as a gateway for deploying
+and monitoring groups of virtual machines spread over multiple
+FutureGrid clouds. In a more complex scenario you can use it to
+cloudburst from FutureGrid clouds to Amazon. Finally, you can use it to
+explore policies that will automate cloudbursting and VM allocations
+between multiple clouds.
+
+For more information and/or to use the service, go to
+`www.nimbusproject.org/phantom <http://www.nimbusproject.org/phantom>`__.
+It should take no more than 10-15 minutes to start your own VMs.
+
+-  `Phantom web
+   interface <https://phantom.nimbusproject.org/accounts/login/?next=/>`__
+-  `Phantom
+   publication <http://www.nimbusproject.org/files/keahey_wcs_ocs_2012.pdf>`__
+
+`‹ Management Services </manual/management-services>`__
+`up </manual/management-services>`__ `Precip - Pegasus Repeatable
+Experiments for the Cloud in Python › </manual/precip>`__

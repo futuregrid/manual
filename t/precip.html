@@ -1,0 +1,615 @@
+					<h2 class="title">
+						Overview</h2>
+				
+			
+		
+		<p>Precip is a flexible experiment management API for running experiments on clouds. Precip was developed for use on FutureGrid infrastructures such as OpenStack, Eucalyptus (&gt;=3.2), Nimbus, and at the same time, commercial clouds such as Amazon EC2. The API allows you to easily provision resources, which you can then run commands on and copy files to/from subsets of instances identified by tags. The goal of the API is to be flexible and simple to use in Python scripts to control your experiments.</p>
+		<p>The API does not require any special images, which makes it easy to get going. Any basic Linux image will work. More complex images can be used if your experiment requires so, or you can use the experiment API to run bootstrap scripts on the images to install/configure required software.</p>
+		<p>A concept which simplfies interacting with the API is instance tagging. When you start an instance, you can add arbitrary tags to it. The instance also gets a set of default tags. API methods such as running a remote command, or copying files, all use tags for specifying which instances you want to target.</p>
+		<p>Precip also handles ssh keys and security groups automatically. This is done to make sure the experiment management is not interfering with your existing cloud setup. The first time you use Precip, a directory will be created called ~/.precip. Inside this directory, a ssh keypair will be created and used for accessing instances. On clouds which supports it, the keypair is automatically registered as &#39;precip&#39;, and a &#39;precip&#39; security group is created. If your experiment requires more ports to be open, you can use the cloud interface to add those ports to the precip security group.</p>
+		<p>Precip is a fairly new API, and if you have questions or suggestions for improvements, please contact <em>pegasus-support@isi.edu</em> .</p>
+	
+	
+		
+			
+				
+					<h2 class="title">
+						Installation</h2>
+				
+			
+		
+		<p>If you want to use the India or Sierra FutureGrid resources to manage your experiment, Precip is available on the interactive logins nodes via modules: module load precip/0.1.<br />
+			<br />
+			You can also install Precip on your own machine. Prerequisites are the Paramiko and Boto Python modules. The Python source package and RPMs are available at: <a class="ulink" href="http://pegasus.isi.edu/static/precip/software/" target="_top">http://pegasus.isi.edu/static/precip/software/</a> .</p>
+	
+	
+		
+			
+				
+					<h2 class="title">
+						API</h2>
+				
+			
+		
+		
+			<dl>
+				<dt>
+					<strong>provision(image_id, instance_type=&#39;m1.small&#39;, count=1, tags=None)</strong></dt>
+				<dd>
+					<p>Provision a new instance. Note that this method starts the provisioning cycle, but does not block for the instance to finish booting. For blocking on instance creation/booting, see wait() .</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>image_id</strong> - the id of the image to instantiate</p>
+							</li>
+							<li class="listitem">
+								<p><strong>instance_type</strong> - the type of instance. This is infrastructure specific, but usually follows the Amazon EC2 model with m1.small, m1.large, and so on.</p>
+							</li>
+							<li class="listitem">
+								<p><strong>count</strong> - number of instances to create</p>
+							</li>
+							<li class="listitem">
+								<p><strong>tags</strong> - these are used to manipulate the instance later. Use this to create logical groups of your instances.</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>wait(tags=[], timeout=600)</strong></dt>
+				<dd>
+					<p>Barrier for all instances matching the tags argument. This method will block until the instances have finished booting and are accessible via their external hostnames.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - tags specifying the subset of instances to block on. The default value is [] , which means wait for all instances.</p>
+							</li>
+						</ul>
+					
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>timeout</strong> - timeout in seconds for the instances to boot. If the timeout is reached, an ExperimentException is raised. The default is 600 seconds.</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>deprovision(tags)</strong></dt>
+				<dd>
+					<p>Deprovisions (terminates) instances matching the tags argument</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - tags specifying the subset of instances to deprovision.</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>list(tags)</strong></dt>
+				<dd>
+					<p>Returns a list of details about the instances matching the tags. The details include instance id, hostnames, and tags.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - tags specifying the subset of instances to give information on. If you want details on all current instances, use [].</p>
+							</li>
+						</ul>
+					
+					<p>Returns:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p>List of dictionaries, one for each instance.</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>get_public_hostnames(tags)</strong></dt>
+				<dd>
+					<p>Provides a list of public hostnames for the instances matching the tags. The public hostnames can be provided to other instances in order to let the instances know about each other.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - tags specifying the subset of instances.</p>
+							</li>
+						</ul>
+					
+					<p>Returns:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p>A list of public hostnames</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>get_private_hostnames(tags)</strong></dt>
+				<dd>
+					<p>Provides a list of private hostnames for the instances matching the tags. The private hostnames can be provided to other instances in order to let the instances know about each other.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - tags specifying the subset of instances.</p>
+							</li>
+						</ul>
+					
+					<p>Returns:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p>A list of private hostnames</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>get(tags, remote_path, local_path, user=&quot;root&quot;)</strong></dt>
+				<dd>
+					<p>Transfers a file from a set of remote machines matching the tags, and stores the file locally. If more than one instance matches the tags, an instance id will be appended to the local_path.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - these are used to manipulate the instance later. Use this to create logical groups of your instances.</p>
+							</li>
+							<li class="listitem">
+								<p><strong>remote_path</strong> - the path of the file on the remote instance</p>
+							</li>
+							<li class="listitem">
+								<p><strong>local_path</strong> - the local path to tranfer to</p>
+							</li>
+							<li class="listitem">
+								<p><strong>user</strong> - remote user. If not specified, the default is &#39;root&#39;</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>put(tags, local_path, remote_path, user=&quot;root&quot;)</strong></dt>
+				<dd>
+					<p>Transfers a local file to a set of remote machines matching the tags.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - these are used to manipulate the instance later. Use this to create logical groups of your instances.</p>
+							</li>
+							<li class="listitem">
+								<p><strong>local_path</strong> - the local path to tranfer from</p>
+							</li>
+							<li class="listitem">
+								<p><strong>remote_path</strong> - the path on the remote instance to store the file as</p>
+							</li>
+							<li class="listitem">
+								<p><strong>user</strong> - remote user. If not specified, the default is &#39;root&#39;</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>run(tags, cmd, user=&quot;root&quot;, check_exit_code=True)</strong></dt>
+				<dd>
+					<p>Runs a command on the instances matches the tags. The commands are run in series, on one instance after the other.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - these are used to manipulate the instance later. Use this to create logical groups of your instances.</p>
+							</li>
+							<li class="listitem">
+								<p><strong>cmd</strong> - the command to run</p>
+							</li>
+							<li class="listitem">
+								<p><strong>user</strong> - remote user. If not specified, the default is &#39;root&#39;. If you need to run commands as another user, you will have to make sure that user accepts the ssh key in ~/.precip/</p>
+							</li>
+							<li class="listitem">
+								<p><strong>check_exit_code</strong> - If set to True (default), commands returning non-zero exit codes will result in a ExperimentException being raised.</p>
+							</li>
+						</ul>
+					
+					<p>Returns:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p>A list of lists, containing exit_code[], stdout[] and stderr[] for the commands run</p>
+							</li>
+						</ul>
+					
+				</dd>
+				<dt>
+					<strong>copy_and_run(tags, local_script, args=[], user=&quot;root&quot;, check_exit_code=True)</strong></dt>
+				<dd>
+					<p>Copies a script from the local machine to the remote instances and executes the script. The script is run in series, on one instance after the other.</p>
+					<p>Parameters:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p><strong>tags</strong> - these are used to manipulate the instance later. Use this to create logical groups of your instances.</p>
+							</li>
+							<li class="listitem">
+								<p><strong>local_script</strong> - the local script to run</p>
+							</li>
+							<li class="listitem">
+								<p><strong>args</strong> - arguments for the script</p>
+							</li>
+							<li class="listitem">
+								<p><strong>user</strong> - remote user. If not specified, the default is &#39;root&#39;. If you need to run commands as another user, you will have to make sure that user accepts the ssh key in ~/.precip/</p>
+							</li>
+							<li class="listitem">
+								<p><strong>check_exit_code</strong> - If set to True (default), commands returning non-zero exit codes will result in a ExperimentException being raised.</p>
+							</li>
+						</ul>
+					
+					<p>Returns:</p>
+					
+						<ul class="itemizedlist" type="disc">
+							<li class="listitem">
+								<p>A list of lists, containing exit_code[], stdout[] and stderr[] for the commands run</p>
+							</li>
+						</ul>
+					
+				</dd>
+			</dl>
+		
+		<p>The basic methods above are standard across all the Cloud infrastructures. What is different is the constructors, as each infrastructure handles initialization a little bit differently. For example, to create a new OpenStack using the EC2_* environment provided automatically by FutureGrid:</p>
+		<pre class="programlisting">
+            
+    exp = OpenStackExperiment(
+            os.environ[&#39;EC2_URL&#39;],
+            os.environ[&#39;EC2_ACCESS_KEY&#39;],
+            os.environ[&#39;EC2_SECRET_KEY&#39;])
+            
+        </pre>
+		<p>For Amazon EC2, you have to specify region, endpoint, and access/secret keys. Note that it is not required to use environment variables for your credentials, but seperating the credentials from the code prevents them from being checked in to source control systems.</p>
+		<pre class="programlisting">
+            
+    exp = EC2Experiment(
+            &quot;us-west-2c&quot;,
+            &quot;ec2.us-west-2.amazonaws.com&quot;,
+            os.environ[&#39;AMAZON_EC2_ACCESS_KEY&#39;],
+            os.environ[&#39;AMAZON_EC2_SECRET_KEY&#39;])
+            
+        </pre>
+	
+	
+		
+			
+				
+					<h2 class="title">
+						Examples</h2>
+				
+			
+		
+		
+			
+				
+					
+						<h3 class="title">
+							Hello World</h3>
+					
+				
+			
+			<pre class="programlisting">
+                
+#!/usr/bin/python
+
+import os
+import time
+from pprint import pprint
+
+from precip import *
+
+exp = None
+
+# Use try/except liberally in your experiments - the api is set up to
+# raise ExperimentException on most errors
+try:
+
+    # Create a new OpenStack based experiment. In this case we pick
+    # up endpoints and access/secret cloud keys from the environment
+    # as exposing those is the common setup on FutureGrid
+    exp = OpenStackExperiment(
+            os.environ[&#39;EC2_URL&#39;],
+            os.environ[&#39;EC2_ACCESS_KEY&#39;],
+            os.environ[&#39;EC2_SECRET_KEY&#39;])
+
+    # Provision an instance based on the ami-0000004c. Note that tags are
+    # used throughout the api to identify and manipulate instances. You 
+    # can give an instance an arbitrary number of tags.
+    exp.provision(&quot;ami-0000004c&quot;, tags=[&quot;test1&quot;], count=1)
+
+    # Wait for all instances to boot and become accessible. The provision
+    # method only starts the provisioning, and can be used to start a large
+    # number of instances at the same time. The wait method provides a 
+    # barrier to when it is safe to start the actual experiment.
+    exp.wait()
+
+    # Print out the details of the instance. The details include instance id,
+    # private and public hostnames, and tags both defined by you and some
+    # added by the api
+    pprint(exp.list())
+   
+    # Run a command on the instances having the &quot;test1&quot; tag. In this case we
+    # only have one instance, but if you had multiple instances with that
+    # tag, the command would run on each one.
+    exp.run([&quot;test1&quot;], &quot;echo &#39;Hello world from a experiment instance&#39;&quot;)
+
+except ExperimentException as e:
+    # This is the default exception for most errors in the api
+    print &quot;ERROR: %s&quot; % e
+
+finally:
+    # Be sure to always deprovision the instances we have started. Putting
+    # the deprovision call under finally: make the deprovisioning happening
+    # even in the case of failure.
+    if exp is not None:
+        exp.deprovision()
+                
+            </pre>
+		
+		
+			
+				
+					
+						<h3 class="title">
+							Resources from mulitple infrastructures</h3>
+					
+				
+			
+			<pre class="programlisting">
+                
+#!/usr/bin/python
+
+import os
+import time
+
+from precip import *
+
+ec2 = None
+fg = None
+
+try:
+
+    # This example show how to run an experiment between Amazon EC2
+    # and an OpenStack resource on FutureGrid. The setup is pretty
+    # similar to the HelloWorld example, except that we now have to
+    # experiment to handle. The first step is to get the experiments
+    # initialized. Note that it is not required to use environment
+    # variables for your credentials, but seperating the crenditals
+    # from the code prevents the credentials from being check in to
+    # source control systems.
+    
+    ec2 = EC2Experiment(
+            &quot;us-west-2c&quot;,
+            &quot;ec2.us-west-2.amazonaws.com&quot;,
+            os.environ[&#39;AMAZON_EC2_ACCESS_KEY&#39;],
+            os.environ[&#39;AMAZON_EC2_SECRET_KEY&#39;])
+   
+    fg = OpenStackExperiment(
+            os.environ[&#39;EC2_URL&#39;],
+            os.environ[&#39;EC2_ACCESS_KEY&#39;],
+            os.environ[&#39;EC2_SECRET_KEY&#39;])
+
+    # Next we provision two instances, one on Amazon EC2 and one of
+    # FutureGrid
+    ec2.provision(&quot;ami-8a1e92ba&quot;, tags=[&quot;id=ec2_1&quot;])
+    fg.provision(&quot;ami-0000004c&quot;, tags=[&quot;id=fg_1&quot;])
+
+    # Wait for all instances to boot and become accessible. The provision
+    # method only starts the provisioning, and can be used to start a large
+    # number of instances at the same time. The wait method provides a 
+    # barrier to when it is safe to start the actual experiment.
+    ec2.wait([])
+    fg.wait([])
+    
+    # Run commands on the remote instances
+    ec2.run([], &quot;echo &#39;Hello world Amazon EC2&#39;&quot;)
+    fg.run([], &quot;echo &#39;Hello world FutureGrid OpenStack&#39;&quot;)
+
+except ExperimentException as e:
+    # This is the default exception for most errors in the api
+    print &quot;ERROR: %s&quot; % e
+    raise e
+finally:
+    # Be sure to always deprovision the instances we have started. Putting
+    # the deprovision call under finally: make the deprovisioning happening
+    # even in the case of failure.
+    if ec2 is not None:
+        ec2.deprovision([])
+    if fg is not None:
+        fg.deprovision([])
+                
+            </pre>
+		
+		
+			
+				
+					
+						<h3 class="title">
+							Setting up a Condor pool and running a Pegasus workflow</h3>
+					
+				
+			
+			<p>This is a more complex example in which a small Condor pool is set up and then a Pegasus workflow is run and benchmarked. The Precip script is similar to what we have seen before, but it has two groups of instances: one master, acting as the Condor central manager, and a set of Condor worker nodes.</p>
+			<pre class="programlisting">
+                
+#!/usr/bin/python
+
+import os
+import time
+
+from precip import *
+
+try:
+
+    # This experiment is targeted to run on OpenStack
+    exp = OpenStackExperiment(
+            os.environ[&#39;OPENSTACK_URL&#39;],
+            os.environ[&#39;OPENSTACK_ACCESS_KEY&#39;],
+            os.environ[&#39;OPENSTACK_SECRET_KEY&#39;])
+
+    # We need a master Condor node and a set of workers
+    exp.provision(&quot;ami-0000004c&quot;, tags=[&quot;master&quot;],
+                  instance_type=&quot;m1.large&quot;)
+    exp.provision(&quot;ami-0000004c&quot;, tags=[&quot;compute&quot;],
+                  instance_type=&quot;m1.large&quot;, count=2)
+    exp.wait()
+
+    # The workers need to know what the private hostname of the master is
+    master_priv_addr = exp.get_private_hostnames([&quot;master&quot;])[0]
+
+    # Bootstrap the instances. This includes installing Condor and Pegasus,
+    # downloading and settup the workflow.
+    exp.copy_and_run([&quot;master&quot;], &quot;./bootstrap.sh&quot;)
+    exp.copy_and_run([&quot;compute&quot;], &quot;./bootstrap.sh&quot;, args=[master_priv_addr])
+
+    # Give the workers some time to register with the Condor central 
+    # manager
+    time.sleep(60)
+
+    # Make sure Condor came up correctly
+    exp.run([&quot;master&quot;], &quot;condor_status&quot;)
+
+    # Run the workflow
+    exp.run([&quot;master&quot;], &quot;cd ~/montage &amp;&amp; ./run-montage&quot;, user=&quot;wf&quot;)
+
+    # At this point, in a real experiment, you could for example provision
+    # more resources and run the workflow again, or run the workflow with
+    # different parameters/settings.
+
+except ExperimentException as e:
+    print &quot;ERROR: %s&quot; % e
+finally:
+    # always want to clean up all the instances we have started
+    exp.deprovision([])
+                
+            </pre>
+			<p>We also need a bootstrap.sh which sets up the instances:</p>
+			<pre class="programlisting">
+                
+#!/bin/bash
+
+# This script bootstraps a basic RHEL6 instance to be have working
+# Condor and Pegasus installs. The script takes one optional
+# argument which is the address of the master instance (central
+# manager in Condor terminology). If the argument is not given,
+# the script sets up the instance to be the master.
+
+MASTER_ADDR=$1
+
+# for images with condor already installed, stop condor
+/etc/init.d/condor stop &gt;/dev/null 2&gt;&amp;1 || /bin/true
+
+# correct clock is important for most projects
+yum -q -y install ntpdate
+/etc/init.d/ntpdate start
+
+# Add the EPEL repository
+wget -nv <a href="http://mirror.utexas.edu/epel/6/x86_64/epel-release-6-7.noarch.rpm" title="http://mirror.utexas.edu/epel/6/x86_64/epel-release-6-7.noarch.rpm">http://mirror.utexas.edu/epel/6/x86_64/epel-release-6-7.noarch.rpm</a>
+rpm -Uh epel-release-*.noarch.rpm
+
+# Add the Condor repository
+cat &gt;/etc/yum.repos.d/condor.repo &lt;&lt;EOF
+[condor-stable]
+name=Condor Stable RPM Repository for Redhat Enterprise Linux 6
+baseurl=http://www.cs.wisc.edu/condor/yum/stable/rhel6
+enabled=1
+gpgcheck=0
+EOF
+
+# Add the Pegasus repository
+cat &gt;/etc/yum.repos.d/pegasus.repo &lt;&lt;EOF
+[Pegasus]
+name=Pegasus
+baseurl=http://download.pegasus.isi.edu/wms/download/rhel/6/x86_64
+gpgcheck=0
+enabled=1
+priority=50
+EOF
+
+# Install required software
+yum -q -y clean all
+yum -q -y install gcc gcc-g++ gcc-gfortran make gawk bison diffutils \
+                  java-1.7.0-openjdk.x86_64 \
+                  java-1.7.0-openjdk-devel.x86_64 \
+                  ganglia-gmond condor pegasus
+
+# Clear the Condor local config file - we use config.d instead
+cat /dev/null &gt;/etc/condor/condor_config.local
+
+# Common Condor config between master and workers
+cat &gt;/etc/condor/config.d/50-main.conf &lt;&lt;EOF
+
+CONDOR_HOST = $MASTER_ADDR
+
+FILESYSTEM_DOMAIN = \$(FULL_HOSTNAME)
+TRUST_UID_DOMAIN = True
+
+DAEMON_LIST = MASTER, STARTD
+
+# security
+ALLOW_WRITE = 10.*
+ALLOW_READ = \$(ALLOW_WRITE)
+
+# default policy
+START = True
+SUSPEND = False
+CONTINUE = True
+PREEMPT = False
+KILL = False
+
+EOF
+
+# Master gets extra packages/configs
+if [ &quot;x$MASTER_ADDR&quot; = &quot;x&quot; ]; then
+    yum -q -y install ganglia-gmetad ganglia-web
+
+    cat &gt;/etc/condor/config.d/90-master.conf &lt;&lt;EOF
+CONDOR_HOST = \$(FULL_HOSTNAME)
+DAEMON_LIST = MASTER, COLLECTOR, NEGOTIATOR, SCHEDD
+EOF
+fi
+
+# Restarting daemons
+/etc/init.d/condor start
+
+# User to run the workflows as, and allow the experiment management
+# ssh key to authenticate
+adduser wf
+mkdir -p ~wf/.ssh
+cp ~/.ssh/authorized_keys ~wf/.ssh/
+chown -R wf: ~wf/.ssh
+    
+# Master is the submit host, so deploy our workflow on it
+if [ &quot;x$MASTER_ADDR&quot; = &quot;x&quot; ]; then
+    # install the workflow tarball and wait script
+    cd ~wf
+    wget -q <a href="http://pegasus.isi.edu/static/precip/wf-experiment/montage.tar.gz" title="http://pegasus.isi.edu/static/precip/wf-experiment/montage.tar.gz">http://pegasus.isi.edu/static/precip/wf-experiment/montage.tar.gz</a>
+    tar xzf montage.tar.gz
+    chown -R wf: montage*
+fi
+                
+            </pre>
+		
+	
+
+<br />  <div id="book-navigation-104" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="/nimbus-phantom" class="page-previous" title="Go to previous page">‹ Nimbus Phantom</a>
+                    <a href="/manual/management-services" class="page-up" title="Go to parent page">up</a>
+                    <a href="/cloudinitd" class="page-next" title="Go to next page">cloudinit.d ›</a>
+          </div>
+    
+  </div>
+  </div>
+

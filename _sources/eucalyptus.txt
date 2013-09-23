@@ -40,7 +40,7 @@ Eucalyptus Enterprise package. However, the source is available
 `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
 
 
-Account Creation
+Account Setup
 --------------------
 
 Eucalyptus 3.1 accounts are provisioned for all FutureGrid users with a
@@ -77,7 +77,7 @@ Obtaining Credentials
    platforms, it is probably better to use source::
 
            $ cat eucarc >> $HOME/.bashrc
-           $ source .bashrc
+           $ source $HOME/.bashrc
 
 
 
@@ -136,17 +136,9 @@ List the existing images using euca-describe-images::
 
         $ euca-describe-images 
 
-        IMAGE    emi-8E1C3B69    euca-centos-2012/euca-centos-2012.1.14-x86_64.img.manifest.xml    available    public    
-        IMAGE    emi-D21D3F6C    euca3/ubuntu-natty.img.manifest.xml    available    public    
-        IMAGE    emi-1A413C95    centos/centos.5-3.x86-64.img.manifest.xml    available    public    
-        IMAGE    eki-9F293A6A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        IMAGE    emi-0FA13B83    inca/centos5inca3128800784.img.manifest.xml    available    public    
-        IMAGE    emi-A9D33917    ubuntu/ubuntu.9-04.x86-64.img.manifest.xml    available    public    
-        IMAGE    eri-D1513DBA    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        IMAGE    eki-919E3C9A    kernel/vmlinuz-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        IMAGE    eri-55FE3F76    ramdisk/initrd.img-2.6.32-5-amd64.manifest.xml    available    public    
-        IMAGE    eri-9DCC3A6B    ramdisk/initrd-2.6.27.21-0.1-xen.manifest.xml    available    public    
-        ...
+	IMAGE    emi-1C8C3ADF futuregrid/ubuntu-12.04.img.manifest.xml 458299102773    available    ...
+        IMAGE    ...
+
         
 This command may take quite a bit of time as there are currently many images available. On sierra, we observed more than 40 seconds before the command returned.
  
@@ -196,34 +188,21 @@ Now you can start a VM using one of the pre-existing images.  We have uploaded a
 about with::
 
    Ubuntu 12.04.3 LTS (Precise Pangolin)
-   $ euca-describe-images | fgrep futuregrid\/precise
-   
-   OR 
-   
-   Ubuntu 13.04 (Raring Ringtail)
-   $ euca-describe-images | fgrep futuregrid\/raring
+   $ euca-describe-images | fgrep futuregrid\/ubuntu
+
 
 It will show you an id starting with the prefix "emi-"::
 
     Ubuntu 12.04.3 LTS (Precise Pangolin)
-    IMAGE	emi-63F93D41	futuregrid/precise-server-cloudimg-amd64.img.manifest.xml	...
-
-    OR
-   
-    Ubuntu 13.04 (Raring Ringtail) 
-    IMAGE   emi-D90D3974    futuregrid/raring-server-cloudimg-amd64.img.manifest.xml   ...
+    IMAGE    emi-1C8C3ADF   futuregrid/ubuntu-12.04.img.manifest.xml ...
 
 we use this id in the next step. Use the
 euca-run-instances command to start the VM::
 
-        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-63F93D41
+        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-1C8C3ADF 
 
         RESERVATION     r-4E730969      $USER-key    $USER-key-default
-        INSTANCE        i-4FC40839      emi-63F93D41    0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-743D3CFA   eri-4E163AA8
-
-        OR (for Ubuntu 13.04)
-        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-D90D3974
-
+        INSTANCE        i-4FC40839      emi-1C8C3ADF   0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-743D3CFA   eri-4E163AA8
       
 The euca-describe-instances command can be used to check the status
 of the request. The following image was assigned an ip address and is
@@ -240,7 +219,7 @@ Once started, the status will change to "running"::
         $ euca-describe-instances
 
         RESERVATION     r-4E730969      $USER-key    default
-        INSTANCE        i-4FC40839      emi-63F93D41    149.165.146.153 10.0.2.194      running         userkey         0       
+        INSTANCE        i-4FC40839       emi-1C8C3ADF    149.165.146.153 10.0.2.194      running         userkey         0       
                   m1.small        2010-07-20T20:35:47.015Z        india   eki-743D3CFA    eri-4E163AA8
 
 If you need to delete a deployed VM, you can use the
@@ -259,7 +238,7 @@ Create rules to allow access to the VM over ssh and to allow ping
 The ssh private key that was generated earlier can now be used to
 login to the VM::
 
-        $ssh -i userkey.pem root@149.165.146.153
+        $ ssh -i $USER-key.pem ubuntu@149.165.146.153
 
         # uname -a
 

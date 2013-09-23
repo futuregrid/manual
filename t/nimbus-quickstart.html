@@ -1,0 +1,74 @@
+  <div class="content">
+    <p>This page explains how to very simply run a virtual machine (VM) on FutureGrid Nimbus.&nbsp; The VM launched will mount your home files system on hotel so data can be exchanged with the VM easily.&nbsp; Users new to cloud computing, particularly those coming from Grid computing, and those who are interested in getting a quick hands-on introduction to FutureGrid clouds, should find this useful.</p>
+<h1>
+	Launch A VM via Nimbus</h1>
+Once you have a FutureGrid Nimbus account and ssh access to hotel.futuregrid.org, you can easily begin using the cloud.&nbsp; All you need to do is ssh into hotel with ssh forwarding enabled, and type a single command:<br />
+<br />
+<pre>
+$ ssh -A hotel.futuregrid.org
+$ /soft/nimbus/tools/bin/launch-vm.sh
+Launching your VM (this may take a minute)...
+Success!
+Access your VM with: ssh <a href="mailto:root@vm-156.uc.futuregrid.org">root@vm-156.uc.futuregrid.org</a>
+Terminate your VM with: /soft/nimbus/tools/bin/cloudinitd.sh terminate 9ec20044
+</pre>
+Notice the output from the above command.&nbsp; It tells you how to access the VM, and how to clean it up when you are finished with it.&nbsp; First let&#39;s access the VM and check out its file system.&nbsp; The VM should have remotely mounted your home file system on FutureGrid.&nbsp; This will allow you to easily copy data in and out of your VM.<br />
+<pre>
+$ ssh <a href="mailto:root@vm-156.uc.futuregrid.org">root@vm-156.uc.futuregrid.org</a>
+$ vm-156:~# df -h
+Filesystem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size&nbsp; Used Avail Use% Mounted on
+tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1G&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 1.1G&nbsp;&nbsp; 0% /lib/init/rw
+udev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10M&nbsp; 1.1M&nbsp; 9.0M&nbsp; 11% /dev
+tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1G&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; 1.1G&nbsp;&nbsp; 0% /dev/shm
+rootfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.9G&nbsp; 731M&nbsp; 1.1G&nbsp; 42% /
+sshfs#bresnaha@hotel.futuregrid.org:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1000G&nbsp;&nbsp;&nbsp;&nbsp; 0 1000G&nbsp;&nbsp; 0% /mnt/hotel.futuregrid.org
+
+$ ls /mnt/hotel.futuregrid.org
+..... &lt;a listing of your FutureGrid home directory&gt;</pre>
+<h1>
+	Options</h1>
+<h2>
+	Using Other Nimbus Clouds on FutureGrid</h2>
+By default, the VMs are launched on hotel&#39;s Nimbus cloud.&nbsp; However, you can use this script to launch a VM on any cloud to which you have access, including all of FutureGrid&#39;s Nimbus clouds, FutureGrid&#39;s Eucalytpus clouds, and FutureGrid&#39;s OpenStack clouds.&nbsp; To run on a different FutureGrid Nimbus cloud, set the env&nbsp;<em>CLOUDINITD_IAAS_URL</em>&nbsp;to one of the following:<br />
+<ul>
+	<li>
+		Hotel: <a href="https://svc.uc.futuregrid.org:8444" title="https://svc.uc.futuregrid.org:8444">https://svc.uc.futuregrid.org:8444</a></li>
+	<li>
+		Sierra: <a href="https://s83r.idp.sdsc.futuregrid.org:8444" title="https://s83r.idp.sdsc.futuregrid.org:8444">https://s83r.idp.sdsc.futuregrid.org:8444</a></li>
+	<li>
+		Foxtrot: <a href="https://f1r.idp.ufl.futuregrid.org:9444" title="https://f1r.idp.ufl.futuregrid.org:9444">https://f1r.idp.ufl.futuregrid.org:9444</a></li>
+	<li>
+		Alamo: <a href="https://nimbus.futuregrid.tacc.utexas.edu:8444" title="https://nimbus.futuregrid.tacc.utexas.edu:8444">https://nimbus.futuregrid.tacc.utexas.edu:8444</a></li>
+</ul>
+<h2>
+	Launching Multiple VMs</h2>
+To launch many VMs at once, set the env <em>CLOUDINITD_SSHFS_REPLICA_COUNT</em> to the Number of VMs that you would like launched<br />
+<h2>
+	Using with Eucalyptus</h2>
+<p>In order to use the tool with Eucalyptus, the following envs must be set:</p>
+<ul>
+	<li>
+		export CLOUDINITD_IAAS_URL=&#39;http://149.165.146.135:8773/services/Eucalyptus&#39;</li>
+	<li>
+		export CLOUDINITD_IAAS_ACCESS_KEY=&lt;your access key&gt;</li>
+	<li>
+		export CLOUDINITD_IAAS_SECRET_KEY=&lt;your access secret&gt;</li>
+	<li>
+		export CLOUDINITD_IAAS_IMAGE=&#39;emi-5F4F1B49&#39;<br />
+		&nbsp;</li>
+</ul>
+You may have trouble registering your keys.&nbsp; This is due to Eucalyptus not yet supporting the latest version of the EC2 API.&nbsp; To circumvent this, create a key pair named &#39;futuregrid&#39;, and set the env <em>CLOUDINITD_IAAS_SSHKEYNAME </em>to &#39;futuregrid&#39;.&nbsp; Then, set the env <em>CLOUDINITD_IAAS_SSHKEY</em> to point to the private key associated with that key name.<br />
+<h1>
+	What Happens</h1>
+This script uses the program cloudinit.d (<a href="http://www.nimbusproject.org/doc/cloudinitd/latest/" name="cloudinit.d">http://www.nimbusproject.org/doc/cloudinitd/latest/)</a>.&nbsp; This is a Nimbus Platform multi-cloud tool for running cloud applications.&nbsp; In this case, it runs a very simple 1 VM application.&nbsp; It can launch any debian-based VM and install sshfs on it.&nbsp; Then it runs sshfs inside of the VM to remotely mount your FutureGrid home directory.  <div id="book-navigation-104" class="book-navigation">
+    
+        <div class="page-links clear-block">
+              <a href="/tutorials/nimbus" class="page-previous" title="Go to previous page">‹ Using Nimbus on FutureGrid</a>
+                    <a href="/tutorials/nimbus" class="page-up" title="Go to parent page">up</a>
+                    <a href="/tutorials/nm2" class="page-next" title="Go to next page">FutureGrid Tutorial NM2 - Nimbus One-Click Cluster Guide  ›</a>
+          </div>
+    
+  </div>
+  </div>
+

@@ -1,0 +1,5 @@
+pandoc cloudinitd.html -o cloudinitd.rst
+pandoc nimbus-phantom.html -o nimbus-phantom.rst
+pandoc nimbus-quickstart.html -o nimbus-quickstart.rst
+pandoc nimbus.html -o nimbus.rst
+pandoc precip.html -o precip.rst
