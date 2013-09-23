@@ -1,14 +1,15 @@
 **********************************************************************
-Precip 
+Precip
 **********************************************************************
 
-.. sidebar:: Page Contents
-
-   .. contents::
-      :local:
-
-
-The Pegasus Repeatable Experiments for the Cloud in Python (Precip), is a flexible exeperiment management API for running experiments on clouds. Precip was developed for use on FutureGrid infrastructures such as OpenStack, Eucalyptus (>=3.2), Nimbus, and at the same time commercial clouds such as Amazon EC2. The API allows you to easily provision resources, which you can then can run commands on and copy files to/from subsets of instances identified by tags. The goal of the API is to be flexible and simple to use in Python scripts to control your experiments.
+Precip is a flexible experiment management API for running experiments
+on clouds. Precip was developed for use on FutureGrid infrastructures
+such as OpenStack, Eucalyptus (>=3.2), Nimbus, and at the same time,
+commercial clouds such as Amazon EC2. The API allows you to easily
+provision resources, which you can then run commands on and copy files
+to/from subsets of instances identified by tags. The goal of the API is
+to be flexible and simple to use in Python scripts to control your
+experiments.
 
 The API does not require any special images, which makes it easy to get
 going. Any basic Linux image will work. More complex images can be used
@@ -18,7 +19,7 @@ bootstrap scripts on the images to install/configure required software.
 A concept which simplfies interacting with the API is instance tagging.
 When you start an instance, you can add arbitrary tags to it. The
 instance also gets a set of default tags. API methods such as running a
-remote command, or copying files, all use tags for specify which
+remote command, or copying files, all use tags for specifying which
 instances you want to target.
 
 Precip also handles ssh keys and security groups automatically. This is
@@ -27,37 +28,37 @@ existing cloud setup. The first time you use Precip, a directory will be
 created called ~/.precip. Inside this directory, a ssh keypair will be
 created and used for accessing instances. On clouds which supports it,
 the keypair is automatically registered as 'precip', and a 'precip'
-security group is created. If your experiement requires more ports to be
-open you can use the cloud interface to add those ports to the precip
+security group is created. If your experiment requires more ports to be
+open, you can use the cloud interface to add those ports to the precip
 security group.
 
 Precip is a fairly new API, and if you have questions or suggestions for
-improvements, please contact
-`pegasus-support@isi.edu <mailto:pegasus-support@isi.edu>`__
+improvements, please contact *pegasus-support@isi.edu* .
 
 Installation
 ------------
 
 If you want to use the India or Sierra FutureGrid resources to manage
 your experiment, Precip is available on the interactive logins nodes via
-modules: module load precip/0.1
- 
-You can also install Precip on your own machine. Prerequisites are
+modules: module load precip/0.1.
+
+ You can also install Precip on your own machine. Prerequisites are
 the Paramiko and Boto Python modules. The Python source package and RPMs
 are available at:
 `http://pegasus.isi.edu/static/precip/software/ <http://pegasus.isi.edu/static/precip/software/>`__
+.
 
 API
 ---
 
-**provision(image\_id, instance\_type='m1.small', count=1, tags=None)**
+ **provision(image\_id, instance\_type='m1.small', count=1, tags=None)**
     Provision a new instance. Note that this method starts the
     provisioning cycle, but does not block for the instance to finish
-    booting. For blocking on instance creation/booting, see wait()
+    booting. For blocking on instance creation/booting, see wait() .
 
     Parameters:
 
-    -  **image\_id** - the id of the image to instanciate
+    -  **image\_id** - the id of the image to instantiate
 
     -  **instance\_type** - the type of instance. This is infrastructure
        specific, but usually follows the Amazon EC2 model with m1.small,
@@ -68,21 +69,21 @@ API
     -  **tags** - these are used to manipulate the instance later. Use
        this to create logical groups of your instances.
 
-**wait(tags=[], timeout=600)**
+ **wait(tags=[], timeout=600)**
     Barrier for all instances matching the tags argument. This method
-    will block until the instances have finish booting and are
+    will block until the instances have finished booting and are
     accessible via their external hostnames.
 
     Parameters:
 
     -  **tags** - tags specifying the subset of instances to block on.
-       The default value is [] which means wait for all instances.
+       The default value is [] , which means wait for all instances.
 
     -  **timeout** - timeout in seconds for the instances to boot. If
        the timeout is reached, an ExperimentException is raised. The
        default is 600 seconds.
 
-**deprovision(tags)**
+ **deprovision(tags)**
     Deprovisions (terminates) instances matching the tags argument
 
     Parameters:
@@ -90,7 +91,7 @@ API
     -  **tags** - tags specifying the subset of instances to
        deprovision.
 
-**list(tags)**
+ **list(tags)**
     Returns a list of details about the instances matching the tags. The
     details include instance id, hostnames, and tags.
 
@@ -104,10 +105,10 @@ API
 
     -  List of dictionaries, one for each instance.
 
-**get\_public\_hostnames(tags)**
+ **get\_public\_hostnames(tags)**
     Provides a list of public hostnames for the instances matching the
     tags. The public hostnames can be provided to other instances in
-    order to let the instances know about eachother.
+    order to let the instances know about each other.
 
     Parameters:
 
@@ -117,10 +118,10 @@ API
 
     -  A list of public hostnames
 
-**get\_private\_hostnames(tags)**
+ **get\_private\_hostnames(tags)**
     Provides a list of private hostnames for the instances matching the
     tags. The private hostnames can be provided to other instances in
-    order to let the instances know about eachother.
+    order to let the instances know about each other.
 
     Parameters:
 
@@ -130,7 +131,7 @@ API
 
     -  A list of private hostnames
 
-**get(tags, remote\_path, local\_path, user="root")**
+ **get(tags, remote\_path, local\_path, user="root")**
     Transfers a file from a set of remote machines matching the tags,
     and stores the file locally. If more than one instance matches the
     tags, an instance id will be appended to the local\_path.
@@ -146,7 +147,7 @@ API
 
     -  **user** - remote user. If not specified, the default is 'root'
 
-**put(tags, local\_path, remote\_path, user="root")**
+ **put(tags, local\_path, remote\_path, user="root")**
     Transfers a local file to a set of remote machines matching the
     tags.
 
@@ -162,7 +163,7 @@ API
 
     -  **user** - remote user. If not specified, the default is 'root'
 
-**run(tags, cmd, user="root", check\_exit\_code=True)**
+ **run(tags, cmd, user="root", check\_exit\_code=True)**
     Runs a command on the instances matches the tags. The commands are
     run in series, on one instance after the other.
 
@@ -186,7 +187,7 @@ API
     -  A list of lists, containing exit\_code[], stdout[] and stderr[]
        for the commands run
 
-**copy\_and\_run(tags, local\_script, args=[], user="root",
+ **copy\_and\_run(tags, local\_script, args=[], user="root",
 check\_exit\_code=True)**
     Copies a script from the local machine to the remote instances and
     executes the script. The script is run in series, on one instance
@@ -215,10 +216,13 @@ check\_exit\_code=True)**
        for the commands run
 
 The basic methods above are standard across all the Cloud
-infrastructures. What is different is the constructors as each
-infrastructure handles initialization a little bit different. For
+infrastructures. What is different is the constructors, as each
+infrastructure handles initialization a little bit differently. For
 example, to create a new OpenStack using the EC2\_\* environment
-provided automatically by FutureGrid::
+provided automatically by FutureGrid:
+
+.. code:: programlisting
+
                 
         exp = OpenStackExperiment(
                 os.environ['EC2_URL'],
@@ -227,11 +231,13 @@ provided automatically by FutureGrid::
                 
             
 
-i For Amazon EC2, you have to specify region, endpoint, and
-access/secret keys. Note that it is not required to use environment
-variables for your credentials, but seperating the crenditals from the
-code prevents the credentials from being check in to source control
-systems::
+For Amazon EC2, you have to specify region, endpoint, and access/secret
+keys. Note that it is not required to use environment variables for your
+credentials, but seperating the credentials from the code prevents them
+from being checked in to source control systems.
+
+.. code:: programlisting
+
                 
         exp = EC2Experiment(
                 "us-west-2c",
@@ -247,7 +253,7 @@ Examples
 Hello World
 ~~~~~~~~~~~
 
-::
+.. code:: programlisting
 
                     
     #!/usr/bin/python
@@ -309,7 +315,7 @@ Hello World
 Resources from mulitple infrastructures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code:: programlisting
 
                     
     #!/usr/bin/python
@@ -375,14 +381,16 @@ Resources from mulitple infrastructures
                     
                 
 
-Setting up a Condor pool and run a Pegasus workflow
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setting up a Condor pool and running a Pegasus workflow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is a more complex example in which a small Condor pool is set up
 and then a Pegasus workflow is run and benchmarked. The Precip script is
-similar to what we have seen before, but it has two groups of instances,
-one master acting as the Condor central manager, and a set of Condor
-worker nodes::
+similar to what we have seen before, but it has two groups of instances:
+one master, acting as the Condor central manager, and a set of Condor
+worker nodes.
+
+.. code:: programlisting
 
                     
     #!/usr/bin/python
@@ -437,7 +445,9 @@ worker nodes::
                     
                 
 
-We also need a bootstrap.sh which sets up the instances::
+We also need a bootstrap.sh which sets up the instances:
+
+.. code:: programlisting
 
                     
     #!/bin/bash
@@ -541,6 +551,7 @@ We also need a bootstrap.sh which sets up the instances::
         tar xzf montage.tar.gz
         chown -R wf: montage*
     fi
-                    
-                
 
+
+`‹ Nimbus Phantom </nimbus-phantom>`__
+`up </manual/management-services>`__ `cloudinit.d › </cloudinitd>`__

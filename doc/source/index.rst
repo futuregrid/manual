@@ -68,8 +68,9 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    iaas
    openstackgrizzly
    openstackessex0
+   nimbus
    eucalyptus
-
+   
 
 **PART VI. EXPERIMENT MANAGEMENT SERVICES**
 
@@ -78,6 +79,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    experiment-interactive
+   precip
    rain
 
 **PART VII. PAAS/PLATFORM AS A SERVICES**
