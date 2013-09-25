@@ -5,9 +5,9 @@ ENV="ENV"
 
 install_ubuntu_packages() {
     sudo apt-get install g++ 
-    sudo apt-get python-dev python-pip python-virtualenv 
-    sudo apt-get git 
-    sudo apt-get libfreetype6-dev libpng-dev mercurial make
+    sudo apt-get install python-dev python-pip python-virtualenv 
+    sudo apt-get install git 
+    sudo apt-get install libfreetype6-dev libpng-dev mercurial make
 }
 
 # has to activate virtuan env first
