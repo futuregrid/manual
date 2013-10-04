@@ -2,6 +2,14 @@
 PAPI
 **********************************************************************
 
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+ 
+
+
 .. figure:: images/icl_footer.png
    :align: right
 

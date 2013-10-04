@@ -7,9 +7,6 @@ Genesis II
    .. contents::
       :local:
 
-Author: University of Virginia
-Version: 1.0
-Last Revision: 2011-11-02
 
 Introduction
 =============
@@ -87,7 +84,7 @@ specification's Data Staging elements.  The following are the protocols
 currently supported by the GenesisII endpoints:
 
 
-Stage in:
+Stage in
 ~~~~~~~~~
 
 -  HTTP
@@ -96,7 +93,7 @@ Stage in:
 -  scp
 -  sftp
 
-Stage out:
+Stage out
 ~~~~~~~~~~
 
 -  mailto
@@ -114,7 +111,7 @@ Endpoint Connection Information
 India
 -------------------------------
 
--  **Endpoint EPR**: :portal:`click
+- **Endpoint EPR**: :portal:`click
    here <sites/default/files/india-epr-Nov-01-2011.txt>`
 
 -  **Security**: configured for username/password authentication;

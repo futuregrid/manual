@@ -17,6 +17,10 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    Koji Tanaka,
    Allan Streib,
    Renato Figurero,
+   Matts Rynge,
+   Pierre Riteau,
+   John Bresnahan,
+   Karolina Sarnowska-Upton,
    Archit Kulshrestha, 
    Jonathan Bolte,
    Gregory Pike
@@ -58,6 +62,8 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    hardware
    hpc
    scalemp
+   genesis
+   unicore
 
 **PART V. IAAS/CLOUD SERVICES**
 
@@ -81,6 +87,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    experiment-interactive
    precip
+   pegasus
    rain
 
 **PART VII. PAAS/PLATFORM AS A SERVICES**
@@ -90,8 +97,18 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    hadoop
+   vine
 
-**PART VIII. EDUCATIONAL MATERIAL**
+**PART VIII. PERFORMANCE TOOLS**
+
+.. toctree::
+   :numbered:
+   :maxdepth: -1
+
+   papi
+
+
+**PART IIX. EDUCATIONAL MATERIAL**
 
 .. toctree::
    :numbered:

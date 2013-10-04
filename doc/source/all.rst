@@ -8,17 +8,8 @@
 
    summary-executive
    introduction
-   unicore
-   genesis
-   nimbus
-   nimbusphantom
-   nimbuscloudinitd
-   precip
-   pegasus
 
    tutorials
-   vine
-   papi
    gpu
    fgmanual
    india

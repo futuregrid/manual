@@ -188,6 +188,7 @@ Run ucc to get list and description of available commands::
 
     Usage: ucc <command> [OPTIONS] <args>
      The following commands are available:
+
      DATA MANAGEMENT
       ls                     - list a storage
       rm                    - remove a remote file or directory
@@ -198,6 +199,7 @@ Run ucc to get list and description of available commands::
       mkdir                  - create a directory remotely
       copy-file             - copy remote files
       put-file               - puts a local file to a remote server
+
      GENERAL
       create-storage       - create a storage service instance
       connect               - connect to UNICORE
@@ -206,18 +208,21 @@ Run ucc to get list and description of available commands::
       list-jobs             - list your jobs
       list-sites             - list remote sites
       system-info            - checks the availability of services
+
      JOB EXECUTION
       run                    - run a job through UNICORE 6
       get-status             - get job status
       abort-job             - abort a job
       batch                  - run ucc on a set of files
       get-output            - get output files
+
      OGSA-BES
       bes-list-att           - provides information about U6 BES Interface
       bes-terminate-job      - terminate bes activity
       bes-submit-job         - run a job through UNICORE 6 BES Interface
       bes-list-jobs         - list jobs running on BES.
       bes-job-status         - get bes activity status
+
      OTHER
       shell                  - starts an interactive UCC session
       issue-delegation      - allows to issue a trust delegation assertion
@@ -225,12 +230,14 @@ Run ucc to get list and description of available commands::
       wsrf                   - perform a WSRF operation
       cip-query              - query a CIS Infoprovider at a UNICORE site
       run-groovy            - run a Groovy script
+
      WORKFLOW
       workflow-trace        - trace info on a workflow in Chemomentum
       workflow-control      - offers workflow control functions
       workflow-submit       - submit a workflow
       workflow-info         - lists info on workflows.
       broker-run             - submit work assignment to service
+
     orchestrator
      Enter 'ucc <command> -h' for help on a particular
 
@@ -359,7 +366,7 @@ preferences file to use this security information
 
 $UCC\_HOME/conf/preferences
 
--    Keystore Settings
+-   Keystore Settings
 
     -  Set keystore path to the full path to where your keystore file is
        saved locally
@@ -369,13 +376,13 @@ $UCC\_HOME/conf/preferences
     -  Provide keystore’s alias
     -  Provide keystore’s storetype (PKCS12 or JKS)
 
--    Truststore Settings
+-   Truststore Settings
 
     -  Set truststore path to the full path to where your truststore file is
        saved locally
     -  Provide the password that “unlocks” your truststore file
 
--    Registry Address or BESFactory URL Information
+-   Registry Address or BESFactory URL Information
 
     -  Provide registry address/BESFactory URL of FutureGrid U6 endpoint
 
