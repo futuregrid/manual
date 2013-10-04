@@ -1,4 +1,4 @@
-Pegasus (Matts)
+Pegasus
 ===========================
 
 .. sidebar:: Page Contents

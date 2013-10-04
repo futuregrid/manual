@@ -15,7 +15,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>1. Books &mdash; FutureGrid 0.1 documentation</title>
+    <title>4. Converting Virtualbox images to OpenStack &mdash; FutureGrid 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,8 +41,8 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="FutureGrid 0.1 documentation" href="index.html" />
-    <link rel="next" title="1. Screencast: Using FutureGrid" href="mooc.html" />
-    <link rel="prev" title="1. PAPI" href="papi.html" />
+    <link rel="next" title="5. Nimbus" href="nimbus.html" />
+    <link rel="prev" title="3. OpenStack Essex with euca2ools" href="openstackessex0.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -276,7 +276,7 @@
 </ul>
 </li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="iaas.html">1. IaaS</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="iaas.html#nimbus-clouds">1.1. Nimbus Clouds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="iaas.html#openstack-clouds">1.2. OpenStack Clouds</a></li>
@@ -347,24 +347,24 @@
 <li class="toctree-l2"><a class="reference internal" href="openstackessex0.html#compatibility-between-nova-and-euca2ools-commands">3.21. Compatibility between nova and euca2ools commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="os-virtualbox.html">4. Converting Virtualbox images to OpenStack</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#prerequisites">4.1. Prerequisites</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#disable-selinux-only-for-redhat-based-linux-like-centos">4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configuring-the-image-network-interface-eth0-for-dhcp">4.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">4.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configure-udev-persistent-rules-only-centos">4.1.4. Configure udev persistent rules (only CentOS)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. Converting Virtualbox images to OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">4.1. Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">4.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">4.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">4.1.4. Configure udev persistent rules (only CentOS)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#convert-your-virtual-box-image-to-raw-format">4.2. Convert your virtual box image to raw format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#convert-the-image-to-qcow2-format-optional">4.3. Convert the image to qcow2 format (optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#test-your-image">4.4. Test your image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#transfer-your-image-to-india">4.5. Transfer your Image to India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#log-into-india">4.6. Log into India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#upload-your-image-to-openstack">4.7. Upload your image to OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#checking-status-image">4.8. Checking Status Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#test-image-in-openstack">4.9. Test Image in OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#troubleshooting">4.10. Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#notes">4.11. Notes:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">4.2. Convert your virtual box image to raw format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">4.3. Convert the image to qcow2 format (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-your-image">4.4. Test your image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-your-image-to-india">4.5. Transfer your Image to India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-into-india">4.6. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-your-image-to-openstack">4.7. Upload your image to OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-status-image">4.8. Checking Status Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-image-in-openstack">4.9. Test Image in OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">4.10. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">4.11. Notes:</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nimbus.html">5. Nimbus</a><ul>
@@ -534,8 +534,8 @@
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">1. Books</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="books.html">1. Books</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mooc.html">1. Screencast: Using FutureGrid</a><ul>
@@ -629,7 +629,26 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">1. Books</a></li>
+<li><a class="reference internal" href="#">4. Converting Virtualbox images to OpenStack</a><ul>
+<li><a class="reference internal" href="#prerequisites">4.1. Prerequisites</a><ul>
+<li><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">4.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">4.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">4.1.4. Configure udev persistent rules (only CentOS)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">4.2. Convert your virtual box image to raw format</a></li>
+<li><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">4.3. Convert the image to qcow2 format (optional)</a></li>
+<li><a class="reference internal" href="#test-your-image">4.4. Test your image</a></li>
+<li><a class="reference internal" href="#transfer-your-image-to-india">4.5. Transfer your Image to India</a></li>
+<li><a class="reference internal" href="#log-into-india">4.6. Log into India</a></li>
+<li><a class="reference internal" href="#upload-your-image-to-openstack">4.7. Upload your image to OpenStack</a></li>
+<li><a class="reference internal" href="#checking-status-image">4.8. Checking Status Image</a></li>
+<li><a class="reference internal" href="#test-image-in-openstack">4.9. Test Image in OpenStack</a></li>
+<li><a class="reference internal" href="#troubleshooting">4.10. Troubleshooting</a></li>
+<li><a class="reference internal" href="#notes">4.11. Notes:</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -638,10 +657,10 @@
             
               
                 
-  <li><a href="papi.html"
-         title="Previous Chapter: 1. PAPI">&laquo; 1. PAPI</a></li>
-  <li><a href="mooc.html"
-         title="Next Chapter: 1. Screencast: Using FutureGrid">1. Screencast: U... &raquo;</a></li>
+  <li><a href="openstackessex0.html"
+         title="Previous Chapter: 3. OpenStack Essex with euca2ools">&laquo; 3. OpenStack Ess...</a></li>
+  <li><a href="nimbus.html"
+         title="Next Chapter: 5. Nimbus">5. Nimbus &raquo;</a></li>
               
             
             
@@ -649,7 +668,7 @@
             
               <li>
 <div id="sourcelink">
-  <a href="_sources/books.txt"
+  <a href="_sources/os-virtualbox.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -673,143 +692,176 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="books">
-<span id="s-books"></span><h1>1. Books<a class="headerlink" href="#books" title="Permalink to this headline">¶</a></h1>
-<div class="sidebar">
-<p class="first last sidebar-title">Page Contents</p>
+  <div class="section" id="converting-virtualbox-images-to-openstack">
+<h1>4. Converting Virtualbox images to OpenStack<a class="headerlink" href="#converting-virtualbox-images-to-openstack" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we explain how to convert a Virtual Box image to kvm
+format and then register it on OpenStack.</p>
+<div class="section" id="prerequisites">
+<h2>4.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>There is two main prerequisites for your images to work with OpenStack</p>
+<div class="section" id="disable-selinux-only-for-redhat-based-linux-like-centos">
+<h3>4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)<a class="headerlink" href="#disable-selinux-only-for-redhat-based-linux-like-centos" title="Permalink to this headline">¶</a></h3>
+<p>Edit the file&nbsp;/etc/selinux/config and set the SELINUX option to disabled:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">SELINUX</span><span class="o">=</span><span class="n">disabled</span>
+</pre></div>
 </div>
-<table border="1" class="docutils">
-<caption>Books</caption>
-<colgroup>
-<col width="10%" />
-<col width="20%" />
-<col width="10%" />
-<col width="10%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Image</th>
-<th class="head">Title</th>
-<th class="head">e-pub</th>
-<th class="head">Link</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=536-1374902757-91b22bb39f9194ebad39bd8ea81c0145"><img alt="http://it-ebooks.info/images/ebooks/3/programming_amazon_ec2.jpg" src="http://it-ebooks.info/images/ebooks/3/programming_amazon_ec2.jpg" style="width: 100px;" /></a>
-</td>
-<td>Programming Amazon EC2</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=536-1374902757-91b22bb39f9194ebad39bd8ea81c0145">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/536/">HTML</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://www.greenteapress.com/thinkpython/thinkpython.pdf"><img alt="http://www.greenteapress.com/thinkpython/think_python_comp2.medium.png" src="http://www.greenteapress.com/thinkpython/think_python_comp2.medium.png" style="width: 100px;" /></a>
-</td>
-<td>Think Python</td>
-<td><a class="reference external" href="http://www.greenteapress.com/thinkpython/thinkpython.pdf">e-Pub</a></td>
-<td><a class="reference external" href="http://www.greenteapress.com/thinkpython/">http://www.greenteapress.com/thinkpython/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://www.greenteapress.com/thinkpython/thinkCSpy/thinkCSpy.pdf"><img alt="http://www.greenteapress.com/thinkpython/thinkCSpy/smallcover.jpg" src="http://www.greenteapress.com/thinkpython/thinkCSpy/smallcover.jpg" style="width: 100px;" /></a>
-</td>
-<td>How to Think Like a Computer Scientist - Learning with Python</td>
-<td><a class="reference external" href="http://www.greenteapress.com/thinkpython/thinkCSpy/thinkCSpy.pdf">e-Pub</a></td>
-<td><a class="reference external" href="http://www.greenteapress.com/thinkpython/thinkCSpy/">http://www.greenteapress.com/thinkpython/thinkCSpy/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=1136-1374903808-668b5409112e65dfa478d15947204113"><img alt="http://it-ebooks.info/images/ebooks/14/openstack_cloud_computing_cookbook.jpg" src="http://it-ebooks.info/images/ebooks/14/openstack_cloud_computing_cookbook.jpg" style="width: 100px;" /></a>
-</td>
-<td>OpenStack Cloud Computing Cookbook</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=1136-1374903808-668b5409112e65dfa478d15947204113">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/1136/">http://it-ebooks.info/book/1136/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=947-1374903813-682765c1c155c35f0c7f5a2ea89eff88&gt;"><img alt="http://it-ebooks.info/images/ebooks/3/cloud_architecture_patterns.jpg" src="http://it-ebooks.info/images/ebooks/3/cloud_architecture_patterns.jpg" style="width: 100px;" /></a>
-</td>
-<td>Cloud Architecture Patterns</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=947-1374903813-682765c1c155c35f0c7f5a2ea89eff88">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/947/">http://it-ebooks.info/book/947/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=563-1374903882-f25441704685060163d86437b9c1ca4b"><img alt="http://it-ebooks.info/images/ebooks/3/deploying_openstack.jpg" src="http://it-ebooks.info/images/ebooks/3/deploying_openstack.jpg" style="width: 100px;" /></a>
-</td>
-<td>Deploying OpenStack</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=563-1374903882-f25441704685060163d86437b9c1ca4b">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/563/">http://it-ebooks.info/book/563/</a></td>
-<td>2011</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=542-1374903884-51c867749e854b61dc409983397fa005"><img alt="http://it-ebooks.info/images/ebooks/3/python_and_aws_cookbook.jpg" src="http://it-ebooks.info/images/ebooks/3/python_and_aws_cookbook.jpg" style="width: 100px;" /></a>
-</td>
-<td>Managing Your Cloud with Python and Boto</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=542-1374903884-51c867749e854b61dc409983397fa005">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/542/">http://it-ebooks.info/book/542/</a></td>
-<td>2011</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=10-1374903886-b194d7d31dfa90c48be51f5a764b0d18"><img alt="http://it-ebooks.info/images/ebooks/1/code_in_the_cloud.jpg" src="http://it-ebooks.info/images/ebooks/1/code_in_the_cloud.jpg" style="width: 100px;" /></a>
-</td>
-<td>Code in the Cloud - Programming Google AppEngine</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=10-1374903886-b194d7d31dfa90c48be51f5a764b0d18">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/10/">http://it-ebooks.info/book/10/</a></td>
-<td>2011</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=966-1374903885-36fad9c84d83e559c87b423657069c71"><img alt="http://it-ebooks.info/images/ebooks/6/the_definitive_guide_to_mongodb.jpg" src="http://it-ebooks.info/images/ebooks/6/the_definitive_guide_to_mongodb.jpg" style="width: 100px;" /></a>
-</td>
-<td>The Definitive Guide to MongoDB</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=966-1374903885-36fad9c84d83e559c87b423657069c71">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/966/">http://it-ebooks.info/book/966/</a></td>
-<td>2010</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=1342-1374904783-04a5f749014908b3bbf7835b46df379a"><img alt="http://it-ebooks.info/images/ebooks/3/puppet_types_and_providers.jpg" src="http://it-ebooks.info/images/ebooks/3/puppet_types_and_providers.jpg" style="width: 100px;" /></a>
-</td>
-<td>Puppet Types and Providers- Extending Puppet with Ruby</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=1342-1374904783-04a5f749014908b3bbf7835b46df379a">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/1342/">http://it-ebooks.info/book/1342/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=542-1374904258-bf8a0d5f4971121d09e22208367e2a11"><img alt="http://it-ebooks.info/images/ebooks/3/python_and_aws_cookbook.jpg" src="http://it-ebooks.info/images/ebooks/3/python_and_aws_cookbook.jpg" style="width: 100px;" /></a>
-</td>
-<td>Python and AWS Cookbook</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=542-1374904258-bf8a0d5f4971121d09e22208367e2a11">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/542/">http://it-ebooks.info/book/542/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=1626-1374904290-041a11160b1195766f0b955ff8403d24"><img alt="http://it-ebooks.info/images/ebooks/3/resilience_and_reliability_on_aws.jpg" src="http://it-ebooks.info/images/ebooks/3/resilience_and_reliability_on_aws.jpg" style="width: 100px;" /></a>
-</td>
-<td>Resilience and Reliability on AWS - Engineering at Cloud Scale</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=1626-1374904290-041a11160b1195766f0b955ff8403d24">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/1626/">http://it-ebooks.info/book/1626/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=387-1374904357-1a866453036d83e0265cb95f197a3252"><img alt="http://it-ebooks.info/images/ebooks/3/programming_google_app_engine.jpg" src="http://it-ebooks.info/images/ebooks/3/programming_google_app_engine.jpg" style="width: 100px;" /></a>
-</td>
-<td>Programming Google App Engine</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=387-1374904357-1a866453036d83e0265cb95f197a3252">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/387/">http://it-ebooks.info/book/387/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://it-ebooks.info/go.php?id=2170-1374905317-6a60f9231f87bff7b9cbcf1b8ea4589e"><img alt="http://it-ebooks.info/images/ebooks/3/big_data_now_2012_edition.jpg" src="http://it-ebooks.info/images/ebooks/3/big_data_now_2012_edition.jpg" style="width: 100px;" /></a>
-</td>
-<td>Big Data Now: 2012 Edition</td>
-<td><a class="reference external" href="http://it-ebooks.info/go.php?id=2170-1374905317-6a60f9231f87bff7b9cbcf1b8ea4589e">e-Pub</a></td>
-<td><a class="reference external" href="http://it-ebooks.info/book/2170/">http://it-ebooks.info/book/2170/</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-even"><td><a class="first last reference external image-reference" href="http://www.greenteapress.com/thinkstats/thinkstats.pdf"><img alt="http://www.greenteapress.com/thinkstats/think_stats_comp.png" src="http://www.greenteapress.com/thinkstats/think_stats_comp.png" style="width: 100px;" /></a>
-</td>
-<td>Think Stats - Probability and Statistics for Programmers</td>
-<td><a class="reference external" href="http://www.greenteapress.com/thinkstats/thinkstats.pdf">e-Pub</a></td>
-<td><a class="reference external" href="http://www.greenteapress.com/thinkstats/index.html">http://www.greenteapress.com/thinkstats/index.html</a></td>
-<td>TBD</td>
-</tr>
-<tr class="row-odd"><td><a class="first last reference external image-reference" href="http://infolab.stanford.edu/~ullman/mmds/book.pdf"><img alt="http://infolab.stanford.edu/~ullman/gifs/mmd_cover.jpg" src="http://infolab.stanford.edu/~ullman/gifs/mmd_cover.jpg" style="width: 100px;" /></a>
-</td>
-<td>Mining of Massive Datasets</td>
-<td><a class="reference external" href="http://infolab.stanford.edu/~ullman/mmds/book.pdf">e-Pub</a></td>
-<td><a class="reference external" href="http://infolab.stanford.edu/~ullman/mmds.html">http://infolab.stanford.edu/~ullman/mmds.html</a></td>
-<td>TBD</td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="section" id="configuring-the-image-network-interface-eth0-for-dhcp">
+<h3>4.1.2. Configuring the image network interface (eth0) for DHCP<a class="headerlink" href="#configuring-the-image-network-interface-eth0-for-dhcp" title="Permalink to this headline">¶</a></h3>
+<p>In Ubuntu, you edit the file /etc/network/interfaces and configure eth0
+to:</p>
+<div class="highlight-python"><pre>auto eth0
+iface eth0 inet dhcp</pre>
+</div>
+<p>In CentOS, you edit the file /etc/sysconfig/network-scripts/ifcfg-eth0
+and make sure it contains:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">DEVICE</span><span class="o">=</span><span class="n">eth0</span>
+<span class="n">BOOTPROTO</span><span class="o">=</span><span class="n">dhcp</span>
+<span class="n">ONBOOT</span><span class="o">=</span><span class="n">yes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-the-image-to-allow-openstack-to-inject-the-ssh-key">
+<h3>4.1.3. Configure the image to allow OpenStack to inject the ssh key<a class="headerlink" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ubuntu&nbsp;(it may not be needed for Ubuntu, but it is recomended)</li>
+</ul>
+<ul class="simple">
+<li>CentOS.&nbsp;Edit the file /etc/rc.local</li>
+</ul>
+</div>
+<div class="section" id="configure-udev-persistent-rules-only-centos">
+<h3>4.1.4. Configure udev persistent rules (only CentOS)<a class="headerlink" href="#configure-udev-persistent-rules-only-centos" title="Permalink to this headline">¶</a></h3>
+<p>Edit the file&nbsp;/etc/udev/rules.d/70-persistent-net.rules, delete
+everything and add:</p>
+<div class="highlight-python"><pre>ACTION=="add",SUBSYSTEM=="net", IMPORT{program}="/lib/udev/rename_device"
+SUBSYSTEM=="net", RUN+="/etc/sysconfig/network-scripts/net.hotplug"</pre>
+</div>
+</div>
+</div>
+<div class="section" id="convert-your-virtual-box-image-to-raw-format">
+<h2>4.2. Convert your virtual box image to raw format<a class="headerlink" href="#convert-your-virtual-box-image-to-raw-format" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>VBoxManage clonehd /path/to/imagefile/vboximage.vdi /path/to/rawimage.img --format raw</pre>
+</div>
+<p>Make sure that you specify the full path. Otherwise, you may experience
+errors and the new image will be placed in&nbsp;&nbsp;~/.VirtualBox/HardDisks/</p>
+</div>
+<div class="section" id="convert-the-image-to-qcow2-format-optional">
+<h2>4.3. Convert the image to qcow2 format (optional)<a class="headerlink" href="#convert-the-image-to-qcow2-format-optional" title="Permalink to this headline">¶</a></h2>
+<p>This step is optional, but it is recommended if your image as a
+considerable size because the qcow2 format will compress your image.
+Nevertheless, it will takes a while to finish this command. As example
+my 8GB image took a couple of hours to get ready and was compressed to
+less than 6 GB:</p>
+<div class="highlight-python"><pre>qemu-img convert -f raw rawimage.img -O qcow2 qcow2image.img</pre>
+</div>
+</div>
+<div class="section" id="test-your-image">
+<h2>4.4. Test your image<a class="headerlink" href="#test-your-image" title="Permalink to this headline">¶</a></h2>
+<p>If you are in a computer with graphical interface, the easiest way to
+test it is by executing the following command. This command will open a
+window and you will see if your image boots correctly:</p>
+<div class="highlight-python"><pre>kvm -hda rawimage.img -m 1024</pre>
+</div>
+<p>or:</p>
+<div class="highlight-python"><pre>kvm -hda qcow2image.img -m 1024</pre>
+</div>
+<p>From now on, we refer only to the rawimage.img, but it works in the same
+way with the qcow2image.img.</p>
+</div>
+<div class="section" id="transfer-your-image-to-india">
+<h2>4.5. Transfer your Image to India<a class="headerlink" href="#transfer-your-image-to-india" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ scp rawimage.img &lt;username&gt;@india.futuregrid.org:/N/u/&lt;username&gt;/</pre>
+</div>
+</div>
+<div class="section" id="log-into-india">
+<h2>4.6. Log into India<a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ ssh &lt;username&gt;@india.futuregrid.org</pre>
+</div>
+</div>
+<div class="section" id="upload-your-image-to-openstack">
+<h2>4.7. Upload your image to OpenStack<a class="headerlink" href="#upload-your-image-to-openstack" title="Permalink to this headline">¶</a></h2>
+<p>First, we need to load the euca2ools module that contains the command
+line interface to interact with OpenStack. Then we need to load our own
+credentials that are typically in a novarc file. Finally you update and
+register the image. Although, we are going to briefly explain these
+steps here, this is part of the OpenStack tutorial that can be found
+in&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">https://portal.futuregrid.org/tutorials/openstack</a>:</p>
+<div class="highlight-python"><pre>$ module load euca2ools
+$ source ~/novarc</pre>
+</div>
+<p>Upload the image:</p>
+<div class="highlight-python"><pre>$ euca-bundle-image -i rawimage.img
+
+Checking image
+Encrypting image
+Splitting image...
+Part: rawimage.img.part.00
+Part: rawimage.img.part.01
+Part: rawimage.img.part.02
+.....
+Generating manifest /tmp/rawimage.img.manifest.xml</pre>
+</div>
+<p>At the end you get a manifest file that you use in the next step. You
+also need to specify a bucket name (option -b). We can use our username
+(jdiazz in my case), but it can be any other string:</p>
+<div class="highlight-python"><pre>$ euca-upload-image -m /tmp/rawimage.img.manifest.xml -b jdiazz
+
+Checking bucket: jdiaz
+Uploading manifest file
+Uploading part: rawimage.img.part.00
+Uploading part: rawimage.img.part.01
+Uploading part: rawimage.img.part.02
+.....
+Uploaded image as jdiazz/rawimage.img.manifest.xml</pre>
+</div>
+<p>Finally we register the image:</p>
+<div class="highlight-python"><pre>$ euca-register jdiazz/rawimage.img.manifest.xml
+
+IMAGE ami-00000058</pre>
+</div>
+<p>From this last command we get the ami-ID that identifies the image in
+OpenStack (marked in yellow). You will need this to start instances.</p>
+</div>
+<div class="section" id="checking-status-image">
+<h2>4.8. Checking Status Image<a class="headerlink" href="#checking-status-image" title="Permalink to this headline">¶</a></h2>
+<p>You cannot run instances until your image is in available status. You
+can check the status of your image with the euca-describe-images
+command. This command can take some time to respond because the system
+will be busy processing your image:</p>
+<div class="highlight-python"><pre>$ euca-describe-images ami-00000058</pre>
+</div>
+</div>
+<div class="section" id="test-image-in-openstack">
+<h2>4.9. Test Image in OpenStack<a class="headerlink" href="#test-image-in-openstack" title="Permalink to this headline">¶</a></h2>
+<p>For this step we recomend to go to the OpenStack tutorial where we
+explain how to create a key-pair and run an instance with our image.
+Please
+see&nbsp;<a class="reference external" href="https://portal.futuregrid.org/using-openstack-futuregrid#key_management">https://portal.futuregrid.org/using-openstack-futuregrid#key_management</a></p>
+<p>Running the instance can be something like this:</p>
+<div class="highlight-python"><pre>$ euca-run-instances -k jdiaznova ami-00000058 -t m1.large</pre>
+</div>
+<p>where jdiaznova is the key name of my openstack key pairs. This key will
+allow us to ssh into the image. Please refer to the OpenStack tutorial
+for more information.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>4.10. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>One problem of this way of using our images is that we cannot use
+euca-get-console-output command to debug the boot process of the images.
+Therefore it makes more complicated solving runtime problems. However,
+if your image boots properly when doing the &#8220;Test your Image&#8221; section,
+it should work also on OpenStack and the only problem could be wrong
+configuration of network interface or SELinux enabled.</p>
+</div>
+<div class="section" id="notes">
+<h2>4.11. Notes:<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial has been tested with Ubuntu 12 and CentOS 6 using
+OpenStack Essex.</p>
+<p><a class="reference external" href="/tutorials/one-click-twister-k-means-eucalyptus-futuregrid">‹ One-click Twister K-means on Eucalyptus
+FutureGrid</a>
+<a class="reference external" href="/tutorials">up</a> <a class="reference external" href="/community/appliances">Virtual Appliances ›</a></p>
+</div>
 </div>
 
 

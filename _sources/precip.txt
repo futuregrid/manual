@@ -2,6 +2,12 @@
 Precip
 **********************************************************************
 
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
+
 Precip is a flexible experiment management API for running experiments
 on clouds. Precip was developed for use on FutureGrid infrastructures
 such as OpenStack, Eucalyptus (>=3.2), Nimbus, and at the same time,

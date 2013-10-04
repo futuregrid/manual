@@ -89,6 +89,26 @@ You will see an output similar to::
 
    $USER is your username on sierra machine. 
 
+Standard Images
+======================================================================
+
+We have provided a number of images that you may want to try
+out. Image Ids and names of them are listed in the following
+table. The futuregrid/sl-6 image is  Scientific Linux.
+
++--------------------------------------+--------------------------------------+
+| Image ID                             | Image Name                           |
++--------------------------------------+--------------------------------------+
+| 53fab752-757e-4b2a-bce6-9f74ba76be26 | futuregrid/centos-6                  | 
+| d5b19d33-8440-4069-815a-de9d8629dae3 | futuregrid/coreos                    |
+| d40facd1-7496-42b7-8bc7-70235396d349 | futuregrid/debian-7                  |
+| 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18                 | 
+| 1c46e959-5805-47da-a079-58900787ef25 | futuregrid/fedora-19                 |
+| 8f289ebb-d8fb-48f6-8429-430110eacb4a | futuregrid/sl-6  |
+| 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04              | 
+| f7459a50-3ef4-40f5-a7d7-955fb3af6432 | futuregrid/ubuntu-13.10              | 
++--------------------------------------+--------------------------------------+
+
 Key management
 ======================================================================
 
