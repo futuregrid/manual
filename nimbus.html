@@ -757,7 +757,7 @@
 <div class="section" id="nimbus-iaas">
 <h2><a class="toc-backref" href="#id11">5.1. Nimbus IaaS</a><a class="headerlink" href="#nimbus-iaas" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="image0">
-<h3>5.1.1. <a class="reference external" href="http://www.nimbusproject.org/"><img alt="image0" src="sites/default/files/images/nimbus_logo.png" /></a><a class="headerlink" href="#image0" title="Permalink to this headline">¶</a></h3>
+<h3>5.1.1. <a class="reference external" href="http://www.nimbusproject.org/"><img alt="image0" src="_images/nimbus_logo.png" /></a><a class="headerlink" href="#image0" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="what-is-nimbus">
 <h3><a class="toc-backref" href="#id13">5.1.2. What is Nimbus?</a><a class="headerlink" href="#what-is-nimbus" title="Permalink to this headline">¶</a></h3>
@@ -835,11 +835,11 @@ registered with FutureGrid.</li>
 <h4><a class="toc-backref" href="#id17">5.1.4.2. Download and install cloud-client</a><a class="headerlink" href="#download-and-install-cloud-client" title="Permalink to this headline">¶</a></h4>
 <p>Download the Nimbus cloud client from the <a class="reference external" href="http://www.nimbusproject.org/downloads/">Nimbus
 website</a>.</p>
-<div class="highlight-python"><pre>$ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-021.tar.gz</pre>
+<div class="highlight-python"><pre>$ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-022.tar.gz</pre>
 </div>
 <p>Unpack the archive into your home directory.</p>
-<div class="highlight-python"><pre>$ tar xzf nimbus-cloud-client-021.tar.gz
-$ ls nimbus-cloud-client-021/
+<div class="highlight-python"><pre>$ tar xzf nimbus-cloud-client-022.tar.gz
+$ ls nimbus-cloud-client-022/
 CHANGES.txt README.txt  conf        lib
 LICENSE.txt bin     history     samples</pre>
 </div>
@@ -854,7 +854,7 @@ nimbus_creds.tar.gz</pre>
 <p>If your credentials are not present on <strong>Hotel</strong>,
 contact <a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.</p>
 <p>Download and unpack these files into your cloud-client&#8217;s directory:</p>
-<div class="highlight-python"><pre>$ cd nimbus-cloud-client-021/conf/
+<div class="highlight-python"><pre>$ cd nimbus-cloud-client-022/conf/
 $ tar xvzf ~/nimbus_creds.tar.gz
 usercert.pem
 userkey.pem
@@ -984,7 +984,7 @@ following command:</p>
 <div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/hotel.conf --save --newname myvm --handle vm-001
 
 Saving workspace.
-  - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-021/history/vm-001/vw-epr.xml'
+  - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-022/history/vm-001/vw-epr.xml'
   - New name: 'myvm'
 
 Waiting for updates.
@@ -1043,7 +1043,7 @@ as you did in the <em>save a new VM step</em> and the &#8211;terminate option:</
 <div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/hotel.conf --terminate --handle vm-002
 
 Terminating workspace.
-  - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-021/history/vm-002/vw-epr.xml'
+  - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-022/history/vm-002/vw-epr.xml'
 
 Destroying vm-002... destroyed.</pre>
 </div>
@@ -1101,12 +1101,12 @@ Launching cluster-004... done.
 
 Waiting for launch updates.
   - cluster-004: all members are Running
-  - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-vm'
+  - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-022/history/cluster-004/reports-vm'
 
 Waiting for context broker updates.
   - cluster-004: contextualized
-  - wrote ctx summary to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-ctx/CTX-OK.txt'
-  - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-ctx'
+  - wrote ctx summary to '/N/u/bresnaha/tutorial/nimbus-cloud-client-022/history/cluster-004/reports-ctx/CTX-OK.txt'
+  - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-022/history/cluster-004/reports-ctx'
 
 SSH trusts new key for vm-40.sdsc.futuregrid.org   head-node
 

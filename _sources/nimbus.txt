@@ -89,14 +89,14 @@ website <http://www.nimbusproject.org/downloads/>`__.
 
 ::
 
-    $ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-021.tar.gz
+    $ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-022.tar.gz
 
 Unpack the archive into your home directory.
 
 ::
 
-    $ tar xzf nimbus-cloud-client-021.tar.gz
-    $ ls nimbus-cloud-client-021/
+    $ tar xzf nimbus-cloud-client-022.tar.gz
+    $ ls nimbus-cloud-client-022/
     CHANGES.txt README.txt  conf        lib
     LICENSE.txt bin     history     samples
 
@@ -118,7 +118,7 @@ Download and unpack these files into your cloud-client's directory:
 
 ::
 
-    $ cd nimbus-cloud-client-021/conf/ 
+    $ cd nimbus-cloud-client-022/conf/ 
     $ tar xvzf ~/nimbus_creds.tar.gz
     usercert.pem
     userkey.pem
@@ -291,7 +291,7 @@ following command:
     $ ./bin/cloud-client.sh --conf conf/hotel.conf --save --newname myvm --handle vm-001
 
     Saving workspace.
-      - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-021/history/vm-001/vw-epr.xml'
+      - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-022/history/vm-001/vw-epr.xml'
       - New name: 'myvm'
 
     Waiting for updates.
@@ -360,7 +360,7 @@ as you did in the *save a new VM step* and the --terminate option:
     $ ./bin/cloud-client.sh --conf conf/hotel.conf --terminate --handle vm-002
 
     Terminating workspace.
-      - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-021/history/vm-002/vw-epr.xml'
+      - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-022/history/vm-002/vw-epr.xml'
 
     Destroying vm-002... destroyed.
 
@@ -425,12 +425,12 @@ Start the Cluster
 
     Waiting for launch updates.
       - cluster-004: all members are Running
-      - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-vm'
+      - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-022/history/cluster-004/reports-vm'
 
     Waiting for context broker updates.
       - cluster-004: contextualized
-      - wrote ctx summary to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-ctx/CTX-OK.txt'
-      - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-021/history/cluster-004/reports-ctx'
+      - wrote ctx summary to '/N/u/bresnaha/tutorial/nimbus-cloud-client-022/history/cluster-004/reports-ctx/CTX-OK.txt'
+      - wrote reports to '/N/u/bresnaha/tutorial/nimbus-cloud-client-022/history/cluster-004/reports-ctx'
 
     SSH trusts new key for vm-40.sdsc.futuregrid.org   head-node 
 
@@ -504,7 +504,7 @@ visible to this node as well.
 `up </manual/iaas>`__ `Cloud Quick Start : Launch a VM with 1 command
 › </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
 
-.. |image0| image:: /sites/default/files/images/nimbus_logo.png
+.. |image0| image:: /images/nimbus_logo.png
    :target: http://www.nimbusproject.org/
 
 
