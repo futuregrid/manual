@@ -504,7 +504,7 @@ visible to this node as well.
 `up </manual/iaas>`__ `Cloud Quick Start : Launch a VM with 1 command
 › </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
 
-.. |image0| image:: /sites/default/files/images/nimbus_logo.png
+.. |image0| image:: /images/nimbus_logo.png
    :target: http://www.nimbusproject.org/
 
 
