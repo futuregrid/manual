@@ -11,7 +11,7 @@ FutureGrid is a project led by Indiana University and funded by the
 National Science Foundation (NSF) to develop a high-performance grid
 test bed that will allow scientists to collaboratively develop and
 test innovative approaches to parallel, grid, and cloud computing.
-FutureGrid will provide the infrastructure to researchers that allows
+FutureGrid will provide the infrastructure to researchers to allow
 them to perform their own computational experiments using distributed
 systems. The goal is to make it easier for scientists to conduct such
 experiments in a transparent manner.
@@ -131,7 +131,7 @@ $
        $ ls
 
 portalname:
-    In some examples we refer to your portal name as |portalname|
+    In some examples we refer to your portal name as |portalname|.
 
 localname: 
     In some examples we refer to your local computers name as
@@ -146,6 +146,6 @@ Man page:
 
 .. role:: rubric
 
-.. |portalname| replace:: **portalname** :rubric:`red`
+.. |portalname| replace:: **portalname**
 
 .. |localname| replace:: **localname**
