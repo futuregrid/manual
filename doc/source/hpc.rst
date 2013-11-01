@@ -49,32 +49,32 @@ SSH Add
 ^^^^^^^^^
 
 Sometimes you may wish to log in repeatedly in other machines while
-using a cahced password. To do that you can use ssh agent and ssh
-add. First strt the agent::
+using a cached password. To do that you can use ssh agent and ssh
+add. First start the agent::
 
   eval `ssh-agent`
 
-Than add your key with 
+Then add your key with 
 
   ssh-add
 
-Follow the instructions on the screen. Thus before you ssh in you may
+Follow the instructions on the screen. Thus before you ssh in, you may
 want to use ssh agent. This way you do not have to repeatedly type in
 your key password.
 
 SSH Config
 ^^^^^^^^^^^
 
-Also you may want to set your ~/.ssh/config file to create shortcust
+Also you may want to setup your ~/.ssh/config file to create shortcut
 for the username and hosts on which you want to log in. Let us assume
-your username is albert, than the folloing lines in the .ssh/config
+your username is albert, then add the following lines in the .ssh/config
 file::
 
     Host india
           Hostname india.futuregrid.org
           User albert
 
-willl allow you to log into the machine just while typing in::
+This will allow you to log into the machine just while typing in::
 
    ssh india
 
@@ -87,7 +87,7 @@ Modules
 The login nodes have the `modules <http://modules.sourceforge.net>`__
 package installed. It provides a convenient tool to adapt your
 environment and enables you to activate different packages and services
-dependent on your specific needs. The Modules utility to let you
+dependent on your specific needs. The Modules are utilized to let you
 dynamically control your environment. Modules allows you to load and
 unload packages and ensure a coherent working environment. 
 This ensures that your $PATH, $LD_LIBRARY_PATH, $LD_PRELOAD, and other
@@ -167,7 +167,7 @@ The available command are listed in the next table:
    keystoneclient/0.2.3(default) vim/7.2
    marmot/2.4.0(default)
 
-**Example** - load a default module (in thi case cloudmesh)::
+**Example** - load a default module (in this case cloudmesh)::
 
    $ module load cloudmesh
 
@@ -225,7 +225,7 @@ Filesystem Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Home* directories:
-   Home directories are accessible through the $HOME shell variable are
+   Home directories are accessible through the $HOME shell variable which are
    located at */N/u/<username>*. This is where users are encouraged to
    keep source files, configuration files and executables. Users
    should not run code from their $HOME directories. Please note that
@@ -234,7 +234,7 @@ Filesystem Layout
    backup storage at their home institution or a code repository. For
    example, we recommend that you use git or svn to make sure you
    backup your changes to the code. Also make sure you backup your
-   data. As a testbed, we do not guarantee dataloss.
+   data. As a testbed, we do not guarantee data loss.
     
 *Scratch* directories:
    Scratch directories are located at different locations on the
@@ -300,11 +300,11 @@ status pages <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=HPC
 
 Loading the OpenMPI module adds the MPI compilers to your $PATH
 environment variable and the OpenMPI shared library directory to your
-$LD_LIBRARY_PATH. This is an important step to ensure MPI applications
+$LD_LIBRARY_PATH. This is an important step to ensure that MPI applications
 will compile and run successfully. In cases where the OpenMPI is
 compiled with the Intel compilers loading the OpenMPI module will
 automatically load the Intel compilers as a dependency. To load the
-default openmpi module and associated compilers, just use::
+default OpenMPI module and associated compilers, just use::
 
     $ module load openmpi
 
@@ -316,10 +316,10 @@ To compile MPI applications, users can simply use the available mpi
 compile commands:
 
 mpicc:
-   To compile C programs with the the CC/icc/gcc compilers
+   To compile C programs with the CC/icc/gcc compilers
 
 mpicxx:
-   To compile c++ programs with CXX/icpc/g++ with mpicxx
+   To compile c++ programs with CXX/icpc/g++ compilers
 
 mpif90:
    To compile programs with F90/F77/FC/ifort/gfortran
@@ -337,8 +337,8 @@ used as a template to adapt compile flags in case the default settings are
 not suitable for you.
 
 
-Assuming you have loaded the openmpi module into your environment,
-you can compile a `simple MPI application <ring.html>`__ with easily as executing::
+Assuming you have loaded the OpenMPI module into your environment,
+you can compile a `simple MPI application <ring.html>`__ easily by executing::
 
     $ mpicc -o ring ring.c
 
@@ -365,9 +365,9 @@ activate their environment to use the job scheduler::
     $ module load torque
 
 A complete manual for the torque scheduler can be found in the `Torque
-manual<http://www.clusterresources.com/torquedocs21/>`__.
+manual <http://www.clusterresources.com/torquedocs21/>`__ .
 
-Next we need to create a script so we can run the program on the
+Next we need to create a script so that we can run the program on the
 cluster.  We will be using our simple ring example to illustrate some
 of the parameters you need to adjust. Please save the following content to
 a file called ring.pbs.:
@@ -416,11 +416,11 @@ interpreted to be a comment. Common options include:
 
 The first parameters are rather obvious, so let us focus on the
 *-q* option. Each batch service is configured with a number of
-queues that are targeting different classes of jobs to more
-efficiently schedule them. These queues can be switch on or of,
-modified or new queues can be added to the system. It is useful to get
-a list of available queues on the system where you like to submit your
-jobs and inspect which would be most suitable to use for your
+queues that are targeting different classes of jobs to schedule them more
+efficiently. These queues can be switch on or off,
+be modified or new queues can be added to the system. It is useful to get
+a list of available queues on the system of where you would like to submit your
+jobs. You can also inspect which would be the most suitable queue to use for your
 purpose with the qstat command on the appropriate login node::
 
    $ qstat -q 
@@ -461,7 +461,7 @@ term::
 
   ppn=8 
 
-means that we use 8 virtual processors per node, while a virtual
+means that we use 8 virtual processors per node, where a virtual
 processor is typically executed on a core of the server. Thus it is
 advisable not to exceed the number of cores per server. For some
 programs choosing the best performing number of servers and cores may
@@ -473,18 +473,17 @@ For example, Alamo, Hotel, India, and Sierra have 8 cores per node,
 thus 4 servers would provide you access to 32 processing units.
 
 Often you may just want to have the stdout and stderr in one file,
-than you simply can replace the line with -e in it with:: 
+then you simply can replace the line with -e in it with:: 
 
         #PBS -j oe 
 
 which simply means that you *join* stdout and stderr. Here j stands
-for join, o for stdout and e for stderr. In case you like to have
-e-mail send to you based on the status of the job, you can achieve
-this with adding::
+for join, o for stdout and e for stderr. In case you would like to have
+an e-mail sent to you based on the status of the job, you can add::
 
         #PBS -m ae 
 
-to your script. It will send you mail when the job aborts (indicated
+to your script. It will send you a mail when the job aborts (indicated
 by a), or when the job ends (indicated by e).
 
 Job Management
@@ -507,7 +506,7 @@ qsub command to submit this job to be executed on the compute nodes::
 The qsub command outputs either a job identifier or an error message
 describing why the scheduler would not accept your job. Alternatively,
 you can also use the msub command, which is very similar to the qsub
-command. For differences we ask you to consult the man pages.
+command. For differences we ask you to consult the manual pages.
 
 Job Deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -527,7 +526,7 @@ in their output format.
 
 
 showq:
-    divides the output into three sections:  active
+    Divides the output into three sections:  active
     jobs,  eligible jobs, and blocked jobs::
 
        $ showq 
@@ -558,7 +557,7 @@ showq:
        Blocked jobs:
 	  are jobs that the scheduler cannot run for some reason. Usually
 	  a job becomes blocked because it is requesting something that
-	  is impossible, such as more nodes than currently exist, or more
+	  is impossible, such as more nodes than those which currently exist, or more
 	  processors per node than are installed.
 
 qstat:
@@ -587,7 +586,7 @@ qstat:
        Queue: 
 	  is the name of the job queue where your job will run.
 
-If you are interested in only your job by for example using grep::
+If you are interested in only your job use grep::
 
     $ qstat | grep 20311
 
@@ -610,12 +609,12 @@ If you run the job again, the output file will be overwritten.
 
 If you don't specify any output file, your job output will have the same
 name as your job script, and will be numbered in the same manner as if
-you had specified a job name (**jobname,o######**).
+you had specified a job name (**jobname.o######**).
 
 Xray HPC Services
 ----------------------------------------------------------------------
 
-To log into the login node of xreay please use the command::
+To log into the login node of xray please use the command::
 
     ssh portalname@xray.futuregrid.org
 
@@ -645,7 +644,7 @@ Submitting a Job on xray
 To execute an MPI program on xray we use a special program called aprun in
 the submit script. Additionally we have some special resource
 specifications that we can pass along, such as mppwidth and
-mppppn. An example is the following program that will use 16
+mppnppn. An example is the following program that will use 16
 processors on 2 nodes::
 
         $ cat job.pbs
@@ -685,7 +684,7 @@ will put the first eight tasks on the first node and the next two tasks
 on the second node, again leaving six empty cores on the second node.
 The user can modify the placement with -N , -S , and -cc .
 
-A user might also run a single job with multiple treads, as with OpenMP.
+A user might also run a single job with multiple treads, as with OpenMPI.
 If a user runs this job aprun -n 1 -d 8 a.out , the job will be
 scheduled to one node and have eight threads running, one on each core.
 
