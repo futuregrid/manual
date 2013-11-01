@@ -44,7 +44,7 @@ OpenStack:
     OpenStack Compute (called Nova), OpenStack Object Storage (called
     Swift), and OpenStack Image Service (called Glance). OpenStack is
     a new effort and has received considerable momentum due to its
-    openness and the support of companies. Users can find more details
+    openness and the support from companies. Users can find more details
     in the section :ref:`s-openstack`.
 
 Nimbus:
@@ -90,7 +90,7 @@ High Performance Computing:
     the more important features that the scientific community needs to
     achieve their projects. Thus, FutureGrid provides users the possibility
     of executing their parallel applications or using scientific software. A
-    guide to accessing HPC services can be found in the section :ref:`hpc`.
+    guide to accessing HPC services can be found in the section :ref:`s-hpc`.
 
 Storage: 
     Users can find different storage systems to cover a wide
@@ -159,7 +159,7 @@ Help Ticketing System:
     be looking into the ticket and working on it. You will receive updates
     and resolution through email upon the completion of the investigation.
     Please be aware that feedback may not be instantaneous. Tickets you have
-    submitted can viewed in your
+    submitted can be viewed in your
 
     -  `ticket list <https://portal.futuregrid.org/tickets>`__.
 
