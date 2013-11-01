@@ -9,14 +9,14 @@ Project and Account Management
    .. contents::
       :local:
 
-It is very easy to obtain a project and accounts on FutureGrid. While
+It is very easy to obtain a project and account on FutureGrid. While
 it is possible to just execute the three steps in our quickstart
 guide, we have provided a more in-depth description based on user
 feedback. You have certain responsibilities including **managing
 project memberships** and **reporting results** that must be conducted
 while you use FutureGrid, thus it is a good idea to read this section
 carefully.  At the end of the section we also provide a mini-FAQ
-of information that may be of help for issues you may have
+of information that may be of help with respest to issues you may have
 overlooked or that have not yet been answered.  Some screencasts about this
 topic are available in section :ref:`s-screencast-accounts`.
 
@@ -27,8 +27,8 @@ Terminology
 
 Portal Account:
   A portal account is necessary to communicate information about
-  yourself to the FutureGrid team so they can verify that you exist and
-  you are a community member with a need to use FutureGrid. Once you
+  yourself to the FutureGrid team so that they can verify your existence and
+  that you are a community member who has a need to use FutureGrid. Once you
   have a portal account approved you can apply for a project.
 
 Resource Account:
@@ -62,14 +62,14 @@ Project  Alumni:
    Sometimes project members leave a project before it is
    completed. Such members are no longer part of the project and
    should not have access to the project. However they can still be
-   acknowledged to have played a role as part of the project while
-   they are placed into the alumni role.
+   acknowledged to have played a role as part of the project by
+   being placed as a member of the alumni role.
 
 Uploaded SSH Key:
-  As you are using remote compute resources we will require that you
+  As you are using remote compute resources, we will require that you
   are very familiar with ssh key management. You will need to upload
-  a public ssh key to the portal so we can create you an account and use
-  that public ssh key to allow you to log in to the resources.
+  a public ssh key to the portal so that we can create an account for you and use
+  that public ssh key to allow you to log in to use the resources.
 
 
 .. _s-account-quickstart:
@@ -77,7 +77,7 @@ Uploaded SSH Key:
 Quickstart
 ============
 
-If you have not created a project on FutureGrid before we recommend
+If you have never created a project on FutureGrid, we recommend
 that you **do not use the quickstart guide** and instead read the full
 documentation. To remind you what you have to do here are a couple
 steps that you need to do:
@@ -185,16 +185,16 @@ Create a Project
 
 To apply for a new project, fill out the :portal:`project creation form
 <node/add/fg-projects>`.  Through this
-form we gather some important information about the project so we can
+form we gather some important information about the project so that we can
 review it for approval. This information is used to report and document 
-not only to us, but also to our sponsors, to state which activities are 
+to us as well as to our sponsors, to state which activities are 
 conducted on FutureGrid. The more precise you are in your descriptions
 and filling out the forms the better we can highlight your
 project. Once a project is approved, project members can join a
 project.  This must be conducted by the project lead.
 
-The Project Lead has agreed to certain reporting requirements to provide
-information to FutureGrid. He will be responsible to make sure that they
+It is mandatory for the project lead to agree to certain reporting requirements so
+as to provide information to FutureGrid. He will be responsible to make sure that they
 are completed and also implemented with the users joining the project.
 Thus the user is responsible to comply with the terms of the project in
 regards to reporting and acknowledgments in case of publications. Each
