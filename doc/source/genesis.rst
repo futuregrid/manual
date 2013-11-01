@@ -38,21 +38,21 @@ GenesisII can be found `here <http://www.genesis2.virginia.edu/wiki>`__.
    ByteIO, WS-Security, WS-Naming, WS-Trust, and Job Submission
    Description Language (JSDL).
 
--  Open and extensible realized with a modern Service- Oriented
+-  Open and extensible realized with a modern Service-Oriented
    Architecture (SOA), which allows to easily replace particular
    components with others.
 
 -  Interoperable with other Grid technologies to enable a coupling of
-   Grid infrastructures or the users needs
+   Grid infrastructures or the user's needs
 
--  End user focused. Whenever possible GenesisII was designed to use
+-  End user focused. GenesisII was mostly designed to use
    concepts already familiar to users (such as hierarchical directory
    structures) and to provide easy to use commands and GUIs to simplify
    the user's experience.  GenesisII provides a number of commands based
-   on familiar UNIX tools and provides GUIs for to browse the grid
+   on familiar UNIX tools and provides GUIs to browse the grid
    directory structure, monitor jobs, create JSDL job descriptions, etc.
 
--  Strong security mechanisms built in from the ground up.  Flexible
+-  Strong security mechanisms built-in from the ground up.  Flexible
    access control for all grid resources.  Support for X.509
    certificates and username/password (based on WS-Security and OGF
    Basic Security Profile).  Support for virtual organizations via
@@ -70,7 +70,7 @@ Connecting to the GenesisII BES Endpoints
 =========================================
 
 To date, three GenesisII BES endpoints have been deployed on FutureGrid
-for interoperability testing as well as grid client usage. Endpoints are
+for interoperability testing as well as grid client usage. The endpoints are
 located on Sierra, India, and Alamo. This section contains the
 information needed for other grid middleware platforms to connect to the
 GenesisII BES endpoints.
@@ -102,7 +102,7 @@ Stage out
 -  scp
 -  sftp
 
-\*\* NOTE: ftp, scp, sftp is supported as per the HPC FSE standard and
+\*\* NOTE: ftp, scp, sftp are supported as per the HPC FSE standard and
 only for the username/password security token version.
 
 Endpoint Connection Information 
@@ -111,7 +111,7 @@ Endpoint Connection Information
 India
 -------------------------------
 
-- **Endpoint EPR**: :portal:`click
+-  **Endpoint EPR**: :portal:`click
    here <sites/default/files/india-epr-Nov-01-2011.txt>`
 
 -  **Security**: configured for username/password authentication;
@@ -193,7 +193,7 @@ There are two ways a client can use the GenesisII endpoints deployed
 within Futuregrid: using a standards-compliant non-GenesisII middleware
 client or using the GenesisII client.
 
-Non-GenesisIIUsing a Standards-Compliant Client
+Non-GenesisII Using a Standards-Compliant Client
 -----------------------------------------------
 
 If you wish to use a standards-based middleware client, you may be
@@ -203,10 +203,10 @@ software you wish to use is properly compliant with the GenesisII BES
 implementation.  GenesisII BES endpoints have been tested for
 interoperability against several grid software systems.  You will need
 to contact the developer/vendor of your system to determine if their
-software is compatible with GenesisII.  Depending on your system works,
+software is compatible with GenesisII.  Depending on how your system works,
 you will either need to contact your grid system administrator to have
 him/her add the Futuregrid GenesisII BES endpoints or you will need to
-provide a reference to the endpoints to the client tooling.  In either
+provide a reference of the endpoints to the client tooling.  In either
 case, the information you or your grid administrator needs is included
 in the section above (`Connecting to the GenesisII BES
 Endpoints <#Connecting%20To%20GenesisII%20BES%20Endpoints>`__).
@@ -219,7 +219,7 @@ GenesisII has a rich client package available for Windows, MacOS and
 LINUX platforms that includes UNIX-style command line tools as well as
 several graphical user interface tools.  The University of Virginia
 maintains a grid called the Cross Campus Grid (XCG) that already
-includes the FurtureGrid GenesisII BES endpoints in it - already
+includes the FurtureGrid GenesisII BES endpoints in it, which is already
 configured and ready to go.  To get started, the first step is to
 download and install the GenesisII/XCG installation package.
 
@@ -272,40 +272,40 @@ license agreement and configuration options.
 
 -  **Agree to license terms**.  The GenesisII license follows the Apache
    License model.  For command line versions, this may require hitting
-   enter a number of time to scroll the license text on the screen.
+   enter a number of times to scroll the license text on the screen.
 -  **Select the directory for the installation**.  In most cases the
    default is sufficient, though you can feel free to change it.  As
    noted earlier, Windows Vista and 7 users should choose a directory
-   that is not given special protection from those operating systems. 
+   which is not given any special protection by the operating system. 
    For example, the default C:\\Program Files is given special treatment
    and blocks writes made there by the software.  This causes GenesisII
-   problems because GenesisII has a patch mechanism built which needs to
+   problems, since GenesisII has a built-in patch mechanism which needs to
    overwrite package files in the installation directory.  For Windows
    7/Vista, we recommend a directory within your user folder.
 -  **Client v Full Container Install.**  The entire GenesisII software
-   package is included in the installer.  This includes both client-side
-   command line tools and GUIs as well as server-side programs for
+   package is included in the installer.  This includes both the client-side
+   command line tools and GUIs as well as the server-side programs for
    installing grid servers.  We recommend installing the client only
-   version.  Select XCG Client Install option.  
+   version.  Select the XCG Client Install option.  
 -  **Shortcuts/Start Menu options.**  For Windows users, you can select
-   whether to create a shortcut for all users (default yes), create a
+   whether you want to create a shortcut for all users (default yes), create a
    start menu item for GenesisII (default: yes) and pick a name for the
    start menu folder (default: GenesisII).  The defaults are
-   recommended, but you can change if you like.  For Linux and MacOS,
+   recommended, but you can change it if you like.  For Linux and MacOS,
    you can choose whether to create shortcuts in the standard binary
    directory (Linux: /usr/bin; MacOS: /Applications/?).  Unless you are
-   installing with root privileges, we recommend choosing "No" to this
+   installing it with root privileges, we recommend choosing "No" to this
    question.
 
-That's it.  Since the installer is specific to the UVA Cross Campus
-Grid, you not only have GenesisII successfully installed, but you have
-also configured your system to connect to the XCG.
+Since the installer is specific to the UVA Cross Campus
+Grid, you have now not only have GenesisII successfully installed, 
+but you have also configured your system to connect to the XCG.
 
 
 Getting Started
 ---------------
 
-To get started using the XCG, you will need an XCG account - which is
+To start using XCG, you will need an XCG account, which is
 **not** the same as your local machine account or your FutureGrid
 resource account. To request an XCG account, fill out the XCG user
 application form located at
@@ -323,9 +323,8 @@ directory.
 Windows
 ^^^^^^^
 
-Double click the "grid" file in the installation directory;
-or
-Open a Windows command line window, cd to the installation directory,
+Double click the "grid" file in the installation directory or
+open a Windows command line window, cd to the installation directory,
 and enter the grid.exe command.
 
 Linux or MacOS
@@ -342,9 +341,9 @@ command
      $> cd <installation directory>
      $> grid
 
-**LogIn**
+**Login**
 Once you have a grid shell open, you need to be logged into your XCG
-grid account in order to perform most useful commands. First check to
+grid account in order to perform more useful commands. First check to
 see if you are already logged in - the "whoami" command prints out your
 current credentials. If you are not logged in, it should look like this
 (the Client Tool Identity is an automatically generated certificate used
@@ -372,12 +371,12 @@ window will prompt you for your password
      "uva-idp-group.2010" -> "Client Cert EFC05BB7-295A-B313-E0E0-95A8CE61EB68" 
      $XCG> 
 
-The output from the post-login whoami command indicates that I have 2
-new certificates - one that asserts that I am user jfk3w, and another
-that asserts that I have the permissions of the group
+The output from the post-login whoami command indicates that you have 2
+new certificates - one that asserts that you are user jfk3w, and another
+that asserts that you have the permissions of the group
 "uva-idp-group.2010".  The XCG uses the uva-idp-group.2010 to set
 permissions for all approved XCG users.  Your membership in this group
-is done by XCG administrators when you account is created.  If you later
+is done by XCG administrators when your account is created.  If you later
 create new groups or are added to other existing groups, your login will
 automatically acquire the extra credentials to assert that you are a
 member of that group (assuming the group allows you access).
