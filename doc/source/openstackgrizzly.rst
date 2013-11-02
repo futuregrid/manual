@@ -447,7 +447,7 @@ how you can access them.
 
        keystone ec2-credentials-create
 
-#. Create the file calle *~/.futuregrid/eucarc*   and put your EC2_ACCESS_KEY and
+#. Create the file called *~/.futuregrid/eucarc*   and put your EC2_ACCESS_KEY and
    EC2_SECRET_KEY that you obtained from the previous command into
    this file::
 
@@ -466,7 +466,7 @@ how you can access them.
 #. Confirm if euca2ools works::
 
        module load euca2ools
-       source ~/eucacreds/eucarc
+       source ~/.futuregrid/eucarc
        euca-describe-images
        euca-describe-instances
 
@@ -491,7 +491,7 @@ Alamo an older version of openstack is run.
      - Description
    * - |image-horizon| 
      - Grizzly
-     - `Sierra <http://openstack.sierra.futuregrid.org/horizon>`__
+     - `Sierra <http://openstack-sierra.futuregrid.org/horizon>`__
      - Sierra offers a Graphical user interface to access
        OpenStack. For those interested in only managing a view images
        this may be a good way to start. The link to the GUI is 
@@ -510,9 +510,10 @@ Alamo an older version of openstack is run.
        The link to the GUI is 
        https://openstack.futuregrid.tacc.utexas.edu/horizon
 
+Getting rc files via Horizon
+----------------------------
 
-
-
+On alamo, you can also get your ec2 rc file from the "settings" menu. 
 
 
 

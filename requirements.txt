@@ -8,7 +8,7 @@ sphinxjp.shibukawa
 sphinxcontrib-blockdiag
 sphinxcontrib-actdiag
 sphinxcontrib-exceltable
-watchdog
+sphinxcontrib-autorun
 Pygments
 numpy
 numpydoc
