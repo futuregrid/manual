@@ -9,14 +9,14 @@ Project and Account Management
    .. contents::
       :local:
 
-It is very easy to obtain a project and accounts on FutureGrid. While
+It is very easy to obtain a project and account on FutureGrid. While
 it is possible to just execute the three steps in our quickstart
 guide, we have provided a more in-depth description based on user
 feedback. You have certain responsibilities including **managing
 project memberships** and **reporting results** that must be conducted
 while you use FutureGrid, thus it is a good idea to read this section
 carefully.  At the end of the section we also provide a mini-FAQ
-of information that may be of help for issues you may have
+of information that may be of help with respest to issues you may have
 overlooked or that have not yet been answered.  Some screencasts about this
 topic are available in section :ref:`s-screencast-accounts`.
 
@@ -27,8 +27,8 @@ Terminology
 
 Portal Account:
   A portal account is necessary to communicate information about
-  yourself to the FutureGrid team so they can verify that you exist and
-  you are a community member with a need to use FutureGrid. Once you
+  yourself to the FutureGrid team so that they can verify your existence and
+  that you are a community member who has a need to use FutureGrid. Once you
   have a portal account approved you can apply for a project.
 
 Resource Account:
@@ -41,9 +41,8 @@ Valid Project:
   valid project is one that is approved by a committee. If you are not
   in a valid, active project your access to FutureGrid will be
   blocked. Projects that do not report any progress will be blocked
-  after a while. Note that you agree to update us with regular
-  results reported via the portal as part of your agreement to
-  use FutureGrid. 
+  after a while. Note that you agree to update regular results via the 
+  portal as part of your agreement to use FutureGrid. 
 
 Project Lead:
    The Project Lead submits a project and is responsible for updating
@@ -61,16 +60,16 @@ Project  Member:
 
 Project  Alumni:
    Sometimes project members leave a project before it is
-   completed. SUch members are no longer part of the project and
+   completed. Such members are no longer part of the project and
    should not have access to the project. However they can still be
-   acknowledged to have played a role as part of the project while
-   they are placed into the alumni role.
+   acknowledged to have played a role as part of the project by
+   being placed as a member of the alumni role.
 
 Uploaded SSH Key:
-  As you are using remote compute resources we will require that you
+  As you are using remote compute resources, we will require that you
   are very familiar with ssh key management. You will need to upload
-  a public ssh key to the portal so we can create you an account and use
-  that public ssh key to allow you to log in to the resources.
+  a public ssh key to the portal so that we can create an account for you and use
+  that public ssh key to allow you to log in to use the resources.
 
 
 .. _s-account-quickstart:
@@ -78,7 +77,7 @@ Uploaded SSH Key:
 Quickstart
 ============
 
-If you have not created a project on FutureGrid before we recommend
+If you have never created a project on FutureGrid, we recommend
 that you **do not use the quickstart guide** and instead read the full
 documentation. To remind you what you have to do here are a couple
 steps that you need to do:
@@ -99,8 +98,8 @@ For XSEDE users:
 #. Please go to the `XSEDE portal <http://www.xsede.org>`__ and apply for an XSEDE portal
    account.
 #. Create a new project as documented in the :portal:`XSEDE portal allocations page
-   <ions>` or ask you XSEDE project lead
-   to join you to the project.
+   <ions>` or ask your XSEDE project lead
+   to add you to the project.
 #. It will take some time to get your account activated 
 
 
@@ -152,8 +151,8 @@ Here are a few tips that make it easy for you
 -  It is important that you specify your address information completely.
 -  If you are a graduate or undergraduate student please fill out your
    advisor's contact information in the field specially dedicated for it.
-   If he has a FutureGrid Portal name, please also add his portal name
-   if you know it in that field.
+   If he has a FutureGrid Portal name, please include his portal name
+   if you know it.
 -  If you have an e-mail address from your institution, we ask that you
    use this address instead of one from gmail, hotmail, or other e-mail
    services that we cannot trace back to your name or institution.
@@ -169,7 +168,7 @@ Here are a few tips that make it easy for you
    approval will take 1-2 days; if we have problems verifying your
    data or something else is not right your approval will be
    delayed. If you appear to be a spammer we will not notify you.
--  If you are teaching a class class we have some special
+-  If you are teaching a class, we have some special
    instructions for you in Section :ref:`s-account-class`.
 -  After your account has been approved, you can correct the
    information as part of the portal account :portal:`User Profile
@@ -186,20 +185,20 @@ Create a Project
 
 To apply for a new project, fill out the :portal:`project creation form
 <node/add/fg-projects>`.  Through this
-form we gather some important information about the project so we can
-review it for approval. This information is used to report and
-document not only to us but also to our sponsors which activities are
+form we gather some important information about the project so that we can
+review it for approval. This information is used to report and document 
+to us as well as to our sponsors, to state which activities are 
 conducted on FutureGrid. The more precise you are in your descriptions
 and filling out the forms the better we can highlight your
 project. Once a project is approved, project members can join a
 project.  This must be conducted by the project lead.
 
-The Project PI has agreed to certain reporting requirements to provide
-information to FutureGrid. He will be responsible to make sure that they
+It is mandatory for the project lead to agree to certain reporting requirements so
+as to provide information to FutureGrid. He will be responsible to make sure that they
 are completed and also implemented with the users joining the project.
 Thus the user is responsible to comply with the terms of the project in
 regards to reporting and acknowledgments in case of publications. Each
-project PI has the responsibility to communicate such requirements to
+project Project Lead has the responsibility to communicate such requirements to
 the members and managers. The project agreements override the
 individuals agreement. 
 
@@ -251,7 +250,7 @@ for your own class projects (:download:`project.txt`)::
    - [ ] Research
    - [x] Education
    - [ ] Industry
-   - [ ]  Government
+   - [ ] Government
 
    Primary Discipline: *
      Computer Science
@@ -265,7 +264,7 @@ for your own class projects (:download:`project.txt`)::
    This course will introduce the students at Indiana University as
    part of the Summer Semester 2012 into the essentials of Cloud
    Computing and HPC. We will start the course by teaching the
-   students within one week python. As cloud computing framework we
+   students python within one week. As cloud computing framework we
    have chosen OpenStack, as it has become one of the ubiquitous IaaS
    frameworks and is available on FutureGrid (Sierra). Additionally,
    we will teach the students how to program a simple MPI application
@@ -276,7 +275,7 @@ for your own class projects (:download:`project.txt`)::
    metrics system a scheduler that enables us to use bare metal
    provisioned clusters and virtualized clusters on-demand based on
    resource requirements and specifications. We are aware that the
-   FutureGrid team is developing such an environment, and like to join
+   FutureGrid team is developing such an environment, and would like to join
    the efforts throughout our course with the contributions conducted
    by the students. 
 
@@ -297,7 +296,7 @@ for your own class projects (:download:`project.txt`)::
       4. Programming OpenStack
       5. Programming a HPC Cluster
       6. Creating a Virtual Cluster
-      7. Performance Comparision
+      7. Performance Comparison
       8. Cloud Metrics
       9. Cloudmesh
       10. Joining FutureGrid Software Developments
@@ -340,7 +339,7 @@ for your own class projects (:download:`project.txt`)::
    ===================
 
    The course will be introducing the students to cloud computing and
-   will aslo be used to derive new class materiel that we will be
+   will also be used to derive new class materiel that we will be
    using in subsequent lessons.
 
    Broader Impact: *
@@ -350,8 +349,8 @@ for your own class projects (:download:`project.txt`)::
    computing programming. Cloud computing is an important factor in
    job availability after graduation of students, thus this course
    will be useful to increase marketability of the students. In
-   addition we have in tha past also been able to increase
-   participation of minority students. In tha past we had 10 minority
+   addition we have in the past also been able to increase
+   participation of minority students. In the past we had 10 minority
    students and 9 female students taking this class. We intend to work
    together with Gregor von Laszewski and improve the FutureGrid
    manual and to make our course material available via FutureGrid
@@ -360,7 +359,7 @@ for your own class projects (:download:`project.txt`)::
    Scale of use: *
    =============
 
-   We anticipate the the course will have 30-35 students. The course
+   We anticipate the course will have 30-35 students. The course
    will be using OpenStack and HPC compute resources and requires for
    selected students access to bare metal provisioning.  The course
    will not require to run computationally intense
@@ -387,14 +386,14 @@ the portal. To do this, first view the :portal:`project list <projects>` and go 
 detail page by clicking the project title. If the project is set by the
 project lead to "accept join request", then you'll see a large gray
 'Join this project' button in the upper right corner of the page. Click
-the button to send the join request to the project lead and manager so
+the button to send the join request to the project lead and manager so that
 they can process your request.
 
 .. include:: account-diag-join-project.rst
 
 .. _s-account-delete:
 
-Delete or Deactivate a user form a Project
+Delete or Deactivate a user from a Project
 -------------------------------------------
 
 Deletion of a user can be a complex process if a user has used FG
@@ -412,7 +411,7 @@ access. Put in your subject line the prefix URGENT.
 Reporting Results
 ----------------------------------------------------------------------
 
-It is important to report regularly results about your projects to
+It is important to regularly report results of your projects to
 FutureGrid. Please fill out this section and report upon the
 achievements of this project. You find your projects in a 
 
@@ -420,7 +419,7 @@ achievements of this project. You find your projects in a
 
 Also upload references that you have produced for this project. You
 can upload when visiting your project and using the plus button in
-your projects. The reference will than be added and added for you to
+your projects. The reference will then be added and added for you to
 the portal.
 
 
@@ -430,8 +429,7 @@ Close a Project
 ----------------------------------------------------------------------
 
 Closing a project is an important responsibility of every project
-lead.  If you forgot which project you like to close or you have
-multiple projects, you can find a 
+lead.  Incase you forget which project you want to close, you can find the 
 
 * `list of projects you lead or manage <https://portal.futuregrid.org/manage-my-portal-account>`__
 
@@ -443,7 +441,7 @@ have produced for this project. In each case, please make sure that
 you only upload/report references directly related to this project.
 After you have requested a project closing, our project committee will
 work with you to make sure we have sufficient results from you. Once a
-project is closed all members will be notified. The committee may ask
+project is closed, all its members will be notified. The committee might ask
 you for additional results even after the project is closed.
 
 
@@ -477,7 +475,7 @@ may be deactivated if you violate this policy.
 Upload an OpenId 
 ==================
 
-Often users may not remember the pasword or username of the FG
+Often users may not remember the password or username of the FG
 portal. However, they may have an easier time to remember their openid
 from for example google. It is possible to use your openid account and
 register it once you gain access to the portal. Please visit your 
@@ -492,9 +490,9 @@ click on the Google icon.
 Accessing FutureGrid Resources
 ===========================
 
-To access and use resources, you must have 
+To access and use resources, you must 
 
-- a portal account
+- have a portal account
 - be part of a valid project
 - have uploaded a public key to the portal that you will use to log
   into some of its resources.
@@ -502,7 +500,7 @@ To access and use resources, you must have
 Once these conditions are met, you will be able to access the
 resources and services that your project has requested and been
 authorized to use. See the section :ref:`s-services` for a list of FutureGrid
-resources and services This includes cloud and HPC resources. Accounts
+resources and services. This includes cloud and HPC resources. Accounts
 to these resources will be automatically generated once you have
 conducted the above steps. The turnaround time for you getting access
 to the system is typically between 30 minutes and one day.
@@ -521,8 +519,8 @@ If you teach a class using FutureGrid resources we recommend you do the followin
    as support of minorities, what will be learned, the course syllabus
    if available, a link to the course web page if available, the
    duration of the course including a time when the course is
-   completed. We typically add a month so that incomplets can be done
-   easily. 
+   completed. We typically add a month so that incomplete projects can be
+   completed easily. 
 #. Make sure you enable the join button of the project, this will
    allow your students to join via a button click and you can easily
    approve or reject join requests. Come up with a "signup code" to be
@@ -532,7 +530,7 @@ If you teach a class using FutureGrid resources we recommend you do the followin
    support team via a ticket submitted through
    https://portal.futuregrid.org/help. Make sure you specify your
    project number. Often it is also helpful to send a list of students
-   to us s we can assist them easier during the application
+   to us so that, it is easier for us to assist them during the application
    process. 
 #. Make sure your students sign up for a FutureGrid portal account and
    that they specify their profile information precisely. This
@@ -547,7 +545,7 @@ If you teach a class using FutureGrid resources we recommend you do the followin
    portal users can add ssh keys when they go to the my portal
    section.
 
-#. Wait.  It will take some time for the accounts to be created AFTER
+#. It will take some time for the accounts to be created after
    an ssh key is uploaded, and the student is added to your approved
    projects.  Communicate to the students to wait. We only approve
    accounts during business hours and it can take up to 24 business
@@ -555,31 +553,31 @@ If you teach a class using FutureGrid resources we recommend you do the followin
    any questions on the weekends. 
 
 #. Once a student has an account on the portal, please make sure you
-   add the student to your project member. This is important as only people
+   add the student to your project. This is important as only people
    that are assigned to a valid FutureGrid project can have accounts
-   on FutureGrid resources. Your project will have by default a
-   project join request that makes it easy to join your
-   project. Provide the link to the students so they join. A
-   convenient management button provided for you to verify that the
-   student is indeed a person that needs to be in your project. The
-   join button can be disabled by you and you could instead also add
-   your students by while entering their portal names.
+   on FutureGrid resources. Your project will by default have a
+   project join request, which makes it easier for students to join your
+   project. Provide the link to the students so that they can join. A
+   convenient management button is provided where you can verify that the
+   student is indeed a person that is to be part of your project. The
+   join button can be disabled by you and you could instead add
+   your students while entering their portal names.
 
-   Hence, You will be able to manage the join of students yourself. Be
+   Hence, you will be able to manage the joining of students yourself. Be
    careful that you only join those students that are in your
    class. Please remember that a signup code is not really secret and
    that students may exchange the code with others. Thus it is a good
    idea to still verify if the user with the signup code is a member
-   of your class. Also be reminded that some students are forgetting
+   of your class. Also be reminded that some students forget
    to specify the signup code at time of their account creation. You
-   have to deal with such forgetful students as a signup code can not
+   have to deal with such forgetful students as a signup code cannot
    be added.
 #. If the student roster is changing, just edit the project details
-   and add, remove them or move them to the alumni status. 
+   and add/remove them or move them to the alumni status. 
 #. If student projects are due on Mondays remind them not to start
-   their project on Sunday night and they find out they do not have an
-   account ;-) Generally we recommend to make due dates of projects to
-   be Thursdays till 5pm or Friday mornings. Be reminded that the
+   their project on Sunday night incase they find out they do not have an
+   account. Generally we recommend to make due dates of projects to
+   be Thursdays till 5pm or Friday mornings. Be reminded that on the
    first Tuesday of each month all machines will be shut down and all
    unsaved running VMs or ongoing work may be lost. Please plan around this.
 
@@ -612,14 +610,14 @@ Mini FAQ
 
 * Why Do I See in the Project Table "Please Sign Up"? 
 
-  - If you are owner of a project and see this information under
+  - If you are the owner of a project and see this information under
     project lead or manager, you may not yet have signed up for a
     portal account. Please sign up for one, and we will change it in
     the project view for you.
 
 * Why do I need to provide the email address from my university? 
 
-  - It may take longer to approve your account. see :ref:`s-account-create-account`
+  - It may take longer to approve your account. See :ref:`s-account-create-account`
 
 * How long will it take for my portal account to be approved? 
 

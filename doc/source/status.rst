@@ -9,7 +9,7 @@ The status of the resources and services can be accessed through:
 -  :portal:`https://portal.futuregrid.org/status <status>`
 
 This page also contains a link to our operational status of FutureGrid
-resources and services, see the FutureGrid Inca server at:
+resources and services. See the FutureGrid Inca server at:
 
 -  `http://inca.futuregrid.org <http://inca.futuregrid.org/>`__
 
@@ -23,7 +23,7 @@ window.
 
 You can find a list of outages :portal:`here <outages_all>`
 including an :portal:`RSS <feeds/fg_outages_all_rss.xml>` feed.
-A subset of the most recent autages are posted on the frontpage. 
+A subset of the most recent outages are posted on the frontpage. 
   
 
 .. list-table:: System Information
@@ -40,7 +40,7 @@ A subset of the most recent autages are posted on the frontpage.
          found \ `here <http://inca.futuregrid.org:8080/inca/jsp/partitionTable.jsp>`__ and `here <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?suiteNames=Info&xsl=info.xsl>`__.
    * - |image13| 
      - `Status of FutureGrid services <http://inca.futuregrid.org:8080/inca/jsp/status.jsp?queryNames=Health&xsl=table.xsl&resourceIds=FutureGrid>`__
-     - Lists the status of keyFutureGrid services (e.g., SSH, Nimbus,
+     - Lists the status of key FutureGrid services (e.g., SSH, Nimbus,
        Eucalyptus) in a sortable table.
    * - |image14| 
      - `Ganglia <http://ganglia.futuregrid.org>`__
@@ -65,7 +65,7 @@ A subset of the most recent autages are posted on the frontpage.
      - Metric system provides an integrated accounting service to view
        cloud usage statistics and graphs regarding the utilization of
        virtual machine (VM) instances. Includes usage stats for
-       EUcalyptus, Nimbus, and OpenStack.
+       Eucalyptus, Nimbus, and OpenStack.
    * - |image19|
      - `System software version info <http://inca.futuregrid.org:8080/inca/HTML/rest/HPC/FutureGrid>`__
      - The version info of the installed system software across

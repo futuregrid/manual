@@ -41,10 +41,10 @@ users include
 * `putty <http://the.earth.li/~sgtatham/putty/0.62/htmldoc/>`__
 * or installing a `virtualiztion software
   <http://cygwin.com/install.html>`__ and running Linux virtual
-  machine on your Windows OS and using that
+  machine on your Windows OS.
 
 For a real quick start we recommend you use Cygwin (Linux-like environment for Windows)
-because it will ease your experience with FutureGrid and provides you
+because it will ease your experience with FutureGrid and provide you
 with a command shell that is Linux like. If you have cygwin already
 installed, please use it, but make sure you have ssh installed. If
 not, we have made it even easier for you as we prepared a special
@@ -71,7 +71,7 @@ following simple steps.
      - Execute the file the 'Windows Batch File' called Cygwin.bat
      - 
    * - Step 4
-     - You may get a warning. Click in the Run button
+     - You may get a warning. Click on the Run button
      - |image22|
    * - Step 5
      - You get a Linux-like terminal that will allow you to continue
@@ -88,7 +88,7 @@ Generate a SSH key
 
 .. sidebar:: |info-image| Hint
 
-   In case you do not want to type in al the tyme your password,
+   In case you do not want to type in your password everytime,
    please learn about ssh-agent and ssh-add.
 
 First we must generate a ssh key with the tool `ssh-keygen
@@ -96,29 +96,26 @@ First we must generate a ssh key with the tool `ssh-keygen
 available on most UNIX systems (this includes Cygwin if you installed
 the ssh module or use our pre-generated cygwin executable). It will
 ask you for the location and name of the new key. It will also ask you
-for a passphrase, which you **MUST** provide. We have
-seen advise by teachers and teaching assistants to not use
-passphrases: this is **WRONG** as it allows someone that gains access
-to your computer to also gain access to all resources that have the
-public key. Also, please use a strong passphrase to protect it appropriately. 
-We recommend using the default location ~/.ssh/ and the
-default name id\_rsa. If you already have a key with a passphrase, you
-naturally can reuse it, and skip this section. Otherwise, please
-continue. To generate the key, please type::
+for a passphrase, which you **MUST** provide. Some teachers and teaching 
+assistants advice you to not use passphrases. This is **WRONG** as it 
+allows someone that gains access to your computer to also gain access to 
+all resources that have the public key. Also, please use a strong passphrase 
+to protect it appropriately. 
+
+In case you already have a ssh key in your machine, you can reuse it and skip this whole section.
+
+To generate the key, please type::
 
 Example::
 
     ssh-keygen -t rsa -C localname@indiana.edu
 
-
-
 This command requires the interaction of the user. The first question is::
 
     Enter file in which to save the key (/home/localname/.ssh/id_rsa): 
 
-We recommend you use the default. To do so, just press the enter key. In
-case you already have a ssh key in your machine, you can skip this whole
-section or use a different file name.
+We recommend using the default location ~/.ssh/ and the default name id\_rsa. 
+To do so, just press the enter key.
 
 .. sidebar:: |info-image| Hint 
 
@@ -150,7 +147,7 @@ If executed correctly, you will see some output similar to::
     Your public key has been saved in /home/localname/.ssh/id_rsa.pub.
     The key fingerprint is:
     34:87:67:ea:c2:49:ee:c2:81:d2:10:84:b1:3e:05:59 localname@indiana.edu
-    The key's randomart image is::
+    The key's random art image is::
 
     +--[ RSA 2048]----+
     |.+...Eo= .       |
@@ -161,7 +158,7 @@ If executed correctly, you will see some output similar to::
 
 
 Once, you have generated your key, you should have them in the .ssh
-directory. You can chek it by ::
+directory. You can check it by ::
 
     $ cat ~/.ssh/id_rsa.pub
 
@@ -237,11 +234,11 @@ Testing your ssh key
 -----------------------
 
 If you have had no FutureGrid
-account before, you need to wait for up to two busisiness days so we
-can verify your identity and create the account. SO please wait.
-Otherwise, tseisting your new key is almost instanteneously on india.
+account before, you need to wait for up to two business days so we
+can verify your identity and create the account. So please wait.
+Otherwise, testing your new key is almost instantaneous on india.
 For other clusters like Hotel, it can take
-around 10 minutes to update the ssh keys. 
+around 30 minutes to update the ssh keys. 
 
 To log into india simply type the usual ssh command such as:: 
 
@@ -253,24 +250,24 @@ The first time you ssh into a machine you will see a message like this::
     RSA key fingerprint is f8:96:15:b7:21:eb:64:92:6c:de:e0:79:f3:fb:86:dd.
     Are you sure you want to continue connecting (yes/no)? yes 
 
-You have to type yes and press enter. Than you will be logging into
+You have to type yes and press enter. Then you will be logging into
 india. Other FutureGrid machines can be reached in the same
-fashion. Just replave the name india, with the appropriate FG resource name.
+fashion. Just replace the name india, with the appropriate FG resource name.
 
 
 Testing your ssh key for Hotel
 --------------------------------
 
 After uploading your ssh key, it can take around 30 minutes to update
-the ssh keys of Hotel. So, if you were able to log onto India, you have
-set up properly your ssh key. So, after a while you will be able to log
+the ssh keys of Hotel. After this, if you are able to log into India, you have
+properly set up your ssh key. So, after a while you will be able to log
 onto Hotel.  
 
 If you placed the ssh key in the default location::
 
     $ ssh -A portalname@hotel.futuregrid.org
 
-.. hint:: |info-image| the presence of the -A argument above is required for Nimbus.
+.. hint:: |info-image| The presence of the -A argument above is required for Nimbus.
 
 .. hint:: |info-image| If you are asked for a **password** when trying to ssh onto
    Hotel, do **NOT** type any password. This means that your ssh key is

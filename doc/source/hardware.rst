@@ -9,8 +9,8 @@ Hardware
    .. contents::
       :local:
 
-FutureGrid is build out of a number of clusters of different type and
-size that are interconected with up to a 10GB Ethernet among its sites.
+FutureGrid is built out of a number of clusters of different types and
+sizes that are interconnected with up to a 10GB Ethernet between its sites.
 
 The sites include Indiana University, University of Chicago, San Diego
 Supercomputing Center, Texas Advanced Computing Center, and University
@@ -39,7 +39,7 @@ overview of some imporatnt information about these clusters.
    :selection: A1:J28
    :sheet: fg-cluster-details
 
-FutureGrid systems team members are working on enhancements that could lead to increases in the number of cores, memory size, and scratch space.  We will keep you up to date on developments.
+FutureGrid systems team members are working on enhancements that could lead to increase in the number of cores, memory size, and scratch space.  We will keep you up to date on the developments.
 
 .. csv-table:: Storage Resources
    :header:  System Type   , Capacity (TB)      , File System   , Site    
@@ -69,7 +69,7 @@ Networks
 
  
 
-The FutureGrid network provides for connectivity among FutureGrid
+The FutureGrid network provides connectivity among FutureGrid
 participants, and network access to the Network Impairments Device
 (NID).  Five participants connect through a variety of network
 providers (see :ref:`f-network-logical`). Interconnects at the Indiana
@@ -83,7 +83,7 @@ researchers nationally and internationally.
    :width: 400px
    :align: left
 
-   Figure: Logigal Network Diagram
+   Figure: Logical Network Diagram
 
 .. _f-network-juniper:
 
@@ -110,7 +110,7 @@ provides a special feature labeled ‘firewall based forwarding’,
 allowing seamless integration with network impairments.
 The GlobalNOC at Indiana University provides network engineering
 services, and email and phone support. GlobalNOC resources for public
-wan information can be found at `http://noc.futuregrid.org/
+WAN information can be found at `http://noc.futuregrid.org/
 <http://noc.futuregrid.org/>`__. Available tools include:
 
 .. list-table::
@@ -206,7 +206,7 @@ Below is further information about networking:
 Network Impairments Device (NID)
 ======================================================================
 
-Researchers on FutureGrid may perodically employ the use of a Spirent
+Researchers on FutureGrid may periodically employ the use of a Spirent
 XGEM, a Network Impairments Emulator.  The XGEM allows users to
 accurately create the delays and impairments that occur over live
 production networks for validating and evaluating new products and
