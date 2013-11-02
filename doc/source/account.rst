@@ -27,7 +27,7 @@ Terminology
 
 Portal Account:
   A portal account is necessary to communicate information about
-  yourself to the FutureGrid team so that they can verify your existence and
+  yourself to the FutureGrid team so that they can verify your identity and
   that you are a community member who has a need to use FutureGrid. Once you
   have a portal account approved you can apply for a project.
 
