@@ -10,7 +10,7 @@ Preface
 FutureGrid is a project led by Indiana University and funded by the
 National Science Foundation (NSF) to develop a high-performance grid
 test bed that will allow scientists to collaboratively develop and
-test innovative approaches to parallel, grid, and cloud computing.
+test innovative approaches to parallel, grid and cloud computing.
 FutureGrid will provide the infrastructure to researchers to allow
 them to perform their own computational experiments using distributed
 systems. The goal is to make it easier for scientists to conduct such
@@ -20,7 +20,7 @@ FutureGrid users will be able to deploy their own hardware and software
 configurations on a public/private cloud, and run their experiments.
 They will be able to save their configurations and execute their
 experiments using the provided tools. The FutureGrid test bed is
-composed of a high-speed network connecting distributed clusters of high
+composed of a high-speed network, connecting distributed clusters of high
 performance computers. FutureGrid will employ virtualization technology
 that will allow the test bed to support a wide range of operating
 systems.
@@ -108,7 +108,7 @@ community activities, please contact Gregor
 at `laszewski@gmail.com <mailto:laszewski@gmail.com>`__. We welcome
 additional contributors and editors to this manual.
 
-Enjoy using and expanding the FutureGrid User Manual!
+Enjoy using and expanding the FutureGrid User Manual.
 
 Gregor von Laszewski
 
