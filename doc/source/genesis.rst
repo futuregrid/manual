@@ -219,7 +219,7 @@ GenesisII has a rich client package available for Windows, MacOS and
 LINUX platforms that includes UNIX-style command line tools as well as
 several graphical user interface tools.  The University of Virginia
 maintains a grid called the Cross Campus Grid (XCG) that already
-includes the FurtureGrid GenesisII BES endpoints in it, which is already
+includes the FurtureGrid GenesisII BES endpoints in it and is already
 configured and ready to go.  To get started, the first step is to
 download and install the GenesisII/XCG installation package.
 
@@ -237,8 +237,8 @@ Linux
 
 The Linux installer is a shell script named XCG-Installer.sh encoded
 with the entire GenesisII package inside.  Simply execute the shell
-script (./XCG-Installer in proper directory) to begin installation. 
-Follow the steps here in answering the installation questions.
+script (./XCG-Installer in the proper directory) to begin installation. 
+Follow the steps below to answer the installation questions.
 
 
 Windows
@@ -246,7 +246,7 @@ Windows
 
 The Windows installer is an executable named XCG-Installer.exe. 
 Simply run it like any other executable (e.g. double-clicking) and
-follow the steps here in answering the installation questions.
+follow the steps below to answer the installation questions.
 
 Note that currently, the GenesisII software is only tested for
 Windows XP.  However, our early experience with Windows 7 (and Vista)
@@ -260,8 +260,8 @@ MacOS
 
 The MacOS installer is a dmg file named XCG-Installer.dmg encoded with
 the entire GenesisII package inside.  Simply execute the dmg file (e.g.
-by double clicking) to begin installation.  Follow the steps here in
-answering the installation questions.
+by double clicking) to begin installation.  Follow the steps below to
+answer the installation questions.
 
 
 Installing the GenesisII/XCG Client Package
@@ -308,8 +308,7 @@ Getting Started
 To start using XCG, you will need an XCG account, which is
 **not** the same as your local machine account or your FutureGrid
 resource account. To request an XCG account, fill out the XCG user
-application form located at
-:portal:`http://www.cs.virginia.edu/~vcgr/userrequest <vcgr/userrequest/>`.
+application form located at `http://www.cs.virginia.edu/~vcgr/userrequest <http://www.cs.virginia.edu/~vcgr/userrequest>`__.
 
 Once you have an account and have the appropriate GenesisII software
 installed, you are ready to start a GenesisII grid shell and login.
@@ -396,7 +395,7 @@ and Engineering (UVACSE) group at uvacse@virginia.edu.  You can also use
 the `GenesisII web
 site <http://www.genesis2.virginia.edu/wiki/Main/HomePage>`__ and the
 `XCG web
-site <http://www.cs.virginia.edu/~xcgshare/wiki/index.php/Homepage>`__
+site <http://genesis2.virginia.edu/wiki/Main/TheUVaCrossCampusGrid>`__
 to look at further documentation and FAQs
 
 +-------------------------------------------------------------------------------------------------------------------+-----------+
