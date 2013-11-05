@@ -43,7 +43,7 @@ OpenStack:
     public and private clouds. These components currently include
     OpenStack Compute (called Nova), OpenStack Object Storage (called
     Swift), and OpenStack Image Service (called Glance). OpenStack is
-    a new effort and has received considerable momentum due to its
+    a new effort that has received considerable momentum due to its
     openness and the support from companies. Users can find more details
     in the section :ref:`s-openstack`.
 
@@ -60,8 +60,8 @@ Nimbus:
 
 Eucalyptus:
     Eucalyptus is an open-source software platform that implements
-    IaaS-style cloud computing. Eucalyptus provides a Amazon Web
-    Services (AWS) compliant EC2-based web service interface for
+    IaaS-style cloud computing. Eucalyptus provides Amazon Web
+    Services (AWS) that are compliant with EC2-based web service interface for
     interacting with the Cloud service. Eucalyptus also provides
     services such as the AWS-compliant Walrus and a user interface for
     managing users and images.  Users can find more details in the
@@ -121,7 +121,7 @@ the section :ref:`s-hardware`.
 Support
 -------------
 
-Whe have the following activities that help you with FutureGrid.
+We have the following activities that help you with FutureGrid.
 
 Manual:
     The best place to start obtaining information about FutureGrid is this
@@ -156,8 +156,8 @@ Help Ticketing System:
     in which you describe problems like feature request, or bug report. A
     ticket will be automatically generated and you'll receive an auto-reply
     mail with the ticket number for further reference. FutureGrid staff will
-    be looking into the ticket and working on it. You will receive updates
-    and resolution through email upon the completion of the investigation.
+    look into the ticket and work on it. You will receive updates
+    and verdicts via email, upon the completion of the investigation.
     Please be aware that feedback may not be instantaneous. Tickets you have
     submitted can be viewed in your
 
