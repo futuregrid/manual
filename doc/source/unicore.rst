@@ -26,63 +26,63 @@ Introduction
 `UNICORE 6 <http://www.unicore.eu/download/unicore6%A0>`__ has been
 deployed at various FutureGrid sites. This tutorial explains how to
 connect to the existing FutureGrid UNICORE endpoints from other grid
-middleware platforms or a UNICORE Commandline Client (UCC) as well as
-how runs jobs on UNICORE sites and how to deploy a new UNICORE grid.
+middleware platforms or a UNICORE Commandline Client (UCC). It also explains
+how to run jobs on UNICORE sites and how to deploy a new UNICORE grid.
 
 What is UNICORE?
 ================
 
 UNICORE (Uniform Interface to Computing Resources) is a Grid middleware
-system. Listed below are the key principles of the UNICORE design. More
-information about UNICORE can be found at
+system. More information about UNICORE can be found at
 `http://www.unicore.eu <http://www.unicore.eu>`__.
+Some of the key principles of the UNICORE design are listed below. 
 
 -  Open source under BSD license.
 
--  Standards-based, conforming to the latest standards from the Open
+-  Standards conform to the latest standards from the Open
    Grid Forum (OGF), W3C, OASIS, and IETF, in particular the Open Grid
    Services Architecture (OGSA) and the Web Services Resource Framework
    (WS-RF 1.2).
 
 -  Open and extensible realized with a modern Service- Oriented
-   Architecture (SOA), which allows easily replacement of particular
+   Architecture (SOA), which allows easy replacement of particular
    components with others.
 
--  Interoperable with other Grid technologies to enable a coupling of
-   Grid infrastructures or the users needs
+-  It is interoperable with other Grid technologies to enable the coupling of
+   Grid infrastructures or users needs.
 
--  Seamless, secure, and intuitive following a vertical, end-to-end
-   approach and offering components at all levels of a modern Grid
+-  Built to be seamless, secure, and intuitive following a vertical, end-to-end
+   approach and offers components at all levels of a modern grid
    architecture from intuitive user interfaces down to the resource
    level. Like previous versions UNICORE 6 seamlessly integrates in
    existing environments.
 
--  Mature security mechanisms adequate for the use in supercomputing
-   environments and Grid infrastructures. X.509 certificates form the
-   basis for authentication and authorization, enhanced with a support
+-  Mature security mechanisms that are adequate for use in supercomputing
+   environments and Grid infrastructures. X.509 certificates, form the
+   basis for authentication and authorization and are enhanced with support
    for proxy certificates and virtual organizations (VO) based access
    control.
 
--  Workflow support tightly integrated into the stack while being
-   extensible in order to use different workflow languages and engines
+-  Workflow support is tightly integrated into the stack while being
+   extensible, in order to use different workflow languages and engines
    for domain-specific usage.
 
--  Application integration mechanisms on the client, services and
-   resource level for a tight integration of various types of
+-  Application integration mechanisms lie on the client, services and
+   resource level to maintain a tight integration of various types of
    applications from the scientific and industrial domain.
 
--  Different clients serving the needs of various scientific
+-  Different clients serve the needs of various scientific
    communities, e.g. graphical clients to define complex workflows,
    command line tool, web based access.
 
--  Quick and simple to install and configure to address requirements
+-  Quick and simple to install and configure, to address requirements
    from operational teams and to lower the barrier of adopting Grid
-   technologies. Similar the configuration of the various services and
-   components is easy to handle.
+   technologies. Similarly, the configuration of various services and
+   components are easy to handle.
 
 -  Various operating and batch systems are supported on all layers, i.e.
    clients, services and systems; Windows, MacOS, Linux, and Unix
-   systems as well as different batch systems are supported such as
+   systems. Also different batch systems are supported such as
    LoadLeveler, Torque, SLURM, LSF, OpenCCS, etc.
 
 -  Implemented in Java to achieve platform independence.
