@@ -114,48 +114,47 @@ Cores: 8 (Jobs submitted directly to machine - i.e. not through
 Sierra Endpoint Info
 --------------------
 
-Endpoint URL: `https://198.202.120.85:8081/DEMO-SITE/services/ <https://198.202.120.85:8081/DEMO-SITE/services/>`__\ BESFactory?res=default\_bes\_factory
+Endpoint URL: 
+   `https://198.202.120.85:8081/DEMO-SITE/services/ <https://198.202.120.85:8081/DEMO-SITE/services/>`__\ BESFactory?res=default\_bes\_factory
 
-Security: configured for X-509 based mutual client
-   authentication; `Email <mailto:karolina@virginia.edu>`__ with X-509
-   cert and for CA cert.
+Security: configured for X-509 based mutual client authentication; `Email <mailto:karolina@virginia.edu>`__ with X-509 cert and for CA cert.
 
 OS: Red Hat Enterprise Linux Server release 5.5
 
 Arch: x86\_64
 
-Cores: 320 (Jobs submitted to PBS queue)
-
+Cores: 320 (Jobs submitted to 
+   PBS queue)
 
 Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client
 ==========================================================================
 
-A UNICORE client can be used to connect to the FutureGrid UNICORE6
-endpoints. This section describes how to install a UCC ( UNICORE
+A UNICORE client can be used to connect to the FutureGrid UNICORE 6
+endpoints. This section describes how to install a UCC (UNICORE
 Commandline Client), configure it to connect to a FutureGrid U6 endpoint
-via X-509 based mutual client authentication, and then submit jobs via
+via X-509 based mutual client authentication and then submit jobs via
 BES.
 
-Installing the UNICORE6 Commandline Client (UCC)
+Installing the UNICORE 6 Commandline Client (UCC)
 ------------------------------------------------
 
 Acquire Client Bundle
 ~~~~~~~~~~~~~~~~~~~~~
 
 #. Navigate to the UNICORE website:
-   `http://www.unicore.eu/ <http://www.unicore.eu/>`__
-#. Select “Download” link in left hand tool bar
-#. Under Clients section, select “Download” link for Commandline Client
-#. Click on folder for desired version  (i.e. 6.4.1)
-#. Click on desired distribution bundle to download  (i.e.
+   `http://www.unicore.eu/ <http://www.unicore.eu/>`__.
+#. Select the “Download” link on the tool bar to the left.
+#. Under the “Clients” section, select the “Download” link for “Commandline Client”.
+#. Click on the folder for desired version  (i.e. 6.4.1)
+#. Click on the desired distribution bundle to download  (i.e.
    ucc-6.4.1-all.tar.gz)
 
 Unpack UCC
 ~~~~~~~~~~
 
--  Unpack files from downloaded distribution bundle  (i.e. tar -xvzf
+-  Unpack files from the distribution bundle downloaded (i.e. tar -xvzf
    ucc-6.4.1-all.tar.gz)
--  On completion, there should be a directory containing the UNICORE6
+-  On completion, there should be a directory containing the UNICORE 6
    commandline client  (i.e. ucc-6.4.1)
 -  You can add the bin directory to your path for easier client
    execution::
@@ -169,7 +168,7 @@ Directory Structure
 
 -  bin – contains executable “ucc”
 -  certs
--  conf – contains *preferences*\ file to be configured with security
+-  conf – contains *preferences* file to be configured with security
    and registry settings
 -  doc
 -  extras
@@ -228,7 +227,7 @@ Run ucc to get list and description of available commands::
       issue-delegation      - allows to issue a trust delegation assertion
       connect-to-testgrid   - get credentials for the public testgrid
       wsrf                   - perform a WSRF operation
-      cip-query              - query a CIS Infoprovider at a UNICORE site
+      cip-query              - query a CIS InfoProvider at a UNICORE site
       run-groovy            - run a Groovy script
 
      WORKFLOW
@@ -258,15 +257,15 @@ Configuration Overview
 
 To connect to a FutureGrid U6 endpoint, you need to
 
--  setup security information so that your client will trust the
-   FutureGrid U6 endpoint and vice-versa
--  specify the connection address that the client should use (aka
-   registry address)
+-  Setup security information so that your client will trust the
+   FutureGrid U6 endpoint and vice-versa.
+-  Specify the connection address that the client should use (aka
+   registry address).
 
 This configuration process consists of
 
--  setting up keystore and truststore files with security info
--  specifying a registry address for the FutureGrid endpoint
+-  Setting up the keystore and truststore files with security information.
+-  Specifying a registry address for the FutureGrid endpoint.
 
 This information is stored in a *preferences* file (starter at $UCC\_HOME/conf/preferences)
 
@@ -276,43 +275,41 @@ Setting Up Security in UNICORE
 To setup security, you will need to inform the UNICORE software of your
 identity and who you trust via keystore and truststore files:
 
-Keystore: a file from which UNICORE software reads your identity,
-   i.e. your private key and your certificate. As your private key is
-   very sensitive, the keystore is encrypted and you will need a
+Keystore: A file from which UNICORE software reads your identity (i.e. your private key and your certificate).
+   As your private key is very sensitive, the keystore is encrypted and you will need a
    password to "unlock” it before usage.
-Truststore: a file from which UNICORE software reads certificates
-   of the Certificate Authorities you trust. It is not as sensitive as a
-   keystore, but it is also encrypted.
+Truststore: A file from which UNICORE software reads certificates of the Certificate Authorities you trust.
+   It is not as sensitive as a keystore, but it is also encrypted.
 
 For an overview of the security mechanism found in the UNICORE grid
 middleware, please consult the `Users' UNICORE Security Guide \UCC
 version <http://unicore.svn.sourceforge.net/svnroot/unicore/documentation/old/securityGuide/Main-UCCOnly.pdf>`__
 This guide also discusses common security configuration problems and
-details how to create keystores/truststores
+details on how to create keystores/truststores
 
 Setting Up a Keystore
 ------------
 
-Assumption: you want to use a preexisting X.509 certificate for security
-validation
+Assumption: You want to use a pre-existing X.509 certificate for security
+validation.
 
 -  If your key and certificate are in a keystore (in PKCS12 or JKS
-   format), you can directly use this keystore
+   format), you can directly use this keystore.
 -  If you have PEM files, you will need to wrap your key and certificate
-   files into a PKCS12 keystore::
+   files into a PKCS12 keystore.::
 
     openssl pkcs12 -export -in myCert.pem -inkey myKey.pem -out keystore.p12 -name mykey 
 
 Creating a Truststore
 ~~~~~~~~~~~~~~~~~~~~~
 
-Assumption: you have certificates for CAs that you trust and want to put
+Assumption: You have certificates for CAs that you trust and want to put
 into a truststore file. This should include:
 
-CA cert for CA that issued your certificate
+CA cert for CA that issued your certificate.
 
 CA cert for CA that issued FutureGrid U6 endpoint certs (Email
-`uvacse@virginia.edu <mailto:uvacse@virginia.edu>`__ for cert)
+`uvacse@virginia.edu <mailto:uvacse@virginia.edu>`__ for cert).
   
 
 To create a truststore with keytool::
@@ -321,15 +318,15 @@ To create a truststore with keytool::
     myTrustedCA
 
 Repeat command for every CA certificate file (set a unique alias for
-each certificate)
+each certificate).
 
 Acquiring the Registry Address
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The UNICORE Registry server provides information about available
-services to clients and other services
+services to clients and other services.
 
-Registry address for FutureGrid U6 Endpoint on Sierra (as of 08/2011)::
+The registry address for FutureGrid U6 Endpoint on Sierra (as of 08/2011) is::
 
     https://198.202.120.85:8081/DEMO-SITE/services/Registry?res=default_registry
 
