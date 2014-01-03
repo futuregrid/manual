@@ -118,6 +118,8 @@ Project Management
 
 .. _s-account-create-account:
 
+
+
 Create a Portal account
 -------------------------
 
@@ -175,7 +177,33 @@ Here are a few tips that make it easy for you
    Management <my>`.
 
 
-.. include:: account-diag-create-account.rst
+|image-create-account|
+
+.. list-table:: Legend
+   :header-rows: 1
+   :widths: 30,70
+   
+   * - State
+     - Description
+   * - 1. Get Portal Account
+     - Apply for a portal account at https://portal.futuregrid.org/user/register
+   * - Check Identity
+     - Administrator checks the data submitted.
+   * - Reject
+     - Rejected accounts will be deleted without notification.
+   * - 2. Wait for e-mail
+     - Wait for the e-mail that approves your portal account. 
+       If you have not heard from us within 2 buisiness days
+       use the help form on the portal to contact us.
+   * - 3a. Create Project
+     - Create a new Project.
+   * - 3b. Join Project
+     - Join an existing Project.
+      
+
+
+.. |image-create-account| image:: /images/create-account.pdf
+   :width: 70%
 
 
 .. _s-account-create-project:
@@ -202,7 +230,36 @@ project Project Lead has the responsibility to communicate such requirements to
 the members and managers. The project agreements override the
 individuals agreement. 
 
-.. include:: account-diag-create-project.rst
+
+|image-create-project|
+
+.. |image-create-project| image:: /images/create-project.pdf
+   :width: 50%
+
+
+
+.. list-table:: Legend
+   :header-rows: 1
+   :widths: 30,70
+   
+   * - State
+     - Description
+   * - 3a. Create new Project   
+     - Fill out the project form at https://portal.futuregrid.org/node/add/fg-projects
+   * - Review   
+     - Committee reviews the project and corresponds with project lead to improve
+   * - 3a.1. Wait for e-mail    
+     - Wait for an e-mail that you have an account
+   * - 3a.2. Project Approved   
+     - The project has been approved.
+   * - 3a.3.i. Members add, del., alumni        
+     - Manage the project members
+   * - 3a.3.ii. Report Results  
+     - Make project member Alumni
+   * - Review Results   
+     - Committee receives results for review
+   * - Renewal 
+     - Renewal of the project
 
 Example Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -284,9 +341,9 @@ for your own class projects (:download:`project.txt`)::
    This class will be taught in 10 weeks as part of the Indiana
    University CS curriculum. The following dates are important
 
-	 Start: July 13, 2013
-	 End:   Sept 23, 2013
-	 Extension: 1 month for students with programming in-completes.
+         Start: July 13, 2013
+         End:   Sept 23, 2013
+         Extension: 1 month for students with programming in-completes.
 
    Course Outline (tentative):
 
@@ -390,6 +447,31 @@ the button to send the join request to the project lead and manager so that
 they can process your request.
 
 .. include:: account-diag-join-project.rst
+
+
+.. list-table:: Legend
+   :header-rows: 1
+   :widths: 30,70
+   
+   * - State
+     - Description
+   * - 3b. Join Project?	
+     - Join an existing Project.
+   * - Get Permission	
+     - Get permission from the project lead to join the project.
+   * - Delete Join Request	
+     - Project leads will carefully evaluate if the person requesting to join is eligible. If not join requests will be deleted without notification requires to those that want to join.
+   * - 3b.1. Join Approved	
+     - The project lead has approved that you join the project. Go to the project page and press the join button/link.
+   * - Project Active	
+     - Checks if the project is active the project.
+   * - 3b.2. SSH key uploaded?	
+     - You must have uploaded your ssh key to use FutureGrid resources
+   * - Generate Accounts	
+     - Generate accounts to resources
+   * - 3b.3. Wait for e-mail	
+     - Wait for an e-mail that you have an account
+
 
 .. _s-account-delete:
 
