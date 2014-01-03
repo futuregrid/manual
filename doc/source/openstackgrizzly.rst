@@ -48,7 +48,8 @@ flavors::
 List flavors
 ======================================================================
 
-::
+
+To list the flavors, please execute the following command ::
 
     $ nova flavor-list
 
