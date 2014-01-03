@@ -446,7 +446,12 @@ project lead to "accept join request", then you'll see a large gray
 the button to send the join request to the project lead and manager so that
 they can process your request.
 
-.. include:: account-diag-join-project.rst
+
+|image-create-project-join|
+
+.. |image-create-project-join| image:: /images/create-project-join.pdf
+   :width: 70%
+
 
 
 .. list-table:: Legend
