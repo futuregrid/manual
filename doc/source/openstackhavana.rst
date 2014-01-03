@@ -27,7 +27,7 @@ with ::
     $ module load novaclient
 
 Creating the novarc file
-======================================================================
+----------------------------------------------------------------------
 
 An initial novarc file is currently created for you automatically and
 can be activated wih ::
@@ -465,12 +465,19 @@ Alamo an older version of openstack is run.
      - Machine
      - Description
    * - |image-horizon| 
+     - Havana 
+     - `India NOT YET AVAILABLE <http://openstack-india.futuregrid.org/horizon>`__
+     - NOT YET AVAILABLE India offers a Graphical user interface to access
+       OpenStack. For those interested in only managing a view images
+       this may be a good way to start. The link to the GUI is 
+       http://openstack-india.futuregrid.org/horizon
+   * - |image-horizon| 
      - Grizzly
      - `Sierra <http://openstack-sierra.futuregrid.org/horizon>`__
      - Sierra offers a Graphical user interface to access
        OpenStack. For those interested in only managing a view images
        this may be a good way to start. The link to the GUI is 
-       http://openstack.sierra.futuregrid.org/horizon
+       http://openstack-sierra.futuregrid.org/horizon
    * - |image-horizon-alamo|
      - Folsom
      - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`__
