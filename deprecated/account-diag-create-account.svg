@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 1220 440" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>actdiag {
+
+      default_fontsize=14;
+      node_width=300;
+
+      A -&gt; B -&gt; C;
+      B -&gt; D -&gt; E;
+      D -&gt; F;
+
+      A [label = "1. Get Portal Account", 
+         description = "Apply for a portal account at https://portal.futuregrid.org/user/register",
+         color="lightgrey", shape = roundedbox];
+
+      B [label = "Checks Identity",  width=200,
+         description = "Administrator checks the data submitted."];
+
+      C [label = "Spammer",  width=200,
+         description = "Spammers will be deleted without notification."];
+
+      D [label = "2. Wait for e-mail", 
+         description = "Wait for the e-mail that approves your portal
+         account. If you have not heard from us within 2 buisiness days
+         use the help form on the portal to contact us.",
+         color="lightgreen"];
+
+      E [label = "3a. Create Project", width=200,
+         description = "Create a new Project.", 
+         color="lightgrey", shape = roundedbox];
+
+      F [label = "3b. Join Project", width=200,
+         description = "Join an existing Project.",
+         color="lightgrey", shape = roundedbox];
+      
+      lane "User" {
+         color="lightgreen";
+         A;  D; E; F; 
+      }
+      lane "FG Administrator" {
+         color="#FFFF99";
+         B;
+      }
+      lane "Trash" {
+         color="#FF3300";
+         C;
+      }
+}
+
+
+</desc>
+  <path d="M 75 126 L 359 126 A8,8 0 0 1 367 134 L 367 158 A8,8 0 0 1 359 166 L 75 166 A8,8 0 0 1 67 158 L 67 134 A8,8 0 0 1 75 126" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="200" x="695" y="206" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="200" x="959" y="286" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="300" x="67" y="286" />
+  <path d="M 125 366 L 309 366 A8,8 0 0 1 317 374 L 317 398 A8,8 0 0 1 309 406 L 125 406 A8,8 0 0 1 117 398 L 117 374 A8,8 0 0 1 125 366" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 439 366 L 623 366 A8,8 0 0 1 631 374 L 631 398 A8,8 0 0 1 623 406 L 439 406 A8,8 0 0 1 431 398 L 431 374 A8,8 0 0 1 439 366" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(144,238,144)" height="62" stroke="rgb(144,238,144)" width="628" x="32" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="330" y="75">User</text>
+  <rect fill="rgb(255,255,153)" height="62" stroke="rgb(255,255,153)" width="264" x="660" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="733" y="75">FG Administrator</text>
+  <rect fill="rgb(255,51,0)" height="62" stroke="rgb(255,51,0)" width="264" x="924" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="1036" y="75">Trash</text>
+  <rect fill="none" height="382" stroke="gray" width="1156" x="32" y="38" />
+  <path d="M 32 100 L 1188 100" fill="none" stroke="gray" />
+  <path d="M 660 38 L 660 420" fill="none" stroke="gray" />
+  <path d="M 924 38 L 924 420" fill="none" stroke="gray" />
+  <path d="M 72 120 L 356 120 A8,8 0 0 1 364 128 L 364 152 A8,8 0 0 1 356 160 L 72 160 A8,8 0 0 1 64 152 L 64 128 A8,8 0 0 1 72 120" fill="rgb(211,211,211)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="139" y="146">1. Get Portal Account</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="200" x="692" y="200" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="739" y="227">Checks Identity</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="200" x="956" y="280" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="1023" y="307">Spammer</text>
+  <rect fill="rgb(144,238,144)" height="40" stroke="rgb(0,0,0)" width="300" x="64" y="280" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="155" y="306">2. Wait for e-mail</text>
+  <path d="M 122 360 L 306 360 A8,8 0 0 1 314 368 L 314 392 A8,8 0 0 1 306 400 L 122 400 A8,8 0 0 1 114 392 L 114 368 A8,8 0 0 1 122 360" fill="rgb(211,211,211)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="151" y="387">3a. Create Project</text>
+  <path d="M 436 360 L 620 360 A8,8 0 0 1 628 368 L 628 392 A8,8 0 0 1 620 400 L 436 400 A8,8 0 0 1 428 392 L 428 368 A8,8 0 0 1 436 360" fill="rgb(211,211,211)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sansserif" font-size="14" font-style="normal" font-weight="normal" x="474" y="387">3b. Join Project</text>
+  <path d="M 214 160 L 214 180" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 214 180 L 792 180" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 792 180 L 792 192" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="792,199 788,192 796,192 792,199" stroke="rgb(0,0,0)" />
+  <path d="M 792 240 L 792 260" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 792 260 L 1056 260" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1056 260 L 1056 272" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1056,279 1052,272 1060,272 1056,279" stroke="rgb(0,0,0)" />
+  <path d="M 792 240 L 792 260" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 214 260 L 792 260" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 214 260 L 214 272" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="214,279 210,272 218,272 214,279" stroke="rgb(0,0,0)" />
+  <path d="M 214 320 L 214 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 214 340 L 528 340" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 528 340 L 528 352" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="528,359 524,352 532,352 528,359" stroke="rgb(0,0,0)" />
+  <path d="M 214 320 L 214 352" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="214,359 210,352 218,352 214,359" stroke="rgb(0,0,0)" />
+</svg>
