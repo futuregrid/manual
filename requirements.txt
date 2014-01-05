@@ -3,13 +3,6 @@ pbr>=0.5.16,<0.6
 pip
 sphinx
 sphinx_bootstrap_theme
-sphinxcontrib-webmocks
-sphinxjp.shibukawa
 sphinxcontrib-exceltable
 sphinxcontrib-autorun
 Pygments
-numpy
-numpydoc
-ipython
-matplotlib
-pillow

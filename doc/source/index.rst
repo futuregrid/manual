@@ -141,14 +141,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    ring
 
-**APPENDIX IV. Just Enough Python**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   python
-
 **APPENDIX V. OTHERS SECTIONS**
 
 * `Not yet integrated sections can be found here <all.html>`__

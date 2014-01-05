@@ -1,2 +1,11 @@
 sphinxcontrib-blockdiag
 sphinxcontrib-actdiag
+numpy
+numpydoc
+ipython
+matplotlib
+pillow
+sphinxcontrib-webmocks
+sphinxjp.shibukawa
+Pygments
+sphinxcontrib-autorun

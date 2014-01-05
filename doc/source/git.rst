@@ -2,8 +2,16 @@
 Git
 **********************************************************************
 
+The FG manual is maintained in github. In case you like to directly
+contribute you can do this either by sending us patches or by
+becomming a committer in github.
+
+To get an account on github you can do the follwoing steps:
+
 #. Create an account on github.com 
-#. notify me about your accountant on it. 
+#. notify laszewski@gmail.com about your account name. 
+#. provide an eligable desire to contribute. 
+#. Be sufficient in the usage of git and prove it.
 #. Once you have done this you need to know about how to use git. You can read the git manual. 
 
 Here a summary of the commands that are important for you::
