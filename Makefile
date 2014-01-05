@@ -1,4 +1,4 @@
-PATHNAME=$(shell pwd)
+
 BASENAME=$(shell basename $(PATHNAME))
 GITREPO=futuregrid
 
@@ -16,6 +16,9 @@ FILE=index
 
 watchdog:
 	watchmedo shell-command --patterns="*.rst" --recursive --command="make; open doc/build/html/$(FILE).html" . 
+
+f: 
+	firefox doc/build/html/index.html 
 
 view:
 	open doc/build/html/index.html

@@ -27,7 +27,7 @@ and prepare your environment path::
 Submitting a job
 -----------------
 
-From here, you are now able to submit to the scalemp queue::
+From here, you are now able to submit to the ScaleMP queue::
 
     qsub scalemp_job.sh
 
@@ -43,7 +43,7 @@ OR run a job interactively::
 Developing a job script
 ----------------------------------------------------------------------
 
-As the ScaleMP vSMP machine is a unique and tool, it requires some
+As the ScaleMP vSMP machine is a unique tool, it requires some
 simple but special configuration in order to take full advantage of its
 capabilities.  This customization depends on the type of application you
 are looking to run, so please consult the configuration type that best

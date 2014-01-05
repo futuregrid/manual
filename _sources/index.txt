@@ -72,8 +72,8 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    iaas
+   openstackhavana
    openstackgrizzly
-   openstackessex0
    os-virtualbox
    nimbus
    eucalyptus
@@ -140,14 +140,6 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    :maxdepth: -1
 
    ring
-
-**APPENDIX IV. Just Enough Python**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   python
 
 **APPENDIX V. OTHERS SECTIONS**
 

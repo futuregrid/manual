@@ -1,59 +1,51 @@
-.. _s-openstack-grizzly:
+.. _s-openstack-havana:
 
-**********************************************************************
-OpenStack Grizzly
-**********************************************************************
+OpenStack Havana
+===================
 
 .. sidebar:: Page Contents
 
    .. contents::
       :local:
-
  
 Login
-======================================================================
+-------
 
-Currently we have OpenStack Grizzly installed on Sierra. To use it you
+
+Currently we have OpenStack Havana installed on India. To use it you
 need to first log into sierra and prepare your openstack credentials
 (Make sure to replace the 'username' with your actual FG username)::
 
-       $ ssh username@sierra.futuregrid.org
+       $ ssh username@india.futuregrid.org
+
+Setup OpenStack Environment
+---------------------------
+
+In case you like to use the shell commandline tools you can load them
+with ::
+
+    $ module load novaclient
 
 Creating the novarc file
-======================================================================
+----------------------------------------------------------------------
 
-Next you need to create your novarc file with our cloudmesh tools::
+An initial novarc file is currently created for you automatically and
+can be activated wih ::
 
-       $ module load cloudmesh
-       $ cm-manage config sierra-openstack-grizzly
-
-The cm-manage command will create a nova rc file at the default
-location::
-
-    ~/.futuregrid/novarc 
-
-Activate OpenStack tools
-======================================================================
+    $ source ~/.futuregrid/openstack_havana/novarc
 
 
-To activate your your OpenStack environment and load the openstack
-tools you will need to source the novarc file and load the novaclient module::
-
-       $ source ~/.futuregrid/novarc
-       $ module load novaclient
-
-To check if your nova client works we use a simple command to list the
-flavors::
+In future this file will be created with the help of cloudmesh
+simplifying asccess to multiple heterogeneous cooulds on FutureGrid.
 
 List flavors
-======================================================================
-
+------------
 
 To list the flavors, please execute the following command ::
 
     $ nova flavor-list
 
-Everything is fine, if you se an output similar to::
+Everything is fine, if you see an output similar to ::
 
        +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
        | ID | Name      | Memory_MB | Disk | Ephemeral | Swap | VCPUs | RXTX_Factor | Is_Public | extra_specs |
@@ -70,7 +62,7 @@ you follow the steps in this section and the account management
 section carefully.
 
 List images
-======================================================================
+-----------
 
 After you got the flavor list, you can list the current set of
 uploaded images with the nova image-list command::
@@ -90,29 +82,8 @@ You will see an output similar to::
 
    $USER is your username on sierra machine. 
 
-Standard Images
-======================================================================
-
-We have provided a number of images that you may want to try
-out. Image Ids and names of them are listed in the following
-table. The futuregrid/sl-6 image is  Scientific Linux.
-
-+--------------------------------------+-------------------------+
-| Image ID                             | Image Name              |
-+--------------------------------------+-------------------------+
-| 53fab752-757e-4b2a-bce6-9f74ba76be26 | futuregrid/centos-6     | 
-| d5b19d33-8440-4069-815a-de9d8629dae3 | futuregrid/coreos       |
-| d40facd1-7496-42b7-8bc7-70235396d349 | futuregrid/debian-7     |
-| 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18    | 
-| 1c46e959-5805-47da-a079-58900787ef25 | futuregrid/fedora-19    |
-| 8f289ebb-d8fb-48f6-8429-430110eacb4a | futuregrid/sl-6         |
-| 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04 | 
-| f7459a50-3ef4-40f5-a7d7-955fb3af6432 | futuregrid/ubuntu-13.10 | 
-+--------------------------------------+-------------------------+
-
 Key management
-======================================================================
-
+--------------
 To start a virtual machine you must first upload a key to the
 cloud. This can be easily done in the following way::
 
@@ -135,7 +106,7 @@ your ~/.ssh directory that you may want to use. For example if you use
 rsa, your key will be located at ~/.ssh/id_rsa.pub. 
 
 Managing security groups
-======================================================================
+----------------------------------------------------------------------
 
 In the next step we need to make sure that the security groups allow
 us to log into the VMs. To do so we create the following policies as
@@ -157,7 +128,7 @@ You will see the following output if everything went correctly::
        +-------------+-----------+---------+-----------+--------------+
 
 Booting an image
-======================================================================
+----------------------------------------------------------------------
 
 To boot an instance you simply can now use the command::
 
@@ -195,8 +166,10 @@ If everything went correctly, you will see an output similar to::
        | config_drive                |                                      |
        +-----------------------------+--------------------------------------+
 
+Where USER is your login name on sierra.
+
 List running images
-======================================================================
+----------------------------------------------------------------------
 
 To check if your instance is active you can repeatedly issue the list
 command and monitor the Status field in the table::
@@ -223,7 +196,7 @@ If you see a warning similar to::
 you need to delete the offending host key from .ssh/known_hosts.
 
 Use block storage
-======================================================================
+----------------------------------------------------------------------
 
 You can create a block storage with the volume-create command. A
 valume is useful as you can store data in it and associate that
@@ -281,7 +254,7 @@ login node and execute volume-detach::
        $ nova volume-detach $USER-001 6d0d8285-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Set up external access to your instance
-======================================================================
+---------------------------------------
 
 So far we only used the internal IP address, but you can also assign
 an external address, so that you can log in from other machines than
@@ -310,7 +283,7 @@ Now you should be able to ping and ssh from external and can use the
 given ip address.
 
 Make a snapshot of an instance
-======================================================================
+------------------------------
 
 To allow snapshots, you must use the following convention: 
 
@@ -343,7 +316,7 @@ If you want to download your customized image, you can do it with this::
    Please note that images not following this convention will be deleted.
 
 Automate some initial configuration
-======================================================================
+-----------------------------------
 
 You may want to install some packages into the iamge, enable root, and
 add ssh authorized_keys. With the OpenStack cloud-init such steps can
@@ -377,7 +350,7 @@ Now boot your instance with --user-data mycloudinit.txt like this::
 You should be able to login to <USER>-002 as root, and the added packages are installed.
 
 Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack
-======================================================================
+---------------------------------------------------------------------------
 
 .. todo:: In future we will just host these images so we do not
    duplicate them on the server
@@ -402,7 +375,7 @@ Now your new image is listed on ``nova image-list``\ and will be
 available when the status become "ACTIVE".
 
 Delete your instance
-======================================================================
+--------------------
 
 #. You can delete your instance with::
 
@@ -414,7 +387,7 @@ Delete your instance
    
 
 How to change your password
-======================================================================
+---------------------------
 
 #. Sometimes, users accidentally send password to a collaborator/support
    for debugging, and then regret. When you put yourself in the
@@ -439,7 +412,7 @@ how you can access them.
 #. Create a directory for putting eucarc, and create pk.pem, cert.pem
    and cacert.pem::
 
-       cd ~/.futuregrid/
+       cd ~/.futuregrid/openstack_havana
        nova x509-create-cert
        nova x509-get-root-cert
        ls -la
@@ -448,15 +421,16 @@ how you can access them.
 
        keystone ec2-credentials-create
 
-#. Create the file called *~/.futuregrid/eucarc*   and put your EC2_ACCESS_KEY and
+#. Create the file calle *~/.futuregrid/openstack_havana/eucarc*   and put your EC2_ACCESS_KEY and
    EC2_SECRET_KEY that you obtained from the previous command into
    this file::
 
-       export NOVA_KEY_DIR=$HOME/.futuregrid
+       export NOVA_KEY_DIR=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
        export EC2_ACCESS_KEY="Your EC2_ACCESS_KEY"
        export EC2_SECRET_KEY="Your EC2_SECRET_KEY"
-       export EC2_URL="http://s77r.idp.sdsc.futuregrid.org:8773/services/Cloud"
-       export S3_URL="http://s77r.idp.sdsc.futuregrid.org:3333"
+       export EC2_URL="http://i57r.idp.iu.futuregrid.org:8773/services/Cloud"
+       export S3_URL="http://i57r.idp.iu.futuregrid.org:3333"
+       export EC2_USER_ID=11
        export EC2_PRIVATE_KEY=${NOVA_KEY_DIR}/pk.pem
        export EC2_CERT=${NOVA_KEY_DIR}/cert.pem
        export NOVA_CERT=${NOVA_KEY_DIR}/cacert.pem
@@ -466,15 +440,15 @@ how you can access them.
 
 #. Confirm if euca2ools works::
 
-       module load euca2ools
-       source ~/.futuregrid/eucarc
+       module load euca2ools/3.1.0
+       source ~/.futuregrid/openstack_havana/eucarc
        euca-describe-images
        euca-describe-instances
 
 .. _s-openstack-horizon:
 
 Horizon GUI
-======================================================================
+---------------------------
 
 Horizon is a graphical user interface/dashbooard for OpenStack. For
 starting up VMs and stoping them by hand horizon may be a good
@@ -485,7 +459,6 @@ Alamo an older version of openstack is run.
 .. list-table:: Horizon endpoints
    :header-rows: 1
    :widths: 10,10,10,70
-
 
    * - Image
      - Version
@@ -518,11 +491,6 @@ Alamo an older version of openstack is run.
        a shell variable, but to ask for it every time it is needed.
        The link to the GUI is 
        https://openstack.futuregrid.tacc.utexas.edu/horizon
-
-Getting rc files via Horizon
-----------------------------
-
-On alamo, you can also get your ec2 rc file from the "settings" menu. 
 
 
 
