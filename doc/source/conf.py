@@ -43,18 +43,21 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
-              'sphinxcontrib.actdiag',
               'sphinxcontrib.exceltable',
-              'matplotlib.sphinxext.mathmpl',
-              'matplotlib.sphinxext.only_directives',
-              'matplotlib.sphinxext.plot_directive',
-              'matplotlib.sphinxext.ipython_directive',
-              'sphinx.ext.autodoc',
+              #'sphinx.ext.autodoc',
               'sphinx.ext.doctest',
-              'matplotlib.sphinxext.ipython_console_highlighting',
+              #'matplotlib.sphinxext.ipython_console_highlighting',
+              #'matplotlib.sphinxext.mathmpl',
+              #'matplotlib.sphinxext.only_directives',
+              #'matplotlib.sphinxext.plot_directive',
+              #'matplotlib.sphinxext.ipython_directive',
               #'inheritance_diagram',
-              'numpydoc'
+              #'sphinxcontrib.actdiag',
+              #'numpydoc' 
               ]
+
+
+
 """
 extensions = [
     'sphinx.ext.autodoc',
@@ -68,9 +71,9 @@ extensions = [
     'sphinxjp.shibukawa']
 """
 
-extensions.append('sphinxcontrib.autorun')
+#extensions.append('sphinxcontrib.autorun')
 
-actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
+#actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
 
 todo_include_todos = True
 
