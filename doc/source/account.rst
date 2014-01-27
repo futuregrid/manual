@@ -437,20 +437,27 @@ Join a Project
 ------------------
 
 To join an existing project, ask the project lead or project manager for that
-project to add you to their project using that same form. If the project
+project to add you to their project using your portal account name.
+However for most projects there is an easier way if the project
 is set to "accept public join request", you may also send a request in
 the portal. To do this, first view the :portal:`project list <projects>` and go to the project
 detail page by clicking the project title. If the project is set by the
 project lead to "accept join request", then you'll see a large gray
 'Join this project' button in the upper right corner of the page. Click
 the button to send the join request to the project lead and manager so that
-they can process your request.
+they can process your request:
 
+|image-join-screen|
+
+The entire process looks as follows:
 
 |image-create-project-join|
 
 .. |image-create-project-join| image:: /images/create-project-join.pdf
    :width: 70%
+
+.. |image-join-screen| image:: /images/join-screen.png
+   :width: 35%
 
 
 
@@ -463,7 +470,7 @@ they can process your request.
    * - 3b. Join Project?	
      - Join an existing Project.
    * - Get Permission	
-     - Get permission from the project lead to join the project.
+     - Get permission from the project lead or manager to join the project.
    * - Delete Join Request	
      - Project leads will carefully evaluate if the person requesting to join is eligible. If not join requests will be deleted without notification requires to those that want to join.
    * - 3b.1. Join Approved	
