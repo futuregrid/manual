@@ -4,5 +4,4 @@ pip
 sphinx
 sphinx_bootstrap_theme
 sphinxcontrib-exceltable
-sphinxcontrib-autorun
 Pygments

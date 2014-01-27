@@ -55,6 +55,9 @@ extensions = ['sphinx.ext.autodoc',
 #'inheritance_diagram',
 #'numpydoc'
               ]
+
+
+
 """
 extensions = [
     'sphinx.ext.autodoc',
@@ -70,7 +73,7 @@ extensions = [
 
 #extensions.append('sphinxcontrib.autorun')
 
-actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
+#actdiag_fontpath = "/opt/X11/share/fonts/TTF/VeraBd.ttf"
 
 todo_include_todos = True
 
