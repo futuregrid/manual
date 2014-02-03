@@ -467,10 +467,10 @@ Alamo an older version of openstack is run.
    * - |image-horizon| 
      - Havana 
      - `India NOT YET AVAILABLE <http://openstack-india.futuregrid.org/horizon>`__
-     - NOT YET AVAILABLE India offers a Graphical user interface to access
+     - India offers a Graphical user interface to access
        OpenStack. For those interested in only managing a view images
        this may be a good way to start. The link to the GUI is 
-       http://openstack-india.futuregrid.org/horizon
+       https://openstack-h.india.futuregrid.org/horizon
    * - |image-horizon| 
      - Grizzly
      - `Sierra <http://openstack-sierra.futuregrid.org/horizon>`__
