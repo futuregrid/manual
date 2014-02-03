@@ -466,32 +466,31 @@ Alamo an older version of openstack is run.
      - Description
    * - |image-horizon| 
      - Havana 
-     - `India NOT YET AVAILABLE <http://openstack-india.futuregrid.org/horizon>`__
+     - `India <https://openstack-h.india.futuregrid.org/horizon>`__
      - India offers a Graphical user interface to access
-       OpenStack. For those interested in only managing a view images
+       OpenStack. For those interested in only managing a few images
        this may be a good way to start. The link to the GUI is 
        https://openstack-h.india.futuregrid.org/horizon
    * - |image-horizon| 
      - Grizzly
      - `Sierra <http://openstack-sierra.futuregrid.org/horizon>`__
      - Sierra offers a Graphical user interface to access
-       OpenStack. For those interested in only managing a view images
+       OpenStack. For those interested in only managing a few images
        this may be a good way to start. The link to the GUI is 
        http://openstack-sierra.futuregrid.org/horizon
    * - |image-horizon-alamo|
      - Folsom
      - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`__
-     - Alamo offers a horizon interface to OpenSTack, but in contrast
-       to Sierra it uses the FG portal name and password. Due to this
-       reason, Indiana University recommnds that you are not storing
-       that password in any file on your local or remote hosts due to
-       security reasosn. Instead we recommend that if you need to use
-       the password, to optain it interactively via the shell command
-       read. Further more we recommend  not to store this password in
-       a shell variable, but to ask for it every time it is needed.
-       The link to the GUI is 
+     - Alamo offers a horizon interface to OpenStack, but in contrast
+       to Sierra and India it uses the FG portal name and password. To
+       ensure the security of your portal account, we recommend that
+       you do not store that password in any file on your local or
+       remote hosts. Instead, if you need to use the password, obtain
+       it interactively via the shell builtin command ``read``, with
+       the ``-s`` (silent) option. We also recommend that you not store
+       this password in a shell variable, but to ask for it every time
+       it is needed.  The link to the GUI is
        https://openstack.futuregrid.tacc.utexas.edu/horizon
-
 
 
 .. |image-horizon| image:: /images/fg-horizon.png 
