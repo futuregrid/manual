@@ -120,6 +120,9 @@ setupbuild_ubuntu:
 # SPHINX DOC
 ###############################################################################
 
+html: sphinx
+	echo done
+
 sphinx:
 	cd doc; make html
 
