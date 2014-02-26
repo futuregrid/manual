@@ -458,7 +458,7 @@ Alamo an older version of openstack is run.
  
 .. list-table:: Horizon endpoints
    :header-rows: 1
-   :widths: 10,10,10,70
+   :widths: 10,10,10,10,70
 
    * - Image
      - Version
