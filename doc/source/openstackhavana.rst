@@ -514,6 +514,10 @@ Alamo an older version of openstack is run.
        https://openstack.futuregrid.tacc.utexas.edu/horizon The password is
        the same as the portal password. It only supports EC2.
 
+Getting rc files via Horizon
+----------------------------
+
+On alamo, you can also get your ec2 rc file from the "settings" menu. 
 
 .. |image-horizon| image:: /images/fg-horizon.png 
    :width: 100px
