@@ -481,33 +481,54 @@ starting up VMs and stoping them by hand horizon may be a good
 mechanism to manage your Virtual machines.  We have currently the
 following horizon deployments available. However, please note that on
 Alamo an older version of openstack is run.
+
  
 .. list-table:: Horizon endpoints
    :header-rows: 1
-   :widths: 10,10,10,70
-
+   :widths: 10,10,10,10,70
 
    * - Image
      - Version
      - Machine
+     - Protocol
      - Description
    * - |image-horizon| 
      - Havana 
-     - `India <https://openstack-h.india.futuregrid.org/horizon>`__
+     - `India <https://openstack-h.india.futuregrid.org/horizon>`_
+     - Native OpenStack
      - India offers a Graphical user interface to access
        OpenStack. For those interested in only managing a few images
        this may be a good way to start. The link to the GUI is 
-       https://openstack-h.india.futuregrid.org/horizon
+       https://openstack-h.india.futuregrid.org/horizon The password
+       can be found by following the method dicussed above.
    * - |image-horizon| 
      - Grizzly
-     - `Sierra <http://openstack-sierra.futuregrid.org/horizon>`__
+     - `Sierra <http://openstack-sierra.futuregrid.org/horizon>`_
+     - Native OpenStack
      - Sierra offers a Graphical user interface to access
        OpenStack. For those interested in only managing a few images
        this may be a good way to start. The link to the GUI is 
-       http://openstack-sierra.futuregrid.org/horizon
+       http://openstack-sierra.futuregrid.org/horizon The password
+       can be found by following the method dicussed above.
+   * - |image-horizon| 
+     - Havana 
+     - `Hotel <https://openstack.uc.futuregrid.org/dashboard/>`_
+     - EC2
+     - Hotel offers a horizon interface to OpenStack, but in contrast
+       to Sierra and India it uses the FG portal name and password. To
+       ensure the security of your portal account, we recommend that
+       you do not store that password in any file on your local or
+       remote hosts. Instead, if you need to use the password, obtain
+       it interactively via the shell builtin command ``read``, with
+       the ``-s`` (silent) option. We also recommend that you not store
+       this password in a shell variable, but to ask for it every time
+       it is needed. The link to the GUI is 
+       https://openstack.uc.futuregrid.org/dashboard/ The password is
+       the same as the portal password. It only supports EC2.
    * - |image-horizon-alamo|
      - Folsom
-     - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`__
+     - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`_
+     - EC2
      - Alamo offers a horizon interface to OpenStack, but in contrast
        to Sierra and India it uses the FG portal name and password. To
        ensure the security of your portal account, we recommend that
@@ -517,7 +538,9 @@ Alamo an older version of openstack is run.
        the ``-s`` (silent) option. We also recommend that you not store
        this password in a shell variable, but to ask for it every time
        it is needed.  The link to the GUI is
-       https://openstack.futuregrid.tacc.utexas.edu/horizon
+       https://openstack.futuregrid.tacc.utexas.edu/horizon The password is
+       the same as the portal password. It only supports EC2.
+
 
 Getting rc files via Horizon
 ----------------------------
