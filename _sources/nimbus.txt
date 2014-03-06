@@ -434,20 +434,19 @@ The image kvm.img should now be ready to be uploaded to a Nimbus KVM cloud!
 Virtual Clusters
 ----------------
 
-This is a basic walkthrough of how to run a sample virtual cluster. 
-For more information on how they work, see
-*http://www.nimbusproject.org/docs/current/clouds/clusters2.html .*
-
-::
-
-::
+This is a basic walkthrough of how to run a sample virtual cluster.  For more
+information on how they work, see
+`http://www.nimbusproject.org/docs/current/clouds/clusters2.html
+<http://www.nimbusproject.org/docs/current/clouds/clusters2.html>`_.
 
 Cluster Definition File
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-For this example, we will use a modification of the sample cluster file
-that is distributed with the cloud client.  The file can be found at
-*https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml\_.gz *.
+For this example, we will use a modification of the sample cluster file that is
+distributed with the cloud client.
+The file can be found at
+`https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz
+<https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz>`_.
 Copy the file to where your cloud-client program is located, and unzip
 it.  Open the file and make note of the following:
 
@@ -513,9 +512,9 @@ the context broker for other VM context agents to query.  The NFS
 clients use this mechanism to provide the nfs server with their IP
 addresses.  The NFS server then gets this information out of the context
 broker and uses it to authorize those IP addresses to remotely mount its
-disks. 
+disks.
 
- When it is complete, your virtual cluster will be ready to go.
+When it is complete, your virtual cluster will be ready to go.
 
 Check Out the Virtual Cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -559,15 +558,6 @@ visible to this node as well.
 +==============================================================================================================+=============+
 | `tutorial-cluster.xml\_.gz <https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz>`__   | 342 bytes   |
 +--------------------------------------------------------------------------------------------------------------+-------------+
-
--  `Cloud Quick Start : Launch a VM with 1
-   command </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
--  `FutureGrid Tutorial NM2 - Nimbus One-Click Cluster
-   Guide </tutorials/nm2>`__
-
-`‹ OpenStack Grizzly on FutureGrid </manual/openstack/grizzly>`__
-`up </manual/iaas>`__ `Cloud Quick Start : Launch a VM with 1 command
-› </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
 
 .. |image0| image:: /images/nimbus_logo.png
    :target: http://www.nimbusproject.org/
@@ -676,33 +666,22 @@ applications.  In this case, it runs a very simple 1 VM application.  It
 can launch any debian-based VM and install sshfs on it.  Then it runs
 sshfs inside of the VM to remotely mount your FutureGrid home directory.
 
-`‹ Using Nimbus on FutureGrid </tutorials/nimbus>`__
-`up </tutorials/nimbus>`__ `FutureGrid Tutorial NM2 - Nimbus One-Click
-Cluster Guide › </tutorials/nm2>`__
-
-
 cloudinit.d
 ======================================================================
 
-cloudinit.d is a tool designed for launching, controlling, and
-monitoring complex environments in the cloud.
- Its most important feature is repeatable, one-click, deployment of sets
-of VMs configured with launch plans.  These sets of VMs can be deployed
-over multiple clouds (Eucalyptus, Nimbus, OpenStack, and Amazon EC2 are
-currently supported), and can also include non-virtualized resources.
-Like the Unix init.d process, cloudinit.d can manage dependencies
-between deployed VMs. It also provides mechanisms for testing,
-monitoring, and repairing a launch.
- For more information about cloudinit.d, see our \ `Teragrid 2011
-paper <http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf>`__. For
-repeatable experiment management with cloudinit.d, read the \ `report
-on <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__ `support
-for experimental computer
-science <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__.
-`‹ Precip - Pegasus Repeatable Experiments for the Cloud in
-Python </manual/precip>`__ `up </manual/management-services>`__ `Grid
-Services › </manual/grid-services>`__
-
+cloudinit.d is a tool designed for launching, controlling, and monitoring
+complex environments in the cloud.
+Its most important feature is repeatable, one-click, deployment of sets of VMs
+configured with launch plans.  These sets of VMs can be deployed over multiple
+clouds (Eucalyptus, Nimbus, OpenStack, and Amazon EC2 are currently supported),
+and can also include non-virtualized resources.  Like the Unix init.d process,
+cloudinit.d can manage dependencies between deployed VMs. It also provides
+mechanisms for testing, monitoring, and repairing a launch.
+For more information about cloudinit.d, see our `Teragrid 2011 paper
+<http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf>`_.
+For repeatable experiment management with cloudinit.d, read the `report on
+Supporting Experimental Computer Science
+<http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`_.
 
 Phantom
 ==================================================
@@ -742,7 +721,3 @@ It should take no more than 10-15 minutes to start your own VMs.
    interface <https://phantom.nimbusproject.org/accounts/login/?next=/>`__
 -  `Phantom
    publication <http://www.nimbusproject.org/files/keahey_wcs_ocs_2012.pdf>`__
-
-`‹ Management Services </manual/management-services>`__
-`up </manual/management-services>`__ `Precip - Pegasus Repeatable
-Experiments for the Cloud in Python › </manual/precip>`__
