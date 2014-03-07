@@ -376,6 +376,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#save-the-changes-to-a-new-vm">6.1.4.4. Save the Changes to a New VM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#launch-your-new-vm">6.1.4.5. Launch Your New VM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#terminate-the-vm">6.1.4.6. Terminate the VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uploading-and-downloading-images">6.1.4.7. Uploading and downloading images</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#converting-a-xen-image-to-kvm">6.1.5. Converting a Xen image to KVM</a></li>
@@ -610,6 +611,7 @@
 <li><a class="reference internal" href="#save-the-changes-to-a-new-vm">6.1.4.4. Save the Changes to a New VM</a></li>
 <li><a class="reference internal" href="#launch-your-new-vm">6.1.4.5. Launch Your New VM</a></li>
 <li><a class="reference internal" href="#terminate-the-vm">6.1.4.6. Terminate the VM</a></li>
+<li><a class="reference internal" href="#uploading-and-downloading-images">6.1.4.7. Uploading and downloading images</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#converting-a-xen-image-to-kvm">6.1.5. Converting a Xen image to KVM</a></li>
@@ -683,49 +685,50 @@
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#nimbus-iaas" id="id5">Nimbus IaaS</a><ul>
-<li><a class="reference internal" href="#what-is-nimbus" id="id6">What is Nimbus?</a></li>
-<li><a class="reference internal" href="#nimbus-on-futuregrid" id="id7">Nimbus on FutureGrid</a></li>
-<li><a class="reference internal" href="#getting-started" id="id8">Getting Started</a><ul>
-<li><a class="reference internal" href="#log-into-hotel" id="id9">Log into hotel</a></li>
-<li><a class="reference internal" href="#download-and-install-cloud-client" id="id10">Download and install cloud-client</a></li>
-<li><a class="reference internal" href="#obtain-your-nimbus-credentials-and-configuration-files" id="id11">Obtain Your Nimbus Credentials and Configuration Files</a></li>
-<li><a class="reference internal" href="#check-your-ssh-key" id="id12">Check Your ssh Key</a></li>
+<li><a class="reference internal" href="#nimbus-iaas" id="id1">Nimbus IaaS</a><ul>
+<li><a class="reference internal" href="#what-is-nimbus" id="id2">What is Nimbus?</a></li>
+<li><a class="reference internal" href="#nimbus-on-futuregrid" id="id3">Nimbus on FutureGrid</a></li>
+<li><a class="reference internal" href="#getting-started" id="id4">Getting Started</a><ul>
+<li><a class="reference internal" href="#log-into-hotel" id="id5">Log into hotel</a></li>
+<li><a class="reference internal" href="#download-and-install-cloud-client" id="id6">Download and install cloud-client</a></li>
+<li><a class="reference internal" href="#obtain-your-nimbus-credentials-and-configuration-files" id="id7">Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li><a class="reference internal" href="#check-your-ssh-key" id="id8">Check Your ssh Key</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-the-cloud-client" id="id13">Using the Cloud Client</a><ul>
-<li><a class="reference internal" href="#check-out-the-various-futuregrid-clouds" id="id14">Check out the various FutureGrid clouds</a></li>
-<li><a class="reference internal" href="#run-a-virtual-machine" id="id15">Run a Virtual Machine</a></li>
-<li><a class="reference internal" href="#create-a-new-vm-image" id="id16">Create a New VM Image</a></li>
-<li><a class="reference internal" href="#save-the-changes-to-a-new-vm" id="id17">Save the Changes to a New VM</a></li>
-<li><a class="reference internal" href="#launch-your-new-vm" id="id18">Launch Your New VM</a></li>
-<li><a class="reference internal" href="#terminate-the-vm" id="id19">Terminate the VM</a></li>
+<li><a class="reference internal" href="#using-the-cloud-client" id="id9">Using the Cloud Client</a><ul>
+<li><a class="reference internal" href="#check-out-the-various-futuregrid-clouds" id="id10">Check out the various FutureGrid clouds</a></li>
+<li><a class="reference internal" href="#run-a-virtual-machine" id="id11">Run a Virtual Machine</a></li>
+<li><a class="reference internal" href="#create-a-new-vm-image" id="id12">Create a New VM Image</a></li>
+<li><a class="reference internal" href="#save-the-changes-to-a-new-vm" id="id13">Save the Changes to a New VM</a></li>
+<li><a class="reference internal" href="#launch-your-new-vm" id="id14">Launch Your New VM</a></li>
+<li><a class="reference internal" href="#terminate-the-vm" id="id15">Terminate the VM</a></li>
+<li><a class="reference internal" href="#uploading-and-downloading-images" id="id16">Uploading and downloading images</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#converting-a-xen-image-to-kvm" id="id20">Converting a Xen image to KVM</a></li>
-<li><a class="reference internal" href="#virtual-clusters" id="id21">Virtual Clusters</a><ul>
-<li><a class="reference internal" href="#cluster-definition-file" id="id22">Cluster Definition File</a></li>
-<li><a class="reference internal" href="#start-the-cluster" id="id23">Start the Cluster</a></li>
-<li><a class="reference internal" href="#check-out-the-virtual-cluster" id="id24">Check Out the Virtual Cluster</a></li>
+<li><a class="reference internal" href="#converting-a-xen-image-to-kvm" id="id17">Converting a Xen image to KVM</a></li>
+<li><a class="reference internal" href="#virtual-clusters" id="id18">Virtual Clusters</a><ul>
+<li><a class="reference internal" href="#cluster-definition-file" id="id19">Cluster Definition File</a></li>
+<li><a class="reference internal" href="#start-the-cluster" id="id20">Start the Cluster</a></li>
+<li><a class="reference internal" href="#check-out-the-virtual-cluster" id="id21">Check Out the Virtual Cluster</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#launch-a-vm-via-nimbus" id="id25">Launch A VM via Nimbus</a><ul>
-<li><a class="reference internal" href="#options" id="id26">Options</a></li>
-<li><a class="reference internal" href="#what-happens" id="id27">What Happens</a></li>
+<li><a class="reference internal" href="#launch-a-vm-via-nimbus" id="id22">Launch A VM via Nimbus</a><ul>
+<li><a class="reference internal" href="#options" id="id23">Options</a></li>
+<li><a class="reference internal" href="#what-happens" id="id24">What Happens</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#cloudinit-d" id="id28">cloudinit.d</a></li>
-<li><a class="reference internal" href="#phantom" id="id29">Phantom</a></li>
+<li><a class="reference internal" href="#cloudinit-d" id="id25">cloudinit.d</a></li>
+<li><a class="reference internal" href="#phantom" id="id26">Phantom</a></li>
 </ul>
 </div>
 </div>
 <div class="section" id="nimbus-iaas">
-<h2><a class="toc-backref" href="#id5">6.1. Nimbus IaaS</a><a class="headerlink" href="#nimbus-iaas" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">6.1. Nimbus IaaS</a><a class="headerlink" href="#nimbus-iaas" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.nimbusproject.org/"><img alt="image0" src="_images/nimbus_logo.png" /></a></p>
 <div class="section" id="what-is-nimbus">
-<h3><a class="toc-backref" href="#id6">6.1.1. What is Nimbus?</a><a class="headerlink" href="#what-is-nimbus" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id2">6.1.1. What is Nimbus?</a><a class="headerlink" href="#what-is-nimbus" title="Permalink to this headline">¶</a></h3>
 <p>Nimbus is an open source service package that allows users to run
 virtual machines on FutureGrid hardware. You can easily upload your own
 VM image or customize an image provided by us. When you boot a VM, it is
@@ -736,7 +739,7 @@ and configuring the VM, you can save the modified VM image back to the
 Nimbus image repository.</p>
 </div>
 <div class="section" id="nimbus-on-futuregrid">
-<h3><a class="toc-backref" href="#id7">6.1.2. Nimbus on FutureGrid</a><a class="headerlink" href="#nimbus-on-futuregrid" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id3">6.1.2. Nimbus on FutureGrid</a><a class="headerlink" href="#nimbus-on-futuregrid" title="Permalink to this headline">¶</a></h3>
 <p>Nimbus is installed on four FutureGrid clusters:</p>
 <ol class="arabic">
 <li><dl class="first docutils">
@@ -771,7 +774,7 @@ contact <a class="reference external" href="https://portal.futuregrid.org/help">
 <p>All FutureGrid users are allowed access to Nimbus on all sites.</p>
 </div>
 <div class="section" id="getting-started">
-<h3><a class="toc-backref" href="#id8">6.1.3. Getting Started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">6.1.3. Getting Started</a><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
 <p>Nimbus provides services that can be controlled remotely using a variety
 of clients. In this tutorial, we will use a simple command line tool
 called the <strong>cloud-client</strong>. If you&#8217;d rather have programmatic
@@ -780,7 +783,7 @@ supported</a>,
 which have a variety of excellent clients available for many
 languages.</p>
 <div class="section" id="log-into-hotel">
-<h4><a class="toc-backref" href="#id9">6.1.3.1. Log into hotel</a><a class="headerlink" href="#log-into-hotel" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id5">6.1.3.1. Log into hotel</a><a class="headerlink" href="#log-into-hotel" title="Permalink to this headline">¶</a></h4>
 <p>The first step is to ssh into hotel.futuregrid.org.  While you can use
 Nimbus clients from anywhere in the world, we recommend that you start
 on hotel because the correct version of Java is installed there.</p>
@@ -797,7 +800,7 @@ registered with FutureGrid.</li>
 </ol>
 </div>
 <div class="section" id="download-and-install-cloud-client">
-<h4><a class="toc-backref" href="#id10">6.1.3.2. Download and install cloud-client</a><a class="headerlink" href="#download-and-install-cloud-client" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id6">6.1.3.2. Download and install cloud-client</a><a class="headerlink" href="#download-and-install-cloud-client" title="Permalink to this headline">¶</a></h4>
 <p>Download the Nimbus cloud client from the <a class="reference external" href="http://www.nimbusproject.org/downloads/">Nimbus
 website</a>.</p>
 <div class="highlight-python"><pre>$ wget http://www.nimbusproject.org/downloads/nimbus-cloud-client-022.tar.gz</pre>
@@ -810,7 +813,7 @@ LICENSE.txt bin     history     samples</pre>
 </div>
 </div>
 <div class="section" id="obtain-your-nimbus-credentials-and-configuration-files">
-<h4><a class="toc-backref" href="#id11">6.1.3.3. Obtain Your Nimbus Credentials and Configuration Files</a><a class="headerlink" href="#obtain-your-nimbus-credentials-and-configuration-files" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id7">6.1.3.3. Obtain Your Nimbus Credentials and Configuration Files</a><a class="headerlink" href="#obtain-your-nimbus-credentials-and-configuration-files" title="Permalink to this headline">¶</a></h4>
 <p>In your home directory on hotel, you will find the file
 nimbus_creds.tar.gz:</p>
 <div class="highlight-python"><pre> username@hotel $ ls ~/nimbus_creds.tar.gz
@@ -838,7 +841,7 @@ help text and file.</p>
 </div>
 </div>
 <div class="section" id="check-your-ssh-key">
-<h4><a class="toc-backref" href="#id12">6.1.3.4. Check Your ssh Key</a><a class="headerlink" href="#check-your-ssh-key" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id8">6.1.3.4. Check Your ssh Key</a><a class="headerlink" href="#check-your-ssh-key" title="Permalink to this headline">¶</a></h4>
 <p>In order to use Nimbus clouds effectively, you need to have your ssh
 public key in a known place so that it can be injected into your VM, and
 thus allow you (and only you) root access to your VM. When creating your
@@ -856,9 +859,9 @@ command to display some information about your security environment:</p>
 </div>
 </div>
 <div class="section" id="using-the-cloud-client">
-<h3><a class="toc-backref" href="#id13">6.1.4. Using the Cloud Client</a><a class="headerlink" href="#using-the-cloud-client" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">6.1.4. Using the Cloud Client</a><a class="headerlink" href="#using-the-cloud-client" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="check-out-the-various-futuregrid-clouds">
-<h4><a class="toc-backref" href="#id14">6.1.4.1. Check out the various FutureGrid clouds</a><a class="headerlink" href="#check-out-the-various-futuregrid-clouds" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id10">6.1.4.1. Check out the various FutureGrid clouds</a><a class="headerlink" href="#check-out-the-various-futuregrid-clouds" title="Permalink to this headline">¶</a></h4>
 <p>When the credentials file was untarred in a step above, a
 configuration file for each of the four FutureGrid clouds was put in
 your <em>conf/</em>directory.  Now let&#8217;s take a look at accessing each of
@@ -880,7 +883,7 @@ tutorial:</p>
 </div>
 </div>
 <div class="section" id="run-a-virtual-machine">
-<h4><a class="toc-backref" href="#id15">6.1.4.2. Run a Virtual Machine</a><a class="headerlink" href="#run-a-virtual-machine" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id11">6.1.4.2. Run a Virtual Machine</a><a class="headerlink" href="#run-a-virtual-machine" title="Permalink to this headline">¶</a></h4>
 <p>Next, try to boot a virtual machine:</p>
 <div class="highlight-python"><pre>$ bin/cloud-client.sh --conf conf/hotel-kvm.conf --run --name hello-cloud --hours 2
 
@@ -919,7 +922,7 @@ out by cloud client.</p>
 </div>
 </div>
 <div class="section" id="create-a-new-vm-image">
-<h4><a class="toc-backref" href="#id16">6.1.4.3. Create a New VM Image</a><a class="headerlink" href="#create-a-new-vm-image" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id12">6.1.4.3. Create a New VM Image</a><a class="headerlink" href="#create-a-new-vm-image" title="Permalink to this headline">¶</a></h4>
 <p>Once you have a root shell on your VM, you may modify it as through it
 were a real machine.  Here we encourage you to make some changes.
 Create a new user, install some additional software, or simply create a
@@ -930,7 +933,7 @@ text file in the root user&#8217;s account:</p>
 </div>
 </div>
 <div class="section" id="save-the-changes-to-a-new-vm">
-<h4><a class="toc-backref" href="#id17">6.1.4.4. Save the Changes to a New VM</a><a class="headerlink" href="#save-the-changes-to-a-new-vm" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id13">6.1.4.4. Save the Changes to a New VM</a><a class="headerlink" href="#save-the-changes-to-a-new-vm" title="Permalink to this headline">¶</a></h4>
 <p>Now that you have modified the VM, you can save it back into your
 personal repository.  To do this, you will use the &#8211;save and &#8211;newname
 options.  You will also need the VM handle as it was displayed in the
@@ -976,9 +979,9 @@ available for launch:</p>
 </div>
 </div>
 <div class="section" id="launch-your-new-vm">
-<h4><a class="toc-backref" href="#id18">6.1.4.5. Launch Your New VM</a><a class="headerlink" href="#launch-your-new-vm" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id14">6.1.4.5. Launch Your New VM</a><a class="headerlink" href="#launch-your-new-vm" title="Permalink to this headline">¶</a></h4>
 <p>You can now launch your new VM just like you did the hello-cloud VM
-above, simply changing the name from <em>hello-cloud</em> to <a href="#id1"><span class="problematic" id="id2">*</span></a>myvm <a href="#id3"><span class="problematic" id="id4">*</span></a>:</p>
+above, simply changing the name from <em>hello-cloud</em> to <em>myvm</em>:</p>
 <div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --run --name myvm --hours 2
 
 Launching workspace.
@@ -1005,7 +1008,7 @@ Running: 'vm-002'</pre>
 <p>SSH into the machine and verify that your changes persisted.</p>
 </div>
 <div class="section" id="terminate-the-vm">
-<h4><a class="toc-backref" href="#id19">6.1.4.6. Terminate the VM</a><a class="headerlink" href="#terminate-the-vm" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id15">6.1.4.6. Terminate the VM</a><a class="headerlink" href="#terminate-the-vm" title="Permalink to this headline">¶</a></h4>
 <p>Your VM will terminate after its allocated time expires.  In our
 examples here, this is after 2 hours.  However, you may wish to
 terminate it earlier.  You can do so by again using the &#8211;handle option
@@ -1018,9 +1021,45 @@ Terminating workspace.
 Destroying vm-002... destroyed.</pre>
 </div>
 </div>
+<div class="section" id="uploading-and-downloading-images">
+<h4><a class="toc-backref" href="#id16">6.1.4.7. Uploading and downloading images</a><a class="headerlink" href="#uploading-and-downloading-images" title="Permalink to this headline">¶</a></h4>
+<p>You can use the cloud client to upload and download VM images.</p>
+<p>To upload a VM image, use the &#8211;transfer argument, specifying the path to the VM
+image to upload with &#8211;localfile.</p>
+<div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --transfer --sourcefile ubuntu-13.10-server-amd64.gz
+
+Transferring
+  - Source: ubuntu-13.10-server-amd64.gz
+  - Destination: cumulus://Repo/VMS/b27e2722-ecfd-11df-b9d1-02215ecdcda3/ubuntu-13.10-server-amd64.gz
+
+Preparing the file for transfer:
+656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+Transferring the file:
+656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+Done.</pre>
+</div>
+<p>If you add the &#8211;common option, your VM image will be public and readable by
+any user of the cloud (but they won&#8217;t be able to modify it without creating
+their own copy). This can be useful to share environments between
+collaborators.</p>
+<p>To download a VM image, use the &#8211;download argument, specifying the image name
+with &#8211;name and the file name to use locally with &#8211;localfile.</p>
+<div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --download --name ubuntu-13.10-server-amd64.gz --localfile ubuntu-13.10-server-amd64.gz
+
+Transferring
+  - Source: cumulus://Repo/VMS/b27e2722-ecfd-11df-b9d1-02215ecdcda3/ubuntu-13.10-server-amd64.gz
+  - Destination: /home/nimbus/nimbus-cloud-client-022/ubuntu-13.10-server-amd64.gz
+
+656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%</pre>
+</div>
+<p>If you have your own image using the same name as a public image, the cloud
+client will download your private image, unless you use the &#8211;common option.</p>
+</div>
 </div>
 <div class="section" id="converting-a-xen-image-to-kvm">
-<h3><a class="toc-backref" href="#id20">6.1.5. Converting a Xen image to KVM</a><a class="headerlink" href="#converting-a-xen-image-to-kvm" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">6.1.5. Converting a Xen image to KVM</a><a class="headerlink" href="#converting-a-xen-image-to-kvm" title="Permalink to this headline">¶</a></h3>
 <p>If you have existing virtual machine images running on Nimbus clouds using Xen
 virtualization, you will need to convert them to run on a Nimbus cloud using
 KVM virtualization (at the moment, Hotel KVM and Alamo).</p>
@@ -1080,12 +1119,12 @@ Installation finished. No error reported.
 <p>The image kvm.img should now be ready to be uploaded to a Nimbus KVM cloud!</p>
 </div>
 <div class="section" id="virtual-clusters">
-<h3><a class="toc-backref" href="#id21">6.1.6. Virtual Clusters</a><a class="headerlink" href="#virtual-clusters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">6.1.6. Virtual Clusters</a><a class="headerlink" href="#virtual-clusters" title="Permalink to this headline">¶</a></h3>
 <p>This is a basic walkthrough of how to run a sample virtual cluster.  For more
 information on how they work, see
 <a class="reference external" href="http://www.nimbusproject.org/docs/current/clouds/clusters2.html">http://www.nimbusproject.org/docs/current/clouds/clusters2.html</a>.</p>
 <div class="section" id="cluster-definition-file">
-<h4><a class="toc-backref" href="#id22">6.1.6.1. Cluster Definition File</a><a class="headerlink" href="#cluster-definition-file" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id19">6.1.6.1. Cluster Definition File</a><a class="headerlink" href="#cluster-definition-file" title="Permalink to this headline">¶</a></h4>
 <p>For this example, we will use a modification of the sample cluster file that is
 distributed with the cloud client.
 The file can be found at
@@ -1102,7 +1141,7 @@ cluster.  This has the role of being a nfs client.</li>
 </ol>
 </div>
 <div class="section" id="start-the-cluster">
-<h4><a class="toc-backref" href="#id23">6.1.6.2. Start the Cluster</a><a class="headerlink" href="#start-the-cluster" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id20">6.1.6.2. Start the Cluster</a><a class="headerlink" href="#start-the-cluster" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python"><pre>$ ./bin/cloud-client.sh --conf conf/sierra.conf --run --hours 2 --cluster &lt;path to your cluster document&gt;
 SSH known_hosts contained tilde:
   - '~/.ssh/known_hosts' --&gt; '/N/u/bresnaha/.ssh/known_hosts'
@@ -1157,7 +1196,7 @@ disks.</p>
 <p>When it is complete, your virtual cluster will be ready to go.</p>
 </div>
 <div class="section" id="check-out-the-virtual-cluster">
-<h4><a class="toc-backref" href="#id24">6.1.6.3. Check Out the Virtual Cluster</a><a class="headerlink" href="#check-out-the-virtual-cluster" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id21">6.1.6.3. Check Out the Virtual Cluster</a><a class="headerlink" href="#check-out-the-virtual-cluster" title="Permalink to this headline">¶</a></h4>
 <p>Now ssh into one of the worker nodes and check out the file system.</p>
 <div class="highlight-python"><pre>$ df -h
 df -h
@@ -1199,7 +1238,7 @@ Hello FutureGrid</pre>
 </div>
 </div>
 <div class="section" id="launch-a-vm-via-nimbus">
-<h2><a class="toc-backref" href="#id25">6.2. Launch A VM via Nimbus</a><a class="headerlink" href="#launch-a-vm-via-nimbus" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id22">6.2. Launch A VM via Nimbus</a><a class="headerlink" href="#launch-a-vm-via-nimbus" title="Permalink to this headline">¶</a></h2>
 <p>It  simple to run a virtual machine (VM) on
 FutureGrid Nimbus.&nbsp; The VM launched will mount your home files system on
 hotel so data can be exchanged with the VM easily.&nbsp; Users new to cloud
@@ -1236,7 +1275,7 @@ $ ls /mnt/hotel.futuregrid.org
 ..... &lt;a listing of your FutureGrid home directory&gt;</pre>
 </div>
 <div class="section" id="options">
-<h3><a class="toc-backref" href="#id26">6.2.1. Options</a><a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">6.2.1. Options</a><a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
 <p>By default, the VMs are launched on hotel&#8217;s Nimbus cloud.&nbsp; However,
 you can use this script to launch a VM on any cloud to which you have
 access, including all of FutureGrid&#8217;s Nimbus clouds, FutureGrid&#8217;s
@@ -1275,7 +1314,7 @@ this, create a key pair named &#8216;futuregrid&#8217;, and set the env
 that key name.</p>
 </div>
 <div class="section" id="what-happens">
-<h3><a class="toc-backref" href="#id27">6.2.2. What Happens</a><a class="headerlink" href="#what-happens" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">6.2.2. What Happens</a><a class="headerlink" href="#what-happens" title="Permalink to this headline">¶</a></h3>
 <p>This script uses the program cloudinit.d
 (<a class="reference external" href="http://www.nimbusproject.org/doc/cloudinitd/latest/">http://www.nimbusproject.org/doc/cloudinitd/latest/)</a>.
 This is a Nimbus Platform multi-cloud tool for running cloud
@@ -1285,7 +1324,7 @@ sshfs inside of the VM to remotely mount your FutureGrid home directory.</p>
 </div>
 </div>
 <div class="section" id="cloudinit-d">
-<h2><a class="toc-backref" href="#id28">6.3. cloudinit.d</a><a class="headerlink" href="#cloudinit-d" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">6.3. cloudinit.d</a><a class="headerlink" href="#cloudinit-d" title="Permalink to this headline">¶</a></h2>
 <p>cloudinit.d is a tool designed for launching, controlling, and monitoring
 complex environments in the cloud.
 Its most important feature is repeatable, one-click, deployment of sets of VMs
@@ -1299,7 +1338,7 @@ For repeatable experiment management with cloudinit.d, read the&nbsp;<a class="r
 Supporting Experimental Computer Science</a>.</p>
 </div>
 <div class="section" id="phantom">
-<h2><a class="toc-backref" href="#id29">6.4. Phantom</a><a class="headerlink" href="#phantom" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id26">6.4. Phantom</a><a class="headerlink" href="#phantom" title="Permalink to this headline">¶</a></h2>
 <p>Nimbus Phantom is a hosted service running on FutureGrid that makes it
 easy to leverage on-demand resources provided by infrastructure clouds.
 Phantom allows the user to deploy a set of virtual machines over
