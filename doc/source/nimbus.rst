@@ -309,7 +309,7 @@ Launch Your New VM
 ~~~~~~~~~~~~~~~~~~
 
 You can now launch your new VM just like you did the hello-cloud VM
-above, simply changing the name from *hello-cloud* to *myvm *:
+above, simply changing the name from *hello-cloud* to *myvm*:
 
 ::
 
@@ -355,6 +355,51 @@ as you did in the *save a new VM step* and the --terminate option:
       - Workspace handle (EPR): '/N/u/priteau/nimbus-cloud-client-022/history/vm-002/vw-epr.xml'
 
     Destroying vm-002... destroyed.
+
+Uploading and downloading images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use the cloud client to upload and download VM images.
+
+To upload a VM image, use the --transfer argument, specifying the path to the VM
+image to upload with --localfile.
+
+::
+
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --transfer --sourcefile ubuntu-13.10-server-amd64.gz
+
+    Transferring
+      - Source: ubuntu-13.10-server-amd64.gz
+      - Destination: cumulus://Repo/VMS/b27e2722-ecfd-11df-b9d1-02215ecdcda3/ubuntu-13.10-server-amd64.gz
+
+    Preparing the file for transfer:
+    656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+    Transferring the file:
+    656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+    Done.
+
+If you add the --common option, your VM image will be public and readable by
+any user of the cloud (but they won't be able to modify it without creating
+their own copy). This can be useful to share environments between
+collaborators.
+
+To download a VM image, use the --download argument, specifying the image name
+with --name and the file name to use locally with --localfile.
+
+::
+
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --download --name ubuntu-13.10-server-amd64.gz --localfile ubuntu-13.10-server-amd64.gz
+
+    Transferring
+      - Source: cumulus://Repo/VMS/b27e2722-ecfd-11df-b9d1-02215ecdcda3/ubuntu-13.10-server-amd64.gz
+      - Destination: /home/nimbus/nimbus-cloud-client-022/ubuntu-13.10-server-amd64.gz
+
+    656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+If you have your own image using the same name as a public image, the cloud
+client will download your private image, unless you use the --common option.
 
 Converting a Xen image to KVM
 -----------------------------
