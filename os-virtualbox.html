@@ -5,12 +5,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. Converting Virtualbox images to OpenStack &mdash; FutureGrid 0.1 documentation</title>
+    <title>5. Converting Virtualbox images to OpenStack &mdash; FutureGrid 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,13 +26,13 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="FutureGrid 0.1 documentation" href="index.html" />
-    <link rel="next" title="5. Nimbus" href="nimbus.html" />
-    <link rel="prev" title="3. OpenStack Grizzly" href="openstackgrizzly.html" />
+    <link rel="next" title="6. Nimbus" href="nimbus.html" />
+    <link rel="prev" title="4. Openstack Horizon" href="horizon.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -61,11 +61,14 @@
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">1.1. Citation for Publications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">1.2. Acknowledgement</a></li>
@@ -294,6 +297,7 @@
 <li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#how-to-change-your-password">2.16. How to change your password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">2.17. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#horizon-gui">2.18. Horizon GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#getting-rc-files-via-horizon">2.19. Getting rc files via Horizon</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="openstackgrizzly.html">3. OpenStack Grizzly</a><ul>
@@ -323,73 +327,85 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">4. Converting Virtualbox images to OpenStack</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#prerequisites">4.1. Prerequisites</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">4.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">4.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">4.1.4. Configure udev persistent rules (only CentOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizon.html">4. Openstack Horizon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#managing-virtual-machine-instances">4.1. Managing Virtual Machine Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#snapshots">4.2. Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#floating-ip-addresses">4.3. Floating IP Addresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#accessing-your-virtual-machine">4.4. Accessing Your Virtual Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#uploading-an-image">4.5. Uploading an Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#managing-volumes">4.6. Managing Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#ec2-interface">4.7. EC2 Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#openstack-rest-interfaces">4.8. OpenStack REST Interfaces</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">4.2. Convert your virtual box image to raw format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">4.3. Convert the image to qcow2 format (optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-your-image">4.4. Test your image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#transfer-your-image-to-india">4.5. Transfer your Image to India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#log-into-india">4.6. Log into India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#upload-your-image-to-openstack">4.7. Upload your image to OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#checking-status-image">4.8. Checking Status Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-image-in-openstack">4.9. Test Image in OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">4.10. Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#notes">4.11. Notes:</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">5. Converting Virtualbox images to OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">5.1. Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">5.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">5.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">5.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">5.1.4. Configure udev persistent rules (only CentOS)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nimbus.html">5. Nimbus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-iaas">5.1. Nimbus IaaS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#image0">5.1.1. </a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-is-nimbus">5.1.2. What is Nimbus?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">5.1.3. Nimbus on FutureGrid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#getting-started">5.1.4. Getting Started</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#log-into-hotel">5.1.4.1. Log into hotel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#download-and-install-cloud-client">5.1.4.2. Download and install cloud-client</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#obtain-your-nimbus-credentials-and-configuration-files">5.1.4.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-your-ssh-key">5.1.4.4. Check Your ssh Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">5.2. Convert your virtual box image to raw format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">5.3. Convert the image to qcow2 format (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-your-image">5.4. Test your image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transfer-your-image-to-india">5.5. Transfer your Image to India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log-into-india">5.6. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-your-image-to-openstack">5.7. Upload your image to OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-status-image">5.8. Checking Status Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-image-in-openstack">5.9. Test Image in OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">5.10. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes">5.11. Notes:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#using-the-cloud-client">5.1.5. Using the Cloud Client</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-various-futuregrid-clouds">5.1.5.1. Check out the various FutureGrid clouds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#run-a-virtual-machine">5.1.5.2. Run a Virtual Machine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#create-a-new-vm-image">5.1.5.3. Create a New VM Image</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#save-the-changes-to-a-new-vm">5.1.5.4. Save the Changes to a New VM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#launch-your-new-vm">5.1.5.5. Launch Your New VM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#terminate-the-vm">5.1.5.6. Terminate the VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus.html">6. Nimbus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-iaas">6.1. Nimbus IaaS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-is-nimbus">6.1.1. What is Nimbus?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">6.1.2. Nimbus on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#getting-started">6.1.3. Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#log-into-hotel">6.1.3.1. Log into hotel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#download-and-install-cloud-client">6.1.3.2. Download and install cloud-client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#obtain-your-nimbus-credentials-and-configuration-files">6.1.3.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-your-ssh-key">6.1.3.4. Check Your ssh Key</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#virtual-clusters">5.1.6. Virtual Clusters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#cluster-definition-file">5.1.6.1. Cluster Definition File</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#start-the-cluster">5.1.6.2. Start the Cluster</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-virtual-cluster">5.1.6.3. Check Out the Virtual Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#using-the-cloud-client">6.1.4. Using the Cloud Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-various-futuregrid-clouds">6.1.4.1. Check out the various FutureGrid clouds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#run-a-virtual-machine">6.1.4.2. Run a Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#create-a-new-vm-image">6.1.4.3. Create a New VM Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#save-the-changes-to-a-new-vm">6.1.4.4. Save the Changes to a New VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#launch-your-new-vm">6.1.4.5. Launch Your New VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#terminate-the-vm">6.1.4.6. Terminate the VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#uploading-and-downloading-images">6.1.4.7. Uploading and downloading images</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#converting-a-xen-image-to-kvm">6.1.5. Converting a Xen image to KVM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#virtual-clusters">6.1.6. Virtual Clusters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#cluster-definition-file">6.1.6.1. Cluster Definition File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#start-the-cluster">6.1.6.2. Start the Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-virtual-cluster">6.1.6.3. Check Out the Virtual Cluster</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">5.2. Launch A VM via Nimbus</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#options">5.2.1. Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-happens">5.2.2. What Happens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">6.2. Launch A VM via Nimbus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#options">6.2.1. Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-happens">6.2.2. What Happens</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloudinit-d">5.3. cloudinit.d</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#phantom">5.4. Phantom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloudinit-d">6.3. cloudinit.d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#phantom">6.4. Phantom</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">6. Eucalyptus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-setup">6.1. Account Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">6.2. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">6.3. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">6.4. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">6.5. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">6.6. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">6.7. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">6.8. Status of Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">7. Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-setup">7.1. Account Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">7.2. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">7.3. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">7.4. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">7.5. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">7.6. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">7.7. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">7.8. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -569,26 +585,32 @@
 </li>
               
                 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">4. Converting Virtualbox images to OpenStack</a><ul>
-<li><a class="reference internal" href="#prerequisites">4.1. Prerequisites</a><ul>
-<li><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
-<li><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">4.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
-<li><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">4.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
-<li><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">4.1.4. Configure udev persistent rules (only CentOS)</a></li>
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">5. Converting Virtualbox images to OpenStack</a><ul>
+<li><a class="reference internal" href="#prerequisites">5.1. Prerequisites</a><ul>
+<li><a class="reference internal" href="#disable-selinux-only-for-redhat-based-linux-like-centos">5.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li><a class="reference internal" href="#configuring-the-image-network-interface-eth0-for-dhcp">5.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li><a class="reference internal" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">5.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li><a class="reference internal" href="#configure-udev-persistent-rules-only-centos">5.1.4. Configure udev persistent rules (only CentOS)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">4.2. Convert your virtual box image to raw format</a></li>
-<li><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">4.3. Convert the image to qcow2 format (optional)</a></li>
-<li><a class="reference internal" href="#test-your-image">4.4. Test your image</a></li>
-<li><a class="reference internal" href="#transfer-your-image-to-india">4.5. Transfer your Image to India</a></li>
-<li><a class="reference internal" href="#log-into-india">4.6. Log into India</a></li>
-<li><a class="reference internal" href="#upload-your-image-to-openstack">4.7. Upload your image to OpenStack</a></li>
-<li><a class="reference internal" href="#checking-status-image">4.8. Checking Status Image</a></li>
-<li><a class="reference internal" href="#test-image-in-openstack">4.9. Test Image in OpenStack</a></li>
-<li><a class="reference internal" href="#troubleshooting">4.10. Troubleshooting</a></li>
-<li><a class="reference internal" href="#notes">4.11. Notes:</a></li>
+<li><a class="reference internal" href="#convert-your-virtual-box-image-to-raw-format">5.2. Convert your virtual box image to raw format</a></li>
+<li><a class="reference internal" href="#convert-the-image-to-qcow2-format-optional">5.3. Convert the image to qcow2 format (optional)</a></li>
+<li><a class="reference internal" href="#test-your-image">5.4. Test your image</a></li>
+<li><a class="reference internal" href="#transfer-your-image-to-india">5.5. Transfer your Image to India</a></li>
+<li><a class="reference internal" href="#log-into-india">5.6. Log into India</a></li>
+<li><a class="reference internal" href="#upload-your-image-to-openstack">5.7. Upload your image to OpenStack</a></li>
+<li><a class="reference internal" href="#checking-status-image">5.8. Checking Status Image</a></li>
+<li><a class="reference internal" href="#test-image-in-openstack">5.9. Test Image in OpenStack</a></li>
+<li><a class="reference internal" href="#troubleshooting">5.10. Troubleshooting</a></li>
+<li><a class="reference internal" href="#notes">5.11. Notes:</a></li>
 </ul>
 </li>
 </ul>
@@ -600,11 +622,11 @@
               
                 
   <li>
-    <a href="openstackgrizzly.html" title="Previous Chapter: 3. OpenStack Grizzly"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 3. OpenStack Gri...</span>
+    <a href="horizon.html" title="Previous Chapter: 4. Openstack Horizon"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 4. Openstack Hor...</span>
     </a>
   </li>
   <li>
-    <a href="nimbus.html" title="Next Chapter: 5. Nimbus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">5. Nimbus &raquo;</span>
+    <a href="nimbus.html" title="Next Chapter: 6. Nimbus"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">6. Nimbus &raquo;</span>
     </a>
   </li>
               
@@ -639,21 +661,21 @@
     <div class="col-md-12">
       
   <div class="section" id="converting-virtualbox-images-to-openstack">
-<h1>4. Converting Virtualbox images to OpenStack<a class="headerlink" href="#converting-virtualbox-images-to-openstack" title="Permalink to this headline">¶</a></h1>
+<h1>5. Converting Virtualbox images to OpenStack<a class="headerlink" href="#converting-virtualbox-images-to-openstack" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial we explain how to convert a Virtual Box image to kvm
 format and then register it on OpenStack.</p>
 <div class="section" id="prerequisites">
-<h2>4.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<h2>5.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>There is two main prerequisites for your images to work with OpenStack</p>
 <div class="section" id="disable-selinux-only-for-redhat-based-linux-like-centos">
-<h3>4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)<a class="headerlink" href="#disable-selinux-only-for-redhat-based-linux-like-centos" title="Permalink to this headline">¶</a></h3>
+<h3>5.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)<a class="headerlink" href="#disable-selinux-only-for-redhat-based-linux-like-centos" title="Permalink to this headline">¶</a></h3>
 <p>Edit the file&nbsp;/etc/selinux/config and set the SELINUX option to disabled:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">SELINUX</span><span class="o">=</span><span class="n">disabled</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="configuring-the-image-network-interface-eth0-for-dhcp">
-<h3>4.1.2. Configuring the image network interface (eth0) for DHCP<a class="headerlink" href="#configuring-the-image-network-interface-eth0-for-dhcp" title="Permalink to this headline">¶</a></h3>
+<h3>5.1.2. Configuring the image network interface (eth0) for DHCP<a class="headerlink" href="#configuring-the-image-network-interface-eth0-for-dhcp" title="Permalink to this headline">¶</a></h3>
 <p>In Ubuntu, you edit the file /etc/network/interfaces and configure eth0
 to:</p>
 <div class="highlight-python"><pre>auto eth0
@@ -668,7 +690,7 @@ and make sure it contains:</p>
 </div>
 </div>
 <div class="section" id="configure-the-image-to-allow-openstack-to-inject-the-ssh-key">
-<h3>4.1.3. Configure the image to allow OpenStack to inject the ssh key<a class="headerlink" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key" title="Permalink to this headline">¶</a></h3>
+<h3>5.1.3. Configure the image to allow OpenStack to inject the ssh key<a class="headerlink" href="#configure-the-image-to-allow-openstack-to-inject-the-ssh-key" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Ubuntu&nbsp;(it may not be needed for Ubuntu, but it is recomended)</li>
 </ul>
@@ -677,7 +699,7 @@ and make sure it contains:</p>
 </ul>
 </div>
 <div class="section" id="configure-udev-persistent-rules-only-centos">
-<h3>4.1.4. Configure udev persistent rules (only CentOS)<a class="headerlink" href="#configure-udev-persistent-rules-only-centos" title="Permalink to this headline">¶</a></h3>
+<h3>5.1.4. Configure udev persistent rules (only CentOS)<a class="headerlink" href="#configure-udev-persistent-rules-only-centos" title="Permalink to this headline">¶</a></h3>
 <p>Edit the file&nbsp;/etc/udev/rules.d/70-persistent-net.rules, delete
 everything and add:</p>
 <div class="highlight-python"><pre>ACTION=="add",SUBSYSTEM=="net", IMPORT{program}="/lib/udev/rename_device"
@@ -686,14 +708,14 @@ SUBSYSTEM=="net", RUN+="/etc/sysconfig/network-scripts/net.hotplug"</pre>
 </div>
 </div>
 <div class="section" id="convert-your-virtual-box-image-to-raw-format">
-<h2>4.2. Convert your virtual box image to raw format<a class="headerlink" href="#convert-your-virtual-box-image-to-raw-format" title="Permalink to this headline">¶</a></h2>
+<h2>5.2. Convert your virtual box image to raw format<a class="headerlink" href="#convert-your-virtual-box-image-to-raw-format" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>VBoxManage clonehd /path/to/imagefile/vboximage.vdi /path/to/rawimage.img --format raw</pre>
 </div>
 <p>Make sure that you specify the full path. Otherwise, you may experience
 errors and the new image will be placed in&nbsp;&nbsp;~/.VirtualBox/HardDisks/</p>
 </div>
 <div class="section" id="convert-the-image-to-qcow2-format-optional">
-<h2>4.3. Convert the image to qcow2 format (optional)<a class="headerlink" href="#convert-the-image-to-qcow2-format-optional" title="Permalink to this headline">¶</a></h2>
+<h2>5.3. Convert the image to qcow2 format (optional)<a class="headerlink" href="#convert-the-image-to-qcow2-format-optional" title="Permalink to this headline">¶</a></h2>
 <p>This step is optional, but it is recommended if your image as a
 considerable size because the qcow2 format will compress your image.
 Nevertheless, it will takes a while to finish this command. As example
@@ -703,7 +725,7 @@ less than 6 GB:</p>
 </div>
 </div>
 <div class="section" id="test-your-image">
-<h2>4.4. Test your image<a class="headerlink" href="#test-your-image" title="Permalink to this headline">¶</a></h2>
+<h2>5.4. Test your image<a class="headerlink" href="#test-your-image" title="Permalink to this headline">¶</a></h2>
 <p>If you are in a computer with graphical interface, the easiest way to
 test it is by executing the following command. This command will open a
 window and you will see if your image boots correctly:</p>
@@ -716,17 +738,17 @@ window and you will see if your image boots correctly:</p>
 way with the qcow2image.img.</p>
 </div>
 <div class="section" id="transfer-your-image-to-india">
-<h2>4.5. Transfer your Image to India<a class="headerlink" href="#transfer-your-image-to-india" title="Permalink to this headline">¶</a></h2>
+<h2>5.5. Transfer your Image to India<a class="headerlink" href="#transfer-your-image-to-india" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>$ scp rawimage.img &lt;username&gt;@india.futuregrid.org:/N/u/&lt;username&gt;/</pre>
 </div>
 </div>
 <div class="section" id="log-into-india">
-<h2>4.6. Log into India<a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h2>
+<h2>5.6. Log into India<a class="headerlink" href="#log-into-india" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><pre>$ ssh &lt;username&gt;@india.futuregrid.org</pre>
 </div>
 </div>
 <div class="section" id="upload-your-image-to-openstack">
-<h2>4.7. Upload your image to OpenStack<a class="headerlink" href="#upload-your-image-to-openstack" title="Permalink to this headline">¶</a></h2>
+<h2>5.7. Upload your image to OpenStack<a class="headerlink" href="#upload-your-image-to-openstack" title="Permalink to this headline">¶</a></h2>
 <p>First, we need to load the euca2ools module that contains the command
 line interface to interact with OpenStack. Then we need to load our own
 credentials that are typically in a novarc file. Finally you update and
@@ -770,7 +792,7 @@ IMAGE ami-00000058</pre>
 OpenStack (marked in yellow). You will need this to start instances.</p>
 </div>
 <div class="section" id="checking-status-image">
-<h2>4.8. Checking Status Image<a class="headerlink" href="#checking-status-image" title="Permalink to this headline">¶</a></h2>
+<h2>5.8. Checking Status Image<a class="headerlink" href="#checking-status-image" title="Permalink to this headline">¶</a></h2>
 <p>You cannot run instances until your image is in available status. You
 can check the status of your image with the euca-describe-images
 command. This command can take some time to respond because the system
@@ -779,7 +801,7 @@ will be busy processing your image:</p>
 </div>
 </div>
 <div class="section" id="test-image-in-openstack">
-<h2>4.9. Test Image in OpenStack<a class="headerlink" href="#test-image-in-openstack" title="Permalink to this headline">¶</a></h2>
+<h2>5.9. Test Image in OpenStack<a class="headerlink" href="#test-image-in-openstack" title="Permalink to this headline">¶</a></h2>
 <p>For this step we recomend to go to the OpenStack tutorial where we
 explain how to create a key-pair and run an instance with our image.
 Please
@@ -792,7 +814,7 @@ allow us to ssh into the image. Please refer to the OpenStack tutorial
 for more information.</p>
 </div>
 <div class="section" id="troubleshooting">
-<h2>4.10. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<h2>5.10. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>One problem of this way of using our images is that we cannot use
 euca-get-console-output command to debug the boot process of the images.
 Therefore it makes more complicated solving runtime problems. However,
@@ -801,7 +823,7 @@ it should work also on OpenStack and the only problem could be wrong
 configuration of network interface or SELinux enabled.</p>
 </div>
 <div class="section" id="notes">
-<h2>4.11. Notes:<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<h2>5.11. Notes:<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <p>This tutorial has been tested with Ubuntu 12 and CentOS 6 using
 OpenStack Essex.</p>
 <p><a class="reference external" href="/tutorials/one-click-twister-k-means-eucalyptus-futuregrid">‹ One-click Twister K-means on Eucalyptus

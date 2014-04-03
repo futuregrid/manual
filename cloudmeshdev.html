@@ -9,8 +9,8 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,9 +26,9 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="FutureGrid 0.1 documentation" href="index.html" />
 <meta charset='utf-8'>
@@ -59,11 +59,14 @@
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="preface.html">1. Preface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#citation-for-publications">1.1. Citation for Publications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="preface.html#acknowledgement">1.2. Acknowledgement</a></li>
@@ -292,6 +295,7 @@
 <li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#how-to-change-your-password">2.16. How to change your password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">2.17. Things to do when you need Euca2ools or EC2 interfaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#horizon-gui">2.18. Horizon GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstackhavana.html#getting-rc-files-via-horizon">2.19. Getting rc files via Horizon</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="openstackgrizzly.html">3. OpenStack Grizzly</a><ul>
@@ -321,73 +325,85 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="os-virtualbox.html">4. Converting Virtualbox images to OpenStack</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#prerequisites">4.1. Prerequisites</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#disable-selinux-only-for-redhat-based-linux-like-centos">4.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configuring-the-image-network-interface-eth0-for-dhcp">4.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">4.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
-<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configure-udev-persistent-rules-only-centos">4.1.4. Configure udev persistent rules (only CentOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="horizon.html">4. Openstack Horizon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#managing-virtual-machine-instances">4.1. Managing Virtual Machine Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#snapshots">4.2. Snapshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#floating-ip-addresses">4.3. Floating IP Addresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#accessing-your-virtual-machine">4.4. Accessing Your Virtual Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#uploading-an-image">4.5. Uploading an Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#managing-volumes">4.6. Managing Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#ec2-interface">4.7. EC2 Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html#openstack-rest-interfaces">4.8. OpenStack REST Interfaces</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#convert-your-virtual-box-image-to-raw-format">4.2. Convert your virtual box image to raw format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#convert-the-image-to-qcow2-format-optional">4.3. Convert the image to qcow2 format (optional)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#test-your-image">4.4. Test your image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#transfer-your-image-to-india">4.5. Transfer your Image to India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#log-into-india">4.6. Log into India</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#upload-your-image-to-openstack">4.7. Upload your image to OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#checking-status-image">4.8. Checking Status Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#test-image-in-openstack">4.9. Test Image in OpenStack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#troubleshooting">4.10. Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#notes">4.11. Notes:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="os-virtualbox.html">5. Converting Virtualbox images to OpenStack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#prerequisites">5.1. Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#disable-selinux-only-for-redhat-based-linux-like-centos">5.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configuring-the-image-network-interface-eth0-for-dhcp">5.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">5.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#configure-udev-persistent-rules-only-centos">5.1.4. Configure udev persistent rules (only CentOS)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nimbus.html">5. Nimbus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-iaas">5.1. Nimbus IaaS</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#image0">5.1.1. </a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-is-nimbus">5.1.2. What is Nimbus?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">5.1.3. Nimbus on FutureGrid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#getting-started">5.1.4. Getting Started</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#log-into-hotel">5.1.4.1. Log into hotel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#download-and-install-cloud-client">5.1.4.2. Download and install cloud-client</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#obtain-your-nimbus-credentials-and-configuration-files">5.1.4.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-your-ssh-key">5.1.4.4. Check Your ssh Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#convert-your-virtual-box-image-to-raw-format">5.2. Convert your virtual box image to raw format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#convert-the-image-to-qcow2-format-optional">5.3. Convert the image to qcow2 format (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#test-your-image">5.4. Test your image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#transfer-your-image-to-india">5.5. Transfer your Image to India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#log-into-india">5.6. Log into India</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#upload-your-image-to-openstack">5.7. Upload your image to OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#checking-status-image">5.8. Checking Status Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#test-image-in-openstack">5.9. Test Image in OpenStack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#troubleshooting">5.10. Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html#notes">5.11. Notes:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#using-the-cloud-client">5.1.5. Using the Cloud Client</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-various-futuregrid-clouds">5.1.5.1. Check out the various FutureGrid clouds</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#run-a-virtual-machine">5.1.5.2. Run a Virtual Machine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#create-a-new-vm-image">5.1.5.3. Create a New VM Image</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#save-the-changes-to-a-new-vm">5.1.5.4. Save the Changes to a New VM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#launch-your-new-vm">5.1.5.5. Launch Your New VM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#terminate-the-vm">5.1.5.6. Terminate the VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nimbus.html">6. Nimbus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#nimbus-iaas">6.1. Nimbus IaaS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-is-nimbus">6.1.1. What is Nimbus?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">6.1.2. Nimbus on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#getting-started">6.1.3. Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#log-into-hotel">6.1.3.1. Log into hotel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#download-and-install-cloud-client">6.1.3.2. Download and install cloud-client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#obtain-your-nimbus-credentials-and-configuration-files">6.1.3.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-your-ssh-key">6.1.3.4. Check Your ssh Key</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#virtual-clusters">5.1.6. Virtual Clusters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#cluster-definition-file">5.1.6.1. Cluster Definition File</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#start-the-cluster">5.1.6.2. Start the Cluster</a></li>
-<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-virtual-cluster">5.1.6.3. Check Out the Virtual Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#using-the-cloud-client">6.1.4. Using the Cloud Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-various-futuregrid-clouds">6.1.4.1. Check out the various FutureGrid clouds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#run-a-virtual-machine">6.1.4.2. Run a Virtual Machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#create-a-new-vm-image">6.1.4.3. Create a New VM Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#save-the-changes-to-a-new-vm">6.1.4.4. Save the Changes to a New VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#launch-your-new-vm">6.1.4.5. Launch Your New VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#terminate-the-vm">6.1.4.6. Terminate the VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#uploading-and-downloading-images">6.1.4.7. Uploading and downloading images</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#converting-a-xen-image-to-kvm">6.1.5. Converting a Xen image to KVM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#virtual-clusters">6.1.6. Virtual Clusters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#cluster-definition-file">6.1.6.1. Cluster Definition File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#start-the-cluster">6.1.6.2. Start the Cluster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#check-out-the-virtual-cluster">6.1.6.3. Check Out the Virtual Cluster</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">5.2. Launch A VM via Nimbus</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#options">5.2.1. Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-happens">5.2.2. What Happens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">6.2. Launch A VM via Nimbus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#options">6.2.1. Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#what-happens">6.2.2. What Happens</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloudinit-d">5.3. cloudinit.d</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nimbus.html#phantom">5.4. Phantom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#cloudinit-d">6.3. cloudinit.d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html#phantom">6.4. Phantom</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">6. Eucalyptus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-setup">6.1. Account Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">6.2. Resources Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">6.3. Testing Your Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">6.4. Image Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">6.5. Logging Into the VM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">6.6. VM Network Info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">6.7. Image Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">6.8. Status of Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eucalyptus.html">7. Eucalyptus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#account-setup">7.1. Account Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#resources-overview">7.2. Resources Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#testing-your-setup">7.3. Testing Your Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-deployment">7.4. Image Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">7.5. Logging Into the VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#vm-network-info">7.6. VM Network Info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#image-management">7.7. Image Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html#status-of-deployments">7.8. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -567,8 +583,14 @@
 </li>
               
                 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Development Projects</a></li>
 </ul>
 </ul>
