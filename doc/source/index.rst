@@ -74,6 +74,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    iaas
    openstackhavana
    openstackgrizzly
+   horizon
    os-virtualbox
    nimbus
    eucalyptus

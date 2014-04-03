@@ -43,17 +43,17 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
+#'sphinxcontrib.actdiag',
               'sphinxcontrib.exceltable',
-              #'sphinx.ext.autodoc',
-              'sphinx.ext.doctest',
-              #'matplotlib.sphinxext.ipython_console_highlighting',
-              #'matplotlib.sphinxext.mathmpl',
-              #'matplotlib.sphinxext.only_directives',
-              #'matplotlib.sphinxext.plot_directive',
-              #'matplotlib.sphinxext.ipython_directive',
-              #'inheritance_diagram',
-              #'sphinxcontrib.actdiag',
-              #'numpydoc' 
+#'matplotlib.sphinxext.mathmpl',
+#'matplotlib.sphinxext.only_directives',
+#'matplotlib.sphinxext.plot_directive',
+#'matplotlib.sphinxext.ipython_directive',
+#'sphinx.ext.autodoc',
+#'sphinx.ext.doctest',
+#'matplotlib.sphinxext.ipython_console_highlighting',
+#'inheritance_diagram',
+#'numpydoc'
               ]
 
 

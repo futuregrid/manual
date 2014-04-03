@@ -12,8 +12,6 @@ Nimbus IaaS
 ====================================================================== 
 
 |image0|
---------
-
  
 
 What is Nimbus?
@@ -35,12 +33,12 @@ Nimbus on FutureGrid
 Nimbus is installed on four FutureGrid clusters:
 
 #. **Hotel** (University of Chicago)
-    42 nodes, 336 cores
+    42 nodes, 336 cores (30 nodes using Xen and 12 nodes using KVM)
 #. **Foxtrot** (University of Florida)
     24 nodes, 192 cores
 #. **Sierra** (San Diego Supercomputer Center)
     18 nodes, 144 cores
-#. **Alamo**\ (Texas Advanced Computing Center)
+#. **Alamo** (Texas Advanced Computing Center)
     15 nodes, 120 cores
 
 By default, users are limited to running 16 VMs simultaneously and
@@ -118,15 +116,16 @@ Download and unpack these files into your cloud-client's directory:
 
 ::
 
-    $ cd nimbus-cloud-client-022/conf/ 
+    $ cd nimbus-cloud-client-022/conf/
     $ tar xvzf ~/nimbus_creds.tar.gz
     usercert.pem
     userkey.pem
     cloud.properties
+    alamo.conf
+    foxtrot.conf
     hotel.conf
     sierra.conf
-    foxtrot.conf
-    alamo.conf
+    hotel-kvm.conf
 
 Now you should have a functional cloud client. To begin, check out the
 help text and file.
@@ -182,7 +181,7 @@ all the available virtual machines:
 
 ::
 
-    $ bin/cloud-client.sh --conf conf/hotel.conf --list
+    $ bin/cloud-client.sh --conf conf/hotel-kvm.conf --list
 
 This command should list the available images on the system.  Notice the
 hello-cloud virtual machine.  This is the test image we will use in this
@@ -191,7 +190,7 @@ tutorial:
 ::
 
     [Image] 'hello-cloud'                    Read only
-            Modified: Jan 13 2011 @ 14:15   Size: 576716800 bytes (~550 MB)
+            Modified: Mar 6 2014 @ 10:01   Size: 2147483648 bytes (~2048 MB)
 
 Run a Virtual Machine
 ~~~~~~~~~~~~~~~~~~~~~
@@ -200,37 +199,28 @@ Next, try to boot a virtual machine:
 
 ::
 
-    $ bin/cloud-client.sh --conf conf/hotel.conf --run --name hello-cloud --hours 2
+    $ bin/cloud-client.sh --conf conf/hotel-kvm.conf --run --name hello-cloud --hours 2
+
     Launching workspace.
 
-::
-
     Workspace Factory Service:
-         https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
-
-::
-
-     
-
-::
+        https://login1.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
 
     Creating workspace "vm-001"... done.
 
-::
 
-           IP address: 149.165.148.122 
-             Hostname: vm-148-122.uc.futuregrid.org       
-           Start time: Wed Jul 25 15:44:33 CDT 2012
-        Shutdown time: Wed Jul 25 17:44:33 CDT 2012
-     Termination time: Wed Jul 25 17:46:33 CDT 2012
-
-::
+           IP address: 149.165.149.10
+             Hostname: vm-149-10.uc.futuregrid.org
+           Start time: Thu Mar 06 10:09:04 CST 2014
+        Shutdown time: Thu Mar 06 12:09:04 CST 2014
+     Termination time: Thu Mar 06 12:19:04 CST 2014
 
     Waiting for updates.
 
-::
 
     "vm-001" reached target state: Running
+
+    Running: 'vm-001'
 
 Once the image is running, you should be able to log into it with SSH.
 Note that you may need to wait another minute or so before you can
@@ -245,7 +235,7 @@ out by cloud client.
 
 ::
 
-    $ ssh root@vm-148-122.uc.futuregrid.org 
+    $ ssh root@vm-149-10.uc.futuregrid.org
 
 Create a New VM Image
 ~~~~~~~~~~~~~~~~~~~~~
@@ -271,15 +261,16 @@ can use the --status option to find it:
 
 ::
 
-    $ ./bin/cloud-client.sh --conf conf/hotel.conf --status
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --status
     Querying for ALL instances.
 
-    [*] - Workspace #32292. 149.165.148.253 [ vm-253.uc.futuregrid.org ]
+    [*] - Workspace #59. 149.165.149.10 [ vm-149-10.uc.futuregrid.org ]
           State: Running
           Duration: 120 minutes.
-          Start time: Wed Jul 25 15:44:33 CDT 2012
-          Shutdown time: Wed Jul 25 17:44:33 CDT 2012
-          Termination time: Wed Jul 25 17:46:33 CDT 2012
+          Start time: Thu Mar 06 10:09:04 CST 2014
+          Shutdown time: Thu Mar 06 12:09:04 CST 2014
+          Termination time: Thu Mar 06 12:19:04 CST 2014
+          Details: VMM=c80
           *Handle: vm-001
            Image: hello-cloud
 
@@ -288,10 +279,10 @@ following command:
 
 ::
 
-    $ ./bin/cloud-client.sh --conf conf/hotel.conf --save --newname myvm --handle vm-001
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --save --newname myvm --handle vm-001
 
     Saving workspace.
-      - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-022/history/vm-001/vw-epr.xml'
+      - Workspace handle (EPR): '/N/u/priteau/nimbus-cloud-client-022/history/vm-001/vw-epr.xml'
       - New name: 'myvm'
 
     Waiting for updates.
@@ -305,38 +296,38 @@ available for launch:
 
 ::
 
-    $ ./bin/cloud-client.sh --conf conf/hotel.conf --list
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --list
     [Image] 'myvm'                           Read/write
-            Modified: Jul 25 2012 @ 20:49   Size: 576716800 bytes (~550 MB)
+            Modified: Mar 6 2014 @ 16:16   Size: 2147483648 bytes (~2048 MB)
 
     ----
 
     [Image] 'hello-cloud'                    Read only
-            Modified: Apr 8 2011 @ 13:56   Size: 576716800 bytes (~550 MB)
+            Modified: Mar 6 2014 @ 10:01   Size: 2147483648 bytes (~2048 MB)
 
 Launch Your New VM
 ~~~~~~~~~~~~~~~~~~
 
 You can now launch your new VM just like you did the hello-cloud VM
-above, simply changing the name from *hello-cloud* to *myvm *:
+above, simply changing the name from *hello-cloud* to *myvm*:
 
 ::
 
-    $ ./bin/cloud-client.sh --conf conf/hotel.conf --run --name myvm --hours 2
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --run --name myvm --hours 2
 
     Launching workspace.
 
     Workspace Factory Service:
-        https://svc.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
+        https://login1.uc.futuregrid.org:8443/wsrf/services/WorkspaceFactoryService
 
     Creating workspace "vm-002"... done.
 
 
-           IP address: 149.165.148.122
-             Hostname: vm-148-122.uc.futuregrid.org
-           Start time: Wed Jul 25 15:58:31 CDT 2012
-        Shutdown time: Wed Jul 25 17:58:31 CDT 2012
-     Termination time: Wed Jul 25 18:08:31 CDT 2012
+           IP address: 149.165.149.10
+             Hostname: vm-149-10.uc.futuregrid.org
+           Start time: Thu Mar 06 10:28:26 CST 2014
+        Shutdown time: Thu Mar 06 12:28:26 CST 2014
+     Termination time: Thu Mar 06 12:38:26 CST 2014
 
     Waiting for updates.
 
@@ -344,6 +335,7 @@ above, simply changing the name from *hello-cloud* to *myvm *:
     "vm-002" reached target state: Running
 
     Running: 'vm-002'
+
 
 SSH into the machine and verify that your changes persisted.
 
@@ -357,32 +349,149 @@ as you did in the *save a new VM step* and the --terminate option:
 
 ::
 
-    $ ./bin/cloud-client.sh --conf conf/hotel.conf --terminate --handle vm-002
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --terminate --handle vm-002
 
     Terminating workspace.
-      - Workspace handle (EPR): '/N/u/bresnaha/nimbus-cloud-client-022/history/vm-002/vw-epr.xml'
+      - Workspace handle (EPR): '/N/u/priteau/nimbus-cloud-client-022/history/vm-002/vw-epr.xml'
 
     Destroying vm-002... destroyed.
 
- 
+Uploading and downloading images
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use the cloud client to upload and download VM images.
+
+To upload a VM image, use the --transfer argument, specifying the path to the VM
+image to upload with --localfile.
+
+::
+
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --transfer --sourcefile ubuntu-13.10-server-amd64.gz
+
+    Transferring
+      - Source: ubuntu-13.10-server-amd64.gz
+      - Destination: cumulus://Repo/VMS/b27e2722-ecfd-11df-b9d1-02215ecdcda3/ubuntu-13.10-server-amd64.gz
+
+    Preparing the file for transfer:
+    656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+    Transferring the file:
+    656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+    Done.
+
+If you add the --common option, your VM image will be public and readable by
+any user of the cloud (but they won't be able to modify it without creating
+their own copy). This can be useful to share environments between
+collaborators.
+
+To download a VM image, use the --download argument, specifying the image name
+with --name and the file name to use locally with --localfile.
+
+::
+
+    $ ./bin/cloud-client.sh --conf conf/hotel-kvm.conf --download --name ubuntu-13.10-server-amd64.gz --localfile ubuntu-13.10-server-amd64.gz
+
+    Transferring
+      - Source: cumulus://Repo/VMS/b27e2722-ecfd-11df-b9d1-02215ecdcda3/ubuntu-13.10-server-amd64.gz
+      - Destination: /home/nimbus/nimbus-cloud-client-022/ubuntu-13.10-server-amd64.gz
+
+    656.95MB [XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX] 100%
+
+If you have your own image using the same name as a public image, the cloud
+client will download your private image, unless you use the --common option.
+
+Converting a Xen image to KVM
+-----------------------------
+
+If you have existing virtual machine images running on Nimbus clouds using Xen
+virtualization, you will need to convert them to run on a Nimbus cloud using
+KVM virtualization (at the moment, Hotel KVM and Alamo).
+
+In order to do this, you will need root access to a Linux machine with
+`libguestfs <http://libguestfs.org>`__ available.
+
+These instructions assume that the Xen image is called xen-image and is 6 GiB
+(6144 MiB) in size.
+
+First, we will create a file slightly bigger than the Xen image in order to
+hold an MBR plus the original content of the image (in this case 6150 MiB
+instead of 6144 MiB).
+
+::
+
+    # cd /tmp/
+    # dd if=/dev/zero of=kvm.img bs=1M count=6150
+
+Next, we initialize its partition layout:
+
+::
+
+    # parted kvm.img mklabel msdos
+    # parted kvm.img mkpart primary ext2 512B 6442451456B
+    # parted kvm.img set 1 boot on
+
+And we can now copy the content of the Xen image into the new partition:
+
+::
+
+    # losetup /dev/loop0 kvm.img
+    # kpartx -a /dev/loop0
+    # dd if=xen-image of=/dev/mapper/loop0p1 bs=1M
+    # fsck.ext3 -f /dev/mapper/loop0p1
+
+Now the KVM image has a correct partition layout, but it is missing a
+compatible kernel. The following instructions were done on a Debian image, you
+might need to adapt to your Linux distribution.
+
+::
+
+    # mount /dev/mapper/loop0p1 /mnt
+    # mount --bind /dev /mnt/dev
+    # mount --bind /proc /mnt/proc
+    # mount --bind /sys /mnt/sys
+    # chroot /mnt
+    # apt-get update
+    # apt-get install linux-image-2.6.32-5-amd64
+    # exit
+    # umount /mnt/sys
+    # umount /mnt/proc
+    # umount /mnt/dev
+    # umount /mnt
+
+Finally, we install an MBR with libguestfs:
+
+::
+
+    # guestfish -i -a /tmp/kvm.img
+    ><fs> command "update-grub"
+
+    ><fs> list-devices
+    /dev/vda
+    ><fs> command "grub-install --force /dev/vda"
+    Installation finished. No error reported.
+    ><fs> command "grub-install --force --recheck /dev/vda"
+    Installation finished. No error reported.
+    ><fs> exit
+
+The image kvm.img should now be ready to be uploaded to a Nimbus KVM cloud!
 
 Virtual Clusters
 ----------------
 
-This is a basic walkthrough of how to run a sample virtual cluster. 
-For more information on how they work, see
-*http://www.nimbusproject.org/docs/current/clouds/clusters2.html .*
-
-::
-
-::
+This is a basic walkthrough of how to run a sample virtual cluster.  For more
+information on how they work, see
+`http://www.nimbusproject.org/docs/current/clouds/clusters2.html
+<http://www.nimbusproject.org/docs/current/clouds/clusters2.html>`_.
 
 Cluster Definition File
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-For this example, we will use a modification of the sample cluster file
-that is distributed with the cloud client.  The file can be found at
-*https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml\_.gz *.
+For this example, we will use a modification of the sample cluster file that is
+distributed with the cloud client.
+The file can be found at
+`https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz
+<https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz>`_.
 Copy the file to where your cloud-client program is located, and unzip
 it.  Open the file and make note of the following:
 
@@ -448,9 +557,9 @@ the context broker for other VM context agents to query.  The NFS
 clients use this mechanism to provide the nfs server with their IP
 addresses.  The NFS server then gets this information out of the context
 broker and uses it to authorize those IP addresses to remotely mount its
-disks. 
+disks.
 
- When it is complete, your virtual cluster will be ready to go.
+When it is complete, your virtual cluster will be ready to go.
 
 Check Out the Virtual Cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -494,15 +603,6 @@ visible to this node as well.
 +==============================================================================================================+=============+
 | `tutorial-cluster.xml\_.gz <https://portal.futuregrid.org/sites/default/files/tutorial-cluster.xml_.gz>`__   | 342 bytes   |
 +--------------------------------------------------------------------------------------------------------------+-------------+
-
--  `Cloud Quick Start : Launch a VM with 1
-   command </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
--  `FutureGrid Tutorial NM2 - Nimbus One-Click Cluster
-   Guide </tutorials/nm2>`__
-
-`‹ OpenStack Grizzly on FutureGrid </manual/openstack/grizzly>`__
-`up </manual/iaas>`__ `Cloud Quick Start : Launch a VM with 1 command
-› </manual/nimbus/cloud-quick-start-launch-vm-1-command>`__
 
 .. |image0| image:: /images/nimbus_logo.png
    :target: http://www.nimbusproject.org/
@@ -563,7 +663,9 @@ Eucalytpus clouds, and FutureGrid's OpenStack clouds.  To run on a
 different FutureGrid Nimbus cloud, set the
 env \ *CLOUDINITD\_IAAS\_URL* to one of the following:
 
--  Hotel:
+-  Hotel KVM:
+   `https:/login1.uc.futuregrid.org:8444 <https://login1.uc.futuregrid.org:8444>`__
+-  Hotel Xen:
    `https://svc.uc.futuregrid.org:8444 <https://svc.uc.futuregrid.org:8444>`__
 -  Sierra:
    `https://s83r.idp.sdsc.futuregrid.org:8444 <https://s83r.idp.sdsc.futuregrid.org:8444>`__
@@ -609,33 +711,22 @@ applications.  In this case, it runs a very simple 1 VM application.  It
 can launch any debian-based VM and install sshfs on it.  Then it runs
 sshfs inside of the VM to remotely mount your FutureGrid home directory.
 
-`‹ Using Nimbus on FutureGrid </tutorials/nimbus>`__
-`up </tutorials/nimbus>`__ `FutureGrid Tutorial NM2 - Nimbus One-Click
-Cluster Guide › </tutorials/nm2>`__
-
-
 cloudinit.d
 ======================================================================
 
-cloudinit.d is a tool designed for launching, controlling, and
-monitoring complex environments in the cloud.
- Its most important feature is repeatable, one-click, deployment of sets
-of VMs configured with launch plans.  These sets of VMs can be deployed
-over multiple clouds (Eucalyptus, Nimbus, OpenStack, and Amazon EC2 are
-currently supported), and can also include non-virtualized resources.
-Like the Unix init.d process, cloudinit.d can manage dependencies
-between deployed VMs. It also provides mechanisms for testing,
-monitoring, and repairing a launch.
- For more information about cloudinit.d, see our \ `Teragrid 2011
-paper <http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf>`__. For
-repeatable experiment management with cloudinit.d, read the \ `report
-on <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__ `support
-for experimental computer
-science <http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`__.
-`‹ Precip - Pegasus Repeatable Experiments for the Cloud in
-Python </manual/precip>`__ `up </manual/management-services>`__ `Grid
-Services › </manual/grid-services>`__
-
+cloudinit.d is a tool designed for launching, controlling, and monitoring
+complex environments in the cloud.
+Its most important feature is repeatable, one-click, deployment of sets of VMs
+configured with launch plans.  These sets of VMs can be deployed over multiple
+clouds (Eucalyptus, Nimbus, OpenStack, and Amazon EC2 are currently supported),
+and can also include non-virtualized resources.  Like the Unix init.d process,
+cloudinit.d can manage dependencies between deployed VMs. It also provides
+mechanisms for testing, monitoring, and repairing a launch.
+For more information about cloudinit.d, see our `Teragrid 2011 paper
+<http://www.nimbusproject.org/files/cloudinitd_tg11_submit3c.pdf>`_.
+For repeatable experiment management with cloudinit.d, read the `report on
+Supporting Experimental Computer Science
+<http://www.nimbusproject.org/downloads/Supporting_Experimental_Computer_Science_final_draft.pdf>`_.
 
 Phantom
 ==================================================
@@ -675,7 +766,3 @@ It should take no more than 10-15 minutes to start your own VMs.
    interface <https://phantom.nimbusproject.org/accounts/login/?next=/>`__
 -  `Phantom
    publication <http://www.nimbusproject.org/files/keahey_wcs_ocs_2012.pdf>`__
-
-`‹ Management Services </manual/management-services>`__
-`up </manual/management-services>`__ `Precip - Pegasus Repeatable
-Experiments for the Cloud in Python › </manual/precip>`__
