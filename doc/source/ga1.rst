@@ -1,4 +1,13 @@
-**Summary:**
+.. _s-ga1:
+
+**********************************************************************
+GA1
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 This tutorial is a hands-on introduction to virtual appliances, in
 particular the Grid Appliance. The Grid Appliance provides a

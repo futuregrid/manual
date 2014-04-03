@@ -1,6 +1,14 @@
+.. _s-ipop2:
 
-Summary:
-~~~~~~~~
+**********************************************************************
+IPOP2 (IP-over-P2P) 
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 
 `IPOP (IP-over-P2P) <http://www.ipop-project.org>`__ is a
 software-defined virtual network that can be used as a basis for

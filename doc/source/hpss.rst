@@ -1,5 +1,13 @@
+.. _s-hpss:
+
+**********************************************************************
 HPSS
-======================================================================
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 **Note**: FutureGrid does not provide an HPSS server. The HSI is used to
 access IU's HPSS service from INDIA. This is available only for IU
