@@ -552,8 +552,9 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">1. Git</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">2. Contributing to the Manual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="contributing.html#organisation-of-the-manual-in-git">2.1. Organisation of the Manual in Git</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#faq">2.2. FAQ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html#publication-of-the-manual">2.3. Publication of the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#online-editing-for-novice-editors">2.2. Online Editing for Novice Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#faq">2.3. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#publication-of-the-manual">2.4. Publication of the Manual</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html#setting-up-the-expert-developers-manual-editing-environment">3. Setting Up the Expert Developers Manual Editing Environment</a><ul>
@@ -655,7 +656,7 @@ becomming a committer in github.</p>
 <li>Once you have done this you need to know about how to use git. You can read the git manual.</li>
 </ol>
 <p>Here a summary of the commands that are important for you:</p>
-<div class="highlight-python"><pre>git clone
+<div class="highlight-python"><pre>git clone git@github.com:futuregrid/manual.git
 git commit -m "message" filename
 git commit -a
 git push
@@ -678,6 +679,19 @@ git pull</pre>
 <li>git config color.ui true</li>
 <li>git add -i</li>
 </ul>
+<p>The manual is maintained in the directory:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">doc</span>
+</pre></div>
+</div>
+<p>The individual pages can be found in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">doc</span><span class="o">/</span><span class="n">source</span>
+</pre></div>
+</div>
+<p>Please use your favorite editor to edit the pages or add new once.
+Make sure that new once can be found in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
 </div>
 
 

@@ -552,8 +552,9 @@
 <li class="toctree-l1"><a class="reference internal" href="git.html">1. Git</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">2. Contributing to the Manual</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#organisation-of-the-manual-in-git">2.1. Organisation of the Manual in Git</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#faq">2.2. FAQ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#publication-of-the-manual">2.3. Publication of the Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#online-editing-for-novice-editors">2.2. Online Editing for Novice Editors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#faq">2.3. FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publication-of-the-manual">2.4. Publication of the Manual</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#setting-up-the-expert-developers-manual-editing-environment">3. Setting Up the Expert Developers Manual Editing Environment</a><ul>
@@ -595,8 +596,9 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">2. Contributing to the Manual</a><ul>
 <li><a class="reference internal" href="#organisation-of-the-manual-in-git">2.1. Organisation of the Manual in Git</a></li>
-<li><a class="reference internal" href="#faq">2.2. FAQ</a></li>
-<li><a class="reference internal" href="#publication-of-the-manual">2.3. Publication of the Manual</a></li>
+<li><a class="reference internal" href="#online-editing-for-novice-editors">2.2. Online Editing for Novice Editors</a></li>
+<li><a class="reference internal" href="#faq">2.3. FAQ</a></li>
+<li><a class="reference internal" href="#publication-of-the-manual">2.4. Publication of the Manual</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#setting-up-the-expert-developers-manual-editing-environment">3. Setting Up the Expert Developers Manual Editing Environment</a><ul>
@@ -671,7 +673,7 @@
 <h1>2. Contributing to the Manual<a class="headerlink" href="#contributing-to-the-manual" title="Permalink to this headline">¶</a></h1>
 <p>It is very easy to contribute to the existing manual. All you need is
 to e-mail us the changes. However, if you like it is also easy to set
-up the manual generation fromework on your local machine as described
+up the manual generation framework on your local machine as described
 in a later section.</p>
 <div class="section" id="organisation-of-the-manual-in-git">
 <h2>2.1. Organisation of the Manual in Git<a class="headerlink" href="#organisation-of-the-manual-in-git" title="Permalink to this headline">¶</a></h2>
@@ -688,8 +690,8 @@ files. However, all of them are integrated via the file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">doc</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">rst</span>
 </pre></div>
 </div>
-<p>into a single manaul. Due to this organization it is also possible to
-create custom manauls that may suport a particular class. For example
+<p>into a single manual. Due to this organization it is also possible to
+create custom manuals that may suport a particular class. For example
 a class on big data may not be wanting to use MPI and thus a special
 manual for such a class could be created. The nice thing is that the
 teacher does not have to create additional information, but can just
@@ -698,19 +700,40 @@ of interest.</p>
 <p>Please note that at this time we have also additional documented rst
 files not yet included into the manual as they were not yet reviewed.</p>
 </div>
+<div class="section" id="online-editing-for-novice-editors">
+<h2>2.2. Online Editing for Novice Editors<a class="headerlink" href="#online-editing-for-novice-editors" title="Permalink to this headline">¶</a></h2>
+<p>If you are part of the FG manual development team you can edit the
+manaul pages online by going to:</p>
+<div class="highlight-python"><pre>https://github.com/futuregrid/manual/tree/master/doc/source</pre>
+</div>
+<p>This will contain a directory with all the documents of the
+manual. The names of the documents you can simply find by visiting the
+manual and look at the URL of the page that you like to modify and
+simply open up the corresponding rst page (e.g. replace the html with
+rst). Dependent on your browser you can even configure it to open the
+file in your favorite editor. Some plugins such as <em>It&#8217;s All Text!</em>
+may be able to help.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/its-all-text/">https://addons.mozilla.org/en-US/firefox/addon/its-all-text/</a></li>
+</ul>
+<p>Please consult with your browsers manual and available plugins.
+However, a better solution may be to do the
+changes in a clone locally and commit when ready. THis is documented
+in more detail in this section.</p>
+</div>
 <div class="section" id="faq">
-<h2>2.2. FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>How to find the rst file?<ul>
 <li>Sometimes an editor may want to locate the name of the rst
-file. This is easy, just look in your browser, and see the usrl,
+file. This is easy, just look in your browser, and see the url&#8217;s,
 the last filename with a .html ending gives your the rst file name,
 just replace html with rst</li>
 </ul>
 </li>
 <li>Can I edit RST files in Word?<ul>
 <li>yes you can, but you must make sure that you do use the proper
-ascii charaters for quotes and other symbols that RST relies on.</li>
+ascii characters for quotes and other symbols that RST relies on.</li>
 </ul>
 </li>
 <li>Can I edit RST files directly in a Web browser without word<ul>
@@ -728,44 +751,48 @@ about this can be found in the git user manual on github.com</li>
 <li>Why use RST?<ul>
 <li>Previously pages of the FG manual were edited directly in drupal
 on our portal. However, editors were abusing our wysiwyg editor by
-pasting and copying text from thrird party edirors such as word
+pasting and copying text from third party editors such as word
 into the drupal editor. Unfortunately, this lead to inconsistent
-formating and severe problems by editing documents. We also
+formatting and severe problems by editing documents. We also
 discovered issues at times when documents were edited by multiple
 editors at the same time.</li>
-<li>While using RST we avoid inconsistent formating.</li>
+<li>While using RST we avoid inconsistent formatting.</li>
 <li>While using git we use a much better tracking feature for parallel
 edits,</li>
 <li>While using RST we have a nice search feature.</li>
-<li>While using RST we can integrate autogenerate documentation form
+<li>While using RST we can integrate auto-generate documentation form
 FutureGrid code we develop such as RAIN and cloudmesh.</li>
 </ul>
 </li>
 <li>Why not use Word and skydrive?<ul>
 <li>Our team has rich experience with skydrive and Word. However word
-does not provide a publication framework for our manaul that is
+does not provide a publication framework for our manual that is
 maintained by a highly distributed team. Although skydrive can be
 a help to share directories, we still have to enable the creation
-of a single consistemnt manaul. We also experienced issues with
+of a single consistent manual. We also experienced issues with
 large groups on microsoft skydrive. As most contributions come
 from developers that have already accounts on github, they do not
 have to create new accounts on skydrive. Furthermore, not all
-developers have access to word. Howvere RST documents are editor
+developers have access to word. However RST documents are editor
 independent. You can edit them with Word, emacs, vi, vim, or
-whtever other text editor you like. Thus the good news is if you like to use word to edit the
+whatever other text editor you like. Thus the good news is if you like to use word to edit the
 documentation you can.</li>
+</ul>
+</li>
+<li>I am having difficulties understanding this how can I get help?<ul>
+<li>Please contact Gregor von Laszewski at <a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a> he can
+schedule an in person meeting in Bloomington, IN or a google
+hangout meeting.</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="publication-of-the-manual">
-<h2>2.3. Publication of the Manual<a class="headerlink" href="#publication-of-the-manual" title="Permalink to this headline">¶</a></h2>
-<p>The manual will be automatically upgraded once a change to git is
-committed. However, this feture is currently disabled and will become
-available in January of 2014 again.</p>
-<p>The current method is to e-mail <a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a> for an update
+<h2>2.4. Publication of the Manual<a class="headerlink" href="#publication-of-the-manual" title="Permalink to this headline">¶</a></h2>
+<p>The manual will be automatically updates once a day</p>
+<p>Additionally you can e-mail <a class="reference external" href="mailto:laszewski&#37;&#52;&#48;gmail&#46;com">laszewski<span>&#64;</span>gmail<span>&#46;</span>com</a> for an update
 request while describing which files have been changed so a review can
-tke place and the publication script can be invoked. We have not put
+take place and the publication script can be invoked. We have not put
 this script into the repository in order to avoid accidental changes.</p>
 </div>
 </div>
@@ -781,7 +808,7 @@ machine. Just a very limited number of python packages are
 needed. However, we have decided to only document the way to install
 it in pythons excellent virtualenv. Although it is possible to have an
 even easier instal, we decided to stay with virtualenv as it will
-protect your current environment from pagackes that you may not want
+protect your current environment from packeges that you may not want
 to have on your computer in your regular python environment.</p>
 <div class="section" id="python">
 <h2>3.1. Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
@@ -902,7 +929,7 @@ $ make</pre>
 <p>References to jira can be made with the tag:</p>
 <div class="highlight-python"><pre>:jira:`this issue &lt;FG-1418&gt;`</pre>
 </div>
-<p>It will result in an outpus such as</p>
+<p>It will result in an output such as</p>
 <p><a class="reference external" href="https://jira.futuregrid.org/browse/FG-1418">this issue</a></p>
 <p>To just refer to a text with the number use:</p>
 <div class="highlight-python"><pre>:jira:`FG-1418`</pre>

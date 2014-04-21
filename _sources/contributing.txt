@@ -4,7 +4,7 @@ Contributing to the Manual
 
 It is very easy to contribute to the existing manual. All you need is
 to e-mail us the changes. However, if you like it is also easy to set
-up the manual generation fromework on your local machine as described
+up the manual generation framework on your local machine as described
 in a later section.
 
 Organisation of the Manual in Git
@@ -23,8 +23,8 @@ files. However, all of them are integrated via the file::
 
   doc/source/index.rst
 
-into a single manaul. Due to this organization it is also possible to
-create custom manauls that may suport a particular class. For example
+into a single manual. Due to this organization it is also possible to
+create custom manuals that may suport a particular class. For example
 a class on big data may not be wanting to use MPI and thus a special
 manual for such a class could be created. The nice thing is that the
 teacher does not have to create additional information, but can just
@@ -34,20 +34,46 @@ of interest.
 Please note that at this time we have also additional documented rst
 files not yet included into the manual as they were not yet reviewed.
 
+Online Editing for Novice Editors
+-----------------------------------
+
+If you are part of the FG manual development team you can edit the
+manaul pages online by going to:: 
+
+  https://github.com/futuregrid/manual/tree/master/doc/source
+
+This will contain a directory with all the documents of the
+manual. The names of the documents you can simply find by visiting the
+manual and look at the URL of the page that you like to modify and
+simply open up the corresponding rst page (e.g. replace the html with
+rst). Dependent on your browser you can even configure it to open the
+file in your favorite editor. Some plugins such as *It's All Text!*
+may be able to help.
+
+* https://addons.mozilla.org/en-US/firefox/addon/its-all-text/ 
+
+Please consult with your browsers manual and available plugins.
+However, a better solution may be to do the
+changes in a clone locally and commit when ready. THis is documented
+in more detail in this section.
+
+
+
+
 FAQ
 ----
 
 * How to find the rst file?
 
   * Sometimes an editor may want to locate the name of the rst
-    file. This is easy, just look in your browser, and see the usrl,
+    file. This is easy, just look in your browser, and see the url's,
     the last filename with a .html ending gives your the rst file name,
     just replace html with rst
 
 * Can I edit RST files in Word?
 
   * yes you can, but you must make sure that you do use the proper
-    ascii charaters for quotes and other symbols that RST relies on.
+    ascii characters for quotes and other symbols that RST relies on.
  
 * Can I edit RST files directly in a Web browser without word
 
@@ -66,47 +92,51 @@ FAQ
 
   * Previously pages of the FG manual were edited directly in drupal
     on our portal. However, editors were abusing our wysiwyg editor by
-    pasting and copying text from thrird party edirors such as word
+    pasting and copying text from third party editors such as word
     into the drupal editor. Unfortunately, this lead to inconsistent
-    formating and severe problems by editing documents. We also
+    formatting and severe problems by editing documents. We also
     discovered issues at times when documents were edited by multiple
     editors at the same time. 
 
-  * While using RST we avoid inconsistent formating.
+  * While using RST we avoid inconsistent formatting.
 
   * While using git we use a much better tracking feature for parallel
     edits,
 
   * While using RST we have a nice search feature.
 
-  * While using RST we can integrate autogenerate documentation form
+  * While using RST we can integrate auto-generate documentation form
     FutureGrid code we develop such as RAIN and cloudmesh.
 
 * Why not use Word and skydrive?
 
   * Our team has rich experience with skydrive and Word. However word
-    does not provide a publication framework for our manaul that is
+    does not provide a publication framework for our manual that is
     maintained by a highly distributed team. Although skydrive can be
     a help to share directories, we still have to enable the creation
-    of a single consistemnt manaul. We also experienced issues with
+    of a single consistent manual. We also experienced issues with
     large groups on microsoft skydrive. As most contributions come
     from developers that have already accounts on github, they do not
     have to create new accounts on skydrive. Furthermore, not all
-    developers have access to word. Howvere RST documents are editor
+    developers have access to word. However RST documents are editor
     independent. You can edit them with Word, emacs, vi, vim, or
-    whtever other text editor you like. Thus the good news is if you like to use word to edit the
+    whatever other text editor you like. Thus the good news is if you like to use word to edit the
     documentation you can.
 
+* I am having difficulties understanding this how can I get help?
+
+  * Please contact Gregor von Laszewski at laszewski@gmail.com he can
+    schedule an in person meeting in Bloomington, IN or a google
+    hangout meeting.
+ 
 Publication of the Manual
 --------------------------
 
-The manual will be automatically upgraded once a change to git is
-committed. However, this feture is currently disabled and will become
-available in January of 2014 again.
+The manual will be automatically updates once a day 
 
-The current method is to e-mail laszewski@gmail.com for an update
+Additionally you can e-mail laszewski@gmail.com for an update
 request while describing which files have been changed so a review can
-tke place and the publication script can be invoked. We have not put
+take place and the publication script can be invoked. We have not put
 this script into the repository in order to avoid accidental changes.
 
 
@@ -125,7 +155,7 @@ machine. Just a very limited number of python packages are
 needed. However, we have decided to only document the way to install
 it in pythons excellent virtualenv. Although it is possible to have an
 even easier instal, we decided to stay with virtualenv as it will
-protect your current environment from pagackes that you may not want
+protect your current environment from packeges that you may not want
 to have on your computer in your regular python environment.
 
 
@@ -277,7 +307,7 @@ References to jira can be made with the tag::
 
   :jira:`this issue <FG-1418>`
 
-It will result in an outpus such as
+It will result in an output such as
 
 :jira:`this issue <FG-1418>`
 
