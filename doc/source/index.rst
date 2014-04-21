@@ -1,4 +1,3 @@
-
 .. highlight:: bash
 
 .. _s-manual:
@@ -40,6 +39,7 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    part_paas
    part_experiment
    part_performance
+   part_tutorials
    appendix_screencast
    appendix_manual
    appendix_mpi

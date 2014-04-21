@@ -6,7 +6,6 @@
 
    summary-executive
 
-   tutorials
    gpu
    fgmanual
    india

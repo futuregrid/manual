@@ -5,6 +5,8 @@ Tutorials
 If you're looking for the Cloud Summer School 2012 (along with
 excellent tutorial material), click on the icon below:
 
+TBD: PUT THE LINK HERE
+
 The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
 FutureGrid (novice, intermediate, advanced). (If you are a tutorial
@@ -20,28 +22,45 @@ request <help>`.
 Tutorial Topic 0: Accessing FutureGrid Resources
 ------------------------------------------------
 
--  :portal:`accessing-futuregrid-resources-ssh <accessing-futuregrid-resources-ssh>` [novice]
+-  Accessing FutureGrid Resources:
+
+   - See our manual page in Section :ref:`s-accounts`. [novice]
 
 Tutorial Topic 1: Cloud Provisioning Platforms
 ----------------------------------------------
 
--  :portal:`Using Nimbus on
-   FutureGrid <tutorials/nimbus>`
-   [novice]
--  :portal:`Nimbus One-click Cluster
-   Guide <tutorials/nm2>` [intermediate]
--  :portal:`Using OpenStack Grizzly on
-   FutureGrid <manual/openstack/grizzly>`
-   [novice] 
--  :portal:`Using OpenStack Essex
-   on FutureGrid <tutorials/openstack>` [novice]
--  :ref:`Using Eucalyptus on FutureGrid <s-eucalyptus>` [novice]
--  :portal:`Connecting private network VMs across Nimbus clusters using
-   ViNe <contrib/simple-vine-tutorial>` [novice]
--  :portal:`IPOP1: (IP-over-P2P) Virtual Network Introductory
-   Tutorial <tutorials/ipop1>` [novice]
--  :portal:`IPOP2: Deploying your Own P2P Overlay for IPOP
-   VPNs <tutorials/ipop1>` [intermediate]
+-  Using OpenStack on FutureGrid. 
+
+   - Havana: See the Section :ref:`s-openstack-havana` in the manual. [novice] 
+   - Grizzly: See the Section :ref:`s-openstack-grizzly` in the manual. [novice] 
+
+-  Using Nimbus on FutureGrid. 
+
+   - See the manual Section :ref:`nimbus`. [novice]
+   - An external page is available to `create a cluster with Nimbus
+     <http://www.nimbusproject.org/docs/current/clouds/clusters.html>`_
+     This link will leave the FG manual. [intermediate]
+
+-  Using Eucalyptus on FutureGrid.
+
+   - :ref:`Using Eucalyptus on FutureGrid <s-eucalyptus>` [novice]
+
+-  Using Vine on FutureGrid.
+
+   - GVL: THIS SECTION IS VERY CONFUSING WHY IS THIS NOT IN ITS OWN
+     SECTION FOR EXAMPPLE "NETWORK PROVISIONING"? ALSO THE SECTIONS
+     ARE NOT FOLLOWING STANDARD SECTION CONVENTIONS.
+
+   - :ref:`Connecting private network VMs across Nimbus clusters using ViNe <_s_vine>` [novice]
+   - :ref:`IPOP1: (IP-over-P2P) Virtual Network Introductory Tutorial <s-vine-overlay>` [novice]
+   - TODO :portal:`IPOP1: IP-overP2P <tutorials/ipop1>` [intermediate] 
+     
+     - See the section in the manual: :ref:`s-ipop1`.
+
+   - TODO :portal:`IPOP2: Deploying your Own P2P Overlay for IPOP
+     VPNs <tutorials/ipop2>` [intermediate] 
+
+     - See the section in the manual: :ref:`s-ipop2`
 
 Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 -----------------------------------------------------
