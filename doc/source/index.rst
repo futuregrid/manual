@@ -27,124 +27,25 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
    If your name is missing please let us know and we will add it.
 
-**PART I. INTRODUCTION**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   preface
-   introduction
-
-**PART II. ACCOUNTS AND PROJECTS**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   account
-   security
-
-**PART III. STATUS**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   status
-
-**PART IV. HPC SERVICES**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   hardware
-   hpc
-   scalemp
-   genesis
-   unicore
-
-**PART V. IAAS/CLOUD SERVICES**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   iaas
-   openstackhavana
-   openstackgrizzly
-   horizon
-   os-virtualbox
-   nimbus
-   eucalyptus
-   
-
-**PART VI. EXPERIMENT MANAGEMENT SERVICES**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   experiment-interactive
-   precip
-   pegasus
-   rain
-
-**PART VII. PAAS/PLATFORM AS A SERVICES**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   hadoop
-   vine
-
-**PART VIII. PERFORMANCE TOOLS**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   papi
-
-
-**PART IIX. EDUCATIONAL MATERIAL**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   books
-
-**APPENDIX I. SCREENCASTS**
 
 .. toctree::
    :numbered:
    :maxdepth: 3
 
-   mooc
+   part_introduction
+   part_accounts
+   part_status
+   part_hpc
+   part_iaas
+   part_paas
+   part_experiment
+   part_performance
+   appendix_screencast
+   appendix_manual
+   appendix_mpi
+   appendix_other
 
-**APPENDIX II. MAINTAINING THIS MANUAL**
 
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   git
-   contributing
-
-**APPENDIX III. MPI RING PROGRAM**
-
-.. toctree::
-   :numbered:
-   :maxdepth: -1
-
-   ring
-
-**APPENDIX V. OTHERS SECTIONS**
-
-* `Not yet integrated sections can be found here <all.html>`__
 
 
 .. |image0| image:: /images/fg-logo-md.png
