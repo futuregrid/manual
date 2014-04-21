@@ -16,7 +16,7 @@ To get an account on github you can do the follwoing steps:
 
 Here a summary of the commands that are important for you::
 
-  git clone
+  git clone git@github.com:futuregrid/manual.git
   git commit -m "message" filename
   git commit -a
   git push 
@@ -40,4 +40,17 @@ Useful other things are
 * gitk
 * git config color.ui true
 * git add -i
+
+The manual is maintained in the directory::
+
+  doc
+
+The individual pages can be found in:: 
+
+  doc/source
+
+Please use your favorite editor to edit the pages or add new once.
+Make sure that new once can be found in:: 
+
+   index.rst
 
