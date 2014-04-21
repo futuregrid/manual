@@ -1,14 +1,9 @@
 **********************************************************************
-Tutorials (Renato/Mauritsio)
+Tutorials
 **********************************************************************
 
 If you're looking for the Cloud Summer School 2012 (along with
 excellent tutorial material), click on the icon below:
-
-|image132|
-
-.. note:: This page is maintained by Renato Figueiredo from UF.
-
 
 The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
