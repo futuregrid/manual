@@ -14,3 +14,8 @@
    fgmanual
    india
 
+   xeucalyptusandtwisterfuturegrid
+   xsalsahadoopfuturegridcloudeucalyptus
+   xsalsahadoopfuturegridhpc
+   xtwisterfuturegridcloudeucalyptus
+   xtwisterfuturegridhpc
