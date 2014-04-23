@@ -445,6 +445,13 @@ how you can access them.
        euca-describe-images
        euca-describe-instances
 
+.. note::
+
+   Here's our known issues on using euca2ools or ec2 interface.
+
+   - euca-upload-bundle with Boto 2.25.0 fails with "S3ResponseError: 404 Not Found".
+   - tagging function such as euca-create-tags, euca-describe-tags fail with "InvalidRequest: The request is invalid."
+
 .. _s-openstack-horizon:
 
 Horizon GUI

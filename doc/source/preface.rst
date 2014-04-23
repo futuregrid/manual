@@ -1,6 +1,5 @@
-**********************************************************************
 Preface
-**********************************************************************
+======================================================================
 
 .. sidebar:: Page Contents
 
@@ -39,22 +38,25 @@ IU `Pervasive Technology Institute <http://pti.iu.edu/>`__.
 .. _my-how-to-cite:
 
 Citation for Publications
-==========================
+----------------------------------------------------------------------
 
 If you use FutureGrid [1]_, [2]_  we ask you to include the following
 reference in your papers.  
 
-.. [1]   Fox, G., G. von Laszewski, J. Diaz, K. Keahey, J. Fortes, R.
-   Figueiredo, S. Smallen, W. Smith, and A. Grimshaw, "FutureGrid - a  reconfigurable testbed for Cloud, HPC and Grid Computing",
+.. [1] Fox, G., G. von Laszewski, J. Diaz, K. Keahey, J. Fortes, R.
+   Figueiredo, S. Smallen, W. Smith, and A. Grimshaw, "FutureGrid - a
+   reconfigurable testbed for Cloud, HPC and Grid Computing",
    Contemporary High Performance Computing: From Petascale toward
-   Exascale, April, 2013. Editor J. Vetter.  Contemporary High Performance Computing: From Petascale toward
-   Exascale, April, 2013.   :portal:`[pdf] <sites/default/files/vonLaszewski-fg-bookchapter.pdf>`
+   Exascale, April, 2013. Editor J. Vetter.  Contemporary High
+   Performance Computing: From Petascale toward Exascale, April, 2013.
+   :portal:`[pdf]
+   <sites/default/files/vonLaszewski-fg-bookchapter.pdf>`
    
-.. [2]  von Laszewski, G., G. C. Fox, F. Wang, A. J. Younge,
-   A. Kulshrestha, G. G. Pike, W. Smith, J. Voeckler,
-   R. J. Figueiredo, J. Fortes, et al., 
-   "Design of the FutureGrid Experiment Management Framework", GCE2010
-   at SC10, New Orleans, IEEE, 11/2010  `[pdf] <http://cyberaide.googlecode.com/svn/trunk/papers/10-FG-exp-GCE10/vonLaszewski-10-FG-exp-GCE10.pdf>`_
+.. [2] von Laszewski, G., G. C. Fox, F. Wang, A. J. Younge, 
+   A. Kulshrestha, G. G. Pike, W. Smith, J. Voeckler, R. J. Figueiredo, J. Fortes,
+   et al., "Design of the FutureGrid Experiment Management Framework",
+   GCE2010 at SC10, New Orleans, IEEE, 11/2010 `[pdf]
+   <http://cyberaide.googlecode.com/svn/trunk/papers/10-FG-exp-GCE10/vonLaszewski-10-FG-exp-GCE10.pdf>`_
 
 Please also include the following sentence in your Acknowledgement
 section [3]_:
@@ -64,7 +66,7 @@ section [3]_:
 
 
 Acknowledgement
-==========================================================
+----------------------------------------------------------------------
 
 The FutureGrid project is funded by the National Science Foundation
 (NSF) and is led by `Indiana
@@ -82,7 +84,7 @@ partner sites. This material is based upon work supported in part by the
 National Science Foundation under Grant No. 0910812.
 
 Sponsors
-======
+----------------------------------------------------------------------
 The current
 sponsors of FutureGrid include:
 
@@ -98,7 +100,7 @@ sponsors of FutureGrid include:
     
 
 About this Manual
-======================================================================
+----------------------------------------------------------------------
 
 This manual is the primary location of  information about FutureGrid
 software and services. All FG team members update this manual
@@ -120,7 +122,7 @@ Gregor von Laszewski
 .. conventions::
 
 Conventions
-============
+----------------------------------------------------------------------
 
 .. role:: rubric
 
