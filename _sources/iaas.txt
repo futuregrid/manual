@@ -4,13 +4,12 @@
       :local:
 
 
-**********************************************************************
 IaaS
-**********************************************************************
+======================================================================
 
 
 Nimbus Clouds
-======================================================================
+----------------------------------------------------------------------
 
 Nimbus is an open-source service package that allows users to run
 virtual machines on FutureGrid hardware. You can easily upload your own
@@ -34,7 +33,7 @@ For tutorials on getting started with Nimbus, see:
    Guide <tutorials/nm2>` [intermediate]
 
 OpenStack Clouds
-======================================================================
+----------------------------------------------------------------------
 
 `OpenStack <http://www.openstack.org/>`__ is a recently open-sourced,
 IaaS cloud computing platform founded by Rackspace Hosting and NASA, and
@@ -65,7 +64,7 @@ For tutorials on getting started with OpenStack, see:
       OpenStack deployment as an appliance.
 
 Eucalyptus Clouds
-======================================================================
+----------------------------------------------------------------------
 
 Eucalyptus is an open-source software platform that implements
 IaaS-style cloud computing. Eucalyptus provides an Amazon Web Services
@@ -87,7 +86,7 @@ For tutorials on getting started with Eucalyptus, see:
 
 
 Virtual Appliances for Training and Education
-======================================================================
+----------------------------------------------------------------------
 
 The IaaS cloud stacks on FutureGrid enable the use of "virtual
 appliances" as an environment where hands-on, executable educational and

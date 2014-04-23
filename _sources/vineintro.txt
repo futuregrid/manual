@@ -1,4 +1,6 @@
-ViNe (Mauritsio/Renato)
+.. _s_vine:
+
+ViNe
 ========================
 
 ViNe is available to FutureGrid users on the foxtrot and sierra

@@ -324,7 +324,7 @@ are as follows:
 
 ***3.2) Bring up IPsec in the "Bob" VM***
 
-Repeat the same steps, again, as root:
+Repeat the same steps, again, as root::
 
   wget http://www.acis.ufl.edu/~renato/ipopdemo/ipop_ipsec_demo_prepare_debian.zip
   unzip ipop_ipsec_demo_prepare_debian.zip
@@ -332,7 +332,7 @@ Repeat the same steps, again, as root:
 
 ***3.3) Connecting Alice and Bob***
 
-As done in the previous step, log in to Alice and ping Bob. On Alice:
+As done in the previous step, log in to Alice and ping Bob. On Alice::
 
   ping 192.168.10.20
 
