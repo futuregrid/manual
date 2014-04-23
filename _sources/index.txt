@@ -51,6 +51,12 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
 
 Other sections that are broken are listed in :ref:`s-broken`
 
+**********************************************************************
+**TODO**
+**********************************************************************
+
+:ref:`s-todo`.
+
 
 .. |image0| image:: /images/fg-logo-md.png
 
