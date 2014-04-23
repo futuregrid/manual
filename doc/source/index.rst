@@ -45,7 +45,11 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    appendix_mpi
    appendix_other
 
+**********************************************************************
+**OTHER CURRENTLY BROKEN SECTIONS**
+**********************************************************************
 
+Other sections that are broken are listed in :ref:`s-broken`
 
 
 .. |image0| image:: /images/fg-logo-md.png
