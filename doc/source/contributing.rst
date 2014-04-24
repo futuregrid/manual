@@ -212,7 +212,13 @@ restructured text. For more info on rst see:
 
 * http://sphinx-doc.org/rest.html
 
+A cheat sheet is available from 
 
+*
+http://github.com/ralsina/rst-cheatsheet/raw/master/rst-cheatsheet.pdf
+
+The cheatsheet is also available in our online documentation in the
+Section :ref:`s-cheatsheet`.
 
 All-in-one setup script
 --------------------
