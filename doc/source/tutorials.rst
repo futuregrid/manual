@@ -6,12 +6,13 @@ Tutorials
    hello, Gregor!
 
 If you're looking for the Cloud Summer School 2012 (along with
-excellent tutorial material), click on the icon below:
+excellent tutorial material), click below:
 
 
-
-
-`.. image:: images/summerschool2012.png Science Cloud Summer School 2012 <https://portal.futuregrid.org/projects/241>`_
+.. image:: images/summerschool2012.png
+   target : https://portal.futuregrid.org/projects/241
+   
+`Science Cloud Summer School 2012 <https://portal.futuregrid.org/projects/241>`_
 
 The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
