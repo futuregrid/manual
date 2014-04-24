@@ -10,7 +10,8 @@ excellent tutorial material), click below:
 
 
 .. image:: images/summerschool2012.png
-   target : https://portal.futuregrid.org/projects/241
+
+   :target: https://portal.futuregrid.org/projects/241
    
 `Science Cloud Summer School 2012 <https://portal.futuregrid.org/projects/241>`_
 
