@@ -1,9 +1,7 @@
 **********************************************************************
 Tutorials
 **********************************************************************
-.. todo::
 
-   hello, Gregor!
 
 If you're looking for the Cloud Summer School 2012 (along with
 excellent tutorial material), click on the Science Cloud Summer School image below:
@@ -19,7 +17,9 @@ developer, for instructions on how to add a tutorial to this list,
 please \ :portal:`refer to the TEOS
 page <outreach>`.
 
-.. todo::  TEOS TEAM - The Tutorials section of the Training, Education and Outreach page in the portal needs to be updated.
+.. todo::  
+
+   TEOS TEAM - The Tutorials section of the Training, Education and Outreach page in the portal needs to be updated.
 
 If you have corrections or suggestions related to our tutorial
 content, please :portal:`fill out a help
