@@ -6,20 +6,18 @@ Tutorials
    hello, Gregor!
 
 If you're looking for the Cloud Summer School 2012 (along with
-excellent tutorial material), click below:
+excellent tutorial material), click on the Science Cloud Summer School image below:
 
 
 .. image:: images/summerschool2012.png
    :target: https://portal.futuregrid.org/projects/241
    
-`Science Cloud Summer School 2012 <https://portal.futuregrid.org/projects/241>`_
-
 The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
-FutureGrid (novice, intermediate, advanced). (If you are a tutorial
+FutureGrid (novice, intermediate, advanced). If you are a tutorial
 developer, for instructions on how to add a tutorial to this list,
 please \ :portal:`refer to the TEOS
-page <outreach>`).
+page <outreach>`.
 
 If you have corrections or suggestions related to our tutorial
 content, please :portal:`fill out a help
