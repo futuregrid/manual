@@ -11,7 +11,7 @@ excellent tutorial material), click on the icon below:
 
 
 
-`Science Cloud Summer School 2012 .. image:: images/summerschool2012.png <https://portal.futuregrid.org/projects/241>`_
+`.. image:: images/summerschool2012.png Science Cloud Summer School 2012 <https://portal.futuregrid.org/projects/241>`_
 
 The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
