@@ -10,6 +10,8 @@ excellent tutorial material), click on the icon below:
 
 .. image:: images/summerschool2012.png
 
+`Link text <http://example.com/>`_
+
 The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
 FutureGrid (novice, intermediate, advanced). (If you are a tutorial
