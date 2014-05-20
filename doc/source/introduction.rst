@@ -44,7 +44,7 @@ OpenStack:
     Swift), and OpenStack Image Service (called Glance). OpenStack is
     a new effort that has received considerable momentum due to its
     openness and the support from companies. Users can find more details
-    in the section :ref:`s-openstack`.
+    in the section :ref:`s-openstack-havana`.
 
 Nimbus:
     Nimbus is an open-source service package that allows users to run
