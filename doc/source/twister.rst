@@ -113,11 +113,13 @@ or FutureGrid Cloud environment.
       -  `Verify Twister MapReduce Daemon
          status <twister-futuregrid-cloud-openstack.html#verify-twister-status>`_
 
-   -  Run Twister Applications
+Run Twister Applications
+------------------------
 
-      -  `Twister
-         Kmeans <twister-kmeans.html>`_
-      -  `Twister Blast <twister-blast.html>`_
+We provide Kmeans and Blast run on Twister as examples.
+
+-  `Twister Kmeans <twister-kmeans.html>`_
+-  `Twister Blast <twister-blast.html>`_
 
 Papers and Presentations
 ------------------------
