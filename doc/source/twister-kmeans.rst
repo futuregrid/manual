@@ -7,17 +7,10 @@ Running Twister Kmeans on FutureGrid HPC
 
 .. sidebar:: Page Contents
 
+   Author: Tak-Lon Stephen Wu
+
    .. contents::
       :local:
-
-Number:
- Author: Tak-Lon Stephen Wu
- Improvements:
- Version: 1.0
- Date: 2014-05-23
-
-Twister Kmeans
---------------
 
 In statistics and machine learning, Kmeans clustering is a method of
 cluster analysis which aims to partition n observation into k clusters

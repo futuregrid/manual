@@ -10,9 +10,6 @@ Using Twister in FutureGrid
    .. contents::
       :local:
 
-PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN THE
-COMMENT SECTION.
-
 What is Twister?
 ----------------
 
@@ -29,9 +26,9 @@ MapReduce runtime we have developed by incorporating these enhancements.
 
 `Twister <http://www.iterativemapreduce.org/>`_ provides the following
 features to support MapReduce computations. (Twister is developed as
-part of `Jaliya Ekanayake's <http://www.cs.indiana.edu/%7Ejekanaya/>`_
-Ph.D. research and is supported by the `Salsa <http://salsahpc.indiana.edu/>`_ Team
-@ `IU <http://www.iub.edu/>`_)
+part of Jaliya Ekanayake's Ph.D. research and is supported by the
+`Salsa <http://salsahpc.indiana.edu/>`_ Team @ `IU
+<http://www.iub.edu/>`_)
 
 
 * Distinction on static and variable data                                                                  
@@ -52,57 +49,12 @@ Running Twister on FutureGrid
 -----------------------------
 
 Twister can be run in various modes within FG either in FutureGrid HPC
-or FutureGrid Cloud environment.
+or FutureGrid Cloud environment:
 
--  Twister on FutureGrid
+-  `Running Twister on FutureGrid HPC <twister-futuregrid-hpc.html>`_
 
-   -  `Running Twister on FutureGrid HPC
-      HPC <twister-futuregrid-hpc.html>`_
+-  `Twister with FutureGrid Cloud OpenStack <twister-futuregrid-cloud-openstack.html>`_
 
-      -  `Get HPC compute
-         nodes <twister-futuregrid-hpc.html#hpc-nodes>`_
-      -  `Twister
-         Configuration <twister-futuregrid-hpc.html#twister-conf>`_
-
-         -  `Download Twister
-            0.9 <twister-futuregrid-hpc.html#download-twister>`_
-         -  `Set $TWISTER\_HOME and
-            $JAVA\_HOME <twister-futuregrid-hpc.html#set-twister-conf>`_
-         -  `Run
-            TwisterPowerMakeUp.sh <twister-futuregrid-hpc.html#twisterpowermakeup>`_
-         -  `Download and start ActiveMQ on specific
-            nodes <twister-futuregrid-hpc.html#start-activemq>`_
-         -  `Start
-            Twister <twister-futuregrid-hpc.html#run-twister>`_
-
-      -  `Verify Twister MapReduce Daemon
-         status <twister-futuregrid-hpc.html#verify-twister-status>`_
-
-   -  `Twister with FutureGrid Cloud OpenStack
-      OpenStack <twister-futuregrid-cloud-openstack.html>`_
-
-      -  `Get VM compute
-         nodes <twister-futuregrid-cloud-openstack.html#vm-nodes>`_
-
-         -  `VM Hostname
-            setting <twister-futuregrid-cloud-openstack.html#vm-nodes-setting>`_
-
-      -  `Twister
-         Configuration <twister-futuregrid-cloud-openstack.html#twister-conf>`_
-
-         -  `Download Twister
-            0.9 <twister-futuregrid-cloud-openstack.html#twister-download>`_
-         -  `Set $TWISTER\_HOME, $JAVA\_HOME and Worker
-            Nodes <twister-futuregrid-cloud-openstack.html#twister-conf-setup>`_
-         -  `Run
-            TwisterPowerMakeUp.sh <twister-futuregrid-cloud-openstack.html#twisterpowermakeup>`_
-         -  `Download and start ActiveMQ on specific
-            node <twister-futuregrid-cloud-openstack.html#twister-conf-activemq>`_
-         -  `Start
-            Twister <twister-futuregrid-cloud-openstack.html#run-twister>`_
-
-      -  `Verify Twister MapReduce Daemon
-         status <twister-futuregrid-cloud-openstack.html#verify-twister-status>`_
 
 Run Twister Applications
 ------------------------
