@@ -147,11 +147,13 @@ Currently the following images have been known to work
 
 
 * emi-663637CB
+
   * OS: CentOS release 6.5
   * Flavors: m1.medium, m1.large, c1.xlarge, m1.xlarge, m2.xlarge
   * username: cloud-user
 
 * emi-EBEC3D28
+
   * OS: Ubuntu 14.04 LTS
   * Flavors: c1.xlarge, m1.large, m1.xlarge, m2.xlarge
   * username: ubuntu
@@ -194,7 +196,7 @@ such as::
         $ euca-describe-keypairs
 
 If it is, you probably have uploaded it already. If you need to create
-a new key however, you can delete the old one by 
+a new key however, you can delete the old one by::
 
         $ euca-delete-keypair $USER-key
 
