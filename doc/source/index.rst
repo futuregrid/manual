@@ -27,6 +27,31 @@ instead use the paper listed in Section :ref:`my-how-to-cite`.
    If your name is missing please let us know and we will add it.
 
 
+Short Table of Contents
+----------------------------------------------------------------------
+
+.. toctree::
+   :numbered:
+   :maxdepth: 2
+
+   part_introduction
+   part_accounts
+   part_status
+   part_hpc
+   part_iaas
+   part_paas
+   part_experiment
+   part_performance
+   part_tutorials
+   appendix_screencast
+   appendix_manual
+   appendix_mpi
+   appendix_other
+
+
+Long Table of Contents
+----------------------------------------------------------------------
+
 .. toctree::
    :numbered:
    :maxdepth: 3
