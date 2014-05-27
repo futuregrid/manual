@@ -161,7 +161,7 @@ script we use in this example looks as follows::
     $MY_HADOOP_HOME/bin/pbs-cleanup.sh -n 4 -c $HADOOP_CONF_DIR
     echo
 
-Deatails of the Script
+Details of the Script
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let us examine this script in more detail. In the example script, a temporary directory to store Hadoop
@@ -304,7 +304,7 @@ pbs-example.sh::
     . /opt/myHadoop/bin/setenv.sh
     export HADOOP_HOME=${HOME}/my-custom-hadoop
 
-Refernces
+References
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   * Much of this information is copied from 

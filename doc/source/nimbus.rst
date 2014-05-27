@@ -109,7 +109,7 @@ nimbus\_creds.tar.gz:
 
 ::
 
-     username@hotel $ ls ~/nimbus_creds.tar.gz
+    username@hotel $ ls ~/nimbus_creds.tar.gz
     nimbus_creds.tar.gz
 
 If your credentials are not present on \ **Hotel**,

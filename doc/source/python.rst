@@ -43,7 +43,7 @@ Windows
 
 todo
 
-Lanaguage Features
+Language Features
 ==================================================================
 
 

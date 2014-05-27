@@ -1,4 +1,4 @@
-.. _s-openstack-havana:
+.. _s-openstack:
 
 OpenStack Havana
 ===================

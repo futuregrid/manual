@@ -5,7 +5,8 @@
 .. toctree::
 
    hadoop
-   vine
+   twister
+
    
 
 
