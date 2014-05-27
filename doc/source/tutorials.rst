@@ -4,7 +4,8 @@ Tutorials
 
 
 If you're looking for the Cloud Summer School 2012 (along with
-excellent tutorial material), click on the Science Cloud Summer School image below:
+excellent tutorial material), click on the Science Cloud Summer School
+image below:
 
 
 .. image:: images/summerschool2012.png
