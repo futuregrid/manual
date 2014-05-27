@@ -7,38 +7,17 @@ Running Twister on FutureGrid OpenStack
 
 .. sidebar:: Page Contents
 
+   Author: Tak-Lon Stephen Wu
+
    .. contents::
       :local:
 
-Number:
- Author: Tak-Lon Stephen Wu
- Improvements: changed from using Eucalyptus to OpenStack, moved to FG-Manual
- Version: 1.0
- Date: 2014-05-22
 
-Summary
--------
 
 Twister is widely used by domain scientists for running their scientific
 applications in parallel fashion. Here, we provide an example to use
 Hadoop on FutureGrid test-bed with FutureGrid India Eucalyptus.
 
--  `Get VM compute nodes <#VM_Nodes>`_
-
-   -  `VM Hostname setting <#VM_Nodes_Set>`_
-   -  `VM attached disk configuration <#Euca_Disk>`_
-
--  `Twister Configuration <#Twister_Conf>`_
-
-   -  `Download Twister 0.9 <#Twister_Conf_Download>`_
-   -  `Set $TWISTER\_HOME, $JAVA\_HOME and Worker
-      Nodes <#Twister_Conf_Set>`_
-   -  `Run TwisterPowerMakeUp.sh <#Twister_Conf_PowerMakeUp>`_
-   -  `Download and start ActiveMQ on specific
-      node <#Twister_Conf_ActiveMQ>`_
-   -  `Start Twister <#Twister_Conf_Start>`_
-
--  `Verify Twister MapReduce Daemon status <#Verify>`_
 
 Requirement
 -----------

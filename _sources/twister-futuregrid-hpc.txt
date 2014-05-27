@@ -7,33 +7,16 @@ Running Twister on FutureGrid HPC
 
 .. sidebar:: Page Contents
 
+   Author: Tak-Lon Stephen Wu
+   Date: 2014-05-22
+
    .. contents::
       :local:
 
-Number:
- Author: Tak-Lon Stephen Wu
- Improvements: fixed links and prefix conventions, moved to FG-Manual
- Version: 1.1
- Date: 2014-05-22
-
-Summary
--------
 
 Twister is widely used by domain scientists for running their scientific
 applications in parallel fashion. Here, we provide a detail instruction
 to use Hadoop on FutureGrid test-bed with FutureGrid India Cluster.
-
--  `Get HPC compute nodes <#HPC_Nodes>`_
--  `Twister Configuration <#Twister_Conf>`_
-
-   -  `Download Twister 0.9 <#Twister_Conf_Download>`_
-   -  `Set $TWISTER\_HOME and $JAVA\_HOME <#Twister_Conf_Set>`_
-   -  `Run TwisterPowerMakeUp.sh <#Twister_Conf_PowerMakeUp>`_
-   -  `Download and start ActiveMQ on specific
-      nodes <#Twister_Conf_ActiveMQ>`_
-   -  `Start Twister <#Twister_Conf_Start>`_
-
--  `Verify Twister MapReduce Daemon status <#Verify>`_
 
 Requirement
 -----------

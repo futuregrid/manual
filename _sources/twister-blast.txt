@@ -4,14 +4,17 @@
 **********************************************************************
 Running Twister Blast on FutureGrid HPC
 **********************************************************************
-Number:
- Author: Yang Ruan, Tak-Lon Stephen Wu
- Improvements:
- Version: 1.0
- Date: 2014-05-23
+.. sidebar:: Page Contents
 
-Twister Blast
--------------
+   Author: Tak-Lon Stephen Wu
+
+   This page was original designed by `SalsaHPC <http://salsahpc.indiana.edu/>`_ group for `Big Data for Science
+   Workshop <http://salsahpc.indiana.edu/tutorial/>`_, you can see the
+   original pages `here <http://salsahpc.indiana.edu/tutorial/>`_.
+
+   .. contents::
+      :local:
+
 
 BLAST (Basic Local Alignment Search Tool) is one of the most widely used
 bioinformatics applications written in C++, and the version we are using
@@ -36,13 +39,6 @@ Source code and customized Blast program and Database archive
 from `Big Data for Science
 tutorial <http://salsahpc.indiana.edu/tutorial/hadoopblast.html>`_.
 
-Acknowledge
-~~~~~~~~~~~
-
-This page was original designed by
-`SalsaHPC <http://salsahpc.indiana.edu/>`_ group for `Big Data for
-Science Workshop <http://salsahpc.indiana.edu/tutorial/>`_, you can see
-the original pages `here <http://salsahpc.indiana.edu/tutorial/>`_.
 
 Requirement
 ~~~~~~~~~~~

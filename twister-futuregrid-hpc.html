@@ -1393,15 +1393,14 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Running Twister on FutureGrid HPC</a><ul>
-<li><a class="reference internal" href="#summary">Summary</a></li>
 <li><a class="reference internal" href="#requirement">Requirement</a></li>
-<li><a class="reference internal" href="#hpc-nodes">Get HPC compute nodes</a></li>
-<li><a class="reference internal" href="#twister-conf">Twister Configuration</a><ul>
-<li><a class="reference internal" href="#download-twister">Download Twister 0.9</a></li>
+<li><a class="reference internal" href="#get-hpc-compute-nodes">Get HPC compute nodes</a></li>
+<li><a class="reference internal" href="#twister-configuration">Twister Configuration</a><ul>
+<li><a class="reference internal" href="#download-twister-0-9">Download Twister 0.9</a></li>
 <li><a class="reference internal" href="#set-twister-home-java-home-and-worker-nodes">Set $TWISTER_HOME, $JAVA_HOME and Worker nodes</a></li>
-<li><a class="reference internal" href="#twisterpowermakeup">Run TwisterPowerMakeUp.sh</a></li>
-<li><a class="reference internal" href="#start-activemq">Download and start ActiveMQ on specific nodes</a></li>
-<li><a class="reference internal" href="#run-twister">Start Twister</a></li>
+<li><a class="reference internal" href="#run-twisterpowermakeup-sh">Run TwisterPowerMakeUp.sh</a></li>
+<li><a class="reference internal" href="#download-and-start-activemq-on-specific-nodes">Download and start ActiveMQ on specific nodes</a></li>
+<li><a class="reference internal" href="#start-twister">Start Twister</a></li>
 <li><a class="reference internal" href="#verify-twister-status">Verify Twister Status</a></li>
 </ul>
 </li>
@@ -1450,51 +1449,29 @@
 <span id="s-twister-on-hpc"></span><h1>Running Twister on FutureGrid HPC<a class="headerlink" href="#running-twister-on-futuregrid-hpc" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">Page Contents</p>
+<p>Author: Tak-Lon Stephen Wu
+Date: 2014-05-22</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#summary" id="id8">Summary</a></li>
-<li><a class="reference internal" href="#requirement" id="id9">Requirement</a></li>
-<li><a class="reference internal" href="#hpc-nodes" id="id10">Get HPC compute nodes</a></li>
-<li><a class="reference internal" href="#twister-conf" id="id11">Twister Configuration</a><ul>
-<li><a class="reference internal" href="#download-twister" id="id12">Download Twister 0.9</a></li>
-<li><a class="reference internal" href="#set-twister-home-java-home-and-worker-nodes" id="id13">Set $TWISTER_HOME, $JAVA_HOME and Worker nodes</a></li>
-<li><a class="reference internal" href="#twisterpowermakeup" id="id14">Run TwisterPowerMakeUp.sh</a></li>
-<li><a class="reference internal" href="#start-activemq" id="id15">Download and start ActiveMQ on specific nodes</a></li>
-<li><a class="reference internal" href="#run-twister" id="id16">Start Twister</a></li>
-<li><a class="reference internal" href="#verify-twister-status" id="id17">Verify Twister Status</a></li>
+<li><a class="reference internal" href="#requirement" id="id2">Requirement</a></li>
+<li><a class="reference internal" href="#get-hpc-compute-nodes" id="id3">Get HPC compute nodes</a></li>
+<li><a class="reference internal" href="#twister-configuration" id="id4">Twister Configuration</a><ul>
+<li><a class="reference internal" href="#download-twister-0-9" id="id5">Download Twister 0.9</a></li>
+<li><a class="reference internal" href="#set-twister-home-java-home-and-worker-nodes" id="id6">Set $TWISTER_HOME, $JAVA_HOME and Worker nodes</a></li>
+<li><a class="reference internal" href="#run-twisterpowermakeup-sh" id="id7">Run TwisterPowerMakeUp.sh</a></li>
+<li><a class="reference internal" href="#download-and-start-activemq-on-specific-nodes" id="id8">Download and start ActiveMQ on specific nodes</a></li>
+<li><a class="reference internal" href="#start-twister" id="id9">Start Twister</a></li>
+<li><a class="reference internal" href="#verify-twister-status" id="id10">Verify Twister Status</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<dl class="docutils">
-<dt>Number:</dt>
-<dd>Author: Tak-Lon Stephen Wu
-Improvements: fixed links and prefix conventions, moved to FG-Manual
-Version: 1.1
-Date: 2014-05-22</dd>
-</dl>
-<div class="section" id="summary">
-<h2><a class="toc-backref" href="#id8">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>Twister is widely used by domain scientists for running their scientific
 applications in parallel fashion. Here, we provide a detail instruction
 to use Hadoop on FutureGrid test-bed with FutureGrid India Cluster.</p>
-<ul class="simple">
-<li><a class="reference external" href="#HPC_Nodes">Get HPC compute nodes</a></li>
-<li><a class="reference external" href="#Twister_Conf">Twister Configuration</a><ul>
-<li><a class="reference external" href="#Twister_Conf_Download">Download Twister 0.9</a></li>
-<li><a class="reference external" href="#Twister_Conf_Set">Set $TWISTER_HOME and $JAVA_HOME</a></li>
-<li><a class="reference external" href="#Twister_Conf_PowerMakeUp">Run TwisterPowerMakeUp.sh</a></li>
-<li><a class="reference external" href="#Twister_Conf_ActiveMQ">Download and start ActiveMQ on specific
-nodes</a></li>
-<li><a class="reference external" href="#Twister_Conf_Start">Start Twister</a></li>
-</ul>
-</li>
-<li><a class="reference external" href="#Verify">Verify Twister MapReduce Daemon status</a></li>
-</ul>
-</div>
 <div class="section" id="requirement">
-<h2><a class="toc-backref" href="#id9">Requirement</a><a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Requirement</a><a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>FutureGrid HPC account, please apply via <a class="reference external" href="https://portal.futuregrid.org/user/register">FutureGrid
 portal</a> and <a class="reference external" href="https://portal.futuregrid.org/request-hpc-account">request a
@@ -1502,8 +1479,8 @@ HPC account</a>.</li>
 <li>Linux command experience.</li>
 </ol>
 </div>
-<div class="section" id="hpc-nodes">
-<span id="id1"></span><h2><a class="toc-backref" href="#id10">Get HPC compute nodes</a><a class="headerlink" href="#hpc-nodes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="get-hpc-compute-nodes">
+<span id="hpc-nodes"></span><h2><a class="toc-backref" href="#id3">Get HPC compute nodes</a><a class="headerlink" href="#get-hpc-compute-nodes" title="Permalink to this headline">¶</a></h2>
 <p>Firstly, you will need to login to IU-india with using the command:</p>
 <div class="highlight-python"><div class="highlight"><pre>Login command: ssh –i [ssh private key] [username]@india.futuregrid.org
 </pre></div>
@@ -1549,19 +1526,19 @@ i56
 these nodes information are stored to environment parameter
 $PBS_NODEFILE.</p>
 </div>
-<div class="section" id="twister-conf">
-<span id="id2"></span><h2><a class="toc-backref" href="#id11">Twister Configuration</a><a class="headerlink" href="#twister-conf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="twister-configuration">
+<span id="twister-conf"></span><h2><a class="toc-backref" href="#id4">Twister Configuration</a><a class="headerlink" href="#twister-configuration" title="Permalink to this headline">¶</a></h2>
 <p>We provide a detail instruction to startup twister 0.9. In this example,
 we use i55 as Driver/Master node, i56 as Worker/Slave node.</p>
-<div class="section" id="download-twister">
-<span id="id3"></span><h3><a class="toc-backref" href="#id12">Download Twister 0.9</a><a class="headerlink" href="#download-twister" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="download-twister-0-9">
+<span id="download-twister"></span><h3><a class="toc-backref" href="#id5">Download Twister 0.9</a><a class="headerlink" href="#download-twister-0-9" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre>i55 &gt; wget http://salsahpc.indiana.edu/tutorial/apps/Twister-0.9.tar.gz
 i55 &gt; tar -zxvf Twister-0.9.tar.gz
 </pre></div>
 </div>
 </div>
 <div class="section" id="set-twister-home-java-home-and-worker-nodes">
-<span id="set-twister-conf"></span><h3><a class="toc-backref" href="#id13">Set $TWISTER_HOME, $JAVA_HOME and Worker nodes</a><a class="headerlink" href="#set-twister-home-java-home-and-worker-nodes" title="Permalink to this headline">¶</a></h3>
+<span id="set-twister-conf"></span><h3><a class="toc-backref" href="#id6">Set $TWISTER_HOME, $JAVA_HOME and Worker nodes</a><a class="headerlink" href="#set-twister-home-java-home-and-worker-nodes" title="Permalink to this headline">¶</a></h3>
 <p>Before running Twister configuration script, we need to setup several
 environment parameters:</p>
 <div class="highlight-python"><div class="highlight"><pre>i55 &gt; echo &quot;export TWISTER_HOME=/N/u/taklwu/twister-0.9&quot; &gt;&gt; ~/.bashrc
@@ -1573,8 +1550,8 @@ i56
 </pre></div>
 </div>
 </div>
-<div class="section" id="twisterpowermakeup">
-<span id="id4"></span><h3><a class="toc-backref" href="#id14">Run TwisterPowerMakeUp.sh</a><a class="headerlink" href="#twisterpowermakeup" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="run-twisterpowermakeup-sh">
+<span id="twisterpowermakeup"></span><h3><a class="toc-backref" href="#id7">Run TwisterPowerMakeUp.sh</a><a class="headerlink" href="#run-twisterpowermakeup-sh" title="Permalink to this headline">¶</a></h3>
 <p>Within twister 0.9 package, there is a TwisterPowerMakeUp.sh script to
 automatically configure Twister. Generally, it randomly pick one of the
 working node as ActiveMQ messaging broker, set working daemon per node,
@@ -1602,8 +1579,8 @@ Auto configuration is done.
 uri=failover:(<a class="reference external" href="tcp://i56:61616">tcp://i56:61616</a>)&#8221;, i56 is the selected
 node where ActiveMQ messaging broker will be started.</p>
 </div>
-<div class="section" id="start-activemq">
-<span id="id5"></span><h3><a class="toc-backref" href="#id15">Download and start ActiveMQ on specific nodes</a><a class="headerlink" href="#start-activemq" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="download-and-start-activemq-on-specific-nodes">
+<span id="start-activemq"></span><h3><a class="toc-backref" href="#id8">Download and start ActiveMQ on specific nodes</a><a class="headerlink" href="#download-and-start-activemq-on-specific-nodes" title="Permalink to this headline">¶</a></h3>
 <p>Now ssh to the selected node, i56, then download and unzip the ActiveMQ
 package, finally start it up and return the previous master node, i56.</p>
 <div class="highlight-python"><div class="highlight"><pre>i55 &gt; ssh i56
@@ -1660,8 +1637,8 @@ i56 &gt; exit
 </pre></div>
 </div>
 </div>
-<div class="section" id="run-twister">
-<span id="id6"></span><h3><a class="toc-backref" href="#id16">Start Twister</a><a class="headerlink" href="#run-twister" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="start-twister">
+<span id="run-twister"></span><h3><a class="toc-backref" href="#id9">Start Twister</a><a class="headerlink" href="#start-twister" title="Permalink to this headline">¶</a></h3>
 <p>After you go back to the master node (i55), simply type command
 ./start_twister.sh &amp; under $TWISTER_HOME/bin.</p>
 <div class="highlight-python"><div class="highlight"><pre>i55 &gt; ./start_twister.sh &amp;
@@ -1681,7 +1658,7 @@ INFO: Successfully connected to tcp://i56:61616
 <p>If you can see similar message above, twister has started successfully.</p>
 </div>
 <div class="section" id="verify-twister-status">
-<span id="id7"></span><h3><a class="toc-backref" href="#id17">Verify Twister Status</a><a class="headerlink" href="#verify-twister-status" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3><a class="toc-backref" href="#id10">Verify Twister Status</a><a class="headerlink" href="#verify-twister-status" title="Permalink to this headline">¶</a></h3>
 <p>Also you can use command &#8220;jps&#8221; on each node to make sure Twister
 (TwisterDaemon) is running.</p>
 <p>On master node</p>

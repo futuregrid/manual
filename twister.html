@@ -1455,17 +1455,15 @@
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#what-is-twister" id="id7">What is Twister?</a></li>
-<li><a class="reference internal" href="#running-twister-on-futuregrid" id="id8">Running Twister on FutureGrid</a></li>
-<li><a class="reference internal" href="#run-twister-applications" id="id9">Run Twister Applications</a></li>
-<li><a class="reference internal" href="#papers-and-presentations" id="id10">Papers and Presentations</a></li>
+<li><a class="reference internal" href="#what-is-twister" id="id2">What is Twister?</a></li>
+<li><a class="reference internal" href="#running-twister-on-futuregrid" id="id3">Running Twister on FutureGrid</a></li>
+<li><a class="reference internal" href="#run-twister-applications" id="id4">Run Twister Applications</a></li>
+<li><a class="reference internal" href="#papers-and-presentations" id="id5">Papers and Presentations</a></li>
 </ul>
 </div>
 </div>
-<p>PLEASE NOTE: THIS MANUAL PAGE IS A DRAFT, PLEASE PROVIDE FEEDBACK IN THE
-COMMENT SECTION.</p>
 <div class="section" id="what-is-twister">
-<h2><a class="toc-backref" href="#id7">6.2.1. What is Twister?</a><a class="headerlink" href="#what-is-twister" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">6.2.1. What is Twister?</a><a class="headerlink" href="#what-is-twister" title="Permalink to this headline">¶</a></h2>
 <p>MapReduce programming model has simplified the implementations of many
 data parallel applications. The simplicity of the programming model and
 the quality of services provided by many implementations of MapReduce
@@ -1478,9 +1476,8 @@ expand the applicability of MapReduce to more classes of applications.
 MapReduce runtime we have developed by incorporating these enhancements.</p>
 <p><a class="reference external" href="http://www.iterativemapreduce.org/">Twister</a> provides the following
 features to support MapReduce computations. (Twister is developed as
-part of <a class="reference external" href="http://www.cs.indiana.edu/%7Ejekanaya/">Jaliya Ekanayake&#8217;s</a>
-Ph.D. research and is supported by the <a class="reference external" href="http://salsahpc.indiana.edu/">Salsa</a> Team
-&#64; <a class="reference external" href="http://www.iub.edu/">IU</a>)</p>
+part of Jaliya Ekanayake&#8217;s Ph.D. research and is supported by the
+<a class="reference external" href="http://salsahpc.indiana.edu/">Salsa</a> Team &#64; <a class="reference external" href="http://www.iub.edu/">IU</a>)</p>
 <ul class="simple">
 <li>Distinction on static and variable data</li>
 <li>Configurable long running (cacheable) map/reduce tasks</li>
@@ -1496,65 +1493,16 @@ Ph.D. research and is supported by the <a class="reference external" href="http:
 <p>Iterative MapReduce programming model using Twister</p>
 </div>
 <div class="section" id="running-twister-on-futuregrid">
-<h2><a class="toc-backref" href="#id8">6.2.2. Running Twister on FutureGrid</a><a class="headerlink" href="#running-twister-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">6.2.2. Running Twister on FutureGrid</a><a class="headerlink" href="#running-twister-on-futuregrid" title="Permalink to this headline">¶</a></h2>
 <p>Twister can be run in various modes within FG either in FutureGrid HPC
-or FutureGrid Cloud environment.</p>
+or FutureGrid Cloud environment:</p>
 <ul class="simple">
-<li>Twister on FutureGrid<ul>
-<li><a class="reference external" href="twister-futuregrid-hpc.html">Running Twister on FutureGrid HPC
-HPC</a><ul>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#hpc-nodes">Get HPC compute
-nodes</a></li>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#twister-conf">Twister
-Configuration</a><ul>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#download-twister">Download Twister
-0.9</a></li>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#set-twister-conf">Set $TWISTER_HOME and
-$JAVA_HOME</a></li>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#twisterpowermakeup">Run
-TwisterPowerMakeUp.sh</a></li>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#start-activemq">Download and start ActiveMQ on specific
-nodes</a></li>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#run-twister">Start
-Twister</a></li>
-</ul>
-</li>
-<li><a class="reference external" href="twister-futuregrid-hpc.html#verify-twister-status">Verify Twister MapReduce Daemon
-status</a></li>
-</ul>
-</li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html">Twister with FutureGrid Cloud OpenStack
-OpenStack</a><ul>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#vm-nodes">Get VM compute
-nodes</a><ul>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#vm-nodes-setting">VM Hostname
-setting</a></li>
-</ul>
-</li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#twister-conf">Twister
-Configuration</a><ul>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#twister-download">Download Twister
-0.9</a></li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#twister-conf-setup">Set $TWISTER_HOME, $JAVA_HOME and Worker
-Nodes</a></li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#twisterpowermakeup">Run
-TwisterPowerMakeUp.sh</a></li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#twister-conf-activemq">Download and start ActiveMQ on specific
-node</a></li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#run-twister">Start
-Twister</a></li>
-</ul>
-</li>
-<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html#verify-twister-status">Verify Twister MapReduce Daemon
-status</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference external" href="twister-futuregrid-hpc.html">Running Twister on FutureGrid HPC</a></li>
+<li><a class="reference external" href="twister-futuregrid-cloud-openstack.html">Twister with FutureGrid Cloud OpenStack</a></li>
 </ul>
 </div>
 <div class="section" id="run-twister-applications">
-<h2><a class="toc-backref" href="#id9">6.2.3. Run Twister Applications</a><a class="headerlink" href="#run-twister-applications" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">6.2.3. Run Twister Applications</a><a class="headerlink" href="#run-twister-applications" title="Permalink to this headline">¶</a></h2>
 <p>We provide Kmeans and Blast run on Twister as examples.</p>
 <ul class="simple">
 <li><a class="reference external" href="twister-kmeans.html">Twister Kmeans</a></li>
@@ -1562,7 +1510,7 @@ status</a></li>
 </ul>
 </div>
 <div class="section" id="papers-and-presentations">
-<h2><a class="toc-backref" href="#id10">6.2.4. Papers and Presentations</a><a class="headerlink" href="#papers-and-presentations" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">6.2.4. Papers and Presentations</a><a class="headerlink" href="#papers-and-presentations" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Jaliya Ekanayake, Hui Li, Bingjing Zhang, Thilina Gunarathne, Seung-Hee Bae, Judy Qiu, Geoffrey Fox, <a class="reference external" href="http://www.iterativemapreduce.org/hpdc-camera-ready-submission.pdf">Twister: A Runtime for Iterative MapReduce</a>,&#8221; The First International Workshop on MapReduce and its Applications (MAPREDUCE&#8216;10) - HPDC2010</li>
 <li>Jaliya Ekanayake, (Advisor: Geoffrey Fox) <a class="reference external" href="http://grids.ucs.indiana.edu/ptliupages/publications/SC09-abstract-jaliya-ekanayake.pdf">Architecture and Performance of Runtime Environments for Data Intensive Scalable Computing</a>, Doctoral Showcase, SuperComputing2009. (<a class="reference external" href="http://www.slideshare.net/jaliyae/architecture-and-performance-of-runtime-environments-for-data-intensive-scalable-computing-2653554">Presentation</a>)   * Jaliya Ekanayake, Atilla Soner Balkir, Thilina Gunarathne, Geoffrey Fox, Christophe Poulain, Nelson Araujo, Roger Barga, <a class="reference external" href="http://grids.ucs.indiana.edu/ptliupages/publications/eScience09-camera-ready-submission.pdf">DryadLINQ for Scientific Analyses</a>, Fifth IEEE International Conference on e-Science (eScience2009), Oxford, UK.</li>
