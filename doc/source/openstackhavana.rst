@@ -324,7 +324,7 @@ be simplified.
 
 Create a file(mycloudinit.txt) containing these lines::
 
-       # cloud-config
+       #cloud-config
 
        # Enable root login.
        disable_root: false
