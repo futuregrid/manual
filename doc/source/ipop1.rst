@@ -129,7 +129,7 @@ them over a virtual network.
 To make the process simpler for the first time you use IPOP, this
 tutorial uses configuration files with several pre-set values to
 minimize configuration steps from your part. Once you finish the
-tutorial and understand how IPOP can be dpeloyed, you can use these
+tutorial and understand how IPOP can be deployed, you can use these
 configuration files as templates to deploy other IPOP virtual networks.
  
 We assume that you have deployed two VMs - we will be refer to them
