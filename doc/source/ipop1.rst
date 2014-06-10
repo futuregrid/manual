@@ -80,7 +80,7 @@ Option 1: Deploying a VM on FutureGrid Using Nimbus
 A Nimbus image with Ubuntu 12.04 is available on TACC's cluster
 (Alamo) with KVM virtualization technology. The image name is
 "ubuntu12.04.x64.kvm" and it is available to all FutureGrid users. Use
-the `Nimbus cloud-client.sh client <https://portal.futuregrid.org/tutorials/nimbus>`__ as
+the `Nimbus cloud-client.sh client <http://manual.futuregrid.org/nimbus.html>`__ as
 described in the Nimbus tutorial to deploy a virtual machine on Alamo::
 
   cloud-client.sh --conf conf/alamo.conf --run --name ubuntu12.04.x64.kvm --hours 24
