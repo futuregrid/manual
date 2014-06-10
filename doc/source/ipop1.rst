@@ -194,12 +194,11 @@ And you should see an output that looks like this::
        RX bytes:56314 (56.3 KB) TX bytes:32314 (32.3 KB)
 
 ***2.2) Bring up IPOP in the "Bob" VM***
-| 
+
 Now using another terminal, ssh into the "Bob" VM and repeat the same
 process you did for Alice (again, as root)::
 
-   wget
-  `http://www.acis.ufl.edu/~renato/ipopdemo/ipop\_demo\_prepare\_debian.zip <http://www.acis.ufl.edu/~renato/ipopdemo/ipop_demo_prepare_debian.zip>`__
+  wget http://www.acis.ufl.edu/~renato/ipopdemo/ipop\_demo\_prepare\_debian.zip
   apt-get install unzip
   unzip ipop\_demo\_prepare\_debian.zip
 
