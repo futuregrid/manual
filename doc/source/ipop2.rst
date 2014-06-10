@@ -123,7 +123,7 @@ parameters: a P2P namespace string, the IP\_Pam address, and a port.
    choose another number if you'd like. 
 
 | Configure these parameters by running \ *on Pam, as root, and
-replacing Namespace and IP\_Pam as appropriate:*
+replacing Namespace and IP\_Pam as appropriate*::
 
 ./bootstrap\_demo\_prepare.sh P2PNamespace IP\_Pam 40000
 
