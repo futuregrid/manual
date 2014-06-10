@@ -383,9 +383,9 @@ pattern, as there is privacy in the communicaiton - nodes in the path
 between Alice and Bob will not be able to see the payload of any IP
 packet they communicate.
   
-   ***3.5) Inspecting IPsec authentication***
+***3.5) Inspecting IPsec authentication***
   
-   Now let's show how IPsec prevents non-authenticated nodes to
+Now let's show how IPsec prevents non-authenticated nodes to
 communicate. Disable IPsec by running the following commands, *on Bob,
 as root*::
   
@@ -396,7 +396,7 @@ as root*::
 Then, try to ping Alice from Bob, or vice-versa. You will see that
 packets do not flow now.
   
-   ***3.6) Inspecting packets without IPsec***
+***3.6) Inspecting packets without IPsec***
   
   
 Now let's show how, without IPsec, the payload is not kept private.
@@ -417,7 +417,7 @@ of tcpdump)::
 
   ping -p deadbeef -c 5 192.168.10.20
 
-On Bob, you should now see tcpdump output that looks like this:
+On Bob, you should now see tcpdump output that looks like this::
 
   11:46:10.258390 IP ip-192-168-10-10.ec2.internal > ip-192-168-10-20.ec2.internal:
   ICMP echo request, id 6107, seq 5, length 64
