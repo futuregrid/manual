@@ -24,7 +24,7 @@ This tutorial provides step-by-step instructions for deploying a
 minimal independent P2P overlay upon which you can run IP-over-P2P
 (IPOP) virtual private networks. This tutorial is a follow-up to the
 `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__, which
+tutorial <http://manual.futuregrid.org/ipop1.html>`__, which
 guides you through the process of connecting two VMs by using a public
 P2P overlay that runs on `PlanetLab <http://www.planetlab.org>`__
 resources. In this follow-up tutorial, you will learn how to deploy your
@@ -36,7 +36,7 @@ Prerequisites:
 ~~~~~~~~~~~~~~
 
 -  It is a pre-requisite that you have gone through the \ `introductory
-   IPOP tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__
+   IPOP tutorial <http://manual.futuregrid.org/ipop1.html>`__
 -  Basic knowledge of Unix/Linux command line tools
 
 
@@ -48,7 +48,7 @@ Step 1: Bringing up Alice and Bob VMs 
 The first step in this tutorial is to deploy at least two virtual
 machines which will be connected by an IPOP virtual network. Please
 follow the instructions of the \ `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ before you
+tutorial <http://manual.futuregrid.org/ipop1.html>`__ before you
 continue; is assumed you have started two VMs "Alice" and "Bob" as
 described in that tutorial before proceeding to the next step.
 
@@ -57,7 +57,7 @@ Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | The instructions of the \ `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ work by
+tutorial <http://manual.futuregrid.org/ipop1.html>`__ work by
 connecting Alice and Bob through an IPOP configuration where the P2P
 overlay runs on PlanetLab. You will now disconnect the two VMs from this
 IPOP network before you configure them to connet through a different P2P
@@ -80,7 +80,7 @@ you can bootstrap your independent IPOP system - we will refer to this
 third VM as "Pam" in the rest of the tutorial.
  
 Any of the options described in the \ `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ work
+tutorial <http://manual.futuregrid.org/ipop1.html>`__ work
 (FutureGrid, EC2, VMware) will work here, as long as the "Pam" VM can be
 reached by both "Alice" and "Bob" through the Internet. In general,
 "Pam" should be a machine deployed with a public IP interface (e.g. in
