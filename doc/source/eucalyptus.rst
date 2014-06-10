@@ -248,10 +248,10 @@ euca-terminate-instances command::
 Logging Into the VM
 -----------------------
 
-Create rules to allow access to the VM over ssh and to allow ping
-
-    $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
-    $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
+Create rules to allow access to the VM over ssh and to allow ping::
+ 
+        $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
+        $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
 
 The ssh private key that was generated earlier can now be used to
 login to the VM::
