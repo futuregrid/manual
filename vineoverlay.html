@@ -693,8 +693,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.6. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.7. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
@@ -1350,8 +1352,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.6. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.7. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
@@ -1466,7 +1470,7 @@ can verify that the image is available using:</p>
 $ ./bin/cloud-client.sh --list --conf conf/foxtrot.conf
 ...
 [Image] &#39; centos-5.5-x64-vine.gz &#39;           Read only
-        Modified: Jul 5 2011 @ 14:40   Size: 676457559 bytes (~645 MB)
+Modified: Jul 5 2011 @ 14:40   Size: 676457559 bytes (~645 MB)
 ...
 </pre></div>
 </div>
