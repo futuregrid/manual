@@ -56,8 +56,7 @@ described in that tutorial before proceeding to the next step.
 Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The instructions of the \ `introductory IPOP
-tutorial <http://manual.futuregrid.org/ipop1.html>`__ work by
+The instructions of the `introductory IPOP tutorial <http://manual.futuregrid.org/ipop1.html>`__ work by
 connecting Alice and Bob through an IPOP configuration where the P2P
 overlay runs on PlanetLab. You will now disconnect the two VMs from this
 IPOP network before you configure them to connet through a different P2P
