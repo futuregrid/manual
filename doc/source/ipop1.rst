@@ -217,7 +217,7 @@ configured with the 192.168.10.20 virtual IP address.
 
 ***2.3) Get Alice and Bob connected***
 
-We will use now the "ping" tool to send ICPM echo packets between
+We will now use the "ping" tool to send ICPM echo packets between
 Alice and Bob over the IPOP virtual network. Ping is a helpful tool for
 basic diagnostics of network connectivity, so we use it in this
 demonstration; once you confirm that ICMP packets are flowing with ping,
