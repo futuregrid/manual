@@ -106,8 +106,7 @@ Step 4: Configure Pam to run P2P Bootstrapping Overlay
 First, download a zip archive with template configuration files and
 scripts prepared for this tutorial, *on Pam, as root*::
  
-  wget
-`http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip <http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap_demo.zip>`__
+  wget `http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip <http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap_demo.zip>`__
   apt-get install unzip
   unzip bootstrap\_demo.zip
  
