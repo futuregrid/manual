@@ -48,9 +48,9 @@ Prerequisites:
    following tutorials is required:
 
    -  `Using Nimbus
-      on FutureGrid <https://portal.futuregrid.org/tutorials/nimbus>`__
+      on FutureGrid <http://manual.futuregrid.org/nimbus.html>`__
    -  `Using OpenStack
-      on FutureGrid <https://portal.futuregrid.org/tutorials/openstack>`__
+      on FutureGrid <http://manual.futuregrid.org/openstackhavana.html>`__
 
  
 ^
