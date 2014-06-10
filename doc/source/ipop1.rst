@@ -346,7 +346,7 @@ what is different is that all communication now is authenticated and
 encrypted. For instance, if Alice stops running IPsec, or does not
 produce a valid signed certificate when they negotiate keys, it will not
 be able to connect to Bob (and vice-versa).
-| 
+
 ***3.4) Inspecting secure communications***
 
 To confirm this, let's change the ping command slightly to add a
