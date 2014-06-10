@@ -53,7 +53,6 @@ Prerequisites:
       on FutureGrid <http://manual.futuregrid.org/openstackhavana.html>`__
 
  
-^
 
 Step 1: Deploying VMs to be connected by IPOP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
