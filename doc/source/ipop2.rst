@@ -198,7 +198,7 @@ Pam, and is independent of PlanetLab.
 
 Step 7: (Optional) Advanced topics
  
- 7.1) Inspecting the P2P network
+7.1) Inspecting the P2P network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  
