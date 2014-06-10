@@ -169,8 +169,7 @@ Download configuration files for this tutorial::
 
   mkdir tmp
   cd tmp
-  wget
-  `http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip <http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap_demo.zip>`__
+  wget http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip
   unzip bootstrap\_demo.zip
  
 For the following command, ***make sure you use the same exact
