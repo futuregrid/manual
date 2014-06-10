@@ -152,11 +152,12 @@ endpoints. Now run the P2P bootstrapping code with this configuration,
 as follows:
 
 (Note: this command first installs mono, if it's not already
-installed on the VM, which may take a few minutes to complete):
+installed on the VM, which may take a few minutes to complete)::
 
-  ./run\_bootstrap\_node.sh ./bootstrap.config
+./run\_bootstrap\_node.sh ./bootstrap.config
 
- Step 5: Configure Alice and Bob to use Pam as P2P overlay
+
+Step 5: Configure Alice and Bob to use Pam as P2P overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  
