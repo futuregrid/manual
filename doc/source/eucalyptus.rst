@@ -335,6 +335,8 @@ The following steps are executed on the sierra login node. Be sure you
 have run ``module load euca2ools`` and ``source eucarc`` before
 proceeding.
 
+** Note this example doesn't actually work **
+
 First download the image archive::
 
   $ wget http://emis.eucalyptus.com/starter-emis/euca-centos6.4-ec2user-2013.07.12-x86_64.tzg
