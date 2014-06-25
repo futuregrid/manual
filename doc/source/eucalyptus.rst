@@ -315,16 +315,95 @@ On the VM, the network will show only the VM private IP address::
 Image Management
 --------------------
 
-For more image management information see the `Image Tasks section of the Eucalyptus documentation
+Please take care to only install images that you create yourself or
+obtain from trustworthy sources. You are responsible for the images
+you use on FutureGrid resources. Any instances that are detetermined
+to contain malware, or to be spamming, or attacking other systems on
+the network, etc. will be terminated without notice and deleted.
+
+Eucalyptus provides several "starter" images in their github
+repository. We will use one of these to demonstrate basic image
+management. For more image management information see the `Image Tasks
+section of the Eucalyptus documentation
 <https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#image-guide/img_task_intro.html>`__
 
-Please take care to install image that you create yourself or obtain
-from trustworthy sources. You are responsible for the images you use
-on FutureGrid resources. Any instances that are detetermined to
-contain malware, or to be spamming, or attacking other systems on the
-network, etc. will be terminated without notice and deleted.
+We will use the first image on the list (as of 25-Jun-2014 this is
+CentOS 6.4. We have found that some of the Ubuntu images at this site
+do not work, as of this date).
 
+The following steps are executed on the sierra login node. Be sure you
+have run ``module load euca2ools`` and ``source eucarc`` before
+proceeding.
 
+First download the image archive::
+
+  $ wget http://emis.eucalyptus.com/starter-emis/euca-centos6.4-ec2user-2013.07.12-x86_64.tzg
+
+Uncompress it::
+
+  $ tar xzf euca-centos6.4-ec2user-2013.07.12-x86_64.tgz
+
+We can see that this archive includes kernel, ramdisk, and root partiton images::
+
+  $ tree euca-centos6.4-ec2user-2013.07.12-x86_64
+  euca-centos6.4-ec2user-2013.07.12-x86_64
+  |-- euca-centos6.4-ec2user-2013.07.12-x86_64.img
+  `-- kvm-kernel
+      |-- initramfs-2.6.32-358.11.1.el6.x86_64.img
+      `-- vmlinuz-2.6.32-358.11.1.el6.x86_64
+
+Eucalyptus restricts kernel image registration to administrators, so
+we will use existing FutureGrid CentoOS kernel and ramdisk images with
+the downloaded root partition image.
+
+We will need to bundle the image, kernel and ramdisk, upload the
+bundle, and register it. When uploading the bundle, you must specify a
+Walrus bucket with the ``-b`` argument to ``euca-upload-bundle``. The
+buckets fg-image, fg-ramdisk, and fg-kernel are reserved for
+FutureGrid administrative use. We suggest using your Portal username
+or project as a bucket name.
+
+First we will find our kernel and ramdisk images::
+
+  $ euca-describe-images --all | grep fg-kernel
+  IMAGE   eki-19543879    fg-kernel/vmlinuz-3.13.0-29-generic.manifest.xml        663263781684    available       public  x86_64  kernel    instance-store
+  IMAGE   eki-7EA73854    fg-kernel/vmlinuz-2.6.32-431.17.1.el6.x86_64.manifest.xml       663263781684    available       public  x86_64  kernel    instance-store
+
+  $ euca-describe-images --all | grep fg-ramdisk
+  IMAGE   eri-13F63599    fg-ramdisk/initrd.img-3.13.0-29-generic.manifest.xml    663263781684    available       public  x86_64  ramdisk   instance-store
+  IMAGE   eri-1E5C3571    fg-ramdisk/initramfs-2.6.32-431.17.1.el6.x86_64.img.manifest.xml        663263781684    available       public  x86_64     ramdisk    instance-store
+
+We'll use the 2.6.32 kernel and ramdisk which matches what was in the image archive we downloaded.::
+
+  $ euca-bundle-image -i euca-centos6.4-ec2user-2013.07.12-x86_64.img --kernel eki-7EA73854 --ramdisk eri-1E5C3571 --arch x86_64
+  Wrote manifest /var/tmp/bundle-XiJgSu/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml
+
+Use the generated xml manifest to upload the bundle. Remember to use
+your own username or project as bucket name (``-b`` argument)::
+
+  $ euca-upload-bundle -b fg82 -m /var/tmp/bundle-XiJgSu/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml
+  Uploaded fg82/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml
+
+Finally, register the image::
+
+  $ euca-register fg82/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml -a x86_64 -n centos-6_4-image
+  IMAGE   emi-BFC33B29
+
+The returned image ID can now be used to start instances with ``euca-run-instances`` as described earlier.  ``euca-describe-images`` shows this as a private image now::
+
+  $ euca-describe-images
+  ...
+  IMAGE   emi-BFC33B29    fg82/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml  597941386389    available       private x86_64  machine    eki-7EA73854    eri-1E5C3571            instance-store  paravirtualized
+
+To remove an image, first deregister it, then delete the bundle. The
+argument value to use for ``-p`` is the prefix of the image manifest
+name (everything before the .manifest.xml suffix)::
+
+  $ euca-deregister emi-BFC33B29
+
+  $ euca-delete-bundle -b fg82 -p euca-centos6.4-ec2user-2013.07.12-x86_64.img
+
+  
 
 Status of Deployments
 ---------------------
