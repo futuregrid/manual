@@ -407,7 +407,7 @@ Volume Management
 ------------------
 
 The Eucalyptus support website has a good introductory guide to
-`creating a attaching a volume.
+`creating and attaching a volume.
 <https://support.eucalyptus.com/hc/en-us/articles/200686945-How-to-create-and-attach-a-volume>`__
 
 
