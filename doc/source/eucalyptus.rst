@@ -402,7 +402,14 @@ name (everything before the .manifest.xml suffix)::
 
   $ euca-delete-bundle -b fg82 -p euca-fedora20-fedora-2013.12.18-x86_64.img
 
-  
+
+Volume Management
+------------------
+
+The Eucalyptus support website has a good introductory guide to
+`creating a attaching a volume.
+<https://support.eucalyptus.com/hc/en-us/articles/200686945-How-to-create-and-attach-a-volume>`__
+
 
 Status of Deployments
 ---------------------
