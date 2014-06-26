@@ -321,42 +321,40 @@ you use on FutureGrid resources. Any instances that are detetermined
 to contain malware, or to be spamming, or attacking other systems on
 the network, etc. will be terminated without notice and deleted.
 
-Eucalyptus provides several "starter" images in their github
-repository. We will use one of these to demonstrate basic image
-management. For more image management information see the `Image Tasks
-section of the Eucalyptus documentation
+Eucalyptus provides several "starter" images in their `github
+repository
+<https://github.com/eucalyptus/eucalyptus/wiki/Starter-Images>`__. We
+will use one of these to demonstrate basic image management. For more
+image management information see the `Image Tasks section of the
+Eucalyptus documentation
 <https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#image-guide/img_task_intro.html>`__
 
-We will use the first image on the list (as of 25-Jun-2014 this is
-CentOS 6.4. We have found that some of the Ubuntu images at this site
-do not work, as of this date).
+We will use the Fedora 20 image. Note that we have found that some of
+the other images at this site do not actually work.
 
 The following steps are executed on the sierra login node. Be sure you
 have run ``module load euca2ools`` and ``source eucarc`` before
 proceeding.
 
-** Note this example doesn't actually work **
-
 First download the image archive::
 
-  $ wget http://emis.eucalyptus.com/starter-emis/euca-centos6.4-ec2user-2013.07.12-x86_64.tzg
+  $ wget  http://emis.eucalyptus.com/starter-emis/euca-fedora20-fedora-2013.12.18-x86_64.tgz
 
 Uncompress it::
 
-  $ tar xzf euca-centos6.4-ec2user-2013.07.12-x86_64.tgz
+  $ tar xzf euca-fedora20-fedora-2013.12.18-x86_64.tgz
 
 We can see that this archive includes kernel, ramdisk, and root partiton images::
 
-  $ tree euca-centos6.4-ec2user-2013.07.12-x86_64
-  euca-centos6.4-ec2user-2013.07.12-x86_64
-  |-- euca-centos6.4-ec2user-2013.07.12-x86_64.img
+  $ tree euca-fedora20-fedora
+  euca-fedora20-fedora
+  |-- euca-fedora20-fedora-2013.12.18-x86_64.img
   `-- kvm-kernel
-      |-- initramfs-2.6.32-358.11.1.el6.x86_64.img
-      `-- vmlinuz-2.6.32-358.11.1.el6.x86_64
+      |-- initramfs-3.11.10-301.fc20.x86_64.img
+      `-- vmlinuz-3.11.10-301.fc20.x86_64
 
 Eucalyptus restricts kernel image registration to administrators, so
-we will use existing FutureGrid CentoOS kernel and ramdisk images with
-the downloaded root partition image.
+we have provide the kernel and ramdisk as public images. 
 
 We will need to bundle the image, kernel and ramdisk, upload the
 bundle, and register it. When uploading the bundle, you must specify a
@@ -368,42 +366,41 @@ or project as a bucket name.
 First we will find our kernel and ramdisk images::
 
   $ euca-describe-images --all | grep fg-kernel
-  IMAGE   eki-19543879    fg-kernel/vmlinuz-3.13.0-29-generic.manifest.xml        663263781684    available       public  x86_64  kernel    instance-store
-  IMAGE   eki-7EA73854    fg-kernel/vmlinuz-2.6.32-431.17.1.el6.x86_64.manifest.xml       663263781684    available       public  x86_64  kernel    instance-store
+  ...
+  IMAGE   eki-1FC235EF    fg-kernel/vmlinuz-3.11.10-301.fc20.x86_64.manifest.xml  663263781684    available       public  x86_64  kernel    instance-store
 
   $ euca-describe-images --all | grep fg-ramdisk
-  IMAGE   eri-13F63599    fg-ramdisk/initrd.img-3.13.0-29-generic.manifest.xml    663263781684    available       public  x86_64  ramdisk   instance-store
-  IMAGE   eri-1E5C3571    fg-ramdisk/initramfs-2.6.32-431.17.1.el6.x86_64.img.manifest.xml        663263781684    available       public  x86_64     ramdisk    instance-store
+  ...
+  IMAGE   eri-7F3A3ACC    fg-ramdisk/initramfs-3.11.10-301.fc20.x86_64.img.manifest.xml   663263781684    available       public  x86_64  ramdisk    instance-store
 
-We'll use the 2.6.32 kernel and ramdisk which matches what was in the image archive we downloaded.::
-
-  $ euca-bundle-image -i euca-centos6.4-ec2user-2013.07.12-x86_64.img --kernel eki-7EA73854 --ramdisk eri-1E5C3571 --arch x86_64
-  Wrote manifest /var/tmp/bundle-XiJgSu/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml
+We'll use the 3.11.10 kernel and ramdisk which matches what was in the image archive we downloaded.::
+  $ euca-bundle-image -i euca-fedora20-fedora/euca-fedora20-fedora-2013.12.18-x86_64.img --kernel eki-1FC235EF --ramdisk eri-7F3A3ACC --arch x86_64
+  Wrote manifest /var/tmp/bundle-Hf3IL2/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
 
 Use the generated xml manifest to upload the bundle. Remember to use
 your own username or project as bucket name (``-b`` argument)::
 
-  $ euca-upload-bundle -b fg82 -m /var/tmp/bundle-XiJgSu/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml
-  Uploaded fg82/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml
+  $ euca-upload-bundle -b fg82 -m /var/tmp/bundle-Hf3IL2/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
+  Uploaded fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
 
 Finally, register the image::
 
-  $ euca-register fg82/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml -a x86_64 -n centos-6_4-image
-  IMAGE   emi-BFC33B29
+  $ euca-register fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml -a x86_64 -n fc-20-image
+  IMAGE   emi-59A4353C
 
 The returned image ID can now be used to start instances with ``euca-run-instances`` as described earlier.  ``euca-describe-images`` shows this as a private image now::
 
   $ euca-describe-images
   ...
-  IMAGE   emi-BFC33B29    fg82/euca-centos6.4-ec2user-2013.07.12-x86_64.img.manifest.xml  597941386389    available       private x86_64  machine    eki-7EA73854    eri-1E5C3571            instance-store  paravirtualized
+  IMAGE   emi-59A4353C    fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml    597941386389    available       private x86_64  machine    eki-1FC235EF    eri-7F3A3ACC    instance-store  paravirtualized
 
 To remove an image, first deregister it, then delete the bundle. The
 argument value to use for ``-p`` is the prefix of the image manifest
 name (everything before the .manifest.xml suffix)::
 
-  $ euca-deregister emi-BFC33B29
+  $ euca-deregister emi-59A4353C
 
-  $ euca-delete-bundle -b fg82 -p euca-centos6.4-ec2user-2013.07.12-x86_64.img
+  $ euca-delete-bundle -b fg82 -p euca-fedora20-fedora-2013.12.18-x86_64.img
 
   
 
