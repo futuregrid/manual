@@ -354,7 +354,7 @@ We can see that this archive includes kernel, ramdisk, and root partiton images:
       `-- vmlinuz-3.11.10-301.fc20.x86_64
 
 Eucalyptus restricts kernel image registration to administrators, so
-we have provide the kernel and ramdisk as public images. 
+we have provided the kernel and ramdisk as public images. 
 
 We will need to bundle the image, kernel and ramdisk, upload the
 bundle, and register it. When uploading the bundle, you must specify a
