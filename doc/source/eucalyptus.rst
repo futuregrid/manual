@@ -373,7 +373,9 @@ First we will find our kernel and ramdisk images::
   ...
   IMAGE   eri-7F3A3ACC    fg-ramdisk/initramfs-3.11.10-301.fc20.x86_64.img.manifest.xml   663263781684    available       public  x86_64  ramdisk    instance-store
 
-We'll use the 3.11.10 kernel and ramdisk which matches what was in the image archive we downloaded.::
+We'll use the 3.11.10 kernel and ramdisk which matches what was in the
+image archive we downloaded.::
+
   $ euca-bundle-image -i euca-fedora20-fedora/euca-fedora20-fedora-2013.12.18-x86_64.img --kernel eki-1FC235EF --ramdisk eri-7F3A3ACC --arch x86_64
   Wrote manifest /var/tmp/bundle-Hf3IL2/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
 
