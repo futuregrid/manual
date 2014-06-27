@@ -388,7 +388,10 @@ Finally, register the image::
   $ euca-register fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml -a x86_64 -n fc-20-image
   IMAGE   emi-59A4353C
 
-The returned image ID can now be used to start instances with ``euca-run-instances`` as described earlier.  ``euca-describe-images`` shows this as a private image now::
+The returned image ID can now be used to start instances with
+``euca-run-instances`` as described earlier (for this image you will
+need to log in as user *fedora*). ``euca-describe-images`` shows this
+as a private image now::
 
   $ euca-describe-images
   ...
