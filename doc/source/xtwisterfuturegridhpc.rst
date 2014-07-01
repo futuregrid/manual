@@ -143,7 +143,7 @@ Download and start ActiveMQ on specific nodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now ssh to the selected node, i56, then download and unzip the ActiveMQ
-package, finally start it up and return the previous master node, i56.
+package. Finally start it up and return the previous master node, i56.
 
 ::
 
