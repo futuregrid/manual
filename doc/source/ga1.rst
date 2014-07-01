@@ -23,10 +23,10 @@ for execution on remote Grid appliances using Condor.
 
 **Prerequisites:**:
 
-    #. Intel/AMD-based desktop or laptop computer
-    #. 512MB or more memory
-    #. Privileges to install virtual machine software (VMware,
-       VirtualBox, or KVM) if not already installed on your computer
+#. Intel/AMD-based desktop or laptop computer
+#. 512MB or more memory
+#. Privileges to install virtual machine software (VMware,
+   VirtualBox, or KVM) if not already installed on your computer
 
  
 
