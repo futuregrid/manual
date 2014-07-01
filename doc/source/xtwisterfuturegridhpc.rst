@@ -111,8 +111,8 @@ Run TwisterPowerMakeUp.sh
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Within twister 0.9 package, there is a TwisterPowerMakeUp.sh script to
-automatically configure Twister. Generally, it randomly pick one of the
-working node as ActiveMQ messaging broker, set working daemon per node,
+automatically configure Twister. Generally, it randomly picks one of the
+working nodes as ActiveMQ messaging broker, sets working daemon per node,
 and worker (mapper/reducer) per daemon. Also, it creates Twister
 required directories such as app\_dir and data\_dir. 
 
