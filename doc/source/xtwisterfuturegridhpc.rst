@@ -30,7 +30,7 @@ Requirement
 Get HPC compute nodes
 ---------------------
 
-Firstly, you will need to login to IU-india with using the command: 
+First, you will need to login to IU-india using the command: 
 
 ::
 
