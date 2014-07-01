@@ -21,7 +21,7 @@ for execution on remote Grid appliances using Condor.
 
  
 
-**Prerequisites:**
+**Prerequisites:**:
 
     #. Intel/AMD-based desktop or laptop computer
     #. 512MB or more memory
