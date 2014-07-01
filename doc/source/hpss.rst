@@ -57,4 +57,3 @@ the IU passphrase.
 
 -  For transferring files (*put* and *get*), search the `IU Knowledge
    Base <http://kb.iu.edu/?search=hsi>`__.
-   `‹ Storage </storage>`__ `up </storage>`__ 
