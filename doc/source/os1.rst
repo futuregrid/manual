@@ -31,7 +31,9 @@ Prerequisites
 ~~~~~~~~~~~~~
 
 It is assumed the user is familiar with launching virtual machines with Nimbus, specifically how to setup and use the Nimbus cloud client and credentials. If not refer to this FutureGrid Nimbus tutorial.
+
 Getting Started
+~~~~~~~~~~~~~~~
 
 Lauch the appliance VM::
 
@@ -66,6 +68,7 @@ Generate the keypair that will be used for ssh logins into Compute instances:
 root@virtual-machine:~# euca-add-keypair testkey >testkey.pem  root@virtual-machine:~# chmod 600 testkey.pem 
 Allow ICMP (for ping) and ssh into Compute instances:
 root@virtual-machine:~# euca-authorize default -P icmp -t -1:-1 GROUP default PERMISSION default ALLOWS icmp -1 -1 root@virtual-machine:~# euca-authorize default -P tcp -p 22 -s 0.0.0.0/0 GROUP default PERMISSION default ALLOWS tcp 22 22 FROM CIDR 0.0.0.0/0
+
 Lauch an OpenStack Compute Instance
 
 Download and install an image that is to be used for Compute instances:
