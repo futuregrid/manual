@@ -40,20 +40,15 @@ Lauch the appliance VM::
 [user@node nimbus-cloud-client-019]$ bin/cloud-client.sh --conf conf/alamo.conf --run  
 --name openstack-ubuntu-10.10-amd64.img.gz --hours 2 
 Launching workspace.  
-
 Workspace Factory Service: 
 https://nimbus.futuregrid.tacc.utexas.edu:8443/wsrf/services/WorkspaceFactoryService  
-
 Creating workspace "vm-007"... done.   
-
 IP address: 129.114.32.101 
 Hostname: vm-101.alamo.futuregrid.org 
 Start time: Fri Jun 24 15:47:38 EDT 2011 
 Shutdown time: Fri Jun 24 17:47:38 EDT 2011 
 Termination time: Fri Jun 24 17:49:38 EDT 2011  
-
 Waiting for updates.   
-
 "vm-007" reached target state: Running  Running: 'vm-007'  
 
 
