@@ -2,25 +2,20 @@
 Building an Educational Appliance from Ubuntu 10.04
 **********************************************************************
 
-.. sidebar:: Page Contents
-
-   .. contents::
-      :local:
-
 This is a short tutorial describing how to build an educational virtual cluster appliance starting from an Ubuntu 10.04 image. A more detailed description is given at \ `Testing Grid
 Appliance <http://www.grid-appliance.org/wiki/index.php/TestingGridAppliance>`__.
 
 
 
 #. Deploy an Ubuntu 10.04 appliance locally. You can download an Ubuntu
-   9.10 VMware applianceÂ \ `here <http://vmplanet.net/node/105>`__, or
+   9.10 VMware appliance \ `here <http://vmplanet.net/node/105>`__, or
    create an instance on FutureGrid of an Ubuntu 10.04 VM.
      
-#. Sudo toÂ rootÂ and install the grid-appliance baseline package as
+#. Sudo to root and install the grid-appliance baseline package as
    follows:
 
    #. apt-get install wget
-   #. echo "debÂ http://www.grid-appliance.org/files/packages/deb/ lucid
+   #. echo "deb http://www.grid-appliance.org/files/packages/deb/ lucid
       contrib" >> /etc/apt/sources.list
    #. wget http://www.grid-appliance.org/files/packages/deb/repo.key
    #. apt-key add repo.key
