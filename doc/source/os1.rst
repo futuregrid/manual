@@ -7,7 +7,6 @@ Running an OpenStack Appliance on FutureGrid
    .. contents::
       :local:
 
-test
 
 Background
 ~~~~~~~~~~~~~~
@@ -36,51 +35,48 @@ Lauch the appliance VM
 
 ::
 
-    [user@node nimbus-cloud-client-019]$ bin/cloud-client.sh --conf conf/alamo.conf --run 
-    --name openstack-ubuntu-10.10-amd64.img.gz --hours 2
-    Launching workspace.
+[user@node nimbus-cloud-client-019]$ bin/cloud-client.sh --conf conf/alamo.conf --run 
+--name openstack-ubuntu-10.10-amd64.img.gz --hours 2
+Launching workspace.
 
-    Workspace Factory Service:
+Workspace Factory Service:
         https://nimbus.futuregrid.tacc.utexas.edu:8443/wsrf/services/WorkspaceFactoryService
 
-    Creating workspace "vm-007"... done.
+Creating workspace "vm-007"... done.
 
 
-          IP address: 129.114.32.101
-            Hostname: vm-101.alamo.futuregrid.org
-          Start time: Fri Jun 24 15:47:38 EDT 2011
-       Shutdown time: Fri Jun 24 17:47:38 EDT 2011
-    Termination time: Fri Jun 24 17:49:38 EDT 2011
+IP address: 129.114.32.101
+Hostname: vm-101.alamo.futuregrid.org
+Start time: Fri Jun 24 15:47:38 EDT 2011
+Shutdown time: Fri Jun 24 17:47:38 EDT 2011
+Termination time: Fri Jun 24 17:49:38 EDT 2011
 
-    Waiting for updates.
+Waiting for updates.
 
 
-    "vm-007" reached target state: Running
+"vm-007" reached target state: Running
 
-    Running: 'vm-007'
+Running: 'vm-007'
 
 Log in as root:
 
 ::
 
-    [user@node nimbus-cloud-client-019]$ ssh root@129.114.32.101
-    Linux virtual-machine 2.6.35-22-generic #33-Ubuntu SMP Sun Sep 19 20:32:27 UTC 2010 
-    x86_64 GNU/Linux
-    Ubuntu 10.10
+[user@node nimbus-cloud-client-019]$ ssh root@129.114.32.101
+Linux virtual-machine 2.6.35-22-generic #33-Ubuntu SMP Sun Sep 19 20:32:27 UTC 2010
+x86_64 GNU/Linux
+Ubuntu 10.10
 
-    Welcome to Ubuntu!
-     * Documentation:  https://help.ubuntu.com/
+Welcome to Ubuntu!
+* Documentation:  https://help.ubuntu.com/
 
-     New release 'natty' available.
-     Run 'do-release-upgrade' to upgrade to it.
+New release 'natty' available.
+Run 'do-release-upgrade' to upgrade to it.
 
 
-     The programs included with the Ubuntu system are free software;
-     the exact distribution terms for each program are described in the
-     individual files in /usr/share/doc/*/copyright.
+The programs included with the Ubuntu system are free software; the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright.
 
-     Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
-     applicable law.
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
 
 #. 
 
