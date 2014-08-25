@@ -1,14 +1,17 @@
-
+**********************************************************************
 GA8: Running Condor Tasks on a Grid Appliance
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 
 Summary:
 ~~~~~~~~
 
-This tutorial provides step-by-step instructions on how to deploy a Grid
-Appliance configured withÂ Condor, an open-source job scheduler. The Grid
-Appliance can be used as a basis for running a variety of educational,
-training and outreach activities.
+This tutorial provides step-by-step instructions on how to deploy a Grid Appliance configured withÂ Condor, an open-source job scheduler. The Grid Appliance can be used as a basis for running a variety of educational, training and outreach activities.
 
 Prerequisites:
 ~~~~~~~~~~~~~~
@@ -21,12 +24,10 @@ Prerequisites:
    -  `Running the Grid Appliance on
       FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__
 
-Set Up and SubmitÂ a Condor Job
+Set Up and Submit a Condor Job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  Once you are logged in through ssh into the Grid appliance, change
-   your user to "griduser", change your directory, and compile a simple
-   program which estimates the value of "pi" using a Monte Carlo method:
+-  Once you are logged in through ssh into the Grid appliance, change your user to "griduser", change your directory, and compile a simple program which estimates the value of "pi" using a Monte Carlo method:
 
 .. code:: rteindent2
 
