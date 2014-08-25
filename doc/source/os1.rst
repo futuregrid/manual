@@ -7,6 +7,8 @@ Running an OpenStack Appliance on FutureGrid
    .. contents::
       :local:
 
+test
+
 Background
 ~~~~~~~~~~~~~~
 
@@ -207,8 +209,6 @@ Log in as root:
 
    extracting image
    ----------------
-
-   
   
 
    kernel : ttylinux-uec-amd64-12.1\_2.6.35-22\_1-vmlinuz ramdisk:
