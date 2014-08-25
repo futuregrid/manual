@@ -26,23 +26,15 @@ Prerequisites:
 Hands-On Tutorial - Hadoop "HDFS/Map-Reduce" Quick Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The first part of this tutorial assumes you have an account on
-FutureGrid and have gone through the prerequisite tutorials on Grid
-appliance using Nimbus.
-|  The tutorial will guide you through simple steps on how to get
-started with running a single Grid appliance on FutureGrid through
-Nimbus, connect to a pre-deployed pool of Grid appliances, and submit a
-simple Map-Reduce test script provided by Hadoop. Once you go through
-these simple steps, you will have the ability to later on deploy your
-own private Grid appliance clusters on FutureGrid resources, as well as
-on your own resources, to use in your courses or research.
+The first part of this tutorial assumes you have an account on FutureGrid and have gone through the prerequisite tutorials on Grid appliance using Nimbus. 
+
+The tutorial will guide you through simple steps on how to get
+started with running a single Grid appliance on FutureGrid through Nimbus, connect to a pre-deployed pool of Grid appliances, and submit a simple Map-Reduce test script provided by Hadoop. Once you go through these simple steps, you will have the ability to later on deploy your own private Grid appliance clusters on FutureGrid resources, as well as on your own resources, to use in your courses or research.
 
 Set Up and Start a Hadoop Cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. | First you will install Hadoop and JDK on your appliance's NFS
-   directory. Use the following commands (note that it will take a few
-   minutes to install both Hadoop and JDK).
+#. | First you will install Hadoop and JDK on your appliance's NFS directory. Use the following commands (note that it will take a few minutes to install both Hadoop and JDK).
 
    ::
 
@@ -53,8 +45,7 @@ Set Up and Start a Hadoop Cluster
 #. Before proceeding, check that your machine is connected to the public
    pool by using \ ``condor_status`` command. You may need to wait for a
    few minutes before it becomes fully operational.
-#. | Start a hadoop cluster on 2 nodes. Here, Condor is used to start up
-   Hadoop "nodes" on demand to form your pool. (With n=2, a single
+#. | Start a hadoop cluster on 2 nodes. Here, Condor is used to start up Hadoop�"nodes" on demand to form your pool. (With n=2, a single
    condor job will be submitted because a local node in your appliance
    will also be included into the cluster - you can also start larger
    Hadoop pools by setting a larger argument for n. You can check the
@@ -93,15 +84,13 @@ Set Up and Start a Hadoop Cluster
 
        source tmphadoopAAA/hadoop-env.sh
 
-#. | Testing the availability of hadoop file system (HDFS) by checking
-   the hdfs report:
+#. | Testing the availability of hadoop file system (HDFS) by checking the hdfs report:
 
    ::
 
        hdfs dfsadmin -report
 
-#. If all goes well, you will see a report which indicates how many
-   hadoop datanodes are available:
+#. If all goes well, you will see a report which indicates how many hadoop datanodes are available:
 
    ::
 
@@ -130,15 +119,13 @@ Set Up and Start a Hadoop Cluster
 
        ( Output truncated .... )
 
-#. | To test the map-reduce function, run the map-reduce test script
-   provided in the hadoop installation directory:
+#. | To test the map-reduce function, run the map-reduce test script provided in the hadoop installation directory:
 
    ::
 
        hadoop jar /mnt/local/hadoop/hadoop-mapred-test-0.21.0.jar mapredtest 50 54321
 
-#. | If the map-reduce is working correctly, the result will show
-   ``Success=true`` on the last line similar to:
+#. | If the map-reduce is working correctly, the result will show ``Success=true`` on the last line similar to:
 
    ::
 
@@ -174,8 +161,7 @@ Set Up and Start a Hadoop Cluster
 Stop the Hadoop Cluster
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-#. | Once you've finished using hadoop, stop the cluster to free up
-   condor nodes by:
+#. | Once you've finished using hadoop, stop the cluster to free up condor nodes by:
 
    ::
 
