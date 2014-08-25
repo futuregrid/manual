@@ -1,19 +1,22 @@
+**********************************************************************
 MP1: Running MPI Tasks on the Grid Appliance
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
 
 Summary:
 ~~~~~~~~
 
-This tutorial provides step-by-step instructions on how to deploy a pool
-of Grid Appliances configured with MPICH-2, an open-source
-implementation of the MPI (Message Passing Interface) framework. The
-Grid Appliance/MPICH2 virtual clusters can be used as a basis for
-running a variety of MPI tutorials.
+This tutorial provides step-by-step instructions on how to deploy a pool of Grid Appliances configured with MPICH-2, an open-source
+implementation of the MPI (Message Passing Interface) framework. The Grid Appliance/MPICH2 virtual clusters can be used as a basis for running a variety of MPI tutorials.
 
 Prerequisites:
 ~~~~~~~~~~~~~~
 
--  To follow this tutorial, it is a pre-requisite that you have gone
-   through this core Grid appliance tutorial:
+-  To follow this tutorial, it is a pre-requisite that you have gone through this core Grid appliance tutorial:
 
    -  `Running the Grid Appliance on
       FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__
@@ -21,10 +24,7 @@ Prerequisites:
 Set Up and Submit MPI Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. | First you will build a local installation of MPI on your appliance
-   from source. Use the following commands (note that it will take a few
-   minutes to build MPI). The "-m32" option allows a 64-bit machine to
-   submit MPI jobs to 32-bit machines.
+#. | First you will build a local installation of MPI on your appliance from source. Use the following commands (note that it will take a few minutes to build MPI). The "-m32" option allows a 64-bit machine to submit MPI jobs to 32-bit machines.
 
    ::
 
@@ -32,9 +32,7 @@ Set Up and Submit MPI Jobs
        cd ~/examples/mpi
        ./setup.sh -m32
 
-#. | Compile the "Hello World" example using the MPI cc compiler you
-   just built in the previous step. (Note: This example builds a 32-bit
-   binary with the "-m32" option):
+#. | Compile the "Hello World" example using the MPI cc compiler you just built in the previous step. (Note: This example builds a 32-bit binary with the "-m32" option):
 
    ::
 
@@ -105,5 +103,4 @@ Reference material:
 Authors:
 ~~~~~~~~
 
-Panoat Chuchaisri, David Wolinsky, Renato Figueiredo, (University of
-Florida)
+Panoat Chuchaisri, David Wolinsky, Renato Figueiredo, (University of Florida)
