@@ -16,10 +16,9 @@ This tutorial provides step-by-step instructions on how to deploy virtual privat
 **Prerequisites:**
 ------------------
 
-`Introduction to
-Nimbus <http://portal.futuregrid.org/tutorials/nimbus>`__\ `
- Running a Grid Appliance on
-FutureGrid <http://portal.futuregrid.org/tutorials/ga9>` __
+`Introduction to Nimbus <http://portal.futuregrid.org/tutorials/nimbus>`__\ `
+
+Running a Grid Appliance on FutureGrid <http://portal.futuregrid.org/tutorials/ga9>` __
 
 
 
@@ -44,7 +43,7 @@ Once the appliance reaches "running" state, its hostname/IP address will be disp
      $ ssh root@<grid_appliance.cloudurl.edu>
 
 The appliance is configured to connect automatically to a default shared pool upon start-up when it is instantiated using the cloud-client. To connect the appliance to a different pool (e..g a private pool for you, your group, or your class) it
-needsÂ \ `GroupVPN <http://www.grid-appliance.org/wiki/index.php/GroupVPN>`__ and
+needs \ `GroupVPN <http://www.grid-appliance.org/wiki/index.php/GroupVPN>`__ and
 `GroupAppliance <http://www.grid-appliance.org/wiki/index.php/GroupAppliances>`__
 configuration from a group at the Grid appliance web site. 
 
@@ -58,7 +57,7 @@ To connect to any other GroupVPN pool, you need to place a floppy disk containin
 
 Once you have created and downloaded a GroupAppliance floppy, the steps to load them into your Nimbus instances are as outlined below:
 
- 1. Download a "server" GroupAppliance floppy to your local system from the grid-appliance.org website, and unzip it to extract a file "floppy.img". Transfer it to the Grid Appliance workspace using scp or sftp:
+1. Download a "server" GroupAppliance floppy to your local system from the grid-appliance.org website, and unzip it to extract a file "floppy.img". Transfer it to the Grid Appliance workspace using scp or sftp:
 ::
 
      $ scp ./floopy.img root@<grid_appliance.cloudurl.edu>:/opt/grid_appliance/etc/
