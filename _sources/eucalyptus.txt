@@ -260,19 +260,12 @@ If you need to delete a deployed VM, you can use the
 Logging Into the VM
 -----------------------
 
-<<<<<<< HEAD
 The ssh private key that was generated earlier can now be used to
 login to the VM. We are using the CentOS image so we log in as the
 user ``cloud-user``::
 
     $ ssh -i $USER-key.pem cloud-user@10.128.74.140
     [cloud-user@ip-10-128-74-140 ~]$
-=======
-Create rules to allow access to the VM over ssh and to allow ping::
- 
-        $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
-        $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
->>>>>>> f1011a65e35ea754d682668f9f0f08259a728612
 
 Note, if you are using the Ubuntu 14.04 image, you will need to use
 the username ``ubuntu`` instead of ``cloud-user``.
