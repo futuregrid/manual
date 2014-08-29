@@ -402,8 +402,6 @@ Provision two machines with our image and execute an script::
     qsub -l os=<ami-ID> -l nodes=2:ppn=8 myscript.sh
 
 
-
-
 RAIN Manual Pages
 =================
 
