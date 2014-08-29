@@ -51,7 +51,7 @@ stacks.
 
 For tutorials on getting started with OpenStack, see:
 
--  `Using OpenStack Nova on FutureGrid <openstackhavana>`_ [novice]
+-  `Using OpenStack Nova on FutureGrid <openstackhavana.html>`_ [novice]
 
    -  This tutorial targets all users of OpenStack in FutureGrid; it
       describes how to get started with FutureGrid OpenStack resources.
