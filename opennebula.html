@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>OpenNebula 2.0 Tutorial &mdash; FutureGrid 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.1.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="FutureGrid 0.1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/fg-logo-white-24x36.png">
+          FutureGrid</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="part_introduction.html">1. <strong>INTRODUCTION</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html">1.1. Preface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#citation-for-publications">1.1.1. Citation for Publications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#acknowledgement">1.1.2. Acknowledgement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#sponsors">1.1.3. Sponsors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#about-this-manual">1.1.4. About this Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#conventions">1.1.5. Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#executive-summary">1.1. Executive Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#project-and-account-application">1.2. Project and Account Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#services">1.3. Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware">1.4. Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#support">1.5. Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_accounts.html">2. <strong>ACCOUNTS AND PROJECTS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="account.html">2.1. Project and Account Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="account.html#terminology">2.1.1. Terminology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#quickstart">2.1.2. Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#projects-and-accounts-for-xsede-users">2.1.3. Projects and Accounts for XSEDE users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#project-management">2.1.4. Project Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="account.html#create-a-portal-account">2.1.4.1. Create a Portal account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#create-a-project">2.1.4.2. Create a Project</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="account.html#example-project">2.1.4.2.1. Example Project</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#join-a-project">2.1.4.3. Join a Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#delete-or-deactivate-a-user-from-a-project">2.1.4.4. Delete or Deactivate a user from a Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#reporting-results">2.1.4.5. Reporting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#close-a-project">2.1.4.6. Close a Project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#upload-a-ssh-public-key">2.1.5. Upload a SSH Public Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#upload-an-openid">2.1.6. Upload an OpenId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#accessing-futuregrid-resources">2.1.7. Accessing FutureGrid Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#manage-a-class-on-futuregrid">2.1.8. Manage a Class on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#mini-faq">2.1.9. Mini FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="security.html">2.2. Using SSH Keys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="security.html#using-ssh-from-windows">2.2.1. Using SSH from Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#generate-a-ssh-key">2.2.2. Generate a SSH key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">2.2.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#upload-the-key-to-the-futuregrid-portal">2.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#testing-your-ssh-key">2.2.5. Testing your ssh key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#testing-your-ssh-key-for-hotel">2.2.6. Testing your ssh key for Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_status.html">3. <strong>STATUS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="status.html">3.1. Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_hpc.html">4. <strong>HPC SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html">4.1. Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#compute-resources">4.1.1. Compute Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#networks">4.1.2. Networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#network-impairments-device-nid">4.1.3. Network Impairments Device (NID)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html">4.2. HPC Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#login-nodes">4.2.1. Login Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#ssh-add">4.2.1.1. SSH Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#ssh-config">4.2.1.2. SSH Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#modules">4.2.1.3. Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#list-of-available-modules-on-various-machines">4.2.1.4. List of Available Modules on Various Machines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#filesystem-layout">4.2.1.5. Filesystem Layout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">4.2.2. Message Passing Interface (MPI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#mpi-libraries">4.2.2.1. MPI Libraries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#compiling-mpi-applications">4.2.2.2. Compiling MPI Applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#batch-jobs">4.2.2.3. Batch Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-management">4.2.3. Job Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-submission">4.2.3.1. Job Submission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-deletion">4.2.3.2. Job Deletion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-monitoring">4.2.3.3. Job Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-output">4.2.3.4. Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#xray-hpc-services">4.2.4. Xray HPC Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#submitting-a-job-on-xray">4.2.4.1. Submitting a Job on xray</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html">4.3. ScaleMP vSMP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#accessing-scalemp">4.3.1. Accessing ScaleMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#submitting-a-job">4.3.2. Submitting a job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#developing-a-job-script">4.3.3. Developing a job script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#mpi">4.3.3.1. MPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#openmp">4.3.3.2. OpenMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#threaded">4.3.3.3. Threaded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#throughput">4.3.3.4. Throughput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#serial">4.3.3.5. Serial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html">4.4. Genesis II</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#introduction">4.4.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#what-is-genesisii">4.4.2. What is GenesisII</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#connecting-to-the-genesisii-bes-endpoints">4.4.3. Connecting to the GenesisII BES Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#supported-data-staging-protocols">4.4.3.1. Supported Data Staging Protocols</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#stage-in">4.4.3.1.1. Stage in</a></li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#stage-out">4.4.3.1.2. Stage out</a></li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#endpoint-connection-information">4.4.3.1.3. Endpoint Connection Information</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#india">4.4.3.2. India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#sierra">4.4.3.3. Sierra</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#alamo">4.4.3.3.1. Alamo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#hotel">4.4.3.3.2. Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#using-the-futuregrid-genesisii-endpoints-as-a-client">4.4.4. Using the Futuregrid GenesisII Endpoints as a Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#non-genesisii-using-a-standards-compliant-client">4.4.4.1. Non-GenesisII Using a Standards-Compliant Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#using-the-genesisii-client">4.4.4.2. Using The GenesisII Client</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#acquiring-genesisii-client-package">4.4.4.2.1. Acquiring GenesisII Client Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#linux">4.4.4.2.1.1. Linux</a></li>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#windows">4.4.4.2.1.2. Windows</a></li>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#macos">4.4.4.2.1.3. MacOS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#installing-the-genesisii-xcg-client-package">4.4.4.2.2. Installing the GenesisII/XCG Client Package</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#getting-started">4.4.4.3. Getting Started</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#start-grid-shell">4.4.4.3.1. Start Grid Shell</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#id1">4.4.4.3.1.1. Windows</a></li>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#linux-or-macos">4.4.4.3.1.2. Linux or MacOS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#running-jobs">4.4.4.3.2. Running Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#getting-help">4.4.4.4. Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html">4.5. Unicore</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#unicore-6-on-futuregrid-user-manual">4.5.1. UNICORE 6 on FutureGrid User Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#introduction">4.5.2. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#what-is-unicore">4.5.3. What is UNICORE?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">4.5.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#india-endpoint-info-currently-unavailable">4.5.4.1. India Endpoint Info &lt;currently unavailable&gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#sierra-endpoint-info">4.5.4.2. Sierra Endpoint Info</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">4.5.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#installing-the-unicore-6-commandline-client-ucc">4.5.5.1. Installing the UNICORE 6 Commandline Client (UCC)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#acquire-client-bundle">4.5.5.1.1. Acquire Client Bundle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#unpack-ucc">4.5.5.1.2. Unpack UCC</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#examine-ucc-files">4.5.5.1.3. Examine UCC Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#run-commandline-client">4.5.5.1.4. Run Commandline Client</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#installation-conclusion">4.5.5.1.5. Installation Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#configuring-client-to-connect-to-futuregrid-u6-endpoints">4.5.5.2. Configuring Client to Connect to FutureGrid U6 Endpoints</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#configuration-overview">4.5.5.2.1. Configuration Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#setting-up-security-in-unicore">4.5.5.3. Setting Up Security in UNICORE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#setting-up-a-keystore">4.5.5.4. Setting Up a Keystore</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#creating-a-truststore">4.5.5.4.1. Creating a Truststore</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#acquiring-the-registry-address">4.5.5.4.2. Acquiring the Registry Address</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#connecting-to-endpoints-w-o-registries">4.5.5.4.3. Connecting to Endpoints w/o Registries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#preferences-file-modifications">4.5.5.4.4. Preferences File Modifications</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#example-preferences-file">4.5.5.4.5. Example Preferences File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#locating-the-preferences-file">4.5.5.4.6. Locating the Preferences File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#validate-client-setup">4.5.5.4.7. Validate Client Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#configuration-conclusion">4.5.5.4.8. Configuration Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#submitting-jobs-to-futuregrid-u6-endpoints">4.5.5.5. Submitting Jobs to FutureGrid U6 Endpoints</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#getting-started">4.5.5.5.1. Getting Started</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#submit-jobs-to-bes">4.5.5.5.2. Submit Jobs to BES</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#other-bes-related-commands">4.5.5.5.3. Other BES Related Commands</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#job-submission-conclusion">4.5.5.5.4. Job Submission Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#references">4.5.5.6. References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#questions-comments">4.5.5.7. Questions/Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#running-jobs-on-unicore-sites">4.5.6. Running Jobs on UNICORE Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#deploying-a-new-unicore-6-grid">4.5.7. Deploying a New UNICORE 6 Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#prerequisites">4.5.7.1. Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#installing-the-core-server-bundle">4.5.7.2. Installing the Core Server Bundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#starting-stopping-the-unicore-servers">4.5.7.3. Starting/Stopping the UNICORE Servers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_iaas.html">5. <strong>IAAS/CLOUD SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html">5.1. IaaS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#nimbus-clouds">5.1.1. Nimbus Clouds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#openstack-clouds">5.1.2. OpenStack Clouds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#eucalyptus-clouds">5.1.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">5.1.4. Virtual Appliances for Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackhavana.html">5.2. OpenStack Havana</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#login">5.2.1. Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#setup-openstack-environment">5.2.2. Setup OpenStack Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#creating-the-novarc-file">5.2.3. Creating the novarc file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#list-flavors">5.2.4. List flavors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#list-images">5.2.5. List images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#key-management">5.2.6. Key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#managing-security-groups">5.2.7. Managing security groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#booting-an-image">5.2.8. Booting an image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#list-running-images">5.2.9. List running images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#use-block-storage">5.2.10. Use block storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#set-up-external-access-to-your-instance">5.2.11. Set up external access to your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#make-a-snapshot-of-an-instance">5.2.12. Make a snapshot of an instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#automate-some-initial-configuration">5.2.13. Automate some initial configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">5.2.14. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#delete-your-instance">5.2.15. Delete your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#how-to-change-your-password">5.2.16. How to change your password</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">5.2.17. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#horizon-gui">5.2.18. Horizon GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#getting-rc-files-via-horizon">5.2.19. Getting rc files via Horizon</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html">5.3. OpenStack Grizzly</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#login">5.3.1. Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#creating-the-novarc-file">5.3.2. Creating the novarc file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#activate-openstack-tools">5.3.3. Activate OpenStack tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#list-flavors">5.3.4. List flavors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#list-images">5.3.5. List images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#standard-images">5.3.6. Standard Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#key-management">5.3.7. Key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#managing-security-groups">5.3.8. Managing security groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#booting-an-image">5.3.9. Booting an image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#list-running-images">5.3.10. List running images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#use-block-storage">5.3.11. Use block storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#set-up-external-access-to-your-instance">5.3.12. Set up external access to your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#make-a-snapshot-of-an-instance">5.3.13. Make a snapshot of an instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#automate-some-initial-configuration">5.3.14. Automate some initial configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">5.3.15. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#delete-your-instance">5.3.16. Delete your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#how-to-change-your-password">5.3.17. How to change your password</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstackgrizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">5.3.17.1. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#horizon-gui">5.3.18. Horizon GUI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstackgrizzly.html#getting-rc-files-via-horizon">5.3.18.1. Getting rc files via Horizon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html">5.4. Openstack Horizon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#managing-virtual-machine-instances">5.4.1. Managing Virtual Machine Instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#snapshots">5.4.2. Snapshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#floating-ip-addresses">5.4.3. Floating IP Addresses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#accessing-your-virtual-machine">5.4.4. Accessing Your Virtual Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#uploading-an-image">5.4.5. Uploading an Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#managing-volumes">5.4.6. Managing Volumes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#ec2-interface">5.4.7. EC2 Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#openstack-rest-interfaces">5.4.8. OpenStack REST Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html">5.5. Converting Virtualbox images to OpenStack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#prerequisites">5.5.1. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#disable-selinux-only-for-redhat-based-linux-like-centos">5.5.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#configuring-the-image-network-interface-eth0-for-dhcp">5.5.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">5.5.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#configure-udev-persistent-rules-only-centos">5.5.1.4. Configure udev persistent rules (only CentOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#convert-your-virtual-box-image-to-raw-format">5.5.2. Convert your virtual box image to raw format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#convert-the-image-to-qcow2-format-optional">5.5.3. Convert the image to qcow2 format (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#test-your-image">5.5.4. Test your image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#transfer-your-image-to-india">5.5.5. Transfer your Image to India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#log-into-india">5.5.6. Log into India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#upload-your-image-to-openstack">5.5.7. Upload your image to OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#checking-status-image">5.5.8. Checking Status Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#test-image-in-openstack">5.5.9. Test Image in OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#troubleshooting">5.5.10. Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#notes">5.5.11. Notes:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html">5.6. Nimbus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#nimbus-iaas">5.6.1. Nimbus IaaS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#what-is-nimbus">5.6.1.1. What is Nimbus?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">5.6.1.2. Nimbus on FutureGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#getting-started">5.6.1.3. Getting Started</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#log-into-hotel">5.6.1.3.1. Log into hotel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#download-and-install-cloud-client">5.6.1.3.2. Download and install cloud-client</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#obtain-your-nimbus-credentials-and-configuration-files">5.6.1.3.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#check-your-ssh-key">5.6.1.3.4. Check Your ssh Key</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#using-the-cloud-client">5.6.1.4. Using the Cloud Client</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#check-out-the-various-futuregrid-clouds">5.6.1.4.1. Check out the various FutureGrid clouds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#run-a-virtual-machine">5.6.1.4.2. Run a Virtual Machine</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#create-a-new-vm-image">5.6.1.4.3. Create a New VM Image</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#save-the-changes-to-a-new-vm">5.6.1.4.4. Save the Changes to a New VM</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#launch-your-new-vm">5.6.1.4.5. Launch Your New VM</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#terminate-the-vm">5.6.1.4.6. Terminate the VM</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#uploading-and-downloading-images">5.6.1.4.7. Uploading and downloading images</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#converting-a-xen-image-to-kvm">5.6.1.5. Converting a Xen image to KVM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#virtual-clusters">5.6.1.6. Virtual Clusters</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#cluster-definition-file">5.6.1.6.1. Cluster Definition File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#start-the-cluster">5.6.1.6.2. Start the Cluster</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#check-out-the-virtual-cluster">5.6.1.6.3. Check Out the Virtual Cluster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">5.6.2. Launch A VM via Nimbus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#options">5.6.2.1. Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#what-happens">5.6.2.2. What Happens</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#cloudinit-d">5.6.3. cloudinit.d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#phantom">5.6.4. Phantom</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html">5.7. Eucalyptus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#account-setup">5.7.1. Account Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#resources-overview">5.7.2. Resources Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#testing-your-setup">5.7.3. Testing Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#available-images">5.7.4. Available Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-deployment">5.7.5. Image Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.7.6. Logging Into the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#shutting-down-the-vm">5.7.7. Shutting down the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.8. VM Network Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.9. Image Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#volume-management">5.7.10. Volume Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.11. Status of Deployments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_paas.html">6. <strong>PAAS/CLOUD SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hadoop.html">6.1. Using Hadoop in FutureGrid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hadoop.html#running-hadoop-as-a-batch-job-using-myhadoop">6.1.1. Running Hadoop as a Batch Job using MyHadoop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#myhadoop-on-futuregrid">6.1.1.1. myHadoop on FutureGrid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#login-into-a-machine-tha-has-myhadoop-installed">6.1.1.1.1. Login into a machine tha has myHadoop installed</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#load-the-needed-modules">6.1.1.1.2. Load the needed modules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#run-the-example">6.1.1.1.3. Run the Example</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#details-of-the-script">6.1.1.1.4. Details of the Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#submission-of-the-hadoop-job">6.1.1.1.5. Submission of the Hadoop job</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#persistent-mode">6.1.1.1.6. Persistent Mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#customizing-hadoop-settings">6.1.1.1.7. Customizing Hadoop Settings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#using-a-different-installation-of-hadoop">6.1.1.1.8. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#references">6.1.1.1.9. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="twister.html">6.2. Using Twister in FutureGrid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#what-is-twister">6.2.1. What is Twister?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#running-twister-on-futuregrid">6.2.2. Running Twister on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#run-twister-applications">6.2.3. Run Twister Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#papers-and-presentations">6.2.4. Papers and Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_experiment.html">7. <strong>EXPERIMENT MANAGEMENT SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment-interactive.html">7.1. Interactive Experiment Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#host-list-manager">7.1.1. Host List Manager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#host-list-manager-setup">7.1.1.1. Host List Manager Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#provisioning-hosts">7.1.1.2. Provisioning Hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#managing-host-lists">7.1.1.3. Managing Host Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#taktuk">7.1.2. TakTuk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#running-experiments-with-taktuk">7.1.2.1. Running Experiments with TakTuk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#host-list-manager-commands">7.1.2.2. Host List Manager Commands</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hupdate">7.1.2.2.1. hupdate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hmanage">7.1.2.2.2. hmanage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hshow">7.1.2.2.3. hshow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#htag">7.1.2.2.4. htag</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hlist">7.1.2.2.5. hlist</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#htaktuk">7.1.2.2.6. htaktuk</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#taktuk-commands">7.1.2.3. TakTuk Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html">7.2. Precip</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#installation">7.2.1. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#api">7.2.2. API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#examples">7.2.3. Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="precip.html#hello-world">7.2.3.1. Hello World</a></li>
+<li class="toctree-l4"><a class="reference internal" href="precip.html#resources-from-mulitple-infrastructures">7.2.3.2. Resources from mulitple infrastructures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="precip.html#setting-up-a-condor-pool-and-running-a-pegasus-workflow">7.2.3.3. Setting up a Condor pool and running a Pegasus workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html">7.3. Pegasus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">7.3.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">7.3.2. Using Pegasus on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html">7.4. RAIN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">7.4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#request-access">7.4.1.1. Request access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#log-into-india">7.4.1.2. Log into India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#start-the-shell">7.4.1.3. Start the Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#generate-the-image">7.4.1.4. Generate the Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#image-repository">7.4.1.5. Image Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-image">7.4.1.6. Register Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#start-image">7.4.1.7. Start Image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">7.4.2. FutureGrid Standalone Image Repository</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#requirement">7.4.2.1. Requirement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#software">7.4.2.2. Software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#documentation">7.4.2.3. Documentation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#user-manual">7.4.2.3.1. User Manual</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#installation">7.4.2.3.2. Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#configuration">7.4.2.3.3. Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#manual-image-customization">7.4.3. Manual Image Customization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#logging-into-india">7.4.3.1. Logging into India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#requesting-access">7.4.3.2. Requesting access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#obtaining-the-image">7.4.3.3. Obtaining the image</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#getting-an-image-from-the-repository">7.4.3.3.1. Getting an image from the repository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#generating-a-new-image">7.4.3.3.2. Generating a new image</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#customizing-the-image">7.4.3.4. Customizing the image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#transfer-the-image-back-to-india">7.4.3.5. Transfer the image back to India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#id1">7.4.3.6. Log into India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#upload-the-image-to-the-repository">7.4.3.7. Upload the image to the repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-your-image-in-different-infrastructures">7.4.3.8. Register your image in different infrastructures</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#register-the-image-in-openstack">7.4.3.8.1. Register the image in Openstack</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#register-the-image-in-eucalyptus">7.4.3.8.2. Register the image in Eucalyptus</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#register-the-image-in-hpc">7.4.3.8.3. Register the image in HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#using-your-registered-image">7.4.3.9. Using your Registered Image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#rain-manual-pages">7.4.4. RAIN Manual Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#fg-portal-manage">7.4.4.1. fg-portal-manage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_performance.html">8. <strong>PERFORMANCE TOOLS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html">8.1. PAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="papi.html#availability">8.1.1. Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="papi.html#references">8.1.2. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_tutorials.html">9. <strong>TUTORIALS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials_intro.html">9.1. Overview about the Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html">2. Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-0-accessing-futuregrid-resources">2.1. Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-1-cloud-provisioning-platforms">2.2. Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-2-cloud-run-time-map-reduce-platforms">2.3. Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">2.4. Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-4-high-performance-computing">2.5. Tutorial Topic 4: High Performance Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-5-experiment-management">2.6. Tutorial Topic 5: Experiment Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-6-image-management-and-rain">2.7. Tutorial Topic 6: Image Management and Rain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-7-storage">2.8. Tutorial Topic 7:  Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#other-tutorials-and-educational-materials">2.9. Other Tutorials and Educational Materials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#futuregrid-grid-appliance-for-nimbus-and-eucalyptus">2.9.1. FutureGrid Grid Appliance for Nimbus and Eucalyptus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#one-click-hadoop-wordcount-on-eucalyptus-futuregrid">2.9.2. One-click Hadoop WordCount on Eucalyptus FutureGrid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#introduction">2.9.2.1. Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#prerequisite">2.9.2.2. Prerequisite</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#login-to-india-futuregrid-org">2.9.2.3. Login to india.futuregrid.org</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#download-and-unzip-the-hadooponeclick-zip-package">2.9.2.4. Download and unzip the “hadoopOneClick.zip” package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#run-hadoop-one-click-sh">2.9.2.5. Run hadoop-one-click.sh</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#verify-output">2.9.2.6. Verify output</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#extensions">2.9.2.7. Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#one-click-twister-k-means-on-eucalyptus-futuregrid">2.9.3. One-click Twister K-means on Eucalyptus FutureGrid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id1">2.9.3.1. Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id2">2.9.3.2. Prerequisite</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id3">2.9.3.3. Login to india.futuregrid.org</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#download-and-unzip-the-twisteroneclick-zip-package">2.9.3.4. Download and unzip the “twisterOneClick.zip” package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#run-twister-one-click-sh">2.9.3.5. Run twister-one-click.sh</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#verify-results-in-the-standard-output-of-the-scripts">2.9.3.6. Verify results in the standard output of the scripts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id4">2.9.3.7. Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#virtual-appliances">2.9.4. Virtual Appliances</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#creating-your-own-appliance">2.9.4.1. Creating Your Own Appliance:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tutorials.html#nimbus">2.9.4.1.1. Nimbus:</a></li>
+<li class="toctree-l6"><a class="reference internal" href="tutorials.html#eucalyptus">2.9.4.1.2. Eucalyptus:</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#reusing-an-existing-appliance">2.9.4.2. Reusing an Existing Appliance:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tutorials.html#editing-tips-for-the-table">2.9.4.2.1. Editing tips for the table:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_screencast.html">10. <strong>APPENDIX. SCREENCASTS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html">10.1. Screencast: Using FutureGrid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#overview">10.1.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#prerequisites">10.1.2. Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#instructor-bio">10.1.3. Instructor Bio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#course-content">10.1.4. Course Content</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#creating-futuregrid-accounts-and-projects">10.1.4.1. Creating FutureGrid Accounts and Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#openstack-on-futuregrid">10.1.4.2. OpenStack on FutureGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#eucalyptus-on-futuregrid">10.1.4.3. Eucalyptus on FutureGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#batch-jobs-including-hadoop-on-futuregrid">10.1.4.4. Batch Jobs including Hadoop  on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#exercises">10.1.5. Exercises</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#id1">10.1.5.1. Creating FutureGrid Accounts and Projects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_manual.html">11. <strong>APPENDIX. MAINTAINING THIS MANUAL</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git.html">11.1. Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">11.2. Contributing to the Manual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#organisation-of-the-manual-in-git">11.2.1. Organisation of the Manual in Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#online-editing-for-novice-editors">11.2.2. Online Editing for Novice Editors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#faq">11.2.3. FAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#publication-of-the-manual">11.2.4. Publication of the Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#setting-up-the-expert-developers-manual-editing-environment">11.3. Setting Up the Expert Developers Manual Editing Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#python">11.3.1. Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#virtualenv">11.3.2. Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">11.3.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#install-the-requirements">11.3.4. Install the Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#all-in-one-setup-script">11.3.5. All-in-one setup script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#watchdog">11.3.6. Watchdog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">11.3.7. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#creating-the-pages-locally">11.3.8. Creating the pages locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#publishing-the-pages">11.3.9. Publishing the pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#jira">11.3.10. Jira</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#portal-link">11.3.11. Portal link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#screencast-recording-tips">11.3.12. Screencast recording tips</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#osx">11.3.12.1. OSX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#changing-the-prompt">11.3.12.2. Changing the prompt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#recording-of-typed-in-commands">11.3.12.3. Recording of typed in commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#setup-quicktime-sound-recording">11.3.12.4. Setup quicktime sound recording</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_mpi.html">12. <strong>APPENDIX. MPI RING PROGRAM</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ring.html">12.1. MPI Ring Program</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_other.html">13. <strong>APPENDIX.  OTHER SECTIONS THAT HAVE NOT YET BEEN REVIEWED OR ARE INTEGRATED IN THE MANUAL</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html">3. Delta GPU User Manual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">3.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">3.2. Running programs on a single GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipop1.html">13.9. IPOP (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#prerequisites">13.9.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-1-deploying-vms-to-be-connected-by-ipop">13.9.2. Step 1: Deploying VMs to be connected by IPOP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-1-deploying-a-vm-on-futuregrid-using-nimbus">13.9.2.1. Option 1: Deploying a VM on FutureGrid Using Nimbus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-2-deploying-a-vm-on-futuregrid-using-openstack">13.9.2.2. Option 2: Deploying a VM on FutureGrid Using OpenStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-3-deploying-a-vm-on-amazon-ec2">13.9.2.3. Option 3: Deploying a VM on Amazon EC2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-4-deploying-a-vm-on-your-computer-vmware-virtualbox">13.9.2.4. Option 4: Deploying a VM on your computer (VMware, VirtualBox)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-2-establishing-ipop-connectivity-between-two-vms">13.9.3. Step 2: Establishing IPOP connectivity between two VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-3-securing-communications-between-alice-and-bob">13.9.4. Step 3: Securing communications between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#troubleshooting-and-for-more-information">13.9.5. Troubleshooting and for more information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ipop2.html">13.10. IPOP2 (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#prerequisites">13.10.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-1-bringing-up-alice-and-bob-vms">13.10.2. Step 1: Bringing up Alice and Bob VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga9.html">13.12. GA9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#summary">13.12.1. Summary:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#prerequisites">13.12.2. Prerequisites:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ga9.html#deploying-a-grid-appliance-on-futuregrid">13.12.2.1. Deploying a Grid Appliance on FutureGrid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpss.html">13.13. HPSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrong-ssh.html">13.14. SSH the wrong way ( DO NOT USE THIS TUTORIAL)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#requirement-for-windows-users">13.14.1. Requirement for Windows Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#instructions-for-both-windows-and-unix-users">13.14.2. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#generate-ssh-key">13.14.2.1. Generate SSH key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#check-your-ssh-key">13.14.2.2. Check your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#copy-the-content-of-your-public-key">13.14.2.3. Copy the content of your public key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#upload-the-key-to-the-futuregrid-portal">13.14.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key">13.14.2.5. Testing your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key-on-hotel">13.14.2.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="part_introduction.html">1. <strong>INTRODUCTION</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preface.html">1.1. Preface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#citation-for-publications">1.1.1. Citation for Publications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#acknowledgement">1.1.2. Acknowledgement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#sponsors">1.1.3. Sponsors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#about-this-manual">1.1.4. About this Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preface.html#conventions">1.1.5. Conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">1. Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#executive-summary">1.1. Executive Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#project-and-account-application">1.2. Project and Account Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#services">1.3. Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#hardware">1.4. Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#support">1.5. Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_accounts.html">2. <strong>ACCOUNTS AND PROJECTS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="account.html">2.1. Project and Account Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="account.html#terminology">2.1.1. Terminology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#quickstart">2.1.2. Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#projects-and-accounts-for-xsede-users">2.1.3. Projects and Accounts for XSEDE users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#project-management">2.1.4. Project Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="account.html#create-a-portal-account">2.1.4.1. Create a Portal account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#create-a-project">2.1.4.2. Create a Project</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="account.html#example-project">2.1.4.2.1. Example Project</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#join-a-project">2.1.4.3. Join a Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#delete-or-deactivate-a-user-from-a-project">2.1.4.4. Delete or Deactivate a user from a Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#reporting-results">2.1.4.5. Reporting Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account.html#close-a-project">2.1.4.6. Close a Project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#upload-a-ssh-public-key">2.1.5. Upload a SSH Public Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#upload-an-openid">2.1.6. Upload an OpenId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#accessing-futuregrid-resources">2.1.7. Accessing FutureGrid Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#manage-a-class-on-futuregrid">2.1.8. Manage a Class on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html#mini-faq">2.1.9. Mini FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="security.html">2.2. Using SSH Keys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="security.html#using-ssh-from-windows">2.2.1. Using SSH from Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#generate-a-ssh-key">2.2.2. Generate a SSH key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#add-or-replace-passphrase-for-an-already-generated-key">2.2.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#upload-the-key-to-the-futuregrid-portal">2.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#testing-your-ssh-key">2.2.5. Testing your ssh key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html#testing-your-ssh-key-for-hotel">2.2.6. Testing your ssh key for Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_status.html">3. <strong>STATUS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="status.html">3.1. Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_hpc.html">4. <strong>HPC SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware.html">4.1. Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#compute-resources">4.1.1. Compute Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#networks">4.1.2. Networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware.html#network-impairments-device-nid">4.1.3. Network Impairments Device (NID)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html">4.2. HPC Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#login-nodes">4.2.1. Login Nodes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#ssh-add">4.2.1.1. SSH Add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#ssh-config">4.2.1.2. SSH Config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#modules">4.2.1.3. Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#list-of-available-modules-on-various-machines">4.2.1.4. List of Available Modules on Various Machines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#filesystem-layout">4.2.1.5. Filesystem Layout</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#message-passing-interface-mpi">4.2.2. Message Passing Interface (MPI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#mpi-libraries">4.2.2.1. MPI Libraries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#compiling-mpi-applications">4.2.2.2. Compiling MPI Applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#batch-jobs">4.2.2.3. Batch Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#job-management">4.2.3. Job Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-submission">4.2.3.1. Job Submission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-deletion">4.2.3.2. Job Deletion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-monitoring">4.2.3.3. Job Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#job-output">4.2.3.4. Job Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hpc.html#xray-hpc-services">4.2.4. Xray HPC Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hpc.html#submitting-a-job-on-xray">4.2.4.1. Submitting a Job on xray</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scalemp.html">4.3. ScaleMP vSMP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#accessing-scalemp">4.3.1. Accessing ScaleMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#submitting-a-job">4.3.2. Submitting a job</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scalemp.html#developing-a-job-script">4.3.3. Developing a job script</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#mpi">4.3.3.1. MPI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#openmp">4.3.3.2. OpenMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#threaded">4.3.3.3. Threaded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#throughput">4.3.3.4. Throughput</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scalemp.html#serial">4.3.3.5. Serial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="genesis.html">4.4. Genesis II</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#introduction">4.4.1. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#what-is-genesisii">4.4.2. What is GenesisII</a></li>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#connecting-to-the-genesisii-bes-endpoints">4.4.3. Connecting to the GenesisII BES Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#supported-data-staging-protocols">4.4.3.1. Supported Data Staging Protocols</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#stage-in">4.4.3.1.1. Stage in</a></li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#stage-out">4.4.3.1.2. Stage out</a></li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#endpoint-connection-information">4.4.3.1.3. Endpoint Connection Information</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#india">4.4.3.2. India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#sierra">4.4.3.3. Sierra</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#alamo">4.4.3.3.1. Alamo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#hotel">4.4.3.3.2. Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="genesis.html#using-the-futuregrid-genesisii-endpoints-as-a-client">4.4.4. Using the Futuregrid GenesisII Endpoints as a Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#non-genesisii-using-a-standards-compliant-client">4.4.4.1. Non-GenesisII Using a Standards-Compliant Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#using-the-genesisii-client">4.4.4.2. Using The GenesisII Client</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#acquiring-genesisii-client-package">4.4.4.2.1. Acquiring GenesisII Client Package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#linux">4.4.4.2.1.1. Linux</a></li>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#windows">4.4.4.2.1.2. Windows</a></li>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#macos">4.4.4.2.1.3. MacOS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#installing-the-genesisii-xcg-client-package">4.4.4.2.2. Installing the GenesisII/XCG Client Package</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#getting-started">4.4.4.3. Getting Started</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#start-grid-shell">4.4.4.3.1. Start Grid Shell</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#id1">4.4.4.3.1.1. Windows</a></li>
+<li class="toctree-l6"><a class="reference internal" href="genesis.html#linux-or-macos">4.4.4.3.1.2. Linux or MacOS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="genesis.html#running-jobs">4.4.4.3.2. Running Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="genesis.html#getting-help">4.4.4.4. Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="unicore.html">4.5. Unicore</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#unicore-6-on-futuregrid-user-manual">4.5.1. UNICORE 6 on FutureGrid User Manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#introduction">4.5.2. Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#what-is-unicore">4.5.3. What is UNICORE?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-from-other-grid-middleware-clients">4.5.4. Connecting to the UNICORE BES Endpoints From Other Grid Middleware Clients</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#india-endpoint-info-currently-unavailable">4.5.4.1. India Endpoint Info &lt;currently unavailable&gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#sierra-endpoint-info">4.5.4.2. Sierra Endpoint Info</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#connecting-to-the-unicore-bes-endpoints-using-a-unicore-commandline-client">4.5.5. Connecting to the UNICORE BES Endpoints Using a UNICORE Commandline Client</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#installing-the-unicore-6-commandline-client-ucc">4.5.5.1. Installing the UNICORE 6 Commandline Client (UCC)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#acquire-client-bundle">4.5.5.1.1. Acquire Client Bundle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#unpack-ucc">4.5.5.1.2. Unpack UCC</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#examine-ucc-files">4.5.5.1.3. Examine UCC Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#run-commandline-client">4.5.5.1.4. Run Commandline Client</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#installation-conclusion">4.5.5.1.5. Installation Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#configuring-client-to-connect-to-futuregrid-u6-endpoints">4.5.5.2. Configuring Client to Connect to FutureGrid U6 Endpoints</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#configuration-overview">4.5.5.2.1. Configuration Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#setting-up-security-in-unicore">4.5.5.3. Setting Up Security in UNICORE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#setting-up-a-keystore">4.5.5.4. Setting Up a Keystore</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#creating-a-truststore">4.5.5.4.1. Creating a Truststore</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#acquiring-the-registry-address">4.5.5.4.2. Acquiring the Registry Address</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#connecting-to-endpoints-w-o-registries">4.5.5.4.3. Connecting to Endpoints w/o Registries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#preferences-file-modifications">4.5.5.4.4. Preferences File Modifications</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#example-preferences-file">4.5.5.4.5. Example Preferences File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#locating-the-preferences-file">4.5.5.4.6. Locating the Preferences File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#validate-client-setup">4.5.5.4.7. Validate Client Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#configuration-conclusion">4.5.5.4.8. Configuration Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#submitting-jobs-to-futuregrid-u6-endpoints">4.5.5.5. Submitting Jobs to FutureGrid U6 Endpoints</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#getting-started">4.5.5.5.1. Getting Started</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#submit-jobs-to-bes">4.5.5.5.2. Submit Jobs to BES</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#other-bes-related-commands">4.5.5.5.3. Other BES Related Commands</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unicore.html#job-submission-conclusion">4.5.5.5.4. Job Submission Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#references">4.5.5.6. References</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#questions-comments">4.5.5.7. Questions/Comments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#running-jobs-on-unicore-sites">4.5.6. Running Jobs on UNICORE Sites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unicore.html#deploying-a-new-unicore-6-grid">4.5.7. Deploying a New UNICORE 6 Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#prerequisites">4.5.7.1. Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#installing-the-core-server-bundle">4.5.7.2. Installing the Core Server Bundle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="unicore.html#starting-stopping-the-unicore-servers">4.5.7.3. Starting/Stopping the UNICORE Servers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_iaas.html">5. <strong>IAAS/CLOUD SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iaas.html">5.1. IaaS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#nimbus-clouds">5.1.1. Nimbus Clouds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#openstack-clouds">5.1.2. OpenStack Clouds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#eucalyptus-clouds">5.1.3. Eucalyptus Clouds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iaas.html#virtual-appliances-for-training-and-education">5.1.4. Virtual Appliances for Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackhavana.html">5.2. OpenStack Havana</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#login">5.2.1. Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#setup-openstack-environment">5.2.2. Setup OpenStack Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#creating-the-novarc-file">5.2.3. Creating the novarc file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#list-flavors">5.2.4. List flavors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#list-images">5.2.5. List images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#key-management">5.2.6. Key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#managing-security-groups">5.2.7. Managing security groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#booting-an-image">5.2.8. Booting an image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#list-running-images">5.2.9. List running images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#use-block-storage">5.2.10. Use block storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#set-up-external-access-to-your-instance">5.2.11. Set up external access to your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#make-a-snapshot-of-an-instance">5.2.12. Make a snapshot of an instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#automate-some-initial-configuration">5.2.13. Automate some initial configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">5.2.14. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#delete-your-instance">5.2.15. Delete your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#how-to-change-your-password">5.2.16. How to change your password</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">5.2.17. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#horizon-gui">5.2.18. Horizon GUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackhavana.html#getting-rc-files-via-horizon">5.2.19. Getting rc files via Horizon</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstackgrizzly.html">5.3. OpenStack Grizzly</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#login">5.3.1. Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#creating-the-novarc-file">5.3.2. Creating the novarc file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#activate-openstack-tools">5.3.3. Activate OpenStack tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#list-flavors">5.3.4. List flavors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#list-images">5.3.5. List images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#standard-images">5.3.6. Standard Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#key-management">5.3.7. Key management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#managing-security-groups">5.3.8. Managing security groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#booting-an-image">5.3.9. Booting an image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#list-running-images">5.3.10. List running images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#use-block-storage">5.3.11. Use block storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#set-up-external-access-to-your-instance">5.3.12. Set up external access to your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#make-a-snapshot-of-an-instance">5.3.13. Make a snapshot of an instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#automate-some-initial-configuration">5.3.14. Automate some initial configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#get-the-latest-version-of-ubuntu-cloud-image-and-upload-it-to-the-openstack">5.3.15. Get the latest version of Ubuntu Cloud Image and upload it to the OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#delete-your-instance">5.3.16. Delete your instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#how-to-change-your-password">5.3.17. How to change your password</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstackgrizzly.html#things-to-do-when-you-need-euca2ools-or-ec2-interfaces">5.3.17.1. Things to do when you need Euca2ools or EC2 interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstackgrizzly.html#horizon-gui">5.3.18. Horizon GUI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstackgrizzly.html#getting-rc-files-via-horizon">5.3.18.1. Getting rc files via Horizon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="horizon.html">5.4. Openstack Horizon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#managing-virtual-machine-instances">5.4.1. Managing Virtual Machine Instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#snapshots">5.4.2. Snapshots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#floating-ip-addresses">5.4.3. Floating IP Addresses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#accessing-your-virtual-machine">5.4.4. Accessing Your Virtual Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#uploading-an-image">5.4.5. Uploading an Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#managing-volumes">5.4.6. Managing Volumes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#ec2-interface">5.4.7. EC2 Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="horizon.html#openstack-rest-interfaces">5.4.8. OpenStack REST Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="os-virtualbox.html">5.5. Converting Virtualbox images to OpenStack</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#prerequisites">5.5.1. Prerequisites</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#disable-selinux-only-for-redhat-based-linux-like-centos">5.5.1.1. Disable SELinux (Only for RedHat-based Linux like CentOS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#configuring-the-image-network-interface-eth0-for-dhcp">5.5.1.2. Configuring the image network interface (eth0) for DHCP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#configure-the-image-to-allow-openstack-to-inject-the-ssh-key">5.5.1.3. Configure the image to allow OpenStack to inject the ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="os-virtualbox.html#configure-udev-persistent-rules-only-centos">5.5.1.4. Configure udev persistent rules (only CentOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#convert-your-virtual-box-image-to-raw-format">5.5.2. Convert your virtual box image to raw format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#convert-the-image-to-qcow2-format-optional">5.5.3. Convert the image to qcow2 format (optional)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#test-your-image">5.5.4. Test your image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#transfer-your-image-to-india">5.5.5. Transfer your Image to India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#log-into-india">5.5.6. Log into India</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#upload-your-image-to-openstack">5.5.7. Upload your image to OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#checking-status-image">5.5.8. Checking Status Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#test-image-in-openstack">5.5.9. Test Image in OpenStack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#troubleshooting">5.5.10. Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="os-virtualbox.html#notes">5.5.11. Notes:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="nimbus.html">5.6. Nimbus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#nimbus-iaas">5.6.1. Nimbus IaaS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#what-is-nimbus">5.6.1.1. What is Nimbus?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#nimbus-on-futuregrid">5.6.1.2. Nimbus on FutureGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#getting-started">5.6.1.3. Getting Started</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#log-into-hotel">5.6.1.3.1. Log into hotel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#download-and-install-cloud-client">5.6.1.3.2. Download and install cloud-client</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#obtain-your-nimbus-credentials-and-configuration-files">5.6.1.3.3. Obtain Your Nimbus Credentials and Configuration Files</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#check-your-ssh-key">5.6.1.3.4. Check Your ssh Key</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#using-the-cloud-client">5.6.1.4. Using the Cloud Client</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#check-out-the-various-futuregrid-clouds">5.6.1.4.1. Check out the various FutureGrid clouds</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#run-a-virtual-machine">5.6.1.4.2. Run a Virtual Machine</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#create-a-new-vm-image">5.6.1.4.3. Create a New VM Image</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#save-the-changes-to-a-new-vm">5.6.1.4.4. Save the Changes to a New VM</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#launch-your-new-vm">5.6.1.4.5. Launch Your New VM</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#terminate-the-vm">5.6.1.4.6. Terminate the VM</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#uploading-and-downloading-images">5.6.1.4.7. Uploading and downloading images</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#converting-a-xen-image-to-kvm">5.6.1.5. Converting a Xen image to KVM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#virtual-clusters">5.6.1.6. Virtual Clusters</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#cluster-definition-file">5.6.1.6.1. Cluster Definition File</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#start-the-cluster">5.6.1.6.2. Start the Cluster</a></li>
+<li class="toctree-l5"><a class="reference internal" href="nimbus.html#check-out-the-virtual-cluster">5.6.1.6.3. Check Out the Virtual Cluster</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#launch-a-vm-via-nimbus">5.6.2. Launch A VM via Nimbus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#options">5.6.2.1. Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nimbus.html#what-happens">5.6.2.2. What Happens</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#cloudinit-d">5.6.3. cloudinit.d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nimbus.html#phantom">5.6.4. Phantom</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="eucalyptus.html">5.7. Eucalyptus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#account-setup">5.7.1. Account Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#resources-overview">5.7.2. Resources Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#testing-your-setup">5.7.3. Testing Your Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#available-images">5.7.4. Available Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-deployment">5.7.5. Image Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.7.6. Logging Into the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#shutting-down-the-vm">5.7.7. Shutting down the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.8. VM Network Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.9. Image Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#volume-management">5.7.10. Volume Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.11. Status of Deployments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_paas.html">6. <strong>PAAS/CLOUD SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hadoop.html">6.1. Using Hadoop in FutureGrid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hadoop.html#running-hadoop-as-a-batch-job-using-myhadoop">6.1.1. Running Hadoop as a Batch Job using MyHadoop</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hadoop.html#myhadoop-on-futuregrid">6.1.1.1. myHadoop on FutureGrid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#login-into-a-machine-tha-has-myhadoop-installed">6.1.1.1.1. Login into a machine tha has myHadoop installed</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#load-the-needed-modules">6.1.1.1.2. Load the needed modules</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#run-the-example">6.1.1.1.3. Run the Example</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#details-of-the-script">6.1.1.1.4. Details of the Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#submission-of-the-hadoop-job">6.1.1.1.5. Submission of the Hadoop job</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#persistent-mode">6.1.1.1.6. Persistent Mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#customizing-hadoop-settings">6.1.1.1.7. Customizing Hadoop Settings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#using-a-different-installation-of-hadoop">6.1.1.1.8. Using a Different Installation of Hadoop</a></li>
+<li class="toctree-l5"><a class="reference internal" href="hadoop.html#references">6.1.1.1.9. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="twister.html">6.2. Using Twister in FutureGrid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#what-is-twister">6.2.1. What is Twister?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#running-twister-on-futuregrid">6.2.2. Running Twister on FutureGrid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#run-twister-applications">6.2.3. Run Twister Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="twister.html#papers-and-presentations">6.2.4. Papers and Presentations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_experiment.html">7. <strong>EXPERIMENT MANAGEMENT SERVICES</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experiment-interactive.html">7.1. Interactive Experiment Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#host-list-manager">7.1.1. Host List Manager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#host-list-manager-setup">7.1.1.1. Host List Manager Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#provisioning-hosts">7.1.1.2. Provisioning Hosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#managing-host-lists">7.1.1.3. Managing Host Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="experiment-interactive.html#taktuk">7.1.2. TakTuk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#running-experiments-with-taktuk">7.1.2.1. Running Experiments with TakTuk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#host-list-manager-commands">7.1.2.2. Host List Manager Commands</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hupdate">7.1.2.2.1. hupdate</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hmanage">7.1.2.2.2. hmanage</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hshow">7.1.2.2.3. hshow</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#htag">7.1.2.2.4. htag</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#hlist">7.1.2.2.5. hlist</a></li>
+<li class="toctree-l5"><a class="reference internal" href="experiment-interactive.html#htaktuk">7.1.2.2.6. htaktuk</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="experiment-interactive.html#taktuk-commands">7.1.2.3. TakTuk Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="precip.html">7.2. Precip</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#installation">7.2.1. Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#api">7.2.2. API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="precip.html#examples">7.2.3. Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="precip.html#hello-world">7.2.3.1. Hello World</a></li>
+<li class="toctree-l4"><a class="reference internal" href="precip.html#resources-from-mulitple-infrastructures">7.2.3.2. Resources from mulitple infrastructures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="precip.html#setting-up-a-condor-pool-and-running-a-pegasus-workflow">7.2.3.3. Setting up a Condor pool and running a Pegasus workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pegasus.html">7.3. Pegasus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pegasus.html#the-pegasus-run-time-cloud-architecture">7.3.1. The Pegasus Run-Time Cloud Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pegasus.html#using-pegasus-on-futuregrid">7.3.2. Using Pegasus on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rain.html">7.4. RAIN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#generate-and-register-an-os-image-on-futuregrid-using-the-fg-shell">7.4.1. Generate and Register an OS Image on FutureGrid using the FG Shell</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#request-access">7.4.1.1. Request access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#log-into-india">7.4.1.2. Log into India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#start-the-shell">7.4.1.3. Start the Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#generate-the-image">7.4.1.4. Generate the Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#image-repository">7.4.1.5. Image Repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-image">7.4.1.6. Register Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#start-image">7.4.1.7. Start Image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#futuregrid-standalone-image-repository">7.4.2. FutureGrid Standalone Image Repository</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#requirement">7.4.2.1. Requirement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#software">7.4.2.2. Software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#documentation">7.4.2.3. Documentation</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#user-manual">7.4.2.3.1. User Manual</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#installation">7.4.2.3.2. Installation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#configuration">7.4.2.3.3. Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#manual-image-customization">7.4.3. Manual Image Customization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#logging-into-india">7.4.3.1. Logging into India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#requesting-access">7.4.3.2. Requesting access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#obtaining-the-image">7.4.3.3. Obtaining the image</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#getting-an-image-from-the-repository">7.4.3.3.1. Getting an image from the repository</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#generating-a-new-image">7.4.3.3.2. Generating a new image</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#customizing-the-image">7.4.3.4. Customizing the image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#transfer-the-image-back-to-india">7.4.3.5. Transfer the image back to India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#id1">7.4.3.6. Log into India</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#upload-the-image-to-the-repository">7.4.3.7. Upload the image to the repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#register-your-image-in-different-infrastructures">7.4.3.8. Register your image in different infrastructures</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#register-the-image-in-openstack">7.4.3.8.1. Register the image in Openstack</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#register-the-image-in-eucalyptus">7.4.3.8.2. Register the image in Eucalyptus</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rain.html#register-the-image-in-hpc">7.4.3.8.3. Register the image in HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#using-your-registered-image">7.4.3.9. Using your Registered Image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rain.html#rain-manual-pages">7.4.4. RAIN Manual Pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rain.html#fg-portal-manage">7.4.4.1. fg-portal-manage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_performance.html">8. <strong>PERFORMANCE TOOLS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="papi.html">8.1. PAPI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="papi.html#availability">8.1.1. Availability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="papi.html#references">8.1.2. References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="part_tutorials.html">9. <strong>TUTORIALS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials_intro.html">9.1. Overview about the Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html">2. Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-0-accessing-futuregrid-resources">2.1. Tutorial Topic 0: Accessing FutureGrid Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-1-cloud-provisioning-platforms">2.2. Tutorial Topic 1: Cloud Provisioning Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-2-cloud-run-time-map-reduce-platforms">2.3. Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-3-grid-appliances-for-training-education-and-outreach">2.4. Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-4-high-performance-computing">2.5. Tutorial Topic 4: High Performance Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-5-experiment-management">2.6. Tutorial Topic 5: Experiment Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-6-image-management-and-rain">2.7. Tutorial Topic 6: Image Management and Rain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#tutorial-topic-7-storage">2.8. Tutorial Topic 7:  Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#other-tutorials-and-educational-materials">2.9. Other Tutorials and Educational Materials</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#futuregrid-grid-appliance-for-nimbus-and-eucalyptus">2.9.1. FutureGrid Grid Appliance for Nimbus and Eucalyptus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#one-click-hadoop-wordcount-on-eucalyptus-futuregrid">2.9.2. One-click Hadoop WordCount on Eucalyptus FutureGrid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#introduction">2.9.2.1. Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#prerequisite">2.9.2.2. Prerequisite</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#login-to-india-futuregrid-org">2.9.2.3. Login to india.futuregrid.org</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#download-and-unzip-the-hadooponeclick-zip-package">2.9.2.4. Download and unzip the “hadoopOneClick.zip” package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#run-hadoop-one-click-sh">2.9.2.5. Run hadoop-one-click.sh</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#verify-output">2.9.2.6. Verify output</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#extensions">2.9.2.7. Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#one-click-twister-k-means-on-eucalyptus-futuregrid">2.9.3. One-click Twister K-means on Eucalyptus FutureGrid</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id1">2.9.3.1. Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id2">2.9.3.2. Prerequisite</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id3">2.9.3.3. Login to india.futuregrid.org</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#download-and-unzip-the-twisteroneclick-zip-package">2.9.3.4. Download and unzip the “twisterOneClick.zip” package</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#run-twister-one-click-sh">2.9.3.5. Run twister-one-click.sh</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#verify-results-in-the-standard-output-of-the-scripts">2.9.3.6. Verify results in the standard output of the scripts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id4">2.9.3.7. Extensions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#virtual-appliances">2.9.4. Virtual Appliances</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#creating-your-own-appliance">2.9.4.1. Creating Your Own Appliance:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tutorials.html#nimbus">2.9.4.1.1. Nimbus:</a></li>
+<li class="toctree-l6"><a class="reference internal" href="tutorials.html#eucalyptus">2.9.4.1.2. Eucalyptus:</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#reusing-an-existing-appliance">2.9.4.2. Reusing an Existing Appliance:</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="tutorials.html#editing-tips-for-the-table">2.9.4.2.1. Editing tips for the table:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_screencast.html">10. <strong>APPENDIX. SCREENCASTS</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mooc.html">10.1. Screencast: Using FutureGrid</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#overview">10.1.1. Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#prerequisites">10.1.2. Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#instructor-bio">10.1.3. Instructor Bio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#course-content">10.1.4. Course Content</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#creating-futuregrid-accounts-and-projects">10.1.4.1. Creating FutureGrid Accounts and Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#openstack-on-futuregrid">10.1.4.2. OpenStack on FutureGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#eucalyptus-on-futuregrid">10.1.4.3. Eucalyptus on FutureGrid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#batch-jobs-including-hadoop-on-futuregrid">10.1.4.4. Batch Jobs including Hadoop  on FutureGrid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mooc.html#exercises">10.1.5. Exercises</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="mooc.html#id1">10.1.5.1. Creating FutureGrid Accounts and Projects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_manual.html">11. <strong>APPENDIX. MAINTAINING THIS MANUAL</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git.html">11.1. Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">11.2. Contributing to the Manual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#organisation-of-the-manual-in-git">11.2.1. Organisation of the Manual in Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#online-editing-for-novice-editors">11.2.2. Online Editing for Novice Editors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#faq">11.2.3. FAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#publication-of-the-manual">11.2.4. Publication of the Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#setting-up-the-expert-developers-manual-editing-environment">11.3. Setting Up the Expert Developers Manual Editing Environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#python">11.3.1. Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#virtualenv">11.3.2. Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#create-a-github-local-directory-with-the-manual">11.3.3. Create a github local directory with the manual</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#install-the-requirements">11.3.4. Install the Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#all-in-one-setup-script">11.3.5. All-in-one setup script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#watchdog">11.3.6. Watchdog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#transfering-a-page-from-the-portal-to-rst">11.3.7. Transfering a page from the portal to RST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#creating-the-pages-locally">11.3.8. Creating the pages locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#publishing-the-pages">11.3.9. Publishing the pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#jira">11.3.10. Jira</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#portal-link">11.3.11. Portal link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#screencast-recording-tips">11.3.12. Screencast recording tips</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#osx">11.3.12.1. OSX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#changing-the-prompt">11.3.12.2. Changing the prompt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#recording-of-typed-in-commands">11.3.12.3. Recording of typed in commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributing.html#setup-quicktime-sound-recording">11.3.12.4. Setup quicktime sound recording</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_mpi.html">12. <strong>APPENDIX. MPI RING PROGRAM</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ring.html">12.1. MPI Ring Program</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_other.html">13. <strong>APPENDIX.  OTHER SECTIONS THAT HAVE NOT YET BEEN REVIEWED OR ARE INTEGRATED IN THE MANUAL</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html">3. Delta GPU User Manual</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html#running-mpi-gpu-program-on-the-delta-cluster">3.1. Running MPI/GPU program on the Delta cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html#running-programs-on-a-single-gpu">3.2. Running programs on a single GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipop1.html">13.9. IPOP (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#prerequisites">13.9.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-1-deploying-vms-to-be-connected-by-ipop">13.9.2. Step 1: Deploying VMs to be connected by IPOP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-1-deploying-a-vm-on-futuregrid-using-nimbus">13.9.2.1. Option 1: Deploying a VM on FutureGrid Using Nimbus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-2-deploying-a-vm-on-futuregrid-using-openstack">13.9.2.2. Option 2: Deploying a VM on FutureGrid Using OpenStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-3-deploying-a-vm-on-amazon-ec2">13.9.2.3. Option 3: Deploying a VM on Amazon EC2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-4-deploying-a-vm-on-your-computer-vmware-virtualbox">13.9.2.4. Option 4: Deploying a VM on your computer (VMware, VirtualBox)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-2-establishing-ipop-connectivity-between-two-vms">13.9.3. Step 2: Establishing IPOP connectivity between two VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-3-securing-communications-between-alice-and-bob">13.9.4. Step 3: Securing communications between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#troubleshooting-and-for-more-information">13.9.5. Troubleshooting and for more information</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ipop2.html">13.10. IPOP2 (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#prerequisites">13.10.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-1-bringing-up-alice-and-bob-vms">13.10.2. Step 1: Bringing up Alice and Bob VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga9.html">13.12. GA9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#summary">13.12.1. Summary:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#prerequisites">13.12.2. Prerequisites:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ga9.html#deploying-a-grid-appliance-on-futuregrid">13.12.2.1. Deploying a Grid Appliance on FutureGrid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hpss.html">13.13. HPSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrong-ssh.html">13.14. SSH the wrong way ( DO NOT USE THIS TUTORIAL)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#requirement-for-windows-users">13.14.1. Requirement for Windows Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#instructions-for-both-windows-and-unix-users">13.14.2. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#generate-ssh-key">13.14.2.1. Generate SSH key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#check-your-ssh-key">13.14.2.2. Check your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#copy-the-content-of-your-public-key">13.14.2.3. Copy the content of your public key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#upload-the-key-to-the-futuregrid-portal">13.14.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key">13.14.2.5. Testing your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key-on-hotel">13.14.2.6. Testing your ssh key on Hotel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">OpenNebula 2.0 Tutorial</a></li>
+<li><a class="reference internal" href="#create-a-vm-image-contextualized-for-opennebula">Create a VM Image Contextualized for OpenNebula</a><ul>
+<li><a class="reference internal" href="#create-vm-image-using-kvm">Create VM Image Using KVM</a></li>
+<li><a class="reference internal" href="#contextualize-vm">Contextualize VM</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-virtual-machines">Managing Virtual Machines</a><ul>
+<li><a class="reference internal" href="#virtual-machine-template">Virtual Machine Template</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-the-image-repository">Managing the Image Repository</a></li>
+<li><a class="reference internal" href="#managing-physical-hosts-and-clusters">Managing Physical Hosts and Clusters</a><ul>
+<li><a class="reference internal" href="#managing-hosts">Managing Hosts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#managing-virtual-networks">Managing Virtual Networks</a><ul>
+<li><a class="reference internal" href="#defining-a-virtual-network">Defining a Virtual Network</a><ul>
+<li><a class="reference internal" href="#fixed-virtual-network">Fixed Virtual Network</a></li>
+<li><a class="reference internal" href="#ranged-virtual-network">Ranged Virtual Network</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adding-and-deleting-virtual-networks">Adding and Deleting Virtual Networks</a></li>
+<li><a class="reference internal" href="#using-the-leases-within-the-virtual-machine">Using the Leases Within the Virtual Machine</a><ul>
+<li><a class="reference internal" href="#configuring-the-virtual-machine-to-use-the-leases">Configuring the Virtual Machine to Use the Leases</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accounting">Accounting</a><ul>
+<li><a class="reference internal" href="#physical-resources">Physical Resources</a></li>
+<li><a class="reference internal" href="#virtual-resources">&nbsp;&nbsp;Virtual Resources</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-management">User Management</a><ul>
+<li><a class="reference internal" href="#adding-new-users">Adding New Users</a><ul>
+<li><a class="reference internal" href="#public-key-extraction-done-by-users">Public Key Extraction (Done by Users)</a></li>
+<li><a class="reference internal" href="#user-creation-done-by-the-administrator">User Creation (done by the administrator)</a></li>
+<li><a class="reference internal" href="#user-login-done-by-users">User Login (Done by Users)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quota">Quota</a><ul>
+<li><a class="reference internal" href="#quotas-database-security-done-by-the-administrator">Quotas Database Security (Done by the Administrator)</a></li>
+<li><a class="reference internal" href="#default-quotas-done-by-the-administrator">Default Quotas (Done by the Administrator)</a></li>
+<li><a class="reference internal" href="#explicit-user-quotas-done-by-the-administrator">Explicit User Quotas (Done by the Administrator)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/opennebula.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="opennebula-2-0-tutorial">
+<h1>OpenNebula 2.0 Tutorial<a class="headerlink" href="#opennebula-2-0-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This document is aimed to be a guide to start using OpenNebula 2.0.
+Therefore, if you need more information about any particular OpenNebula
+aspect that it is not addressed here, please refer to the official
+documentation located in
+(<a class="reference external" href="http://www.opennebula.org/documentation:documentation">http://www.opennebula.org/documentation:documentation</a>)</p>
+<p>If you are a user that is only interested in test OpenNebula with some
+pre-configured VM, you can use this guide
+(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vmg">http://www.opennebula.org/documentation:rel2.0:vmg</a>).</p>
+<p>ALL users have to add the following lines to their $HOME/.bashrc or
+$HOME/.profile file.</p>
+<div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:$ONE_LOCATION/bin
+export ONE_AUTH=$HOME/.one/one_ssh
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-vm-image-contextualized-for-opennebula">
+<h1>Create a VM Image Contextualized for OpenNebula<a class="headerlink" href="#create-a-vm-image-contextualized-for-opennebula" title="Permalink to this headline">¶</a></h1>
+<p>In this section we are going to explain how to create a KVM image and
+how to contextualize for OpenNebula.</p>
+<div class="section" id="create-vm-image-using-kvm">
+<h2>Create VM Image Using KVM<a class="headerlink" href="#create-vm-image-using-kvm" title="Permalink to this headline">¶</a></h2>
+<p>This process is generic and it is not related with OpenNebula directly.
+Therefore, this image can be deploy in any machine with KVM and could be
+used to create a VM image for any IaaS framework. The first step is
+install KVM.</p>
+<p>Ubuntu</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install qemu kvm
+
+sudo apt-get install libvirt-bin
+</pre></div>
+</div>
+<p>RHEL or CentOS</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo yum install kvm virt-manager
+</pre></div>
+</div>
+<p>Be sure that the virtualization features of your machine are enabled in
+the BIOS. If they are, you should be able to load the KVM
+modules</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo modprobe kvm-intel
+or
+sudo modprobe kvm-amd
+</pre></div>
+</div>
+<p>Now, we need to download the ISO that we are going to install in the VM,
+in this case Ubuntu iso. You can do it from
+<a class="reference external" href="http://ubuntu-releases.cs.umn.edu/10.10/ubuntu-10.10-server-amd64.iso">http://ubuntu-releases.cs.umn.edu/10.10/ubuntu-10.10-server-amd64.iso.</a></p>
+<p>Every VM need a disk to be used as a virtual hard drive (1GB is enough
+for Ubuntu server). Thus, to create this we use the next command:</p>
+<div class="highlight-python"><div class="highlight"><pre>qemu-img create machine_name.img -f raw 1G
+</pre></div>
+</div>
+<p>After this, we are prepared to boot the VM and install the OS.</p>
+<div class="highlight-python"><div class="highlight"><pre>kvm -m 512 -cdrom /home/user/ubuntu-10.10-server-amd64.iso -boot d machine_name.img
+</pre></div>
+</div>
+<p>This command will start the VM and you can install the OS as in a normal
+PC. When you install the OS in the VM you can boot it using this
+command:</p>
+<div class="highlight-python"><div class="highlight"><pre>kvm -no-acpi -m 512 machine_name.img
+</pre></div>
+</div>
+</div>
+<div class="section" id="contextualize-vm">
+<h2>Contextualize VM<a class="headerlink" href="#contextualize-vm" title="Permalink to this headline">¶</a></h2>
+<p>There are two contextualization mechanisms available in OpenNebula: the
+automatic IP assignment, and a more generic way to give any file and
+configuration parameters. You can use any of them individually, or both.
+Nevertheless, we need to prepare the VM image to use this mechanism
+(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cong">http://www.opennebula.org/documentation:rel2.0:cong</a>).</p>
+<p>First, download the vmcontext.sh&nbsp; file in your machine. This file depend
+of your linux distribution.</p>
+<div class="highlight-python"><div class="highlight"><pre>http://dev.opennebula.org/projects/opennebula/repository/show/share/scripts
+</pre></div>
+</div>
+<p>In this address you can find the vmcontext for each supported
+distribution.
+CentOS</p>
+<div class="highlight-python"><div class="highlight"><pre>wget http://dev.opennebula.org/projects/opennebula/repository/revisions/master/raw/share/scripts/centos-5/net-vmcontext/vmcontext -O vmcontext.sh
+</pre></div>
+</div>
+<p>Ubuntu</p>
+<div class="highlight-python"><div class="highlight"><pre>wget http://dev.opennebula.org/projects/opennebula/repository/revisions/master/raw/share/scripts/ubuntu/net-vmcontext/vmcontext -O vmcontext.sh
+</pre></div>
+</div>
+<p>Copy this file to the VM. To do that you can configure a network
+interface in the VM and send the file using ssh. For example if your
+machine has the private IP 192.168.1.1, you could assign to the VM the
+192.168.1.2. So, execute this command in the VM:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo ifconfig eht0 192.168.1.2
+</pre></div>
+</div>
+<p>From your machine execute this command to send the file to your VM:</p>
+<div class="highlight-python"><div class="highlight"><pre>scp vmcontext.sh 192.168.1.2:/home/user
+</pre></div>
+</div>
+<p>In the VM copy the file to the /etc/init.d directory:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo cp vmcontext.sh /etc/init.d
+sudo chmod +x /etc/init.d/vmcontext.sh
+</pre></div>
+</div>
+<p>Configure init.d to execute the script during the VM startup
+Centos</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo chkconfig --add vmcontext.sh
+</pre></div>
+</div>
+<p>Ubuntu</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ln</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">vmcontext</span><span class="o">.</span><span class="n">sh</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S01vmcontext</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Add at the end of this file (this may not be needed):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ifup</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python"><div class="highlight"><pre>/etc/init.d/networking restart  #(in ubuntu)
+/etc/init.d/network restart     #(in centos)
+</pre></div>
+</div>
+<p>Remove the udev persistent files (ubuntu only)</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo rm -f /etc/udev/rules.d/z25_persistent-net.rules
+
+sudo rm -f /etc/udev/rules.d/z45_persistent-net-generator.rules
+</pre></div>
+</div>
+<p>With all these steps we have configured the automatic IP assignment in
+the VM. Now, we need to enable the generic contextualization by copying
+these lines to /etc/rc.local.</p>
+<div class="highlight-python"><div class="highlight"><pre>mount -t iso9660 /dev/sr0 /mnt  #(in ubuntu)
+mount -t iso9660 /dev/hdc /mnt  #(in centos. Actually this depend on the initrd that you uses. If you use the one provided by Ubuntu then you use the previous line instead of this one)
+
+if [ -f /mnt/context.sh ]; then
+
+      . /mnt/init.sh
+
+fi
+
+umount /mnt
+
+exit 0
+</pre></div>
+</div>
+<p>The file init.sh is different for each distribution and you can find
+them in the <a class="reference external" href="http://dev.opennebula.org/projects/opennebula/repository/revisions/master/show/share/scripts">OpenNebula
+repository</a>.
+You do not need to include it in the VM because it is included
+automatically by OpenNebula when you require it in the VM template.</p>
+</div>
+</div>
+<div class="section" id="managing-virtual-machines">
+<h1>Managing Virtual Machines<a class="headerlink" href="#managing-virtual-machines" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vm_guide">(http://www.opennebula.org/documentation:rel2.0:vm_guide)</a></p>
+<p>A Virtual Machine within the OpenNebula system consists of:</p>
+<ul class="simple">
+<li>A capacity in terms memory and CPU</li>
+<li>A set of NICs attached to one or more virtual networks</li>
+<li>A set of <strong>disk images</strong>.</li>
+<li>A state file (optional) or <strong>recovery file</strong>, that contains the
+memory image of a running VM plus some hypervisor specific
+information.</li>
+</ul>
+<p>The above items, plus some additional VM attributes like the OS kernel
+and context information to be used inside the VM, are specified in a
+<strong>`VM
+template &lt;http://www.opennebula.org/documentation:rel2.0:template&gt;`__</strong>
+file.</p>
+<p>Each VM in OpenNebula is identified by an unique number, the <tt class="docutils literal"><span class="pre">&lt;VID&gt;</span></tt>.
+Also, the user can assign it a name in the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">VM
+template</a>,
+the default name for each VM is <tt class="docutils literal"><span class="pre">one-&lt;VID&gt;</span></tt>.</p>
+<div class="section" id="virtual-machine-template">
+<h2>Virtual Machine Template<a class="headerlink" href="#virtual-machine-template" title="Permalink to this headline">¶</a></h2>
+<p>OpenNebula templates are designed to be hypervisor-agnostic, but there
+are still some peculiarities to be taken into account, and mandatory
+attributes change depending on the target hypervisor. Hypervisor
+specific information for this attributes can be found in the drivers
+configuration guides:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:xeng">Xen Adaptor</a></li>
+<li><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:kvmg">KVM Adaptor</a></li>
+<li><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vmwareg">VMware
+Adaptor</a></li>
+</ul>
+<p>OpenNebula has been designed to be easily extended, so any attribute
+name can be defined for later use in any OpenNebula module. There are
+some pre-defined attributes, though.</p>
+<p>Please check the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">Virtual Machine definition
+file</a>
+reference for details on all the sections.</p>
+<p>A basic VM template to be run using KVM could be this:</p>
+<div class="highlight-python"><div class="highlight"><pre>#---------------------------------------
+# VM definition example
+#---------------------------------------
+
+NAME = &quot;ttylinux&quot;
+
+CPU    = 0.5
+MEMORY = 64
+
+# --- disks ---
+
+DISK = [
+  source   = &quot;/srv/cloud/images/ttylinux/ttylinux.img&quot;,
+  target   = &quot;hda&quot;,
+  readonly = &quot;no&quot; ]
+
+# --- 1 NIC ---
+
+NIC = [ NETWORK=&quot;Red LAN&quot;]
+
+FEATURES=[ acpi=&quot;no&quot; ]
+
+# --- VNC server ---
+
+GRAPHICS = [
+  type    = &quot;vnc&quot;,
+  listen  = &quot;127.0.0.1&quot;]
+</pre></div>
+</div>
+<p>In the previous template KVM will asume that the image is RAW. If you
+have a image with the qcow2 format, you have to add the following to the
+DISK description:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">driver</span> <span class="o">=</span> <span class="s">&quot;qcow2&quot;</span>
+</pre></div>
+</div>
+<p>Assuming we have a VM template called &#8220;ttylinux.one&#8221; describing a
+virtual machine. Then, we can allocate the VM in OpenNebula issuing a:</p>
+<p>afterwards, the VM can be listed with the <tt class="docutils literal"><span class="pre">list</span></tt> option:</p>
+</div>
+</div>
+<div class="section" id="managing-the-image-repository">
+<h1>Managing the Image Repository<a class="headerlink" href="#managing-the-image-repository" title="Permalink to this headline">¶</a></h1>
+<p>The Image Repository system allows OpenNebula administrators and users
+to set up images, which can be operative systems or data, to be used in
+Virtual Machines easily. These images can be used by several Virtual
+Machines simultaneously, and also shared with other users.</p>
+<p>This is what a sample template looks like:</p>
+<p>To submit the template, you have to issue the command</p>
+<p>You can use the <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">list</span></tt> command to check the available images
+in the repository.</p>
+<p>There other commands to manage the images sotored in the Image
+Repository:</p>
+<ul class="simple">
+<li>Use the <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">publish</span></tt> and <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">unpublish</span></tt> commands to
+make your images public for every user to use in their virtual
+machines, or private.</li>
+<li>Use the <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">persistent</span></tt> and <tt class="docutils literal"><span class="pre">oneimage</span> <span class="pre">nonpersistent</span></tt>
+commands to make your images persistent (they are not cloned, but
+rather used from the original image) or not. A persistent image
+cannot be published.</li>
+</ul>
+<p>The only difference with the previous VM template is that now, you only
+need to specify the name of the image that you want to use in the DISK
+section.</p>
+<p>Assuming that the template containing the previous information is called
+template.one, you can deploy the VM using the command:</p>
+<p>Once the VM is deployed you can save the changes made to any disk as a
+new image. To do so, use the <tt class="docutils literal"><span class="pre">onevm</span> <span class="pre">saveas</span></tt> command. This command
+takes three or four arguments: The VM name (or ID), the disk_id to
+save, the name of the new image to register, and optionally the image
+type.</p>
+<p>To know the DISK_ID of the disk you want to save, just take a look at
+the <tt class="docutils literal"><span class="pre">onevm</span> <span class="pre">show</span></tt> output for your VM.</p>
+<p>The DISK_IDs are assigned in the same order the disks were defined in
+the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">VM
+template</a>.</p>
+<p>This will register a new image called “Ubuntu with Apache and MySQL”,
+that will be ready as soon as the VM is shut down.</p>
+<p>The disks can be saved even if they were defined from a local disk file
+(see the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template">VM
+template</a>
+reference guide for more information on the different kinds of disks).</p>
+</div>
+<div class="section" id="managing-physical-hosts-and-clusters">
+<h1>Managing Physical Hosts and Clusters<a class="headerlink" href="#managing-physical-hosts-and-clusters" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cluster_guide">http://www.opennebula.org/documentation:rel2.0:cluster_guide</a>)</p>
+<p>In order to use your existing physical nodes, you have to add them to
+the system as OpenNebula hosts. You need the following information:</p>
+<ul class="simple">
+<li><em>Hostname</em> of the cluster node or IP</li>
+<li><em>Information Driver</em> to be used to monitor the host, e.g. <tt class="docutils literal"><span class="pre">im_kvm</span></tt>.</li>
+<li><em>Storage Driver</em> to clone, delete, move or copy images into the host,
+e.g. <tt class="docutils literal"><span class="pre">tm_nfs</span></tt>.</li>
+<li><em>Virtualization Driver</em> to boot, stop, resume or migrate VMs in the
+host, e.g. <tt class="docutils literal"><span class="pre">vmm_kvm</span></tt>.</li>
+</ul>
+<p><a href="#id1"><span class="problematic" id="id2">|:!:|</span></a> Before adding a host check that you can ssh to it without being
+prompt for a password</p>
+<div class="section" id="managing-hosts">
+<h2>Managing Hosts<a class="headerlink" href="#managing-hosts" title="Permalink to this headline">¶</a></h2>
+<p>Hosts can be added to the system anytime with the <tt class="docutils literal"><span class="pre">onehost</span></tt> command.
+You can add the cluster nodes to be used by OpenNebula.</p>
+<p>This is two example of adding a KVM host.</p>
+<p>This is an example of adding a XEN host.</p>
+<p>Note that in the two previous examples we are using tm_nfs. This means
+that OpenNebula is configured to share the VM directory or to use SSH
+with no share directory. Other option is the use of LVM. More
+information about the diferent storage system supported can be found in
+<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:sm">http://www.opennebula.org/documentation:rel2.0:sm</a></p>
+<p>The status of the cluster can be checked with the <tt class="docutils literal"><span class="pre">onehost</span> <span class="pre">list</span></tt>
+command:</p>
+<p>And specific information about a host with <tt class="docutils literal"><span class="pre">show</span></tt>:</p>
+<p>If you want not to use a given host you can temporarily disable it:</p>
+<p>A disabled host should be listed with <tt class="docutils literal"><span class="pre">STAT</span> <span class="pre">off</span></tt> by <tt class="docutils literal"><span class="pre">onehost</span> <span class="pre">list</span></tt>.
+You can also remove a host permanently with:</p>
+<p><a href="#id3"><span class="problematic" id="id4">|:!:|</span></a> Detailed information of the <tt class="docutils literal"><span class="pre">onehost</span></tt> utility can be found <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cli#onehost">in
+the Command Line
+Reference</a></p>
+<p>If you use the <tt class="docutils literal"><span class="pre">onecluster</span> <span class="pre">list</span></tt> command you will see that the
+“default” cluster is created automatically.</p>
+<p>You may want to isolate your physical hosts running virtual machines
+containing important services for you business, from the virtual
+machines running a development version of your software. The OpenNebula
+administrator can do so with these commands:</p>
+<p>From this point, the newly created machines can use this cluster names
+as a <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:template#placement_section">placement
+requirement</a>:</p>
+<p>Once your development cycle is finished, this “testing” and “production”
+clusters may not be useful any more. Let&#8217;s delete the testing cluster.</p>
+<p>As you can see, the hosts assigned to the “testing” cluster have been
+moved to the “default” one.</p>
+<p><a href="#id5"><span class="problematic" id="id6">|:!:|</span></a> Detailed information of the <tt class="docutils literal"><span class="pre">onecluster</span></tt> utility can be found in
+the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cli#onecluster">Command Line
+Reference</a></p>
+</div>
+</div>
+<div class="section" id="managing-virtual-networks">
+<h1>Managing Virtual Networks<a class="headerlink" href="#managing-virtual-networks" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vgg">(</a><a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:vgg">http://www.opennebula.org/documentation:rel2.0:vgg</a>)</p>
+<p>A cluster node is connected to one or more networks that are available
+to the virtual machines through the corresponding bridges. To set up a
+virtual networks you just need to know the name of the bridge to bind
+the virtual machines to.</p>
+<div class="section" id="defining-a-virtual-network">
+<h2>Defining a Virtual Network<a class="headerlink" href="#defining-a-virtual-network" title="Permalink to this headline">¶</a></h2>
+<p>OpenNebula allows for the creation of Virtual Networks by mapping them
+on top of the physical ones. All Virtual Networks are going to share a
+default value for the MAC preffix, set in the <tt class="docutils literal"><span class="pre">oned.conf</span></tt> file.</p>
+<p>There are two types of Virtual Networks in OpenNebula:</p>
+<ol class="arabic simple">
+<li><strong>Fixed</strong>, defines a fixed set of IP-MAC pair addresses</li>
+<li><strong>Ranged</strong>, defines a class network.</li>
+</ol>
+<p><a href="#id7"><span class="problematic" id="id8">|:!:|</span></a> Virtual Networks created by <tt class="docutils literal"><span class="pre">oneadmin</span></tt> can be used by every
+other user.</p>
+<div class="section" id="fixed-virtual-network">
+<h3>Fixed Virtual Network<a class="headerlink" href="#fixed-virtual-network" title="Permalink to this headline">¶</a></h3>
+<p>For example to create a Fixed Virtual Network, called <tt class="docutils literal"><span class="pre">Public</span></tt> with
+the set of public IPs to be used by the VMs, just create a file with the
+following contents:</p>
+<p>where <strong>LEASES</strong>: Definition of the IP-MAC pairs. If an IP is defined,
+and there is no associated MAC, OpenNebula will generate it using the
+following rule: <tt class="docutils literal"><span class="pre">MAC</span> <span class="pre">=</span> <span class="pre">MAC_PREFFIX:IP</span></tt>. So, for example, from IP
+10.0.0.1 and MAC_PREFFIX 00:16, we get 00:16:0a:00:00:01. Defining only
+a MAC address with no associated IP is not allowed.</p>
+</div>
+<div class="section" id="ranged-virtual-network">
+<h3>Ranged Virtual Network<a class="headerlink" href="#ranged-virtual-network" title="Permalink to this headline">¶</a></h3>
+<p>The following is an example of a Ranged Virtual Network template:</p>
+<p>where:</p>
+<ul class="simple">
+<li><strong>NETWORK_ADDRESS</strong>: Base network address to generate IP addresses.</li>
+<li><strong>NETWORK_SIZE</strong>: Number of hosts that can be connected using this
+network. It can be defined either using a number or a network class
+(B or C).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="adding-and-deleting-virtual-networks">
+<h2>Adding and Deleting Virtual Networks<a class="headerlink" href="#adding-and-deleting-virtual-networks" title="Permalink to this headline">¶</a></h2>
+<p>Once a template for a VN has been defined, the <tt class="docutils literal"><span class="pre">onevnet</span></tt> command can
+be used to create it.</p>
+<p>To create the previous networks put their definitions in two different
+files, <tt class="docutils literal"><span class="pre">public.net</span></tt> and <tt class="docutils literal"><span class="pre">red.net</span></tt>, respectively. Then, execute:</p>
+<p>Also, <tt class="docutils literal"><span class="pre">onevnet</span></tt> can be used to query OpenNebula about available VNs:</p>
+<p>with <tt class="docutils literal"><span class="pre">USER</span></tt> the owner of the network and <tt class="docutils literal"><span class="pre">#LEASES</span></tt> the number of
+IP-MACs assigned to a VM from this network.</p>
+<p>We can see the details of a particular VN:</p>
+<div class="highlight-python"><div class="highlight"><pre>$onevnet show 0
+
+VIRTUAL NETWORK 0 INFORMATION
+ID:       : 0
+UID:      : 0
+PUBLIC    : N
+
+VIRTUAL NETWORK TEMPLATE
+BRIDGE=br1
+LEASES=[ IP=192.168.1.7 ]
+LEASES=[ IP=192.168.1.8 ]
+LEASES=[ IP=192.168.1.9 ]
+LEASES=[ IP=192.168.1.10 ]
+NAME=Small LAN
+TYPE=FIXED
+
+LEASES INFORMATION
+LEASE=[ IP=192.168.1.7, MAC=02:00:c0:a8:01:07, USED=1, VID=54 ]
+LEASE=[ IP=192.168.1.8, MAC=02:00:c0:a8:01:08, USED=1, VID=45 ]
+LEASE=[ IP=192.168.1.9, MAC=02:00:c0:a8:01:09, USED=0, VID=-1 ]
+LEASE=[ IP=192.168.1.10, MAC=02:00:c0:a8:01:0a, USED=0, VID=-1 ]
+</pre></div>
+</div>
+<p>To delete a virtual network just use <tt class="docutils literal"><span class="pre">onevnet</span> <span class="pre">delete</span></tt>. For example to
+delete the previous networks:</p>
+<p><a href="#id9"><span class="problematic" id="id10">|:!:|</span></a> Check the <tt class="docutils literal"><span class="pre">onevnet</span></tt> command help or <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cli#onevnet">reference
+guide</a>
+for more options to list the virtual networks.</p>
+</div>
+<div class="section" id="using-the-leases-within-the-virtual-machine">
+<h2>Using the Leases Within the Virtual Machine<a class="headerlink" href="#using-the-leases-within-the-virtual-machine" title="Permalink to this headline">¶</a></h2>
+<p>Hypervisors can attach a specific MAC address to a virtual network
+interface, but Virtual Machines need to obtain an IP address. There are
+a variety of ways to achieve this within OpenNebula:</p>
+<ul class="simple">
+<li>Obtain the IP from the MAC address, using the default MAC assignment
+schema (<strong>PREFERRED</strong>)</li>
+<li>Use the <tt class="docutils literal"><span class="pre">CONTEXT</span></tt> attribute, check the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cong">Contextualization
+Guide</a></li>
+</ul>
+<div class="section" id="configuring-the-virtual-machine-to-use-the-leases">
+<h3>Configuring the Virtual Machine to Use the Leases<a class="headerlink" href="#configuring-the-virtual-machine-to-use-the-leases" title="Permalink to this headline">¶</a></h3>
+<p>Please visit the <a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:cong">contextualization
+guide</a> to learn
+how to configure your Virtual Machines.</p>
+</div>
+</div>
+</div>
+<div class="section" id="accounting">
+<h1>Accounting<a class="headerlink" href="#accounting" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="http://opennebula.org/documentation:rel2.0:accounting">http://opennebula.org/documentation:rel2.0:accounting</a>)</p>
+<div class="section" id="physical-resources">
+<h2>Physical Resources<a class="headerlink" href="#physical-resources" title="Permalink to this headline">¶</a></h2>
+<p>Usage of a physical resource can be obtained for a given user or a given
+virtual machine. Accounting reports always show aggregated information,
+considering possible migration of a virtual machine to between physical
+resources.</p>
+<p><tt class="docutils literal"><span class="pre">oneacct</span> <span class="pre">host</span></tt> - prints accounting information for the physical
+resources</p>
+<p>Obtaining the accounting information for user john</p>
+<p>The columns are:</p>
+<ul class="simple">
+<li>XFR: Total transfer time. It includes cloning VM disk images in the
+target resource and transfer back of modified images when applicable</li>
+<li>RUNN: Total running time. It includes boot, running and saving times</li>
+<li>VMS: Total number of virtual machines</li>
+</ul>
+<p>Obtaining accounting information for host</p>
+</div>
+<div class="section" id="virtual-resources">
+<h2>&nbsp;&nbsp;Virtual Resources<a class="headerlink" href="#virtual-resources" title="Permalink to this headline">¶</a></h2>
+<p>Accounting information for Virtual Machines can be obtained for a given
+user or a given virtual machine.</p>
+<p>The current version of the virtual resources reports does not consider
+possible migration of a virtual machine to between physical resources.</p>
+<p><tt class="docutils literal"><span class="pre">oneacct</span> <span class="pre">vm</span></tt> - prints accounting information for virtual machines</p>
+<p>Obtaining the accounting information for a given VM</p>
+<p>The columns are:</p>
+<ul class="simple">
+<li>HOST: where the VM has been executed</li>
+<li>XFR: Total transfer time in that host</li>
+<li>RUNN: Total running time in the host</li>
+</ul>
+<p>Obtaining the accounting information for a given host</p>
+<p>Obtaining the accounting information for a given user</p>
+<p>In this last example columns show aggregated transfer and running times.</p>
+</div>
+</div>
+<div class="section" id="user-management">
+<h1>User Management<a class="headerlink" href="#user-management" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:users">http://www.opennebula.org/documentation:rel2.0:users)</a></p>
+<div class="section" id="adding-new-users">
+<h2>Adding New Users<a class="headerlink" href="#adding-new-users" title="Permalink to this headline">¶</a></h2>
+<p>Current Authentication/Authorization module (from now on auth module)
+has support for user/password and rsa private/public key authentication
+and also user quota support. Here, we are going to talk about the SSH
+module and how to add users using SSH keys. More information can be
+found in the official documentation:
+<a class="reference external" href="http://www.opennebula.org/documentation:rel2.0:users">http://www.opennebula.org/documentation:rel2.0:users</a></p>
+<div class="section" id="public-key-extraction-done-by-users">
+<h3>Public Key Extraction (Done by Users)<a class="headerlink" href="#public-key-extraction-done-by-users" title="Permalink to this headline">¶</a></h3>
+<p>To create a user compatible with <tt class="docutils literal"><span class="pre">ssh</span></tt> option for authentication the
+administrator needs to add the user&#8217;s public key into the database. The
+file with public key generated by <tt class="docutils literal"><span class="pre">ssh-keygen</span></tt>
+(<tt class="docutils literal"><span class="pre">$HOME/.ssh/id_rsa.pub</span></tt>) is written in a format readable by
+<tt class="docutils literal"><span class="pre">openssl</span></tt> so the public key should be extracted by the user and sent
+to the administrator. The way to extract it is the following:</p>
+<p>The string the user has to send to the administrator to create the user
+is written to the console.</p>
+</div>
+<div class="section" id="user-creation-done-by-the-administrator">
+<h3>User Creation (done by the administrator)<a class="headerlink" href="#user-creation-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>After the user sends the rsa public key the administration needs to
+create a new account in OpenNebula system. This is done in a similar way
+as standard user/password users but using the public key provided by the
+user and adding a parameter to the command so the password (in this case
+the public key) is stored as is in the database. Here is the command to
+create a user called <tt class="docutils literal"><span class="pre">test</span></tt> with the previously extracted public key:</p>
+<p>After this the administrator can check that the user is in the system:</p>
+</div>
+<div class="section" id="user-login-done-by-users">
+<h3>User Login (Done by Users)<a class="headerlink" href="#user-login-done-by-users" title="Permalink to this headline">¶</a></h3>
+<p>Before performing any action in OpenNebula system the user needs to
+login. To do this we must issue this command:</p>
+<p>The command on success will print the command needed to execute so
+OpenNebula knows where to find the login file generated.</p>
+<p>This line can also be added by the user to $HOME/.profile or
+$HOME/.bashrc so it is not needed to be executed every new system login.</p>
+<p>By default the login file will be valid for one hour. This expire time
+can be changed adding another parameter with the number of seconds you
+want the login to be valid. For example to create a 2 hours valid login
+you can issue this command:</p>
+</div>
+</div>
+<div class="section" id="quota">
+<h2>Quota<a class="headerlink" href="#quota" title="Permalink to this headline">¶</a></h2>
+<p>When quota module is enabled it checks for user resource consumption
+before letting a VM to created in OpenNebula system. You have to take
+into account that all resources for VMs listed by <tt class="docutils literal"><span class="pre">onevm</span> <span class="pre">list</span></tt> for a
+user are counted as used. Administrator user has unlimited quota.</p>
+<div class="section" id="quotas-database-security-done-by-the-administrator">
+<h3>Quotas Database Security (Done by the Administrator)<a class="headerlink" href="#quotas-database-security-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>By default user quota database is an <em>sqlite</em> database located at
+<tt class="docutils literal"><span class="pre">$ONE_LOCATION/var/auth.db</span></tt>. This database on creation does not have
+secure permissions and the administrator may change its permission and
+maybe its location. To change its location you can use a full path to
+the database in the auth module configuration file:</p>
+<p>You may also change its permissions to <tt class="docutils literal"><span class="pre">0600</span></tt> so the unix user that
+runs OpenNebula daemons is the only with read/write access permissions.</p>
+</div>
+<div class="section" id="default-quotas-done-by-the-administrator">
+<h3>Default Quotas (Done by the Administrator)<a class="headerlink" href="#default-quotas-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>Default quotas for all users are configured as previously stated in
+<em>Configuring and Enabling Auth Module</em>. This is the first configuration
+you will have to do if you enable quota system as any user without
+explicit quotas can only use that amount of resources.</p>
+</div>
+<div class="section" id="explicit-user-quotas-done-by-the-administrator">
+<h3>Explicit User Quotas (Done by the Administrator)<a class="headerlink" href="#explicit-user-quotas-done-by-the-administrator" title="Permalink to this headline">¶</a></h3>
+<p>Setting special quotas for a user can be done using <tt class="docutils literal"><span class="pre">oneauth</span></tt> command.
+If you have secured the database only unix user that runs OpenNebula
+will be able to update them. The steps to change permissions for a user
+are as follows:</p>
+<ul class="simple">
+<li>Find the user id for the user we want to change limits. We are
+searching for user <tt class="docutils literal"><span class="pre">test</span></tt>:</li>
+</ul>
+<ul class="simple">
+<li>The user id for <tt class="docutils literal"><span class="pre">test</span></tt> is 1. Now we use
+<tt class="docutils literal"><span class="pre">oneauth</span> <span class="pre">quota</span> <span class="pre">set</span> <span class="pre">&lt;user</span> <span class="pre">id&gt;</span> <span class="pre">&lt;cpu&gt;</span> <span class="pre">&lt;memory&gt;</span></tt> to change user limits:</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, FutureGrid, please contact Gregor von Laszewski about this manual..<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
