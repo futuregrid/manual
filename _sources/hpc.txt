@@ -54,7 +54,7 @@ add. First start the agent::
 
   eval `ssh-agent`
 
-Then add your key with 
+Then add your key with::
 
   ssh-add
 

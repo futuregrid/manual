@@ -1,0 +1,181 @@
+**********************************************************************
+GA10: Running Hadoop Tasks on the Grid Appliance
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
+
+Summary:
+~~~~~~~~
+
+This tutorial provides step-by-step instructions on how to deploy Hadoop on demand on a pool of Grid Appliances. The Grid Appliance/Hadoop virtual clusters can be used as a basis for running a variety of Hadoop's HDFS/Map-Reduce tutorials.
+
+Prerequisites:
+~~~~~~~~~~~~~~
+
+-  It is assumed you have gone through the core Grid Appliance tutorial.
+   (Note: at this moment, this Hadoop tutorial is only available on
+   Nimbus):
+
+   -  `Running the Grid Appliance on
+      FutureGrid <https://portal.futuregrid.org/tutorials/ga9>`__
+
+Hands-On Tutorial - Hadoop "HDFS/Map-Reduce" Quick Start
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The first part of this tutorial assumes you have an account on FutureGrid and have gone through the prerequisite tutorials on Grid appliance using Nimbus. 
+
+The tutorial will guide you through simple steps on how to get
+started with running a single Grid appliance on FutureGrid through Nimbus, connect to a pre-deployed pool of Grid appliances, and submit a simple Map-Reduce test script provided by Hadoop. Once you go through these simple steps, you will have the ability to later on deploy your own private Grid appliance clusters on FutureGrid resources, as well as on your own resources, to use in your courses or research.
+
+Set Up and Start a Hadoop Cluster
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. | First you will install Hadoop and JDK on your appliance's NFS directory. Use the following commands (note that it will take a few minutes to install both Hadoop and JDK).
+
+   ::
+
+       su cndrusr1
+       cd ~/hadoop
+       ./setup.sh
+
+#. Before proceeding, check that your machine is connected to the public
+   pool by using \ ``condor_status`` command. You may need to wait for a
+   few minutes before it becomes fully operational.
+#. | Start a hadoop cluster on 2 nodes. Here, Condor is used to start up Hadoop�"nodes" on demand to form your pool. (With n=2, a single
+   condor job will be submitted because a local node in your appliance
+   will also be included into the cluster - you can also start larger
+   Hadoop pools by setting a larger argument for n. You can check the
+   status of the job with condor\_q and condor\_status).
+
+   ::
+
+       ./hadoop_condor.py -n 2 start
+
+#. If all goes well, you will see an output similar to:
+
+   ::
+
+       cndrusr1@C001141140:~/hadoop$ ./hadoop_condor.py -n 2 start
+       Starting a namenode (this may take a while) ....  done
+       Starting a local datanode
+       serv ipop ip = 5.1.141.140
+       submit condor with file tmphadoopAAA/submit_hadoop_vanilla_hadoopAAA
+       Submitting job(s)..
+       Logging submit event(s)..
+       1 job(s) submitted to cluster 1.
+       Waiting for 1 workers to response .... finished
+
+       host list:
+       ['C015134218.ipop', '1', 'cndrusr1', '45556', '/var/lib/condor/execute/dir_24915']
+
+       Waiting for 2 datanodes to be ready  (This may take a while) ....  success
+       Starting a local jobtracker
+       Starting a local tasktracker
+
+       Attention: Please source tmphadoopAAA/hadoop-env.sh before using hadoop.
+
+#. | Source the hadoop environment variable script before usage:
+
+   ::
+
+       source tmphadoopAAA/hadoop-env.sh
+
+#. | Testing the availability of hadoop file system (HDFS) by checking the hdfs report:
+
+   ::
+
+       hdfs dfsadmin -report
+
+#. If all goes well, you will see a report which indicates how many hadoop datanodes are available:
+
+   ::
+
+       Configured Capacity: 98624593920 (91.85 GB)
+       Present Capacity: 87651323904 (81.63 GB)
+       DFS Remaining: 87651237888 (81.63 GB)
+       DFS Used: 86016 (84 KB)
+       DFS Used%: 0%
+       Under replicated blocks: 0
+       Blocks with corrupt replicas: 0
+       Missing blocks: 0
+
+       -------------------------------------------------
+       Datanodes available: 2 (2 total, 0 dead)
+
+       Live datanodes:
+       Name: 5.1.141.140:50010 (C001141140.ipop)
+       Decommission Status : Normal
+       Configured Capacity: 32874864640 (30.62 GB)
+       DFS Used: 28672 (28 KB)
+       Non DFS Used: 3198197760 (2.98 GB)
+       DFS Remaining: 29676638208 (27.64 GB)
+       DFS Used%: 0%
+       DFS Remaining%: 90.27%
+       Last contact: Fri Jun 03 19:29:27 UTC 2011
+
+       ( Output truncated .... )
+
+#. | To test the map-reduce function, run the map-reduce test script provided in the hadoop installation directory:
+
+   ::
+
+       hadoop jar /mnt/local/hadoop/hadoop-mapred-test-0.21.0.jar mapredtest 50 54321
+
+#. | If the map-reduce is working correctly, the result will show ``Success=true`` on the last line similar to:
+
+   ::
+
+        (Partial output ... )
+               Job Counters 
+                       Data-local map tasks=12
+                       Total time spent by all maps waiting after reserving slots (ms)=0
+                       Total time spent by all reduces waiting after reserving slots (ms)=0
+                       SLOTS_MILLIS_MAPS=64190
+                       SLOTS_MILLIS_REDUCES=135527
+                       Launched map tasks=12
+                       Launched reduce tasks=1
+               Map-Reduce Framework
+                       Combine input records=0
+                       Combine output records=0
+                       Failed Shuffles=0
+                       GC time elapsed (ms)=549
+                       Map input records=50
+                       Map output bytes=400
+                       Map output records=50
+                       Merged Map outputs=10
+                       Reduce input groups=50
+                       Reduce input records=50
+                       Reduce output records=50
+                       Reduce shuffle bytes=560
+                       Shuffled Maps =10
+                       Spilled Records=100
+                       SPLIT_RAW_BYTES=1370
+       Original sum: 54331
+       Recomputed sum: 54331
+       Success=true
+
+Stop the Hadoop Cluster
+^^^^^^^^^^^^^^^^^^^^^^^
+
+#. | Once you've finished using hadoop, stop the cluster to free up condor nodes by:
+
+   ::
+
+       ./hadoop_condor.py stop
+
+Reference Material:
+~~~~~~~~~~~~~~~~~~~
+
+-  Presentation: `Deploying Grid Appliance
+   clusters <http://www.grid-appliance.org/files/docs/edu-docs/LocalGridAppliance1.pdf>`__
+-  Videos: `Grid Appliance YouTube
+   channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__
+
+Authors:
+~~~~~~~~
+
+Panoat Chuchaisri, David Wolinsky, Renato Figueiredo, (University of Florida)

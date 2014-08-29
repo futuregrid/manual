@@ -410,9 +410,11 @@
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#available-images">5.7.4. Available Images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-deployment">5.7.5. Image Deployment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.7.6. Logging Into the VM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.7. VM Network Info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.8. Image Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.9. Status of Deployments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#shutting-down-the-vm">5.7.7. Shutting down the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.8. VM Network Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.9. Image Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#volume-management">5.7.10. Volume Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.11. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -696,8 +698,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.6. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.7. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
@@ -1067,9 +1071,11 @@
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#available-images">5.7.4. Available Images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-deployment">5.7.5. Image Deployment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.7.6. Logging Into the VM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.7. VM Network Info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.8. Image Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.9. Status of Deployments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#shutting-down-the-vm">5.7.7. Shutting down the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.8. VM Network Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.9. Image Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#volume-management">5.7.10. Volume Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.11. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -1353,8 +1359,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.6. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.7. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
@@ -1509,14 +1517,13 @@ module</a></li>
 (AWS)</a> account</li>
 <li>Depending on whether you plan to use Nimbus, OpenStack, one of the
 following tutorials is required:<ul>
-<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Using Nimbus
+<li><a class="reference external" href="http://manual.futuregrid.org/nimbus.html">Using Nimbus
 on&nbsp;FutureGrid</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">Using OpenStack
+<li><a class="reference external" href="http://manual.futuregrid.org/openstackhavana.html">Using OpenStack
 on&nbsp;FutureGrid</a></li>
 </ul>
 </li>
 </ul>
-<p>^</p>
 </div>
 <div class="section" id="step-1-deploying-vms-to-be-connected-by-ipop">
 <h2><a class="toc-backref" href="#id4">13.9.2. Step 1: Deploying VMs to be connected by IPOP</a><a class="headerlink" href="#step-1-deploying-vms-to-be-connected-by-ipop" title="Permalink to this headline">¶</a></h2>
@@ -1539,7 +1546,7 @@ machines.</p>
 <p>A Nimbus image with Ubuntu 12.04 is available on TACC&#8217;s&nbsp;cluster
 (Alamo) with&nbsp;KVM&nbsp;virtualization technology. The image name is
 &#8220;ubuntu12.04.x64.kvm&#8221; and it is available to all&nbsp;FutureGrid&nbsp;users.&nbsp;Use
-the <a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Nimbus&nbsp;cloud-client.sh&nbsp;client</a>&nbsp;as
+the <a class="reference external" href="http://manual.futuregrid.org/nimbus.html">Nimbus&nbsp;cloud-client.sh&nbsp;client</a>&nbsp;as
 described in the Nimbus tutorial to deploy a virtual machine on Alamo:</p>
 <div class="highlight-python"><div class="highlight"><pre>cloud-client.sh --conf conf/alamo.conf --run --name ubuntu12.04.x64.kvm --hours 24
 </pre></div>
@@ -1585,7 +1592,7 @@ them over a virtual network.</p>
 <p>To make the process simpler for the first time you use IPOP, this
 tutorial uses configuration files with several pre-set values to
 minimize configuration steps from your part. Once you finish the
-tutorial and understand how IPOP can be dpeloyed, you can use these
+tutorial and understand how IPOP can be deployed, you can use these
 configuration files as templates to deploy other IPOP virtual networks.</p>
 <p>We assume that you have deployed two VMs - we will be refer to them
 as &#8220;Alice&#8221; and &#8220;Bob&#8221; in the rest of the tutorial. The &#8220;Alice&#8221; VM will be
@@ -1645,12 +1652,10 @@ Mask:255.255.255.0
      RX bytes:56314 (56.3 KB) TX bytes:32314 (32.3 KB)
 </pre></div>
 </div>
-<p><strong>*2.2) Bring up IPOP in the &#8220;Bob&#8221; VM*</strong>
-|
-Now using another terminal, ssh into the &#8220;Bob&#8221; VM and repeat the same
+<p><strong>*2.2) Bring up IPOP in the &#8220;Bob&#8221; VM*</strong></p>
+<p>Now using another terminal, ssh into the &#8220;Bob&#8221; VM and repeat the same
 process you did for Alice (again, as root):</p>
-<div class="highlight-python"><div class="highlight"><pre> wget
-`http://www.acis.ufl.edu/~renato/ipopdemo/ipop\_demo\_prepare\_debian.zip &lt;http://www.acis.ufl.edu/~renato/ipopdemo/ipop_demo_prepare_debian.zip&gt;`__
+<div class="highlight-python"><div class="highlight"><pre>wget http://www.acis.ufl.edu/~renato/ipopdemo/ipop\_demo\_prepare\_debian.zip
 apt-get install unzip
 unzip ipop\_demo\_prepare\_debian.zip
 </pre></div>
@@ -1667,7 +1672,7 @@ match, your tutorial will not work correctly:</p>
 also see a &#8220;tapipop&#8221; virtual network interface; in the Bob VM, it is
 configured with the 192.168.10.20 virtual IP address.</p>
 <p><strong>*2.3) Get Alice and Bob connected*</strong></p>
-<p>We will use now the &#8220;ping&#8221; tool to send ICPM echo packets between
+<p>We will now use the &#8220;ping&#8221; tool to send ICPM echo packets between
 Alice and Bob over the IPOP virtual network. Ping is a helpful tool for
 basic diagnostics of network connectivity, so we use it in this
 demonstration; once you confirm that ICMP packets are flowing with ping,
@@ -1782,9 +1787,8 @@ by IPsec.</p>
 what is different is that all communication now is authenticated and
 encrypted. For instance, if Alice stops running IPsec, or does not
 produce a valid signed certificate when they negotiate keys, it will not
-be able to connect to Bob (and vice-versa).
-|
-<strong>*3.4) Inspecting secure communications*</strong></p>
+be able to connect to Bob (and vice-versa).</p>
+<p><strong>*3.4) Inspecting secure communications*</strong></p>
 <p>To confirm this, let&#8217;s change the ping command slightly to add a
 &#8220;payload&#8221; to the message, and inspect IP packets using the &#8220;tcpdump&#8221;
 tool.</p>
@@ -1817,11 +1821,9 @@ Encapsulated Security Payload. Note that you don&#8217;t see the &#8220;deadbeef
 pattern, as there is privacy in the communicaiton - nodes in the path
 between Alice and Bob will not be able to see the payload of any IP
 packet they communicate.</p>
-<blockquote>
-<div><p><strong>*3.5) Inspecting IPsec authentication*</strong></p>
-<p>Now let&#8217;s show how IPsec prevents non-authenticated nodes to</p>
-</div></blockquote>
-<p>communicate. Disable IPsec by running the following commands, <em>on Bob,
+<p><strong>*3.5) Inspecting IPsec authentication*</strong></p>
+<p>Now let&#8217;s show how IPsec prevents non-authenticated nodes to
+communicate. Disable IPsec by running the following commands, <em>on Bob,
 as root</em>:</p>
 <div class="highlight-python"><div class="highlight"><pre>/etc/init.d/racoon stop
 setkey -F
@@ -1830,8 +1832,7 @@ setkey -FP
 </div>
 <p>Then, try to ping Alice from Bob, or vice-versa. You will see that
 packets do not flow now.</p>
-<blockquote>
-<div><strong>*3.6) Inspecting packets without IPsec*</strong></div></blockquote>
+<p><strong>*3.6) Inspecting packets without IPsec*</strong></p>
 <p>Now let&#8217;s show how, without IPsec, the payload is not kept private.
 Disable IPsec, <em>on Alice, as root</em>:</p>
 <div class="highlight-python"><div class="highlight"><pre>/etc/init.d/racoon stop
@@ -1851,15 +1852,16 @@ of tcpdump):</p>
 </pre></div>
 </div>
 <p>On Bob, you should now see tcpdump output that looks like this:</p>
-<blockquote>
-<div>11:46:10.258390 IP ip-192-168-10-10.ec2.internal &gt; ip-192-168-10-20.ec2.internal:
+<div class="highlight-python"><div class="highlight"><pre>11:46:10.258390 IP ip-192-168-10-10.ec2.internal &gt; ip-192-168-10-20.ec2.internal:
 ICMP echo request, id 6107, seq 5, length 64
-0x0000: 4500 0054 0000 4000 4001 a53a c0a8 0a0a E..T..&#64;.&#64;..:....
+0x0000: 4500 0054 0000 4000 4001 a53a c0a8 0a0a E..T..@.@..:....
 0x0010: c0a8 0a14 0800 e859 17db 0005 825e 9b51 .......Y.....^.Q
 0x0020: 0000 0000 aeed 0300 0000 0000 dead beef ................
 0x0030: dead beef dead beef dead beef dead beef ................
 0x0040: dead beef dead beef dead beef dead beef ................
-0x0050: dead beef</div></blockquote>
+0x0050: dead beef
+</pre></div>
+</div>
 <p>And you can discern the &#8220;deadbeef&#8221; pattern in the packet now that it
 is no longer encrypted by IPsec.</p>
 </div>

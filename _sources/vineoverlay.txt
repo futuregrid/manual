@@ -50,7 +50,7 @@ can verify that the image is available using::
     $ ./bin/cloud-client.sh --list --conf conf/foxtrot.conf
     ...
     [Image] ' centos-5.5-x64-vine.gz '           Read only
-            Modified: Jul 5 2011 @ 14:40   Size: 676457559 bytes (~645 MB)
+    Modified: Jul 5 2011 @ 14:40   Size: 676457559 bytes (~645 MB)
     ...
 
 Launch two VMs (one on sierra, and one on foxtrot)::

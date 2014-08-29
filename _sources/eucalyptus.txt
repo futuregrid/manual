@@ -18,39 +18,43 @@ Eucalyptus provides services such as the AWS Compliant Walrus and a user
 interface for managing users and images. The aim of this tutorial is to
 give users an introduction of how to interact with Eucalyptus using the
 Eucalyptus EC2 Interface
-(`Euca2ools <https://launchpad.net/euca2ools>`__). A more detailed
-documentation can be found in the `Eucalyptus
-Website <http://www.eucalyptus.com/eucalyptus-cloud/iaas>`__. A detailed
-user guide is also available
-`here <http://www.eucalyptus.com/sites/all/modules/pubdlcnt/pubdlcnt.php?file=/sites/all/files/docs/latest/ug.pdf&nid=296>`__.
+(`Euca2ools <https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#shared/euca2ools_section.html>`__). Complete 
+documentation can be found at the `Eucalyptus
+Website <https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#shared/index.html>`__. A detailed
+user guide is available
+`here <https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#shared/user_section.html>`__.
 
-
-As of May 15, 2012, FutureGrid is using `Eucalyptus version
-3.1 <http://www.eucalyptus.com/eucalyptus-cloud/iaas/features>`__ which
-requires `euca2ools
-2.1.2 <http://www.eucalyptus.com/download/euca2ools>`__ and python > 2.4
-(available by modules on india). Make sure to load the
-euca2ools module::
+As of May 1, 2014, FutureGrid is using `Eucalyptus version 3.4
+<https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#shared/index.html>`__
+on sierra.futuregrid.org. This version of Eucalyptus requires
+`euca2ools 3.0.2
+<https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#shared/euca2ools_section.html>`__.
+After logging in to sierra, make sure to load the euca2ools module::
 
     $ module load euca2ools
 
-before using Eucalyptus. `euca2ools
-2.1.2 <http://www.eucalyptus.com/download/euca2ools>`__ is part of
-Eucalyptus Enterprise package. However, the source is available
-`here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
+before using Eucalyptus. `euca2ools 3.0.2
+<https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#shared/euca2ools_section.html>`__
+is part of Eucalyptus installation packages for CentOS 6 and RHEL 6
+described `here
+<https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#install-guide/installing_euca_release.html>`__
+
+Source code installation for other platforms is available `here
+<http://downloads.eucalyptus.com/software/euca2ools/3.0/source/euca2ools-3.0.2.tar.gz>`__
+
 
 
 Account Setup
 --------------------
 
-Eucalyptus 3.1 accounts are provisioned for all FutureGrid users with a
+Eucalyptus 3.4 accounts are provisioned for all FutureGrid users with a
 valid portal account and project affiliation. There is no need to apply
 for Eucalyptus accounts separately.
 
 Obtaining Credentials
 
 -  Credentials files are created by default and placed in your home
-   directory under *.futuregrid* folder on india.  There are separate
+   directory under *.futuregrid* folder on sierra.  There are separate
    credentials for each FutureGrid project. For instance, if you are
    part of FutureGrid project numbers 100 and 200, there will be two
    folders (fg100 and fg200) in *.futuregrid/eucalyptus*. Each project
@@ -58,19 +62,15 @@ Obtaining Credentials
    fg100:username and fg200:username in Eucalyptus are two different
    identities, but they are tied to the same FutureGrid user.
 
-   *NOTICE:* Due to an compatibility problem introduced during the
-   upgrade to the Eucalyptus 3.1 system, accessing the GUI dashboard of
-   Eucalyptus on india is temporarily unavailable. However, your credential
-   will be in place so you can execute the steps of this tutorial using euca2ools.
+-  Find your credential zip file in 
+   $HOME/.futuregrid/eucalyptus/fgNNN::
 
--  Find your credential zip file in cd
-   $HOME/.futuregrid/eucalyptus/fgprojectnumber::
-
-           $ unzip euca3-{username}-{cluster}-fgprojectnumber.zip  
+       $ cd $HOME/.futuregrid/eucalyptus/fgNNN
+       $ unzip euca34-{cluster}-fgNNN-{username}.zip  
 
 -  Apply the eucarc file::
 
-       source eucarc
+       $ source eucarc
 
 -  If you want to add Eucalyptus environment variables to your .bashrc
    then, do this: (if you are planning to switch between different cloud
@@ -84,99 +84,108 @@ Obtaining Credentials
 Resources Overview
 ----------------------
 
-Eucalyptus is available to FutureGrid Users on the India
+Eucalyptus is available to FutureGrid Users on the Sierra
 cluster. As we will see later, when we instantiate a Virtual Machine
 (VM) we must select the type of VM Image that we are going to
 use. The VM Image types available are:
 
-India::
+Sierra::
 
-    AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
-    AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
-    AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
-    AVAILABILITYZONE    |- c1.medium    0170 / 0171   1   2048     7
-    AVAILABILITYZONE    |- m1.large    0091 / 0094   2   5120    10
-    AVAILABILITYZONE    |- m1.xlarge    0073 / 0075   2   6000    15
-    AVAILABILITYZONE    |- c1.xlarge    0044 / 0047   4   9216    20
+    INSTANCETYPE    Name         CPUs  Memory (MB)  Disk (GB)  Used / Total  Used %
+    INSTANCETYPE    m1.small        1          256          5     1 /    24      4%
+    INSTANCETYPE    t1.micro        1          256          5     1 /    24      4%
+    INSTANCETYPE    m1.medium       1          512         10     1 /    12      8%
+    INSTANCETYPE    c1.medium       2          512         10     1 /    12      8%
+    INSTANCETYPE    m1.large        2          512         10     1 /    12      8%
+    INSTANCETYPE    m1.xlarge       2         1024         10     1 /    12      8%
+    INSTANCETYPE    c1.xlarge       2         2048         10     1 /    12      8%
+    INSTANCETYPE    m2.xlarge       2         2048         10     1 /    12      8%
 
 
 Testing Your Setup
 ----------------------
 
-Use euca-describe-availability-zones to test the setup::
+Use ``euca-describe-availability-zones`` to test the setup::
 
-        $ ssh portalname@india.futuregrid.org
+        $ ssh portalname@sierra.futuregrid.org
         Last login: Fri May 11 06:39:02 2012 from 129-79-49-230.dhcp-bl.indiana.edu
 
-        Welcome to India.FutureGrid.Org
+        Welcome to sierra.futuregrid.org
 
-        torque/2.5.5 version 2.5.5 loaded
+        torque/2.4.8 version 2.4.8 loaded
         moab version 5.4.0 loaded 
       
         
 ::
         
         $ module load euca2ools
-        euca2ools version 2.1.2 loaded
+        euca2ools version 3.0.2 loaded
 
 ::
 
-        $ euca-version
-        euca2ools 2.1.2 (Limbo)
+        (euca2ools) $ euca-version
+        euca2ools 3.0.2 (Sparta)
 
 ::
 
-        $ source .futuregrid/eucalyptus/fgprojectnumber/eucarc
-        $ euca-describe-availability-zones
-        AVAILABILITYZONE  euca3india  149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
+        (euca2ools) $ source .futuregrid/eucalyptus/fgNNN/eucarc
+        (euca2ools) $ euca-describe-availability-zones
+        AVAILABILITYZONE        euca34sierra    198.202.120.44 arn:euca:eucalyptus:euca34sierra:cluster:cc-s38/
 
 Available Images
 ----------------------------------------------------------------------
 
-List the existing images using euca-describe-images::
+List the existing images using ``euca-describe-images``. Remember you
+must use the ``--all`` option to see public images that you don't
+own::
 
-        $ euca-describe-images 
+        (euca2ools) $ euca-describe-images --all
 
-	IMAGE    emi-1C8C3ADF futuregrid/ubuntu-12.04.img.manifest.xml 458299102773    available    ...
-        IMAGE    ...
-
+        IMAGE   eki-19543879    fg-kernel/vmlinuz-3.13.0-29-generic.manifest.xml ...
+        IMAGE   eki-7EA73854    fg-kernel/vmlinuz-2.6.32-431.17.1.el6.x86_64.manifest.xml ...
+        IMAGE   emi-763C3C2D    fg-image/20140618-euca-centos-6_5.manifest.xml ...
+        IMAGE   emi-F7473A3B    fg-image/20140616-euca-ubuntu-14_04.manifest.xml ...
+        IMAGE   eri-13F63599    fg-ramdisk/initrd.img-3.13.0-29-generic.manifest.xml ...
+        IMAGE   eri-1E5C3571    fg-ramdisk/initramfs-2.6.32-431.17.1.el6.x86_64.img.manifest.xml ...
+        ...
         
-This command may take quite a bit of time as there are currently many images available. On sierra, we observed more than 40 seconds before the command returned.
+Note, if you omit the --all option you will only see your images (not
+other images, even if they are public). This differs from the behavior
+of previous versions.
  
-Currently the following images have been known to work
+Currently the following machine images have been known to work
 
-
-* emi-663637CB
+* emi-763C3C2D
 
   * OS: CentOS release 6.5
-  * Flavors: m1.medium, m1.large, c1.xlarge, m1.xlarge, m2.xlarge
+  * Flavors: m1.small
   * username: cloud-user
 
-* emi-EBEC3D28
+* emi-F7473A3B
 
   * OS: Ubuntu 14.04 LTS
-  * Flavors: c1.xlarge, m1.large, m1.xlarge, m2.xlarge
+  * Flavors: m1.small
   * username: ubuntu
 
-
+Out of consideration for other users, please use the smallest "flavor" that meets your needs. Resources are limited.
 
 
 Image Deployment
 --------------------
 
-Before deploying a VM, you need to create at least one key pair. This
-key pair will be injected into the VM, allowing you to SSH into the
-instance. This is done using the euca-add-keypair command::
+Before running a VM instance, you need to create at least one key
+pair. This key pair will be injected into the VM, allowing you to SSH
+into the instance. This is done using the ``euca-add-keypair`` command::
 
-        $ euca-add-keypair $USER-key   > $USER-key.pem
-
+    $ euca-add-keypair $USER-key   > $USER-key.pem
 
 Fix the permissions on the generated private key::
 
-        $ chmod 0600 $USER-key.pem 
+    $ chmod 0600 $USER-key.pem 
 
-When executing the euca-add-keypair command you will however run into
-problems. To see if you have done this, please cat the key with::
+When executing the ``euca-add-keypair`` command you may run into problems
+if you reuse a key name.  To see if you have done this, please cat the
+key with::
 
     $ cat $USER-key.pem
 
@@ -188,178 +197,224 @@ things should be fine. However, if you see::
 
     CreateKeyPairType: Keypair already exists: gvonlasz-key: Could not execute JDBC batch update
 
-You have created the key multiple times and you may encounter
-problems later on. The best thing to do is to check if your key is
-already  in the keypair list. This can 
-such as::
+You have already created a keypair with that name in your project.
+You can check if your key is already in the keypair list::
 
-        $ euca-describe-keypairs
+    $ euca-describe-keypairs
 
-If it is, you probably have uploaded it already. If you need to create
-a new key however, you can delete the old one by::
+This will list all the keypairs in your project. If you need to create
+a new key, you can delete the old one by::
 
-        $ euca-delete-keypair $USER-key
+    $ euca-delete-keypair $USER-key
 
-After that you naturally need to create a new one as described above.
+After that you can create a new one as described above.
 
-Now you can start a VM using one of the pre-existing images.  We have uploaded an ubuntu image for you that you can find out more
-about with::
+Now you can start a VM using one of the pre-existing images.  We have
+provided images based on CentOS 6.5 and Ubuntu 14.04. You can find
+these images with::
 
-   Ubuntu 12.04.3 LTS (Precise Pangolin)
-   $ euca-describe-images | fgrep futuregrid\/ubuntu
+   $ euca-describe-images --all | fgrep fg-image
 
+It will show you an id starting with the prefix "emi-".::
 
-It will show you an id starting with the prefix "emi-"::
+    IMAGE   emi-763C3C2D    fg-image/20140618-euca-centos-6_5.manifest.xml  663263781684    available       public  x86_64  machine eki-7EA73854       eri-1E5C3571            instance-store  paravirtualized
+    IMAGE   emi-F7473A3B    fg-image/20140616-euca-ubuntu-14_04.manifest.xml        663263781684    available       public  x86_64  machine eki-19543879       eri-13F63599            instance-store  paravirtualized
 
-    Ubuntu 12.04.3 LTS (Precise Pangolin)
-    IMAGE    emi-1C8C3ADF   futuregrid/ubuntu-12.04.img.manifest.xml ...
+Note that the image name is formatted with the date and linux
+distribution name (centos or ubuntu) and version.  As we are
+continually updating images as security updates are released, the
+details in the examples here may differ from what you see.
 
-we use this id in the next step. Use the
-euca-run-instances command to start the VM::
+We use the emi id in the next step. Use the ``euca-run-instances`` command
+to start the VM::
 
-        $ euca-run-instances -k $USER-key -n 1 -t c1.medium emi-1C8C3ADF 
+    $ euca-run-instances -k $USER-key -n 1 -t m1.small emi-763C3C2D
+    RESERVATION     r-F8BD3F92   597941386389    default
+    INSTANCE        i-B2EF473E   emi-763C3C2D    0.0.0.0 0.0.0.0 pending $USER-key   0   m1.small   2014-06-23T18:53:09.216Z   euca34sierra   eki-7EA73854   eri-1E5C3571   monitoring-disabled   0.0.0.0 0.0.0.0   instance-store   paravirtualized
 
-        RESERVATION     r-4E730969      $USER-key    $USER-key-default
-        INSTANCE        i-4FC40839      emi-1C8C3ADF   0.0.0.0 0.0.0.0 pending userkey   2010-07-20T20:35:47.015Z   eki-743D3CFA   eri-4E163AA8
       
-The euca-describe-instances command can be used to check the status
-of the request. The following image was assigned an ip address and is
-starting up, as demonstrated by the "pending" status::
+The initial state of the machine instance will be "pending" while it
+is being provisioned and starting up. The ``euca-describe-instances``
+command can be used to check the status of the request. The following
+image was assigned an ip address and is starting up, as demonstrated
+by the "pending" status::
 
-        $ euca-describe-instances 
+  $ euca-describe-instances 
 
-        RESERVATION     r-4E730969      $USER-key    default
-        INSTANCE        i-4FC40839      emi-63F93D41    149.165.146.153 10.0.2.194      pending         userkey         0       
-                  m1.small        2010-07-20T20:35:47.015Z        india   eki-743D3CFA    eri-4E163AA8
+    RESERVATION     r-F8BD3F92   597941386389    default
+    INSTANCE        i-B2EF473E   emi-763C3C2D    198.202.120.101 10.128.74.140   pending $USER-test-key   0   m1.small  2014-06-23T18:53:09.216Z euca34sierra    eki-7EA73854    eri-1E5C3571   monitoring-disabled  198.202.120.101 10.128.74.140   instance-store   paravirtualized
 
 Once started, the status will change to "running"::
 
-        $ euca-describe-instances
+    $ euca-describe-instances
 
-        RESERVATION     r-4E730969      $USER-key    default
-        INSTANCE        i-4FC40839       emi-1C8C3ADF    149.165.146.153 10.0.2.194      running         userkey         0       
-                  m1.small        2010-07-20T20:35:47.015Z        india   eki-743D3CFA    eri-4E163AA8
+    RESERVATION     r-F8BD3F92   597941386389    default
+    INSTANCE        i-B2EF473E   emi-763C3C2D    198.202.120.101 10.128.74.140   running $USER-test-key   0   m1.small  2014-06-23T18:53:09.216Z euca34sierra    eki-7EA73854    eri-1E5C3571   monitoring-disabled  198.202.120.101 10.128.74.140   instance-store   paravirtualized
 
 If you need to delete a deployed VM, you can use the
-euca-terminate-instances command::
+``euca-terminate-instances`` command with the instance id::
 
-           $ euca-terminate-instances i-4FC40839
+           $ euca-terminate-instances i-B2EF473E
+
 
 Logging Into the VM
 -----------------------
 
-Create rules to allow access to the VM over ssh and to allow ping
-
-    $ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
-    $ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
-
 The ssh private key that was generated earlier can now be used to
-login to the VM::
+login to the VM. We are using the CentOS image so we log in as the
+user ``cloud-user``::
 
-        $ ssh -i $USER-key.pem ubuntu@149.165.146.153
+    $ ssh -i $USER-key.pem cloud-user@10.128.74.140
+    [cloud-user@ip-10-128-74-140 ~]$
 
-        # uname -a
+Note, if you are using the Ubuntu 14.04 image, you will need to use
+the username ``ubuntu`` instead of ``cloud-user``.
 
-         Linux localhost 2.6.27.21-0.1-xen #1 SMP   2009-03-31 14:50:44 +0200 x86_64 x86_64 x86_64 GNU/Linux
+If you see a message something like::
+
+    Warning: Identity file $USER-key.pem not accessible: No such file or directory.
+
+this likely means that you are in a directory other than where your
+key file is saved. Change to the directory containing your key file,
+or use a fully-qualified path in the ``-i`` argument
+
+    [cloud-user@ip-10-128-74-140 ~]$ uname -a
+    Linux ip-10-128-74-140 2.6.32-431.17.1.el6.x86_64 #1 SMP Wed May 7 23:32:49 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+
+
+Shutting down the VM
+-----------------------
+When you are finished with your instance, terminate it to release resources for other users::
+
+    $ euca-terminate-instances i-B2EF473E
+
+You may continue to see your instance in a "terminated" state in the
+output of ``euca-describe-instances`` for a period of time after you
+terminate it. This is normal.
+
 
 VM Network Info
 -------------------
 
-The VM itself is visible from outside using the VM public IP. The
-internal network will show the VM private IP address::
+Note that each VM instance has a public IP address (starting with
+``198.202``) and a private IP address (starting with ``10.128``). If
+you need to access your VM from outside the sierra login node, you
+will need to use the public IP address. These IP addresses are listed
+in the output of the ``euca-describe-instances`` command.
 
-        # /sbin/ifconfig
+On the VM, the network will show only the VM private IP address::
 
-        eth0    Link encap:Ethernet  HWaddr D0:0D:33:14:06:40  
-                inet addr:10.0.2.194  Bcast:10.0.2.255  Mask:255.255.255.192
+    [cloud-user@ip-10-128-74-140 ~]$ ip addr show eth0
+    2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+        link/ether d0:0d:b2:ef:47:3e brd ff:ff:ff:ff:ff:ff
+        inet 10.128.74.140/27 brd 10.128.74.159 scope global eth0
+        inet6 fe80::d20d:b2ff:feef:473e/64 scope link 
+           valid_lft forever preferred_lft forever
+
 
 Image Management
 --------------------
 
-We will use the example ubuntu 10 image to test uploading images.
-Download the gzipped tar ball::
+Please take care to only install images that you create yourself or
+obtain from trustworthy sources. You are responsible for the images
+you use on FutureGrid resources. Any instances that are detetermined
+to contain malware, or to be spamming, or attacking other systems on
+the network, etc. will be terminated without notice and deleted.
 
-        $ wget http://cloud-images.ubuntu.com/releases/precise/release/ubuntu-12.04-server-cloudimg-amd64.tar.gz
+Eucalyptus provides several "starter" images in their `github
+repository
+<https://github.com/eucalyptus/eucalyptus/wiki/Starter-Images>`__. We
+will use one of these to demonstrate basic image management. For more
+image management information see the `Image Tasks section of the
+Eucalyptus documentation
+<https://www.eucalyptus.com/docs/eucalyptus/3.4/index.html#image-guide/img_task_intro.html>`__
 
-Uncompress and untar the archive::
+We will use the Fedora 20 image. Note that we have found that some of
+the other images at this site do not actually work.
 
-        $ tar zxf ubuntu-12.04-server-cloudimg-amd64.tar.gz
+The following steps are executed on the sierra login node. Be sure you
+have run ``module load euca2ools`` and ``source eucarc`` before
+proceeding.
 
-Bundle the image with a kernel and a ramdisk using the
-euca-bundle-image command. In this example, we will use the xen
-kernel already registered. euca-describe-images returns the kernel
-and ramdisk IDs that we need::
+First download the image archive::
 
-        $ euca-bundle-image -i   precise-server-cloudimg-amd64.img --kernel eki-78EF12D2 --ramdisk   eri-5BB61255
+  $ wget  http://emis.eucalyptus.com/starter-emis/euca-fedora20-fedora-2013.12.18-x86_64.tgz
 
-        Checking image
-        Tarring image
-        Encrypting image
-        Splitting image...
-        Part:   precise-server-cloudimg-amd64.img.part.0
-        Part:   precise-server-cloudimg-amd64.img.part.1
-        Part:   precise-server-cloudimg-amd64.img.part.2
-        Part:   precise-server-cloudimg-amd64.img.part.3
-        Part:   precise-server-cloudimg-amd64.img.part.4
-        Part:   precise-server-cloudimg-amd64.img.part.5
-        Part:   precise-server-cloudimg-amd64.img.part.6
-        Part:   precise-server-cloudimg-amd64.img.part.7
-        Part:   precise-server-cloudimg-amd64.img.part.8
-        Part:   precise-server-cloudimg-amd64.img.part.9
-        Part:   precise-server-cloudimg-amd64.img.part.10
-        Part:   precise-server-cloudimg-amd64.img.part.11
-        Part:   precise-server-cloudimg-amd64.img.part.12
-        Part:   precise-server-cloudimg-amd64.img.part.13
-        Part:   precise-server-cloudimg-amd64.img.part.14
-        Part:   precise-server-cloudimg-amd64.img.part.15
-        Part:   precise-server-cloudimg-amd64.img.part.16
-        Generating manifest   /tmp/precise-server-cloudimg-amd64.img.manifest.xml
+Uncompress it::
 
-Use the generated manifest file to upload the image to Walrus::
+  $ tar xzf euca-fedora20-fedora-2013.12.18-x86_64.tgz
 
-        $ euca-upload-bundle -b ubuntu-image-bucket   -m /tmp/precise-server-cloudimg-amd64.img.manifest.xml
+We can see that this archive includes kernel, ramdisk, and root partiton images::
 
-        Checking bucket:   ubuntu-image-bucket
-        Creating bucket:   ubuntu-image-bucket
-        Uploading manifest   file
-        Uploading part:   precise-server-cloudimg-amd64.img.part.0
-        Uploading part:   precise-server-cloudimg-amd64.img.part.1
-        Uploading part:   precise-server-cloudimg-amd64.img.part.2
-        Uploading part:   precise-server-cloudimg-amd64.img.part.3
-        Uploading part:   precise-server-cloudimg-amd64.img.part.4
-        Uploading part:   precise-server-cloudimg-amd64.img.part.5
-        Uploading part:   precise-server-cloudimg-amd64.img.part.6
-        Uploading part:   precise-server-cloudimg-amd64.img.part.7
-        Uploading part:   precise-server-cloudimg-amd64.img.part.8
-        Uploading part:   precise-server-cloudimg-amd64.img.part.9
-        Uploading part:   precise-server-cloudimg-amd64.img.part.10
-        Uploading part:   precise-server-cloudimg-amd64.img.part.11
-        Uploading part:   precise-server-cloudimg-amd64.img.part.12
-        Uploading part:   precise-server-cloudimg-amd64.img.part.13
-        Uploading part:   precise-server-cloudimg-amd64.img.part.14
-        Uploading part:   precise-server-cloudimg-amd64.img.part.15
-        Uploading part:   precise-server-cloudimg-amd64.img.part.16
-        Uploaded image as   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
+  $ tree euca-fedora20-fedora
+  euca-fedora20-fedora
+  |-- euca-fedora20-fedora-2013.12.18-x86_64.img
+  `-- kvm-kernel
+      |-- initramfs-3.11.10-301.fc20.x86_64.img
+      `-- vmlinuz-3.11.10-301.fc20.x86_64
 
-Register the uploaded image::
+Eucalyptus restricts kernel image registration to administrators, so
+we have provided the kernel and ramdisk as public images. 
 
-        $ euca-register   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml
+We will need to bundle the image, kernel and ramdisk, upload the
+bundle, and register it. When uploading the bundle, you must specify a
+Walrus bucket with the ``-b`` argument to ``euca-upload-bundle``. The
+buckets fg-image, fg-ramdisk, and fg-kernel are reserved for
+FutureGrid administrative use. We suggest using your Portal username
+or project as a bucket name.
 
-        IMAGE   emi-FFC3154F
+First we will find our kernel and ramdisk images::
+
+  $ euca-describe-images --all | grep fg-kernel
+  ...
+  IMAGE   eki-1FC235EF    fg-kernel/vmlinuz-3.11.10-301.fc20.x86_64.manifest.xml  663263781684    available       public  x86_64  kernel    instance-store
+
+  $ euca-describe-images --all | grep fg-ramdisk
+  ...
+  IMAGE   eri-7F3A3ACC    fg-ramdisk/initramfs-3.11.10-301.fc20.x86_64.img.manifest.xml   663263781684    available       public  x86_64  ramdisk    instance-store
+
+We'll use the 3.11.10 kernel and ramdisk which matches what was in the
+image archive we downloaded.::
+
+  $ euca-bundle-image -i euca-fedora20-fedora/euca-fedora20-fedora-2013.12.18-x86_64.img --kernel eki-1FC235EF --ramdisk eri-7F3A3ACC --arch x86_64
+  Wrote manifest /var/tmp/bundle-Hf3IL2/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
+
+Use the generated xml manifest to upload the bundle. Remember to use
+your own username or project as bucket name (``-b`` argument)::
+
+  $ euca-upload-bundle -b fg82 -m /var/tmp/bundle-Hf3IL2/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
+  Uploaded fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml
+
+Finally, register the image::
+
+  $ euca-register fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml -a x86_64 -n fc-20-image
+  IMAGE   emi-59A4353C
 
 The returned image ID can now be used to start instances with
-euca-run-instances as described earlier. euca-describe-images also
-shows the new image now::
+``euca-run-instances`` as described earlier (for this image you will
+need to log in as user *fedora*). ``euca-describe-images`` shows this
+as a private image now::
 
-        $ euca-describe-images 
+  $ euca-describe-images
+  ...
+  IMAGE   emi-59A4353C    fg82/euca-fedora20-fedora-2013.12.18-x86_64.img.manifest.xml    597941386389    available       private x86_64  machine    eki-1FC235EF    eri-7F3A3ACC    instance-store  paravirtualized
 
-        IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml $USER-key available public   x86_64 machine eri-5BB61255 eki-78EF12D2 
-        IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine 
-          ...
+To remove an image, first deregister it, then delete the bundle. The
+argument value to use for ``-p`` is the prefix of the image manifest
+name (everything before the .manifest.xml suffix)::
 
-You can also delete your images::
+  $ euca-deregister emi-59A4353C
 
-    $ euca-deregister emi-FFC3154F
+  $ euca-delete-bundle -b fg82 -p euca-fedora20-fedora-2013.12.18-x86_64.img
+
+
+Volume Management
+------------------
+
+The Eucalyptus support website has a good introductory guide to
+`creating and attaching a volume.
+<https://support.eucalyptus.com/hc/en-us/articles/200686945-How-to-create-and-attach-a-volume>`__
+
 
 Status of Deployments
 ---------------------

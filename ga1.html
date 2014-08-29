@@ -410,9 +410,11 @@
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#available-images">5.7.4. Available Images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-deployment">5.7.5. Image Deployment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.7.6. Logging Into the VM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.7. VM Network Info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.8. Image Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.9. Status of Deployments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#shutting-down-the-vm">5.7.7. Shutting down the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.8. VM Network Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.9. Image Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#volume-management">5.7.10. Volume Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.11. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -696,8 +698,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.6. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.7. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">13.11. GA1</a></li>
@@ -1067,9 +1071,11 @@
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#available-images">5.7.4. Available Images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-deployment">5.7.5. Image Deployment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#logging-into-the-vm">5.7.6. Logging Into the VM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.7. VM Network Info</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.8. Image Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.9. Status of Deployments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#shutting-down-the-vm">5.7.7. Shutting down the VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#vm-network-info">5.7.8. VM Network Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#image-management">5.7.9. Image Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#volume-management">5.7.10. Volume Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="eucalyptus.html#status-of-deployments">5.7.11. Status of Deployments</a></li>
 </ul>
 </li>
 </ul>
@@ -1353,8 +1359,10 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.6. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.7. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">13.11. GA1</a></li>
@@ -1456,15 +1464,13 @@ several FutureGrid tutorials.</p>
 computer, and go through basic interactions with the appliance:
 accessing the appliance, copying files, and submission of a simple job
 for execution on remote Grid appliances using Condor.</p>
-<p><strong>Prerequisites:</strong></p>
-<blockquote>
-<div><ol class="arabic simple">
+<p><strong>Prerequisites:</strong>:</p>
+<ol class="arabic simple">
 <li>Intel/AMD-based desktop or laptop computer</li>
 <li>512MB or more memory</li>
 <li>Privileges to install virtual machine software (VMware,
 VirtualBox, or KVM) if not already installed on your computer</li>
 </ol>
-</div></blockquote>
 <p><strong>Hands-on Tutorial</strong>:</p>
 <p>This tutorial is maintained at the Grid Appliance portal. See&nbsp;<a class="reference external" href="http://www.grid-appliance.org/wiki/index.php/Grid_Appliance_Tutorial">Grid
 Appliance

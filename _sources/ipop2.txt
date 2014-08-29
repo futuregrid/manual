@@ -24,7 +24,7 @@ This tutorial provides step-by-step instructions for deploying a
 minimal independent P2P overlay upon which you can run IP-over-P2P
 (IPOP) virtual private networks. This tutorial is a follow-up to the
 `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__, which
+tutorial <http://manual.futuregrid.org/ipop1.html>`__, which
 guides you through the process of connecting two VMs by using a public
 P2P overlay that runs on `PlanetLab <http://www.planetlab.org>`__
 resources. In this follow-up tutorial, you will learn how to deploy your
@@ -36,7 +36,7 @@ Prerequisites:
 ~~~~~~~~~~~~~~
 
 -  It is a pre-requisite that you have gone through the \ `introductory
-   IPOP tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__
+   IPOP tutorial <http://manual.futuregrid.org/ipop1.html>`__
 -  Basic knowledge of Unix/Linux command line tools
 
 
@@ -48,7 +48,7 @@ Step 1: Bringing up Alice and Bob VMs 
 The first step in this tutorial is to deploy at least two virtual
 machines which will be connected by an IPOP virtual network. Please
 follow the instructions of the \ `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ before you
+tutorial <http://manual.futuregrid.org/ipop1.html>`__ before you
 continue; is assumed you have started two VMs "Alice" and "Bob" as
 described in that tutorial before proceeding to the next step.
 
@@ -56,8 +56,7 @@ described in that tutorial before proceeding to the next step.
 Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The instructions of the \ `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ work by
+The instructions of the `introductory IPOP tutorial <http://manual.futuregrid.org/ipop1.html>`__ work by
 connecting Alice and Bob through an IPOP configuration where the P2P
 overlay runs on PlanetLab. You will now disconnect the two VMs from this
 IPOP network before you configure them to connet through a different P2P
@@ -80,7 +79,7 @@ you can bootstrap your independent IPOP system - we will refer to this
 third VM as "Pam" in the rest of the tutorial.
  
 Any of the options described in the \ `introductory IPOP
-tutorial <https://portal.futuregrid.org/tutorials/ipop1>`__ work
+tutorial <http://manual.futuregrid.org/ipop1.html>`__ work
 (FutureGrid, EC2, VMware) will work here, as long as the "Pam" VM can be
 reached by both "Alice" and "Bob" through the Internet. In general,
 "Pam" should be a machine deployed with a public IP interface (e.g. in
@@ -104,10 +103,9 @@ Step 4: Configure Pam to run P2P Bootstrapping Overlay
 
 
 First, download a zip archive with template configuration files and
-scripts prepared for this tutorial, *on Pam, as root:*
+scripts prepared for this tutorial, *on Pam, as root*::
  
-  wget
-`http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip <http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap_demo.zip>`__
+  wget http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip
   apt-get install unzip
   unzip bootstrap\_demo.zip
  
@@ -124,7 +122,7 @@ parameters: a P2P namespace string, the IP\_Pam address, and a port.
    choose another number if you'd like. 
 
 | Configure these parameters by running \ *on Pam, as root, and
-replacing Namespace and IP\_Pam as appropriate:*
+replacing Namespace and IP\_Pam as appropriate*::
 
 ./bootstrap\_demo\_prepare.sh P2PNamespace IP\_Pam 40000
 
@@ -153,11 +151,12 @@ endpoints. Now run the P2P bootstrapping code with this configuration,
 as follows:
 
 (Note: this command first installs mono, if it's not already
-installed on the VM, which may take a few minutes to complete):
+installed on the VM, which may take a few minutes to complete)::
 
-  ./run\_bootstrap\_node.sh ./bootstrap.config
+./run\_bootstrap\_node.sh ./bootstrap.config
 
- Step 5: Configure Alice and Bob to use Pam as P2P overlay
+
+Step 5: Configure Alice and Bob to use Pam as P2P overlay
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  
@@ -169,8 +168,7 @@ Download configuration files for this tutorial::
 
   mkdir tmp
   cd tmp
-  wget
-  `http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip <http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap_demo.zip>`__
+  wget http://www.acis.ufl.edu/~renato/ipopdemo/bootstrap/bootstrap\_demo.zip
   unzip bootstrap\_demo.zip
  
 For the following command, ***make sure you use the same exact
@@ -199,7 +197,7 @@ Pam, and is independent of PlanetLab.
 
 Step 7: (Optional) Advanced topics
  
- 7.1) Inspecting the P2P network
+7.1) Inspecting the P2P network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  

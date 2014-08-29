@@ -90,7 +90,7 @@ attached on /dev/sda2. If you require more disk space, you can do the
 following to format and to mount it. In our example, we format it and
 mount it to /tmp.
 
- Note: DO NOT format /dev/sda1. This is the main partition containing
+Note: DO NOT format /dev/sda1. This is the main partition containing
 the OS::
 
     root@master:~/# fdisk -l | grep '^Disk'
