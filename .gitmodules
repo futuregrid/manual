@@ -1,0 +1,4 @@
+[submodule "doc/build/html"]
+	path = doc/build/html
+	url = git@github.com:futuregrid/manual.git
+	branch = gh-pages
