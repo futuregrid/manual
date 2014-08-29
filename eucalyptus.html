@@ -1713,6 +1713,14 @@ INSTANCE        i-B2EF473E   emi-763C3C2D    198.202.120.101 10.128.74.140   run
 </div>
 <div class="section" id="logging-into-the-vm">
 <h2><a class="toc-backref" href="#id6">5.7.6. Logging Into the VM</a><a class="headerlink" href="#logging-into-the-vm" title="Permalink to this headline">¶</a></h2>
+<<<<<<< HEAD
+=======
+<p>Create rules to allow access to the VM over ssh and to allow ping:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ euca-authorize -P tcp -p 22 -s 0.0.0.0/0   default
+$ euca-authorize -P icmp -t -1:-1 -s 0.0.0.0/0 default
+</pre></div>
+</div>
+>>>>>>> f1011a65e35ea754d682668f9f0f08259a728612
 <p>The ssh private key that was generated earlier can now be used to
 login to the VM. We are using the CentOS image so we log in as the
 user <tt class="docutils literal"><span class="pre">cloud-user</span></tt>:</p>
