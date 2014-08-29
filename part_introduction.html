@@ -32,7 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="FutureGrid 0.1 documentation" href="index.html" />
     <link rel="next" title="1.1. Preface" href="preface.html" />
-    <link rel="prev" title="13.14. SSH the wrong way ( DO NOT USE THIS TUTORIAL)" href="wrong-ssh.html" />
+    <link rel="prev" title="13.7. SSH the wrong way ( DO NOT USE THIS TUTORIAL)" href="wrong-ssh.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -569,13 +569,13 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="tutorials.html#one-click-twister-k-means-on-eucalyptus-futuregrid">2.9.3. One-click Twister K-means on Eucalyptus FutureGrid</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id1">2.9.3.1. Introduction</a></li>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id2">2.9.3.2. Prerequisite</a></li>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id3">2.9.3.3. Login to india.futuregrid.org</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id2">2.9.3.1. Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id3">2.9.3.2. Prerequisite</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id4">2.9.3.3. Login to india.futuregrid.org</a></li>
 <li class="toctree-l5"><a class="reference internal" href="tutorials.html#download-and-unzip-the-twisteroneclick-zip-package">2.9.3.4. Download and unzip the “twisterOneClick.zip” package</a></li>
 <li class="toctree-l5"><a class="reference internal" href="tutorials.html#run-twister-one-click-sh">2.9.3.5. Run twister-one-click.sh</a></li>
 <li class="toctree-l5"><a class="reference internal" href="tutorials.html#verify-results-in-the-standard-output-of-the-scripts">2.9.3.6. Verify results in the standard output of the scripts</a></li>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id4">2.9.3.7. Extensions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id5">2.9.3.7. Extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="tutorials.html#virtual-appliances">2.9.4. Virtual Appliances</a><ul>
@@ -659,69 +659,51 @@
 <li class="toctree-l3"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipop1.html">13.2. IPOP (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#prerequisites">13.2.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-1-deploying-vms-to-be-connected-by-ipop">13.2.2. Step 1: Deploying VMs to be connected by IPOP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-1-deploying-a-vm-on-futuregrid-using-nimbus">13.2.2.1. Option 1: Deploying a VM on FutureGrid Using Nimbus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-2-deploying-a-vm-on-futuregrid-using-openstack">13.2.2.2. Option 2: Deploying a VM on FutureGrid Using OpenStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-3-deploying-a-vm-on-amazon-ec2">13.2.2.3. Option 3: Deploying a VM on Amazon EC2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-4-deploying-a-vm-on-your-computer-vmware-virtualbox">13.2.2.4. Option 4: Deploying a VM on your computer (VMware, VirtualBox)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-2-establishing-ipop-connectivity-between-two-vms">13.2.3. Step 2: Establishing IPOP connectivity between two VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-3-securing-communications-between-alice-and-bob">13.2.4. Step 3: Securing communications between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#troubleshooting-and-for-more-information">13.2.5. Troubleshooting and for more information</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipop1.html">13.9. IPOP (IP-over-P2P)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#prerequisites">13.9.1. Prerequisites:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-1-deploying-vms-to-be-connected-by-ipop">13.9.2. Step 1: Deploying VMs to be connected by IPOP</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-1-deploying-a-vm-on-futuregrid-using-nimbus">13.9.2.1. Option 1: Deploying a VM on FutureGrid Using Nimbus</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-2-deploying-a-vm-on-futuregrid-using-openstack">13.9.2.2. Option 2: Deploying a VM on FutureGrid Using OpenStack</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-3-deploying-a-vm-on-amazon-ec2">13.9.2.3. Option 3: Deploying a VM on Amazon EC2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-4-deploying-a-vm-on-your-computer-vmware-virtualbox">13.9.2.4. Option 4: Deploying a VM on your computer (VMware, VirtualBox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipop2.html">13.3. IPOP2 (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#prerequisites">13.3.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-1-bringing-up-alice-and-bob-vms">13.3.2. Step 1: Bringing up Alice and Bob VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.3.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.3.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.3.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.3.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.3.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.3.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.3.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-2-establishing-ipop-connectivity-between-two-vms">13.9.3. Step 2: Establishing IPOP connectivity between two VMs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-3-securing-communications-between-alice-and-bob">13.9.4. Step 3: Securing communications between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#troubleshooting-and-for-more-information">13.9.5. Troubleshooting and for more information</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ipop2.html">13.10. IPOP2 (IP-over-P2P)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#prerequisites">13.10.1. Prerequisites:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-1-bringing-up-alice-and-bob-vms">13.10.2. Step 1: Bringing up Alice and Bob VMs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ga9.html">13.12. GA9</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ga9.html#summary">13.12.1. Summary:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ga9.html#prerequisites">13.12.2. Prerequisites:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ga9.html#deploying-a-grid-appliance-on-futuregrid">13.12.2.1. Deploying a Grid Appliance on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga9.html">13.5. GA9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#summary">13.5.1. Summary:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#prerequisites">13.5.2. Prerequisites:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ga9.html#deploying-a-grid-appliance-on-futuregrid">13.5.2.1. Deploying a Grid Appliance on FutureGrid</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="hpss.html">13.13. HPSS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wrong-ssh.html">13.14. SSH the wrong way ( DO NOT USE THIS TUTORIAL)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#requirement-for-windows-users">13.14.1. Requirement for Windows Users</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#instructions-for-both-windows-and-unix-users">13.14.2. Instructions for both Windows and Unix users</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#generate-ssh-key">13.14.2.1. Generate SSH key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#check-your-ssh-key">13.14.2.2. Check your ssh key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#copy-the-content-of-your-public-key">13.14.2.3. Copy the content of your public key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#upload-the-key-to-the-futuregrid-portal">13.14.2.4. Upload the key to the FutureGrid Portal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key">13.14.2.5. Testing your ssh key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key-on-hotel">13.14.2.6. Testing your ssh key on Hotel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpss.html">13.6. HPSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrong-ssh.html">13.7. SSH the wrong way ( DO NOT USE THIS TUTORIAL)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#requirement-for-windows-users">13.7.1. Requirement for Windows Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#instructions-for-both-windows-and-unix-users">13.7.2. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#generate-ssh-key">13.7.2.1. Generate SSH key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#check-your-ssh-key">13.7.2.2. Check your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#copy-the-content-of-your-public-key">13.7.2.3. Copy the content of your public key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#upload-the-key-to-the-futuregrid-portal">13.7.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key">13.7.2.5. Testing your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key-on-hotel">13.7.2.6. Testing your ssh key on Hotel</a></li>
 </ul>
 </li>
 </ul>
@@ -1230,13 +1212,13 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="tutorials.html#one-click-twister-k-means-on-eucalyptus-futuregrid">2.9.3. One-click Twister K-means on Eucalyptus FutureGrid</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id1">2.9.3.1. Introduction</a></li>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id2">2.9.3.2. Prerequisite</a></li>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id3">2.9.3.3. Login to india.futuregrid.org</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id2">2.9.3.1. Introduction</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id3">2.9.3.2. Prerequisite</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id4">2.9.3.3. Login to india.futuregrid.org</a></li>
 <li class="toctree-l5"><a class="reference internal" href="tutorials.html#download-and-unzip-the-twisteroneclick-zip-package">2.9.3.4. Download and unzip the “twisterOneClick.zip” package</a></li>
 <li class="toctree-l5"><a class="reference internal" href="tutorials.html#run-twister-one-click-sh">2.9.3.5. Run twister-one-click.sh</a></li>
 <li class="toctree-l5"><a class="reference internal" href="tutorials.html#verify-results-in-the-standard-output-of-the-scripts">2.9.3.6. Verify results in the standard output of the scripts</a></li>
-<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id4">2.9.3.7. Extensions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="tutorials.html#id5">2.9.3.7. Extensions</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="tutorials.html#virtual-appliances">2.9.4. Virtual Appliances</a><ul>
@@ -1320,69 +1302,51 @@
 <li class="toctree-l3"><a class="reference internal" href="gpu.html#c-means-clustering-using-cuda-on-gpu">3.3. C-means clustering using CUDA on GPU</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html">4. Getting Started</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#step-4-explore-the-documentation">4.1. Step 4: Explore the Documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#training-and-education">4.2. Training and Education</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipop1.html">13.2. IPOP (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#prerequisites">13.2.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-1-deploying-vms-to-be-connected-by-ipop">13.2.2. Step 1: Deploying VMs to be connected by IPOP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-1-deploying-a-vm-on-futuregrid-using-nimbus">13.2.2.1. Option 1: Deploying a VM on FutureGrid Using Nimbus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-2-deploying-a-vm-on-futuregrid-using-openstack">13.2.2.2. Option 2: Deploying a VM on FutureGrid Using OpenStack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-3-deploying-a-vm-on-amazon-ec2">13.2.2.3. Option 3: Deploying a VM on Amazon EC2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-4-deploying-a-vm-on-your-computer-vmware-virtualbox">13.2.2.4. Option 4: Deploying a VM on your computer (VMware, VirtualBox)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#guide-to-using-the-futuregrid-portal">5. Guide to Using the FutureGrid Portal</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#functions-of-the-futuregrid-portal">5.1. Functions of the FutureGrid Portal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#a-futuregrid-user-dashboard">5.2. A FutureGrid User Dashboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#update-project-information-and-add-results">5.3. Update Project Information and Add Results</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#contribute-to-the-futuregrid-community">5.4. Contribute to the FutureGrid Community</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fgmanual.html#file-upload-and-attachment-to-a-page">5.5. File Upload and Attachment to a Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-2-establishing-ipop-connectivity-between-two-vms">13.2.3. Step 2: Establishing IPOP connectivity between two VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-3-securing-communications-between-alice-and-bob">13.2.4. Step 3: Securing communications between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop1.html#troubleshooting-and-for-more-information">13.2.5. Troubleshooting and for more information</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#alamo">6. Alamo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#iaas-infrastructure-as-a-service">7. IaaS - Infrastructure as a Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#using-iaas-clouds-on-futuregrid">8. Using IaaS Clouds on FutureGrid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#management-services">9. Management Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fgmanual.html#commandline-clients">10. Commandline clients</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ipop1.html">13.9. IPOP (IP-over-P2P)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#prerequisites">13.9.1. Prerequisites:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-1-deploying-vms-to-be-connected-by-ipop">13.9.2. Step 1: Deploying VMs to be connected by IPOP</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-1-deploying-a-vm-on-futuregrid-using-nimbus">13.9.2.1. Option 1: Deploying a VM on FutureGrid Using Nimbus</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-2-deploying-a-vm-on-futuregrid-using-openstack">13.9.2.2. Option 2: Deploying a VM on FutureGrid Using OpenStack</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-3-deploying-a-vm-on-amazon-ec2">13.9.2.3. Option 3: Deploying a VM on Amazon EC2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ipop1.html#option-4-deploying-a-vm-on-your-computer-vmware-virtualbox">13.9.2.4. Option 4: Deploying a VM on your computer (VMware, VirtualBox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ipop2.html">13.3. IPOP2 (IP-over-P2P)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#prerequisites">13.3.1. Prerequisites:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-1-bringing-up-alice-and-bob-vms">13.3.2. Step 1: Bringing up Alice and Bob VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.3.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.3.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.3.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.3.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.3.7. Step 6: Send messages between Alice and Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.3.8. 7.1) Inspecting the P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.3.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-2-establishing-ipop-connectivity-between-two-vms">13.9.3. Step 2: Establishing IPOP connectivity between two VMs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#step-3-securing-communications-between-alice-and-bob">13.9.4. Step 3: Securing communications between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop1.html#troubleshooting-and-for-more-information">13.9.5. Troubleshooting and for more information</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ipop2.html">13.10. IPOP2 (IP-over-P2P)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#prerequisites">13.10.1. Prerequisites:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-1-bringing-up-alice-and-bob-vms">13.10.2. Step 1: Bringing up Alice and Bob VMs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-2-disconnecting-alice-and-bob-vms-from-the-planetlab-p2p-overlay">13.10.3. Step 2: Disconnecting Alice and Bob VMs from the PlanetLab P2P overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-3-deploy-pam-a-p2p-bootstrapping-vm">13.10.4. Step 3: Deploy Pam, a P2P Bootstrapping VM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-4-configure-pam-to-run-p2p-bootstrapping-overlay">13.10.5. Step 4: Configure Pam to run P2P Bootstrapping Overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-5-configure-alice-and-bob-to-use-pam-as-p2p-overlay">13.10.6. Step 5: Configure Alice and Bob to use Pam as P2P overlay</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#step-6-send-messages-between-alice-and-bob">13.10.7. Step 6: Send messages between Alice and Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#inspecting-the-p2p-network">13.10.8. 7.1) Inspecting the P2P network</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.10.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.11. GA1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ga9.html">13.12. GA9</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ga9.html#summary">13.12.1. Summary:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ga9.html#prerequisites">13.12.2. Prerequisites:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="ga9.html#deploying-a-grid-appliance-on-futuregrid">13.12.2.1. Deploying a Grid Appliance on FutureGrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga9.html">13.5. GA9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#summary">13.5.1. Summary:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga9.html#prerequisites">13.5.2. Prerequisites:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ga9.html#deploying-a-grid-appliance-on-futuregrid">13.5.2.1. Deploying a Grid Appliance on FutureGrid</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="hpss.html">13.13. HPSS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wrong-ssh.html">13.14. SSH the wrong way ( DO NOT USE THIS TUTORIAL)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#requirement-for-windows-users">13.14.1. Requirement for Windows Users</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#instructions-for-both-windows-and-unix-users">13.14.2. Instructions for both Windows and Unix users</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#generate-ssh-key">13.14.2.1. Generate SSH key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#check-your-ssh-key">13.14.2.2. Check your ssh key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#copy-the-content-of-your-public-key">13.14.2.3. Copy the content of your public key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#upload-the-key-to-the-futuregrid-portal">13.14.2.4. Upload the key to the FutureGrid Portal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key">13.14.2.5. Testing your ssh key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key-on-hotel">13.14.2.6. Testing your ssh key on Hotel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpss.html">13.6. HPSS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrong-ssh.html">13.7. SSH the wrong way ( DO NOT USE THIS TUTORIAL)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#requirement-for-windows-users">13.7.1. Requirement for Windows Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wrong-ssh.html#instructions-for-both-windows-and-unix-users">13.7.2. Instructions for both Windows and Unix users</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#generate-ssh-key">13.7.2.1. Generate SSH key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#check-your-ssh-key">13.7.2.2. Check your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#copy-the-content-of-your-public-key">13.7.2.3. Copy the content of your public key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#upload-the-key-to-the-futuregrid-portal">13.7.2.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key">13.7.2.5. Testing your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wrong-ssh.html#testing-your-ssh-key-on-hotel">13.7.2.6. Testing your ssh key on Hotel</a></li>
 </ul>
 </li>
 </ul>
@@ -1412,7 +1376,7 @@
               
                 
   <li>
-    <a href="wrong-ssh.html" title="Previous Chapter: 13.14. SSH the wrong way ( DO NOT USE THIS TUTORIAL)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 13.14. SSH the w...</span>
+    <a href="wrong-ssh.html" title="Previous Chapter: 13.7. SSH the wrong way ( DO NOT USE THIS TUTORIAL)"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; 13.7. SSH the wr...</span>
     </a>
   </li>
   <li>

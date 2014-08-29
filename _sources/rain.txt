@@ -345,9 +345,9 @@ Register your image in different infrastructures
 
 You now have your image ready to be registered in the different
 FutureGrid infrastructures. To use OpenStack
-(:portal:`tutorial <tutorials/openstack>`) and
+(`tutorial <openstackhavana.html>`) and
 Eucalyptus
-(:portal:`tutorial <tutorials/eucalyptus3>`),
+(`tutorial <eucalyptus.html>`),
 you need to indicate the location of you novarc and eucarc file.
 
 Register the image in Openstack
@@ -380,17 +380,17 @@ Using your Registered Image
 
 .. todo:: fix the links in this section
 
-OpenStack (more info in  :portal:`tutorials/openstack <tutorials/openstack>`)::
+OpenStack (more info in  `openstack <openstackhavana.html>`)::
 
     source novarc
     euca-run-instance -k <keyname> <ami-ID>
 
-Eucalyptus (more info in  :portal:`tutorials/eucalyptus3 <https://portal.futuregrid.org/tutorials/eucalyptus3>`)::
+Eucalyptus (more info in  `eucalyptus <eucalyptus.html>`)::
 
     source eucarc
     euca-run-instance -k <keyname> <ami-ID>
 
-HPC (more info in  :portal:`tutorials/hpc <https://portal.futuregrid.org/tutorials/hpc>`):
+HPC (more info in  :portal:`hpc <hpc.html>`):
 
 Provision a machine with our image and go into Interactive mode (you
 are logged into the machine)::
@@ -400,8 +400,6 @@ are logged into the machine)::
 Provision two machines with our image and execute an script::
 
     qsub -l os=<ami-ID> -l nodes=2:ppn=8 myscript.sh
-
-
 
 
 RAIN Manual Pages

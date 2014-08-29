@@ -61,20 +61,19 @@ Tutorial Topic 1: Cloud Provisioning Platforms
 
    - :ref:`Connecting private network VMs across Nimbus clusters using ViNe <_s_vine>` [novice]
    - :ref:`IPOP1: (IP-over-P2P) Virtual Network Introductory Tutorial <s-vine-overlay>` [novice]
-   - TODO :portal:`IPOP1: IP-overP2P <tutorials/ipop1>` [intermediate] 
+   - TODO `IPOP1: IP-overP2P <tutorials/ipop1.html>`_ [intermediate] 
      
      - See the section in the manual: :ref:`s-ipop1`.
 
-   - TODO :portal:`IPOP2: Deploying your Own P2P Overlay for IPOP
-     VPNs <tutorials/ipop2>` [intermediate] 
+   - TODO `IPOP2: Deploying your Own P2P Overlay for IPOP VPNs <ipop2.html>` [intermediate] 
 
      - See the section in the manual: :ref:`s-ipop2`
 
 Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 -----------------------------------------------------
 
--  :portal:`Running Hadoop as a batch job using
-   MyHadoop <tutorials/running-hadoop-batch-job-using-myhadoop>` [novice]
+-  `Running Hadoop as a batch job using
+   MyHadoop <hadoop.html>`_ [novice]
 -  :portal:`Running SalsaHadoop (one-click Hadoop) on HPC
    environment <salsahadoop-futuregrid-hpc>` [beginner]
 -  :portal:`Running Twister on HPC
@@ -94,49 +93,45 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach
 -----------------------------------------------------------------------
 
--  :portal:`Running a Grid Appliance on your
-   desktop <tutorials/ga1>`  [novice]
--  :portal:`Running a Grid Appliance on
-   FutureGrid <http://portal.futuregrid.org/tutorials/ga9>` [novice]
+-  `Running a Grid Appliance on your
+   desktop <ga1.html>`_  [novice]
+-  `Running a Grid Appliance on
+   FutureGrid <ga9.html>` [novice]
 -  `Running an OpenStack virtual appliance on
-   FutureGrid <http://portal.futuregrid.org/tutorials/os1>`__ [novice]
+   FutureGrid <http://portal.futuregrid.org/tutorials/os1>`_ [novice]
 -  `Running Condor tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga8>`__ [novice]
--  :portal:`Running MPI tasks on the Grid
-   Appliance <tutorials/mp1>` [novice]
+   Appliance <http://portal.futuregrid.org/tutorials/ga8>`_ [novice]
+-  `Running MPI tasks on the Grid
+   Appliance <tutorials/mp1.html>` [novice]
 -  `Running Hadoop tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga10>`__ [novice]
--  :portal:`Deploying virtual private Grid Appliance clusters using
-   Nimbus <tutorials/ga4>`
+   Appliance <ga10.html>`_ [novice]
+-  `Deploying virtual private Grid Appliance clusters using
+   Nimbus <ga4.html>`
    [intermediate]
--  :portal:`Building an educational appliance from Ubuntu
-   10.04 <tutorials/ga3>` [intermediate]
--  :portal:`Customizing and registering Grid Appliance images using
-   Eucalyptus <tutorials/ga7>`
+-  `Building an educational appliance from Ubuntu
+   10.04 <ga3.html>` [intermediate]
+-  `Customizing and registering Grid Appliance images using
+   Eucalyptus <ga7.html>`
    [intermediate]
 
 Tutorial Topic 4: High Performance Computing
 --------------------------------------------
 
--  `Basic High Performance Computing </tutorials/hpc>`__ [novice]
--  `Running Hadoop as a batch job using
-   MyHadoop </tutorials/running-hadoop-batch-job-using-myhadoop>`__
+-  `Basic High Performance Computing <hpc.html>`__ [novice]
+-  `Running Hadoop as a batch job using MyHadoop <hadoop.html>`_
    [novice]
--  `Performance Analysis with Vampir </manual/performance/vampir>`__
+-  :portal:`Performance Analysis with Vampir </manual/performance/vampir>`
    [advanced]
--  `Instrumentation and tracing with
-   VampirTrace </manual/vampir/trace>`__ [advanced]
+-  :portal:`Instrumentation and tracing with VampirTrace </manual/vampir/trace>` [advanced]
 
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  :portal:`Running interactive
-   experiments <tutorials/interactive-experiment-management>`
+-  `Running interactive experiments <experiment-interactive.html>`_
    [novice]
 -  :portal:`Running workflow experiments using
    Pegasus <tutorials/workflow-experiment-management>` [novice]
--  :portal:`Pegasus 4.1 on FutureGrid
-   Tutorial <tutorials/pegasus-on-futuregrid-tutorial>` [novice]
+-  `Pegasus on FutureGrid <pegasus.html>`_ [novice]
 
 Tutorial Topic 6: Image Management and Rain
 -------------------------------------------
@@ -149,15 +144,15 @@ Tutorial Topic 6: Image Management and Rain
 -  :portal:`Manual Image
    Customization <manually-customize-image>`
    [advanced]
--  :portal:`Register your VirtualBox image in
-   OpenStack <register-virtual-box-image-openstack>`
+-  `Register your VirtualBox image in
+   OpenStack <os-virtualbox.html>_`
    [intermediate]
 
 Tutorial Topic 7:  Storage
 --------------------------
 
 -  :portal:`Using HPSS from
-   FutureGrid <tutorials/hpss>` [novice]
+   FutureGrid <hpss.html>` [novice]
 
 Other Tutorials and Educational Materials
 -----------------------------------------
@@ -307,9 +302,6 @@ Prerequisite
 #. FutureGrid HPC account, please apply via \ :portal:`FutureGrid
    portal <user/register>` and :portal:`request a
    HPC account <request-hpc-account>`.
-#. FutureGrid Eucalyptus account, please see \ :portal:`FutureGrid Eucalyptus
-   Tutorial <tutorials/eucalyptus>` for
-   detailed instructions.
 #. FutureGrid Eucalyptus credentials zip file
    (euca2-[username]-x509.zip) stored under user's home directory.
 #. Key pair created and added for use with Eucalyptus virtual
@@ -458,7 +450,7 @@ Eucalyptus:
 ^^^^^^^^^^^^^^^^^^
 
 Please refer to :portal:`FutureGrid tutorial
-GA7 <tutorials/ga7>`.
+GA7 <ga7.html>`_.
 
 .. todo:: errors in portal page reported, seems not to work
 
@@ -492,17 +484,17 @@ Editing tips for the table:
       - FutureGrid system(s) available   
       - Appliance ID                                          
       - Installed                  
-    * - :portal:`Grid Appliance <tutorials/ga9>`                              
+    * - `Grid Appliance <ga9.html>_`                              
       - Self-configures Condor/MPI/Hadoop virtual clusters for training/education                       
       - alamo, india                         
       - grid-appliance-2.05.03.gz (alamo), emi-E4ED1880 (india)   
       - panoat                       
-    * - :portal:`OpenStack Appliance <tutorials/os1>`                         
+    * - `OpenStack Appliance <os1.html>`_                         
       - Deploys a single-node OpenStack compute virtual cloud                                           
       - alamo                                
       - openstack-ubuntu-10.10-amd64.img                          
       - menghan                      
-    * - :portal:`ViNe Appliance <contrib/simple-vine-tutorial>`               
+    * - `ViNe Appliance <vineintro.html>`               
       - Deploys the ViNe virtual network overlay to connect
 	private-address VMs in sierra and foxtrot   
       - sierra, foxtrot                      
