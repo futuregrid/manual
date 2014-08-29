@@ -96,7 +96,6 @@ clean:
 	find . -name "*~" -exec rm {} \;  
 	find . -name "*.pyc" -exec rm {} \;  
 	rm -rf build dist *.egg-info *~ #*
-	cd doc; make clean
 	rm -rf *.egg-info
 
 #############################################################################
@@ -124,7 +123,7 @@ html: sphinx
 	echo done
 
 sphinx:
-	cd doc; make html
+	fab doc.html
 
 #############################################################################
 # PUBLISH GIT HUB PAGES
