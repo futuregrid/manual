@@ -3,6 +3,7 @@
    .. contents::
       :local:
 
+.. _s-iaas:
 
 IaaS
 ======================================================================
@@ -50,8 +51,7 @@ stacks.
 
 For tutorials on getting started with OpenStack, see:
 
--  :portal:`Using OpenStack Nova on
-   FutureGrid <tutorials/openstack>` [novice]
+-  `Using OpenStack Nova on FutureGrid <openstackhavana>`_ [novice]
 
    -  This tutorial targets all users of OpenStack in FutureGrid; it
       describes how to get started with FutureGrid OpenStack resources.
