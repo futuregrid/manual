@@ -37,7 +37,7 @@ Prerequisites:
 Deploying a Grid Appliance on FutureGrid
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| This tutorial assumes you have an account on FutureGrid and have gone
+This tutorial assumes you have an account on FutureGrid and have gone
 through the prerequisite tutorials for Nimbus or OpenStack. Once you
 complete these simple steps, later on you will have the ability to
 deploy your own private Grid appliance clusters on FutureGrid resources,

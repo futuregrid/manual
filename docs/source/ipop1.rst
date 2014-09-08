@@ -48,12 +48,11 @@ Prerequisites:
    following tutorials is required:
 
    -  `Using Nimbus
-      on FutureGrid <https://portal.futuregrid.org/tutorials/nimbus>`__
+      on FutureGrid <http://manual.futuregrid.org/nimbus.html>`__
    -  `Using OpenStack
-      on FutureGrid <https://portal.futuregrid.org/tutorials/openstack>`__
+      on FutureGrid <http://manual.futuregrid.org/openstackhavana.html>`__
 
  
-^
 
 Step 1: Deploying VMs to be connected by IPOP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,7 +80,7 @@ Option 1: Deploying a VM on FutureGrid Using Nimbus
 A Nimbus image with Ubuntu 12.04 is available on TACC's cluster
 (Alamo) with KVM virtualization technology. The image name is
 "ubuntu12.04.x64.kvm" and it is available to all FutureGrid users. Use
-the `Nimbus cloud-client.sh client <https://portal.futuregrid.org/tutorials/nimbus>`__ as
+the `Nimbus cloud-client.sh client <http://manual.futuregrid.org/nimbus.html>`__ as
 described in the Nimbus tutorial to deploy a virtual machine on Alamo::
 
   cloud-client.sh --conf conf/alamo.conf --run --name ubuntu12.04.x64.kvm --hours 24
@@ -194,12 +193,11 @@ And you should see an output that looks like this::
        RX bytes:56314 (56.3 KB) TX bytes:32314 (32.3 KB)
 
 ***2.2) Bring up IPOP in the "Bob" VM***
-| 
+
 Now using another terminal, ssh into the "Bob" VM and repeat the same
 process you did for Alice (again, as root)::
 
-   wget
-  `http://www.acis.ufl.edu/~renato/ipopdemo/ipop\_demo\_prepare\_debian.zip <http://www.acis.ufl.edu/~renato/ipopdemo/ipop_demo_prepare_debian.zip>`__
+  wget http://www.acis.ufl.edu/~renato/ipopdemo/ipop\_demo\_prepare\_debian.zip
   apt-get install unzip
   unzip ipop\_demo\_prepare\_debian.zip
 

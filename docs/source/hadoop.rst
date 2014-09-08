@@ -309,7 +309,7 @@ References
 
   * Much of this information is copied from 
     `The MyHadoop Instalation Instructions <https://portal.futuregrid.org/sites/default/files/myHadoop.pdf>`__ 
-  * A screnncast of a subset of the information presented her is
+  * A screencast of a subset of the information presented her is
     avalable at |video-hadoop|.
 
 

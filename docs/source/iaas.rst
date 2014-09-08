@@ -3,6 +3,7 @@
    .. contents::
       :local:
 
+.. _s-iaas:
 
 IaaS
 ======================================================================
@@ -27,8 +28,7 @@ supports "classic" virtual machines.
 
 For tutorials on getting started with Nimbus, see:
 
--  :portal:`Using Nimbus on
-   FutureGrid <tutorials/nimbus>` [novice]
+-  `Using Nimbus on FutureGrid <nimbus.html>`_ [novice]
 -  :portal:`Nimbus One-click Cluster
    Guide <tutorials/nm2>` [intermediate]
 
@@ -50,14 +50,12 @@ stacks.
 
 For tutorials on getting started with OpenStack, see:
 
--  :portal:`Using OpenStack Nova on
-   FutureGrid <tutorials/openstack>` [novice]
+-  `Using OpenStack Nova on FutureGrid <openstackhavana.html>`_ [novice]
 
    -  This tutorial targets all users of OpenStack in FutureGrid; it
       describes how to get started with FutureGrid OpenStack resources.
 
--  :portal:`Running an OpenStack virtual appliance on
-   FutureGrid <tutorials/os1>` [novice]
+-  `Running an OpenStack virtual appliance on FutureGrid <os1.html>`_ [novice]
 
    -  This tutorial targets users interested in education and training
       on OpenStack internals; it describes how to run a virtual, private
@@ -80,8 +78,7 @@ stacks.
 
 For tutorials on getting started with Eucalyptus, see:
 
--  :ref:`Using Eucalyptus on
-   FutureGrid <s-eucalyptus>` [novice]
+-  :ref:`Using Eucalyptus on FutureGrid <s-eucalyptus>` [novice]
 
 
 
@@ -99,15 +96,9 @@ For tutorials on getting started with educational virtual appliances,
 see:
 
 
--  :portal:`Running a Grid Appliance on your
-   desktop <tutorials/ga1>`  [novice]
--  :portal:`Running a Grid Appliance on
-   FutureGrid <tutorials/ga9>` [novice]
--  :portal:`Running Condor tasks on the Grid
-   Appliance <tutorials/ga8>` [novice]
--  :portal:`Running MPI tasks on the Grid
-   Appliance <tutorials/mp1>` [novice]
--  :portal:`Running Hadoop tasks on the Grid
-   Appliance <tutorials/ga10>` [novice]
--  :portal:`Running an OpenStack virtual appliance on
-   FutureGrid <tutorials/os1>` [novice]
+-  `Running a Grid Appliance on your desktop <ga1.html>`_  [novice]
+-  `Running a Grid Appliance on FutureGrid <ga9.html>`_ [novice]
+-  `Running Condor tasks on the Grid Appliance <ga8.html>`_ [novice]
+-  `Running MPI tasks on the Grid Appliance <mp1.html>`_ [novice]
+-  `Running Hadoop tasks on the Grid Appliance <ga10.html>`_ [novice]
+-  `Running an OpenStack virtual appliance on FutureGrid <os1.html>`_ [novice]

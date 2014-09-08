@@ -57,9 +57,3 @@ the IU passphrase.
 
 -  For transferring files (*put* and *get*), search the `IU Knowledge
    Base <http://kb.iu.edu/?search=hsi>`__.
-   `‹ Storage </storage>`__ `up </storage>`__ `Status › </status>`__
-
-
-.. |image1| image:: /sites/default/files/images/nsf-logo.png
-   :target: http://www.tacc.utexas.edu/
-.. |image2| image:: /sites/default/files/u876/xsede-logo.png

@@ -96,7 +96,6 @@ clean:
 	find . -name "*~" -exec rm {} \;  
 	find . -name "*.pyc" -exec rm {} \;  
 	rm -rf build dist *.egg-info *~ #*
-	cd doc; make clean
 	rm -rf *.egg-info
 
 #############################################################################
@@ -124,7 +123,7 @@ html: sphinx
 	echo done
 
 sphinx:
-	cd doc; make html
+	fab doc.html
 
 #############################################################################
 # PUBLISH GIT HUB PAGES
@@ -149,31 +148,13 @@ tag:
 	git push
 
 
-######################################################################
-# ONLY RUN ON GH-PAGES
-######################################################################
 
-PROJECT=`basename $(PWD)`
-DIR=/tmp/$(PROJECT)
-DOC=$(DIR)/doc
+#############################################################################
+# PUBLISH GIT HUB PAGES
+###############################################################################
 
-pages: ghphtml ghpgit
-	echo done
+publish:
+	fab doc.publish
 
-ghphtml:
-	cd /tmp
-	rm -rf $(DIR)
-	cd /tmp; git clone git://github.com/$(GITREPO)/$(PROJECT).git
-	cp $(DIR)/Makefile .
-	cd $(DOC); ls; make html
-	rm -fr _static
-	rm -fr _source
-	rm -fr *.html
-	cp -r $(DOC)/build/html/* .
-
-ghpgit:
-	git add . _sources _static   
-	git commit -a -m "updating the github pages"
-	git push
-	git checkout master
-
+gh-pages: publish
+	echo "done"

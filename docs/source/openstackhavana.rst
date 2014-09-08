@@ -504,7 +504,8 @@ Alamo an older version of openstack is run.
        this password in a shell variable, but to ask for it every time
        it is needed. The link to the GUI is 
        https://openstack.uc.futuregrid.org/dashboard/ The password is
-       the same as the portal password. It only supports EC2.
+       the same as the portal password. It supports both the OpenStack
+       APIs and EC2.
    * - |image-horizon-alamo|
      - Folsom
      - `Alamo <https://openstack.futuregrid.tacc.utexas.edu/horizon>`_
