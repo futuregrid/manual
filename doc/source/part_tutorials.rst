@@ -4,7 +4,6 @@
 
 .. toctree::
 
-   tutorials_intro
    tutorials
    
 
