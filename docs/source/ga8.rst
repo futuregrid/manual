@@ -20,9 +20,9 @@ Prerequisites:
    through one of the core Grid appliance tutorials:
 
    -  `Running the Grid Appliance on your
-      desktop <tutorials/ga1.html>`__
+      desktop <http://futuregrid.github.io/manual/ga1.html>`__
    -  `Running the Grid Appliance on
-      FutureGrid <tutorials/ga9.html>`__
+      FutureGrid <http://futuregrid.github.io/manual/ga9.html>`__
 
 Set Up and Submit a Condor Job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
