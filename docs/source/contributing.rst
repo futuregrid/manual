@@ -14,14 +14,14 @@ The FG manual has been developed by many different groups and we try
 to provide a consistant set of manual pages as much as possible. The
 manual is located in the directory::
 
-  doc/source
+  docs/source
 
 Here you will find the many RST files contributed by the team members.
 To simplify editing and to keep the number of conflicts during 
 editing to a minimum it is naturally a good idea to have many such
 files. However, all of them are integrated via the file::
 
-  doc/source/index.rst
+  docs/source/index.rst
 
 into a single manual. Due to this organization it is also possible to
 create custom manuals that may suport a particular class. For example
@@ -40,7 +40,7 @@ Online Editing for Novice Editors
 If you are part of the FG manual development team you can edit the
 manaul pages online by going to:: 
 
-  https://github.com/futuregrid/manual/tree/master/doc/source
+  https://github.com/futuregrid/manual/tree/master/docs/source
 
 This will contain a directory with all the documents of the
 manual. The names of the documents you can simply find by visiting the
@@ -205,7 +205,7 @@ This may take a while, so be patient.
 
 The files will be in::
 
-   ./doc/source 
+   ./docs/source 
 
 and have an rst ending. They use
 restructured text. For more info on rst see:
@@ -281,7 +281,7 @@ make::
 
 Your index file will be in::
 
-     $ firefox ./doc/build/html/index.html
+     $ firefox ./docs/build/html/index.html
 
 On Osx you can simply say::
 

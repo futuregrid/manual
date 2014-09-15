@@ -15,13 +15,13 @@ setup:
 FILE=index
 
 watchdog:
-	watchmedo shell-command --patterns="*.rst" --recursive --command="make; open doc/build/html/$(FILE).html" . 
+	watchmedo shell-command --patterns="*.rst" --recursive --command="make; open docs/build/html/$(FILE).html" . 
 
 f: 
-	firefox doc/build/html/index.html 
+	firefox docs/build/html/index.html 
 
 view:
-	open doc/build/html/index.html
+	open docs/build/html/index.html
 
 ######################################################################
 # GIT INTERFACES
