@@ -157,7 +157,7 @@ Other Tutorials and Educational Materials
 
 -  :portal:`Additional tutorials on FutureGrid-related
    technologies <additional_tutorials>`
--  `More tutorials are available <tutorials_2>`__
+-  `More tutorials are available <tutorials_2.html>`__
 -  :portal:`FutureGrid community educational
    materials <community_edu_materials>`
 -  `CI Tutor performance
