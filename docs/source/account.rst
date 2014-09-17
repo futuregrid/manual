@@ -203,7 +203,7 @@ Here are a few tips that make it easy for you
       
 
 
-.. |image-create-accountimg| image:: /images/create-account.pdf
+.. |image-create-accountimg| image:: /images/create-accountimg.jpg
    :width: 70%
 
 
