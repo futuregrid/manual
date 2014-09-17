@@ -232,9 +232,9 @@ the members and managers. The project agreements override the
 individuals agreement. 
 
 
-|image-create-project|
+|image-create-projectimg|
 
-.. |image-create-project| image:: /images/create-project.pdf
+.. |image-create-projectimg| image:: /images/create-projectimg.jpg
    :width: 50%
 
 
