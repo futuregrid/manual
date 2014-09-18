@@ -9,12 +9,12 @@ set:
 -  export CLOUDINITD\_IAAS\_ACCESS\_KEY=<your access key>
 -  export CLOUDINITD\_IAAS\_SECRET\_KEY=<your access secret>
 -  export CLOUDINITD\_IAAS\_IMAGE='emi-5F4F1B49'
-     
+    
 
-You may have trouble registering your keys.  This is due to Eucalyptus
-not yet supporting the latest version of the EC2 API.  To circumvent
+You may have trouble registering your keys.� This is due to Eucalyptus
+not yet supporting the latest version of the EC2 API.� To circumvent
 this, create a key pair named 'futuregrid', and set the env
-*CLOUDINITD\_IAAS\_SSHKEYNAME*\ to 'futuregrid'.  Then, set the env
+*CLOUDINITD\_IAAS\_SSHKEYNAME*\ to 'futuregrid'.� Then, set the env
 *CLOUDINITD\_IAAS\_SSHKEY* to point to the private key associated with
 that key name.
 
@@ -22,42 +22,42 @@ What Happens
 ============
 
 This script uses the program cloudinit.d
-(`http://www.nimbusproject.org/doc/cloudinitd/latest/) <http://www.nimbusproject.org/doc/cloudinitd/latest/>`__. 
+(`http://www.nimbusproject.org/doc/cloudinitd/latest/) <http://www.nimbusproject.org/doc/cloudinitd/latest/>`__.�
 This is a Nimbus Platform multi-cloud tool for running cloud
-applications.  In this case, it runs a very simple 1 VM application.  It
-can launch any debian-based VM and install sshfs on it.  Then it runs
+applications.� In this case, it runs a very simple 1 VM application.� It
+can launch any debian-based VM and install sshfs on it.� Then it runs
 sshfs inside of the VM to remotely mount your FutureGrid home directory.
 
 FutureGrid Tutorial NM2 - Nimbus One-Click Cluster Guide
 ========================================================
 
- 
+�
 
 **Summary:**
 
 This tutorial demonstrates using the Nimbus cloud client to create
 auto-configured clusters of virtual machines on Nimbus.
 
- 
+�
 
 **Prerequisites:**
 
 Java 1.5+ and a working Nimbus cloud client.
 
- 
+�
 
 **Hands-On Tutorial**:
 
-This tutorial is maintained at the Nimbus website. See \ `One Click
+This tutorial is maintained at the Nimbus website. See�\ `One Click
 Clusters <http://www.nimbusproject.org/docs/current/clouds/clusters.html>`__.
 
- 
+�
 
 **Reference Material:**
 
 `Nimbus Documentation <http://www.nimbusproject.org/docs/>`__
 
- 
+�
 
 **Authors:**
 
@@ -95,7 +95,7 @@ user guide is also available
 Users get access to the Eucalyptus features using the Eucalyptus EC2
 Interface, which is only available for GNU/Linux platforms. Therefore,
 users will require a machine with a GNU/Linux installed on it.
- 
+�
 
 Eucalyptus 3
 ''''''''''''
@@ -109,7 +109,7 @@ load euca2ools/2.0.2"** before using Eucalyptus. `euca2ools
 2.0.2 <http://www.eucalyptus.com/download/euca2ools>`__ is part of
 Eucalyptus Enterprise package. However, the source is available
 `here <http://bazaar.launchpad.net/~eucalyptus-maintainers/euca2ools/euca2ools-main/revision/>`__.
- 
+�
 
 **Account Creation**
 --------------------
@@ -138,7 +138,7 @@ affiliation. There is no need to apply for accounts.
    from the dashboard, by default the system will name the file
    *euca2-{username}-x509*). We are using a slightly different naming
    scheme. The credential file will be found under the menu tab
-   *username@fgnumber *.)
+   *username@fgnumber�*.)
 
 NOTICE: Due to an incompatibility problem introduced during the
 upgrade to the Eucalyptus 3.1 system, accessing the dashboard of
@@ -149,7 +149,7 @@ credential zip file. Make sure to put it to Sierra first and then set up
 the environment as the following steps.
 Please be reminded that the credential for one cluster should/could
 not be used in another.
- 
+�
 
 |image88|
 
@@ -195,12 +195,12 @@ clusters. As we will see later, when we instantiate a Virtual Machine
 use. In this sense, the information of the VM Image types available in
 each cluster is summarized below:
 
-INDIA: 
+INDIA:�
 ^^^^^^^
 
 ::
 
-    AVAILABILITYZONE    euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
+    AVAILABILITYZONE    �euca3india    149.165.146.135 arn:euca:eucalyptus:euca3india:cluster:euca3indiaCC/
     AVAILABILITYZONE    |- vm types    free / max   cpu   ram  disk
     AVAILABILITYZONE    |- m1.small    0189 / 0192   1    512     5
     AVAILABILITYZONE    |- c1.medium    0170 / 0171   1   2048     7
@@ -440,13 +440,11 @@ List the existing images using euca-describe-images:
 
 -  The returned image ID can now be used to start instances with
    euca-run-instances as described earlier. euca-describe-images also
-   shows the new image now:
+   shows the new image now:     ::
 
-    ::
+$ euca-describe-images 
 
-        $ euca-describe-images 
-
-        IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml archit available public   x86_64 machine eri-5BB61255 eki-78EF12D2 
+IMAGE emi-FFC3154F   ubuntu-image-bucket/precise-server-cloudimg-amd64.img.manifest.xml archit available public   x86_64 machine eri-5BB61255 eki-78EF12D2 
         IMAGE emi-0B951139   centos53/centos.5-3.x86-64.img.manifest.xml           admin  available public   x86_64 machine 
           ...
 
