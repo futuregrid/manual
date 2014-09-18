@@ -452,9 +452,9 @@ they can process your request:
 
 The entire process looks as follows:
 
-|image-create-project-join|
+|image-create-project-joinimg|
 
-.. |image-create-project-join| image:: ./images/create-project-join.pdf
+.. |image-create-project-joinimg| image:: ./images/create-project-joinimg.jpg
    :width: 70%
 
 .. |image-join-screen| image:: ./images/join-screen.png
