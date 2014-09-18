@@ -59,8 +59,7 @@ configuration is correct.
 The Host List Manager also requires access to your Nimbus client
 installation so that it can determine what Nimbus virtual machines have
 been provisioned to you. You should therefore install and test the
-Nimbus client in your account on Alamo using the instructions from the
-`Nimbus Tutorial <https://portal.futuregrid.org/tutorials/nimbus>`__.
+Nimbus client in your account on Alamo using the instructions from the `Nimbus Tutorial <nimbus.html>`.
 You may find it convenient to add the bin directory of the Nimbus client
 install to your $PATH in one of your shell startup scripts (e.g.
 $HOME/.profile).
