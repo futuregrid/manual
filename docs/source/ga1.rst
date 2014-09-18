@@ -19,7 +19,6 @@ computer, and go through basic interactions with the appliance:
 accessing the appliance, copying files, and submission of a simple job
 for execution on remote Grid appliances using Condor.
 
-Â 
 
 **Prerequisites:**:
 
@@ -28,26 +27,25 @@ for execution on remote Grid appliances using Condor.
 #. Privileges to install virtual machine software (VMware,
    VirtualBox, or KVM) if not already installed on your computer
 
-Â 
 
 **Hands-on Tutorial**:
 
-This tutorial is maintained at the Grid Appliance portal. SeeÂ \ `Grid
+This tutorial is maintained at the Grid Appliance portal. See \ `Grid
 Appliance
-Tutorial <http://www.grid-appliance.org/wiki/index.php/Grid_Appliance_Tutorial>`__Â (opens
+Tutorial <http://www.grid-appliance.org/wiki/index.php/Grid_Appliance_Tutorial>`__ (opens
 in new window).
 
-Â 
+ 
 
 **Reference Material:**
 
-Presentation:Â \ `Introduction to the Grid
+Presentation: \ `Introduction to the Grid
 Appliance <http://www.grid-appliance.org/files/docs/edu-docs/GridApplianceIntro.pdf>`__
 
-Videos:Â \ `Grid Appliance YouTube
+Videos: \ `Grid Appliance YouTube
 channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__
 
-Â 
+ 
 
 **Authors:**
 
