@@ -178,7 +178,6 @@ Here are a few tips that make it easy for you
    Management <my>`.
 
 
-|image-create-account|
 
 .. list-table:: Legend
    :header-rows: 1
@@ -202,6 +201,7 @@ Here are a few tips that make it easy for you
      - Join an existing Project.
       
 
+|image-create-account|
 
 .. |image-create-accountimg| image:: ./images/create-accountimg.jpg
    :width: 70%
