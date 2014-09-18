@@ -20,7 +20,7 @@ Prerequisites:
    (Note: at this moment, this Hadoop tutorial is only available on
    Nimbus):
 
-   - :ref:`Running the Grid Appliance on FutureGrid <_s-ga9>`
+   - :ref:`Running the Grid Appliance on FutureGrid <s-ga9>`
 
 Hands-On Tutorial - Hadoop "HDFS/Map-Reduce" Quick Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
