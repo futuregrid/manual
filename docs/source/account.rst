@@ -203,7 +203,7 @@ Here are a few tips that make it easy for you
       
 
 
-.. |image-create-accountimg| image:: /images/create-accountimg.jpg
+.. |image-create-accountimg| image:: ./images/create-accountimg.jpg
    :width: 70%
 
 
@@ -454,10 +454,10 @@ The entire process looks as follows:
 
 |image-create-project-join|
 
-.. |image-create-project-join| image:: /images/create-project-join.pdf
+.. |image-create-project-join| image:: ./images/create-project-join.pdf
    :width: 70%
 
-.. |image-join-screen| image:: /images/join-screen.png
+.. |image-join-screen| image:: ./images/join-screen.png
    :width: 35%
 
 
