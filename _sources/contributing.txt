@@ -38,14 +38,13 @@ Online Editing for Novice Editors
 -----------------------------------
 
 If you are part of the FG manual development team you can edit the
-manaul pages online by going to:: 
+manual pages online by going to:: 
 
   https://github.com/futuregrid/manual/tree/master/docs/source
 
 This will contain a directory with all the documents of the
-manual. The names of the documents you can simply find by visiting the
-manual and look at the URL of the page that you like to modify and
-simply open up the corresponding rst page (e.g. replace the html with
+manual. You can find the names of the documents by visiting the
+manual, looking at the URL of the page that you would like to modify, openng up the corresponding rst page (e.g. replace the html with
 rst). Dependent on your browser you can even configure it to open the
 file in your favorite editor. Some plugins such as *It's All Text!*
 may be able to help.
@@ -54,7 +53,7 @@ may be able to help.
 
 Please consult with your browsers manual and available plugins.
 However, a better solution may be to do the
-changes in a clone locally and commit when ready. THis is documented
+changes in a clone locally and commit when ready. This is documented
 in more detail in this section.
 
 
@@ -123,16 +122,16 @@ FAQ
     whatever other text editor you like. Thus the good news is if you like to use word to edit the
     documentation you can.
 
-* I am having difficulties understanding this how can I get help?
+* I am having difficulties understanding this.How can I get help?
 
-  * Please contact Gregor von Laszewski at laszewski@gmail.com he can
+  * Please contact Gregor von Laszewski at laszewski@gmail.com. He can
     schedule an in person meeting in Bloomington, IN or a google
     hangout meeting.
  
 Publication of the Manual
 --------------------------
 
-The manual will be automatically updates once a day 
+The manual will be automatically updated once a day 
 
 Additionally you can e-mail laszewski@gmail.com for an update
 request while describing which files have been changed so a review can
@@ -398,6 +397,6 @@ Then start regording. Be careful that you wait in the rcordng till you
 see a little timer on the left quicktime needs a bit of startup time
 when recording sound and images.
 
-.. |i-quicktime-1| image:: /images/quicktime-1.png
-.. |i-quicktime-2| image:: /images/quicktime-2.png
-.. |i-quicktime-3| image:: /images/quicktime-3.png
+.. |i-quicktime-1| image:: ./images/quicktime-1.png
+.. |i-quicktime-2| image:: ./images/quicktime-2.png
+.. |i-quicktime-3| image:: ./images/quicktime-3.png

@@ -178,7 +178,6 @@ Here are a few tips that make it easy for you
    Management <my>`.
 
 
-|image-create-account|
 
 .. list-table:: Legend
    :header-rows: 1
@@ -202,8 +201,9 @@ Here are a few tips that make it easy for you
      - Join an existing Project.
       
 
+|image-create-accountimg|
 
-.. |image-create-account| image:: /images/create-account.pdf
+.. |image-create-accountimg| image:: ./images/create-accountimg.jpg
    :width: 70%
 
 
@@ -232,9 +232,9 @@ the members and managers. The project agreements override the
 individuals agreement. 
 
 
-|image-create-project|
+|image-create-projectimg|
 
-.. |image-create-project| image:: /images/create-project.pdf
+.. |image-create-projectimg| image:: ./images/create-projectimg.jpg
    :width: 50%
 
 
@@ -452,12 +452,12 @@ they can process your request:
 
 The entire process looks as follows:
 
-|image-create-project-join|
+|image-create-project-joinimg|
 
-.. |image-create-project-join| image:: /images/create-project-join.pdf
+.. |image-create-project-joinimg| image:: ./images/create-project-joinimg.jpg
    :width: 70%
 
-.. |image-join-screen| image:: /images/join-screen.png
+.. |image-join-screen| image:: ./images/join-screen.png
    :width: 35%
 
 
