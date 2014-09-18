@@ -234,7 +234,7 @@ individuals agreement.
 
 |image-create-projectimg|
 
-.. |image-create-projectimg| image:: /images/create-projectimg.jpg
+.. |image-create-projectimg| image:: ./images/create-projectimg.jpg
    :width: 50%
 
 
