@@ -57,7 +57,7 @@ Tutorial Topic 1: Cloud Provisioning Platforms
      SECTION FOR EXAMPPLE "NETWORK PROVISIONING"? ALSO THE SECTIONS
      ARE NOT FOLLOWING STANDARD SECTION CONVENTIONS.
 
-   - :ref:`Connecting private network VMs across Nimbus clusters using ViNe <s_vine>` [novice]
+   - :ref:`Connecting private network VMs across Nimbus clusters using ViNe <s-vine>` [novice]
    - :ref:`IPOP1: (IP-over-P2P) Virtual Network Introductory Tutorial <s-vine-overlay>` [novice]
    - TODO `IPOP1: IP-overP2P <tutorials/ipop1.html>`_ [intermediate] 
      
