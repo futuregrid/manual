@@ -23,6 +23,8 @@ Prerequisites:
    -  `Running the Grid Appliance on
       FutureGrid <ga9>`__
 
+:ref:`s-ga9`
+
 Hands-On Tutorial - Hadoop "HDFS/Map-Reduce" Quick Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
