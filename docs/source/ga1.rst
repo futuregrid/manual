@@ -16,11 +16,12 @@ several FutureGrid tutorials.
 
 In this tutorial you will install and use the Grid Appliance on your own
 computer, and go through basic interactions with the appliance:
-accessing the appliance, copying files, and submission of a simple job
+accessing the appliance, copying files, and submitting a simple job
 for execution on remote Grid appliances using Condor.
 
 
 **Prerequisites:**:
+======================================================================
 
 #. Intel/AMD-based desktop or laptop computer
 #. 512MB or more memory
@@ -29,6 +30,7 @@ for execution on remote Grid appliances using Condor.
 
 
 **Hands-on Tutorial**:
+======================================================================
 
 This tutorial is maintained at the Grid Appliance portal. See \ `Grid
 Appliance
@@ -38,6 +40,7 @@ in new window).
  
 
 **Reference Material:**
+======================================================================
 
 Presentation: \ `Introduction to the Grid
 Appliance <http://www.grid-appliance.org/files/docs/edu-docs/GridApplianceIntro.pdf>`__
@@ -48,6 +51,7 @@ channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__
  
 
 **Authors:**
+======================================================================
 
 Renato Figueiredo, University of Florida
 
