@@ -650,7 +650,13 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.3.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites:</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#hands-on-tutorial">13.4.2. <strong>Hands-on Tutorial</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#reference-material">13.4.3. <strong>Reference Material:</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#authors">13.4.4. <strong>Authors:</strong></a></li>
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">13.5. GA9</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">13.5.1. Summary:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">13.5.2. Prerequisites:</a><ul>
@@ -1257,7 +1263,13 @@
 <li class="toctree-l3"><a class="reference internal" href="ipop2.html#adding-fault-tolerance-by-deploying-multiple-bootstrap-nodes">13.3.9. 7.2) Adding fault tolerance by deploying multiple bootstrap nodes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites:</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#hands-on-tutorial">13.4.2. <strong>Hands-on Tutorial</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#reference-material">13.4.3. <strong>Reference Material:</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#authors">13.4.4. <strong>Authors:</strong></a></li>
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">13.5. GA9</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">13.5.1. Summary:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">13.5.2. Prerequisites:</a><ul>
@@ -1372,45 +1384,51 @@ running a variety of educational, training, and outreach activities.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2><a class="toc-backref" href="#id2">13.5.2. Prerequisites:</a><a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">ref:</th><td class="field-body">&#8216;The Introduction to the Grid</td>
+</tr>
+</tbody>
+</table>
+<p>Appliance &lt;s-ga1&gt;` tutorial    is not a requirement, but provides hands-on experience with a Grid
+appliance on your desktop.</p>
+</li>
+<li><p class="first">Depending on whether you plan to use Nimbus or OpenStack, one of the
+following tutorials is required:</p>
 <ul class="simple">
-<li>The <a class="reference external" href="https://portal.futuregrid.org/tutorials/ga1">Introduction to the Grid
-Appliance</a> tutorial
-is not a requirement, but provides hands-on experience with a Grid
-appliance on your desktop.</li>
-<li>Depending on whether you plan to use Nimbus or OpenStack, one of the
-following tutorials is required:<ul>
-<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Using Nimbus
-on&nbsp;FutureGrid</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/tutorials/openstack">Using OpenStack
-on&nbsp;FutureGrid</a></li>
-<li><a class="reference external" href="https://portal.futuregrid.org/manual/openstack/grizzly">Using OpenStack Grizzly on
-FutureGrid</a></li>
+<li><a class="reference internal" href="nimbus.html#nimbus"><em>Using Nimbus
+on?FutureGrid</em></a>
+-  <a class="reference internal" href="openstackgrizzly.html#s-openstack-grizzly"><em>Using OpenStack Grizzly on
+FutureGrid</em></a></li>
 </ul>
 </li>
 </ul>
 <div class="section" id="deploying-a-grid-appliance-on-futuregrid">
 <h3><a class="toc-backref" href="#id3">13.5.2.1. Deploying a Grid Appliance on FutureGrid</a><a class="headerlink" href="#deploying-a-grid-appliance-on-futuregrid" title="Permalink to this headline">¶</a></h3>
-<p>This tutorial assumes you have an account on&nbsp;FutureGrid&nbsp;and have gone
-through the prerequisite tutorials for Nimbus or OpenStack.&nbsp;Once you
+<p>This tutorial assumes you have an account on?FutureGrid?and have gone
+through the prerequisite tutorials for Nimbus or OpenStack.?Once you
 complete these simple steps, later on you will have the ability to
-deploy your own private Grid appliance clusters on&nbsp;FutureGrid&nbsp;resources,
+deploy your own private Grid appliance clusters on?FutureGrid?resources,
 as well as on your own resources, to use in your courses or research.</p>
 <ul>
 <li><p class="first">Using Nimbus</p>
 <p>A Nimbus Grid appliance image with all required packages has been
-created at&nbsp;TACC&#8217;s&nbsp;cluster (Alamo) with&nbsp;KVM&nbsp;virtualization technology.
+created at?TACC&#8217;s?cluster (Alamo) with?KVM?virtualization technology.
 The image name is &#8220;grid-appliance-2.05.03.gz&#8221; and it is available to
-all&nbsp;FutureGrid&nbsp;users.</p>
+all?FutureGrid?users.</p>
 <ol class="arabic">
 <li><p class="first">Use
-the&nbsp;<a class="reference external" href="https://portal.futuregrid.org/tutorials/nimbus">Nimbus&nbsp;cloud-client.sh&nbsp;client</a>&nbsp;to
+the?<cite>Nimbus?cloud-client.sh?client &lt;nimbus.html&gt;</cite>?to
 deploy a Grid appliance on Alamo:</p>
 <div class="highlight-python"><div class="highlight"><pre>./bin/cloud-client.sh --conf conf/alamo.conf --run --name grid-appliance-2.05.03.gz --hours 24
 </pre></div>
 </div>
 </li>
 <li><p class="first">Wait until Nimbus tells you the machine is running; log into the
-Grid appliance using&nbsp;ssh, with the IP address given by Nimbus
+Grid appliance using?ssh, with the IP address given by Nimbus
 (129.114.x.y in this example):</p>
 <div class="highlight-python"><div class="highlight"><pre>ssh root@129.114.x.y
 </pre></div>
@@ -1421,7 +1439,7 @@ Grid appliance using&nbsp;ssh, with the IP address given by Nimbus
 <li><p class="first">Using OpenStack on india</p>
 <ol class="arabic">
 <li><p class="first">An image with all required packages has been created; it is
-available to all&nbsp;FutureGrid&nbsp;users in the &#8220;india&#8221; cloud resource.
+available to all?FutureGrid?users in the &#8220;india&#8221; cloud resource.
 To deploy the VM, use the command below (replacing &#8220;mykey&#8221; with
 your appropriate key):</p>
 <div class="highlight-python"><div class="highlight"><pre>euca-run-instances -k mykey ami-00000177
@@ -1429,7 +1447,7 @@ your appropriate key):</p>
 </div>
 <p>Check the status of your instance as described in the OpenStack
 tutorial; once the instance has an IP address, log into it with
-ssh &nbsp;(149.165.x.y in this example):</p>
+ssh ?(149.165.x.y in this example):</p>
 <div class="highlight-python"><div class="highlight"><pre>ssh -i mykey.pem root@149.165.x.y
 </pre></div>
 </div>
@@ -1439,12 +1457,12 @@ ssh &nbsp;(149.165.x.y in this example):</p>
 <li><p class="first">Using OpenStack on sierra</p>
 <ol class="arabic">
 <li><p class="first">An image with all required packages is also available to
-all&nbsp;FutureGrid&nbsp;users in the &#8220;sierra&#8221; cloud resource. To deploy the
+all?FutureGrid?users in the &#8220;sierra&#8221; cloud resource. To deploy the
 VM, use the command:</p>
 <div class="highlight-python"><div class="highlight"><pre>nova boot --flavor m1.small --image &quot;grid-appliance/grid-appliance-2.05.04&quot; --key_name $LOGNAME-key $LOGNAME-001
 </pre></div>
 </div>
-<p>Check the status of your instance as described in the OpenStack tutorial; once the instance has an IP address, log into it with ssh &nbsp;(10.35.x.y in this example):</p>
+<p>Check the status of your instance as described in the OpenStack tutorial; once the instance has an IP address, log into it with ssh ?(10.35.x.y in this example):</p>
 <div class="highlight-python"><div class="highlight"><pre>ssh -i .ssh/$LOGNAME-key root@10.35.x.y
 </pre></div>
 </div>
@@ -1455,7 +1473,7 @@ VM, use the command:</p>
 <li><p class="first">At this point, you are connected to a Unix shell in the Grid
 appliance, and can use it to run tasks through Condor, Hadoop or MPI.
 Follow the steps outlined in the appropriate tutorial(s) found on the
-<a class="reference external" href="http://portal.futuregrid.org/tutorials">main tutorials page</a>.</p>
+<cite>main tutorials page &lt;tutorials.html&gt;</cite>.?</p>
 </li>
 </ul>
 </div>

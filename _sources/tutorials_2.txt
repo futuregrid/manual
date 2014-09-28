@@ -16,6 +16,10 @@ Pre-requisites:
 Hands-on tutorial:
   This tutorial is maintained at the Grid Appliance portal. See `FutureGrid:clientappliance <http://www.grid-appliance.org/wiki/index.php/FutureGrid:clientappliance>`__.
 
+
+.. _s-oneclick-hadoop:
+
+
 One-click Hadoop WordCount on Eucalyptus FutureGrid
 ===================================================
 
@@ -120,6 +124,7 @@ To run other MapReduce jobs, replace *run-hadoop-wordcount.sh* with
 new scripts, and change *hadoop-one-click.sh* to call the corresponding
 scripts.
 
+.. _s-oneclick-twister-k-means:
 
 One-click Twister K-means on Eucalyptus FutureGrid
 ==================================================

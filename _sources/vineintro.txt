@@ -40,6 +40,6 @@ Setup:
 
 Tutorial:
     A step-by-step tutorial on connecting VMs to ViNe overlays can be
-    found in the setcion :ref:`s-vine-overlay`.
+    found in the section :ref:`s-vine-overlay`.
 
 

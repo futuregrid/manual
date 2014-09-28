@@ -1,3 +1,5 @@
+.. _s-rain:
+
 .. sidebar:: Page Contents
 
    .. contents::
@@ -200,6 +202,8 @@ You will be interested in:
    information  `http://futuregrid.github.com/rain/configure\_futuregrid.html#setting-up-ldap <http://futuregrid.github.com/rain/configure_futuregrid.html#setting-up-ldap>`__
 -  Setting up the Image
    Repository  `http://futuregrid.github.com/rain/configure\_futuregrid.html#setting-up-the-image-repository <http://futuregrid.github.com/rain/configure_futuregrid.html#setting-up-the-image-repository>`__
+
+.. _s-manual-image-customization:
 
 Manual Image Customization
 ==========================

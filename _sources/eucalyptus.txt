@@ -276,7 +276,7 @@ If you see a message something like::
 
 this likely means that you are in a directory other than where your
 key file is saved. Change to the directory containing your key file,
-or use a fully-qualified path in the ``-i`` argument
+or use a fully-qualified path in the ``-i`` argument ::
 
     [cloud-user@ip-10-128-74-140 ~]$ uname -a
     Linux ip-10-128-74-140 2.6.32-431.17.1.el6.x86_64 #1 SMP Wed May 7 23:32:49 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
