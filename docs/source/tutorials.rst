@@ -72,7 +72,7 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 
 -  `Running Hadoop as a batch job using
    MyHadoop <hadoop.html>`_ [novice]
-- :ref: `Running SalsaHadoop (one-click Hadoop) on HPC
+-  :ref: `Running SalsaHadoop (one-click Hadoop) on HPC
    environment <s-salsa-hadoop-hpc>` [beginner]
 -  :ref:`Running Twister on HPC
    environment <s-twister-on-hpc>` [beginner]
@@ -91,31 +91,30 @@ Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach
 -----------------------------------------------------------------------
 
 -  :ref:`Running a Grid Appliance on your
-   desktop <s-ga1>`_  [novice]
+   desktop <s-ga1>`  [novice]
 -  :ref:`Running a Grid Appliance on
    FutureGrid <s-ga9>` [novice]
 -  :ref:`Running an OpenStack virtual appliance on
-   FutureGrid <s-os1>`_ [novice]
+   FutureGrid <s-os1>` [novice]
 -  :ref:`Running Condor tasks on the Grid
-   Appliance <s-ga8>`_ [novice]
+   Appliance <s-ga8>` [novice]
 -  :ref:`Running MPI tasks on the Grid
    Appliance <s-mp1>` [novice]
 -  :ref:`Running Hadoop tasks on the Grid
-   Appliance <s-ga10>`_ [novice]
+   Appliance <s-ga10>` [novice]
 -  :ref:`Deploying virtual private Grid Appliance clusters using
    Nimbus <s-ga4>`
    [intermediate]
 -  :ref:`Building an educational appliance from Ubuntu
    10.04 <s-ga3>` [intermediate]
 -  :ref:`Customizing and registering Grid Appliance images using
-   Eucalyptus <s-ga7>`
-   [intermediate]
+   Eucalyptus <s-ga7>` [intermediate]
 
 Tutorial Topic 4: High Performance Computing
 --------------------------------------------
 
--  :ref:`Basic High Performance Computing <s-hpc>`__ [novice]
--  :ref:`Running Hadoop as a batch job using MyHadoop <s-hadoop>`_
+-  :ref:`Basic High Performance Computing <s-hpc>` [novice]
+-  :ref:`Running Hadoop as a batch job using MyHadoop <s-hadoop>
    [novice]
 -  :ref:`Performance Analysis with Vampir <s-vampir>`
    [advanced]
@@ -124,8 +123,7 @@ Tutorial Topic 4: High Performance Computing
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  `Running interactive experiments <experiment-interactive.html>`_
-   [novice]
+-  `Running interactive experiments <experiment-interactive.html>' [novice]
 -  :portal:`Running workflow experiments using
    Pegasus <tutorials/workflow-experiment-management>` [novice]
 -  `Pegasus on FutureGrid <pegasus.html>`_ [novice]
@@ -134,7 +132,7 @@ Tutorial Topic 6: Image Management and Rain
 -------------------------------------------
 
 -  `Using Image Management and
-   Rain <http://futuregrid.github.com/rain/quickstart.html>`__ [novice]
+   Rain <http://futuregrid.github.com/rain/quickstart.html>` [novice]
 -  :ref:`Easy steps to generate and register an
    Image <s-rain>`
    [novice]
@@ -142,7 +140,7 @@ Tutorial Topic 6: Image Management and Rain
    Customization <s-manual-image-customization>`
    [advanced]
 -  :ref:`Register your VirtualBox image in
-   OpenStack <s-os-virtualbox>_`
+   OpenStack <s-os-virtualbox>`
    [intermediate]
 
 Tutorial Topic 7:  Storage

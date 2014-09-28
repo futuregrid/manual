@@ -1,3 +1,6 @@
+.. _s-ga7:
+
+
 **********************************************************************
 Configuring and Registering a Custom Grid Appliance on FutureGrid - Eucalyptus
 **********************************************************************
