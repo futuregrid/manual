@@ -78,14 +78,13 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
    environment <s-twister-on-hpc>` [beginner]
 -  :ref:`Running SalsaHadoop on
    Eucalyptus <s-salsa-hadoop-eucalyptus>` [intermediate]
--  :portal:`Running <tutorials/eucalyptus-and-twister-futuregrid>`\ :portal:`FG-Twister
-   on
-   Eucalyptus <tutorials/eucalyptus-and-twister-futuregrid>` [intermediate]
--  :portal:`Running One-click Hadoop WordCount on
-   Eucalyptus <tutorials/one-click-hadoop-wordcount-eucalyptus-futuregrid>`
+-  :ref:`Running FG-Twister
+   on Eucalyptus <s-eucalyptus-twister>` [intermediate]
+-  :ref:`Running One-click Hadoop WordCount on
+   Eucalyptus <s-oneclick-hadoop>`
    [beginner]
--  :portal:`Running One-click Twister K-means on
-   Eucalyptus <tutorials/one-click-twister-k-means-eucalyptus-futuregrid>`
+-  :ref:`Running One-click Twister K-means on
+   Eucalyptus <s-oneclick-twister-k-means>`
    [beginner]
 
 Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach

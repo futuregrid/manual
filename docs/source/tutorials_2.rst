@@ -16,6 +16,10 @@ Pre-requisites:
 Hands-on tutorial:
   This tutorial is maintained at the Grid Appliance portal. See `FutureGrid:clientappliance <http://www.grid-appliance.org/wiki/index.php/FutureGrid:clientappliance>`__.
 
+
+.. _s-oneclick-hadoop:
+
+
 One-click Hadoop WordCount on Eucalyptus FutureGrid
 ===================================================
 
