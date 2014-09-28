@@ -124,6 +124,7 @@ To run other MapReduce jobs, replace *run-hadoop-wordcount.sh* with
 new scripts, and change *hadoop-one-click.sh* to call the corresponding
 scripts.
 
+.. _s-oneclick-twister-k-means:
 
 One-click Twister K-means on Eucalyptus FutureGrid
 ==================================================
