@@ -20,7 +20,7 @@ accessing the appliance, copying files, and submitting a simple job
 for execution on remote Grid appliances using Condor.
 
 
-**Prerequisites:**:
+**Prerequisites**:
 ======================================================================
 
 #. Intel/AMD-based desktop or laptop computer
@@ -32,23 +32,22 @@ for execution on remote Grid appliances using Condor.
 **Hands-on Tutorial**:
 ======================================================================
 
-This tutorial is maintained at the Grid Appliance portal. See \ `Grid
+This tutorial is maintained at the Grid Appliance portal. See `Grid
 Appliance
 Tutorial <http://www.grid-appliance.org/wiki/index.php/Grid_Appliance_Tutorial>`__ (opens
 in new window).
 
- 
+
 
 **Reference Material:**
 ======================================================================
 
-Presentation: \ `Introduction to the Grid
+Presentation: `Introduction to the Grid
 Appliance <http://www.grid-appliance.org/files/docs/edu-docs/GridApplianceIntro.pdf>`__
 
-Videos: \ `Grid Appliance YouTube
+Videos: `Grid Appliance YouTube
 channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__
 
- 
 
 **Authors:**
 ======================================================================
