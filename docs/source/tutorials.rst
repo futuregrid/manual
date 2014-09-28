@@ -74,8 +74,8 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
    MyHadoop <hadoop.html>`_ [novice]
 - :ref: `Running SalsaHadoop (one-click Hadoop) on HPC
    environment <s-salsa-hadoop-hpc>` [beginner]
--  :portal:`Running Twister on HPC
-   environment <twister-futuregrid-hpc>` [beginner]
+-  :ref:`Running Twister on HPC
+   environment <s-twister-on-hpc>` [beginner]
 -  :portal:`Running SalsaHadoop on
    Eucalyptus <salsahadoop-futuregrid-cloud-eucalyptus>` [intermediate]
 -  :portal:`Running <tutorials/eucalyptus-and-twister-futuregrid>`\ :portal:`FG-Twister
