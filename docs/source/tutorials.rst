@@ -72,8 +72,8 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 
 -  `Running Hadoop as a batch job using
    MyHadoop <hadoop.html>`_ [novice]
--  :portal:`Running SalsaHadoop (one-click Hadoop) on HPC
-   environment <salsahadoop-futuregrid-hpc>` [beginner]
+- :ref: `Running SalsaHadoop (one-click Hadoop) on HPC
+   environment <s-salsa-hadoop-hpc>` [beginner]
 -  :portal:`Running Twister on HPC
    environment <twister-futuregrid-hpc>` [beginner]
 -  :portal:`Running SalsaHadoop on
