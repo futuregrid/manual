@@ -1,3 +1,5 @@
+.. _s-vampir:
+
 Vampir
 ======
 
@@ -1135,14 +1137,13 @@ Manual \ `http://www.tu-dresden.de/zih/vampirtrace <http://www.tu-dresden.de/zi
 Retrieved from
 "`https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir>`__\ "
 
- 
 
- 
+.. _s-vampirtrace:
 
 VampirTrace
 ===========
 
- 
+�
 
 VampirTrace consists of a tool set and a runtime library for
 instrumentation and tracing of software applications. It is particularly

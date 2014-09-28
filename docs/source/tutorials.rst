@@ -114,12 +114,12 @@ Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach
 Tutorial Topic 4: High Performance Computing
 --------------------------------------------
 
--  `Basic High Performance Computing <hpc.html>`__ [novice]
--  `Running Hadoop as a batch job using MyHadoop <hadoop.html>`_
+-  :ref:`Basic High Performance Computing <s-hpc>`__ [novice]
+-  :ref:`Running Hadoop as a batch job using MyHadoop <s-hadoop>`_
    [novice]
--  :portal:`Performance Analysis with Vampir </manual/performance/vampir>`
+-  :ref:`Performance Analysis with Vampir <s-vampir>`
    [advanced]
--  :portal:`Instrumentation and tracing with VampirTrace </manual/vampir/trace>` [advanced]
+-  :ref:`Instrumentation and tracing with VampirTrace <s-vampirtrace>` [advanced]
 
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
@@ -135,21 +135,21 @@ Tutorial Topic 6: Image Management and Rain
 
 -  `Using Image Management and
    Rain <http://futuregrid.github.com/rain/quickstart.html>`__ [novice]
--  :portal:`Easy steps to generate and register an
-   Image <generate-and-register-os-image-futuregrid-using-fg-shell>`
+-  :ref:`Easy steps to generate and register an
+   Image <s-rain>`
    [novice]
--  :portal:`Manual Image
-   Customization <manually-customize-image>`
+-  :ref:`Manual Image
+   Customization <s-manual-image-customization>`
    [advanced]
--  `Register your VirtualBox image in
-   OpenStack <os-virtualbox.html>_`
+-  :ref:`Register your VirtualBox image in
+   OpenStack <s-os-virtualbox>_`
    [intermediate]
 
 Tutorial Topic 7:  Storage
 --------------------------
 
--  :portal:`Using HPSS from
-   FutureGrid <hpss.html>` [novice]
+-  :ref:`Using HPSS from
+   FutureGrid <s-hpss>` [novice]
 
 Other Tutorials and Educational Materials
 -----------------------------------------
