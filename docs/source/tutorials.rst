@@ -90,25 +90,25 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 Tutorial Topic 3: Grid Appliances for Training, Education, and Outreach
 -----------------------------------------------------------------------
 
--  `Running a Grid Appliance on your
-   desktop <ga1.html>`_  [novice]
--  `Running a Grid Appliance on
-   FutureGrid <ga9.html>` [novice]
--  `Running an OpenStack virtual appliance on
-   FutureGrid <http://portal.futuregrid.org/tutorials/os1>`_ [novice]
--  `Running Condor tasks on the Grid
-   Appliance <http://portal.futuregrid.org/tutorials/ga8>`_ [novice]
--  `Running MPI tasks on the Grid
-   Appliance <tutorials/mp1.html>` [novice]
--  `Running Hadoop tasks on the Grid
-   Appliance <ga10.html>`_ [novice]
--  `Deploying virtual private Grid Appliance clusters using
-   Nimbus <ga4.html>`
+-  :ref:`Running a Grid Appliance on your
+   desktop <s-ga1>`_  [novice]
+-  :ref:`Running a Grid Appliance on
+   FutureGrid <s-ga9>` [novice]
+-  :ref:`Running an OpenStack virtual appliance on
+   FutureGrid <s-os1>`_ [novice]
+-  :ref:`Running Condor tasks on the Grid
+   Appliance <s-ga8>`_ [novice]
+-  :ref:`Running MPI tasks on the Grid
+   Appliance <s-mp1>` [novice]
+-  :ref:`Running Hadoop tasks on the Grid
+   Appliance <s-ga10>`_ [novice]
+-  :ref:`Deploying virtual private Grid Appliance clusters using
+   Nimbus <s-ga4>`
    [intermediate]
--  `Building an educational appliance from Ubuntu
-   10.04 <ga3.html>` [intermediate]
--  `Customizing and registering Grid Appliance images using
-   Eucalyptus <ga7.html>`
+-  :ref:`Building an educational appliance from Ubuntu
+   10.04 <s-ga3>` [intermediate]
+-  :ref:`Customizing and registering Grid Appliance images using
+   Eucalyptus <s-ga7>`
    [intermediate]
 
 Tutorial Topic 4: High Performance Computing
