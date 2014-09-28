@@ -54,7 +54,3 @@ channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__
 ======================================================================
 
 Renato Figueiredo, University of Florida
-
-.. |image1| image:: /sites/default/files/images/nsf-logo.png
-   :target: http://www.tacc.utexas.edu/
-.. |image2| image:: /sites/default/files/u876/xsede-logo.png
