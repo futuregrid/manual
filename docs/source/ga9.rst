@@ -41,7 +41,7 @@ deploy your own private Grid appliance clusters on FutureGrid resources,
 as well as on your own resources, to use in your courses or research.
 
 -  Using Nimbus
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
    A Nimbus Grid appliance image with all required packages has been
    created at TACC's cluster (Alamo) with KVM virtualization technology.
@@ -61,7 +61,7 @@ as well as on your own resources, to use in your courses or research.
           ssh root@129.114.x.y
 
 -  Using OpenStack on india
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
    #. An image with all required packages has been created; it is
       available to all FutureGrid users in the "india" cloud resource.
@@ -77,7 +77,6 @@ as well as on your own resources, to use in your courses or research.
           ssh -i mykey.pem root@149.165.x.y
 
 -  Using OpenStack on sierra
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    #. An image with all required packages is also available to
       all FutureGrid users in the "sierra" cloud resource. To deploy the
