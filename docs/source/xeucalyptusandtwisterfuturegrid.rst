@@ -25,7 +25,7 @@ learn how to install and use the Eucalyptus client tool to access
 resources on India, FutureGrid.
 
 
-III. Download FutureGrid Eucalyptus Twister Tool 
+III. Download FutureGrid Eucalyptus Twister Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This tool is a set of python scripts. They can provide a

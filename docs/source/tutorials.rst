@@ -13,7 +13,7 @@ The following tutorials are broadly organized into topics, with each
 tutorial classified by the user's target level of expertise with
 FutureGrid (novice, intermediate, advanced). If you are a tutorial
 developer, for instructions on how to add a tutorial to this list,
-please \ :portal:`refer to the TEOS
+please�\ :portal:`refer to the TEOS
 page <outreach>`.
 
 .. todo::  
@@ -68,8 +68,7 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 
 -  `Running Hadoop as a batch job using
    MyHadoop <hadoop.html>`_ [novice]
--  :ref:`Running SalsaHadoop (one-click Hadoop) on HPC
-   environment <s-salsa-hadoop-hpc>` [beginner]
+-  :ref:`Running SalsaHadoop (one-click Hadoop) on HPC environment <s-salsa-hadoop-hpc>` [beginner]
 -  :ref:`Running Twister on HPC
    environment <s-twister-on-hpc>` [beginner]
 -  :ref:`Running SalsaHadoop on
