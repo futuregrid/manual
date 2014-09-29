@@ -1,4 +1,4 @@
-.. _s-salsa-hadoop-hpc:
+.. _s-twister-on-hpc:
 
 ================================================
 Twister with FutureGrid HPC

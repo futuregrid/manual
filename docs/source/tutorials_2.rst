@@ -11,7 +11,7 @@ Summary:
   Grid appliance.
 
 Pre-requisites:
-  `FutureGrid tutorial GA1 - Introduction to the Grid Appliance <http://portal.futuregrid.org/tutorials/ga1>`__
+  :ref:`FutureGrid tutorial GA1 - Introduction to the Grid Appliance <s-ga1>`
 
 Hands-on tutorial:
   This tutorial is maintained at the Grid Appliance portal. See `FutureGrid:clientappliance <http://www.grid-appliance.org/wiki/index.php/FutureGrid:clientappliance>`__.
@@ -285,15 +285,14 @@ using cloud client version 020 or above).  You can also save a Nimbus
 instance that you are using interactively (through ssh) as an image.
 Please refer to the `manual for
 cloud\_client.sh <http://www.nimbusproject.org/docs/current/clouds/cloudquickstart.html>`__ and
-the  `Nimbus tutorial <http://portal.futuregrid.org/tutorials/nimbus>`__
-for instructions.
+the :ref:`Nimbus tutorial <nimbus>` for instructions.
 
 
 Eucalyptus: 
 ^^^^^^^^^^^^^^^^^^
 
-Please refer to :portal:`FutureGrid tutorial
-GA7 <tutorials/ga7>`.
+Please refer to :ref:`FutureGrid tutorial
+GA7 <s-ga7>`.
 
 .. todo:: errors in portal page reported, seems not to work
 
@@ -327,17 +326,17 @@ Editing tips for the table:
       - FutureGrid system(s) available   
       - Appliance ID                                          
       - Installed                  
-    * - :portal:`Grid Appliance <tutorials/ga9>`                              
+    * - :ref:`Grid Appliance <s-ga9>`                              
       - Self-configures Condor/MPI/Hadoop virtual clusters for training/education                       
       - alamo, india                         
       - grid-appliance-2.05.03.gz (alamo), emi-E4ED1880 (india)   
       - panoat                       
-    * - :portal:`OpenStack Appliance <tutorials/os1>`                         
+    * - :ref:`OpenStack Appliance <s-os1>`                         
       - Deploys a single-node OpenStack compute virtual cloud                                           
       - alamo                                
       - openstack-ubuntu-10.10-amd64.img                          
       - menghan                      
-    * - :portal:`ViNe Appliance <contrib/simple-vine-tutorial>`               
+    * - :ref:`ViNe Appliance <s-vine-overlay>`               
       - Deploys the ViNe virtual network overlay to connect
 	private-address VMs in sierra and foxtrot   
       - sierra, foxtrot                      

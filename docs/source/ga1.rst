@@ -34,7 +34,7 @@ for execution on remote Grid appliances using Condor.
 
 This tutorial is maintained at the Grid Appliance portal. See `Grid
 Appliance
-Tutorial <http://www.grid-appliance.org/wiki/index.php/Grid_Appliance_Tutorial>`__ (opens
+Tutorial <http://www.grid-appliance.org/wiki/index.php/Grid_Appliance_Tutorial>`_ (opens
 in new window).
 
 
