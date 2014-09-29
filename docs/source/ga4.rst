@@ -18,9 +18,9 @@ This tutorial provides step-by-step instructions on how to deploy virtual privat
 **Prerequisites:**
 ------------------
 
-`Introduction to Nimbus <http://portal.futuregrid.org/tutorials/nimbus>`__\ `
+:ref:`Introduction to Nimbus <nimbus>`
 
-Running a Grid Appliance on FutureGrid <http://portal.futuregrid.org/tutorials/ga9>` __
+:ref:'Running a Grid Appliance on FutureGrid <s-ga9>`
 
 
 
@@ -51,7 +51,7 @@ configuration from a group at the Grid appliance web site. 
 
 To connect to any other GroupVPN pool, you need to place a floppy disk containing the GroupVPN configuration files inside the appliance in the /opt/grid\_appliance/etc directory and then restart the grid\_appliance service. This floppy is generated using the grid-appliance.org web front-end following the steps described in the following pages:
 
--  Create/Join a GroupVPN following instructions on the `GroupVPN Wiki
+-  Create/Join a GroupVPN following instructions on the `GroupVPN Wiki
    page <http://www.grid-appliance.org/wiki/index.php/GroupVPN>`__
 -  Create/join a GroupAppliance following instructions on the
    `GroupAppliance Wiki
@@ -83,10 +83,10 @@ resources that run KVM virtualization (alamo at Texas). As additional platforms 
 **Reference material:**
 -----------------------
 
-Presentation: \ `Deploying Grid Appliance
+Presentation: `Deploying Grid Appliance
 clusters <http://www.grid-appliance.org/files/docs/edu-docs/LocalGridAppliance1.pdf>`__
 
-Videos: \ `Grid Appliance YouTube
+Videos: `Grid Appliance YouTube
 channel <http://www.youtube.com/acisp2p#p/c/D77781CEF51F72F3>`__
 
 
