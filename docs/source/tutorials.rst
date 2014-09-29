@@ -37,7 +37,7 @@ Tutorial Topic 1: Cloud Provisioning Platforms
 
 -  Using OpenStack on FutureGrid. 
 
-   - Havana: See the Section :ref:`s-openstack-havana` in the manual. [novice] 
+   - Havana: See the Section :ref:`s-openstack` in the manual. [novice] 
    - Grizzly: See the Section :ref:`s-openstack-grizzly` in the manual. [novice] 
 
 -  Using Nimbus on FutureGrid. 
