@@ -1,5 +1,15 @@
 .. _s-community-edu-materials:
 
+
+**********************************************************************
+Community Educational Materials
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 This page aggregates publicly available educational materials from the
 FutureGrid community that have been used in courses, tutorials, and
 workshops.  If you plan to use FutureGrid in your educational and
@@ -7,7 +17,9 @@ training activities, you can benefit and build upon class materials
 developed by other FutureGrid users, contribute your own to the
 community, and disseminate your work - see instructions below on how to
 add content.
- **Links to Material:**
+
+**Links to Material:**
+~~~~~~~~~~~~~~~~~~~~~~
 
 -  FutureGrid Massive Open Only Courses
    (`MOOCs <https://fgmoocs.appspot.com>`__) (Project led by Geoffrey
@@ -41,6 +53,9 @@ add content.
    Mitchell <https://portal.futuregrid.org/project/120>`__)
 
 **How to Add Your Content:**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
  If you are a FutureGrid user with an active educational project and
 would like to contribute your own materials with a page hosted on the FG
 portal, please go through the following steps to have your material
@@ -55,21 +70,11 @@ linked here:
    FAQ <https://portal.futuregrid.org/faq>`__ for more information on
    using the editor.
 -  Send a help request
-   viaÂ \ https://portal.futuregrid.org/help. including in the subject of
+   via :portal:'help <help>' including in the subject of
    your message "Request for class materials page", providing a link or
    the name of your FutureGrid project in the body of your message, and
    a link to the page you want to be linked.
 -  In case you like to have your own FG community hosted
    `forum <https://portal.futuregrid.org/forum>`__\ either for your
    class or a different topic, please submit a help request
-   atÂ \ https://portal.futuregrid.org/help.
-
-.. raw:: html
-
-   </div>
-
--  `Login </user/login?destination=comment%2Freply%2F1121%23comment-form>`__
-   or
-   `register </user/register?destination=comment%2Freply%2F1121%23comment-form>`__
-   to post comments
-
+   at :portal:'help <help>'

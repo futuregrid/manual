@@ -1,3 +1,5 @@
+.. _s-ga8:
+
 **********************************************************************
 GA8: Running Condor Tasks on a Grid Appliance
 **********************************************************************
@@ -20,9 +22,9 @@ Prerequisites:
    through one of the core Grid appliance tutorials:
 
    -  :ref:`Running the Grid Appliance on your
-      desktop <s-ga1>`__
+      desktop <s-ga1>`
    -  :ref:`Running the Grid Appliance on
-      FutureGrid <s-ga9>`__
+      FutureGrid <s-ga9>`
 
 Set Up and Submit a Condor Job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

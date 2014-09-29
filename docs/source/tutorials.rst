@@ -123,7 +123,7 @@ Tutorial Topic 4: High Performance Computing
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  `Running interactive experiments <experiment-interactive.html>' [novice]
+-  `Running interactive experiments <experiment-interactive.html>'__ [novice]
 -  :portal:`Running workflow experiments using
    Pegasus <tutorials/workflow-experiment-management>` [novice]
 -  `Pegasus on FutureGrid <pegasus.html>`_ [novice]
@@ -132,7 +132,7 @@ Tutorial Topic 6: Image Management and Rain
 -------------------------------------------
 
 -  `Using Image Management and
-   Rain <http://futuregrid.github.com/rain/quickstart.html>` [novice]
+   Rain <http://futuregrid.github.com/rain/quickstart.html>`__ [novice]
 -  :ref:`Easy steps to generate and register an
    Image <s-rain>`
    [novice]
