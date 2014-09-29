@@ -20,15 +20,14 @@ running a variety of educational, training, and outreach activities.
 Prerequisites:
 ~~~~~~~~~~~~~~
 
--  :ref: 'The Introduction to the Grid
-   Appliance <s-ga1>` tutorial    is not a requirement, but provides hands-on experience with a Grid
-   appliance on your desktop.
+-  :ref:'The Introduction to the Grid
+   Appliance <s-ga1>` tutorial is not a requirement, but provides hands-on experience with a Grid appliance on your desktop.
 -  Depending on whether you plan to use Nimbus or OpenStack, one of the
    following tutorials is required:
 
-   -  :ref:`Using Nimbus
-      on FutureGrid <nimbus>`
-      -  :ref:`Using OpenStack Grizzly on
+   -  :ref:`Using Nimbus on FutureGrid <nimbus>`
+
+   -  :ref:`Using OpenStack Grizzly on
       FutureGrid <s-openstack-grizzly>`
 
 Deploying a Grid Appliance on FutureGrid
