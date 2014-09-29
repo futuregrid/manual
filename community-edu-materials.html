@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. Eucalyptus and Twister on FutureGrid &mdash; FutureGrid 0.1 documentation</title>
+    <title>&lt;no title&gt; &mdash; FutureGrid 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -1303,24 +1303,7 @@
      href="#">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"
       role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">4. Eucalyptus and Twister on FutureGrid</a><ul>
-<li><a class="reference internal" href="#i-introduction">4.1. I. Introduction</a></li>
-<li><a class="reference internal" href="#ii-prerequisite">4.2. II. Prerequisite</a></li>
-<li><a class="reference internal" href="#iii-download-futuregrid-eucalyptus-twister-tool">4.3. III. Download FutureGrid?Eucalyptus Twister Tool?</a></li>
-<li><a class="reference internal" href="#iv-start-twister-environment">4.4. IV. Start Twister Environment</a></li>
-<li><a class="reference internal" href="#v-terminate-twister-environment">4.5. V. Terminate Twister Environment</a></li>
-<li><a class="reference internal" href="#vi-run-twister-kmeans">4.6. VI. Run Twister-Kmeans</a><ul>
-<li><a class="reference internal" href="#ant-and-deploy-twister-kmeans">4.6.1. 1. Ant and Deploy?Twister-Kmeans</a></li>
-<li><a class="reference internal" href="#start-twister-and-activemq">4.6.2. 2. Start Twister and ActiveMQ</a></li>
-<li><a class="reference internal" href="#create-twister-kmeans-data-folder">4.6.3. 3. Create Twister-Kmeans Data Folder</a></li>
-<li><a class="reference internal" href="#generate-twister-kmeans">4.6.4. 4. Generate Twister-Kmeans</a></li>
-<li><a class="reference internal" href="#id1">4.6.5. ?</a></li>
-<li><a class="reference internal" href="#data">4.6.6. Data</a></li>
-</ul>
-</li>
-</ul>
-</li>
+      aria-labelledby="dLabelLocalToc"><ul class="simple">
 </ul>
 </ul>
 </li>
@@ -1336,7 +1319,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="_sources/xeucalyptusandtwisterfuturegrid.txt"
+  <a href="_sources/community-edu-materials.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -1360,147 +1343,79 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="eucalyptus-and-twister-on-futuregrid">
-<span id="s-eucalyptus-twister"></span><h1>4. Eucalyptus and Twister on FutureGrid<a class="headerlink" href="#eucalyptus-and-twister-on-futuregrid" title="Permalink to this headline">¶</a></h1>
-<p>SALSA Group
-PTI?Indiana University</p>
-<div class="section" id="i-introduction">
-<h2>4.1. I. Introduction<a class="headerlink" href="#i-introduction" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial will show you how to use Twister under Eucalyptus on
-India, FutureGrid.</p>
-</div>
-<div class="section" id="ii-prerequisite">
-<h2>4.2. II. Prerequisite<a class="headerlink" href="#ii-prerequisite" title="Permalink to this headline">¶</a></h2>
-<p>Follow tutorial <a class="reference internal" href="eucalyptus.html#s-eucalyptus"><em>Using Eucalyptus on
-FutureGrid</em></a> to
-learn how to install and use the Eucalyptus client tool to access
-resources on India, FutureGrid.</p>
-</div>
-<div class="section" id="iii-download-futuregrid-eucalyptus-twister-tool">
-<h2>4.3. III. Download FutureGrid?Eucalyptus Twister Tool?<a class="headerlink" href="#iii-download-futuregrid-eucalyptus-twister-tool" title="Permalink to this headline">¶</a></h2>
-<p>This tool is a set of python scripts. They can provide a
-pre-configured Twister environment, and also can terminate the
-environment. Pleasecdownload the tool in the attachment below.</p>
-</div>
-<div class="section" id="iv-start-twister-environment">
-<h2>4.4. IV. Start Twister Environment<a class="headerlink" href="#iv-start-twister-environment" title="Permalink to this headline">¶</a></h2>
-<p>To start a Twister environment, execute the following program:?</p>
-<div class="code highlight-python"><div class="highlight"><pre>rteleft
-
-$ python fg_euca_start_twister.py [-k user key] [-i public key file path] [-n number of instances][-t instance type]
-
-e.g.
-$ python fg_euca_start_twister.py -k userkey -i userkey.pem -n 3 -t c1.medium
-</pre></div>
-</div>
-<p>Here,</p>
+  <p id="s-community-edu-materials">This page aggregates publicly available educational materials from the
+FutureGrid community that have been used in courses, tutorials, and
+workshops. ?If you plan to use FutureGrid in your educational and
+training activities, you can benefit and build upon class materials
+developed by other FutureGrid users, contribute your own to the
+community, and disseminate your work - see instructions below on how to
+add content.</p>
+<blockquote>
+<div><strong>Links to Material:</strong></div></blockquote>
 <ul class="simple">
-<li>-k is the user key name generated by the <strong>euca-add-keypair</strong> step in
-the Eucalyptus tutorial.</li>
-<li>-i?is the private key .pem file path. It is also?generated in the
-<strong>euca-add-keypair</strong>?step in the Eucalyptus tutorial.</li>
-<li>-n is the number of instances for starting.</li>
-<li>-t?is the type of image.</li>
+<li>FutureGrid Massive Open Only Courses
+(<a class="reference external" href="https://fgmoocs.appspot.com">MOOCs</a>) (Project led by Geoffrey
+Fox)<ul>
+<li><a class="reference external" href="https://fgmoocs.appspot.com/project">Intro to FutureGrid</a>?by
+Geoffrey Fox and Gregor von Laszewski</li>
+<li><a class="reference external" href="https://fgmoocs.appspot.com/ipop">IP-over-P2P (IPOP)</a>by
+Renato J. Figueirdo</li>
 </ul>
-<p>The following is an execution example:
-<img alt="image1" src="https://portal.futuregrid.org/sites/default/files/u192/start_twister.jpg" /></p>
-<p>Once the script is executed, the user can get a prepared Twister
-environment.
-Then, the user can follow the instructions provided by
-<strong>fg_euca_start_twister.py</strong>?to start ActiveMQ on the assigned node,
-and also start the Twister environment (could be on any node just
-applied).</p>
-</div>
-<div class="section" id="v-terminate-twister-environment">
-<h2>4.5. V. Terminate Twister Environment<a class="headerlink" href="#v-terminate-twister-environment" title="Permalink to this headline">¶</a></h2>
-<p>To terminate a Twister environment, execute the following command:</p>
-<div class="code highlight-python"><div class="highlight"><pre> rteleft
-
-$ python fg_euca_terminate_twister.py
-</pre></div>
-</div>
-</div>
-<div class="section" id="vi-run-twister-kmeans">
-<h2>4.6. VI. Run Twister-Kmeans<a class="headerlink" href="#vi-run-twister-kmeans" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ant-and-deploy-twister-kmeans">
-<h3>4.6.1. 1. Ant and Deploy?Twister-Kmeans<a class="headerlink" href="#ant-and-deploy-twister-kmeans" title="Permalink to this headline">¶</a></h3>
-<p>Log into the node assigned for ActiveMQ broker.?</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cd /opt/Twister/samples/kmeans
-$ ant
-$ cd ../../lib
-$ mv Twister-Kmeans-0.9.jar ../apps/
-$ cd ../bin/
-$ chmod a+x twister.sh
-$ ./twister.sh cpj ../apps/Twister-Kmeans-0.9.jar
-</pre></div>
-</div>
-</div>
-<div class="section" id="start-twister-and-activemq">
-<h3>4.6.2. 2. Start Twister and ActiveMQ<a class="headerlink" href="#start-twister-and-activemq" title="Permalink to this headline">¶</a></h3>
-<p>Open two terminals and log into the node mentioned above. One is for
-starting ActiveMQ; the other is for starting Twister.</p>
-<p>In Terminal 1:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cd /opt/apache-activemq-5.4.2/bin/
-$ activemq console
-</pre></div>
-</div>
-<p>In Terminal 2:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cd /opt/Twister/bin
-$ ./start_twister.sh
-</pre></div>
-</div>
-</div>
-<div class="section" id="create-twister-kmeans-data-folder">
-<h3>4.6.3. 3. Create Twister-Kmeans Data Folder<a class="headerlink" href="#create-twister-kmeans-data-folder" title="Permalink to this headline">¶</a></h3>
-<p>Open another terminal, and create a folder for operating kmeans data:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cd /opt/Twister/bin
-$ ./twishter.sh mkdir kmeans
-</pre></div>
-</div>
-</div>
-<div class="section" id="generate-twister-kmeans">
-<h3>4.6.4. 4. Generate Twister-Kmeans<a class="headerlink" href="#generate-twister-kmeans" title="Permalink to this headline">¶</a></h3>
-<p>^</p>
-</div>
-<div class="section" id="id1">
-<h3>4.6.5. ?<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="data">
-<h3>4.6.6. Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
-<p>Open a new terminal:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cd /opt/Twister/samples/kmeans/bin/
-$./gen_data.sh init_clusters.txt 2 3 /kmeans km_data 3 30000
-</pre></div>
-</div>
-<p>In the terminal used in Step 3, do the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ ./create_partition_file.sh kmeans km ../samples/kmeans/bin/p.pf
-</pre></div>
-</div>
-<p>Back in the terminal used in Step 4, do the following:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ ./run_kmeans.sh init_clusters.txt 3 p.pf
-</pre></div>
-</div>
-<p>The output is as follows:</p>
-<p><img alt="image2" src="https://portal.futuregrid.org/sites/default/files/resize/u192/twister_kmeans-906x257.jpg" /></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="90%" />
-<col width="10%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Attachment</th>
-<th class="head">Size</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference external" href="https://portal.futuregrid.org/sites/default/files/fgeucatwister.zip">fgeucatwister.zip</a></td>
-<td>4.38 KB</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
+</li>
+<li>Cloud computing full-day tutorial given at SC12 (<a class="reference external" href="http://www.nimbusproject.org/docs/sc12/">PDF
+slides</a>)?(<a class="reference external" href="https://portal.futuregrid.org/projects/265">Project led
+by?John Bresnahan</a>)</li>
+<li>Cloud computing tuturial given at XSEDE 2012
+(<a class="reference external" href="http://www.nimbusproject.org/docs/xsede12/">slides</a>) (<a class="reference external" href="https://portal.futuregrid.org/projects/229">Project
+led by John
+Bresnahan</a>)</li>
+<li>FutureGrid?half-day tutorial given
+at?CCgrid?2011?(<a class="reference external" href="http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/tutorial-half-day/">SVN?repository</a>,?<a class="reference external" href="http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/tutorial-half-day/ccgrid2011-tutorial.pdf?view=log">PDF
+slides</a>)
+(<a class="reference external" href="https://portal.futuregrid.org/project/124">Project led
+by?Gregor?von?Laszewski</a>)</li>
+<li>Videos from CloudCom 2010 tutorials: FutureGrid, Nimbus, OpenStack,
+OpenNebula, Microsoft Azure (<a class="reference external" href="http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials">CloudCom 2010 Web
+page</a>)</li>
+<li><a class="reference external" href="https://portal.futuregrid.org/contrib/cloud-computing-class">Cloud computing course at?University
+of?Piemonte?Orientale</a>?(<a class="reference external" href="https://portal.futuregrid.org/project/122">Project
+led
+by?Massimo?Canonico</a>)</li>
+<li>Workshop: A Cloud View on Computing (<a class="reference external" href="https://portal.futuregrid.org/project/120">Project led by Jerome
+Mitchell</a>)</li>
+</ul>
+<dl class="docutils">
+<dt><strong>How to Add Your Content:</strong></dt>
+<dd>If you are a FutureGrid user with an active educational project and</dd>
+</dl>
+<p>would like to contribute your own materials with a page hosted on the FG
+portal, please go through the following steps to have your material
+linked here:</p>
+<ul class="simple">
+<li>Select &#8220;Add a Community page&#8221; from the Community tab of the top menu
+(<a class="reference external" href="https://portal.futuregrid.org/node/add/page-community">or follow this direct
+link</a>) to
+create a page</li>
+<li>Edit the page with your content. The FutureGrid portal supports a
+browser-based Web page editor; <a class="reference external" href="https://portal.futuregrid.org/faq">refer to our
+FAQ</a> for more information on
+using the editor.</li>
+<li>Send a help request
+via&nbsp;<a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.?including in the subject of
+your message &#8220;Request for class materials page&#8221;, providing a link or
+the name of your FutureGrid project in the body of your message, and
+a link to the page you want to be linked.</li>
+<li>In case you like to have your own FG community hosted
+<a class="reference external" href="https://portal.futuregrid.org/forum">forum</a>either for your
+class or a different topic, please submit a help request
+at&nbsp;<a class="reference external" href="https://portal.futuregrid.org/help">https://portal.futuregrid.org/help</a>.</li>
+</ul>
+</div><ul class="simple">
+<li><a class="reference external" href="/user/login?destination=comment%2Freply%2F1121%23comment-form">Login</a>
+or
+<a class="reference external" href="/user/register?destination=comment%2Freply%2F1121%23comment-form">register</a>
+to post comments</li>
+</ul>
 
 
     </div>
