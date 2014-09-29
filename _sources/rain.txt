@@ -225,13 +225,12 @@ Logging into India
     $ module load futuregrid
 
  
--
 
 Requesting access
 -----------------
 
 Submit a ticket to request
-access  :portal:`help <https://portal.futuregrid.org/help>`
+access  :portal:`help <help>`
 
 Obtaining the image
 -------------------
@@ -394,7 +393,7 @@ Eucalyptus (more info in  `eucalyptus <eucalyptus.html>`)::
     source eucarc
     euca-run-instance -k <keyname> <ami-ID>
 
-HPC (more info in  :portal:`hpc <hpc.html>`):
+HPC (more info in  :ref:`hpc <s-hpc>`):
 
 Provision a machine with our image and go into Interactive mode (you
 are logged into the machine)::

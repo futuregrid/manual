@@ -118,7 +118,7 @@ record MPI communication events, simply relink the program with the
 VampirTrace library. A new compilation of the program source code is
 only necessary if program-specific events should be added. Detailed
 information on the installation and usage of VampirTrace can be found at
-`VampirTrace <https://portal.futuregrid.org/manual/vampir/trace>`__.
+:ref:`VampirTrace <s-vampirtrace>`.
 
 **Enabling Performance Tracing**
 --------------------------------
@@ -1273,7 +1273,6 @@ supported on all platforms.
 
 **Instrumentation**
 
- 
 
 To perform measurements with VampirTrace, the user's application program
 needs to be instrumented; that is, at specific points of interest
@@ -1288,7 +1287,7 @@ different ways of instrumentation as described in the sections below.
 **Compiler Wrappers**
 
 All the necessary instrumentation of user functions, MPI, and OpenMP
-events is handled by VampirTrace’s compiler wrappers (vtcc, vtcxx,
+events is handled by VampirTrace's compiler wrappers (vtcc, vtcxx,
 vtf77, and vtf90). In the script used to build the application (e.g., a
 makefile), all compile and link commands should be replaced by the
 VampirTrace compiler wrapper. The wrappers perform the necessary
@@ -1299,15 +1298,15 @@ parallelization type of the program:
 -  Serial programs
 
 Compiling serial codes is the default behavior of the wrappers. Simply
-replace the compiler by VampirTrace’s wrapper:
+replace the compiler by VampirTrace's wrapper:
 
- 
+::
 
-original:             gfortran hello.f90 -o hello
+  original:              gfortran hello.f90 -o hello
 
-with instrumentation: **vtf90** hello.f90 -o hello 
+  with instrumentation: **vtf90** hello.f90 -o hello
 
- 
+
 
 This will instrument user functions (if supported by the compiler) and
 link the VampirTrace library.
@@ -2667,7 +2666,6 @@ foo;bar -- 2000
 
 \* -- 0
 
- 
 
 The example defines two limits for the ranks 4 - 10, 20 - 29, and 34.
 

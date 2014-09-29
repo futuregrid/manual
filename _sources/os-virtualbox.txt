@@ -131,8 +131,7 @@ First, we need to load the euca2ools module that contains the command
 line interface to interact with OpenStack. Then we need to load our own
 credentials that are typically in a novarc file. Finally you update and
 register the image. Although, we are going to briefly explain these
-steps here, this is part of the OpenStack tutorial that can be found
-in \ `https://portal.futuregrid.org/tutorials/openstack <https://portal.futuregrid.org/tutorials/openstack>`__::
+steps here, this is part of the :ref:`OpenStack Tutorial <s-openstack-grizzly>`::
 
     $ module load euca2ools
     $ source ~/novarc
@@ -213,8 +212,4 @@ Notes:
 ------
 
 This tutorial has been tested with Ubuntu 12 and CentOS 6 using
-OpenStack Essex. 
-
-`‹ One-click Twister K-means on Eucalyptus
-FutureGrid </tutorials/one-click-twister-k-means-eucalyptus-futuregrid>`__
-`up </tutorials>`__ `Virtual Appliances › </community/appliances>`__
+OpenStack Essex.

@@ -648,7 +648,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites:</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#hands-on-tutorial">13.4.2. <strong>Hands-on Tutorial</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#reference-material">13.4.3. <strong>Reference Material:</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#authors">13.4.4. <strong>Authors:</strong></a></li>
@@ -1261,7 +1261,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites:</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#hands-on-tutorial">13.4.2. <strong>Hands-on Tutorial</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#reference-material">13.4.3. <strong>Reference Material:</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#authors">13.4.4. <strong>Authors:</strong></a></li>
@@ -1503,7 +1503,7 @@ record MPI communication events, simply relink the program with the
 VampirTrace library. A new compilation of the program source code is
 only necessary if program-specific events should be added. Detailed
 information on the installation and usage of VampirTrace can be found at
-<a class="reference external" href="https://portal.futuregrid.org/manual/vampir/trace">VampirTrace</a>.</p>
+<a class="reference internal" href="#s-vampirtrace"><em>VampirTrace</em></a>.</p>
 </div>
 <div class="section" id="enabling-performance-tracing">
 <h2><strong>Enabling Performance Tracing</strong><a class="headerlink" href="#enabling-performance-tracing" title="Permalink to this headline">¶</a></h2>
@@ -2494,7 +2494,7 @@ commands with VampirTrace’s wrappers (see below). VampirTrace supports
 different ways of instrumentation as described in the sections below.</p>
 <p><strong>Compiler Wrappers</strong></p>
 <p>All the necessary instrumentation of user functions, MPI, and OpenMP
-events is handled by VampirTrace’s compiler wrappers (vtcc, vtcxx,
+events is handled by VampirTrace&#8217;s compiler wrappers (vtcc, vtcxx,
 vtf77, and vtf90). In the script used to build the application (e.g., a
 makefile), all compile and link commands should be replaced by the
 VampirTrace compiler wrapper. The wrappers perform the necessary
@@ -2505,9 +2505,12 @@ parallelization type of the program:</p>
 <li>Serial programs</li>
 </ul>
 <p>Compiling serial codes is the default behavior of the wrappers. Simply
-replace the compiler by VampirTrace’s wrapper:</p>
-<p>original:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gfortran hello.f90 -o hello</p>
-<p>with instrumentation: <strong>vtf90</strong> hello.f90 -o hello</p>
+replace the compiler by VampirTrace&#8217;s wrapper:</p>
+<div class="highlight-python"><div class="highlight"><pre>original:              gfortran hello.f90 -o hello
+
+with instrumentation: **vtf90** hello.f90 -o hello
+</pre></div>
+</div>
 <p>This will instrument user functions (if supported by the compiler) and
 link the VampirTrace library.</p>
 <ul class="simple">
