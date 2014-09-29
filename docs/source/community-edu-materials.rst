@@ -38,25 +38,24 @@ add content.
    led by John
    Bresnahan <https://portal.futuregrid.org/projects/229>`__)
 -  FutureGrid half-day tutorial given
-   at CCgrid 2011 (\ `SVN repository <http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/tutorial-half-day/>`__, \ `PDF
-   slides <http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/tutorial-half-day/ccgrid2011-tutorial.pdf?view=log>`__)
+   at CCgrid 2011 (`SVN repository <http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/tutorial-half-day/>`__,  `PDF
+   slides <http://futuregrid.svn.sourceforge.net/viewvc/futuregrid/presentations/tutorial-half-day/ccgrid2011-tutorial.pdf?view=log>`_)
    (`Project led
-   by Gregor von Laszewski <https://portal.futuregrid.org/project/124>`__)
+   by Gregor von Laszewski <https://portal.futuregrid.org/project/124>`_)
 -  Videos from CloudCom 2010 tutorials: FutureGrid, Nimbus, OpenStack,
    OpenNebula, Microsoft Azure (`CloudCom 2010 Web
-   page <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__)
+   page <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`_)
 -  `Cloud computing course at University
-   of Piemonte Orientale <https://portal.futuregrid.org/contrib/cloud-computing-class>`__ (`Project
+   of Piemonte Orientale <https://portal.futuregrid.org/contrib/cloud-computing-class>`_ (`Project
    led
-   by Massimo Canonico <https://portal.futuregrid.org/project/122>`__)
+   by Massimo Canonico <https://portal.futuregrid.org/project/122>`_)
 -  Workshop: A Cloud View on Computing (`Project led by Jerome
-   Mitchell <https://portal.futuregrid.org/project/120>`__)
+   Mitchell <https://portal.futuregrid.org/project/120>`_)
 
 **How to Add Your Content:**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
- If you are a FutureGrid user with an active educational project and
+If you are a FutureGrid user with an active educational project and
 would like to contribute your own materials with a page hosted on the FG
 portal, please go through the following steps to have your material
 linked here:
