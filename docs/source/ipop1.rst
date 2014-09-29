@@ -452,12 +452,3 @@ the ACIS P2P Users malining list at: acisp2p [at] googlegroups [dot]
 com, or contact Renato Figueiredo at: renato [at] acis [dot] ufl [dot]
 edu.
 
-
-|image2|\ Futuregrid is a resource provider for
-`XSEDE <https://www.xsede.org/>`__.
-
-.. |Home| image:: /sites/all/themes/fgtheme/logo.png
-   :target: /
-.. |image1| image:: /sites/default/files/images/nsf-logo.png
-   :target: http://www.tacc.utexas.edu/
-.. |image2| image:: /sites/default/files/u876/xsede-logo.png
