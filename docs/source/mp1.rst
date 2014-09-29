@@ -20,8 +20,8 @@ Prerequisites:
 
 -  To follow this tutorial, it is a pre-requisite that you have gone through this core Grid appliance tutorial:
 
-   -  `Running the Grid Appliance on
-      FutureGrid <http://portal.futuregrid.org/tutorials/ga9>`__
+   -  :ref:`Running the Grid Appliance on
+      FutureGrid <s-ga9>`
 
 Set Up and Submit MPI Jobs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
