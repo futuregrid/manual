@@ -72,7 +72,7 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 
 -  `Running Hadoop as a batch job using
    MyHadoop <hadoop.html>`_ [novice]
--  :ref: `Running SalsaHadoop (one-click Hadoop) on HPC
+-  :ref:`Running SalsaHadoop (one-click Hadoop) on HPC
    environment <s-salsa-hadoop-hpc>` [beginner]
 -  :ref:`Running Twister on HPC
    environment <s-twister-on-hpc>` [beginner]
@@ -155,8 +155,8 @@ Other Tutorials and Educational Materials
 -  :portal:`Additional tutorials on FutureGrid-related
    technologies <additional_tutorials>`
 -  `More tutorials are available <tutorials_2.html>`__
--  :portal:`FutureGrid community educational
-   materials <community_edu_materials>`
+-  :ref:`FutureGrid community educational
+   materials <s-community-edu-materials>`
 -  `CI Tutor performance
    tutorials <http://www.citutor.org/browse.php?access=&category=-1&search=performance&include=all&filter=Filter>`__
    (requires brief registration to view content)
