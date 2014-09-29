@@ -53,19 +53,15 @@ Tutorial Topic 1: Cloud Provisioning Platforms
 
 -  Using Vine on FutureGrid.
 
-   - GVL: THIS SECTION IS VERY CONFUSING WHY IS THIS NOT IN ITS OWN
-     SECTION FOR EXAMPPLE "NETWORK PROVISIONING"? ALSO THE SECTIONS
-     ARE NOT FOLLOWING STANDARD SECTION CONVENTIONS.
-
    - :ref:`Connecting private network VMs across Nimbus clusters using ViNe <s-vine>` [novice]
-   - :ref:`IPOP1: (IP-over-P2P) Virtual Network Introductory Tutorial <s-vine-overlay>` [novice]
-   - TODO `IPOP1: IP-overP2P <tutorials/ipop1.html>`_ [intermediate] 
+
+   - :ref:`Virtual Network Introductory Tutorial <s-vine-overlay>` [novice]
+
+-  Using IPOP on FutureGrid.
+
+   - Deploying IPOP on FutureGrid virtual machines :ref:`IPOP1: (IP-overP2P) <s-ipop1>` [intermediate] 
      
-     - See the section in the manual: :ref:`s-ipop1`.
-
-   - TODO `IPOP2: Deploying your Own P2P Overlay for IPOP VPNs <ipop2.html>` [intermediate] 
-
-     - See the section in the manual: :ref:`s-ipop2`
+   - Deploying your Own P2P Overlay for IPOP VPNs :ref:`IPOP2 (IP-over-P2P) <s-ipop2>` [intermediate] 
 
 Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 -----------------------------------------------------
