@@ -109,7 +109,7 @@ CloudCom 2010 Tutorials/Screencasts
 | ^^^^^^^^^^^^^^^^^^^^^^  |                         |                         |
                                                                              
 +-------------------------+-------------------------+-------------------------+
-| Apache Hadoop & Pig Tut | '..image:: images/doc_logo-50x46.png <https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B_HLA4BImRyhYjdkNTIwMDMtMDM1Ni00YzNiLWE4MmUtZDFhZWMxZWI3ZDZm&hl=en>'_ | 01/15/2011              |
+| Apache Hadoop & Pig Tut | '.. image:: images/doc_logo-50x46png        : target: https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B_HLA4BImRyhYjdkNTIwMDMtMDM1Ni00YzNiLWE4MmUtZDFhZWMxZWI3ZDZm&hl=en | 01/15/2011              |
 | orial                   |                         |                         |
 | ^^^^^^^^^^^^^^^^^^^^^^^ |                         |                         |
 | ^^^^^                   |                         |                         |
