@@ -66,7 +66,7 @@ visualization tools like Vampir to operate efficiently at large scale.
 The format addresses large applications written in an arbitrary
 combination of Fortran77, Fortran (90/95/etc.), C, and C++.
 
-|image30|
+.. image: images/otf_0.png
 
 **Representation of Streams by Multiple Files**
 
@@ -182,25 +182,25 @@ Running a VampirTrace instrumented application should normally result in
 an OTF trace file in the current working directory where the application
 was executed. On Linux, Mac OS, and Sun Solaris, the default name of the
 trace file will be equal to the application name. For other systems, the
-default name isÂ \ *a.otf*Â but can be defined manually by setting the
-environment variable VT\_FILE\_PREFIX to the desired name. After a run
+default name is *a.otf* but can be defined manually by setting the
+environment variable VT_FILE_PREFIX to the desired name. After a run
 of an instrumented application, the traces of the single processes need
 to be unified in terms of timestamps and event IDs. In most cases, this
 happens automatically. If it is necessary to perform unification of
 local traces manually, use the following command:
 
-    ::
+::
 
-        vtunify <nproc>
+  vtunify <nproc>
 
 If VampirTrace was built with support for OpenMP and/or MPI, it is
 possible to speed up the unification of local traces significantly. To
 distribute the unification on multiple processes, the MPI parallel
 version vtunify-mpi can be used as follows:
 
-    ::
+::
 
-        mpirun -np <nranks> vtunify-mpi <nproc>
+   mpirun -np <nranks> vtunify-mpi <nproc>
 
 **Starting Vampir and Loading a Trace File**
 --------------------------------------------
@@ -213,16 +213,16 @@ that can be processed by the tool. All file types can be displayed by
 using "All Files (\*)". Alternatively, on Windows, a command-line
 invocation is possible:
 
-    ::
+::
 
-        C:\Program Files\Vampir\Vampir.exe [trace file]
+   C:\Program Files\Vampir\Vampir.exe [trace file]
 
 To open multiple trace files at once, you can take them one after
 another as command-line arguments:
 
-    ::
+::
 
-        C:\Program Files\Vampir\Vampir.exe [file 1]...[file n]
+    C:\Program Files\Vampir\Vampir.exe [file 1]...[file n]
 
 It is also possible to start the application by double-clicking on an
 \*.otf file (if Vampir was associated with \*.otf files during the
@@ -231,7 +231,7 @@ with the Open Trace Format (OTF) standard. Microsoft HPC Server 2008 is
 shipped with the translator program etl2otf.exe, which produces
 appropriate input files.
 
-|image31|
+.. image: images/open_file.png
 
 **Loading a Trace Log File in Vampir**
 
@@ -245,27 +245,25 @@ show only the earliest information from the tracefile. For huge
 tracefiles with performance problems assumed to be at the beginning,
 this proceeding is a suitable strategy to save time.
 
-|image32|
+.. image: images/cancel_loading_resize.png
 
 **Progress Bar and Cancel Loading Button**
 
 Basic functionality and navigation elements are described
-inÂ \ `Basics <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics>`__.
+in \ `Basics <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics>`__.
 The available charts and the information provided by them are explained
-inÂ \ `Performance\_Data\_Visualization <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Data_Visualization>`__.
+in \ `Performance\_Data\_Visualization <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Data_Visualization>`__.
 
-Â 
 
-Â 
 
 **Basics**
 ==========
 
-After loading has been completed, theÂ \ *Trace View*Â window title
-displays the trace file's name. By default, theÂ \ *Charts*Â toolbar and
-theÂ \ *Zoom Toolbar*Â are available.
+After loading has been completed, theÂ \ *Trace View* window title
+displays the trace file's name. By default, the \ *Charts* toolbar and
+the \ *Zoom Toolbar* are available.
 
-|image33|
+.. image: images/Startup.png
 
 **Trace View Window with Charts Toolbar (A) and Zoom Toolbar (B)**
 
@@ -288,7 +286,7 @@ Vampir GUI which are generic to all charts.
 The utility of charts can be increased by correlating them and their
 provided information. Vampir supports this mode of operation by allowing
 you to display multiple charts at the same time. Charts that display a
-sequence of events such as theÂ \ *Master Timeline*Â and theÂ \ *Process
+sequence of events such as theÂ \ *Master Timeline* and the \ *Process
 Timeline*\ chart are aligned vertically. This alignment ensures that the
 temporal relationship of events is preserved across chart boundaries.
 The user can arrange the placement of the charts according to his
@@ -302,37 +300,37 @@ flexible display architecture also allows increasing or decreasing the
 screen space that is used by a chart. Charts of particular interest may
 get more space in order to render information in more detail.
 
-|image34|
+.. image: images/Display_arranging_a.png
 
 **Moving and Arranging Charts in the Trace View Window**
 
-|image35|
+.. image: images/Display_arranging_b.png
 
 **Moving and Arranging Charts in the Trace View Window**
 
-|image36|
+.. image: images/Custom_arrangement.png
 
 **A Custom Chart Arrangement in the Trace View Window**
 
-|image37|
+.. image: images/close_display.png
 
 **Closing (right) and Undocking (left) a Chart**
 
-TheÂ \ *Trace View*Â window can host an arbitrary number of charts. Charts
-can be added by clicking on the respectiveÂ \ *Charts*Â toolbar icon or
-the correspondingÂ \ *Chart*Â menu entry. With a few more clicks, charts
+The \ *Trace View* window can host an arbitrary number of charts. Charts
+can be added by clicking on the respective \ *Charts* toolbar icon or
+the corresponding \ *Chart* menu entry. With a few more clicks, charts
 can be combined to a custom chart arrangement. Customized layouts can be
-saved as described inÂ \ `Saving
+saved as described in \ `Saving
 Policy <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Saving_Policy>`__.
 Every chart can be undocked or closed by clicking the dedicated icon in
 its upper right corner. Undocking a chart means to free the chart from
 the current arrangement and present it in its own window.
 
-|image38|
+.. image: images/Undocking_1.png
 
 **Undocking of a Chart**
 
-|image39|
+.. image: images/Undocking_2.png
 
 **Docking a Chart**
 
@@ -345,7 +343,7 @@ blank space between labels and graphical representation, a moveable
 separator appears. After clicking a separator decoration, moving the
 mouse while holding the left mouse button causes resizing.
 
-|image40|
+.. image: images/Resize_labels.png
 
 **Resizing Labels: (A) Hover over a Separator Decoration; (B) Drag and
 Drop the Separator**
@@ -362,7 +360,7 @@ accessed by right clicking in the display window. Common entries are:
 -  **Reset Vertical Zoom:** Go back to the initial state in vertical
    zooming.
 -  **Set Metric:** Change values which should be represented in the
-   chart, e.g.Â *Exclusive Time*Â toÂ *Inclusive Time*.
+   chart, e.g. *Exclusive Time* to *Inclusive Time*.
 -  **Sort By:**\ Rearrange values or bars by a certain characteristic.
 
 **Zooming**
@@ -372,31 +370,31 @@ Zooming is a key feature of Vampir. In most charts it is possible to
 zoom in and out to get abstract and detailed views of the visualized
 data. In the timeline charts, zooming produces a more detailed view of a
 special time interval and therefore reveals new information that could
-not be seen in the larger section. Short function calls in theÂ \ *Master
-Timeline*Â may not be visible unless an appropriate zooming level has
+not be seen in the larger section. Short function calls in the \ *Master
+Timeline* may not be visible unless an appropriate zooming level has
 been reached. If the execution time of these short functions is too
 short regarding the pixel resolution of your computer display, the
 selection of a shorter time interval is required. Note: Other charts can
 be affected when zooming in timeline displays: The interval chosen in a
-timeline chart such asÂ \ *Master Timeline*Â orÂ *Process Timeline*Â also
+timeline chart such asÂ \ *Master Timeline* or *Process Timeline* also
 defines the time interval for the calculation of accumulated
 measurements in the statistical charts. Statistical charts like
-theÂ \ *Function Summary*Â provide zooming of statistic values. In these
+theÂ \ *Function Summary* provide zooming of statistic values. In these
 cases zooming does not affect any other chart. Zooming is disabled in
-theÂ \ *Pie Chart*Â mode of theÂ \ *Function Summary*Â reachable via context
-menu underÂ \ *Set Chart Mode->Pie Chart*.
+theÂ \ *Pie Chart* mode of theÂ \ *Function Summary* reachable via context
+menu under \ *Set Chart Mode->Pie Chart*.
 
-|image41|
+.. image: images/Zooming.png
 
 **Zooming within a Chart**
 
 To zoom into an area, click and hold the left mouse button and select
 the area. It is possible to zoom horizontally and in some charts also
-vertically. Horizontal zooming in theÂ \ *Master Timeline*Â defines the
+vertically. Horizontal zooming in theÂ \ *Master Timeline* defines the
 time interval to be visualized whereas vertical zooming selects a group
 of processes to be displayed. To scroll horizontally move the slider at
 the bottom or use the mouse wheel. Additionally, the zoom can be
-accessed with help of theÂ \ *Zoom Toolbar*Â by dragging the borders of
+accessed with help of theÂ \ *Zoom Toolbar* by dragging the borders of
 the selection rectangle or scrolling down the mouse wheel. To return to
 the previous zooming state, the global "Undo" is provided that in the
 "Edit" menu; alternatively, press "Ctrl+Z" to revert to the last zoom.
@@ -405,30 +403,30 @@ Accordingly, a zooming action can be repeated by selecting "Redo" in the
 independently of the current mouse position. Next to "Undo" and "Redo"
 it is shown which kind of action in which display could be undone and
 redone, respectively. To get back to the initial state of zooming in a
-fast way selectÂ \ *Reset Horizontal Zoom*Â orÂ *Reset Vertical Zoom*Â in
+fast way select \ *Reset Horizontal Zoom* or *Reset Vertical Zoom* in
 the context menu of the desired timeline display. To reset zoom is also
 an action that can be reverted by "Undo".
 
 **The Zoom Toolbar**
 --------------------
 
-Vampir provides aÂ \ *Zoom Toolbar* that can be used for zooming and
+Vampir provides a \ *Zoom Toolbar* that can be used for zooming and
 navigation in the trace data. It is situated in the upper right corner
-of the *Trace View*Â window. Of course it is possible to drag and drop it
-as desired. TheÂ \ *Zoom Toolbar*Â offers an overview of the data
+of the *Trace View* window. Of course it is possible to drag and drop it
+as desired. TheÂ \ *Zoom Toolbar* offers an overview of the data
 displayed in the corresponding charts. The current zoomed area can be
 seen highlighted as a rectangle within theÂ \ *Zoom Toolbar*. Clicking on
 one of the two boundaries and moving it (with left mouse button held) to
 the intended position executes horizontal zooming in all charts.
 **Note**: Instead of dragging boundaries, it is also possible to use
-the mouse wheel for zooming. Hover over theÂ \ *Zoom Toolbar*Â and scroll
+the mouse wheel for zooming. Hover over theÂ \ *Zoom Toolbar* and scroll
 up to zoom in and scroll down to zoom out. Dragging the zoom area
 changes the section that is displayed without changing the zoom factor.
 For dragging, click in the highlighted zoom area and drag and drop it to
-the desired region. If the user double clicks in theÂ \ *Zoom Toolbar*,
+the desired region. If the user double clicks in the \ *Zoom Toolbar*,
 the initial zooming state is reverted to.
 
-|image42|
+.. image: images/Zoom_toolbar.png
 
 **Zooming and Navigation within the Zoom Toolbar: (A+B) Zooming in/out
 with Mouse Wheel; (C) Scrolling by Moving the Highlighted Zoom Area; (D)
@@ -436,20 +434,20 @@ Zooming by Selecting and Moving a Boundary of the Highlighted Zoom
 Area**
 
 The colors represent user-defined groups of functions or activities.
-Please note that all charts added to theÂ \ *Trace View*Â window will
+Please note that all charts added to the \ *Trace View* window will
 adapt their statistics information according to this time interval
-selection. TheÂ \ *Zoom Toolbar*Â can be disabled and enabled with the
-toolbar's context menu entryÂ \ *Zoom Toolbar*.
+selection. The \ *Zoom Toolbar* can be disabled and enabled with the
+toolbar's context menu entry \ *Zoom Toolbar*.
 
 **The Charts Toolbar**
 ----------------------
 
-Use theÂ \ *Charts*Â toolbar to open instances of the different charts. It
+Use the \ *Charts* toolbar to open instances of the different charts. It
 is situated in the upper left corner of the main window by default. Of
 course, it is also possible to drag and drop it as desired.
-TheÂ \ *Charts*Â toolbar can be disabled with the toolbar's context menu
-entryÂ \ *Charts*. The table below shows the different icons representing
-the charts inÂ \ *Charts*Â toolbar. The icons are arranged in three
+The \ *Charts* toolbar can be disabled with the toolbar's context menu
+entry \ *Charts*. The table below shows the different icons representing
+the charts in \ *Charts* toolbar. The icons are arranged in three
 groups, divided by a small separator. The first group represents
 timeline charts, whose zooming states affect all other charts. The
 second group consists of statistical charts, providing special
@@ -466,84 +464,84 @@ Name
 
 Description
 
-|image43|
+.. image: images/icon_master_tl.png
 
 Master Timeline
 
 `Master
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
 
-|image44|
+.. image: images/icon_process_tl.png
 
 Process Timeline
 
 `Process
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
 
-|image45|
+.. image: images/icon_counter_tl.png
 
 Counter Data Timeline
 
 `Counter
 Data <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline>`__
 
-|image46|
+.. image: images/icon_radar.png
 
 Performance Radar
 
 `Performance
 Radar <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar>`__
 
-|image47|
+.. image: images/icon_function_summ.png
 
 Function Summary
 
 `Function
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary>`__
 
-|image48|
+.. image: images/icon_message_summ.png
 
 Message Summary
 
 `Message
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary>`__
 
-|image49|
+.. image: images/icon_process_summ.png
 
 Process Summary
 
 `Process
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary>`__
 
-|image50|
+.. image: images/icon_matrix.png
 
 Communication Matrix View
 
 `Communication Matrix
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View>`__
 
-|image51|
+.. image: images/icon_calltree.png
 
 Call Tree
 
 `Call
 Tree <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree>`__
 
-|image52|
+.. image: images/icon_legend.png
 
 Function Legend
 
 `Function
 Legend <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend>`__
 
-|image53|
+.. image: images/icon_context.png
 
 Context View
 
 `Context
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View>`__
 
-|image54|
+.. image: images/icon_marker.png
 
 Marker View
 
@@ -593,17 +591,17 @@ before the left mouse key, Vampir will proceed with zooming.
 In the Master and Process Timelines, detailed information about
 functions, communication, and synchronization events is shown. Timeline
 charts are available for individual processes (*Process Timeline*) as
-well as for a collection of processes (*Master Timeline*). TheÂ \ *Master
-Timeline*Â consists of a collection of rows. Each row represents a single
-process, as shown in the figure below. AÂ \ *Process Timeline*Â shows the
+well as for a collection of processes (*Master Timeline*). The \ *Master
+Timeline* consists of a collection of rows. Each row represents a single
+process, as shown in the figure below. A \ *Process Timeline* shows the
 different levels of function calls in a stacked bar chart for a single
 process, as depicted in the second figure.
 
-|image55|
+.. image: images/Master_timeline.png
 
 **Master Timeline**
 
-|image56|
+.. image: images/Process_timeline.png
 
 **Process Timeline**
 
@@ -612,15 +610,15 @@ sequence of function calls or program phases on the right. The color of
 a function is defined by its group membership; e.g., MPI\_Send()
 belonging to the function group MPI has the same color, presumably red,
 as MPI\_Recv(), which also belongs to the function group MPI. Clicking
-on a function highlights it and causes theÂ \ *Context View*Â display to
+on a function highlights it and causes the \ *Context View* display to
 show detailed information about that particular function, e.g., its
 corresponding function group name, time interval, and the complete name.
-TheÂ \ *Context View*Â display is explained in its own section below. Some
+The \ *Context View* display is explained in its own section below. Some
 function invocations are very short, and will not show up in the overall
 view because of a lack of display pixels. A zooming mechanism is
 provided to inspect a specific time interval in more detail. If zooming
 is performed, panning in a horizontal direction is possible with the
-scroll bar at the bottom. TheÂ \ *Process Timeline*Â resembles
+scroll bar at the bottom. The \ *Process Timeline* resembles
 theÂ \ *Master Timeline*\ with slight differences. The chart's timeline
 is divided into levels, which represent the different call stack levels
 of function calls. The initial function begins at the first level, a
@@ -628,7 +626,7 @@ sub-function called by that function is located a level beneath, and so
 forth. If a sub-function returns to its caller, the graphical
 representation also returns to the level above. In addition to the
 display of categorized function invocations, Vampir's
-*Master*Â andÂ *Process Timeline*Â also provide information about
+*Master* and *Process Timeline* also provide information about
 communication events. Messages exchanged between two different processes
 are depicted as black lines. In timeline charts, the progress in time is
 reproduced from left to right. The leftmost starting point of a message
@@ -640,7 +638,7 @@ MPI\_Recv(). It is also possible to show a collective communication like
 MPI\_Allreduce() by selecting one corresponding message as shown in the
 figure.
 
-|image57|
+.. image: images/collectives.png
 
 **Selected MPI Collective in Master Timeline**
 
@@ -648,7 +646,7 @@ Additional information like message bursts, markers, and I/O events is
 also available. The table shows the symbols and descriptions of these
 objects.
 
-Â 
+
 
 **Additional Information in Master and Process Timeline**
 
