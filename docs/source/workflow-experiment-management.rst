@@ -57,14 +57,14 @@ an upper bound for the number of necessary resources:
     Options:
     -h, --help show this help message and exit
     --loglevel=LOG_LEVEL Log level.
-      Valid levels are: debug,info,warning,error,
-      Default is info.
+     Valid levels are: debug,info,warning,error,
+     Default is info.
     -i IMAGE_NAME, --image-name=IMAGE_NAME
-      The name of the Nimbus image to provision
+     The name of the Nimbus image to provision
     -l MIN_INSTANCES, --min=MIN_INSTANCES
-      The minimum number of instances to have before exiting
+    � The minimum number of instances to have before exiting
     -u MAX_INSTANCES, --max=MAX_INSTANCES
-      The maximum number of instances to have before exiting
+    � The maximum number of instances to have before exiting
 
 nimbus-provisioner.py will query the Nimbus instance to see what number
 of resources are already provisioned. If the number of resources are
@@ -99,7 +99,7 @@ static file on the web server. The experiment workflow was:
 
 Visually:
 
-|Web Server Workflow|
+.. |Web Server Workflow| image:: images/web-server-wf-700x83.jpg
 
 The Pegasus workflow was a little bit more complex once staging and
 other auxiliary jobs were added, but we expect most of the experiment
