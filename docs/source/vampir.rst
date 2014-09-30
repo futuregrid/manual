@@ -459,94 +459,59 @@ Only one instance of an informational chart can be opened at a time.
 
 **Icons of the Toolbar**
 
-Icon
 
-Name
+.. list-table::
 
-Description
-
-.. image:: images/icon_master_tl.png
-
-Master Timeline
-
-`Master
+    * - Icon
+      - Name
+      - Description
+    * - .. image:: images/icon_master_tl.png
+      - Master Timeline
+      - `Master
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
-
-.. image:: images/icon_process_tl.png
-
-Process Timeline
-
-`Process
+    * - .. image:: images/icon_process_tl.png
+	 - Process Timeline
+      - `Process
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
-
-.. image:: images/icon_counter_tl.png
-
-Counter Data Timeline
-
-`Counter
+    * - .. image:: images/icon_counter_tl.png
+      - Counter Data Timeline
+      - `Counter
 Data <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline>`__
-
-.. image:: images/icon_radar.png
-
-Performance Radar
-
-`Performance
+    * - .. image:: images/icon_radar.png
+      - Performance Radar
+      - `Performance
 Radar <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar>`__
-
-.. image:: images/icon_function_summ.png
-
-Function Summary
-
-`Function
+    * - .. image:: images/icon_function_summ.png
+      - Function Summary
+      - `Function
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary>`__
-
-.. image:: images/icon_message_summ.png
-
-Message Summary
-
-`Message
+    * - .. image:: images/icon_message_summ.png
+      - Message Summary
+      - `Message
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary>`__
-
-.. image:: images/icon_process_summ.png
-
-Process Summary
-
-`Process
+    * - .. image:: images/icon_process_summ.png
+      - Process Summary
+      - `Process
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary>`__
-
-.. image:: images/icon_matrix.png
-
-Communication Matrix View
-
-`Communication Matrix
+    * - .. image:: images/icon_matrix.png
+      - Communication Matrix View
+      - `Communication Matrix
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View>`__
-
-.. image:: images/icon_calltree.png
-
-Call Tree
-
-`Call
+    * - .. image:: images/icon_calltree.png
+      - Call Tree
+      - `Call
 Tree <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree>`__
-
-.. image:: images/icon_legend.png
-
-Function Legend
-
-`Function
+    * - .. image:: images/icon_legend.png
+      - Function Legend
+      - `Function
 Legend <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend>`__
-
-.. image:: images/icon_context.png
-
-Context View
-
-`Context
+    * - .. image:: images/icon_context.png
+      - Context View
+      - `Context
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View>`__
-
-.. image:: images/icon_marker.png
-
-Marker View
-
-`Marker
+    * - .. image:: images/icon_marker.png
+      - Marker View
+      - `Marker
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_Filtering_and_Reduction>`__
 
 **Properties of the Tracefile**
