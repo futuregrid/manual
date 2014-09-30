@@ -109,7 +109,8 @@ Tutorial Topic 4: High Performance Computing
 --------------------------------------------
 
 -  :ref:`Basic High Performance Computing <s-hpc>` [novice]
--  :ref:`Running Hadoop as a batch job using MyHadoop <s-hadoop>' [novice]
+-  `Running Hadoop as a batch job using
+   MyHadoop <hadoop.html>`_ [novice]
 -  :ref:`Performance Analysis with Vampir <s-vampir>`
    [advanced]
 -  :ref:`Instrumentation and tracing with VampirTrace <s-vampirtrace>` [advanced]
@@ -117,7 +118,7 @@ Tutorial Topic 4: High Performance Computing
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  :ref:`Running interactive experiments <s-experiment-interactive>' [novice]
+-  `Running interactive experiments <experiment-interactive.html>' [novice]
 -  :portal:`Running workflow experiments using
    Pegasus <tutorials/workflow-experiment-management>` [novice]
 -  `Pegasus on FutureGrid <pegasus.html>`__ [novice]
