@@ -181,7 +181,7 @@ $ ./run\_kmeans.sh init\_clusters.txt 3 `p.pf <http://p.pf/>`__
 
 The output is as follows:
 
-.. image:: |twister_kmeans-906x257| images/twister_kmeans-906x257.jpg
+.. image:: images/twister_kmeans-906x257.jpg
 
 A video detailing the above steps can be shown
 `here <https://www.slashtmp.iu.edu/files/download?FILE=jeromitc%2F76089Sok5vi>`__
