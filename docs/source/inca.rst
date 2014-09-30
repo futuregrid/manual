@@ -586,16 +586,19 @@ The first page shows the Google Map view overview. Click on the
 your results will be under either the Functionality or Performance menu
 as below:
 
-|IncaConsumerMenuCurrent.png|
+.. image:: images/IncaConsumerMenuCurrent.png 
+     :target: https://wiki.futuregrid.org/index.php
 
 Your result will show either as pass/fail or as a version under either
 Services, Cluster or Cloud, version as below:
 
-|IncaConsumerFunctionality.png|
+.. image:: images/IncaConsumerFunctionality.png
+    :target: https://wiki.futuregrid.org/index.php
 
 Or display performance statistics as below:
 
-|IncaConsumerPerformance.png|
+.. image:: images/IncaConsumerPerformance.png
+	:target: https://wiki.futuregrid.org/index.php
 
 Click on your test result in the table to show the full details of the
 reporter execution and to view the history.  For more information about
