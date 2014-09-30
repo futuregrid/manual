@@ -119,8 +119,8 @@ Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
 -  :ref:`Running interactive experiments <s-experiment-interactive>` [novice]
--  :portal:`Running workflow experiments using
-   Pegasus <tutorials/workflow-experiment-management>` [novice]
+-  :ref:`Running workflow experiments using
+   Pegasus <s-workflow-experiment-management>` [novice]
 -  `Pegasus on FutureGrid <pegasus.html>`__ [novice]
 
 Tutorial Topic 6: Image Management and Rain
