@@ -30,16 +30,16 @@ any corrections or suggestions**.
 Tutorial Topic 2: High Performance Computing
 --------------------------------------------
 
--  :ref:`FutureGrid Tutorial VA1: Performance Analysis with
+-  :ref:`FutureGrid Tutorial VA1: Performance Analysis with
    Vampir <s-vampir>` [advanced]
--  :ref:`FutureGrid Tutorial VT1: Instrumentation and tracing
-   with VampirTrace <s-vampirtrace>` [advanced]
+-  :ref:`FutureGrid Tutorial VT1: Instrumentation and tracing
+   with VampirTrace <s-vampirtrace>` [advanced]
 
 Tutorial Topic 3: Information Systems
 -------------------------------------
 
--  :ref:`FutureGrid Tutorial NL1: Netlogger Tutorial <s-netlogger>` [advanced]
--  :ref:`FutureGrid Tutorial IN1: 
+-  :ref:`FutureGrid Tutorial NL1: Netlogger Tutorial <s-netlogger>` [advanced]
+-  :ref:`FutureGrid Tutorial IN1: 
    INCA Tutorial <s-inca>` [advanced]
 
 Others
