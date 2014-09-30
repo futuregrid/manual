@@ -1,9 +1,19 @@
 .. _s-vampir:
 
+**********************************************************************
+Vampir and Vampir Trace
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 Vampir
 ======
 
 **Introduction**
+~~~~~~~~~~~~~~~~~
 
 Performance optimization is a key issue for the development of efficient
 parallel software applications. Vampir provides a manageable framework
@@ -70,6 +80,7 @@ combination of Fortran77, Fortran (90/95/etc.), C, and C++.
 .. image:: images/otf_0.png
 
 **Representation of Streams by Multiple Files**
+-------------------------------------------------
 
 OTF uses a special ASCII data representation to encode its data items
 with numbers and tokens in hexadecimal code without special prefixes.
@@ -136,13 +147,13 @@ library. Automatic instrumentation is the most convenient method to
 instrument your program. Therefore, simply use the compiler wrappers
 without any parameters, e.g.:
 
-    ::
+::
 
         vtf90 hello.f90 -o hello
 
 For manual instrumentation with the VampirTrace API, simply include:
 
-    ::
+::
 
         vt_user.inc (Fortran)
 
@@ -151,7 +162,7 @@ For manual instrumentation with the VampirTrace API, simply include:
 and label any user defined sequence of statements for instrumentation as
 follows:
 
-    ::
+::
 
         VT_USER_START(name) ... VT_USER_END(name)
 
@@ -235,6 +246,7 @@ appropriate input files.
 .. image:: images/open_file.png
 
 **Loading a Trace Log File in Vampir**
+--------------------------------------
 
 While Vampir is loading the trace file, an empty "Trace View" window
 with a progress bar at the bottom opens. After Vampir loaded the trace
@@ -249,6 +261,8 @@ this proceeding is a suitable strategy to save time.
 .. image:: images/cancel_loading_resize.png
 
 **Progress Bar and Cancel Loading Button**
+------------------------------------------
+
 
 Basic functionality and navigation elements are described
 in \ `Basics <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics>`__.
@@ -380,14 +394,15 @@ be affected when zooming in timeline displays: The interval chosen in a
 timeline chart such asÂ \ *Master Timeline* or *Process Timeline* also
 defines the time interval for the calculation of accumulated
 measurements in the statistical charts. Statistical charts like
-theÂ \ *Function Summary* provide zooming of statistic values. In these
+the \ *Function Summary* provide zooming of statistic values. In these
 cases zooming does not affect any other chart. Zooming is disabled in
-theÂ \ *Pie Chart* mode of theÂ \ *Function Summary* reachable via context
+the \ *Pie Chart* mode of the \ *Function Summary* reachable via context
 menu under \ *Set Chart Mode->Pie Chart*.
 
 .. image:: images/Zooming.png
 
 **Zooming within a Chart**
+-------------------------------
 
 To zoom into an area, click and hold the left mouse button and select
 the area. It is possible to zoom horizontally and in some charts also
@@ -458,7 +473,7 @@ informational charts, providing specific textual information or legends.
 Only one instance of an informational chart can be opened at a time.
 
 **Icons of the Toolbar**
-
+-------------------------------
 
 .. list-table::
 
@@ -1100,6 +1115,7 @@ tailored to parallel and distributed High Performance Computing (HPC)
 applications.
 
 **Availability**\ ****
+-----------------------
 
 VampirTrace is currently available on FutureGrid machines under module
 'vampirtrace'. VampirTrace is also available in OpenMPI versions 1.5.x
@@ -1107,6 +1123,7 @@ or higher. For example on Bravo, it is available as *openmpi/1.5.4-gnu*
 or *openmpi/1.5.4-intel*.
 
 **Overview**\ ****
+-----------------------
 
 The instrumentation part of VampirTrace modifies a given application in
 order to inject additional measurement calls during runtime. The tracing
@@ -1414,6 +1431,7 @@ contain MPI and OpenMP instrumentation, which might be desirable in some
 cases. For more on how to inline functions, read your compiler's manual.
 
 **Manual Instrumentation**
+--------------------------
 
 **Using the VampirTrace API**
 
@@ -1435,14 +1453,16 @@ Fortran
 
 C
 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-VT\_USER\_START("name");
+  VT\_USER\_START("name");
 
-...
+  ...
 
-VT\_USER\_END("name");
+  VT\_USER\_END("name");
+
 
 If a block has several exit points (as is often the case for functions),
 all exit points have to be instrumented with VT USER END, too.
@@ -1459,10 +1479,9 @@ C++
 
   {
 
-  VT\_TRACER("name");
+  VT\_TRACER("name");
 
-  ...
-
+  ...
   }
 
 The instrumented sources have to be compiled with -DVTRACE for all three
@@ -1632,53 +1651,33 @@ Environment variables can be used to control nearly every aspect of the
 measurement of a VampirTrace instrumented executable. (ToDo: link to
 CheatSheet and Doku-PDF)
 
-**Variable**
+.. list-table::
 
-**Purpose**
-
-**Default**
-
-
-Global Settings
-
-Â 
-
-VT\_APPPATH
-
-Path to the application executable.
-
--
-
-VT\_BUFFER\_SIZE
-
-Size of internal event trace buffer. This is the place where event
+    * - **Variable**
+      - **Purpose**
+      - **Default**
+    * - 
+      - Global Settings
+      - 
+    * - VT\_APPPATH
+      - Path to the application executable.
+      - -
+    * - VT\_BUFFER\_SIZE
+      - Size of internal event trace buffer. This is the place where event
 records are stored, before being written to a file.
-
-32M
-
-VT\_CLEAN
-
-Remove temporary trace files?
-
-yes
-
-VT\_COMPRESSION
-
-Write compressed trace files?
-
-yes
-
-VT\_FILE\_PREFIX
-
-Prefix used for trace filenames.
-
--
-
-VT\_FILE\_UNIQUE
-
-Enable unique trace file naming? Set to yes, no, or a numerical ID.
-
-no
+      - 32M
+    * - VT\_CLEAN
+      - Remove temporary trace files?
+      - yes
+    * - VT\_COMPRESSION
+      - Write compressed trace files?
+      - yes
+    * - VT\_FILE\_PREFIX
+      - Prefix used for trace filenames.
+      - -
+    * - VT\_FILE\_UNIQUE
+      - Enable unique trace file naming? Set to yes, no, or a numerical ID.
+      - no
 
 VT\_MAX\_FLUSHES
 
