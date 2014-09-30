@@ -60,6 +60,44 @@ CloudCom 2010 Tutorials/Screencasts
       - .. image:: images/doc_logo-50x46.png
 				:target: https://docs.google.com/presentation/d/1NJuc3uZXVmnfFdOVTMLCbfd3FMxM6Nb1c4yx6aNegEc/edit
       - 01/15/2011
+    * - HPC on FutureGrid
+      - 
+      - 
+    * - Eucalyptus on FutureGrid
+      - 
+      - 
+    * - Image Generation and Management on FutureGrid
+      - 
+      - 
+    * - Dynamic Provisioning & RAIN on FutureGrid
+      - 
+      - 
+    * - FutureGrid Portal
+      - 
+      - 
+    * - FutureGrid Tutorial
+      - 
+      - 
+    * - Azure Tutorial
+      - 
+      - 
+    * - OpenNebula Tutorial
+      - 
+      - 
+    * - Nimbus Tutorial
+      - 
+      - 
+    * - OpenStack Tutorial
+      - 
+      - 
+    * - Sector/Sphere Tutorial
+      - 
+      - 
+    * - Apache Hadooop & Pig Tutorial
+      - 
+      -  
+
+
 	 
 
 that's a start. see how that looks when it is built
