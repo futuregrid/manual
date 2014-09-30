@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Vampir &mdash; FutureGrid 0.1 documentation</title>
+    <title>Vampir and Vampir Trace &mdash; FutureGrid 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -1304,59 +1304,46 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Vampir</a><ul>
+<li><a class="reference internal" href="#">Vampir and Vampir Trace</a><ul>
+<li><a class="reference internal" href="#vampir">Vampir</a><ul>
+<li><a class="reference internal" href="#introduction"><strong>Introduction</strong></a><ul>
 <li><a class="reference internal" href="#vampir-on-futuregrid"><strong>Vampir on FutureGrid</strong></a></li>
 <li><a class="reference internal" href="#event-based-performance-tracing-and-profiling"><strong>Event-based Performance Tracing and Profiling</strong></a></li>
 <li><a class="reference internal" href="#the-open-trace-format-otf"><strong>The Open Trace Format (OTF)</strong></a></li>
+<li><a class="reference internal" href="#representation-of-streams-by-multiple-files"><strong>Representation of Streams by Multiple Files</strong></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#getting-started"><strong>Getting Started</strong></a><ul>
-<li><a class="reference internal" href="#generation-of-trace-data"><strong>Generation of Trace Data</strong></a></li>
-<li><a class="reference internal" href="#enabling-performance-tracing"><strong>Enabling Performance Tracing</strong></a></li>
-<li><a class="reference internal" href="#tracing-an-application"><strong>Tracing an Application</strong></a></li>
-<li><a class="reference internal" href="#starting-vampir-and-loading-a-trace-file"><strong>Starting Vampir and Loading a Trace File</strong></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#basics"><strong>Basics</strong></a><ul>
-<li><a class="reference internal" href="#chart-arrangement"><strong>Chart Arrangement</strong></a></li>
-<li><a class="reference internal" href="#context-menus"><strong>Context Menus</strong></a></li>
-<li><a class="reference internal" href="#zooming"><strong>Zooming</strong></a></li>
-<li><a class="reference internal" href="#the-zoom-toolbar"><strong>The Zoom Toolbar</strong></a></li>
-<li><a class="reference internal" href="#the-charts-toolbar"><strong>The Charts Toolbar</strong></a></li>
-<li><a class="reference internal" href="#properties-of-the-tracefile"><strong>Properties of the Tracefile</strong></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#getting-started"><strong>Getting Started</strong></a></li>
+<li><a class="reference internal" href="#basics"><strong>Basics</strong></a></li>
 <li><a class="reference internal" href="#performance-data-visualization"><strong>Performance Data Visualization</strong></a><ul>
-<li><a class="reference internal" href="#timeline-charts"><strong>Timeline Charts</strong></a><ul>
 <li><a class="reference internal" href="#master-timeline-and-process-timeline"><strong>Master Timeline and Process Timeline</strong></a></li>
 <li><a class="reference internal" href="#counter-data-timeline"><strong>Counter Data Timeline</strong></a></li>
-<li><a class="reference internal" href="#performance-radar"><strong>Performance Radar</strong></a></li>
+<li><a class="reference internal" href="#performance-radar"><strong>Performance Radar</strong></a><ul>
+<li><a class="reference internal" href="#statistical-charts"><strong>Statistical Charts</strong></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#statistical-charts"><strong>Statistical Charts</strong></a><ul>
 <li><a class="reference internal" href="#call-tree"><strong>Call Tree</strong></a></li>
 <li><a class="reference internal" href="#function-summary"><strong>Function Summary</strong></a></li>
 <li><a class="reference internal" href="#process-summary"><strong>Process Summary</strong></a></li>
 <li><a class="reference internal" href="#message-summary"><strong>Message Summary</strong></a></li>
-<li><a class="reference internal" href="#communication-matrix-view"><strong>Communication Matrix View</strong></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#communication-matrix-view"><strong>Communication Matrix View</strong></a><ul>
 <li><a class="reference internal" href="#informational-charts"><strong>Informational Charts</strong></a></li>
-<li><a class="reference internal" href="#function-legend"><strong>Function Legend</strong></a><ul>
-<li><a class="reference internal" href="#context-view"><strong>Context View</strong></a></li>
+<li><a class="reference internal" href="#function-legend"><strong>Function Legend</strong></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#context-view"><strong>Context View</strong></a><ul>
 <li><a class="reference internal" href="#information-filtering-and-reduction"><strong>Information Filtering and Reduction</strong></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#customization"><strong>Customization</strong></a><ul>
-<li><a class="reference internal" href="#general-preferences"><strong>General Preferences</strong></a></li>
-<li><a class="reference internal" href="#appearance"><strong>Appearance</strong></a></li>
-<li><a class="reference internal" href="#saving-policy"><strong>Saving Policy</strong></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#customization"><strong>Customization</strong></a></li>
 <li><a class="reference internal" href="#footnotes"><strong>Footnotes</strong></a></li>
 <li><a class="reference internal" href="#vampirtrace">VampirTrace</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -1396,9 +1383,56 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="vampir">
-<span id="s-vampir"></span><h1>Vampir<a class="headerlink" href="#vampir" title="Permalink to this headline">¶</a></h1>
-<p><strong>Introduction</strong></p>
+  <div class="section" id="vampir-and-vampir-trace">
+<span id="s-vampir"></span><h1>Vampir and Vampir Trace<a class="headerlink" href="#vampir-and-vampir-trace" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Page Contents</p>
+<div class="contents local last topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#vampir" id="id27">Vampir</a><ul>
+<li><a class="reference internal" href="#introduction" id="id28"><strong>Introduction</strong></a><ul>
+<li><a class="reference internal" href="#vampir-on-futuregrid" id="id29"><strong>Vampir on FutureGrid</strong></a></li>
+<li><a class="reference internal" href="#event-based-performance-tracing-and-profiling" id="id30"><strong>Event-based Performance Tracing and Profiling</strong></a></li>
+<li><a class="reference internal" href="#the-open-trace-format-otf" id="id31"><strong>The Open Trace Format (OTF)</strong></a></li>
+<li><a class="reference internal" href="#representation-of-streams-by-multiple-files" id="id32"><strong>Representation of Streams by Multiple Files</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-started" id="id33"><strong>Getting Started</strong></a></li>
+<li><a class="reference internal" href="#basics" id="id34"><strong>Basics</strong></a></li>
+<li><a class="reference internal" href="#performance-data-visualization" id="id35"><strong>Performance Data Visualization</strong></a><ul>
+<li><a class="reference internal" href="#master-timeline-and-process-timeline" id="id36"><strong>Master Timeline and Process Timeline</strong></a></li>
+<li><a class="reference internal" href="#counter-data-timeline" id="id37"><strong>Counter Data Timeline</strong></a></li>
+<li><a class="reference internal" href="#performance-radar" id="id38"><strong>Performance Radar</strong></a><ul>
+<li><a class="reference internal" href="#statistical-charts" id="id39"><strong>Statistical Charts</strong></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#call-tree" id="id40"><strong>Call Tree</strong></a></li>
+<li><a class="reference internal" href="#function-summary" id="id41"><strong>Function Summary</strong></a></li>
+<li><a class="reference internal" href="#process-summary" id="id42"><strong>Process Summary</strong></a></li>
+<li><a class="reference internal" href="#message-summary" id="id43"><strong>Message Summary</strong></a></li>
+<li><a class="reference internal" href="#communication-matrix-view" id="id44"><strong>Communication Matrix View</strong></a><ul>
+<li><a class="reference internal" href="#informational-charts" id="id45"><strong>Informational Charts</strong></a></li>
+<li><a class="reference internal" href="#function-legend" id="id46"><strong>Function Legend</strong></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#context-view" id="id47"><strong>Context View</strong></a><ul>
+<li><a class="reference internal" href="#information-filtering-and-reduction" id="id48"><strong>Information Filtering and Reduction</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customization" id="id49"><strong>Customization</strong></a></li>
+<li><a class="reference internal" href="#footnotes" id="id50"><strong>Footnotes</strong></a></li>
+<li><a class="reference internal" href="#vampirtrace" id="id51">VampirTrace</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="vampir">
+<h2><a class="toc-backref" href="#id27">Vampir</a><a class="headerlink" href="#vampir" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h3><a class="toc-backref" href="#id28"><strong>Introduction</strong></a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
 <p>Performance optimization is a key issue for the development of efficient
 parallel software applications. Vampir provides a manageable framework
 for analysis, which enables developers to quickly display program
@@ -1417,14 +1451,14 @@ Microsoft Windows HPC Server 2008. This new Windows edition of Vampir
 combines modern scalable event processing techniques with a fully
 redesigned graphical user interface.</p>
 <div class="section" id="vampir-on-futuregrid">
-<h2><strong>Vampir on FutureGrid</strong><a class="headerlink" href="#vampir-on-futuregrid" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id29"><strong>Vampir on FutureGrid</strong></a><a class="headerlink" href="#vampir-on-futuregrid" title="Permalink to this headline">¶</a></h4>
 <p>VampirServer is currently available on India
 at&nbsp;/N/soft/x86_64/el5/india/vampirserver. &nbsp;The VampirTrace modules are
 installed on Alamo, Hotel, India, and Sierra. &nbsp;To load, type &#8216;module
 load vampirtrace&#8217;.</p>
 </div>
 <div class="section" id="event-based-performance-tracing-and-profiling">
-<h2><strong>Event-based Performance Tracing and Profiling</strong><a class="headerlink" href="#event-based-performance-tracing-and-profiling" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id30"><strong>Event-based Performance Tracing and Profiling</strong></a><a class="headerlink" href="#event-based-performance-tracing-and-profiling" title="Permalink to this headline">¶</a></h4>
 <p>In software analysis, the term profiling refers to the creation of
 tables which summarize the runtime behavior of programs by means of
 accumulated performance measurements. Its simplest variant lists all
@@ -1448,16 +1482,18 @@ arbitrary time intervals and process groups to be specified. This is in
 contrast to <em>fixed profiles accumulated during runtime.</em></p>
 </div>
 <div class="section" id="the-open-trace-format-otf">
-<h2><strong>The Open Trace Format (OTF)</strong><a class="headerlink" href="#the-open-trace-format-otf" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id31"><strong>The Open Trace Format (OTF)</strong></a><a class="headerlink" href="#the-open-trace-format-otf" title="Permalink to this headline">¶</a></h4>
 <p>The Open Trace Format (OTF) was designed as a well-defined trace format
 with open, public domain libraries for writing and reading. This open
 specification of the trace information provides analysis and
 visualization tools like Vampir to operate efficiently at large scale.
 The format addresses large applications written in an arbitrary
 combination of Fortran77, Fortran (90/95/etc.), C, and C++.</p>
-<p><a href="#id9"><span class="problematic" id="id10">|images/otf_0.png|</span></a>
+<p><a href="#id25"><span class="problematic" id="id26">|images/otf_0.png|</span></a>
 .. image:: images/otf_0.png</p>
-<p><strong>Representation of Streams by Multiple Files</strong></p>
+</div>
+<div class="section" id="representation-of-streams-by-multiple-files">
+<h4><a class="toc-backref" href="#id32"><strong>Representation of Streams by Multiple Files</strong></a><a class="headerlink" href="#representation-of-streams-by-multiple-files" title="Permalink to this headline">¶</a></h4>
 <p>OTF uses a special ASCII data representation to encode its data items
 with numbers and tokens in hexadecimal code without special prefixes.
 That enables a very powerful format with respect to storage size, human
@@ -1485,10 +1521,9 @@ Format can be found in the <a class="reference external" href="http://www.tu-dre
 (OTF)*&nbsp;documentation</a>.</p>
 </div>
 </div>
+</div>
 <div class="section" id="getting-started">
-<h1><strong>Getting Started</strong><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="generation-of-trace-data">
-<h2><strong>Generation of Trace Data</strong><a class="headerlink" href="#generation-of-trace-data" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id33"><strong>Getting Started</strong></a><a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>The generation of trace files for the (Vampir) performance visualization
 tool requires a working monitoring system to be attached to your
 parallel program. Contrary to Windows HPC Server 2008 — whereby the
@@ -1505,9 +1540,6 @@ VampirTrace library. A new compilation of the program source code is
 only necessary if program-specific events should be added. Detailed
 information on the installation and usage of VampirTrace can be found at
 <a class="reference internal" href="#s-vampirtrace"><em>VampirTrace</em></a>.</p>
-</div>
-<div class="section" id="enabling-performance-tracing">
-<h2><strong>Enabling Performance Tracing</strong><a class="headerlink" href="#enabling-performance-tracing" title="Permalink to this headline">¶</a></h2>
 <p>To perform measurements with VampirTrace, the application program needs
 to be instrumented. VampirTrace handles this automatically by default,
 while manual instrumentation is also possible. All the necessary
@@ -1519,26 +1551,20 @@ instrumentation of the program and links the suitable VampirTrace
 library. Automatic instrumentation is the most convenient method to
 instrument your program. Therefore, simply use the compiler wrappers
 without any parameters, e.g.:</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>vtf90 hello.f90 -o hello
+<div class="highlight-python"><div class="highlight"><pre>vtf90 hello.f90 -o hello
 </pre></div>
 </div>
-</div></blockquote>
 <p>For manual instrumentation with the VampirTrace API, simply include:</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>vt_user.inc (Fortran)
+<div class="highlight-python"><div class="highlight"><pre>vt_user.inc (Fortran)
 
 vt_user.h (C, C++)
 </pre></div>
 </div>
-</div></blockquote>
 <p>and label any user defined sequence of statements for instrumentation as
 follows:</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>VT_USER_START(name) ... VT_USER_END(name)
+<div class="highlight-python"><div class="highlight"><pre>VT_USER_START(name) ... VT_USER_END(name)
 </pre></div>
 </div>
-</div></blockquote>
 <p>in Fortran and C, respectively, and in C++ as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>VT_TRACER(``name);
 </pre></div>
@@ -1553,9 +1579,6 @@ instrumentation or</p>
 </pre></div>
 </div>
 <p>to prevent an additional compiler instrumentation.</p>
-</div>
-<div class="section" id="tracing-an-application">
-<h2><strong>Tracing an Application</strong><a class="headerlink" href="#tracing-an-application" title="Permalink to this headline">¶</a></h2>
 <p>Running a VampirTrace instrumented application should normally result in
 an OTF trace file in the current working directory where the application
 was executed. On Linux, Mac OS, and Sun Solaris, the default name of the
@@ -1576,9 +1599,6 @@ version vtunify-mpi can be used as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>mpirun -np &lt;nranks&gt; vtunify-mpi &lt;nproc&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="starting-vampir-and-loading-a-trace-file">
-<h2><strong>Starting Vampir and Loading a Trace File</strong><a class="headerlink" href="#starting-vampir-and-loading-a-trace-file" title="Permalink to this headline">¶</a></h2>
 <p>To open a trace file, from the &#8220;File&#8221; menu, select &#8220;Open...&#8221;. This will
 provide the file-open dialog depicted below. It is possible to filter
 the files in the list. The file type input selector determines the
@@ -1601,7 +1621,6 @@ with the Open Trace Format (OTF) standard. Microsoft HPC Server 2008 is
 shipped with the translator program etl2otf.exe, which produces
 appropriate input files.</p>
 <img alt="_images/open_file.png" src="_images/open_file.png" />
-<p><strong>Loading a Trace Log File in Vampir</strong></p>
 <p>While Vampir is loading the trace file, an empty &#8220;Trace View&#8221; window
 with a progress bar at the bottom opens. After Vampir loaded the trace
 data completely, a default set of charts will appear. The illustrated
@@ -1612,15 +1631,13 @@ show only the earliest information from the tracefile. For huge
 tracefiles with performance problems assumed to be at the beginning,
 this proceeding is a suitable strategy to save time.</p>
 <img alt="_images/cancel_loading_resize.png" src="_images/cancel_loading_resize.png" />
-<p><strong>Progress Bar and Cancel Loading Button</strong></p>
 <p>Basic functionality and navigation elements are described
 in?<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics">Basics</a>.
 The available charts and the information provided by them are explained
 in?<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Data_Visualization">Performance_Data_Visualization</a>.</p>
 </div>
-</div>
 <div class="section" id="basics">
-<h1><strong>Basics</strong><a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id34"><strong>Basics</strong></a><a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
 <p>After loading has been completed, the&nbsp;<em>Trace View</em>?window title
 displays the trace file&#8217;s name. By default, the?<em>Charts</em>?toolbar and
 the?<em>Zoom Toolbar</em>?are available.</p>
@@ -1638,8 +1655,6 @@ in <a class="reference external" href="https://wiki.futuregrid.org/index.php/Doc
 Toolbar</a>).
 In the following section, we will explain the basic functions of the
 Vampir GUI which are generic to all charts.</p>
-<div class="section" id="chart-arrangement">
-<h2><strong>Chart Arrangement</strong><a class="headerlink" href="#chart-arrangement" title="Permalink to this headline">¶</a></h2>
 <p>The utility of charts can be increased by correlating them and their
 provided information. Vampir supports this mode of operation by allowing
 you to display multiple charts at the same time. Charts that display a
@@ -1688,9 +1703,6 @@ mouse while holding the left mouse button causes resizing.</p>
 <img alt="_images/Resize_labels.png" src="_images/Resize_labels.png" />
 <p><strong>Resizing Labels: (A) Hover over a Separator Decoration; (B) Drag and
 Drop the Separator</strong></p>
-</div>
-<div class="section" id="context-menus">
-<h2><strong>Context Menus</strong><a class="headerlink" href="#context-menus" title="Permalink to this headline">¶</a></h2>
 <p>All of the chart displays have their own context menus with common
 entries as well as display-specific ones. In the following section, only
 the most common entries will be discussed. A context menu can be
@@ -1703,9 +1715,6 @@ zooming.</li>
 chart, e.g.?*Exclusive Time*?to?*Inclusive Time*.</li>
 <li><strong>Sort By:</strong>Rearrange values or bars by a certain characteristic.</li>
 </ul>
-</div>
-<div class="section" id="zooming">
-<h2><strong>Zooming</strong><a class="headerlink" href="#zooming" title="Permalink to this headline">¶</a></h2>
 <p>Zooming is a key feature of Vampir. In most charts it is possible to
 zoom in and out to get abstract and detailed views of the visualized
 data. In the timeline charts, zooming produces a more detailed view of a
@@ -1719,12 +1728,11 @@ be affected when zooming in timeline displays: The interval chosen in a
 timeline chart such as&nbsp;<em>Master Timeline</em>?or?*Process Timeline*?also
 defines the time interval for the calculation of accumulated
 measurements in the statistical charts. Statistical charts like
-the&nbsp;<em>Function Summary</em>?provide zooming of statistic values. In these
+the?<em>Function Summary</em>?provide zooming of statistic values. In these
 cases zooming does not affect any other chart. Zooming is disabled in
-the&nbsp;<em>Pie Chart</em>?mode of the&nbsp;<em>Function Summary</em>?reachable via context
+the?<em>Pie Chart</em>?mode of the?<em>Function Summary</em>?reachable via context
 menu under?<em>Set Chart Mode-&gt;Pie Chart</em>.</p>
 <img alt="_images/Zooming.png" src="_images/Zooming.png" />
-<p><strong>Zooming within a Chart</strong></p>
 <p>To zoom into an area, click and hold the left mouse button and select
 the area. It is possible to zoom horizontally and in some charts also
 vertically. Horizontal zooming in the&nbsp;<em>Master Timeline</em>?defines the
@@ -1743,9 +1751,6 @@ redone, respectively. To get back to the initial state of zooming in a
 fast way select?<em>Reset Horizontal Zoom</em>?or?*Reset Vertical Zoom*?in
 the context menu of the desired timeline display. To reset zoom is also
 an action that can be reverted by &#8220;Undo&#8221;.</p>
-</div>
-<div class="section" id="the-zoom-toolbar">
-<h2><strong>The Zoom Toolbar</strong><a class="headerlink" href="#the-zoom-toolbar" title="Permalink to this headline">¶</a></h2>
 <p>Vampir provides a?<em>Zoom Toolbar</em> that can be used for zooming and
 navigation in the trace data. It is situated in the upper right corner
 of the <em>Trace View</em>?window. Of course it is possible to drag and drop it
@@ -1771,9 +1776,6 @@ Please note that all charts added to the?<em>Trace View</em>?window will
 adapt their statistics information according to this time interval
 selection. The?<em>Zoom Toolbar</em> can be disabled and enabled with the
 toolbar&#8217;s context menu entry?<em>Zoom Toolbar</em>.</p>
-</div>
-<div class="section" id="the-charts-toolbar">
-<h2><strong>The Charts Toolbar</strong><a class="headerlink" href="#the-charts-toolbar" title="Permalink to this headline">¶</a></h2>
 <p>Use the?<em>Charts</em>?toolbar to open instances of the different charts. It
 is situated in the upper left corner of the main window by default. Of
 course, it is also possible to drag and drop it as desired.
@@ -1787,93 +1789,197 @@ information and statistics for a chosen interval. Vampir allows multiple
 instances for charts of these categories. The last group comprises
 informational charts, providing specific textual information or legends.
 Only one instance of an informational chart can be opened at a time.</p>
-<p><strong>Icons of the Toolbar</strong></p>
-<p>Icon</p>
-<p>Name</p>
-<p>Description</p>
-<img alt="_images/icon_master_tl.png" src="_images/icon_master_tl.png" />
-<p>Master Timeline</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline">Master
-Timeline</a></p>
-<img alt="_images/icon_process_tl.png" src="_images/icon_process_tl.png" />
-<p>Process Timeline</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline">Process
-Timeline</a></p>
-<img alt="_images/icon_counter_tl.png" src="_images/icon_counter_tl.png" />
-<p>Counter Data Timeline</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline">Counter
-Data</a></p>
-<img alt="_images/icon_radar.png" src="_images/icon_radar.png" />
-<p>Performance Radar</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar">Performance
-Radar</a></p>
-<img alt="_images/icon_function_summ.png" src="_images/icon_function_summ.png" />
-<p>Function Summary</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary">Function
-Summary</a></p>
-<img alt="_images/icon_message_summ.png" src="_images/icon_message_summ.png" />
-<p>Message Summary</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary">Message
-Summary</a></p>
-<img alt="_images/icon_process_summ.png" src="_images/icon_process_summ.png" />
-<p>Process Summary</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary">Process
-Summary</a></p>
-<img alt="_images/icon_matrix.png" src="_images/icon_matrix.png" />
-<p>Communication Matrix View</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View">Communication Matrix
-View</a></p>
-<img alt="_images/icon_calltree.png" src="_images/icon_calltree.png" />
-<p>Call Tree</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree">Call
-Tree</a></p>
-<img alt="_images/icon_legend.png" src="_images/icon_legend.png" />
-<p>Function Legend</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend">Function
-Legend</a></p>
-<img alt="_images/icon_context.png" src="_images/icon_context.png" />
-<p>Context View</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View">Context
-View</a></p>
-<img alt="_images/icon_marker.png" src="_images/icon_marker.png" />
-<p>Marker View</p>
-<p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_Filtering_and_Reduction">Marker
-View</a></p>
-</div>
-<div class="section" id="properties-of-the-tracefile">
-<h2><strong>Properties of the Tracefile</strong><a class="headerlink" href="#properties-of-the-tracefile" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Icon</td>
+<td>Name</td>
+<td>Description</td>
+</tr>
+<tr class="row-even"><td><img alt="_images/icon_master_tl.png" class="first last" src="_images/icon_master_tl.png" />
+</td>
+<td>Master Timeline</td>
+<td><a href="#id1"><span class="problematic" id="id2">`</span></a>Master</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Timeline &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="images/icon_process_tl.png-ProcessTimeline" class="first" src="images/icon_process_tl.png-ProcessTimeline" />
+</li>
+<li><p class="first"><a href="#id3"><span class="problematic" id="id4">`</span></a>Process</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Timeline &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_counter_tl.png" class="first" src="_images/icon_counter_tl.png" />
+</li>
+<li><p class="first">Counter Data Timeline</p>
+</li>
+<li><p class="first"><a href="#id5"><span class="problematic" id="id6">`</span></a>Counter</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Data &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_radar.png" class="first" src="_images/icon_radar.png" />
+</li>
+<li><p class="first">Performance Radar</p>
+</li>
+<li><p class="first"><a href="#id7"><span class="problematic" id="id8">`</span></a>Performance</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Radar &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_function_summ.png" class="first" src="_images/icon_function_summ.png" />
+</li>
+<li><p class="first">Function Summary</p>
+</li>
+<li><p class="first"><a href="#id9"><span class="problematic" id="id10">`</span></a>Function</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Summary &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_message_summ.png" class="first" src="_images/icon_message_summ.png" />
+</li>
+<li><p class="first">Message Summary</p>
+</li>
+<li><p class="first"><a href="#id11"><span class="problematic" id="id12">`</span></a>Message</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Summary &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_process_summ.png" class="first" src="_images/icon_process_summ.png" />
+</li>
+<li><p class="first">Process Summary</p>
+</li>
+<li><p class="first"><a href="#id13"><span class="problematic" id="id14">`</span></a>Process</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Summary &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_matrix.png" class="first" src="_images/icon_matrix.png" />
+</li>
+<li><p class="first">Communication Matrix View</p>
+</li>
+<li><p class="first"><a href="#id15"><span class="problematic" id="id16">`</span></a>Communication Matrix</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>View &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_calltree.png" class="first" src="_images/icon_calltree.png" />
+</li>
+<li><p class="first">Call Tree</p>
+</li>
+<li><p class="first"><a href="#id17"><span class="problematic" id="id18">`</span></a>Call</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Tree &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_legend.png" class="first" src="_images/icon_legend.png" />
+</li>
+<li><p class="first">Function Legend</p>
+</li>
+<li><p class="first"><a href="#id19"><span class="problematic" id="id20">`</span></a>Function</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>Legend &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_context.png" class="first" src="_images/icon_context.png" />
+</li>
+<li><p class="first">Context View</p>
+</li>
+<li><p class="first"><a href="#id21"><span class="problematic" id="id22">`</span></a>Context</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>View &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View</a>&gt;`__</dt>
+<dd><ul class="first last">
+<li><ul class="first">
+<li><img alt="_images/icon_marker.png" class="first" src="_images/icon_marker.png" />
+</li>
+<li><p class="first">Marker View</p>
+</li>
+<li><p class="first"><a href="#id23"><span class="problematic" id="id24">`</span></a>Marker</p>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<p>View &lt;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_Filtering_and_Reduction">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_Filtering_and_Reduction</a>&gt;`__</p>
 <p>Vampir provides a display containing the most important
-characterizations of the used tracefile. This tabular is called&nbsp;<em>Trace
-Properties</em>&nbsp;and can be accessed by&nbsp;<em>File-&gt;Trace Properties</em>. The
+characterizations of the used tracefile. This tabular is called?<em>Trace
+Properties</em>?and can be accessed by?<em>File-&gt;Trace Properties</em>. The
 information, such as the filename, the creator and its version,
 originates from the tracefile and is not changed by Vampir.</p>
 </div>
-</div>
 <div class="section" id="performance-data-visualization">
-<h1><strong>Performance Data Visualization</strong><a class="headerlink" href="#performance-data-visualization" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id35"><strong>Performance Data Visualization</strong></a><a class="headerlink" href="#performance-data-visualization" title="Permalink to this headline">¶</a></h2>
 <p>This chapter deals with the different charts that can be used to analyze
 the behavior of a program and the comparison between different function
 groups, e.g., MPI and Calculation. In addition, the chapter addresses
 communication performance issues. Various charts address the
 visualization of data transfers between processes. The following
 sections describe them in detail.</p>
-<div class="section" id="timeline-charts">
-<h2><strong>Timeline Charts</strong><a class="headerlink" href="#timeline-charts" title="Permalink to this headline">¶</a></h2>
 <p>A very common chart type used in event-based performance analysis is the
 so-called timeline chart. This chart type graphically presents the chain
 of events of monitored processes or counters on a horizontal time axis.
-Multiple timeline chart instances can be added to the&nbsp;<em>Trace
-View</em>&nbsp;window via the&nbsp;<em>Chart</em>&nbsp;menu or the&nbsp;<em>Charts</em>&nbsp;toolbar.</p>
+Multiple timeline chart instances can be added to the?<em>Trace
+View</em>?window via the?<em>Chart</em>?menu or the?<em>Charts</em>?toolbar.</p>
 <p><strong>Note</strong>: To measure the duration between two events in a timeline
 chart, Vampir provides a tool called ruler. Click on the first event in
 a timeline display and move the mouse while keeping the left mouse key
-and&nbsp;<em>Shift</em>&nbsp;pressed. A ruler-like pattern appears in the current
+and&nbsp;<em>Shift</em>?pressed. A ruler-like pattern appears in the current
 timeline chart, which provides rough measurement directly. The exact
 time of the start event and the mouse position and the interval in
-between is given at the very bottom. If the&nbsp;<em>Shift</em>&nbsp;key is released
+between is given at the very bottom. If the?<em>Shift</em>?key is released
 before the left mouse key, Vampir will proceed with zooming.</p>
 <div class="section" id="master-timeline-and-process-timeline">
-<h3><strong>Master Timeline and Process Timeline</strong><a class="headerlink" href="#master-timeline-and-process-timeline" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id36"><strong>Master Timeline and Process Timeline</strong></a><a class="headerlink" href="#master-timeline-and-process-timeline" title="Permalink to this headline">¶</a></h3>
 <p>In the Master and Process Timelines, detailed information about
 functions, communication, and synchronization events is shown. Timeline
 charts are available for individual processes (<em>Process Timeline</em>) as
@@ -1924,28 +2030,37 @@ figure.</p>
 also available. The table shows the symbols and descriptions of these
 objects.</p>
 <p><strong>Additional Information in Master and Process Timeline</strong></p>
-<p><strong>Symbol</strong></p>
-<p><strong>Description</strong></p>
-<p>Message Burst</p>
-<img alt="_images/burst.png" src="_images/burst.png" />
-<p>Because of a lack of pixels it is not possible to display a large number
-of messages in a very short interval. Therefore, these messages are
-summarized as so-called message bursts. Zooming into this interval
-reveals the corresponding single messages.</p>
-<p>Markers</p>
-<img alt="images/marker-multiple.png\multiple" src="images/marker-multiple.png\multiple" />
-<img alt="images/marker-template.png\single" src="images/marker-template.png\single" />
-<p>To indicate particular points (like errors or warnings) during the
-runtime of an application, markers can be used in a tracefile. They are
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Symbol</td>
+<td>Description</td>
+</tr>
+<tr class="row-even"><td>Message Burst .. image:: images/burst.png</td>
+<td>Because of a lack of pixels it is not possible to display a large number of messages in a very short interval. Therefore, these messages are summarized as so-called message bursts. Zooming into this interval reveals the corresponding single messages.</td>
+</tr>
+<tr class="row-odd"><td>Markers .. image:: images/marker-multiple.png  multiple .. image:: images/marker-template.png single</td>
+<td>To indicate particular points (like errors or warnings) during the</td>
+</tr>
+</tbody>
+</table>
+<p>runtime of an application, markers can be used in a tracefile. They are
 drawn as triangles, which are colored according to their types. To
 illustrate that two or more markers are placed at the same pixel, a
 multiple marker is drawn.</p>
-<p>I/O Events</p>
-<img alt="images/io-multiple.png\multiple" src="images/io-multiple.png\multiple" />
-<img alt="images/io-single.png\single" src="images/io-single.png\single" />
-<img alt="images/io-single-selected.png\single,selected" src="images/io-single-selected.png\single,selected" />
-<p>Vampir shows detailed information about I/O operations, if they are
-included in the tracefile. I/O events are depicted as triangles at the
+<blockquote>
+<div><ul class="simple">
+<li><ul class="first">
+<li>I/O Events .. image:: images/io-multiple.png  multiple .. image:: images/io-single.png single .. image:: images/io-single-selected.png single, selected</li>
+<li>Vampir shows detailed information about I/O operations, if they are</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<p>included in the tracefile. I/O events are depicted as triangles at the
 beginning of an I/O interval. Multiple I/O events are tricolored and
 occupy a line to the end of the interval. To see the whole interval of a
 single I/O event, the triangle has to be selected. In that case, a
@@ -1957,7 +2072,7 @@ receiver process, message length, message duration, and message tag in
 the?<em>Context View</em>?display.</p>
 </div>
 <div class="section" id="counter-data-timeline">
-<h3><strong>Counter Data Timeline</strong><a class="headerlink" href="#counter-data-timeline" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id37"><strong>Counter Data Timeline</strong></a><a class="headerlink" href="#counter-data-timeline" title="Permalink to this headline">¶</a></h3>
 <p>Counters are values collected over time to count certain events like
 floating point operations or cache misses. Counter values can be used to
 store not just hardware performance counters but arbitrary sample
@@ -1976,7 +2091,7 @@ directly from a drop-down list. The entry?<em>Set Process</em>?selects the
 particular process for which the counter is shown.</p>
 </div>
 <div class="section" id="performance-radar">
-<h3><strong>Performance Radar</strong><a class="headerlink" href="#performance-radar" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id38"><strong>Performance Radar</strong></a><a class="headerlink" href="#performance-radar" title="Permalink to this headline">¶</a></h3>
 <p>The Performance Radar chart provides the search of function occurrences
 in the trace file and the extended visualization of counters. It can
 happen that a function is not shown in?<em>Master</em>?and?*Process
@@ -1996,12 +2111,12 @@ processes are summed up. The average is this sum divided by the number
 of processes. Both options provide a single graph.</p>
 <img alt="_images/performance_radar_set_counter.png" src="_images/performance_radar_set_counter.png" />
 <p><strong>Performance Radar Timeline - Visualization of Counters</strong></p>
-</div>
-</div>
 <div class="section" id="statistical-charts">
-<h2><strong>Statistical Charts</strong><a class="headerlink" href="#statistical-charts" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id39"><strong>Statistical Charts</strong></a><a class="headerlink" href="#statistical-charts" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
 <div class="section" id="call-tree">
-<h3><strong>Call Tree</strong><a class="headerlink" href="#call-tree" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id40"><strong>Call Tree</strong></a><a class="headerlink" href="#call-tree" title="Permalink to this headline">¶</a></h3>
 <p>The&nbsp;<em>Call Tree</em> illustrates the invocation hierarchy of all monitored
 functions in a tree representation. The display reveals information
 about the number of invocations of a given function, the time spent in
@@ -2027,7 +2142,7 @@ The?<em>Previous</em>?and?*Next*?buttons can be used to flip through the
 results afterwards.</p>
 </div>
 <div class="section" id="function-summary">
-<h3><strong>Function Summary</strong><a class="headerlink" href="#function-summary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41"><strong>Function Summary</strong></a><a class="headerlink" href="#function-summary" title="Permalink to this headline">¶</a></h3>
 <p>The?<em>Function Summary</em>?chart gives an overview of the accumulated time
 consumption across all function groups and functions. For example every
 time a process calls the MPI_Send() function, the elapsed time of that
@@ -2062,7 +2177,7 @@ The shown functions or function groups can be sorted by name or value
 via the context menu option?<em>Sort By</em>.</p>
 </div>
 <div class="section" id="process-summary">
-<h3><strong>Process Summary</strong><a class="headerlink" href="#process-summary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42"><strong>Process Summary</strong></a><a class="headerlink" href="#process-summary" title="Permalink to this headline">¶</a></h3>
 <p>The?<em>Process Summary</em>?is similar to the?<em>Function Summary</em>?but shows
 the information for every process independently.</p>
 <img alt="_images/Process_summary.png" src="_images/Process_summary.png" />
@@ -2084,7 +2199,7 @@ the?<em>Process Filter</em>?allows you to restrict this view to a set of
 processes.</p>
 </div>
 <div class="section" id="message-summary">
-<h3><strong>Message Summary</strong><a class="headerlink" href="#message-summary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id43"><strong>Message Summary</strong></a><a class="headerlink" href="#message-summary" title="Permalink to this headline">¶</a></h3>
 <p>The?<em>Message Summary</em>?is a statistical chart showing an overview of
 the different messages grouped by certain characteristics.</p>
 <img alt="_images/Messagesummary.png" src="_images/Messagesummary.png" />
@@ -2108,7 +2223,7 @@ on the associated label or color representation in the chart and
 choose&nbsp;<em>Filter</em>?from the context menu afterwards.</p>
 </div>
 <div class="section" id="communication-matrix-view">
-<h3><strong>Communication Matrix View</strong><a class="headerlink" href="#communication-matrix-view" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id44"><strong>Communication Matrix View</strong></a><a class="headerlink" href="#communication-matrix-view" title="Permalink to this headline">¶</a></h3>
 <p>The&nbsp;<em>Communication Matrix View</em>?is another way of analyzing
 communication imbalances. It shows information about messages sent
 between processes.</p>
@@ -2130,13 +2245,11 @@ reception of the message can be increased by a recipient that delays
 reception for some reason. This will cause the duration to increase (by
 this delay) and the message rate, which is the size of the message
 divided by the duration, to decrease accordingly.</p>
-</div>
-</div>
 <div class="section" id="informational-charts">
-<h2><strong>Informational Charts</strong><a class="headerlink" href="#informational-charts" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id45"><strong>Informational Charts</strong></a><a class="headerlink" href="#informational-charts" title="Permalink to this headline">¶</a></h4>
 </div>
 <div class="section" id="function-legend">
-<h2><strong>Function Legend</strong><a class="headerlink" href="#function-legend" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id46"><strong>Function Legend</strong></a><a class="headerlink" href="#function-legend" title="Permalink to this headline">¶</a></h4>
 <p>The?<em>Function Legend</em>?lists all visible function groups of the loaded
 trace file along with its corresponding color.</p>
 <img alt="_images/Function_legend.png" src="_images/Function_legend.png" />
@@ -2158,8 +2271,10 @@ If?<em>Ctrl</em>?or?*Shift*?is pressed, the user can highlight several
 events. In this case, the user can fit the borders of the zooming area
 in the timeline charts to the timestamps of the two marker events that
 were chosen at last.</p>
+</div>
+</div>
 <div class="section" id="context-view">
-<h3><strong>Context View</strong><a class="headerlink" href="#context-view" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id47"><strong>Context View</strong></a><a class="headerlink" href="#context-view" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/Context_view.png" src="_images/Context_view.png" />
 <p><strong>Context View, showing context information (B) of a selected function
 (A)</strong></p>
@@ -2185,10 +2300,8 @@ difference if the values are numbers. The first line always shows the
 names of the displays.</p>
 <img alt="_images/context_compare.png" src="_images/context_compare.png" />
 <p><strong>Comparison between Context Information</strong></p>
-</div>
-</div>
 <div class="section" id="information-filtering-and-reduction">
-<h2><strong>Information Filtering and Reduction</strong><a class="headerlink" href="#information-filtering-and-reduction" title="Permalink to this headline">¶</a></h2>
+<h4><a class="toc-backref" href="#id48"><strong>Information Filtering and Reduction</strong></a><a class="headerlink" href="#information-filtering-and-reduction" title="Permalink to this headline">¶</a></h4>
 <p>Due to the large amount of information that can be stored in trace
 files, it is usually necessary to reduce the displayed information
 according to some filter criteria. In Vampir, there are different ways
@@ -2266,8 +2379,9 @@ the marked entries will cause selection/deselection for all of them.</p>
 </table>
 </div>
 </div>
+</div>
 <div class="section" id="customization">
-<h1><strong>Customization</strong><a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id49"><strong>Customization</strong></a><a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
 <p>The appearance of the trace file and various other application settings
 can be altered in the preferences accessible via the main menu entry
 <em>File-&gt;Preferences</em>. Settings concerning the trace file itself, e.g.,
@@ -2277,28 +2391,23 @@ possible to adjust the colors for one trace file without interfering
 with other trace files. The options <em>Import Preferences</em>?and?*Export
 Preferences*?provide the loading and saving of preferences of arbitrary
 tracefiles.</p>
-<div class="section" id="general-preferences">
-<h2><strong>General Preferences</strong><a class="headerlink" href="#general-preferences" title="Permalink to this headline">¶</a></h2>
-<p>The?<em>General</em>?settings allow you to change application and trace
+<p>The <em>General</em> settings allow you to change application and trace
 specific values.</p>
 <img alt="_images/pref_general.png" src="_images/pref_general.png" />
 <p><strong>General Settings</strong></p>
 <p><em>Show time as</em>decides whether the time format for the trace analysis
-is based on seconds or ticks. The next point&nbsp;<em>Use color gradient in
+is based on seconds or ticks. The next point?<em>Use color gradient in
 charts</em>allows you to switch off the color gradient used in the
 performance charts. The next option is to change the style and size of
-the font.&nbsp;<em>Show source code</em> allows you to open an editor showing the
+the font.?*Show source code* allows you to open an editor showing the
 respective source file. In order to open a source file, first click on
-the intended function in the&nbsp;<em>Master Timeline</em>&nbsp;and then on the source
-code path in the&nbsp;<em>Context View</em>. For the source code location to work
+the intended function in the&nbsp;<em>Master Timeline</em>?and then on the source
+code path in the?<em>Context View</em>. For the source code location to work
 properly, you need a trace file with source code location support. The
 path of the source file can be adjusted in?<em>Preferences</em>. A limit for
 the size of the file can be set, too. Finally, the user can decide if he
 wants Vampir to automatically check for new versions.</p>
-</div>
-<div class="section" id="appearance">
-<h2><strong>Appearance</strong><a class="headerlink" href="#appearance" title="Permalink to this headline">¶</a></h2>
-<p>In the?<em>Appearance</em>?settings of the?<em>Preferences</em>?dialog, there are
+<p>In the <em>Appearance</em> settings of the <em>Preferences</em> dialog, there are
 six different objects for which the color options can be changed: the
 functions/function groups, markers, counters, collectives, messages and
 I/O events. Choose an entry and click on its color to make a
@@ -2308,9 +2417,6 @@ also available.</p>
 <p><strong>Appearance Settings</strong></p>
 <p>In order to quickly find the desired item a search box is provided at
 the bottom of the dialog.</p>
-</div>
-<div class="section" id="saving-policy">
-<h2><strong>Saving Policy</strong><a class="headerlink" href="#saving-policy" title="Permalink to this headline">¶</a></h2>
 <p>Vampir detects whenever changes to the various settings are made. In
 the?<em>Saving Policy</em>?dialog it is possible to adjust the saving
 behavior of the different components to your own needs.</p>
@@ -2334,9 +2440,8 @@ tracefiles without settings. Another option is to restore the default
 settings; in this case, the current preferences of the tracefile are
 reverted.</p>
 </div>
-</div>
 <div class="section" id="footnotes">
-<h1><strong>Footnotes</strong><a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id50"><strong>Footnotes</strong></a><a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
 <p>Additional links that might be of interest to the reader:</p>
 <p>...
 (OTF)?`http://www.tu-dresden.de/zih/otf &lt;<a class="reference external" href="http://www.tu-dresden.de/zih/otf">http://www.tu-dresden.de/zih/otf</a>&gt;`__</p>
@@ -2348,17 +2453,15 @@ Manual?<a class="reference external" href="http://www.tu-dresden.de/zih/vampirtr
 &#8220;<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir">https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir</a>&#8220;</p>
 </div>
 <div class="section" id="vampirtrace">
-<span id="s-vampirtrace"></span><h1>VampirTrace<a class="headerlink" href="#vampirtrace" title="Permalink to this headline">¶</a></h1>
+<span id="s-vampirtrace"></span><h2><a class="toc-backref" href="#id51">VampirTrace</a><a class="headerlink" href="#vampirtrace" title="Permalink to this headline">¶</a></h2>
 <p>VampirTrace consists of a tool set and a runtime library for
 instrumentation and tracing of software applications. It is particularly
 tailored to parallel and distributed High Performance Computing (HPC)
 applications.</p>
-<p><strong>Availability</strong><a href="#id1"><span class="problematic" id="id2">**</span></a><a href="#id3"><span class="problematic" id="id4">**</span></a></p>
 <p>VampirTrace is currently available on FutureGrid machines under module
 &#8216;vampirtrace&#8217;. VampirTrace is also available in OpenMPI versions 1.5.x
 or higher. For example on Bravo, it is available as <em>openmpi/1.5.4-gnu</em>
 or <em>openmpi/1.5.4-intel</em>.</p>
-<p><strong>Overview</strong><a href="#id5"><span class="problematic" id="id6">**</span></a><a href="#id7"><span class="problematic" id="id8">**</span></a></p>
 <p>The instrumentation part of VampirTrace modifies a given application in
 order to inject additional measurement calls during runtime. The tracing
 part provides the actual measurement functionality used by the
@@ -2622,7 +2725,6 @@ the same time. Note that you can also use the option <em>-vt:inst manual</em>
 with non-instrumented sources. Binaries created in this manner only
 contain MPI and OpenMP instrumentation, which might be desirable in some
 cases. For more on how to inline functions, read your compiler&#8217;s manual.</p>
-<p><strong>Manual Instrumentation</strong></p>
 <p><strong>Using the VampirTrace API</strong></p>
 <p>The <em>VT USER START, VT USER END</em> calls can be used to instrument any
 user-defined sequence of statements.</p>
@@ -2637,10 +2739,15 @@ VT\_USER\_END(’name’)
 </pre></div>
 </div>
 <p>C</p>
-<p>#include &#8220;vt_user.h&#8221;</p>
-<p>VT_USER_START(&#8220;name&#8221;);</p>
-<p>...</p>
-<p>VT_USER_END(&#8220;name&#8221;);</p>
+<div class="highlight-python"><div class="highlight"><pre>#include &quot;vt\_user.h&quot;
+
+VT\_USER\_START(&quot;name&quot;);
+
+...
+
+VT\_USER\_END(&quot;name&quot;);
+</pre></div>
+</div>
 <p>If a block has several exit points (as is often the case for functions),
 all exit points have to be instrumented with VT USER END, too.</p>
 <p>For C++ it is simpler, as is demonstrated in the following example. Only
@@ -2650,12 +2757,13 @@ detected automatically when C++ deletes scope-local variables.</p>
 <div class="highlight-python"><div class="highlight"><pre>#include &quot;vt\_user.h&quot;
 
 {
+
+VT\_TRACER(&quot;name&quot;);
+
+...
+}
 </pre></div>
 </div>
-<p>? VT_TRACER(&#8220;name&#8221;);</p>
-<p>? ...</p>
-<blockquote>
-<div>}</div></blockquote>
 <p>The instrumented sources have to be compiled with -DVTRACE for all three
 languages; otherwise the VT * calls are ignored. Note that Fortran
 source files instrumented this way have to be preprocessed, too.</p>
@@ -2792,167 +2900,368 @@ place, use VT_PFORM_GDIR to change the location of the trace file.</p>
 <p>Environment variables can be used to control nearly every aspect of the
 measurement of a VampirTrace instrumented executable. (ToDo: link to
 CheatSheet and Doku-PDF)</p>
-<p><strong>Variable</strong></p>
-<p><strong>Purpose</strong></p>
-<p><strong>Default</strong></p>
-<p>Global Settings</p>
-<p>VT_APPPATH</p>
-<p>Path to the application executable.</p>
-<ul class="simple">
+<dl class="docutils">
+<dt>records are stored, before being written to a file.</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>32M</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_CLEAN</li>
+<li>Remove temporary trace files?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_COMPRESSION</li>
+<li>Write compressed trace files?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_FILE_PREFIX</li>
+<li>Prefix used for trace filenames.</li>
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_BUFFER_SIZE</p>
-<p>Size of internal event trace buffer. This is the place where event
-records are stored, before being written to a file.</p>
-<p>32M</p>
-<p>VT_CLEAN</p>
-<p>Remove temporary trace files?</p>
-<p>yes</p>
-<p>VT_COMPRESSION</p>
-<p>Write compressed trace files?</p>
-<p>yes</p>
-<p>VT_FILE_PREFIX</p>
-<p>Prefix used for trace filenames.</p>
-<ul class="simple">
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_FILE_UNIQUE</li>
+<li>Enable unique trace file naming? Set to yes, no, or a numerical ID.</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_MAX_FLUSHES</li>
+<li>Maximum number of buffer flushes.</li>
+<li>1</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_MAX_THREADS</li>
+<li>Maximum number of threads per process that VampirTrace reserves resources for.</li>
+<li>65536</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_PFORM_GDIR</li>
+<li>Name of global directory to store final trace file in.</li>
+<li>./</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_PFORM_LDIR</li>
+<li>Name of node-local directory which can be used to store temporary trace</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>files.</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>/tmp/</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_UNIFY</li>
+<li>Unify local trace files afterwards?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_VERBOSE</li>
+<li>Level of VampirTrace related information messages: Quiet (0), Critical</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>(1), Information (2)</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>1</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li></li>
+<li>Optional Features</li>
 <li></li>
 </ul>
-<p>VT_FILE_UNIQUE</p>
-<p>Enable unique trace file naming? Set to yes, no, or a numerical ID.</p>
-<p>no</p>
-<p>VT_MAX_FLUSHES</p>
-<p>Maximum number of buffer flushes.</p>
-<p>1</p>
-<p>VT_MAX_THREADS</p>
-<p>Maximum number of threads per process that VampirTrace reserves
-resources for.</p>
-<p>65536</p>
-<p>VT_PFORM_GDIR</p>
-<p>Name of global directory to store final trace file in.</p>
-<p>./</p>
-<p>VT_PFORM_LDIR</p>
-<p>Name of node-local directory which can be used to store temporary trace
-files.</p>
-<p>/tmp/</p>
-<p>VT_UNIFY</p>
-<p>Unify local trace files afterwards?</p>
-<p>yes</p>
-<p>VT_VERBOSE</p>
-<p>Level of VampirTrace related information messages: Quiet (0), Critical
-(1), Information (2)</p>
-<p>1</p>
-<p>Optional Features</p>
-<p>VT_CPUIDTRACE</p>
-<p>Enable tracing of CPU ID?</p>
-<p>no</p>
-<p>VT_ETIMESYNC</p>
-<p>Enable enhanced timer synchronization? ⇒ Section
-[#timer_synchronization [*]]</p>
-<p>no</p>
-<p>VT_ETIMESYNC_INTV</p>
-<p>Interval between two successive synchronization phases in s.</p>
-<p>120</p>
-<p>VT_IOLIB_PATHNAME</p>
-<p>Provides an alternative library to use for LIBC I/O calls.</p>
-<ul class="simple">
+</li>
+<li><ul class="first">
+<li>VT_CPUIDTRACE</li>
+<li>Enable tracing of CPU ID?</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_ETIMESYNC</li>
+<li>Enable enhanced timer synchronization? ⇒ Section</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>[#timer_synchronization [*]]</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>no</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_ETIMESYNC_INTV</li>
+<li>Interval between two successive synchronization phases in s.</li>
+<li>120</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_IOLIB_PATHNAME</li>
+<li>Provides an alternative library to use for LIBC I/O calls.</li>
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_IOTRACE</p>
-<p>Enable tracing of application I/O calls?</p>
-<p>no</p>
-<p>VT_LIBCTRACE</p>
-<p>Enable tracing of fork/system/exec calls?</p>
-<p>yes</p>
-<p>VT_MEMTRACE</p>
-<p>Enable memory allocation counter?</p>
-<p>no</p>
-<p>VT_MODE</p>
-<p>Colon-separated list of VampirTrace modes: Tracing (TRACE), Profiling
-(STAT).</p>
-<p>TRACE</p>
-<p>VT_MPICHECK</p>
-<p>Enable MPI correctness checking via UniMCI?</p>
-<p>no</p>
-<p>VT_MPICHECK_ERREXIT</p>
-<p>Force trace write and application exit if an MPI usage error is
-detected?</p>
-<p>no</p>
-<p>VT_MPITRACE</p>
-<p>Enable tracing of MPI events?</p>
-<p>yes</p>
-<p>VT_PTHREAD_REUSE</p>
-<p>Reuse IDs of terminated Pthreads?</p>
-<p>yes</p>
-<p>VT_STAT_INV</p>
-<p>Length of interval for writing the next profiling record</p>
-<p>0</p>
-<p>VT_STAT_PROPS</p>
-<p>Colon-separated list of event types that will be recorded in profiling
-mode: Functions (FUNC), Messages (MSG), Collective Ops. (COLLOP) or all
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_IOTRACE</li>
+<li>Enable tracing of application I/O calls?</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_LIBCTRACE</li>
+<li>Enable tracing of fork/system/exec calls?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_MEMTRACE</li>
+<li>Enable memory allocation counter?</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_MODE</li>
+<li>Colon-separated list of VampirTrace modes: Tracing (TRACE), Profiling</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>(STAT).</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>TRACE</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_MPICHECK</li>
+<li>Enable MPI correctness checking via UniMCI?</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_MPICHECK_ERREXIT</li>
+<li>Force trace write and application exit if an MPI usage error is</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>detected?</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>no</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_MPITRACE</li>
+<li>Enable tracing of MPI events?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_PTHREAD_REUSE</li>
+<li>Reuse IDs of terminated Pthreads?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_STAT_INV</li>
+<li>Length of interval for writing the next profiling record</li>
+<li>0</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_STAT_PROPS</li>
+<li>Colon-separated list of event types that will be recorded in profiling</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<p>mode: Functions (FUNC), Messages (MSG), Collective Ops. (COLLOP) or all
 of them (ALL)</p>
-<p>ALL</p>
-<p>VT_SYNC_FLUSH</p>
-<p>Enable synchronized buffer flush?</p>
-<p>no</p>
-<p>VT_SYNC_FLUSH_LEVEL</p>
-<p>Minimum buffer fill level for synchronized buffer flush in percent.</p>
-<p>80</p>
-<p>Counters</p>
-<p>VT_METRICS</p>
-<p>Specify counter metrics to be recorded with trace events as a
-colon-separated list of names</p>
+<blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li>ALL</li>
+</ul>
+</div></blockquote>
 <ul class="simple">
+<li><ul class="first">
+<li>VT_SYNC_FLUSH</li>
+<li>Enable synchronized buffer flush?</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_SYNC_FLUSH_LEVEL</li>
+<li>Minimum buffer fill level for synchronized buffer flush in percent.</li>
+<li>80</li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+<li>Counters</li>
 <li></li>
 </ul>
-<p>VT_RUSAGE</p>
-<p>Colon-separated list of resource usage counters which will be recorded.</p>
-<ul class="simple">
+</li>
+<li><ul class="first">
+<li>VT_METRICS</li>
+<li>Specify counter metrics to be recorded with trace events as a</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<dl class="docutils">
+<dt>colon-separated list of names</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_RUSAGE_INTV</p>
-<p>Sample interval for recording resource usage counters in ms.</p>
-<p>100</p>
-<p>Filtering, Grouping</p>
-<p>VT_DYN_BLACKLIST</p>
-<p>Name of blacklist file for Dyninst instrumentation.</p>
-<ul class="simple">
+</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_RUSAGE</li>
+<li>Colon-separated list of resource usage counters which will be recorded.</li>
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_DYN_SHLIBS</p>
-<p>Colon-separated list of shared libraries for Dyninst instrumentation.</p>
-<ul class="simple">
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_RUSAGE_INTV</li>
+<li>Sample interval for recording resource usage counters in ms.</li>
+<li>100</li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+<li>Filtering, Grouping</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_DYN_BLACKLIST</li>
+<li>Name of blacklist file for Dyninst instrumentation.</li>
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_FILTER_SPEC</p>
-<p>Name of function/region filter file.</p>
-<p>VT_GROUPS_SPEC</p>
-<p>Name of function grouping file.</p>
-<ul class="simple">
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_DYN_SHLIBS</li>
+<li>Colon-separated list of shared libraries for Dyninst instrumentation.</li>
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_JAVA_FILTER_SPEC</p>
-<p>Name of Java specific filter file.</p>
-<ul class="simple">
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_FILTER_SPEC</li>
+<li>Name of function/region filter file.</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_GROUPS_SPEC</li>
+<li>Name of function grouping file.</li>
+<li><ul class="first">
 <li></li>
 </ul>
-<p>VT_GROUP_CLASSES</p>
-<p>Create a group for each Java class automatically?</p>
-<p>yes</p>
-<p>VT_MAX_STACK_DEPTH</p>
-<p>Maximum number of stack level to be traced. (0 = unlimited)</p>
-<p>0</p>
-<p>Demangle, Symbol List</p>
-<p>VT_GNU_DEMANGLE</p>
-<p>Decode (demangle) low-level symbol names into user-level names?</p>
-<p>no</p>
-<p>VT_GNU_GETSRC</p>
-<p>Retrieve the source code line of functions instrumented automatically
-with the GNU interface?</p>
-<p>yes</p>
-<p>VT_GNU_NMFILE</p>
-<p>Name of file with symbol list information.</p>
-<ul class="simple">
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_JAVA_FILTER_SPEC</li>
+<li>Name of Java specific filter file.</li>
+<li><ul class="first">
 <li></li>
 </ul>
+</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_GROUP_CLASSES</li>
+<li>Create a group for each Java class automatically?</li>
+<li>yes</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_MAX_STACK_DEPTH</li>
+<li>Maximum number of stack level to be traced. (0 = unlimited)</li>
+<li>0</li>
+</ul>
+</li>
+<li><ul class="first">
+<li></li>
+<li>Demangle, Symbol List</li>
+<li></li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_GNU_DEMANGLE</li>
+<li>Decode (demangle) low-level symbol names into user-level names?</li>
+<li>no</li>
+</ul>
+</li>
+<li><ul class="first">
+<li>VT_GNU_GETSRC</li>
+<li>Retrieve the source code line of functions instrumented automatically</li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt>with the GNU interface?</dt>
+<dd><blockquote class="first">
+<div><ul class="simple">
+<li>yes</li>
+</ul>
+</div></blockquote>
+<ul class="last simple">
+<li><ul class="first">
+<li>VT_GNU_NMFILE</li>
+<li>Name of file with symbol list information.</li>
+<li><ul class="first">
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
 <p>When you use these environment variables, make sure that they have the
 same value for all processes of your application on all nodes of your
 cluster. Some cluster environments do not automatically transfer your
@@ -3150,51 +3459,6 @@ values of the library functions.</p>
 technique for recording calls to I/O functions of the standard C
 library, which are executed by the application. The following functions
 are intercepted by VampirTrace:</p>
-<p>close</p>
-<p>creat</p>
-<p>creat64</p>
-<p>dup</p>
-<p>dup2</p>
-<p>fclose</p>
-<p>fcntl</p>
-<p>fdopen</p>
-<p>fgetc</p>
-<p>fgets</p>
-<p>flockfile</p>
-<p>fopen</p>
-<p>fopen64</p>
-<p>fprintf</p>
-<p>fputc</p>
-<p>fputs</p>
-<p>fread</p>
-<p>fscanf</p>
-<p>fseek</p>
-<p>fseeko</p>
-<p>fseeko64</p>
-<p>fsetpos</p>
-<p>fsetpos64</p>
-<p>ftrylockfile</p>
-<p>funlockfile</p>
-<p>fwrite</p>
-<p>getc</p>
-<p>gets</p>
-<p>lockf</p>
-<p>lseek</p>
-<p>lseek64</p>
-<p>open</p>
-<p>open64</p>
-<p>pread</p>
-<p>pread64</p>
-<p>putc</p>
-<p>puts</p>
-<p>pwrite</p>
-<p>pwrite64</p>
-<p>read</p>
-<p>readv</p>
-<p>rewind</p>
-<p>unlink</p>
-<p>write</p>
-<p>writev</p>
 <p>The gathered information will be saved as I/O event records in the trace
 file. This feature has to be activated for each tracing run by setting
 the environment variable VT_IOTRACE to yes.</p>
@@ -3296,38 +3560,39 @@ set the parameter gid of VT_COUNT_DEF() to VT_COUNT_DEFGROUP. The
 third parameter type of VT_COUNT_DEF specifies the data type of the
 counter value. To record a value for any of the defined counters, the
 corresponding instrumentation call VT_COUNT * VAL must be invoked.</p>
-<p><strong>Fortran:</strong></p>
-<p><strong>Type</strong></p>
-<p>Count call</p>
-<p>Data type</p>
-<p>VT_COUNT_TYPE_INTEGER</p>
-<p>VT_COUNT_INTEGER_VAL</p>
-<p>integer (4 byte)</p>
-<p>VT_COUNT_TYPE_INTEGER8</p>
-<p>VT_COUNT_INTEGER8_VAL</p>
-<p>integer (8 byte)</p>
-<p>VT_COUNT_TYPE_REAL</p>
-<p>VT_COUNT_REAL_VAL</p>
-<p>real</p>
-<p>VT_COUNT_TYPE_DOUBLE</p>
-<p>VT_COUNT_DOUBLE_VAL</p>
-<p>double precision</p>
-<p><strong>C/C++:</strong></p>
-<p><strong>Type</strong></p>
-<p>Count call</p>
-<p>Data type</p>
-<p>VT_COUNT_TYPE_SIGNED</p>
-<p>VT_COUNT_SIGNED_VAL</p>
-<p>signed int (max. 64-bit)</p>
-<p>VT_COUNT_TYPE_UNSIGNED</p>
-<p>VT_COUNT_UNSIGNED_VAL</p>
-<p>unsigned int (max. 64-bit)</p>
-<p>VT_COUNT_TYPE_FLOAT</p>
-<p>VT_COUNT_FLOAT_VAL</p>
-<p>float</p>
-<p>VT_COUNT_TYPE_DOUBLE</p>
-<p>VT_COUNT_DOUBLE_VAL</p>
-<p>double</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Fortran:</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><strong>Type</strong></td>
+<td>Count call</td>
+<td>Data Type</td>
+</tr>
+<tr class="row-odd"><td>VT_COUNT_TYPE_INTEGER</td>
+<td>VT_COUNT_INTEGER_VAL</td>
+<td>integer (4 byte)</td>
+</tr>
+<tr class="row-even"><td>VT_COUNT_TYPE_INTEGER8</td>
+<td>VT_COUNT_INTEGER8_VAL</td>
+<td>integer (8 byte)</td>
+</tr>
+<tr class="row-odd"><td>VT_COUNT_TYPE_REAL</td>
+<td>VT_COUNT_REAL_VAL</td>
+<td>real</td>
+</tr>
+<tr class="row-even"><td>VT_COUNT_TYPE_DOUBLE</td>
+<td>VT_COUNT_DOUBLE_VAL</td>
+<td>double precision</td>
+</tr>
+</tbody>
+</table>
 <p>The following example records the loop index i:</p>
 <p>Fortran</p>
 <p>#include &#8220;vt_user.inc&#8221;</p>
@@ -3477,6 +3742,7 @@ example of how to use group assignments:</p>
 <p>These group assignments associate the functions add, sub, mul and div
 with group &#8220;CALC&#8221;, and all functions with the prefix app are associated
 with group &#8220;USER&#8221;.</p>
+</div>
 </div>
 
 

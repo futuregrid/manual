@@ -1,9 +1,19 @@
 .. _s-vampir:
 
+**********************************************************************
+Vampir and Vampir Trace
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
 Vampir
 ======
 
 **Introduction**
+~~~~~~~~~~~~~~~~~
 
 Performance optimization is a key issue for the development of efficient
 parallel software applications. Vampir provides a manageable framework
@@ -70,6 +80,7 @@ combination of Fortran77, Fortran (90/95/etc.), C, and C++.
 .. image:: images/otf_0.png
 
 **Representation of Streams by Multiple Files**
+-------------------------------------------------
 
 OTF uses a special ASCII data representation to encode its data items
 with numbers and tokens in hexadecimal code without special prefixes.
@@ -136,13 +147,13 @@ library. Automatic instrumentation is the most convenient method to
 instrument your program. Therefore, simply use the compiler wrappers
 without any parameters, e.g.:
 
-    ::
+::
 
         vtf90 hello.f90 -o hello
 
 For manual instrumentation with the VampirTrace API, simply include:
 
-    ::
+::
 
         vt_user.inc (Fortran)
 
@@ -151,7 +162,7 @@ For manual instrumentation with the VampirTrace API, simply include:
 and label any user defined sequence of statements for instrumentation as
 follows:
 
-    ::
+::
 
         VT_USER_START(name) ... VT_USER_END(name)
 
@@ -235,6 +246,7 @@ appropriate input files.
 .. image:: images/open_file.png
 
 **Loading a Trace Log File in Vampir**
+--------------------------------------
 
 While Vampir is loading the trace file, an empty "Trace View" window
 with a progress bar at the bottom opens. After Vampir loaded the trace
@@ -249,6 +261,8 @@ this proceeding is a suitable strategy to save time.
 .. image:: images/cancel_loading_resize.png
 
 **Progress Bar and Cancel Loading Button**
+------------------------------------------
+
 
 Basic functionality and navigation elements are described
 in \ `Basics <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics>`__.
@@ -380,14 +394,15 @@ be affected when zooming in timeline displays: The interval chosen in a
 timeline chart such asÂ \ *Master Timeline* or *Process Timeline* also
 defines the time interval for the calculation of accumulated
 measurements in the statistical charts. Statistical charts like
-theÂ \ *Function Summary* provide zooming of statistic values. In these
+the \ *Function Summary* provide zooming of statistic values. In these
 cases zooming does not affect any other chart. Zooming is disabled in
-theÂ \ *Pie Chart* mode of theÂ \ *Function Summary* reachable via context
+the \ *Pie Chart* mode of the \ *Function Summary* reachable via context
 menu under \ *Set Chart Mode->Pie Chart*.
 
 .. image:: images/Zooming.png
 
 **Zooming within a Chart**
+-------------------------------
 
 To zoom into an area, click and hold the left mouse button and select
 the area. It is possible to zoom horizontally and in some charts also
@@ -458,103 +473,68 @@ informational charts, providing specific textual information or legends.
 Only one instance of an informational chart can be opened at a time.
 
 **Icons of the Toolbar**
+-------------------------------
 
-Icon
+.. list-table::
 
-Name
-
-Description
-
-.. image:: images/icon_master_tl.png
-
-Master Timeline
-
-`Master
+    * - Icon
+      - Name
+      - Description
+    * - .. image:: images/icon_master_tl.png
+      - Master Timeline
+      - `Master
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
-
-.. image:: images/icon_process_tl.png
-
-Process Timeline
-
-`Process
+    * - .. image:: images/icon_process_tl.png
+	 - Process Timeline
+      - `Process
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
-
-.. image:: images/icon_counter_tl.png
-
-Counter Data Timeline
-
-`Counter
+    * - .. image:: images/icon_counter_tl.png
+      - Counter Data Timeline
+      - `Counter
 Data <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline>`__
-
-.. image:: images/icon_radar.png
-
-Performance Radar
-
-`Performance
+    * - .. image:: images/icon_radar.png
+      - Performance Radar
+      - `Performance
 Radar <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar>`__
-
-.. image:: images/icon_function_summ.png
-
-Function Summary
-
-`Function
+    * - .. image:: images/icon_function_summ.png
+      - Function Summary
+      - `Function
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary>`__
-
-.. image:: images/icon_message_summ.png
-
-Message Summary
-
-`Message
+    * - .. image:: images/icon_message_summ.png
+      - Message Summary
+      - `Message
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary>`__
-
-.. image:: images/icon_process_summ.png
-
-Process Summary
-
-`Process
+    * - .. image:: images/icon_process_summ.png
+      - Process Summary
+      - `Process
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary>`__
-
-.. image:: images/icon_matrix.png
-
-Communication Matrix View
-
-`Communication Matrix
+    * - .. image:: images/icon_matrix.png
+      - Communication Matrix View
+      - `Communication Matrix
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View>`__
-
-.. image:: images/icon_calltree.png
-
-Call Tree
-
-`Call
+    * - .. image:: images/icon_calltree.png
+      - Call Tree
+      - `Call
 Tree <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree>`__
-
-.. image:: images/icon_legend.png
-
-Function Legend
-
-`Function
+    * - .. image:: images/icon_legend.png
+      - Function Legend
+      - `Function
 Legend <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend>`__
-
-.. image:: images/icon_context.png
-
-Context View
-
-`Context
+    * - .. image:: images/icon_context.png
+      - Context View
+      - `Context
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View>`__
-
-.. image:: images/icon_marker.png
-
-Marker View
-
-`Marker
+    * - .. image:: images/icon_marker.png
+      - Marker View
+      - `Marker
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_Filtering_and_Reduction>`__
 
 **Properties of the Tracefile**
 -------------------------------
 
 Vampir provides a display containing the most important
-characterizations of the used tracefile. This tabular is calledÂ \ *Trace
-Properties*Â and can be accessed byÂ \ *File->Trace Properties*. The
+characterizations of the used tracefile. This tabular is called \ *Trace
+Properties* and can be accessed by \ *File->Trace Properties*. The
 information, such as the filename, the creator and its version,
 originates from the tracefile and is not changed by Vampir.
 
@@ -574,16 +554,16 @@ sections describe them in detail.
 A very common chart type used in event-based performance analysis is the
 so-called timeline chart. This chart type graphically presents the chain
 of events of monitored processes or counters on a horizontal time axis.
-Multiple timeline chart instances can be added to theÂ \ *Trace
-View*Â window via theÂ \ *Chart*Â menu or theÂ \ *Charts*Â toolbar.
+Multiple timeline chart instances can be added to the \ *Trace
+View* window via the \ *Chart* menu or the \ *Charts* toolbar.
 
 **Note**: To measure the duration between two events in a timeline
 chart, Vampir provides a tool called ruler. Click on the first event in
 a timeline display and move the mouse while keeping the left mouse key
-andÂ \ *Shift*Â pressed. A ruler-like pattern appears in the current
+andÂ \ *Shift* pressed. A ruler-like pattern appears in the current
 timeline chart, which provides rough measurement directly. The exact
 time of the start event and the mouse position and the interval in
-between is given at the very bottom. If theÂ \ *Shift*Â key is released
+between is given at the very bottom. If the \ *Shift* key is released
 before the left mouse key, Vampir will proceed with zooming.
 
 **Master Timeline and Process Timeline**
@@ -641,6 +621,7 @@ figure.
 
 .. image:: images/collectives.png
 
+
 **Selected MPI Collective in Master Timeline**
 
 Additional information like message bursts, markers, and I/O events is
@@ -651,40 +632,20 @@ objects.
 
 **Additional Information in Master and Process Timeline**
 
-**Symbol**
+.. list-table::
 
-**Description**
-
-Message Burst
-
-.. image:: images/burst.png
-
-Because of a lack of pixels it is not possible to display a large number
-of messages in a very short interval. Therefore, these messages are
-summarized as so-called message bursts. Zooming into this interval
-reveals the corresponding single messages.
-
-Markers
-
-.. image:: images/marker-multiple.png\ multiple
-
-.. image:: images/marker-template.png\ single
-
-To indicate particular points (like errors or warnings) during the
+    * - Symbol
+      - Description
+    * - Message Burst .. image:: images/burst.png
+      - Because of a lack of pixels it is not possible to display a large number of messages in a very short interval. Therefore, these messages are summarized as so-called message bursts. Zooming into this interval reveals the corresponding single messages.
+    * - Markers .. image:: images/marker-multiple.png  multiple .. image:: images/marker-template.png single
+      - To indicate particular points (like errors or warnings) during the
 runtime of an application, markers can be used in a tracefile. They are
 drawn as triangles, which are colored according to their types. To
 illustrate that two or more markers are placed at the same pixel, a
 multiple marker is drawn.
-
-I/O Events
-
-.. image:: images/io-multiple.png\ multiple
-
-.. image:: images/io-single.png\ single
-
-.. image:: images/io-single-selected.png\ single, selected
-
-Vampir shows detailed information about I/O operations, if they are
+    * - I/O Events .. image:: images/io-multiple.png  multiple .. image:: images/io-single.png single .. image:: images/io-single-selected.png single, selected
+      - Vampir shows detailed information about I/O operations, if they are
 included in the tracefile. I/O events are depicted as triangles at the
 beginning of an I/O interval. Multiple I/O events are tricolored and
 occupy a line to the end of the interval. To see the whole interval of a
@@ -696,6 +657,11 @@ short black arrows are used to indicate outgoing communication. Clicking
 on message lines or arrows shows message details like sender process,
 receiver process, message length, message duration, and message tag in
 the \ *Context View* display.
+
+
+
+
+
 
 **Counter Data Timeline**
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1053,7 +1019,7 @@ tracefiles.
 **General Preferences**
 -----------------------
 
-The \ *General* settings allow you to change application and trace
+The *General* settings allow you to change application and trace
 specific values.
 
 .. image:: images/pref_general.png
@@ -1061,13 +1027,13 @@ specific values.
 **General Settings**
 
 *Show time as*\ decides whether the time format for the trace analysis
-is based on seconds or ticks. The next pointÂ \ *Use color gradient in
+is based on seconds or ticks. The next point \ *Use color gradient in
 charts*\ allows you to switch off the color gradient used in the
 performance charts. The next option is to change the style and size of
-the font.Â *Show source code* allows you to open an editor showing the
+the font. *Show source code* allows you to open an editor showing the
 respective source file. In order to open a source file, first click on
-the intended function in theÂ \ *Master Timeline*Â and then on the source
-code path in theÂ \ *Context View*. For the source code location to work
+the intended function in theÂ \ *Master Timeline* and then on the source
+code path in the \ *Context View*. For the source code location to work
 properly, you need a trace file with source code location support. The
 path of the source file can be adjusted in \ *Preferences*. A limit for
 the size of the file can be set, too. Finally, the user can decide if he
@@ -1076,7 +1042,7 @@ wants Vampir to automatically check for new versions.
 **Appearance**
 --------------
 
-In the \ *Appearance* settings of the \ *Preferences* dialog, there are
+In the *Appearance* settings of the *Preferences* dialog, there are
 six different objects for which the color options can be changed: the
 functions/function groups, markers, counters, collectives, messages and
 I/O events. Choose an entry and click on its color to make a
@@ -1149,6 +1115,7 @@ tailored to parallel and distributed High Performance Computing (HPC)
 applications.
 
 **Availability**\ ****
+-----------------------
 
 VampirTrace is currently available on FutureGrid machines under module
 'vampirtrace'. VampirTrace is also available in OpenMPI versions 1.5.x
@@ -1156,6 +1123,7 @@ or higher. For example on Bravo, it is available as *openmpi/1.5.4-gnu*
 or *openmpi/1.5.4-intel*.
 
 **Overview**\ ****
+-----------------------
 
 The instrumentation part of VampirTrace modifies a given application in
 order to inject additional measurement calls during runtime. The tracing
@@ -1463,6 +1431,7 @@ contain MPI and OpenMP instrumentation, which might be desirable in some
 cases. For more on how to inline functions, read your compiler's manual.
 
 **Manual Instrumentation**
+--------------------------
 
 **Using the VampirTrace API**
 
@@ -1484,14 +1453,16 @@ Fortran
 
 C
 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-VT\_USER\_START("name");
+  VT\_USER\_START("name");
 
-...
+  ...
 
-VT\_USER\_END("name");
+  VT\_USER\_END("name");
+
 
 If a block has several exit points (as is often the case for functions),
 all exit points have to be instrumented with VT USER END, too.
@@ -1508,10 +1479,9 @@ C++
 
   {
 
-  VT\_TRACER("name");
+  VT\_TRACER("name");
 
-  ...
-
+  ...
   }
 
 The instrumented sources have to be compiled with -DVTRACE for all three
@@ -1681,290 +1651,157 @@ Environment variables can be used to control nearly every aspect of the
 measurement of a VampirTrace instrumented executable. (ToDo: link to
 CheatSheet and Doku-PDF)
 
-**Variable**
+.. list-table::
 
-**Purpose**
-
-**Default**
-
-
-Global Settings
-
-Â 
-
-VT\_APPPATH
-
-Path to the application executable.
-
--
-
-VT\_BUFFER\_SIZE
-
-Size of internal event trace buffer. This is the place where event
+    * - **Variable**
+      - **Purpose**
+      - **Default**
+    * - 
+      - Global Settings
+      - 
+    * - VT\_APPPATH
+      - Path to the application executable.
+      - -
+    * - VT\_BUFFER\_SIZE
+      - Size of internal event trace buffer. This is the place where event
 records are stored, before being written to a file.
-
-32M
-
-VT\_CLEAN
-
-Remove temporary trace files?
-
-yes
-
-VT\_COMPRESSION
-
-Write compressed trace files?
-
-yes
-
-VT\_FILE\_PREFIX
-
-Prefix used for trace filenames.
-
--
-
-VT\_FILE\_UNIQUE
-
-Enable unique trace file naming? Set to yes, no, or a numerical ID.
-
-no
-
-VT\_MAX\_FLUSHES
-
-Maximum number of buffer flushes.
-
-1
-
-VT\_MAX\_THREADS
-
-Maximum number of threads per process that VampirTrace reserves
-resources for.
-
-65536
-
-VT\_PFORM\_GDIR
-
-Name of global directory to store final trace file in.
-
-./
-
-VT\_PFORM\_LDIR
-
-Name of node-local directory which can be used to store temporary trace
+      - 32M
+    * - VT\_CLEAN
+      - Remove temporary trace files?
+      - yes
+    * - VT\_COMPRESSION
+      - Write compressed trace files?
+      - yes
+    * - VT\_FILE\_PREFIX
+      - Prefix used for trace filenames.
+      - -
+    * - VT\_FILE\_UNIQUE
+      - Enable unique trace file naming? Set to yes, no, or a numerical ID.
+      - no
+    * - VT\_MAX\_FLUSHES
+      - Maximum number of buffer flushes.
+      - 1
+    * - VT\_MAX\_THREADS
+      - Maximum number of threads per process that VampirTrace reserves resources for.
+      - 65536
+    * - VT\_PFORM\_GDIR
+      - Name of global directory to store final trace file in.
+      - ./
+    * - VT\_PFORM\_LDIR
+      - Name of node-local directory which can be used to store temporary trace
 files.
-
-/tmp/
-
-VT\_UNIFY
-
-Unify local trace files afterwards?
-
-yes
-
-VT\_VERBOSE
-
-Level of VampirTrace related information messages: Quiet (0), Critical
+      - /tmp/
+    * - VT\_UNIFY
+      - Unify local trace files afterwards?
+      - yes
+    * - VT\_VERBOSE
+      - Level of VampirTrace related information messages: Quiet (0), Critical
 (1), Information (2)
-
-1
-
-
-
-Optional Features
-
-
-
-VT\_CPUIDTRACE
-
-Enable tracing of CPU ID?
-
-no
-
-VT\_ETIMESYNC
-
-Enable enhanced timer synchronization? â‡’ Section
+      - 1
+    * - 
+      - Optional Features
+      - 
+    * - VT\_CPUIDTRACE
+      - Enable tracing of CPU ID?
+      - no
+    * - VT\_ETIMESYNC
+      - Enable enhanced timer synchronization? â‡’ Section
 [#timer\_synchronization [\*]]
-
-no
-
-VT\_ETIMESYNC\_INTV
-
-Interval between two successive synchronization phases in s.
-
-120
-
-VT\_IOLIB\_PATHNAME
-
-Provides an alternative library to use for LIBC I/O calls.
-
--
-
-VT\_IOTRACE
-
-Enable tracing of application I/O calls?
-
-no
-
-VT\_LIBCTRACE
-
-Enable tracing of fork/system/exec calls?
-
-yes
-
-VT\_MEMTRACE
-
-Enable memory allocation counter?
-
-no
-
-VT\_MODE
-
-Colon-separated list of VampirTrace modes: Tracing (TRACE), Profiling
+      - no
+    * - VT\_ETIMESYNC\_INTV
+      - Interval between two successive synchronization phases in s.
+      - 120
+    * - VT\_IOLIB\_PATHNAME
+      - Provides an alternative library to use for LIBC I/O calls.
+      - -
+    * - VT\_IOTRACE
+      - Enable tracing of application I/O calls?
+      - no
+    * - VT\_LIBCTRACE
+      - Enable tracing of fork/system/exec calls?
+      - yes
+    * - VT\_MEMTRACE
+      - Enable memory allocation counter?
+      - no
+    * - VT\_MODE
+      - Colon-separated list of VampirTrace modes: Tracing (TRACE), Profiling
 (STAT).
-
-TRACE
-
-VT\_MPICHECK
-
-Enable MPI correctness checking via UniMCI?
-
-no
-
-VT\_MPICHECK\_ERREXIT
-
-Force trace write and application exit if an MPI usage error is
+      - TRACE
+    * - VT\_MPICHECK
+      - Enable MPI correctness checking via UniMCI?
+      - no
+    * - VT\_MPICHECK\_ERREXIT
+      - Force trace write and application exit if an MPI usage error is
 detected?
-
-no
-
-VT\_MPITRACE
-
-Enable tracing of MPI events?
-
-yes
-
-VT\_PTHREAD\_REUSE
-
-Reuse IDs of terminated Pthreads?
-
-yes
-
-VT\_STAT\_INV
-
-Length of interval for writing the next profiling record
-
-0
-
-VT\_STAT\_PROPS
-
-Colon-separated list of event types that will be recorded in profiling
+      - no
+    * - VT\_MPITRACE
+      - Enable tracing of MPI events?
+      - yes
+    * - VT\_PTHREAD\_REUSE
+      - Reuse IDs of terminated Pthreads?
+      - yes
+    * - VT\_STAT\_INV
+      - Length of interval for writing the next profiling record
+      - 0
+    * - VT\_STAT\_PROPS
+      - Colon-separated list of event types that will be recorded in profiling
 mode: Functions (FUNC), Messages (MSG), Collective Ops. (COLLOP) or all
 of them (ALL)
-
-ALL
-
-VT\_SYNC\_FLUSH
-
-Enable synchronized buffer flush?
-
-no
-
-VT\_SYNC\_FLUSH\_LEVEL
-
-Minimum buffer fill level for synchronized buffer flush in percent.
-
-80
-
-
-Counters
-
-
-VT\_METRICS
-
-Specify counter metrics to be recorded with trace events as a
+      - ALL
+    * - VT\_SYNC\_FLUSH
+      - Enable synchronized buffer flush?
+      - no
+    * - VT\_SYNC\_FLUSH\_LEVEL
+      - Minimum buffer fill level for synchronized buffer flush in percent.
+      - 80
+    * - 
+      - Counters
+      - 
+    * - VT\_METRICS
+      - Specify counter metrics to be recorded with trace events as a
 colon-separated list of names
-
--
-
-VT\_RUSAGE
-
-Colon-separated list of resource usage counters which will be recorded.
-
--
-
-VT\_RUSAGE\_INTV
-
-Sample interval for recording resource usage counters in ms.
-
-100
-
-
-Filtering, Grouping
-
-
-VT\_DYN\_BLACKLIST
-
-Name of blacklist file for Dyninst instrumentation.
-
--
-
-VT\_DYN\_SHLIBS
-
-Colon-separated list of shared libraries for Dyninst instrumentation.
-
--
-
-VT\_FILTER\_SPEC
-
-Name of function/region filter file.
-
-
-VT\_GROUPS\_SPEC
-
-Name of function grouping file.
-
--
-
-VT\_JAVA\_FILTER\_SPEC
-
-Name of Java specific filter file.
-
--
-
-VT\_GROUP\_CLASSES
-
-Create a group for each Java class automatically?
-
-yes
-
-VT\_MAX\_STACK\_DEPTH
-
-Maximum number of stack level to be traced. (0 = unlimited)
-
-0
-
-
-Demangle, Symbol List
-
-
-VT\_GNU\_DEMANGLE
-
-Decode (demangle) low-level symbol names into user-level names?
-
-no
-
-VT\_GNU\_GETSRC
-
-Retrieve the source code line of functions instrumented automatically
+      - -
+    * - VT\_RUSAGE
+      - Colon-separated list of resource usage counters which will be recorded.
+      - -
+    * - VT\_RUSAGE\_INTV
+      - Sample interval for recording resource usage counters in ms.
+      - 100
+    * - 
+      - Filtering, Grouping
+    * - VT\_DYN\_BLACKLIST
+      - Name of blacklist file for Dyninst instrumentation.
+      - -
+    * - VT\_DYN\_SHLIBS
+      - Colon-separated list of shared libraries for Dyninst instrumentation.
+      - -
+    * - VT\_FILTER\_SPEC
+      - Name of function/region filter file.
+    * - VT\_GROUPS\_SPEC
+      - Name of function grouping file.
+      - -
+    * - VT\_JAVA\_FILTER\_SPEC
+      - Name of Java specific filter file.
+      - -
+    * - VT\_GROUP\_CLASSES
+      - Create a group for each Java class automatically?
+      - yes
+    * - VT\_MAX\_STACK\_DEPTH
+      - Maximum number of stack level to be traced. (0 = unlimited)
+      - 0
+    * - 
+      - Demangle, Symbol List
+      - 
+    * - VT\_GNU\_DEMANGLE
+      - Decode (demangle) low-level symbol names into user-level names?
+      - no
+    * - VT\_GNU\_GETSRC
+      - Retrieve the source code line of functions instrumented automatically
 with the GNU interface?
-
-yes
-
-VT\_GNU\_NMFILE
-
-Name of file with symbol list information.
-
--
+      - yes
+    * - VT\_GNU\_NMFILE
+      - Name of file with symbol list information.
+      - -
 
 When you use these environment variables, make sure that they have the
 same value for all processes of your application on all nodes of your
@@ -2213,97 +2050,55 @@ technique for recording calls to I/O functions of the standard C
 library, which are executed by the application. The following functions
 are intercepted by VampirTrace:
 
-close
+.. list-table::
 
-creat
-
-creat64
-
-dup
-
-dup2
-
-fclose
-
-fcntl
-
-fdopen
-
-fgetc
-
-fgets
-
-flockfile
-
-fopen
-
-fopen64
-
-fprintf
-
-fputc
-
-fputs
-
-fread
-
-fscanf
-
-fseek
-
-fseeko
-
-fseeko64
-
-fsetpos
-
-fsetpos64
-
-ftrylockfile
-
-funlockfile
-
-fwrite
-
-getc
-
-gets
-
-lockf
-
-lseek
-
-lseek64
-
-open
-
-open64
-
-pread
-
-pread64
-
-putc
-
-puts
-
-pwrite
-
-pwrite64
-
-read
-
-readv
-
-rewind
-
-unlink
-
-write
-
-writev
-
-
+    * - close
+      - creat
+      - creat64
+      - dup
+    * - dup2
+      - fclose
+      - fcntl
+      - fdopen
+    * - fgetc
+      - fgets
+      - flockfile
+      - fopen
+    * - fopen64
+      - fprintf
+      - fputc
+      - fputs
+    * - fread
+      - fscanf
+      - fseek
+      - fseeko
+    * - fseeko64
+      - fsetpos
+      - fsetpos64
+      - ftrylockfile
+    * - funlockfile
+      - fwrite
+      - getc
+      - gets
+    * - lockf
+      - lseek
+      - lseek64
+      - open
+    * - open64
+      - pread
+      - pread64
+      - putc
+    * - puts
+      - pwrite
+      - pwrite64
+      - read
+    * - readv
+      - rewind
+      - unlink
+      - write
+    * - writev
+      - 
+      - 
 The gathered information will be saved as I/O event records in the trace
 file. This feature has to be activated for each tracing run by setting
 the environment variable VT\_IOTRACE to yes.
@@ -2423,82 +2218,53 @@ third parameter type of VT\_COUNT\_DEF specifies the data type of the
 counter value. To record a value for any of the defined counters, the
 corresponding instrumentation call VT\_COUNT \* VAL must be invoked.
 
-**Fortran:**
+
+.. list-table::
+
+    * - **Fortran:**
+      - 
+      - 
+    * - **Type**
+      - Count call
+      - Data Type
+    * - VT\_COUNT\_TYPE\_INTEGER
+      - VT\_COUNT\_INTEGER\_VAL
+      - integer (4 byte)
+    * - VT\_COUNT\_TYPE\_INTEGER8
+      - VT\_COUNT\_INTEGER8\_VAL
+      - integer (8 byte)
+    * - VT\_COUNT\_TYPE\_REAL
+      - VT\_COUNT\_REAL\_VAL
+      - real
+    * - VT\_COUNT\_TYPE\_DOUBLE
+      - VT\_COUNT\_DOUBLE\_VAL
+      - double precision
 
 
-**Type**
-
-Count call
-
-Data type
-
-VT\_COUNT\_TYPE\_INTEGER
-
-VT\_COUNT\_INTEGER\_VAL
-
-integer (4 byte)
-
-VT\_COUNT\_TYPE\_INTEGER8
-
-VT\_COUNT\_INTEGER8\_VAL
-
-integer (8 byte)
-
-VT\_COUNT\_TYPE\_REAL
-
-VT\_COUNT\_REAL\_VAL
-
-real
-
-VT\_COUNT\_TYPE\_DOUBLE
-
-VT\_COUNT\_DOUBLE\_VAL
-
-double precision
-
-Â 
-
-**C/C++:**
-
-Â 
-
-Â 
-
-**Type**
-
-Count call
-
-Data type
-
-VT\_COUNT\_TYPE\_SIGNED
-
-VT\_COUNT\_SIGNED\_VAL
-
-signed int (max. 64-bit)
-
-VT\_COUNT\_TYPE\_UNSIGNED
-
-VT\_COUNT\_UNSIGNED\_VAL
-
-unsigned int (max. 64-bit)
-
-VT\_COUNT\_TYPE\_FLOAT
-
-VT\_COUNT\_FLOAT\_VAL
-
-float
-
-VT\_COUNT\_TYPE\_DOUBLE
-
-VT\_COUNT\_DOUBLE\_VAL
-
-double
+.. list-table::
+    * - **C/C++:**
+     - 
+     - 
+    * - **Type**
+     - Count call
+     - Data type
+    * - VT\_COUNT\_TYPE\_SIGNED
+     - VT\_COUNT\_SIGNED\_VAL
+     - signed int (max. 64-bit)
+    * - VT\_COUNT\_TYPE\_UNSIGNED
+     - VT\_COUNT\_UNSIGNED\_VAL
+     - unsigned int (max. 64-bit)
+    * - VT\_COUNT\_TYPE\_FLOAT
+     - VT\_COUNT\_FLOAT\_VAL
+     - float
+    * - VT\_COUNT\_TYPE\_DOUBLE
+     - VT\_COUNT\_DOUBLE\_VAL
+     - double
 
 The following example records the loop index i:
 
 Fortran
 
-Â 
 
 #include "vt\_user.inc"
 

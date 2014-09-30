@@ -12,13 +12,13 @@ Appliance <http://www.grid-appliance.org/wiki/index.php/TestingGridAppliance>`__
  
 #. Sudo to root and install the grid-appliance baseline package as follows:
 
-   #. apt-get install wget
-   #. echo "deb http://www.grid-appliance.org/files/packages/deb/ lucid
+#. apt-get install wget
+#. echo "deb http://www.grid-appliance.org/files/packages/deb/ lucid
       contrib" >> /etc/apt/sources.list
-   #. wget http://www.grid-appliance.org/files/packages/deb/repo.key
-   #. apt-key add repo.key
-   #. apt-get update
-   #. apt-get install grid-appliance-base
+#. wget http://www.grid-appliance.org/files/packages/deb/repo.key
+#. apt-key add repo.key
+#. apt-get update
+#. apt-get install grid-appliance-base
 
 
 #. To configure the appliance to connect to a GroupVPN, use one of the following two options:
@@ -29,7 +29,7 @@ Appliance <http://www.grid-appliance.org/wiki/index.php/TestingGridAppliance>`__
    #. To use our defined Group:
 
       #. Create a GroupVPN and GroupAppliance
-         at `http://grid-appliance.org <http://grid-appliance.org/>`__. For an example, see `Deploying independent appliance pools <http://www.grid-appliance.org/index.php?option=com_content&view=article&id=79&Itemid=76>`__.
+         at `http://grid-appliance.org <http://grid-appliance.org/>`__. For an example, see `Deploying independent appliance pools <http://www.grid-appliance.org/index.php?option=com_content&view=article&id=79&Itemid=76>`__.
       #. In the GroupAppliance interface, download and extract the floppy configuration file for a client (floppy.img) and place
          it in/opt/grid\_appliance/etc/floppy.img .
       #. /etc/init.d/grid\_appliance.sh restart

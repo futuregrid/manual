@@ -1351,24 +1351,30 @@ Appliance</a>.</p>
 <p>#. Deploy an Ubuntu 10.04 appliance locally. You can download an Ubuntu 9.10 VMware appliance <a class="reference external" href="http://vmplanet.net/node/105">here</a>, or create an instance on FutureGrid of an Ubuntu 10.04 VM.
 ?
 #. Sudo to root and install the grid-appliance baseline package as follows:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li>apt-get install wget</li>
-<li>echo &#8220;deb?http://www.grid-appliance.org/files/packages/deb/?lucid
-contrib&#8221; &gt;&gt; /etc/apt/sources.list</li>
-<li>wget?http://www.grid-appliance.org/files/packages/deb/repo.key</li>
-<li>apt-key add repo.key</li>
-<li>apt-get update</li>
-<li>apt-get install grid-appliance-base</li>
-</ol>
-</div></blockquote>
+<ol class="arabic">
+<li><p class="first">apt-get install wget</p>
+</li>
+<li><dl class="first docutils">
+<dt>echo &#8220;deb?http://www.grid-appliance.org/files/packages/deb/?lucid</dt>
+<dd><p class="first last">contrib&#8221; &gt;&gt; /etc/apt/sources.list</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">wget?http://www.grid-appliance.org/files/packages/deb/repo.key</p>
+</li>
+<li><p class="first">apt-key add repo.key</p>
+</li>
+<li><p class="first">apt-get update</p>
+</li>
+<li><p class="first">apt-get install grid-appliance-base</p>
+</li>
+<li><p class="first">To configure the appliance to connect to a GroupVPN, use one of the following two options:</p>
 <ol class="arabic simple">
-<li>To configure the appliance to connect to a GroupVPN, use one of the following two options:<ol class="arabic">
 <li>To use a default GroupVPN and connect to a public pool hosted at UF, simply install the package?apt-get-install
 grid-appliance-public-pool.</li>
 <li>To use our defined Group:<ol class="arabic">
 <li>Create a GroupVPN and GroupAppliance
-at?`http://grid-appliance.org &lt;<a class="reference external" href="http://grid-appliance.org/">http://grid-appliance.org/</a>&gt;`__. For an example, see <a class="reference external" href="http://www.grid-appliance.org/index.php?option=com_content&amp;view=article&amp;id=79&amp;Itemid=76">Deploying independent appliance pools</a>.</li>
+at <a class="reference external" href="http://grid-appliance.org/">http://grid-appliance.org</a>. For an example, see <a class="reference external" href="http://www.grid-appliance.org/index.php?option=com_content&amp;view=article&amp;id=79&amp;Itemid=76">Deploying independent appliance pools</a>.</li>
 <li>In the GroupAppliance interface, download and extract the floppy configuration file for a client (floppy.img) and place
 it in/opt/grid_appliance/etc/floppy.img .</li>
 <li>/etc/init.d/grid_appliance.sh restart</li>
@@ -1376,7 +1382,8 @@ it in/opt/grid_appliance/etc/floppy.img .</li>
 </li>
 </ol>
 </li>
-<li>Within a few seconds, your appliance should obtain a virtual IP address on the virtual network interface tapipop. Once it does, wait a few seconds and type?condor_status to check the status of other nodes in the pool; you may need to retry a couple of times until connected.</li>
+<li><p class="first">Within a few seconds, your appliance should obtain a virtual IP address on the virtual network interface tapipop. Once it does, wait a few seconds and type?condor_status to check the status of other nodes in the pool; you may need to retry a couple of times until connected.</p>
+</li>
 </ol>
 </div>
 

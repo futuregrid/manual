@@ -92,6 +92,5 @@ as well as on your own resources, to use in your courses or research.
 
 -  At this point, you are connected to a Unix shell in the Grid
    appliance, and can use it to run tasks through Condor, Hadoop or MPI.
-   Follow the steps outlined in the appropriate tutorial(s) found on the
-   `main tutorials page <tutorials.html>`. 
+   Follow the steps outlined in the appropriate tutorial(s) found on the `main tutorials page <tutorials.html>`.
 
