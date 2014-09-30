@@ -1084,9 +1084,8 @@ modification. A color picker dialog opens where it is possible to adjust
 the color. For messages and collectives, a change of the line width is
 also available.
 
-|images/pref_appearance.png|
 
-.. |images/pref_appearance.png| image:: images/pref_appearance.png
+.. |pref_appearance| image:: images/pref_appearance.png
 
 **Appearance Settings**
 

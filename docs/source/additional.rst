@@ -1,7 +1,7 @@
 .. _s-additional:
 
 **********************************************************************
-Other Tutorials and Educational Materials
+Additional tutorials on FutureGrid-related technologies
 **********************************************************************
 
 .. sidebar:: Page Contents
@@ -16,7 +16,7 @@ deployment on FutureGrid. For tutorials on using various FutureGrid
 technologies, please refer to our main `tutorials
 page <tutorials.html>`_.
 
-**Please contact us at :portal: '<help>' if you have
+**Please contact us at :portal:`help <help>` if you have
 any corrections or suggestions**.
 
 
@@ -24,31 +24,31 @@ any corrections or suggestions**.
 **Tutorial Topic 1: Cloud Provisioning Platforms**
 --------------------------------------------------
 
--  :ref:`FutureGrid Tutorial ON1: Using
-   OpenNebula <s-opennebula>` [advanced] 
+-  :ref:`FutureGrid Tutorial ON1: Using
+   OpenNebula <s-opennebula>` [advanced]
 
 Tutorial Topic 2: High Performance Computing
 --------------------------------------------
 
 -  :ref:`FutureGrid Tutorial VA1: Performance Analysis with
-   Vampir <s-vampir>`[advanced] 
--  :ref:`FutureGridÂ TutorialÂ VT1: Instrumentation and tracing
-   with VampirTrace <s-vampirtrace>` [advanced] 
+   Vampir <s-vampir>` [advanced]
+-  :ref:`FutureGrid Tutorial VT1: Instrumentation and tracing
+   with VampirTrace <s-vampirtrace>` [advanced]
 
 Tutorial Topic 3: Information Systems
 -------------------------------------
 
--  :ref:`FutureGrid Tutorial NL1: Netlogger Tutorial <s-netlogger>`[advanced] 
+-  :ref:`FutureGrid Tutorial NL1: Netlogger Tutorial <s-netlogger>` [advanced]
 -  :ref:`FutureGrid Tutorial IN1: 
-   INCA Tutorial <s-inca>` [advanced] 
+   INCA Tutorial <s-inca>` [advanced]
 
 Others
 ------
 
 CloudCom 2010 Tutorials/Screencasts
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  `List of CloudCom 2010 tutorials <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__
+-  `List of CloudCom 2010 tutorials <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__
 
 +-------------------------+-------------------------+-------------------------+
 | Title                   | Type                    | Last Update             |
