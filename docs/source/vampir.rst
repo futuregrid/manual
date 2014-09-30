@@ -656,7 +656,7 @@ objects.
 
 Message Burst
 
-|image58|
+.. image: images/burst.png
 
 Because of a lack of pixels it is not possible to display a large number
 of messages in a very short interval. Therefore, these messages are
@@ -665,9 +665,9 @@ reveals the corresponding single messages.
 
 Markers
 
-|image59|\ multiple
+.. image: images/marker-multiple.png\ multiple
 
-|image60|\ single
+.. image: images/marker-template.png\ single
 
 To indicate particular points (like errors or warnings) during the
 runtime of an application, markers can be used in a tracefile. They are
@@ -677,11 +677,11 @@ multiple marker is drawn.
 
 I/O Events
 
-|image61|\ multiple
+.. image: images/io-multiple.png\ multiple
 
-|image62|\ single
+.. image: images/io-single.png\ single
 
-|image63|\ single, selected
+.. image: images/io-single-selected.png\ single, selected
 
 Vampir shows detailed information about I/O operations, if they are
 included in the tracefile. I/O events are depicted as triangles at the
@@ -690,11 +690,11 @@ occupy a line to the end of the interval. To see the whole interval of a
 single I/O event, the triangle has to be selected. In that case, a
 second triangle at the end of the interval appears.
 
-Since theÂ \ *Process Timeline*Â reveals information of one process only,
+Since the \ *Process Timeline* reveals information of one process only,
 short black arrows are used to indicate outgoing communication. Clicking
 on message lines or arrows shows message details like sender process,
 receiver process, message length, message duration, and message tag in
-theÂ \ *Context View*Â display.
+the \ *Context View* display.
 
 **Counter Data Timeline**
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -708,15 +708,15 @@ an iterative approximation of the final result. Counters are defined
 during the instrumentation of the application and can be individually
 assigned to processes.
 
-|image64|
+.. image: images/Counter_data_timeline.png
 
 **Counter Data Timeline**
 
 The chart is restricted to one counter at a time. It shows the selected
-counter for one process. Using multiple instances of theÂ \ *Counter Data
+counter for one process. Using multiple instances of the \ *Counter Data
 Timeline,* counters or processes can be compared easily. The context
-menu entryÂ \ *Set Counter*Â allows you to choose the displayed counter
-directly from a drop-down list. The entryÂ \ *Set Process*Â selects the
+menu entry \ *Set Counter* allows you to choose the displayed counter
+directly from a drop-down list. The entry \ *Set Process* selects the
 particular process for which the counter is shown.
 
 **Performance Radar**
@@ -724,26 +724,26 @@ particular process for which the counter is shown.
 
 The Performance Radar chart provides the search of function occurrences
 in the trace file and the extended visualization of counters. It can
-happen that a function is not shown inÂ \ *Master*Â andÂ *Process
-Timeline*Â due to a short runtime. An alternative to zooming is the
-optionÂ \ *Find Function...*. A color-coded timeline indicates the
+happen that a function is not shown in \ *Master* and *Process
+Timeline* due to a short runtime. An alternative to zooming is the
+option \ *Find Function...*. A color-coded timeline indicates the
 intervals in which the function is executed.
 
-|image65|
+.. image: images/performance_radar_find_function.png
 
 **Performance Radar Timeline - Search of Functions**
 
 By default, the Performance Radar shows the values of one counter for
 each process (thread). In this mode the user can choose between *Line
-Plot*Â andÂ *Color Coded*Â drawing. In the latter case, a color scale on
+Plot* and *Color Coded* drawing. In the latter case, a color scale on
 the bottom provides information about the range of values. Clicking
-onÂ \ *Set Counter...*Â leads to a dialog that offers the option of
+onÂ \ *Set Counter...* leads to a dialog that offers the option of
 choosing another counter and calculating the sum or average values.
 Summarizing means that the values of the selected counter of all
 processes are summed up. The average is this sum divided by the number
 of processes. Both options provide a single graph.
 
-|image66|
+.. image: images/performance_radar_set_counter.png
 
 **Performance Radar Timeline - Visualization of Counters**
 
@@ -758,13 +758,13 @@ functions in a tree representation. The display reveals information
 about the number of invocations of a given function, the time spent in
 the different calls, and the caller-callee relationship.
 
-|image67|
+.. image: images/Call_tree.png
 
 **Call Tree**
 
-The entries of theÂ \ *Call Tree*Â can be sorted in various ways. Simply
+The entries of the \ *Call Tree* can be sorted in various ways. Simply
 click on one header of the tree representation to use its characteristic
-to resort theÂ \ *Call Tree*. Please note that not all available
+to resort the \ *Call Tree*. Please note that not all available
 characteristics are enabled by default. To add or remove
 characteristics, a context menu is accessible by right-clicking on any
 of the tree headers. To leaf through the different function calls, it is
@@ -775,15 +775,15 @@ functions, which is hardly obvious in the tree representation.
 Therefore, a relation view shows all callers and callees of the
 currently selected function in two separated lists, as shown in the
 lower area. To find a certain function by its name, Vampir provides a
-search option accessible with the context menu entryÂ \ *Show Find View*.
+search option accessible with the context menu entry \ *Show Find View*.
 The entered keyword has to be confirmed by pressing the Return key.
-TheÂ \ *Previous*Â andÂ *Next*Â buttons can be used to flip through the
+The \ *Previous* and *Next* buttons can be used to flip through the
 results afterwards.
 
 **Function Summary**
 ~~~~~~~~~~~~~~~~~~~~
 
-TheÂ \ *Function Summary*Â chart gives an overview of the accumulated time
+The \ *Function Summary* chart gives an overview of the accumulated time
 consumption across all function groups and functions. For example every
 time a process calls the MPI\_Send() function, the elapsed time of that
 function is added to the MPI function group time. The chart gives a
@@ -791,41 +791,41 @@ condensed view on the execution of the application and a comparison
 between the different function groups can be made so that dominant
 function groups can be distinguished easily.
 
-|image68|
+.. image: images/Function_summary.png
 
 **Function Summary**
 
 It is possible to change the information displayed via the context menu
-entryÂ \ *Set Metric*, which offers values likeÂ \ *Average Exclusive
-Time*, *Number of Invocations*,Â \ *Accumulated Inclusive Time*Â and
-others. Note:Â \ *Inclusive*Â means the amount of time spent in a function
-and all of its subroutines.Â *Exclusive*Â means the amount of time just
-spent in this function. The context menu entryÂ \ *Set Event
-Category*Â specifies whether either function groups or functions should
+entry \ *Set Metric*, which offers values like \ *Average Exclusive
+Time*, *Number of Invocations*, \ *Accumulated Inclusive Time* and
+others. Note: \ *Inclusive* means the amount of time spent in a function
+and all of its subroutines. *Exclusive* means the amount of time just
+spent in this function. The context menu entry \ *Set Event
+Category* specifies whether either function groups or functions should
 be displayed in the chart. The functions own the color of their function
 group. It is possible to hide functions and function groups from the
-displayed information with the context menu entryÂ \ *Filter*. To mark
+displayed information with the context menu entry \ *Filter*. To mark
 the function or function group to be filtered, click the associated
-label or color representation in the chart. Using theÂ \ *Process
-Filter*Â allows you to restrict this view to a set of processes. As a
+label or color representation in the chart. Using the \ *Process
+Filter* allows you to restrict this view to a set of processes. As a
 result, only the consumed time of these processes is displayed for each
 function group or function. Instead of using the filter (which affects
 all other displays by hiding processes), it is possible to select a
-single process viaÂ \ *Set Process*Â in the context menu of the *Function
+single process via \ *Set Process* in the context menu of the *Function
 Summary*. This does not have any effect on other timeline displays.
-TheÂ \ *Function Summary*Â can be shown as aÂ \ *Histogram*Â (a bar chart,
-as in timeline charts) or as aÂ \ *Pie Chart*. To switch between these
-representations, use theÂ \ *Set Chart Mode*Â entry of the context menu.
+The \ *Function Summary* can be shown as a \ *Histogram* (a bar chart,
+as in timeline charts) or as a \ *Pie Chart*. To switch between these
+representations, use the \ *Set Chart Mode* entry of the context menu.
 The shown functions or function groups can be sorted by name or value
-via the context menu optionÂ \ *Sort By*.
+via the context menu option \ *Sort By*.
 
 **Process Summary**
 ~~~~~~~~~~~~~~~~~~~
 
-TheÂ \ *Process Summary*Â is similar to theÂ \ *Function Summary*Â but shows
+The \ *Process Summary* is similar to the \ *Function Summary* but shows
 the information for every process independently.
 
-|image69|
+.. image: images/Process_summary.png
 
 **Process Summary**
 
@@ -833,55 +833,55 @@ This is useful for analyzing the balance between processes to reveal
 bottlenecks. For instance, finding that one process spends a
 significantly high time performing the calculations could indicate an
 unbalanced distribution of work that can slow down the entire
-application. The context menu entryÂ \ *Set Event Category*Â specifies
+application. The context menu entry \ *Set Event Category* specifies
 whether either function groups or functions should be displayed in the
 chart. The functions own the color of their function group. The chart
-can calculate the analysis based onÂ \ *Exclusive Time*Â orÂ *Inclusive
+can calculate the analysis based onÂ \ *Exclusive Time* or *Inclusive
 Time*. To change between these two modes, use the context menu
-entryÂ \ *Set Metric*. It is possible to hide functions and function
+entry \ *Set Metric*. It is possible to hide functions and function
 groups from the displayed information with the context menu
-entryÂ \ *Filter*. To mark the function or function group to be filtered,
+entry \ *Filter*. To mark the function or function group to be filtered,
 click on the associated color representation in the chart. Using
-theÂ \ *Process Filter*Â allows you to restrict this view to a set of
+the \ *Process Filter* allows you to restrict this view to a set of
 processes.
 
 **Message Summary**
 ~~~~~~~~~~~~~~~~~~~
 
-TheÂ \ *Message Summary*Â is a statistical chart showing an overview of
+The \ *Message Summary* is a statistical chart showing an overview of
 the different messages grouped by certain characteristics.
 
-|image70|
+.. image: images/Messagesummary.png
 
-**Message Summary Chart with metric set toÂ \ *Message Transfer
-Rate*Â showing the average transfer rateÂ (A), and the minimal/maximal
-transfer rateÂ (B)**
+**Message Summary Chart with metric set to \ *Message Transfer
+Rate* showing the average transfer rate (A), and the minimal/maximal
+transfer rate (B)**
 
 All values are represented in a bar chart fashion. The number next to
 each bar is the group base, while the number inside a bar depicts the
-different values depending on the chosen metric. Therefore, theÂ \ *Set
-Metric*Â sub-menu of the context menu can be used to switch between
-*Aggregated Message Volume*,Â \ *Message Size*,Â \ *Number of Messages*,
+different values depending on the chosen metric. Therefore, the \ *Set
+Metric* sub-menu of the context menu can be used to switch between
+*Aggregated Message Volume*, \ *Message Size*, \ *Number of Messages*,
 andÂ \ *Message Transfer Rate*. The group base can be changed via the
-context menu entryÂ \ *Group By*. It is possible to choose
-betweenÂ \ *Message Size*,Â \ *Message Tag*, andÂ \ *Communicator (MPI)*.
+context menu entry \ *Group By*. It is possible to choose
+betweenÂ \ *Message Size*, \ *Message Tag*, and \ *Communicator (MPI)*.
 
 **Note**: There will be one bar for every occurring group. However,
-if metric is set toÂ \ *Message Transfer Rate*, the minimal and the
+if metric is set to \ *Message Transfer Rate*, the minimal and the
 maximal transfer rate is given in an additional bar beneath the one
 showing the average transfer rate. The additional bar starts at the
 minimal rate and ends at the maximal one. To filter out messages, click
 on the associated label or color representation in the chart and
-chooseÂ \ *Filter*Â from the context menu afterwards.
+chooseÂ \ *Filter* from the context menu afterwards.
 
 **Communication Matrix View**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TheÂ \ *Communication Matrix View*Â is another way of analyzing
+TheÂ \ *Communication Matrix View* is another way of analyzing
 communication imbalances. It shows information about messages sent
 between processes.
 
-|image71|
+.. image: images/Communication_matrix_view.png
 
 **Communication Matrix View**
 
@@ -892,8 +892,8 @@ information, the color legend changes. It is possible to change the type
 of displayed values. Different metrics like the average duration of
 messages passed from sender to recipient or minimum and maximum
 bandwidth are offered. To change the type of value that is displayed,
-use the context menu optionÂ \ *Set Metric*. Use theÂ \ *Process
-Filter*Â to define which processes/groups should be displayed.
+use the context menu option \ *Set Metric*. Use the \ *Process
+Filter* to define which processes/groups should be displayed.
 
 **Note**: A high duration is not automatically caused by a slow
 communication path between two processes, but can also be due to the
@@ -909,30 +909,30 @@ divided by the duration, to decrease accordingly.
 **Function Legend**
 -------------------
 
-TheÂ \ *Function Legend*Â lists all visible function groups of the loaded
+The \ *Function Legend* lists all visible function groups of the loaded
 trace file along with its corresponding color.
 
-|image72|
+.. image: images/Function_legend.png
 
 **Function Legend**
 
 If colors of functions are changed, they appear in a tree-like fashion
 under their respective function group as well.
 
-|image73|
+.. image: images/Marker_view.png
 
 **A chosen marker (A) and its representation in the Marker View (B)**
 
 The display is given in a tree-like fashion and organizes the marker
 events in their respective groups and types. Additional information,
 like the time of occurrence in the trace file and its description, is
-provided for each marker. By clicking on a marker event in theÂ \ *Marker
+provided for each marker. By clicking on a marker event in the \ *Marker
 View*, this event gets selected in the timeline displays that are
 currently open, and vice-versa. If this marker event is not visible, the
 zooming area jumps to this event automatically. It is possible to select
 markers and types. Then all events belonging to that marker or type get
-selected in theÂ \ *Master Timeline*Â and theÂ \ *Process Timeline*.
-IfÂ \ *Ctrl*Â orÂ *Shift*Â is pressed, the user can highlight several
+selected in the \ *Master Timeline* and the \ *Process Timeline*.
+If \ *Ctrl* or *Shift* is pressed, the user can highlight several
 events. In this case, the user can fit the borders of the zooming area
 in the timeline charts to the timestamps of the two marker events that
 were chosen at last.
@@ -940,25 +940,25 @@ were chosen at last.
 **Context View**
 ~~~~~~~~~~~~~~~~
 
-|image74|
+.. image: images/Context_view.png
 
 **Context View, showing context information (B) of a selected function
 (A)**
 
-As implied by its name, theÂ \ *Context View*Â provides more detailed
+As implied by its name, theÂ \ *Context View* provides more detailed
 information of a selected object compared to its graphical
 representation. An object, e.g., a function, function group, message, or
 message burst, can be selected directly in a chart by clicking its
 graphical representation. For different types of objects, different
-context information is provided by theÂ \ *Context View*. For example,
+context information is provided by the \ *Context View*. For example,
 the object-specific information for functions holds properties
-likeÂ \ *Interval Begin*,Â \ *Interval End*, andÂ \ *Duration*.
-TheÂ \ *Context View*Â may contain several tabs, and a new empty one can
-be added by clicking on theÂ \ *add*-symbol on the right hand side. If an
+like \ *Interval Begin*, \ *Interval End*, and \ *Duration*.
+The \ *Context View* may contain several tabs, and a new empty one can
+be added by clicking on the \ *add*-symbol on the right hand side. If an
 object in another chart is selected, its information is displayed in the
-current tab. If theÂ \ *Context View*Â is closed, it opens automatically
-in that moment. TheÂ \ *Context View*Â offers a comparison between the
-information that is displayed in different tabs. Just use theÂ \ *=*Â on
+current tab. If the \ *Context View* is closed, it opens automatically
+in that moment. The \ *Context View* offers a comparison between the
+information that is displayed in different tabs. Just use the \ *=* on
 the left hand side and choose two objects in the emerged dialog. It is
 possible to compare different elements from different charts, which can
 be useful in some cases. The comparison shows a list of common
@@ -966,7 +966,7 @@ properties. The corresponding values are displayed, along with their
 difference if the values are numbers. The first line always shows the
 names of the displays.
 
-|image75|
+.. image: images/context_compare.png
 
 **Comparison between Context Information**
 
@@ -986,9 +986,9 @@ also the *Zoom Toolbar. The different filters can be reached via
 theÂ *\ Filter *entry in the main menu.*
 
 The example below shows a typical process representation in
-theÂ \ *Process Filter*Â window. This kind of representation is equal to
-all other filters. Processes can be filtered by theirÂ \ *Process
-Group*,Â \ *Communicators*Â andÂ *Process Hierarchy*. Items to be filtered
+theÂ \ *Process Filter* window. This kind of representation is equal to
+all other filters. Processes can be filtered by their \ *Process
+Group*, \ *Communicators* and *Process Hierarchy*. Items to be filtered
 are arranged in a spreadsheet representation. In addition to selecting
 or deselecting an entire group of processes, it is certainly possible to
 filter single processes.
