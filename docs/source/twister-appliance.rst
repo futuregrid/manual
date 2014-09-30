@@ -81,21 +81,21 @@ appliance service are as outlined below:
 
 #. Stop the grid\_appliance service in the grid-appliance
     /etc/init.d/
-    
+
    grid\_appliance.sh
    stop
    exit
-    
+  
 #. Download the GroupVPN floppy to your local system from the
    grid-appliance website. Transfer it to the Grid Appliance workspace
    using scp or sftp.
-    
-   scp - i userkey.private floopy.img (server)
+  �
+  scp - i userkey.private floopy.img (server)
    root@public.ip.address:/opt/grid\_appliance/etc/
     scp - i userkey.private floopy.img (worker)
    root@public.ip.address:/opt/grid\_appliance/etc/
-    
-    
+   
+   
 #. SSH back into grid appliance and start the grid appliance service
     ssh -i userkey.private root@public.ip.address
    /etc/init.d/grid\_appliance.sh start
@@ -133,34 +133,43 @@ For steps 2 - 4, execute the following commands on the second terminal.
 
 In Terminal 1:
 
-| $ cd /opt/Naradabrokering/bin/
-|  $ chmod 755 startbr.sh
-|  $ ./startbr.sh
+::
 
-In Terminal 2: 
-| $ cd /opt/Twister/bin
-|  $ chmod 755 start\_twister.sh
-|  $ ./start\_twister.sh
+   $ cd /opt/Naradabrokering/bin/
+   $ chmod 755 startbr.sh
+   $ ./startbr.sh
 
-2. Ant  Twister-Kmeans
+In Terminal 2:
+
+::
+
+   $ cd /opt/Twister/bin
+   $ chmod 755 start\_twister.sh
+   $ ./start\_twister.sh
+
+2. Ant �Twister-Kmeans
 ^^^^^^^^^^^^^^^^^^^^^^
+:: 
 
-| $ cd /opt/Twister/samples/kmeans
-|  $ ant
-|  $ cd ../../lib
-|  $ mv Twister-Kmeans-0.9.jar ../apps/
+   $ cd /opt/Twister/samples/kmeans
+   $ ant
+   $ cd ../../lib
+   $ mv Twister-Kmeans-0.9.jar ../apps/
 
 3. Create Twister-Kmeans Data Folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| $ cd /opt/Twister/bin
-|  $ ./twister.sh mkdir kmeans
+::
+
+   $ cd /opt/Twister/bin
+   $ ./twister.sh mkdir kmeans
 
 4. Generate Twister-Kmeans Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+::
 
-| $ cd /opt/Twister/samples/kmeans/bin/
-|  $./gen\_data.sh init\_clusters.txt 2 3 kmeans km\_data 3 30000
+   $ cd /opt/Twister/samples/kmeans/bin/
+   $./gen\_data.sh init\_clusters.txt 2 3 kmeans km\_data 3 30000
 
 $ ./create\_partition\_file.sh kmeans km
 ../samples/kmeans/bin/\ `p.pf <http://p.pf/>`__
@@ -172,7 +181,7 @@ $ ./run\_kmeans.sh init\_clusters.txt 3 `p.pf <http://p.pf/>`__
 
 The output is as follows:
 
-|image1|
+.. image:: |twister_kmeans-906x257| images/twister_kmeans-906x257.jpg
 
 A video detailing the above steps can be shown
 `here <https://www.slashtmp.iu.edu/files/download?FILE=jeromitc%2F76089Sok5vi>`__

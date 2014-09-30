@@ -2,6 +2,8 @@
 Other Tutorials
 **********************************************************************
 
+.. _s-grid-appliance-nimbus-eucalyptus:
+
 FutureGrid Grid Appliance for Nimbus and Eucalyptus
 ===================================================
 

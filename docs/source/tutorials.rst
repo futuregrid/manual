@@ -149,7 +149,10 @@ Other Tutorials and Educational Materials
 
 -  :ref:`Additional tutorials on FutureGrid-related
    technologies <s-additional>`
--  `More tutorials are available <tutorials_2.html>`__
+-  `More tutorials <tutorials_2.html>`__
+	- :ref:`FutureGrid Grid Appliance for Nimbus and Eucalyptus <s-grid-appliance-nimbus-eucalyptus>`
+	- :ref:`One-click Hadoop WordCount on Eucalyptus FutureGrid <s-oneclick-hadoop>`
+	- :ref:`One-click Twister K-means on Eucalyptus FutureGrid <s-oneclick-twister-k-means>`
 -  :ref:`FutureGrid community educational
    materials <s-community-edu-materials>`
 -  `CI Tutor performance
