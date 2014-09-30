@@ -1678,243 +1678,130 @@ records are stored, before being written to a file.
     * - VT\_FILE\_UNIQUE
       - Enable unique trace file naming? Set to yes, no, or a numerical ID.
       - no
-
-VT\_MAX\_FLUSHES
-
-Maximum number of buffer flushes.
-
-1
-
-VT\_MAX\_THREADS
-
-Maximum number of threads per process that VampirTrace reserves
-resources for.
-
-65536
-
-VT\_PFORM\_GDIR
-
-Name of global directory to store final trace file in.
-
-./
-
-VT\_PFORM\_LDIR
-
-Name of node-local directory which can be used to store temporary trace
+    * - VT\_MAX\_FLUSHES
+      - Maximum number of buffer flushes.
+      - 1
+    * - VT\_MAX\_THREADS
+      - Maximum number of threads per process that VampirTrace reserves resources for.
+      - 65536
+    * - VT\_PFORM\_GDIR
+      - Name of global directory to store final trace file in.
+      - ./
+    * - VT\_PFORM\_LDIR
+      - Name of node-local directory which can be used to store temporary trace
 files.
-
-/tmp/
-
-VT\_UNIFY
-
-Unify local trace files afterwards?
-
-yes
-
-VT\_VERBOSE
-
-Level of VampirTrace related information messages: Quiet (0), Critical
+      - /tmp/
+    * - VT\_UNIFY
+      - Unify local trace files afterwards?
+      - yes
+    * - VT\_VERBOSE
+      - Level of VampirTrace related information messages: Quiet (0), Critical
 (1), Information (2)
-
-1
-
-
-
-Optional Features
-
-
-
-VT\_CPUIDTRACE
-
-Enable tracing of CPU ID?
-
-no
-
-VT\_ETIMESYNC
-
-Enable enhanced timer synchronization? ⇒ Section
+      - 1
+    * - 
+      - Optional Features
+      - 
+    * - VT\_CPUIDTRACE
+      - Enable tracing of CPU ID?
+      - no
+    * - VT\_ETIMESYNC
+      - Enable enhanced timer synchronization? ⇒ Section
 [#timer\_synchronization [\*]]
-
-no
-
-VT\_ETIMESYNC\_INTV
-
-Interval between two successive synchronization phases in s.
-
-120
-
-VT\_IOLIB\_PATHNAME
-
-Provides an alternative library to use for LIBC I/O calls.
-
--
-
-VT\_IOTRACE
-
-Enable tracing of application I/O calls?
-
-no
-
-VT\_LIBCTRACE
-
-Enable tracing of fork/system/exec calls?
-
-yes
-
-VT\_MEMTRACE
-
-Enable memory allocation counter?
-
-no
-
-VT\_MODE
-
-Colon-separated list of VampirTrace modes: Tracing (TRACE), Profiling
+      - no
+    * - VT\_ETIMESYNC\_INTV
+      - Interval between two successive synchronization phases in s.
+      - 120
+    * - VT\_IOLIB\_PATHNAME
+      - Provides an alternative library to use for LIBC I/O calls.
+      - -
+    * - VT\_IOTRACE
+      - Enable tracing of application I/O calls?
+      - no
+    * - VT\_LIBCTRACE
+      - Enable tracing of fork/system/exec calls?
+      - yes
+    * - VT\_MEMTRACE
+      - Enable memory allocation counter?
+      - no
+    * - VT\_MODE
+      - Colon-separated list of VampirTrace modes: Tracing (TRACE), Profiling
 (STAT).
-
-TRACE
-
-VT\_MPICHECK
-
-Enable MPI correctness checking via UniMCI?
-
-no
-
-VT\_MPICHECK\_ERREXIT
-
-Force trace write and application exit if an MPI usage error is
+      - TRACE
+    * - VT\_MPICHECK
+      - Enable MPI correctness checking via UniMCI?
+      - no
+    * - VT\_MPICHECK\_ERREXIT
+      - Force trace write and application exit if an MPI usage error is
 detected?
-
-no
-
-VT\_MPITRACE
-
-Enable tracing of MPI events?
-
-yes
-
-VT\_PTHREAD\_REUSE
-
-Reuse IDs of terminated Pthreads?
-
-yes
-
-VT\_STAT\_INV
-
-Length of interval for writing the next profiling record
-
-0
-
-VT\_STAT\_PROPS
-
-Colon-separated list of event types that will be recorded in profiling
+      - no
+    * - VT\_MPITRACE
+      - Enable tracing of MPI events?
+      - yes
+    * - VT\_PTHREAD\_REUSE
+      - Reuse IDs of terminated Pthreads?
+      - yes
+    * - VT\_STAT\_INV
+      - Length of interval for writing the next profiling record
+      - 0
+    * - VT\_STAT\_PROPS
+      - Colon-separated list of event types that will be recorded in profiling
 mode: Functions (FUNC), Messages (MSG), Collective Ops. (COLLOP) or all
 of them (ALL)
-
-ALL
-
-VT\_SYNC\_FLUSH
-
-Enable synchronized buffer flush?
-
-no
-
-VT\_SYNC\_FLUSH\_LEVEL
-
-Minimum buffer fill level for synchronized buffer flush in percent.
-
-80
-
-
-Counters
-
-
-VT\_METRICS
-
-Specify counter metrics to be recorded with trace events as a
+      - ALL
+    * - VT\_SYNC\_FLUSH
+      - Enable synchronized buffer flush?
+      - no
+    * - VT\_SYNC\_FLUSH\_LEVEL
+      - Minimum buffer fill level for synchronized buffer flush in percent.
+      - 80
+    * - 
+      - Counters
+      - 
+    * - VT\_METRICS
+      - Specify counter metrics to be recorded with trace events as a
 colon-separated list of names
-
--
-
-VT\_RUSAGE
-
-Colon-separated list of resource usage counters which will be recorded.
-
--
-
-VT\_RUSAGE\_INTV
-
-Sample interval for recording resource usage counters in ms.
-
-100
-
-
-Filtering, Grouping
-
-
-VT\_DYN\_BLACKLIST
-
-Name of blacklist file for Dyninst instrumentation.
-
--
-
-VT\_DYN\_SHLIBS
-
-Colon-separated list of shared libraries for Dyninst instrumentation.
-
--
-
-VT\_FILTER\_SPEC
-
-Name of function/region filter file.
-
-
-VT\_GROUPS\_SPEC
-
-Name of function grouping file.
-
--
-
-VT\_JAVA\_FILTER\_SPEC
-
-Name of Java specific filter file.
-
--
-
-VT\_GROUP\_CLASSES
-
-Create a group for each Java class automatically?
-
-yes
-
-VT\_MAX\_STACK\_DEPTH
-
-Maximum number of stack level to be traced. (0 = unlimited)
-
-0
-
-
-Demangle, Symbol List
-
-
-VT\_GNU\_DEMANGLE
-
-Decode (demangle) low-level symbol names into user-level names?
-
-no
-
-VT\_GNU\_GETSRC
-
-Retrieve the source code line of functions instrumented automatically
+      - -
+    * - VT\_RUSAGE
+      - Colon-separated list of resource usage counters which will be recorded.
+      - -
+    * - VT\_RUSAGE\_INTV
+      - Sample interval for recording resource usage counters in ms.
+      - 100
+    * - 
+      - Filtering, Grouping
+    * - VT\_DYN\_BLACKLIST
+      - Name of blacklist file for Dyninst instrumentation.
+      - -
+    * - VT\_DYN\_SHLIBS
+      - Colon-separated list of shared libraries for Dyninst instrumentation.
+      - -
+    * - VT\_FILTER\_SPEC
+      - Name of function/region filter file.
+    * - VT\_GROUPS\_SPEC
+      - Name of function grouping file.
+      - -
+    * - VT\_JAVA\_FILTER\_SPEC
+      - Name of Java specific filter file.
+      - -
+    * - VT\_GROUP\_CLASSES
+      - Create a group for each Java class automatically?
+      - yes
+    * - VT\_MAX\_STACK\_DEPTH
+      - Maximum number of stack level to be traced. (0 = unlimited)
+      - 0
+    * - 
+      - Demangle, Symbol List
+      - 
+    * - VT\_GNU\_DEMANGLE
+      - Decode (demangle) low-level symbol names into user-level names?
+      - no
+    * - VT\_GNU\_GETSRC
+      - Retrieve the source code line of functions instrumented automatically
 with the GNU interface?
-
-yes
-
-VT\_GNU\_NMFILE
-
-Name of file with symbol list information.
-
--
+      - yes
+    * - VT\_GNU\_NMFILE
+      - Name of file with symbol list information.
+      - -
 
 When you use these environment variables, make sure that they have the
 same value for all processes of your application on all nodes of your
@@ -2163,97 +2050,55 @@ technique for recording calls to I/O functions of the standard C
 library, which are executed by the application. The following functions
 are intercepted by VampirTrace:
 
-close
+.. list-table::
 
-creat
-
-creat64
-
-dup
-
-dup2
-
-fclose
-
-fcntl
-
-fdopen
-
-fgetc
-
-fgets
-
-flockfile
-
-fopen
-
-fopen64
-
-fprintf
-
-fputc
-
-fputs
-
-fread
-
-fscanf
-
-fseek
-
-fseeko
-
-fseeko64
-
-fsetpos
-
-fsetpos64
-
-ftrylockfile
-
-funlockfile
-
-fwrite
-
-getc
-
-gets
-
-lockf
-
-lseek
-
-lseek64
-
-open
-
-open64
-
-pread
-
-pread64
-
-putc
-
-puts
-
-pwrite
-
-pwrite64
-
-read
-
-readv
-
-rewind
-
-unlink
-
-write
-
-writev
-
-
+    * - close
+      - creat
+      - creat64
+      - dup
+    * - dup2
+      - fclose
+      - fcntl
+      - fdopen
+    * - fgetc
+      - fgets
+      - flockfile
+      - fopen
+    * - fopen64
+      - fprintf
+      - fputc
+      - fputs
+    * - fread
+      - fscanf
+      - fseek
+      - fseeko
+    * - fseeko64
+      - fsetpos
+      - fsetpos64
+      - ftrylockfile
+    * - funlockfile
+      - fwrite
+      - getc
+      - gets
+    * - lockf
+      - lseek
+      - lseek64
+      - open
+    * - open64
+      - pread
+      - pread64
+      - putc
+    * - puts
+      - pwrite
+      - pwrite64
+      - read
+    * - readv
+      - rewind
+      - unlink
+      - write
+    * - writev
+      - 
+      - 
 The gathered information will be saved as I/O event records in the trace
 file. This feature has to be activated for each tracing run by setting
 the environment variable VT\_IOTRACE to yes.
@@ -2373,82 +2218,53 @@ third parameter type of VT\_COUNT\_DEF specifies the data type of the
 counter value. To record a value for any of the defined counters, the
 corresponding instrumentation call VT\_COUNT \* VAL must be invoked.
 
-**Fortran:**
+
+.. list-table::
+
+    * - **Fortran:**
+      - 
+      - 
+    * - **Type**
+      - Count call
+      - Data Type
+    * - VT\_COUNT\_TYPE\_INTEGER
+      - VT\_COUNT\_INTEGER\_VAL
+      - integer (4 byte)
+    * - VT\_COUNT\_TYPE\_INTEGER8
+      - VT\_COUNT\_INTEGER8\_VAL
+      - integer (8 byte)
+    * - VT\_COUNT\_TYPE\_REAL
+      - VT\_COUNT\_REAL\_VAL
+      - real
+    * - VT\_COUNT\_TYPE\_DOUBLE
+      - VT\_COUNT\_DOUBLE\_VAL
+      - double precision
 
 
-**Type**
-
-Count call
-
-Data type
-
-VT\_COUNT\_TYPE\_INTEGER
-
-VT\_COUNT\_INTEGER\_VAL
-
-integer (4 byte)
-
-VT\_COUNT\_TYPE\_INTEGER8
-
-VT\_COUNT\_INTEGER8\_VAL
-
-integer (8 byte)
-
-VT\_COUNT\_TYPE\_REAL
-
-VT\_COUNT\_REAL\_VAL
-
-real
-
-VT\_COUNT\_TYPE\_DOUBLE
-
-VT\_COUNT\_DOUBLE\_VAL
-
-double precision
-
- 
-
-**C/C++:**
-
- 
-
- 
-
-**Type**
-
-Count call
-
-Data type
-
-VT\_COUNT\_TYPE\_SIGNED
-
-VT\_COUNT\_SIGNED\_VAL
-
-signed int (max. 64-bit)
-
-VT\_COUNT\_TYPE\_UNSIGNED
-
-VT\_COUNT\_UNSIGNED\_VAL
-
-unsigned int (max. 64-bit)
-
-VT\_COUNT\_TYPE\_FLOAT
-
-VT\_COUNT\_FLOAT\_VAL
-
-float
-
-VT\_COUNT\_TYPE\_DOUBLE
-
-VT\_COUNT\_DOUBLE\_VAL
-
-double
+.. list-table::
+    * - **C/C++:**
+     - 
+     - 
+    * - **Type**
+     - Count call
+     - Data type
+    * - VT\_COUNT\_TYPE\_SIGNED
+     - VT\_COUNT\_SIGNED\_VAL
+     - signed int (max. 64-bit)
+    * - VT\_COUNT\_TYPE\_UNSIGNED
+     - VT\_COUNT\_UNSIGNED\_VAL
+     - unsigned int (max. 64-bit)
+    * - VT\_COUNT\_TYPE\_FLOAT
+     - VT\_COUNT\_FLOAT\_VAL
+     - float
+    * - VT\_COUNT\_TYPE\_DOUBLE
+     - VT\_COUNT\_DOUBLE\_VAL
+     - double
 
 The following example records the loop index i:
 
 Fortran
 
- 
 
 #include "vt\_user.inc"
 
