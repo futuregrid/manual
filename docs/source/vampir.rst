@@ -1141,7 +1141,6 @@ Retrieved from
 VampirTrace
 ===========
 
-�
 
 VampirTrace consists of a tool set and a runtime library for
 instrumentation and tracing of software applications. It is particularly
@@ -1315,26 +1314,26 @@ MPI instrumentation is always handled by means of the PMPI interface,
 which is part of the MPI standard. This requires the compiler wrapper to
 link with an MPI-aware version of the VampirTrace library. If your MPI
 implementation uses special MPI compilers (e.g. mpicc, mpxlf90), you
-will need to tell VampirTrace’s wrapper to use this compiler instead of
+will need to tell VampirTrace's wrapper to use this compiler instead of
 the serial one:
 
- 
+::
 
-original:             mpicc hello.c -o hello           
+   original:             mpicc hello.c -o        hello
 
-with instrumentation: **vtcc -vt:cc mpicc** hello.c -o hello
+   with instrumentation: **vtcc -vt:cc mpicc** hello.c -o hello
 
- 
 
 MPI implementations without their own compilers require the user to link
 the MPI library manually. In this case, simply replace the compiler by
-VampirTrace’s compiler wrapper:
+VampirTrace's compiler wrapper:
 
-original:             icc hello.c -o hello –lmpi
+::
 
-with instrumentation: **vtcc** hello.c -o hello -lmpi
+   original:             icc hello.c -o hello –lmpi
 
- 
+   with instrumentation: **vtcc** hello.c -o hello -lmpi
+
 
 If you want to instrument MPI events only (this creates smaller trace
 files and less overhead), use the option *-vt:inst manual* to disable
@@ -1346,16 +1345,15 @@ When VampirTrace detects OpenMP or Pthread flags on the command line,
 special instrumentation calls are invoked. For OpenMP events, OPARI is
 invoked for automatic source code instrumentation.
 
- 
+::
 
-original:             ifort <-openmp\|-pthread> hello.f90 -o hello
+    original:             ifort <-openmp\|-pthread> hello.f90 -o hello
 
-with instrumentation: **vtf90** <-openmp\|-pthread> hello.f90 -o hello
+    with instrumentation: **vtf90** <-openmp\|-pthread> hello.f90 -o hello
 
- 
 
 For more information about OPARI, read the documentation available in
-VampirTrace’s installation directory at:
+VampirTrace's installation directory at:
 `share/vampirtrace/doc/opari/Readme.html <http://share/vampirtrace/doc/opari/Readme.html%20>`__
 
 -  Hybrid MPI/Threaded parallel programs
@@ -1363,13 +1361,12 @@ VampirTrace’s installation directory at:
 With a combination of the above mentioned approaches, hybrid
 applications can be instrumented:
 
-original:             mpif90 <-openmp\|-pthread> hello.F90 -o
-hello             
+::
 
-with instrumentation: **vtf90 -vt:f90 mpif90** <-openmp\|-pthread>
-hello.F90 -o hello
+   original:             mpif90 <-openmp\|-pthread> hello.F90 -o hello             
 
- 
+    with instrumentation: **vtf90 -vt:f90 mpif90** <-openmp\|-pthread> hello.F90 -o hello
+
 
 The VampirTrace compiler wrappers automatically try to detect which
 parallelization method is used by means of the compiler flags (e.g.,
@@ -1394,16 +1391,12 @@ programs only.
 
 **Instrumentation Types**
 
- 
-
 The wrapper option *-vt:inst <insttype>* specifies the instrumentation
 type to be used. The following values for *<insttype>* are possible:
 
 -  compinst
 
 Fully-automatic instrumentation by the compiler
-
- 
 
 -  manual
 
@@ -1412,13 +1405,14 @@ modifications)
 
 **Automatic Instrumentation**
 
- 
 
 Automatic instrumentation is the most convenient method to instrument
 your program. If available, simply use the compiler wrappers without any
 parameters, e.g.:
 
-vtf90 hello.f90 -o hello
+::
+
+   vtf90 hello.f90 -o hello
 
 **Notes for Using the GNU or Intel Compiler**
 
@@ -1434,7 +1428,9 @@ Should any problems emerge to get symbol information automatically, then
 the environment variable VT GNU NMFILE can be set to a symbol list file,
 which is created with the command nm, like:
 
-nm hello > hello.nm
+::
+
+   nm hello > hello.nm
 
 To get the source code line for the application functions use nm -l (on
 Linux systems). VampirTrace will include this information in the trace.
@@ -1451,7 +1447,9 @@ can prevent these particular functions from being instrumented by
 appending the following attribute to function declarations, hence making
 them able to be inlined (this works only for C/C++):
 
-\_\_attribute\_\_ ((\_\_no\_instrument\_function\_\_))
+:: 
+
+   \_\_attribute\_\_ ((\_\_no\_instrument\_function\_\_))
 
 The PGI and IBM compilers prefer inlining over instrumentation when
 compiling with enabled inlining. Thus, one needs to disable inlining to
@@ -1461,7 +1459,7 @@ The bottom line is that a function cannot be inlined and instrumented at
 the same time. Note that you can also use the option *-vt:inst manual*
 with non-instrumented sources. Binaries created in this manner only
 contain MPI and OpenMP instrumentation, which might be desirable in some
-cases. For more on how to inline functions, read your compiler’s manual.
+cases. For more on how to inline functions, read your compiler's manual.
 
 **Manual Instrumentation**
 
@@ -1472,21 +1470,19 @@ user-defined sequence of statements.
 
 Fortran
 
- 
+::
 
-#include "vt\_user.inc"
+  #include "vt\_user.inc"
 
-VT\_USER\_START(’name’)
+  VT\_USER\_START(’name’)
 
-...
+  ...
 
-VT\_USER\_END(’name’)
+  VT\_USER\_END(’name’)
 
- 
 
 C
 
- 
 
 #include "vt\_user.h"
 
@@ -1505,15 +1501,17 @@ detected automatically when C++ deletes scope-local variables.
 
 C++
 
-#include "vt\_user.h"
+::
 
-{
+  #include "vt\_user.h"
 
-    VT\_TRACER("name");
+  {
 
-    ...
+� VT\_TRACER("name");
 
-}
+� ...
+
+  }
 
 The instrumented sources have to be compiled with -DVTRACE for all three
 languages; otherwise the VT \* calls are ignored. Note that Fortran
@@ -1522,20 +1520,23 @@ source files instrumented this way have to be preprocessed, too.
 In addition, you can combine this particular instrumentation type with
 all other types. In such a way, all user functions can be instrumented
 by a compiler while special source code regions (e.g., loops) can be
-instrumented by VT’s API.
+instrumented by VT's API.
 
-Use VT’s compiler wrapper (described above) for compiling and linking
+Use VT's compiler wrapper (described above) for compiling and linking
 the instrumented source code, such as:
 
 -  combined with automatic compiler instrumentation:
 
-vtcc **-DVTRACE** hello.c -o hello
+:: 
 
- 
+   vtcc **-DVTRACE** hello.c -o hello
+
 
 -  without compiler instrumentation:
 
-vtcc -vt:inst manual **-DVTRACE** hello.c -o hello
+::
+
+   vtcc -vt:inst manual **-DVTRACE** hello.c -o hello
 
 Note that you can also use the option -vt:inst manual with
 non-instrumented sources. Binaries created in this manner only contain
@@ -1594,7 +1595,7 @@ must also be compiled with -DVTRACE\_NO\_CONTROL.
 **Tracing Calls to 3rd-Party Libraries**
 
 VampirTrace is also capable of tracing calls to third-party libraries
-which come with at least one C header file, even without the library’s
+which come with at least one C header file, even without the library's
 source code. If VampirTrace was built with support for library tracing,
 the tool vtlibwrapgen can be used to generate a wrapper library to
 intercept each call to the actual library functions. This wrapper
@@ -1604,7 +1605,9 @@ library is done using the vtlibwrapgen command and consists of two
 steps. The first step generates a C source file, providing the wrapped
 functions of the library header file:
 
-vtlibwrapgen -g SDL -o SDLwrap.c /usr/include/SDL/\*.h
+::
+
+   vtlibwrapgen -g SDL -o SDLwrap.c /usr/include/SDL/\*.h
 
 This generates the source file *SDLwrap.c* that contains
 wrapper-functions for all library functions found in the header-files
@@ -1621,13 +1624,17 @@ include functions) are allowed.
 
 The second step is to compile the generated source file:
 
-vtlibwrapgen --build --shared -o libSDLwrap SDLwrap.c
+::
+
+  vtlibwrapgen --build --shared -o libSDLwrap SDLwrap.c
 
 This builds the shared library *libSDLwrap.so*, which can be linked to
 the application or preloaded by using the environment variable LD
 PRELOAD:
 
-LD\_PRELOAD=$PWD/libSDLwrap.so <executable>
+::
+
+  LD\_PRELOAD=$PWD/libSDLwrap.so <executable>
 
 **Runtime Measurement**
 
@@ -1679,7 +1686,6 @@ CheatSheet and Doku-PDF)
 
 **Default**
 
- 
 
 Global Settings
 
@@ -1761,11 +1767,11 @@ Level of VampirTrace related information messages: Quiet (0), Critical
 
 1
 
- 
+
 
 Optional Features
 
- 
+
 
 VT\_CPUIDTRACE
 
@@ -1868,11 +1874,9 @@ Minimum buffer fill level for synchronized buffer flush in percent.
 
 80
 
- 
 
 Counters
 
- 
 
 VT\_METRICS
 
@@ -1893,11 +1897,9 @@ Sample interval for recording resource usage counters in ms.
 
 100
 
- 
 
 Filtering, Grouping
 
- 
 
 VT\_DYN\_BLACKLIST
 
@@ -1915,7 +1917,6 @@ VT\_FILTER\_SPEC
 
 Name of function/region filter file.
 
- 
 
 VT\_GROUPS\_SPEC
 
@@ -1941,11 +1942,9 @@ Maximum number of stack level to be traced. (0 = unlimited)
 
 0
 
- 
 
 Demangle, Symbol List
 
- 
 
 VT\_GNU\_DEMANGLE
 
@@ -2025,16 +2024,19 @@ VT\_UNIFY is set to no, and in the case of certain other circumstances,
 it will be necessary to perform unification of local traces manually. To
 do this, use the following command:
 
-vtunify <nproc> <prefix>
+::
+
+  vtunify <nproc> <prefix>
 
 If VampirTrace was built with support for OpenMP and/or MPI, it is
 possible to speedup the unification of local traces significantly. To
 distribute the unificationon multible processes, the MPI parallel
 version vtunify-mpi can be used as follows:
 
-mpirun -np <nranks> vtunify-mpi <nproc> <prefix>
+::
 
- 
+  mpirun -np <nranks> vtunify-mpi <nproc> <prefix>
+
 
 Furthermore, both tools vtunify and vtunify-mpi are capable of opening
 additional OpenMP threads for unification. The number of threads can be
@@ -2122,7 +2124,9 @@ If the PAPI library is used to access hardware performance counters,
 metric names can be any PAPI preset names or PAPI native counter names.
 For example, set
 
-VT\_METRICS=PAPI\_FP\_OPS:PAPI\_L2\_TCM
+:: 
+
+  VT\_METRICS=PAPI\_FP\_OPS:PAPI\_L2\_TCM
 
 to record the number of floating point instructions and level 2 cache
 misses.
@@ -2139,7 +2143,9 @@ enable tracing of specific resource counters by setting the environment
 variable VT\_RUSAGE to a colon-separated list of counter names. For
 example, set
 
-VT\_RUSAGE=ru\_stime:ru\_majflt
+::
+
+  VT\_RUSAGE=ru\_stime:ru\_majflt
 
 to record the system time consumed by each process and the number of
 page faults. Alternatively, one can set this variable to the value all
@@ -2188,11 +2194,11 @@ instrumented sources with -DVTRACE PTHREAD.
 
 C/C++
 
- 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-vtcc **-DVTRACE\_PTHREAD** hello.c -o hello
+  vtcc **-DVTRACE\_PTHREAD** hello.c -o hello
 
 **I/O Calls**
 
@@ -2296,11 +2302,6 @@ write
 
 writev
 
- 
-
- 
-
- 
 
 The gathered information will be saved as I/O event records in the trace
 file. This feature has to be activated for each tracing run by setting
@@ -2313,7 +2314,7 @@ runtime the shared libraries from the glibc version used for linking.
 This is ok as long as the mentioned libraries are available for running
 the application.
 
-If you’d like to experiment with some other I/O library, set the
+If you'd like to experiment with some other I/O library, set the
 environment variable VT\_IOLIB\_PATHNAME to the alternative one. Beware
 that this library must provide all I/O functions mentioned above;
 otherwise VampirTrace will abort.
@@ -2391,29 +2392,28 @@ instrumentation calls can be used to define counter groups and counters:
 
 Fortran
 
- 
+::
 
-#include "vt\_user.inc"
+  #include "vt\_user.inc"
 
-integer :: id, gid
+  integer :: id, gid
 
-VT\_COUNT\_GROUP\_DEF(’name’, gid)
+  VT\_COUNT\_GROUP\_DEF(’name’, gid)
 
-VT\_COUNT\_DEF(’name’, ’unit’, type, gid, id)
+  VT\_COUNT\_DEF(’name’, ’unit’, type, gid, id)
 
- 
 
 C/C++
 
- 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-unsigned int id, gid;
+  unsigned int id, gid;
 
-gid = VT\_COUNT\_GROUP\_DEF("name");
+  gid = VT\_COUNT\_GROUP\_DEF("name");
 
-id = VT\_COUNT\_DEF("name", "unit", type, gid);
+  id = VT\_COUNT\_DEF("name", "unit", type, gid);
 
 The definition of a counter group is optional. If no special counter
 group is desired, the default group "User" can be used. In this case,
@@ -2424,9 +2424,6 @@ corresponding instrumentation call VT\_COUNT \* VAL must be invoked.
 
 **Fortran:**
 
- 
-
- 
 
 **Type**
 
@@ -2561,35 +2558,35 @@ marker is identified by its name and type.
 
 Fortran
 
- 
+::
 
-#include "vt\_user.inc"
+  #include "vt\_user.inc"
 
-integer :: mid
+  integer�:: mid
 
-VT\_MARKER\_DEF(’name’, type, mid)
+  VT\_MARKER\_DEF(’name’, type, mid)
 
-VT\_MARKER(mid, ’text’)
+  VT\_MARKER(mid, ’text’)
 
- 
+
 
 C/C++
 
- 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-unsigned int mid;
+  unsigned int mid;
 
-mid = VT\_MARKER\_DEF("name",type);
+  mid = VT\_MARKER\_DEF("name",type);
 
-VT\_MARKER(mid, "text");
+  VT\_MARKER(mid, "text");
 
- 
+
 
 Types for Fortran/C/C++
 
- 
+�
 
 VT\_MARKER\_TYPE\_ERROR
 
