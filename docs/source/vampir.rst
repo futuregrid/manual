@@ -1004,7 +1004,7 @@ tracefiles.
 **General Preferences**
 -----------------------
 
-The \ *General* settings allow you to change application and trace
+The *General* settings allow you to change application and trace
 specific values.
 
 .. image:: images/pref_general.png
@@ -1012,13 +1012,13 @@ specific values.
 **General Settings**
 
 *Show time as*\ decides whether the time format for the trace analysis
-is based on seconds or ticks. The next pointÂ \ *Use color gradient in
+is based on seconds or ticks. The next point \ *Use color gradient in
 charts*\ allows you to switch off the color gradient used in the
 performance charts. The next option is to change the style and size of
-the font.Â *Show source code* allows you to open an editor showing the
+the font. *Show source code* allows you to open an editor showing the
 respective source file. In order to open a source file, first click on
-the intended function in theÂ \ *Master Timeline*Â and then on the source
-code path in theÂ \ *Context View*. For the source code location to work
+the intended function in theÂ \ *Master Timeline* and then on the source
+code path in the \ *Context View*. For the source code location to work
 properly, you need a trace file with source code location support. The
 path of the source file can be adjusted in \ *Preferences*. A limit for
 the size of the file can be set, too. Finally, the user can decide if he
@@ -1027,7 +1027,7 @@ wants Vampir to automatically check for new versions.
 **Appearance**
 --------------
 
-In the \ *Appearance* settings of the \ *Preferences* dialog, there are
+In the *Appearance* settings of the *Preferences* dialog, there are
 six different objects for which the color options can be changed: the
 functions/function groups, markers, counters, collectives, messages and
 I/O events. Choose an entry and click on its color to make a
