@@ -24,5 +24,5 @@ This tutorial provides step-by-step instructions on how to configure and registe
 ~~~~~~~~~~~~~~~~~~~~~~
 
 This tutorial is maintained at the Grid Appliance portal.
-See `FutureGrid:CustomGridAppliance <http://www.grid-appliance.org/wiki/index.php/Create_Custom_Grid_appliance_Image_on_Futuregrid>`__.
+See `FutureGrid:CustomGridAppliance <http://www.grid-appliance.org/wiki/index.php/Create_Custom_Grid_appliance_Image_on_Futuregrid>`__.
 

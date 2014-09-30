@@ -118,7 +118,7 @@ Tutorial Topic 4: High Performance Computing
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  `Running interactive experiments <experiment-interactive.html>' [novice]
+-  :ref:`Running interactive experiments <s-experiment-interactive>` [novice]
 -  :portal:`Running workflow experiments using
    Pegasus <tutorials/workflow-experiment-management>` [novice]
 -  `Pegasus on FutureGrid <pegasus.html>`__ [novice]
