@@ -25,7 +25,7 @@ Prerequisites:
 -  Depending on whether you plan to use Nimbus or OpenStack, one of the
    following tutorials is required:
 
-   -  :ref:`Using Nimbus on FutureGrid <nimbus>`
+   -  :ref:`Using Nimbus on FutureGrid <nimbus>`
 
    -  :ref:`Using OpenStack Grizzly on
       FutureGrid <s-openstack-grizzly>`

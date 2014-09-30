@@ -8,8 +8,8 @@ This is a short tutorial describing how to build an educational virtual cluster 
 Appliance <http://www.grid-appliance.org/wiki/index.php/TestingGridAppliance>`__.
 
 
-#. Deploy an Ubuntu 10.04 appliance locally. You can download an Ubuntu 9.10 VMware appliance` here <http://vmplanet.net/node/105>`__, or create an instance on FutureGrid of an Ubuntu 10.04 VM.
-     
+#. Deploy an Ubuntu 10.04 appliance locally. You can download an Ubuntu 9.10 VMware appliance `here <http://vmplanet.net/node/105>`__, or create an instance on FutureGrid of an Ubuntu 10.04 VM.
+ 
 #. Sudo to root and install the grid-appliance baseline package as follows:
 
    #. apt-get install wget

@@ -1,7 +1,7 @@
 .. _s-additional:
 
 **********************************************************************
-Other Tutorials and Educational Materials
+Additional tutorials on FutureGrid-related technologies
 **********************************************************************
 
 .. sidebar:: Page Contents
@@ -16,7 +16,7 @@ deployment on FutureGrid. For tutorials on using various FutureGrid
 technologies, please refer to our main `tutorials
 page <tutorials.html>`_.
 
-**Please contact us at :portal: '<help>' if you have
+**Please contact us at :portal:`help <help>` if you have
 any corrections or suggestions**.
 
 
@@ -24,31 +24,83 @@ any corrections or suggestions**.
 **Tutorial Topic 1: Cloud Provisioning Platforms**
 --------------------------------------------------
 
--  :ref:`FutureGrid Tutorial ON1: Using
-   OpenNebula <s-opennebula>` [advanced] 
+-  :ref:`FutureGrid Tutorial ON1: Using
+   OpenNebula <s-opennebula>` [advanced]
 
 Tutorial Topic 2: High Performance Computing
 --------------------------------------------
 
 -  :ref:`FutureGrid Tutorial VA1: Performance Analysis with
-   Vampir <s-vampir>`[advanced] 
--  :ref:`FutureGridÂ TutorialÂ VT1: Instrumentation and tracing
-   with VampirTrace <s-vampirtrace>` [advanced] 
+   Vampir <s-vampir>` [advanced]
+-  :ref:`FutureGrid Tutorial VT1: Instrumentation and tracing
+   with VampirTrace <s-vampirtrace>` [advanced]
 
 Tutorial Topic 3: Information Systems
 -------------------------------------
 
--  :ref:`FutureGrid Tutorial NL1: Netlogger Tutorial <s-netlogger>`[advanced] 
+-  :ref:`FutureGrid Tutorial NL1: Netlogger Tutorial <s-netlogger>` [advanced]
 -  :ref:`FutureGrid Tutorial IN1: 
-   INCA Tutorial <s-inca>` [advanced] 
+   INCA Tutorial <s-inca>` [advanced]
 
 Others
 ------
 
 CloudCom 2010 Tutorials/Screencasts
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  `List of CloudCom 2010 tutorials <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__
+-  `List of CloudCom 2010 tutorials <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__
+
+
+.. list-table::
+
+    * - Title
+      - Type
+      - Last Update
+    * - Overview of FutureGrid
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1NJuc3uZXVmnfFdOVTMLCbfd3FMxM6Nb1c4yx6aNegEc/edit
+      - 01/15/2011
+    * - HPC on FutureGrid
+      - 
+      - 01/15/2011
+    * - Eucalyptus on FutureGrid
+      - 
+      - 01/15/2011
+    * - Image Generation and Management on FutureGrid
+      - 
+      - 01/15/2011
+    * - Dynamic Provisioning & RAIN on FutureGrid
+      - 
+      - 01/15/2011
+    * - FutureGrid Portal
+      - 
+      - 01/15/2011
+    * - FutureGrid Tutorial
+      - 
+      - 01/15/2011
+    * - Azure Tutorial
+      - 
+      - 01/15/2011
+    * - OpenNebula Tutorial
+      - 
+      - 01/15/2011
+    * - Nimbus Tutorial
+      - 
+      - 01/15/2011
+    * - OpenStack Tutorial
+      - 
+      - 01/15/2011
+    * - Sector/Sphere Tutorial
+      - 
+      - 01/15/2011
+    * - Apache Hadooop & Pig Tutorial
+      - 
+      -  01/15/2011
+
+
+	 
+
+that's a start. see how that looks when it is built
 
 +-------------------------+-------------------------+-------------------------+
 | Title                   | Type                    | Last Update             |

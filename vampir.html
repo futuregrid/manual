@@ -1455,6 +1455,8 @@ specification of the trace information provides analysis and
 visualization tools like Vampir to operate efficiently at large scale.
 The format addresses large applications written in an arbitrary
 combination of Fortran77, Fortran (90/95/etc.), C, and C++.</p>
+<p><a href="#id9"><span class="problematic" id="id10">|images/otf_0.png|</span></a>
+.. image:: images/otf_0.png</p>
 <p><strong>Representation of Streams by Multiple Files</strong></p>
 <p>OTF uses a special ASCII data representation to encode its data items
 with numbers and tokens in hexadecimal code without special prefixes.
@@ -1538,24 +1540,18 @@ follows:</p>
 </div>
 </div></blockquote>
 <p>in Fortran and C, respectively, and in C++ as follows:</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>VT_TRACER(``name);
+<div class="highlight-python"><div class="highlight"><pre>VT_TRACER(``name);
 </pre></div>
 </div>
-</div></blockquote>
 <p>Afterwards, use</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>vtcc -DVTRACE hello.c -o hello
+<div class="highlight-python"><div class="highlight"><pre>vtcc -DVTRACE hello.c -o hello
 </pre></div>
 </div>
-</div></blockquote>
 <p>to combine the manual instrumentation with automatic compiler
 instrumentation or</p>
-<blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>vtcc -vt:inst manual -DVTRACE hello.c -o hello
+<div class="highlight-python"><div class="highlight"><pre>vtcc -vt:inst manual -DVTRACE hello.c -o hello
 </pre></div>
 </div>
-</div></blockquote>
 <p>to prevent an additional compiler instrumentation.</p>
 </div>
 <div class="section" id="tracing-an-application">
@@ -1604,6 +1600,7 @@ installation process). The trace files to be loaded have to be compliant
 with the Open Trace Format (OTF) standard. Microsoft HPC Server 2008 is
 shipped with the translator program etl2otf.exe, which produces
 appropriate input files.</p>
+<img alt="_images/open_file.png" src="_images/open_file.png" />
 <p><strong>Loading a Trace Log File in Vampir</strong></p>
 <p>While Vampir is loading the trace file, an empty &#8220;Trace View&#8221; window
 with a progress bar at the bottom opens. After Vampir loaded the trace
@@ -1614,6 +1611,7 @@ file are traversed one after another, the GUI will also open, but will
 show only the earliest information from the tracefile. For huge
 tracefiles with performance problems assumed to be at the beginning,
 this proceeding is a suitable strategy to save time.</p>
+<img alt="_images/cancel_loading_resize.png" src="_images/cancel_loading_resize.png" />
 <p><strong>Progress Bar and Cancel Loading Button</strong></p>
 <p>Basic functionality and navigation elements are described
 in?<a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics">Basics</a>.
@@ -1626,6 +1624,7 @@ in?<a class="reference external" href="https://wiki.futuregrid.org/index.php/Doc
 <p>After loading has been completed, the&nbsp;<em>Trace View</em>?window title
 displays the trace file&#8217;s name. By default, the?<em>Charts</em>?toolbar and
 the?<em>Zoom Toolbar</em>?are available.</p>
+<img alt="_images/Startup.png" src="_images/Startup.png" />
 <p><strong>Trace View Window with Charts Toolbar (A) and Zoom Toolbar (B)</strong></p>
 <p>Furthermore, the default set of charts is opened automatically after
 loading has been finished. The charts can be divided into three groups:
@@ -1657,9 +1656,13 @@ intentions. The entire procedure is depicted in figures below. The
 flexible display architecture also allows increasing or decreasing the
 screen space that is used by a chart. Charts of particular interest may
 get more space in order to render information in more detail.</p>
+<img alt="_images/Display_arranging_a.png" src="_images/Display_arranging_a.png" />
 <p><strong>Moving and Arranging Charts in the Trace View Window</strong></p>
+<img alt="_images/Display_arranging_b.png" src="_images/Display_arranging_b.png" />
 <p><strong>Moving and Arranging Charts in the Trace View Window</strong></p>
+<img alt="_images/Custom_arrangement.png" src="_images/Custom_arrangement.png" />
 <p><strong>A Custom Chart Arrangement in the Trace View Window</strong></p>
+<img alt="_images/close_display.png" src="_images/close_display.png" />
 <p><strong>Closing (right) and Undocking (left) a Chart</strong></p>
 <p>The?<em>Trace View</em> window can host an arbitrary number of charts. Charts
 can be added by clicking on the respective?<em>Charts</em>?toolbar icon or
@@ -1670,7 +1673,9 @@ Policy</a>.
 Every chart can be undocked or closed by clicking the dedicated icon in
 its upper right corner. Undocking a chart means to free the chart from
 the current arrangement and present it in its own window.</p>
+<img alt="_images/Undocking_1.png" src="_images/Undocking_1.png" />
 <p><strong>Undocking of a Chart</strong></p>
+<img alt="_images/Undocking_2.png" src="_images/Undocking_2.png" />
 <p><strong>Docking a Chart</strong></p>
 <p>Considering that labels (e.g., those showing names or values of
 functions) often need more space to show their whole text, there is a
@@ -1680,6 +1685,7 @@ and the graphical representation in a chart. When one hovers over the
 blank space between labels and graphical representation, a moveable
 separator appears. After clicking a separator decoration, moving the
 mouse while holding the left mouse button causes resizing.</p>
+<img alt="_images/Resize_labels.png" src="_images/Resize_labels.png" />
 <p><strong>Resizing Labels: (A) Hover over a Separator Decoration; (B) Drag and
 Drop the Separator</strong></p>
 </div>
@@ -1717,6 +1723,7 @@ the&nbsp;<em>Function Summary</em>?provide zooming of statistic values. In these
 cases zooming does not affect any other chart. Zooming is disabled in
 the&nbsp;<em>Pie Chart</em>?mode of the&nbsp;<em>Function Summary</em>?reachable via context
 menu under?<em>Set Chart Mode-&gt;Pie Chart</em>.</p>
+<img alt="_images/Zooming.png" src="_images/Zooming.png" />
 <p><strong>Zooming within a Chart</strong></p>
 <p>To zoom into an area, click and hold the left mouse button and select
 the area. It is possible to zoom horizontally and in some charts also
@@ -1754,6 +1761,7 @@ changes the section that is displayed without changing the zoom factor.
 For dragging, click in the highlighted zoom area and drag and drop it to
 the desired region. If the user double clicks in the?<em>Zoom Toolbar</em>,
 the initial zooming state is reverted to.</p>
+<img alt="_images/Zoom_toolbar.png" src="_images/Zoom_toolbar.png" />
 <p><strong>Zooming and Navigation within the Zoom Toolbar: (A+B) Zooming in/out
 with Mouse Wheel; (C) Scrolling by Moving the Highlighted Zoom Area; (D)
 Zooming by Selecting and Moving a Boundary of the Highlighted Zoom
@@ -1783,39 +1791,51 @@ Only one instance of an informational chart can be opened at a time.</p>
 <p>Icon</p>
 <p>Name</p>
 <p>Description</p>
+<img alt="_images/icon_master_tl.png" src="_images/icon_master_tl.png" />
 <p>Master Timeline</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline">Master
 Timeline</a></p>
+<img alt="_images/icon_process_tl.png" src="_images/icon_process_tl.png" />
 <p>Process Timeline</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline">Process
 Timeline</a></p>
+<img alt="_images/icon_counter_tl.png" src="_images/icon_counter_tl.png" />
 <p>Counter Data Timeline</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline">Counter
 Data</a></p>
+<img alt="_images/icon_radar.png" src="_images/icon_radar.png" />
 <p>Performance Radar</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar">Performance
 Radar</a></p>
+<img alt="_images/icon_function_summ.png" src="_images/icon_function_summ.png" />
 <p>Function Summary</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary">Function
 Summary</a></p>
+<img alt="_images/icon_message_summ.png" src="_images/icon_message_summ.png" />
 <p>Message Summary</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary">Message
 Summary</a></p>
+<img alt="_images/icon_process_summ.png" src="_images/icon_process_summ.png" />
 <p>Process Summary</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary">Process
 Summary</a></p>
+<img alt="_images/icon_matrix.png" src="_images/icon_matrix.png" />
 <p>Communication Matrix View</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View">Communication Matrix
 View</a></p>
+<img alt="_images/icon_calltree.png" src="_images/icon_calltree.png" />
 <p>Call Tree</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree">Call
 Tree</a></p>
+<img alt="_images/icon_legend.png" src="_images/icon_legend.png" />
 <p>Function Legend</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend">Function
 Legend</a></p>
+<img alt="_images/icon_context.png" src="_images/icon_context.png" />
 <p>Context View</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View">Context
 View</a></p>
+<img alt="_images/icon_marker.png" src="_images/icon_marker.png" />
 <p>Marker View</p>
 <p><a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_Filtering_and_Reduction">Marker
 View</a></p>
@@ -1862,7 +1882,9 @@ Timeline</em>?consists of a collection of rows. Each row represents a single
 process, as shown in the figure below. A?<em>Process Timeline</em>?shows the
 different levels of function calls in a stacked bar chart for a single
 process, as depicted in the second figure.</p>
+<img alt="_images/Master_timeline.png" src="_images/Master_timeline.png" />
 <p><strong>Master Timeline</strong></p>
+<img alt="_images/Process_timeline.png" src="_images/Process_timeline.png" />
 <p><strong>Process Timeline</strong></p>
 <p>Every timeline row consists of a process name on the left and a colored
 sequence of function calls or program phases on the right. The color of
@@ -1896,6 +1918,7 @@ reflect a pair of MPI communication directives like MPI_Send() and
 MPI_Recv(). It is also possible to show a collective communication like
 MPI_Allreduce() by selecting one corresponding message as shown in the
 figure.</p>
+<img alt="_images/collectives.png" src="_images/collectives.png" />
 <p><strong>Selected MPI Collective in Master Timeline</strong></p>
 <p>Additional information like message bursts, markers, and I/O events is
 also available. The table shows the symbols and descriptions of these
@@ -1904,17 +1927,23 @@ objects.</p>
 <p><strong>Symbol</strong></p>
 <p><strong>Description</strong></p>
 <p>Message Burst</p>
+<img alt="_images/burst.png" src="_images/burst.png" />
 <p>Because of a lack of pixels it is not possible to display a large number
 of messages in a very short interval. Therefore, these messages are
 summarized as so-called message bursts. Zooming into this interval
 reveals the corresponding single messages.</p>
 <p>Markers</p>
+<img alt="images/marker-multiple.png\multiple" src="images/marker-multiple.png\multiple" />
+<img alt="images/marker-template.png\single" src="images/marker-template.png\single" />
 <p>To indicate particular points (like errors or warnings) during the
 runtime of an application, markers can be used in a tracefile. They are
 drawn as triangles, which are colored according to their types. To
 illustrate that two or more markers are placed at the same pixel, a
 multiple marker is drawn.</p>
 <p>I/O Events</p>
+<img alt="images/io-multiple.png\multiple" src="images/io-multiple.png\multiple" />
+<img alt="images/io-single.png\single" src="images/io-single.png\single" />
+<img alt="images/io-single-selected.png\single,selected" src="images/io-single-selected.png\single,selected" />
 <p>Vampir shows detailed information about I/O operations, if they are
 included in the tracefile. I/O events are depicted as triangles at the
 beginning of an I/O interval. Multiple I/O events are tricolored and
@@ -1937,6 +1966,7 @@ well, for instance, counting the number of function calls or a value in
 an iterative approximation of the final result. Counters are defined
 during the instrumentation of the application and can be individually
 assigned to processes.</p>
+<img alt="_images/Counter_data_timeline.png" src="_images/Counter_data_timeline.png" />
 <p><strong>Counter Data Timeline</strong></p>
 <p>The chart is restricted to one counter at a time. It shows the selected
 counter for one process. Using multiple instances of the?<em>Counter Data
@@ -1953,6 +1983,7 @@ happen that a function is not shown in?<em>Master</em>?and?*Process
 Timeline*?due to a short runtime. An alternative to zooming is the
 option?<em>Find Function...</em>. A color-coded timeline indicates the
 intervals in which the function is executed.</p>
+<img alt="_images/performance_radar_find_function.png" src="_images/performance_radar_find_function.png" />
 <p><strong>Performance Radar Timeline - Search of Functions</strong></p>
 <p>By default, the Performance Radar shows the values of one counter for
 each process (thread). In this mode the user can choose between <em>Line
@@ -1963,6 +1994,7 @@ choosing another counter and calculating the sum or average values.
 Summarizing means that the values of the selected counter of all
 processes are summed up. The average is this sum divided by the number
 of processes. Both options provide a single graph.</p>
+<img alt="_images/performance_radar_set_counter.png" src="_images/performance_radar_set_counter.png" />
 <p><strong>Performance Radar Timeline - Visualization of Counters</strong></p>
 </div>
 </div>
@@ -1974,6 +2006,7 @@ of processes. Both options provide a single graph.</p>
 functions in a tree representation. The display reveals information
 about the number of invocations of a given function, the time spent in
 the different calls, and the caller-callee relationship.</p>
+<img alt="_images/Call_tree.png" src="_images/Call_tree.png" />
 <p><strong>Call Tree</strong></p>
 <p>The entries of the?<em>Call Tree</em>?can be sorted in various ways. Simply
 click on one header of the tree representation to use its characteristic
@@ -2002,6 +2035,7 @@ function is added to the MPI function group time. The chart gives a
 condensed view on the execution of the application and a comparison
 between the different function groups can be made so that dominant
 function groups can be distinguished easily.</p>
+<img alt="_images/Function_summary.png" src="_images/Function_summary.png" />
 <p><strong>Function Summary</strong></p>
 <p>It is possible to change the information displayed via the context menu
 entry?<em>Set Metric</em>, which offers values like?<em>Average Exclusive
@@ -2031,6 +2065,7 @@ via the context menu option?<em>Sort By</em>.</p>
 <h3><strong>Process Summary</strong><a class="headerlink" href="#process-summary" title="Permalink to this headline">¶</a></h3>
 <p>The?<em>Process Summary</em>?is similar to the?<em>Function Summary</em>?but shows
 the information for every process independently.</p>
+<img alt="_images/Process_summary.png" src="_images/Process_summary.png" />
 <p><strong>Process Summary</strong></p>
 <p>This is useful for analyzing the balance between processes to reveal
 bottlenecks. For instance, finding that one process spends a
@@ -2052,6 +2087,7 @@ processes.</p>
 <h3><strong>Message Summary</strong><a class="headerlink" href="#message-summary" title="Permalink to this headline">¶</a></h3>
 <p>The?<em>Message Summary</em>?is a statistical chart showing an overview of
 the different messages grouped by certain characteristics.</p>
+<img alt="_images/Messagesummary.png" src="_images/Messagesummary.png" />
 <p><strong>Message Summary Chart with metric set to?*Message Transfer
 Rate*?showing the average transfer rate?(A), and the minimal/maximal
 transfer rate?(B)</strong></p>
@@ -2076,6 +2112,7 @@ choose&nbsp;<em>Filter</em>?from the context menu afterwards.</p>
 <p>The&nbsp;<em>Communication Matrix View</em>?is another way of analyzing
 communication imbalances. It shows information about messages sent
 between processes.</p>
+<img alt="_images/Communication_matrix_view.png" src="_images/Communication_matrix_view.png" />
 <p><strong>Communication Matrix View</strong></p>
 <p>The chart is realized as a table. Its rows represent the sending
 processes while its columns represent the receivers. The color legend on
@@ -2102,9 +2139,11 @@ divided by the duration, to decrease accordingly.</p>
 <h2><strong>Function Legend</strong><a class="headerlink" href="#function-legend" title="Permalink to this headline">¶</a></h2>
 <p>The?<em>Function Legend</em>?lists all visible function groups of the loaded
 trace file along with its corresponding color.</p>
+<img alt="_images/Function_legend.png" src="_images/Function_legend.png" />
 <p><strong>Function Legend</strong></p>
 <p>If colors of functions are changed, they appear in a tree-like fashion
 under their respective function group as well.</p>
+<img alt="_images/Marker_view.png" src="_images/Marker_view.png" />
 <p><strong>A chosen marker (A) and its representation in the Marker View (B)</strong></p>
 <p>The display is given in a tree-like fashion and organizes the marker
 events in their respective groups and types. Additional information,
@@ -2121,6 +2160,7 @@ in the timeline charts to the timestamps of the two marker events that
 were chosen at last.</p>
 <div class="section" id="context-view">
 <h3><strong>Context View</strong><a class="headerlink" href="#context-view" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/Context_view.png" src="_images/Context_view.png" />
 <p><strong>Context View, showing context information (B) of a selected function
 (A)</strong></p>
 <p>As implied by its name, the&nbsp;<em>Context View</em>?provides more detailed
@@ -2143,6 +2183,7 @@ be useful in some cases. The comparison shows a list of common
 properties. The corresponding values are displayed, along with their
 difference if the values are numbers. The first line always shows the
 names of the displays.</p>
+<img alt="_images/context_compare.png" src="_images/context_compare.png" />
 <p><strong>Comparison between Context Information</strong></p>
 </div>
 </div>
@@ -2166,6 +2207,7 @@ Group</em>,?<em>Communicators</em>?and?*Process Hierarchy*. Items to be filtered
 are arranged in a spreadsheet representation. In addition to selecting
 or deselecting an entire group of processes, it is certainly possible to
 filter single processes.</p>
+<img alt="_images/process_filter.png" src="_images/process_filter.png" />
 <p><strong>Process Filter</strong></p>
 <p>Different selection methods can be used in a filter. The check
 box&nbsp;<em>Include/Exclude All</em>?either selects or deselects every item.
@@ -2239,6 +2281,7 @@ tracefiles.</p>
 <h2><strong>General Preferences</strong><a class="headerlink" href="#general-preferences" title="Permalink to this headline">¶</a></h2>
 <p>The?<em>General</em>?settings allow you to change application and trace
 specific values.</p>
+<img alt="_images/pref_general.png" src="_images/pref_general.png" />
 <p><strong>General Settings</strong></p>
 <p><em>Show time as</em>decides whether the time format for the trace analysis
 is based on seconds or ticks. The next point&nbsp;<em>Use color gradient in
@@ -2271,7 +2314,6 @@ the bottom of the dialog.</p>
 <p>Vampir detects whenever changes to the various settings are made. In
 the?<em>Saving Policy</em>?dialog it is possible to adjust the saving
 behavior of the different components to your own needs.</p>
-<p>?</p>
 <p><strong>Saving Policy Settings</strong></p>
 <div class="line-block">
 <div class="line">In the dialog?<em>Saving Behavior</em>?you tell Vampir what to do in the</div>
