@@ -16,10 +16,6 @@ deployment on FutureGrid. For tutorials on using various FutureGrid
 technologies, please refer to our main `tutorials
 page <tutorials.html>`_.
 
-**Please contact us at :portal:`help <help>` if you have
-any corrections or suggestions**.
-
-
 
 **Tutorial Topic 1: Cloud Provisioning Platforms**
 --------------------------------------------------
@@ -49,7 +45,6 @@ CloudCom 2010 Tutorials/Screencasts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  `List of CloudCom 2010 tutorials <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__
-
 
 .. list-table::
 
