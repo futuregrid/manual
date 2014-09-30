@@ -54,117 +54,79 @@ CloudCom 2010 Tutorials/Screencasts
 .. list-table::
 
     * - Title
-      - Type
+      - Google Doc
+      - Screencast
       - Last Update
     * - Overview of FutureGrid
       - .. image:: images/doc_logo-50x46.png
 				:target: https://docs.google.com/presentation/d/1NJuc3uZXVmnfFdOVTMLCbfd3FMxM6Nb1c4yx6aNegEc/edit
-      - 01/15/2011
-    * - HPC on FutureGrid
+      -  
+     - 01/15/2011
+    * - HPC on FutureGrid
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1FxzgYvANRy6DXl508e6UYHr1OSpNVFjeMwuk_2FAw_Q/edit
       - 
       - 01/15/2011
     * - Eucalyptus on FutureGrid
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1OdnhRjRPzNR_yNZ2HUSRSuEzg3kaSWpS_aRr-wrBwGU/edit
       - 
       - 01/15/2011
     * - Image Generation and Management on FutureGrid
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1oYV4QQB9uXvfclpcOUq1B8HmrF8RDMor4VkNZneaUT0/edit
       - 
       - 01/15/2011
     * - Dynamic Provisioning & RAIN on FutureGrid
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1Iv6-SRsqiAZXOKh0vzJsvKTqM-NO3z_eCdDQcQpeiOE/edit
       - 
       - 01/15/2011
     * - FutureGrid Portal
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1VHlD2WUclFMbIdp-ctmnIGEAiLr-a9PsHK6EYC1bMFc/edit
       - 
       - 01/15/2011
     * - FutureGrid Tutorial
-      - 
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1Ye_h3njKfmtqJliQKCSnjOZSuQkfZLWUEAl9pUHJjLc/edit
+      - .. image:: images/screencast_logo-50x50.png
+				:target: http://screencast.computer.org:8080/ess/echo/presentation/e434c751-32a9-4e49-be96-e86e67be2211
       - 01/15/2011
     * - Azure Tutorial
-      - 
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/file/d/0B_HLA4BImRyhYTQ4Nzk0MjktOTZmMS00YjQ4LTk5N2QtNDU0MDIyY2YzYzRh/edit?hl=en 
+      - .. image:: images/screencast_logo-50x50.png
+				:target: http://screencast.computer.org:8080/ess/echo/presentation/2902e2ad-8c2b-4e2e-a0c4-559ef0cc393a
       - 01/15/2011
     * - OpenNebula Tutorial
-      - 
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/file/d/0B_HLA4BImRyhZmY2YTY3MWMtZjAxMC00YzBmLTkwNzMtMDhhNzk4ZmNlNjRm/edit?hl=en
+      - .. image:: images/screencast_logo-50x50.png
+				:target: http://screencast.computer.org:8080/ess/echo/presentation/06e9c138-6d13-4422-a00d-298d0ae97667
       - 01/15/2011
     * - Nimbus Tutorial
-      - 
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/file/d/0B_HLA4BImRyhMGJmZDYxZDctYWExYS00OTM1LWExNWEtZWQ1ZGJiMTk4NjM0/edit?hl=en
+      - .. image:: images/screencast_logo-50x50.png
+				:target: http://screencast.computer.org:8080/ess/echo/presentation/3add3287-faa2-4b99-9a50-1925a0ea8f4d
       - 01/15/2011
     * - OpenStack Tutorial
-      - 
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/file/d/0B_HLA4BImRyhOTQ5ZjUyMGItZDBmNC00ZTlkLTlhOTMtZmJkYmM3MDdmMWUw/edit?hl=en
+      - .. image:: images/screencast_logo-50x50.png
+				:target: http://screencast.computer.org:8080/ess/echo/presentation/b392bb60-2cff-4086-ad20-b79729bc378c
       - 01/15/2011
     * - Sector/Sphere Tutorial
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/file/d/0B_HLA4BImRyhODhkNDI1MGQtNGVmMS00YzczLTk5ZTMtMjY2NDI3MDYyY2E3/edit?hl=en
       - 
       - 01/15/2011
     * - Apache Hadooop & Pig Tutorial
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B_HLA4BImRyhYjdkNTIwMDMtMDM1Ni00YzNiLWE4MmUtZDFhZWMxZWI3ZDZm&hl=en
       - 
       -  01/15/2011
 
 
-	 
-
-that's a start. see how that looks when it is built
-
-+-------------------------+-------------------------+-------------------------+
-| Title                   | Type                    | Last Update             |
-| -----                   | ----                    | -----------             |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Overview of FutureGrid  | |image19|               | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^^^^^^  |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| HPC on FutureGrid       | |image20|               | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^       |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Eucalyptus on FutureGri | |image21|               | 01/15/2011              |
-| d                       |                         |                         |
-| ^^^^^^^^^^^^^^^^^^^^^^^ |                         |                         |
-| ^                       |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Image Generation and Ma | |image22|               | 01/15/2011              |
-| nagement on FutureGrid  |                         |                         |
-| ^^^^^^^^^^^^^^^^^^^^^^^ |                         |                         |
-| ^^^^^^^^^^^^^^^^^^^^^^  |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Dynamic Provisioning &  | |image23|               | 01/15/2011              |
-| RAIN on FutureGrid      |                         |                         |
-| ^^^^^^^^^^^^^^^^^^^^^^^ |                         |                         |
-| ^^^^^^^^^^^^^^^^^^      |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| FutureGrid Portal       | |image24|               | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^       |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| FutureGrid Tutorial     | |image25|\ |image26|    | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^^^     |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Azure Tutorial          | |image27|\ |image28|    | 01/15/2011              |
-| ^^^^^^^^^^^^^^          |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| OpenNebula Tutorial     | |image29|\ |image30|    | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^^^     |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Nimbus Tutorial         | |image31|\ |image32|    | 01/15/2011              |
-| ^^^^^^^^^^^^^^^         |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| OpenStack Tutorial      | |image33|\ |image34|    | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^^      |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Sector/Sphere Tutorial  | |image35|               | 01/15/2011              |
-| ^^^^^^^^^^^^^^^^^^^^^^  |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-| Apache Hadoop & Pig Tut | '.. image:: images/doc_logo-50x46png        : target: https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B_HLA4BImRyhYjdkNTIwMDMtMDM1Ni00YzNiLWE4MmUtZDFhZWMxZWI3ZDZm&hl=en | 01/15/2011              |
-| orial                   |                         |                         |
-| ^^^^^^^^^^^^^^^^^^^^^^^ |                         |                         |
-| ^^^^^                   |                         |                         |
-                                                                             
-+-------------------------+-------------------------+-------------------------+
-
+	
