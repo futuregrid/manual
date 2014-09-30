@@ -342,7 +342,7 @@ Editing tips for the table:
       - sierra, foxtrot                      
       - centos-5.5-x64-vine.gz                                    
       - menghan                      
-    * - :portal:`Twister Appliance <contrib/fg-twister-appliance-tutorial>`   
+    * - :ref:`Twister Appliance <s-twister-appliance>`   
       - Deploys a virtual private cluster running the Twister iterative
 	MapReduce system                
       - india                                
