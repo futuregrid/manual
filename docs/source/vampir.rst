@@ -993,18 +993,18 @@ are arranged in a spreadsheet representation. In addition to selecting
 or deselecting an entire group of processes, it is certainly possible to
 filter single processes.
 
-|image76|
+.. image: images/process_filter.png
 
 **Process Filter**
 
 Different selection methods can be used in a filter. The check
-boxÂ \ *Include/Exclude All*Â either selects or deselects every item.
+boxÂ \ *Include/Exclude All* either selects or deselects every item.
 Specific items can be selected/deselected by clicking the check box next
 to it. Furthermore, it is possible to select/deselect multiple items at
 once; mark the desired entries by clicking their names while holding
-either theÂ \ *Shift*Â or theÂ \ *Ctrl*Â key. By holding theÂ \ *Shift*Â key
+either the \ *Shift* or theÂ \ *Ctrl* key. By holding the \ *Shift* key
 every item in between the two clicked items will be marked. Holding
-theÂ \ *Ctrl*Â key, on the other hand, enables you to add or remove
+theÂ \ *Ctrl* key, on the other hand, enables you to add or remove
 specific items from/to the marked ones. Clicking the check box of one of
 the marked entries will cause selection/deselection for all of them.
 
@@ -1043,19 +1043,19 @@ The appearance of the trace file and various other application settings
 can be altered in the preferences accessible via the main menu entry
 *File->Preferences*. Settings concerning the trace file itself, e.g.,
 layout or function group colors, are saved individually next to the
-tracefile in a file, whose end isÂ \ *.vsettings*. In this way, it is
+tracefile in a file, whose end is \ *.vsettings*. In this way, it is
 possible to adjust the colors for one trace file without interfering
-with other trace files. The options *Import Preferences*Â andÂ *Export
-Preferences*Â provide the loading and saving of preferences of arbitrary
+with other trace files. The options *Import Preferences* and *Export
+Preferences* provide the loading and saving of preferences of arbitrary
 tracefiles.
 
 **General Preferences**
 -----------------------
 
-TheÂ \ *General*Â settings allow you to change application and trace
+The \ *General* settings allow you to change application and trace
 specific values.
 
-|image77|
+.. image: images/pref_general.png
 
 **General Settings**
 
@@ -1068,14 +1068,14 @@ respective source file. In order to open a source file, first click on
 the intended function in theÂ \ *Master Timeline*Â and then on the source
 code path in theÂ \ *Context View*. For the source code location to work
 properly, you need a trace file with source code location support. The
-path of the source file can be adjusted inÂ \ *Preferences*. A limit for
+path of the source file can be adjusted in \ *Preferences*. A limit for
 the size of the file can be set, too. Finally, the user can decide if he
 wants Vampir to automatically check for new versions.
 
 **Appearance**
 --------------
 
-In theÂ \ *Appearance*Â settings of theÂ \ *Preferences*Â dialog, there are
+In the \ *Appearance* settings of the \ *Preferences* dialog, there are
 six different objects for which the color options can be changed: the
 functions/function groups, markers, counters, collectives, messages and
 I/O events. Choose an entry and click on its color to make a
@@ -1083,7 +1083,7 @@ modification. A color picker dialog opens where it is possible to adjust
 the color. For messages and collectives, a change of the line width is
 also available.
 
-|image78|
+.. image: images/pref_appearance.png
 
 **Appearance Settings**
 
@@ -1094,25 +1094,25 @@ the bottom of the dialog.
 -----------------
 
 Vampir detects whenever changes to the various settings are made. In
-theÂ \ *Saving Policy*Â dialog it is possible to adjust the saving
+the \ *Saving Policy* dialog it is possible to adjust the saving
 behavior of the different components to your own needs.
 
-Â 
+ 
 
 **Saving Policy Settings**
 
-| In the dialogÂ \ *Saving Behavior*Â you tell Vampir what to do in the
+| In the dialog \ *Saving Behavior* you tell Vampir what to do in the
 case of changed preferences. The user can choose the categories of
 settings (e.g., layout) that should be treated. Possible options are
-that the application automaticallyÂ \ *Always*Â orÂ *Never*Â saves changes.
+that the application automatically \ *Always* or *Never* saves changes.
 The default option is to have Vampir asking you whether to save or
 discard changes. Usually the settings are stored in the folder of the
 tracefile. If the user has no access to it, it is possible to place them
-in theÂ \ *Application Data Folder*. They are listed in the
-tabÂ \ *Locally Stored Preferences*Â with creation and modification date.
+in the \ *Application Data Folder*. They are listed in the
+tab \ *Locally Stored Preferences* with creation and modification date.
 | 
-**Note**: On loading, Vampir favors settings in theÂ \ *Application
-Data Folder*.Â *Default Preferences*Â offers to save preferences of the
+**Note**: On loading, Vampir favors settings in the \ *Application
+Data Folder*. *Default Preferences* offers to save preferences of the
 current trace file as default settings, where they are then used for
 tracefiles without settings. Another option is to restore the default
 settings; in this case, the current preferences of the tracefile are
@@ -1124,13 +1124,13 @@ reverted.
 Additional links that might be of interest to the reader:
 
 ...
-(OTF)Â `http://www.tu-dresden.de/zih/otf <http://www.tu-dresden.de/zih/otf>`__
+(OTF) `http://www.tu-dresden.de/zih/otf <http://www.tu-dresden.de/zih/otf>`__
 
 ...
-WindowsHPCÂ \ `http://resourcekit.windowshpc.net/MORE\_INFO/TracingMPIApplications.html <http://resourcekit.windowshpc.net/MORE_INFO/TracingMPIApplications.html>`__
+WindowsHPC \ `http://resourcekit.windowshpc.net/MORE\_INFO/TracingMPIApplications.html <http://resourcekit.windowshpc.net/MORE_INFO/TracingMPIApplications.html>`__
 
 ...
-ManualÂ \ `http://www.tu-dresden.de/zih/vampirtrace <http://www.tu-dresden.de/zih/vampirtrace>`__
+Manual \ `http://www.tu-dresden.de/zih/vampirtrace <http://www.tu-dresden.de/zih/vampirtrace>`__
 
 Retrieved from
 "`https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir>`__\ "
