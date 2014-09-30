@@ -518,8 +518,8 @@ View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Information_
 -------------------------------
 
 Vampir provides a display containing the most important
-characterizations of the used tracefile. This tabular is calledÂ \ *Trace
-Properties*Â and can be accessed byÂ \ *File->Trace Properties*. The
+characterizations of the used tracefile. This tabular is called \ *Trace
+Properties* and can be accessed by \ *File->Trace Properties*. The
 information, such as the filename, the creator and its version,
 originates from the tracefile and is not changed by Vampir.
 
@@ -539,16 +539,16 @@ sections describe them in detail.
 A very common chart type used in event-based performance analysis is the
 so-called timeline chart. This chart type graphically presents the chain
 of events of monitored processes or counters on a horizontal time axis.
-Multiple timeline chart instances can be added to theÂ \ *Trace
-View*Â window via theÂ \ *Chart*Â menu or theÂ \ *Charts*Â toolbar.
+Multiple timeline chart instances can be added to the \ *Trace
+View* window via the \ *Chart* menu or the \ *Charts* toolbar.
 
 **Note**: To measure the duration between two events in a timeline
 chart, Vampir provides a tool called ruler. Click on the first event in
 a timeline display and move the mouse while keeping the left mouse key
-andÂ \ *Shift*Â pressed. A ruler-like pattern appears in the current
+andÂ \ *Shift* pressed. A ruler-like pattern appears in the current
 timeline chart, which provides rough measurement directly. The exact
 time of the start event and the mouse position and the interval in
-between is given at the very bottom. If theÂ \ *Shift*Â key is released
+between is given at the very bottom. If the \ *Shift* key is released
 before the left mouse key, Vampir will proceed with zooming.
 
 **Master Timeline and Process Timeline**
@@ -606,6 +606,7 @@ figure.
 
 .. image:: images/collectives.png
 
+
 **Selected MPI Collective in Master Timeline**
 
 Additional information like message bursts, markers, and I/O events is
@@ -616,40 +617,20 @@ objects.
 
 **Additional Information in Master and Process Timeline**
 
-**Symbol**
+.. list-table::
 
-**Description**
-
-Message Burst
-
-.. image:: images/burst.png
-
-Because of a lack of pixels it is not possible to display a large number
-of messages in a very short interval. Therefore, these messages are
-summarized as so-called message bursts. Zooming into this interval
-reveals the corresponding single messages.
-
-Markers
-
-.. image:: images/marker-multiple.png\ multiple
-
-.. image:: images/marker-template.png\ single
-
-To indicate particular points (like errors or warnings) during the
+    * - Symbol
+      - Description
+    * - Message Burst .. image:: images/burst.png
+      - Because of a lack of pixels it is not possible to display a large number of messages in a very short interval. Therefore, these messages are summarized as so-called message bursts. Zooming into this interval reveals the corresponding single messages.
+    * - Markers .. image:: images/marker-multiple.png  multiple .. image:: images/marker-template.png single
+      - To indicate particular points (like errors or warnings) during the
 runtime of an application, markers can be used in a tracefile. They are
 drawn as triangles, which are colored according to their types. To
 illustrate that two or more markers are placed at the same pixel, a
 multiple marker is drawn.
-
-I/O Events
-
-.. image:: images/io-multiple.png\ multiple
-
-.. image:: images/io-single.png\ single
-
-.. image:: images/io-single-selected.png\ single, selected
-
-Vampir shows detailed information about I/O operations, if they are
+    * - I/O Events .. image:: images/io-multiple.png  multiple .. image:: images/io-single.png single .. image:: images/io-single-selected.png single, selected
+      - Vampir shows detailed information about I/O operations, if they are
 included in the tracefile. I/O events are depicted as triangles at the
 beginning of an I/O interval. Multiple I/O events are tricolored and
 occupy a line to the end of the interval. To see the whole interval of a
@@ -661,6 +642,11 @@ short black arrows are used to indicate outgoing communication. Clicking
 on message lines or arrows shows message details like sender process,
 receiver process, message length, message duration, and message tag in
 the \ *Context View* display.
+
+
+
+
+
 
 **Counter Data Timeline**
 ~~~~~~~~~~~~~~~~~~~~~~~~~
