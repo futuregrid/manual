@@ -62,40 +62,40 @@ CloudCom 2010 Tutorials/Screencasts
       - 01/15/2011
     * - HPC on FutureGrid
       - 
-      - 
+      - 01/15/2011
     * - Eucalyptus on FutureGrid
       - 
-      - 
+      - 01/15/2011
     * - Image Generation and Management on FutureGrid
       - 
-      - 
+      - 01/15/2011
     * - Dynamic Provisioning & RAIN on FutureGrid
       - 
-      - 
+      - 01/15/2011
     * - FutureGrid Portal
       - 
-      - 
+      - 01/15/2011
     * - FutureGrid Tutorial
       - 
-      - 
+      - 01/15/2011
     * - Azure Tutorial
       - 
-      - 
+      - 01/15/2011
     * - OpenNebula Tutorial
       - 
-      - 
+      - 01/15/2011
     * - Nimbus Tutorial
       - 
-      - 
+      - 01/15/2011
     * - OpenStack Tutorial
       - 
-      - 
+      - 01/15/2011
     * - Sector/Sphere Tutorial
       - 
-      - 
+      - 01/15/2011
     * - Apache Hadooop & Pig Tutorial
       - 
-      -  
+      -  01/15/2011
 
 
 	 
