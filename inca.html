@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Configuring and Registering a Custom Grid Appliance on FutureGrid - Eucalyptus &mdash; FutureGrid 0.1 documentation</title>
+    <title>Using Inca &mdash; FutureGrid 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -1304,10 +1304,36 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Configuring and Registering a Custom Grid Appliance on FutureGrid - Eucalyptus</a><ul>
-<li><a class="reference internal" href="#summary"><strong>Summary:</strong></a></li>
-<li><a class="reference internal" href="#pre-requisites"><strong>Pre-requisites:</strong></a></li>
-<li><a class="reference internal" href="#hands-on-tutorial"><strong>Hands-on tutorial</strong>:</a></li>
+<li><a class="reference internal" href="#">Using Inca</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#scope">Scope</a></li>
+<li><a class="reference internal" href="#deployment-information">Deployment Information</a></li>
+<li><a class="reference internal" href="#id1">Using Inca</a><ul>
+<li><a class="reference internal" href="#decide-on-data-to-collect">Decide on Data to Collect</a><ul>
+<li><a class="reference internal" href="#emulate-a-user">Emulate a User</a></li>
+<li><a class="reference internal" href="#consider-load">Consider Load</a></li>
+<li><a class="reference internal" href="#test-and-or-measure">Test and/or Measure</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utilize-an-existing-reporter">Utilize an Existing Reporter</a></li>
+<li><a class="reference internal" href="#write-your-own-reporter">Write Your Own Reporter</a><ul>
+<li><a class="reference internal" href="#download-apis-and-reporters">Download APIs and Reporters</a></li>
+<li><a class="reference internal" href="#how-to-execute-a-reporter">How to Execute a Reporter</a></li>
+<li><a class="reference internal" href="#using-an-api">Using an API</a><ul>
+<li><a class="reference internal" href="#performance-reporter">Performance Reporter</a></li>
+<li><a class="reference internal" href="#test-reporter">Test Reporter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reporter-failprintandexit-psql-user-l-failed-after-i-tries-output-if-if-grep-list-of-databases-output-reporter-unitfailure-failed-to-list-databases-output-else-shift-output-shift-output-shift-output-trim-off-header-3-lines-my-dbnames-map-s-s-output-reporter-log-info-databases-found-join-dbnames-reporter-unitsuccess-reporter-print">0; } $reporter-&gt;failPrintAndExit( &#8220;$psql $user -l failed after $i tries: &#64;output $!&#8221; ) if $?; if(&nbsp;! grep(/List of databases/, &#64;output) ) { $reporter-&gt;unitFailure( &#8220;Failed to list databases: &#64;output&#8221; ); } else { shift &#64;output; shift &#64;output; shift &#64;output; # trim off header (3 lines) my &#64;dbnames = map( /^\s+(\S+)/, &#64;output ); $reporter-&gt;log( &#8216;info&#8217;, &#8220;databases found: &#8221; . join(&#8221;, &#8221;, &#64;dbnames) ); $reporter-&gt;unitSuccess(); } $reporter-&gt;print();</a><ul>
+<li><a class="reference internal" href="#commit-new-reporter">Commit New Reporter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#view-data">View Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
 </ul>
@@ -1325,7 +1351,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="_sources/ga7.txt"
+  <a href="_sources/inca.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -1349,30 +1375,591 @@
   <div class="row">
     <div class="col-md-12">
       
-  <div class="section" id="configuring-and-registering-a-custom-grid-appliance-on-futuregrid-eucalyptus">
-<span id="s-ga7"></span><h1>Configuring and Registering a Custom Grid Appliance on FutureGrid - Eucalyptus<a class="headerlink" href="#configuring-and-registering-a-custom-grid-appliance-on-futuregrid-eucalyptus" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="using-inca">
+<span id="s-inca"></span><h1>Using Inca<a class="headerlink" href="#using-inca" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="first sidebar-title">Page Contents</p>
 <div class="contents local last topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#summary" id="id1"><strong>Summary:</strong></a></li>
-<li><a class="reference internal" href="#pre-requisites" id="id2"><strong>Pre-requisites:</strong></a></li>
-<li><a class="reference internal" href="#hands-on-tutorial" id="id3"><strong>Hands-on tutorial</strong>:</a></li>
+<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
+<li><a class="reference internal" href="#scope" id="id3">Scope</a></li>
+<li><a class="reference internal" href="#deployment-information" id="id4">Deployment Information</a></li>
+<li><a class="reference internal" href="#id1" id="id5">Using Inca</a><ul>
+<li><a class="reference internal" href="#decide-on-data-to-collect" id="id6">Decide on Data to Collect</a><ul>
+<li><a class="reference internal" href="#emulate-a-user" id="id7">Emulate a User</a></li>
+<li><a class="reference internal" href="#consider-load" id="id8">Consider Load</a></li>
+<li><a class="reference internal" href="#test-and-or-measure" id="id9">Test and/or Measure</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#utilize-an-existing-reporter" id="id10">Utilize an Existing Reporter</a></li>
+<li><a class="reference internal" href="#write-your-own-reporter" id="id11">Write Your Own Reporter</a><ul>
+<li><a class="reference internal" href="#download-apis-and-reporters" id="id12">Download APIs and Reporters</a></li>
+<li><a class="reference internal" href="#how-to-execute-a-reporter" id="id13">How to Execute a Reporter</a></li>
+<li><a class="reference internal" href="#using-an-api" id="id14">Using an API</a><ul>
+<li><a class="reference internal" href="#performance-reporter" id="id15">Performance Reporter</a></li>
+<li><a class="reference internal" href="#test-reporter" id="id16">Test Reporter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reporter-failprintandexit-psql-user-l-failed-after-i-tries-output-if-if-grep-list-of-databases-output-reporter-unitfailure-failed-to-list-databases-output-else-shift-output-shift-output-shift-output-trim-off-header-3-lines-my-dbnames-map-s-s-output-reporter-log-info-databases-found-join-dbnames-reporter-unitsuccess-reporter-print" id="id17">0; } $reporter-&gt;failPrintAndExit( &#8220;$psql $user -l failed after $i tries: &#64;output $!&#8221; ) if $?; if(&nbsp;! grep(/List of databases/, &#64;output) ) { $reporter-&gt;unitFailure( &#8220;Failed to list databases: &#64;output&#8221; ); } else { shift &#64;output; shift &#64;output; shift &#64;output; # trim off header (3 lines) my &#64;dbnames = map( /^\s+(\S+)/, &#64;output ); $reporter-&gt;log( &#8216;info&#8217;, &#8220;databases found: &#8221; . join(&#8221;, &#8221;, &#64;dbnames) ); $reporter-&gt;unitSuccess(); } $reporter-&gt;print();</a><ul>
+<li><a class="reference internal" href="#commit-new-reporter" id="id18">Commit New Reporter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#view-data" id="id19">View Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references" id="id20">References</a></li>
 </ul>
 </div>
 </div>
-<div class="section" id="summary">
-<h2><a class="toc-backref" href="#id1"><strong>Summary:</strong></a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial provides step-by-step instructions on how to configure and register a customized Grid appliance on FutureGrid, using Eucalyptus.</p>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>One of the main goals for FutureGrid is providing quality assurance of
+our software components. This document will describe the quality
+assurance methods employed by Inca on FutureGrid and will describe how
+to contribute additional functionality tests to it.</p>
+<p>Another major goal for the FutureGrid performance group is to assess the
+performance of the FutureGrid infrastructure. As such, both active and
+passive performance measurements will be collected and analyzed. This
+document will also describe the active measurement collection method
+using by Inca. For passive measurements, please see the <a class="reference external" href="https://wiki.futuregrid.org/index.php/Docs/Performance/NetloggerHowTo">Netlogger How
+To
+document</a>.</p>
+<p>Inca is a tool used for monitoring the user-level functionality and
+performance of cyberinfrastructure systems. It automates the
+installation, execution and maintenance of a large variety and number of
+reporters (monitoring scripts) consistently across resources. Monitoring
+results are collected, archived, and then displayed through <a class="reference external" href="http://inca.futuregrid.org/">web status
+pages</a>. Currently, there are 196 Inca
+reporters available to test and measure aspects of FutureGrid systems.
+This document will describe the reporters deployed today on FutureGrid
+and how to either deploy an existing reporter to test your FutureGrid
+component or write a new Inca reporter using either the Perl or Python
+API.</p>
 </div>
-<div class="section" id="pre-requisites">
-<h2><a class="toc-backref" href="#id2"><strong>Pre-requisites:</strong></a><a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="ga1">FutureGrid tutorial GA1 - Introduction to the Grid Appliance</a></p>
+<div class="section" id="scope">
+<h2><a class="toc-backref" href="#id3">Scope</a><a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h2>
+<p>This document applies to anyone developing or deploying FutureGrid
+software components.</p>
 </div>
-<div class="section" id="hands-on-tutorial">
-<h2><a class="toc-backref" href="#id3"><strong>Hands-on tutorial</strong>:</a><a class="headerlink" href="#hands-on-tutorial" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial is maintained at the Grid Appliance portal.
-See?`FutureGrid:CustomGridAppliance &lt;<a class="reference external" href="http://www.grid-appliance.org/wiki/index.php/Create_Custom_Grid_appliance_Image_on_Futuregrid">http://www.grid-appliance.org/wiki/index.php/Create_Custom_Grid_appliance_Image_on_Futuregrid</a>&gt;`__.</p>
+<div class="section" id="deployment-information">
+<h2><a class="toc-backref" href="#id4">Deployment Information</a><a class="headerlink" href="#deployment-information" title="Permalink to this headline">¶</a></h2>
+<p>Inca currently runs within a VM, inca.futuregrid.org, running on Quarry.
+There are currently three main types of Inca monitoring setup on
+FutureGrid currently. ?</p>
+<ol class="arabic simple">
+<li><strong>FutureGrid services tests</strong> - runs simple unit tests of services
+that are global to FutureGrid. Currently, these include tests such
+the Drupal FutureGrid site, the Jira ticketing system, the internal
+Wiki site, and the LDAP server used to store user names and SSH keys.</li>
+<li><strong>FutureGrid cluster tests</strong> - runs simple unit tests to test
+connectivity to the FutureGrid cluster machines and the software
+environment.?The connectivity tests first test that the alias works
+(aliasworks) and then test that the machine is pingable and that the
+Inca account can SSH there. The software environment tests report
+the version of GCC (gcc_version), MPI (mpi_version for iDataplex
+and pgcc for Cray), and PBS.?A small unit test tries to submit a
+test job thru the queue using PBS (test_batch_job).</li>
+<li><strong>FutureGrid performance tests</strong> - runs benchmarks to test the
+performance of the FutureGrid cluster machines. Currently we just
+run HPCC.</li>
+</ol>
+<p>Tests results are available
+at:<a class="reference external" href="http://inca.futuregrid.org/">inca.futuregrid.org</a></p>
+<p>Tests that run local on the machine show up as &#8220;n/a&#8221; if Inca does not
+yet have an account on that machine. The Inca deployment is managed by
+Shava Smallen &lt;<a class="reference external" href="mailto:ssmallen&#37;&#52;&#48;sdsc&#46;edu">ssmallen<span>&#64;</span>sdsc<span>&#46;</span>edu</a>&gt; who is responsible for deploying new
+reporters and reporter instances to FutureGrid. &nbsp;Access to configuration
+changes is limited because Inca employs active monitoring, which
+introduces load to the system. &nbsp;Thus, having a review process is
+important to in order the system is not over-monitored (i.e., interferes
+with users).?</p>
+</div>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id5">Using Inca</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="decide-on-data-to-collect">
+<h3><a class="toc-backref" href="#id6">Decide on Data to Collect</a><a class="headerlink" href="#decide-on-data-to-collect" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="emulate-a-user">
+<h4><a class="toc-backref" href="#id7">Emulate a User</a><a class="headerlink" href="#emulate-a-user" title="Permalink to this headline">¶</a></h4>
+<p>Many monitoring systems run from the perspective of the system
+administrators and do not test beyond whether a port is open or not.  While important, we have found that it is really important to test from
+the perspective of the user to ensure the software is properly installed
+and is accessible to users. Therefore, Inca runs from a regular user
+account and in practice is setup like any other user account.
+Oftentimes, commands that are printed in the user guides or manual are
+good tests that can be wrapped into an Inca reporter. Even just one or
+two simple unit tests can be effective in detecting installation or
+permission problems.</p>
+</div>
+<div class="section" id="consider-load">
+<h4><a class="toc-backref" href="#id8">Consider Load</a><a class="headerlink" href="#consider-load" title="Permalink to this headline">¶</a></h4>
+<p>Ideally, we would like to monitor frequently in order to quickly detect
+problems before the users notice them. However, active measurements
+introduce load into the system and it is important to not interfere with
+users. Therefore consider the measurement you are collecting and select
+a measurement frequency that balances freshness of results with impact
+on the system; i.e., active measurements that introduce minimal load on
+the system can be run at a higher frequency than active measurements
+that introduce medium to high load to the system.?If applicable, you
+may consider decomposing a measurement into multiple parts so that the
+lightweight parts that can be run more frequently. For example,
+checking that a VM is successfully deployed via RAIN introduces load to
+the system and should probably not be executed more than once every few
+hours. ?However, we could run a test that queries the list of available
+VMs every 10 minutes with minimal load to the system.</p>
+</div>
+<div class="section" id="test-and-or-measure">
+<h4><a class="toc-backref" href="#id9">Test and/or Measure</a><a class="headerlink" href="#test-and-or-measure" title="Permalink to this headline">¶</a></h4>
+<p>The easiest way to get started with monitoring your component is to
+write a simple unit test.?This test can be a simple command from the
+user documentation that every user is likely to run and you can likely
+leverage an existing Inca reporter to test it as discussed below. Once
+you gain some familiarity with Inca, you can develop more intricate
+tests to verify more functionality of your component or to detect
+frequently occurring problems users are reporting.?As you develop more
+intricate tests, consider the performance of your component and the data
+that would be useful to collect in order to detect performance problems
+and identify bottlenecks.?For example, to measure the performance of
+RAIN&#8217;s invocation mechanism, we would like to know: 1) the time to
+transfer a VM to the resource, 2) the time to submit the request to
+Eucalyptus/Nimbus/XCAT, 3) the time before the VM is pingable, and 4)
+the time before the VM is login-able. Inca provides a flexible data
+model so any information you can express in a XML document is supported
+and is described further below. Email notifications can be set if
+performance drops beyond a threshold and the data can be viewed through
+the Inca web pages.</p>
+</div>
+</div>
+<div class="section" id="utilize-an-existing-reporter">
+<h3><a class="toc-backref" href="#id10">Utilize an Existing Reporter</a><a class="headerlink" href="#utilize-an-existing-reporter" title="Permalink to this headline">¶</a></h3>
+<p>As mentioned above, there are 196 existing Inca reporters available in
+the FutureGrid reporter repository.?Click on the link below to view the
+list of Inca reporters and click on each name to view the usage data and
+see the source code.</p>
+<p><a class="reference external" href="http://inca.futuregrid.org/repository">http://inca.futuregrid.org/repository</a></p>
+<p>If your software component runs on TeraGrid, it is likely we have an
+existing Inca reporter for it.?Otherwise, you might check out some of
+our generic reporters listed below:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=user.search.output.unit">user.search.output.unit</a>?-
+takes as input a command to execute and a list of regular expressions
+to look for in the output to indicate the command succeeded; e.g.,
+the following executes a ldapsearch command and looks for the string
+&#8220;result: 0 Success&#8221;</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>% user.search.output.unit -com=&quot;ldapsearch -h im3r.idp.iu.futuregrid.org -x -b&#39;dc=futuregrid,dc=org&#39; &#39;(objectclass=*)&#39;&quot; \
+-delim=&quot;|&quot; -help=&quot;no&quot; -log=&quot;3&quot; -search=&quot;result: 0 Success&quot; -verbose=&quot;1&quot; -version=&quot;no&quot;
+</pre></div>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=grid.wget.unit">grid.wget.unit</a>?-
+takes as input a url and checks to see if the webpage load
+successfully. &nbsp;E.g., the following checks that the Inca web page
+loads correctly.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre>% grid.wget.unit -help=&quot;no&quot; -log=&quot;0&quot; -page=&quot;http://inca.futuregrid.org&quot; -verbose=&quot;1&quot; -version=&quot;no&quot; -wgetArgs=&quot;&quot;
+</pre></div>
+</div>
+<p>The following checks that the Eucalyptus web page on India loads
+successfully:</p>
+<div class="highlight-python"><div class="highlight"><pre>% grid.wget.unit -help=&quot;no&quot; -log=&quot;3&quot; -page=&quot;https://eucalyptus.india.futuregrid.org:8443&quot; -verbose=&quot;1&quot; -version=&quot;no&quot; -wgetArgs=&quot;--no-check-certificate&quot;
+</pre></div>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=network.telnet.unit">network.telnet.unit</a>
+- used to check to see if a port is open from a remote site</li>
+<li><a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=network.ping.unit">network.ping.unit</a>
+- checks if a machine is pingable</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">If you would like to deploy an existing Inca reporter for your</div>
+</div>
+</div>
+<p>component, email Shava Smallen at <a class="reference external" href="mailto:ssmallen&#37;&#52;&#48;sdsc&#46;edu">ssmallen<span>&#64;</span>sdsc<span>&#46;</span>edu</a> with the name of the
+reporter, the arguments, frequency of execution, and whether you want
+email notification upon failure or file a Jira ticket for Shava.Smallen.</p>
+</div>
+<div class="section" id="write-your-own-reporter">
+<h3><a class="toc-backref" href="#id11">Write Your Own Reporter</a><a class="headerlink" href="#write-your-own-reporter" title="Permalink to this headline">¶</a></h3>
+<p>If there is no existing reporter for your FutureGrid component, it is
+straightforward to write a new one with the Inca Perl and Python APIs.</p>
+<div class="section" id="download-apis-and-reporters">
+<h4><a class="toc-backref" href="#id12">Download APIs and Reporters</a><a class="headerlink" href="#download-apis-and-reporters" title="Permalink to this headline">¶</a></h4>
+<p>To access the APIs, first download the tar.gz file such as</p>
+<div class="highlight-python"><div class="highlight"><pre>% wget http://inca.sdsc.edu/releases/latest/Inca-Reporter.tar.gz
+</pre></div>
+</div>
+<p>Then unzip/untar the tar.gz file</p>
+<div class="highlight-python"><div class="highlight"><pre>% tar zxvf Inca-Reporter.tar.gz
+% ls Inca-Reporter-*
+COPYRIGHT  ChangeLog  MANIFEST  Makefile  Packages.gz  bin  cgi-bin  docs  etc  lib  sbin  share  version
+</pre></div>
+</div>
+<p>The reporters are located in the &#8216;bin&#8217; directory and the Perl and Python
+APIs are in &#8216;lib/perl&#8217; and &#8216;lib/python&#8217; respectively. Next checkout the
+latest reporters developed from svn and put them in a &#8216;bin.svn&#8217;
+directory</p>
+<div class="highlight-python"><div class="highlight"><pre>% svn checkout https://futuregrid.svn.sourceforge.net/svnroot/futuregrid/core/trunk/src/performance/benchmarking/framework/inca/bin bin.svn
+A    bin.svn/performance.infiniband
+A    bin.svn/futuregrid.cluster.partition
+A    bin.svn/performance.hpcc
+Checked out revision 487.
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-execute-a-reporter">
+<h4><a class="toc-backref" href="#id13">How to Execute a Reporter</a><a class="headerlink" href="#how-to-execute-a-reporter" title="Permalink to this headline">¶</a></h4>
+<p>All reporters can be run on the command line and will print XML as shown
+below. ?Help information for a reporter can be printed by adding
+argument &#8216;-help&#8217; which will by default print the help info in XML.?To
+print it in text format, also add &#8216;-verbose=0&#8217; argument.?For
+information about the report XML schema, please see the <a class="reference external" href="http://inca.sdsc.edu/releases/2.5/guide/userguide-reporters.html">Inca User
+Guide</a>.</p>
+<div class="highlight-python"><div class="highlight"><pre>% env PERL5LIB=lib/perl PYTHONPATH=lib/python ./bin/grid.wget.unit -page=&quot;http://inca.sdsc.edu&quot;
+&lt;?xml version=&#39;1.0&#39;?&gt;
+&lt;rep:report xmlns:rep=&#39;http://inca.sdsc.edu/dataModel/report_2.1&#39;&gt;
+  &lt;gmt&gt;2010-10-29T22:53:59Z&lt;/gmt&gt;
+  &lt;hostname&gt;client64-139.sdsc.edu&lt;/hostname&gt;
+  &lt;name&gt;grid.wget.unit&lt;/name&gt;
+  &lt;version&gt;7&lt;/version&gt;
+  &lt;workingDir&gt;/tmp/Inca-Reporter-5.12450&lt;/workingDir&gt;
+  &lt;reporterPath&gt;./bin/grid.wget.unit&lt;/reporterPath&gt;
+  &lt;args&gt;
+    &lt;arg&gt;
+      &lt;name&gt;help&lt;/name&gt;
+      &lt;value&gt;no&lt;/value&gt;
+    &lt;/arg&gt;
+    &lt;arg&gt;
+      &lt;name&gt;log&lt;/name&gt;
+      &lt;value&gt;0&lt;/value&gt;
+    &lt;/arg&gt;
+    &lt;arg&gt;
+      &lt;name&gt;page&lt;/name&gt;
+      &lt;value&gt;http://inca.sdsc.edu&lt;/value&gt;
+    &lt;/arg&gt;
+    &lt;arg&gt;
+      &lt;name&gt;verbose&lt;/name&gt;
+      &lt;value&gt;1&lt;/value&gt;
+    &lt;/arg&gt;
+    &lt;arg&gt;
+      &lt;name&gt;version&lt;/name&gt;
+      &lt;value&gt;no&lt;/value&gt;
+    &lt;/arg&gt;
+    &lt;arg&gt;
+      &lt;name&gt;wgetArgs&lt;/name&gt;
+      &lt;value&gt;&lt;/value&gt;
+    &lt;/arg&gt;
+  &lt;/args&gt;
+  &lt;body&gt;
+    &lt;unitTest&gt;
+      &lt;ID&gt;wget&lt;/ID&gt;
+    &lt;/unitTest&gt;
+  &lt;/body&gt;
+  &lt;exitStatus&gt;
+    &lt;completed&gt;true&lt;/completed&gt;
+  &lt;/exitStatus&gt;
+&lt;/rep:report&gt;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>% env PERL5LIB=lib/perl PYTHONPATH=lib/python ./bin/cluster.uptime.performance
+&lt;?xml version=&#39;1.0&#39;?&gt;
+&lt;rep:report xmlns:rep=&#39;http://inca.sdsc.edu/dataModel/report_2.1&#39;&gt;
+ &lt;gmt&gt;2010-10-29T22:55:33Z&lt;/gmt&gt;
+ &lt;hostname&gt;client64-139.sdsc.edu&lt;/hostname&gt;
+ &lt;name&gt;cluster.uptime.performance&lt;/name&gt;
+ &lt;version&gt;1&lt;/version&gt;
+ &lt;workingDir&gt;/private/tmp/Inca-Reporter-5.12450&lt;/workingDir&gt;
+ &lt;reporterPath&gt;./bin/cluster.uptime.performance&lt;/reporterPath&gt;
+ &lt;args&gt;
+  &lt;arg&gt;
+    &lt;name&gt;help&lt;/name&gt;
+    &lt;value&gt;no&lt;/value&gt;
+  &lt;/arg&gt;
+  &lt;arg&gt;
+    &lt;name&gt;log&lt;/name&gt;
+    &lt;value&gt;0&lt;/value&gt;
+  &lt;/arg&gt;
+  &lt;arg&gt;
+    &lt;name&gt;verbose&lt;/name&gt;
+    &lt;value&gt;1&lt;/value&gt;
+  &lt;/arg&gt;
+  &lt;arg&gt;
+    &lt;name&gt;version&lt;/name&gt;
+    &lt;value&gt;no&lt;/value&gt;
+  &lt;/arg&gt;
+ &lt;/args&gt;
+ &lt;body&gt;
+  &lt;performance&gt;
+    &lt;ID&gt;load average&lt;/ID&gt;
+    &lt;benchmark&gt;
+      &lt;ID&gt;load average&lt;/ID&gt;
+      &lt;statistics&gt;
+        &lt;statistic&gt;
+          &lt;ID&gt;fifteen minute&lt;/ID&gt;
+          &lt;value&gt;0.30&lt;/value&gt;
+          &lt;units&gt;fraction&lt;/units&gt;
+        &lt;/statistic&gt;
+        &lt;statistic&gt;
+          &lt;ID&gt;five minute&lt;/ID&gt;
+          &lt;value&gt;0.30&lt;/value&gt;
+          &lt;units&gt;fraction&lt;/units&gt;
+        &lt;/statistic&gt;
+        &lt;statistic&gt;
+          &lt;ID&gt;one minute&lt;/ID&gt;
+          &lt;value&gt;0.30&lt;/value&gt;
+          &lt;units&gt;fraction&lt;/units&gt;
+        &lt;/statistic&gt;
+      &lt;/statistics&gt;
+    &lt;/benchmark&gt;
+  &lt;/performance&gt;
+ &lt;/body&gt;
+ &lt;exitStatus&gt;
+  &lt;completed&gt;true&lt;/completed&gt;
+ &lt;/exitStatus&gt;
+&lt;/rep:report&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-an-api">
+<h4><a class="toc-backref" href="#id14">Using an API</a><a class="headerlink" href="#using-an-api" title="Permalink to this headline">¶</a></h4>
+<p>Inca accepts any type of data that can be expressed as an XML document
+with a size limit of 12,000 chars.?The Inca reporter APIs provide will
+help you print out XML and wrap it within the Inca schema. There are
+also a number of convenience APIs for writing specific types of
+reporters. The advantage of using one of these APIs is that the Web
+status pages already know how to display the data (e.g., in graphs).</p>
+<p>Links to the API documentation are below:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://inca.sdsc.edu/releases/2.5/repdocs/perl.html">Perl API</a></li>
+<li><a class="reference external" href="http://inca.sdsc.edu/releases/2.5/repdocs/python.html">Python
+API</a></li>
+</ul>
+<p>Please see the Reporter section of the Inca user guide as well.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://inca.sdsc.edu/releases/2.5/guide/userguide-reporters.html">Inca User
+Guide</a></li>
+</ul>
+<p>Often the easiest way to get started is to find a reporter similar to
+the one you want to write, copy it, and then modify it. &nbsp;Some common
+reporter types are shown below.</p>
+<div class="section" id="performance-reporter">
+<h5><a class="toc-backref" href="#id15">Performance Reporter</a><a class="headerlink" href="#performance-reporter" title="Permalink to this headline">¶</a></h5>
+<p>If you wanted to report some simple performance numbers, you will want
+to use the Performance schema in either
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/Inca/Reporter/Performance.html">Perl</a>
+or
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/inca.PerformanceReporter.PerformanceReporter-class.html">Python</a>.
+You might copy the grid.wget.performance reporter written using the
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/Inca/Reporter/Performance.html">Inca::Reporter::Performance</a>
+Perl API and shown below. &nbsp;Then modify the command and change the
+benchmark name and parameters. &nbsp;You might also consider using the short
+form of the XML body output if you are concerned about running into the
+12000 char limit.</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/usr/bin/env perl
+use strict;
+use warnings;
+use Inca::Reporter::Performance;
+# create reporter object and parse args
+my $reporter = new Inca::Reporter::Performance(
+name =&gt; &#39;grid.wget.performance&#39;,
+version =&gt; 7,
+description =&gt; &#39;Reports the bandwidth reported by wget&#39;,
+url =&gt; &#39;http://inca.ucsd.edu&#39;,
+measurement_name =&gt; &#39;wget&#39;
+);
+$reporter-&gt;addArg(&#39;page&#39;, &#39;web page url to download&#39;, &#39;http://cnn.com/index.html&#39;);
+$reporter-&gt;addArg(&#39;wgetArgs&#39;, &#39;wget arguments (e.g. --no-check-certificate)&#39;, );
+$reporter-&gt;processArgv(@ARGV); my $page = $reporter-&gt;argValue(&#39;page&#39;);
+my $args = $reporter-&gt;argValue(&#39;wgetArgs&#39;);
+# run command and parse data
+my $wgetCmd = &quot;wget $args -O /dev/null $page&quot;;
+my $output = $reporter-&gt;loggedCommand($wgetCmd);
+if($? || ($output !~ /([\d.]+) \wB\/s/)) {
+my $err = &quot;wget command failed: $output $!&quot;;
+$err =~ s/--\d{2}:\d{2}:\d{2}--/--xx:xx:xx--/g;
+$reporter-&gt;setResult(0, $err);
+} else {
+# format data in XML
+my $benchmark = $reporter-&gt;addNewBenchmark(&#39;download&#39;);
+$benchmark-&gt;setParameter(&#39;page&#39;, $page);
+my ($pre, $unit) = $output =~ /([\d.]+) (.B\/s)/;
+$benchmark-&gt;setStatistic(&#39;bandwidth&#39;, $1, $unit);
+$reporter-&gt;setResult(1);
+}
+$reporter-&gt;print();
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-reporter">
+<h5><a class="toc-backref" href="#id16">Test Reporter</a><a class="headerlink" href="#test-reporter" title="Permalink to this headline">¶</a></h5>
+<p>If you need a more elaborate test than what the
+<a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=user.search.output.unit">user.search.output.unit</a>
+reporter provides, you will want to utilize the SimpleTest schema in
+either
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/Inca/Reporter/SimpleUnit.html">Perl</a>
+or
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/inca.SimpleUnitReporter.SimpleUnitReporter-class.html">Python</a>.
+You might copy over the
+reporter?<a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=data.access.postgres.unit.connect">data.access.postgres.unit.connect</a>,
+change the arguments, command, and log messages. &nbsp;Note, to get the log
+messages to print you must run the reporter with &#8216;-log=3&#8217; or higher.</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Inca::Reporter::SimpleUnit;
+
+my $BACKOFF_SECS = 30;
+my $reporter = new Inca::Reporter::SimpleUnit(
+  name =&gt; &#39;data.access.postgres.unit.connect&#39;,
+  description =&gt; &#39;Tries to connect to postgres server and list databases&#39;,
+  version =&gt; 8,
+  unit_name =&gt; &#39;postgres connect&#39;
+);
+$reporter-&gt;addArg(&#39;exec&#39;, &#39;postgres user account&#39;, &#39;psql&#39;);
+$reporter-&gt;addArg(&#39;user&#39;, &#39;postgres user account&#39;, &#39;&#39;);
+$reporter-&gt;addArg(&#39;numTries&#39;, &#39;number of connect attempts before giving up&#39;, 5);
+$reporter-&gt;processArgv(@ARGV);
+my $user = $reporter-&gt;argValue( &#39;user&#39; );
+$user = &quot;-U $user&quot; if $user ne &#39;&#39;;
+my $psql = $reporter-&gt;argValue( &#39;exec&#39; );
+my $numTries = $reporter-&gt;argValue( &#39;numTries&#39; );
+
+my $success = 0;
+my @output;
+my $i;
+for( $i = 0; $i &lt; $numTries &amp;&amp; ! $success; $i++ ) {
+  sleep( $BACKOFF_SECS * $i ) if $? != 0;
+  @output = $reporter-&gt;loggedCommand(&quot;$psql $user -l&quot;);
+  $success = 1 if $?
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reporter-failprintandexit-psql-user-l-failed-after-i-tries-output-if-if-grep-list-of-databases-output-reporter-unitfailure-failed-to-list-databases-output-else-shift-output-shift-output-shift-output-trim-off-header-3-lines-my-dbnames-map-s-s-output-reporter-log-info-databases-found-join-dbnames-reporter-unitsuccess-reporter-print">
+<h3><a class="toc-backref" href="#id17">0; } $reporter-&gt;failPrintAndExit( &#8220;$psql $user -l failed after $i tries: &#64;output $!&#8221; ) if $?; if(&nbsp;! grep(/List of databases/, &#64;output) ) { $reporter-&gt;unitFailure( &#8220;Failed to list databases: &#64;output&#8221; ); } else { shift &#64;output; shift &#64;output; shift &#64;output; # trim off header (3 lines) my &#64;dbnames = map( /^\s+(\S+)/, &#64;output ); $reporter-&gt;log( &#8216;info&#8217;, &#8220;databases found: &#8221; . join(&#8221;, &#8221;, &#64;dbnames) ); $reporter-&gt;unitSuccess(); } $reporter-&gt;print();</a><a class="headerlink" href="#reporter-failprintandexit-psql-user-l-failed-after-i-tries-output-if-if-grep-list-of-databases-output-reporter-unitfailure-failed-to-list-databases-output-else-shift-output-shift-output-shift-output-trim-off-header-3-lines-my-dbnames-map-s-s-output-reporter-log-info-databases-found-join-dbnames-reporter-unitsuccess-reporter-print" title="Permalink to this headline">¶</a></h3>
+<p>If you wanted to ensure the version of a software component is
+consistent across all machines, you will want to use the Version schema
+in either
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/Inca/Reporter/Version.html">Perl</a>
+or
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/inca.VersionReporter-module.html">Python</a>.
+There are a number of convenience methods for fetching the version such
+as&nbsp;setVersionByCompiledProgramOutput, setVersionByExecutable, or
+setVersionByFileContents. The below reporter prints out the version of
+Perl on a system.</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Inca::Reporter::Version;
+
+my $reporter = new Inca::Reporter::Version(
+  name =&gt; &#39;cluster.lang.perl.version&#39;,
+  version =&gt; 2,
+  description =&gt; &#39;Reports the version of perl&#39;,
+  url =&gt; &#39;http://cpan.org&#39;,
+  package_name =&gt; &#39;perl&#39;
+);
+$reporter-&gt;processArgv(@ARGV);
+
+$reporter-&gt;setVersionByExecutable(&#39;perl -v&#39;, &#39;perl, v([\d\w\.\-]+)&#39;);
+$reporter-&gt;print();
+</pre></div>
+</div>
+<p>If the data you want to collect from an active measurement does not
+match any of the above categories, consider developing your own schema
+in either
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/Inca/Reporter.html">Perl</a>
+or
+<a class="reference external" href="http://inca.sdsc.edu/releases/2.6/repdocs/inca.Reporter-module.html">Python</a>. For an example of a reporter that uses just the base Reporter class,
+please see the
+<a class="reference external" href="http://inca.futuregrid.org/repository/cgi-bin/reporters.cgi?action=help&amp;reporter=cluster.admin.topcpu">cluster.admin.topcpu</a>
+reporter.</p>
+<div class="highlight-python"><div class="highlight"><pre>#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Inca::Reporter;
+
+my $reporter = new Inca::Reporter(
+  name =&gt; &#39;cluster.admin.topcpu&#39;,
+  version =&gt; 3,
+  description =&gt; &#39;Reports top non-root CPU % process&#39;,
+  url =&gt; &#39;http://inca.sdsc.edu&#39;
+);
+$reporter-&gt;processArgv(@ARGV);
+
+my $output = $reporter-&gt;loggedCommand(&#39;ps waux&#39;);
+$reporter-&gt;failPrintAndExit(&quot;ps waux failed: $output $!&quot;) if $?;
+my $highestCpu = 0;
+my $highestLine;
+foreach my $line(split(/\n/, $output)) {
+  next if $line =~ /%|^root/; # Skip header and root procs
+  my @columns = split(/\s+/, $line);
+  my $cpu = $columns[2];
+  next if $cpu &lt; $highestCpu;
+  $highestCpu = $cpu;
+  $highestLine = $line;
+}
+$reporter-&gt;failPrintAndExit(&#39;No non-root process found&#39;)
+  if !defined($highestLine);
+my @columns = split(/\s+/, $highestLine);
+$reporter-&gt;setBody(
+  $reporter-&gt;xmlElement(&#39;topcpu&#39;, 0,
+    $reporter-&gt;xmlElement(&#39;ID&#39;, 1, &#39;topcpu&#39;),
+    $reporter-&gt;xmlElement(&#39;user&#39;, 1, $columns[0]),
+    $reporter-&gt;xmlElement(&#39;pid&#39;, 1, $columns[1]),
+    $reporter-&gt;xmlElement(&#39;cpu&#39;, 1, $columns[2]),
+    $reporter-&gt;xmlElement(&#39;command&#39;, 1, $columns[$#columns]),
+  )
+);
+$reporter-&gt;setResult(1);
+$reporter-&gt;print();
+</pre></div>
+</div>
+<div class="section" id="commit-new-reporter">
+<h4><a class="toc-backref" href="#id18">Commit New Reporter</a><a class="headerlink" href="#commit-new-reporter" title="Permalink to this headline">¶</a></h4>
+<p>Once you have written a new reporter as described in the previous
+section, commit it the FutureGrid SVN directory at:
+<a class="reference external" href="https://futuregrid.svn.sourceforge.net/svnroot/futuregrid/core/trunk/src/performance/benchmarking/framework/inca/bin">https://futuregrid.svn.sourceforge.net/svnroot/futuregrid/core/trunk/src/performance/benchmarking/framework/inca/bin</a></p>
+<p>Then email Shava Smallen &lt;<a class="reference external" href="mailto:ssmallen&#37;&#52;&#48;sdsc&#46;edu">ssmallen<span>&#64;</span>sdsc<span>&#46;</span>edu</a>&gt; and specify the name of
+the reporter, the resources where you want it deployed, the argument
+values, and execution frequency.</p>
+<p>If you are making a change to an existing reporter, email
+<a class="reference external" href="mailto:ssmallen&#37;&#52;&#48;sdsc&#46;edu">ssmallen<span>&#64;</span>sdsc<span>&#46;</span>edu</a> and specify the name of the reporter. ?More automated
+methods for doing this will come later.</p>
+</div>
+</div>
+<div class="section" id="view-data">
+<h3><a class="toc-backref" href="#id19">View Data</a><a class="headerlink" href="#view-data" title="Permalink to this headline">¶</a></h3>
+<p>Once your reporter is deployed, you can view the results on the Inca
+status pages at:
+<a class="reference external" href="http://inca.futuregrid.org/">http://inca.futuregrid.org</a></p>
+<p>The first page shows the Google Map view overview.?Click on the
+&#8220;CURRENT DATA&#8221; page and depending on the type of reporter you deployed,
+your results will be under either the Functionality or Performance menu
+as below:</p>
+<a class="reference external image-reference" href="https://wiki.futuregrid.org/index.php"><img alt="_images/IncaConsumerMenuCurrent.png" src="_images/IncaConsumerMenuCurrent.png" /></a>
+<p>Your result will show either as pass/fail or as a version under either
+Services, Cluster or Cloud, version as below:</p>
+<a class="reference external image-reference" href="https://wiki.futuregrid.org/index.php"><img alt="_images/IncaConsumerFunctionality.png" src="_images/IncaConsumerFunctionality.png" /></a>
+<p>Or display performance statistics as below:</p>
+<a class="reference external image-reference" href="https://wiki.futuregrid.org/index.php"><img alt="_images/IncaConsumerPerformance.png" src="_images/IncaConsumerPerformance.png" /></a>
+<p>Click on your test result in the table to show the full details of the
+reporter execution and to view the history. ?For more information about
+the Inca status pages, please see the Data Display section of the Inca
+User
+Guide: <a class="reference external" href="http://inca.sdsc.edu/releases/2.6/guide/userguide-consumer.html">http://inca.sdsc.edu/releases/2.6/guide/userguide-consumer.html</a></p>
+</div>
+</div>
+<div class="section" id="references">
+<h2><a class="toc-backref" href="#id20">References</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://inca.sdsc.edu/">Inca Home Page</a></p>
 </div>
 </div>
 

@@ -68,7 +68,7 @@ Tutorial Topic 2: Cloud Run-time Map/Reduce Platforms
 
 -  `Running Hadoop as a batch job using
    MyHadoop <hadoop.html>`_ [novice]
--  :ref:`Running SalsaHadoop (one-click Hadoop) on HPC environment <s-salsa-hadoop-hpc>` [beginner]
+-  `Running SalsaHadoop (one-click Hadoop) on HPC environment <xsalsahadoopfuturegridhpc.html>`_ [beginner]
 -  :ref:`Running Twister on HPC
    environment <s-twister-on-hpc>` [beginner]
 -  :ref:`Running SalsaHadoop on
@@ -109,7 +109,8 @@ Tutorial Topic 4: High Performance Computing
 --------------------------------------------
 
 -  :ref:`Basic High Performance Computing <s-hpc>` [novice]
--  :ref:`Running Hadoop as a batch job using MyHadoop <s-hadoop>' [novice]
+-  `Running Hadoop as a batch job using
+   MyHadoop <hadoop.html>`_ [novice]
 -  :ref:`Performance Analysis with Vampir <s-vampir>`
    [advanced]
 -  :ref:`Instrumentation and tracing with VampirTrace <s-vampirtrace>` [advanced]
@@ -117,7 +118,7 @@ Tutorial Topic 4: High Performance Computing
 Tutorial Topic 5: Experiment Management
 ---------------------------------------
 
--  :ref:`Running interactive experiments <s-experiment-interactive>' [novice]
+-  `Running interactive experiments <experiment-interactive.html>' [novice]
 -  :portal:`Running workflow experiments using
    Pegasus <tutorials/workflow-experiment-management>` [novice]
 -  `Pegasus on FutureGrid <pegasus.html>`__ [novice]
@@ -146,8 +147,8 @@ Tutorial Topic 7:  Storage
 Other Tutorials and Educational Materials
 -----------------------------------------
 
--  :portal:`Additional tutorials on FutureGrid-related
-   technologies <additional_tutorials>`
+-  :ref:`Additional tutorials on FutureGrid-related
+   technologies <s-additional>`
 -  `More tutorials are available <tutorials_2.html>`__
 -  :ref:`FutureGrid community educational
    materials <s-community-edu-materials>`

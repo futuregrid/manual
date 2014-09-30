@@ -648,7 +648,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites:</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#hands-on-tutorial">13.4.2. <strong>Hands-on Tutorial</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#reference-material">13.4.3. <strong>Reference Material:</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#authors">13.4.4. <strong>Authors:</strong></a></li>
@@ -1261,7 +1261,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ga1.html">13.4. GA1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites:</strong>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ga1.html#prerequisites">13.4.1. <strong>Prerequisites</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#hands-on-tutorial">13.4.2. <strong>Hands-on Tutorial</strong>:</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#reference-material">13.4.3. <strong>Reference Material:</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="ga1.html#authors">13.4.4. <strong>Authors:</strong></a></li>
@@ -1346,18 +1346,16 @@
       
   <div class="section" id="building-an-educational-appliance-from-ubuntu-10-04">
 <span id="s-ga3"></span><h1>Building an Educational Appliance from Ubuntu 10.04<a class="headerlink" href="#building-an-educational-appliance-from-ubuntu-10-04" title="Permalink to this headline">¶</a></h1>
-<p>This is a short tutorial describing how to build an educational virtual cluster appliance starting from an Ubuntu 10.04 image. A more detailed description is given at?<a class="reference external" href="http://www.grid-appliance.org/wiki/index.php/TestingGridAppliance">Testing Grid
+<p>This is a short tutorial describing how to build an educational virtual cluster appliance starting from an Ubuntu 10.04 image. A more detailed description is given at <a class="reference external" href="http://www.grid-appliance.org/wiki/index.php/TestingGridAppliance">Testing Grid
 Appliance</a>.</p>
 <ol class="arabic">
-<li><p class="first">Deploy an Ubuntu 10.04 appliance locally. You can download an Ubuntu
-9.10 VMware appliance?<a class="reference external" href="http://vmplanet.net/node/105">here</a>, or
-create an instance on FutureGrid of an Ubuntu 10.04 VM.</p>
-<blockquote>
-<div><p>?</p>
-</div></blockquote>
+<li><dl class="first docutils">
+<dt>Deploy an Ubuntu 10.04 appliance locally. You can download an Ubuntu 9.10 VMware appliance` here &lt;<a class="reference external" href="http://vmplanet.net/node/105">http://vmplanet.net/node/105</a>&gt;`__, or create an instance on FutureGrid of an Ubuntu 10.04 VM.</dt>
+<dd><p class="first last">?</p>
+</dd>
+</dl>
 </li>
-<li><p class="first">Sudo to?root?and install the grid-appliance baseline package as
-follows:</p>
+<li><p class="first">Sudo to root and install the grid-appliance baseline package as follows:</p>
 <ol class="arabic simple">
 <li>apt-get install wget</li>
 <li>echo &#8220;deb?http://www.grid-appliance.org/files/packages/deb/?lucid
@@ -1368,26 +1366,21 @@ contrib&#8221; &gt;&gt; /etc/apt/sources.list</li>
 <li>apt-get install grid-appliance-base</li>
 </ol>
 </li>
-<li><p class="first">To configure the appliance to connect to a GroupVPN, use one of the
-following two options:</p>
+<li><p class="first">To configure the appliance to connect to a GroupVPN, use one of the following two options:</p>
 <ol class="arabic simple">
-<li>To use a default GroupVPN and connect to a public pool hosted at
-UF, simply install the package?apt-get-install
+<li>To use a default GroupVPN and connect to a public pool hosted at UF, simply install the package?apt-get-install
 grid-appliance-public-pool.</li>
 <li>To use our defined Group:<ol class="arabic">
 <li>Create a GroupVPN and GroupAppliance
-at?<a class="reference external" href="http://grid-appliance.org/">http://grid-appliance.org</a>?.
-For an example, see?<a class="reference external" href="http://www.grid-appliance.org/index.php?option=com_content&amp;view=article&amp;id=79&amp;Itemid=76">Deploying independent appliance
-pools</a>.</li>
-<li>In the GroupAppliance interface, download and extract the
-floppy configuration file for a client (floppy.img) and place
+at?`http://grid-appliance.org &lt;<a class="reference external" href="http://grid-appliance.org/">http://grid-appliance.org/</a>&gt;`__. For an example, see <a class="reference external" href="http://www.grid-appliance.org/index.php?option=com_content&amp;view=article&amp;id=79&amp;Itemid=76">Deploying independent appliance pools</a>.</li>
+<li>In the GroupAppliance interface, download and extract the floppy configuration file for a client (floppy.img) and place
 it in/opt/grid_appliance/etc/floppy.img .</li>
-<li>/etc/init.d/grid_appliance.sh restart?</li>
+<li>/etc/init.d/grid_appliance.sh restart</li>
 </ol>
 </li>
 </ol>
 </li>
-<li><p class="first">Within a few seconds, your appliance should obtain a virtual IP address on the virtual network interface?tapipop.?Once it does, wait a few seconds and type?condor_status?to check the status of other nodes in the pool; you may need to retry a couple of times until connected.</p>
+<li><p class="first">Within a few seconds, your appliance should obtain a virtual IP address on the virtual network interface tapipop. Once it does, wait a few seconds and type?condor_status to check the status of other nodes in the pool; you may need to retry a couple of times until connected.</p>
 </li>
 </ol>
 </div>

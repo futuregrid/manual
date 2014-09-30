@@ -66,7 +66,7 @@ visualization tools like Vampir to operate efficiently at large scale.
 The format addresses large applications written in an arbitrary
 combination of Fortran77, Fortran (90/95/etc.), C, and C++.
 
-|image30|
+.. image: images/otf_0.png
 
 **Representation of Streams by Multiple Files**
 
@@ -182,25 +182,25 @@ Running a VampirTrace instrumented application should normally result in
 an OTF trace file in the current working directory where the application
 was executed. On Linux, Mac OS, and Sun Solaris, the default name of the
 trace file will be equal to the application name. For other systems, the
-default name is \ *a.otf* but can be defined manually by setting the
-environment variable VT\_FILE\_PREFIX to the desired name. After a run
+default name is�*a.otf*�but can be defined manually by setting the
+environment variable VT_FILE_PREFIX to the desired name. After a run
 of an instrumented application, the traces of the single processes need
 to be unified in terms of timestamps and event IDs. In most cases, this
 happens automatically. If it is necessary to perform unification of
 local traces manually, use the following command:
 
-    ::
+::
 
-        vtunify <nproc>
+  vtunify <nproc>
 
 If VampirTrace was built with support for OpenMP and/or MPI, it is
 possible to speed up the unification of local traces significantly. To
 distribute the unification on multiple processes, the MPI parallel
 version vtunify-mpi can be used as follows:
 
-    ::
+::
 
-        mpirun -np <nranks> vtunify-mpi <nproc>
+   mpirun -np <nranks> vtunify-mpi <nproc>
 
 **Starting Vampir and Loading a Trace File**
 --------------------------------------------
@@ -213,16 +213,16 @@ that can be processed by the tool. All file types can be displayed by
 using "All Files (\*)". Alternatively, on Windows, a command-line
 invocation is possible:
 
-    ::
+::
 
-        C:\Program Files\Vampir\Vampir.exe [trace file]
+   C:\Program Files\Vampir\Vampir.exe [trace file]
 
 To open multiple trace files at once, you can take them one after
 another as command-line arguments:
 
-    ::
+::
 
-        C:\Program Files\Vampir\Vampir.exe [file 1]...[file n]
+    C:\Program Files\Vampir\Vampir.exe [file 1]...[file n]
 
 It is also possible to start the application by double-clicking on an
 \*.otf file (if Vampir was associated with \*.otf files during the
@@ -231,7 +231,7 @@ with the Open Trace Format (OTF) standard. Microsoft HPC Server 2008 is
 shipped with the translator program etl2otf.exe, which produces
 appropriate input files.
 
-|image31|
+.. image: images/open_file.png
 
 **Loading a Trace Log File in Vampir**
 
@@ -245,27 +245,25 @@ show only the earliest information from the tracefile. For huge
 tracefiles with performance problems assumed to be at the beginning,
 this proceeding is a suitable strategy to save time.
 
-|image32|
+.. image: images/cancel_loading_resize.png
 
 **Progress Bar and Cancel Loading Button**
 
 Basic functionality and navigation elements are described
-in \ `Basics <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics>`__.
+in�\ `Basics <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Basics>`__.
 The available charts and the information provided by them are explained
-in \ `Performance\_Data\_Visualization <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Data_Visualization>`__.
+in�\ `Performance\_Data\_Visualization <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Data_Visualization>`__.
 
- 
 
- 
 
 **Basics**
 ==========
 
-After loading has been completed, the \ *Trace View* window title
-displays the trace file's name. By default, the \ *Charts* toolbar and
-the \ *Zoom Toolbar* are available.
+After loading has been completed, the \ *Trace View*�window title
+displays the trace file's name. By default, the�\ *Charts*�toolbar and
+the�\ *Zoom Toolbar*�are available.
 
-|image33|
+.. image: images/Startup.png
 
 **Trace View Window with Charts Toolbar (A) and Zoom Toolbar (B)**
 
@@ -288,7 +286,7 @@ Vampir GUI which are generic to all charts.
 The utility of charts can be increased by correlating them and their
 provided information. Vampir supports this mode of operation by allowing
 you to display multiple charts at the same time. Charts that display a
-sequence of events such as the \ *Master Timeline* and the \ *Process
+sequence of events such as the \ *Master Timeline*�and the�\ *Process
 Timeline*\ chart are aligned vertically. This alignment ensures that the
 temporal relationship of events is preserved across chart boundaries.
 The user can arrange the placement of the charts according to his
@@ -302,37 +300,37 @@ flexible display architecture also allows increasing or decreasing the
 screen space that is used by a chart. Charts of particular interest may
 get more space in order to render information in more detail.
 
-|image34|
+.. image: images/Display_arranging_a.png
 
 **Moving and Arranging Charts in the Trace View Window**
 
-|image35|
+.. image: images/Display_arranging_b.png
 
 **Moving and Arranging Charts in the Trace View Window**
 
-|image36|
+.. image: images/Custom_arrangement.png
 
 **A Custom Chart Arrangement in the Trace View Window**
 
-|image37|
+.. image: images/close_display.png
 
 **Closing (right) and Undocking (left) a Chart**
 
-The \ *Trace View* window can host an arbitrary number of charts. Charts
-can be added by clicking on the respective \ *Charts* toolbar icon or
-the corresponding \ *Chart* menu entry. With a few more clicks, charts
+The�\ *Trace View* window can host an arbitrary number of charts. Charts
+can be added by clicking on the respective�\ *Charts*�toolbar icon or
+the corresponding�\ *Chart*�menu entry. With a few more clicks, charts
 can be combined to a custom chart arrangement. Customized layouts can be
-saved as described in \ `Saving
+saved as described in�\ `Saving
 Policy <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Saving_Policy>`__.
 Every chart can be undocked or closed by clicking the dedicated icon in
 its upper right corner. Undocking a chart means to free the chart from
 the current arrangement and present it in its own window.
 
-|image38|
+.. image: images/Undocking_1.png
 
 **Undocking of a Chart**
 
-|image39|
+.. image: images/Undocking_2.png
 
 **Docking a Chart**
 
@@ -345,7 +343,7 @@ blank space between labels and graphical representation, a moveable
 separator appears. After clicking a separator decoration, moving the
 mouse while holding the left mouse button causes resizing.
 
-|image40|
+.. image: images/Resize_labels.png
 
 **Resizing Labels: (A) Hover over a Separator Decoration; (B) Drag and
 Drop the Separator**
@@ -362,7 +360,7 @@ accessed by right clicking in the display window. Common entries are:
 -  **Reset Vertical Zoom:** Go back to the initial state in vertical
    zooming.
 -  **Set Metric:** Change values which should be represented in the
-   chart, e.g. *Exclusive Time* to *Inclusive Time*.
+   chart, e.g.�*Exclusive Time*�to�*Inclusive Time*.
 -  **Sort By:**\ Rearrange values or bars by a certain characteristic.
 
 **Zooming**
@@ -372,31 +370,31 @@ Zooming is a key feature of Vampir. In most charts it is possible to
 zoom in and out to get abstract and detailed views of the visualized
 data. In the timeline charts, zooming produces a more detailed view of a
 special time interval and therefore reveals new information that could
-not be seen in the larger section. Short function calls in the \ *Master
-Timeline* may not be visible unless an appropriate zooming level has
+not be seen in the larger section. Short function calls in the�\ *Master
+Timeline*�may not be visible unless an appropriate zooming level has
 been reached. If the execution time of these short functions is too
 short regarding the pixel resolution of your computer display, the
 selection of a shorter time interval is required. Note: Other charts can
 be affected when zooming in timeline displays: The interval chosen in a
-timeline chart such as \ *Master Timeline* or *Process Timeline* also
+timeline chart such as \ *Master Timeline*�or�*Process Timeline*�also
 defines the time interval for the calculation of accumulated
 measurements in the statistical charts. Statistical charts like
-the \ *Function Summary* provide zooming of statistic values. In these
+the \ *Function Summary*�provide zooming of statistic values. In these
 cases zooming does not affect any other chart. Zooming is disabled in
-the \ *Pie Chart* mode of the \ *Function Summary* reachable via context
-menu under \ *Set Chart Mode->Pie Chart*.
+the \ *Pie Chart*�mode of the \ *Function Summary*�reachable via context
+menu under�\ *Set Chart Mode->Pie Chart*.
 
-|image41|
+.. image: images/Zooming.png
 
 **Zooming within a Chart**
 
 To zoom into an area, click and hold the left mouse button and select
 the area. It is possible to zoom horizontally and in some charts also
-vertically. Horizontal zooming in the \ *Master Timeline* defines the
+vertically. Horizontal zooming in the \ *Master Timeline*�defines the
 time interval to be visualized whereas vertical zooming selects a group
 of processes to be displayed. To scroll horizontally move the slider at
 the bottom or use the mouse wheel. Additionally, the zoom can be
-accessed with help of the \ *Zoom Toolbar* by dragging the borders of
+accessed with help of the \ *Zoom Toolbar*�by dragging the borders of
 the selection rectangle or scrolling down the mouse wheel. To return to
 the previous zooming state, the global "Undo" is provided that in the
 "Edit" menu; alternatively, press "Ctrl+Z" to revert to the last zoom.
@@ -405,30 +403,30 @@ Accordingly, a zooming action can be repeated by selecting "Redo" in the
 independently of the current mouse position. Next to "Undo" and "Redo"
 it is shown which kind of action in which display could be undone and
 redone, respectively. To get back to the initial state of zooming in a
-fast way select \ *Reset Horizontal Zoom* or *Reset Vertical Zoom* in
+fast way select�\ *Reset Horizontal Zoom*�or�*Reset Vertical Zoom*�in
 the context menu of the desired timeline display. To reset zoom is also
 an action that can be reverted by "Undo".
 
 **The Zoom Toolbar**
 --------------------
 
-Vampir provides a \ *Zoom Toolbar* that can be used for zooming and
+Vampir provides a�\ *Zoom Toolbar* that can be used for zooming and
 navigation in the trace data. It is situated in the upper right corner
-of the *Trace View* window. Of course it is possible to drag and drop it
-as desired. The \ *Zoom Toolbar* offers an overview of the data
+of the *Trace View*�window. Of course it is possible to drag and drop it
+as desired. The \ *Zoom Toolbar*�offers an overview of the data
 displayed in the corresponding charts. The current zoomed area can be
 seen highlighted as a rectangle within the \ *Zoom Toolbar*. Clicking on
 one of the two boundaries and moving it (with left mouse button held) to
 the intended position executes horizontal zooming in all charts.
 **Note**: Instead of dragging boundaries, it is also possible to use
-the mouse wheel for zooming. Hover over the \ *Zoom Toolbar* and scroll
+the mouse wheel for zooming. Hover over the \ *Zoom Toolbar*�and scroll
 up to zoom in and scroll down to zoom out. Dragging the zoom area
 changes the section that is displayed without changing the zoom factor.
 For dragging, click in the highlighted zoom area and drag and drop it to
-the desired region. If the user double clicks in the \ *Zoom Toolbar*,
+the desired region. If the user double clicks in the�\ *Zoom Toolbar*,
 the initial zooming state is reverted to.
 
-|image42|
+.. image: images/Zoom_toolbar.png
 
 **Zooming and Navigation within the Zoom Toolbar: (A+B) Zooming in/out
 with Mouse Wheel; (C) Scrolling by Moving the Highlighted Zoom Area; (D)
@@ -436,20 +434,20 @@ Zooming by Selecting and Moving a Boundary of the Highlighted Zoom
 Area**
 
 The colors represent user-defined groups of functions or activities.
-Please note that all charts added to the \ *Trace View* window will
+Please note that all charts added to the�\ *Trace View*�window will
 adapt their statistics information according to this time interval
-selection. The \ *Zoom Toolbar* can be disabled and enabled with the
-toolbar's context menu entry \ *Zoom Toolbar*.
+selection. The�\ *Zoom Toolbar* can be disabled and enabled with the
+toolbar's context menu entry�\ *Zoom Toolbar*.
 
 **The Charts Toolbar**
 ----------------------
 
-Use the \ *Charts* toolbar to open instances of the different charts. It
+Use the�\ *Charts*�toolbar to open instances of the different charts. It
 is situated in the upper left corner of the main window by default. Of
 course, it is also possible to drag and drop it as desired.
-The \ *Charts* toolbar can be disabled with the toolbar's context menu
-entry \ *Charts*. The table below shows the different icons representing
-the charts in \ *Charts* toolbar. The icons are arranged in three
+The�\ *Charts*�toolbar can be disabled with the toolbar's context menu
+entry�\ *Charts*. The table below shows the different icons representing
+the charts in�\ *Charts*�toolbar. The icons are arranged in three
 groups, divided by a small separator. The first group represents
 timeline charts, whose zooming states affect all other charts. The
 second group consists of statistical charts, providing special
@@ -466,84 +464,84 @@ Name
 
 Description
 
-|image43|
+.. image: images/icon_master_tl.png
 
 Master Timeline
 
 `Master
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
 
-|image44|
+.. image: images/icon_process_tl.png
 
 Process Timeline
 
 `Process
 Timeline <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Master_Timeline_and_Process_Timeline>`__
 
-|image45|
+.. image: images/icon_counter_tl.png
 
 Counter Data Timeline
 
 `Counter
 Data <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Counter_Data_Timeline>`__
 
-|image46|
+.. image: images/icon_radar.png
 
 Performance Radar
 
 `Performance
 Radar <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Performance_Radar>`__
 
-|image47|
+.. image: images/icon_function_summ.png
 
 Function Summary
 
 `Function
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Summary>`__
 
-|image48|
+.. image: images/icon_message_summ.png
 
 Message Summary
 
 `Message
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Message_Summary>`__
 
-|image49|
+.. image: images/icon_process_summ.png
 
 Process Summary
 
 `Process
 Summary <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Process_Summary>`__
 
-|image50|
+.. image: images/icon_matrix.png
 
 Communication Matrix View
 
 `Communication Matrix
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Communication_Matrix_View>`__
 
-|image51|
+.. image: images/icon_calltree.png
 
 Call Tree
 
 `Call
 Tree <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Call_Tree>`__
 
-|image52|
+.. image: images/icon_legend.png
 
 Function Legend
 
 `Function
 Legend <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Function_Legend>`__
 
-|image53|
+.. image: images/icon_context.png
 
 Context View
 
 `Context
 View <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir#Context_View>`__
 
-|image54|
+.. image: images/icon_marker.png
 
 Marker View
 
@@ -593,17 +591,17 @@ before the left mouse key, Vampir will proceed with zooming.
 In the Master and Process Timelines, detailed information about
 functions, communication, and synchronization events is shown. Timeline
 charts are available for individual processes (*Process Timeline*) as
-well as for a collection of processes (*Master Timeline*). The \ *Master
-Timeline* consists of a collection of rows. Each row represents a single
-process, as shown in the figure below. A \ *Process Timeline* shows the
+well as for a collection of processes (*Master Timeline*). The�\ *Master
+Timeline*�consists of a collection of rows. Each row represents a single
+process, as shown in the figure below. A�\ *Process Timeline*�shows the
 different levels of function calls in a stacked bar chart for a single
 process, as depicted in the second figure.
 
-|image55|
+.. image: images/Master_timeline.png
 
 **Master Timeline**
 
-|image56|
+.. image: images/Process_timeline.png
 
 **Process Timeline**
 
@@ -612,15 +610,15 @@ sequence of function calls or program phases on the right. The color of
 a function is defined by its group membership; e.g., MPI\_Send()
 belonging to the function group MPI has the same color, presumably red,
 as MPI\_Recv(), which also belongs to the function group MPI. Clicking
-on a function highlights it and causes the \ *Context View* display to
+on a function highlights it and causes the�\ *Context View*�display to
 show detailed information about that particular function, e.g., its
 corresponding function group name, time interval, and the complete name.
-The \ *Context View* display is explained in its own section below. Some
+The�\ *Context View*�display is explained in its own section below. Some
 function invocations are very short, and will not show up in the overall
 view because of a lack of display pixels. A zooming mechanism is
 provided to inspect a specific time interval in more detail. If zooming
 is performed, panning in a horizontal direction is possible with the
-scroll bar at the bottom. The \ *Process Timeline* resembles
+scroll bar at the bottom. The�\ *Process Timeline*�resembles
 the \ *Master Timeline*\ with slight differences. The chart's timeline
 is divided into levels, which represent the different call stack levels
 of function calls. The initial function begins at the first level, a
@@ -628,7 +626,7 @@ sub-function called by that function is located a level beneath, and so
 forth. If a sub-function returns to its caller, the graphical
 representation also returns to the level above. In addition to the
 display of categorized function invocations, Vampir's
-*Master* and *Process Timeline* also provide information about
+*Master*�and�*Process Timeline*�also provide information about
 communication events. Messages exchanged between two different processes
 are depicted as black lines. In timeline charts, the progress in time is
 reproduced from left to right. The leftmost starting point of a message
@@ -640,7 +638,7 @@ MPI\_Recv(). It is also possible to show a collective communication like
 MPI\_Allreduce() by selecting one corresponding message as shown in the
 figure.
 
-|image57|
+.. image: images/collectives.png
 
 **Selected MPI Collective in Master Timeline**
 
@@ -648,7 +646,7 @@ Additional information like message bursts, markers, and I/O events is
 also available. The table shows the symbols and descriptions of these
 objects.
 
- 
+
 
 **Additional Information in Master and Process Timeline**
 
@@ -658,7 +656,7 @@ objects.
 
 Message Burst
 
-|image58|
+.. image: images/burst.png
 
 Because of a lack of pixels it is not possible to display a large number
 of messages in a very short interval. Therefore, these messages are
@@ -667,9 +665,9 @@ reveals the corresponding single messages.
 
 Markers
 
-|image59|\ multiple
+.. image: images/marker-multiple.png\ multiple
 
-|image60|\ single
+.. image: images/marker-template.png\ single
 
 To indicate particular points (like errors or warnings) during the
 runtime of an application, markers can be used in a tracefile. They are
@@ -679,11 +677,11 @@ multiple marker is drawn.
 
 I/O Events
 
-|image61|\ multiple
+.. image: images/io-multiple.png\ multiple
 
-|image62|\ single
+.. image: images/io-single.png\ single
 
-|image63|\ single, selected
+.. image: images/io-single-selected.png\ single, selected
 
 Vampir shows detailed information about I/O operations, if they are
 included in the tracefile. I/O events are depicted as triangles at the
@@ -692,11 +690,11 @@ occupy a line to the end of the interval. To see the whole interval of a
 single I/O event, the triangle has to be selected. In that case, a
 second triangle at the end of the interval appears.
 
-Since the \ *Process Timeline* reveals information of one process only,
+Since the�\ *Process Timeline*�reveals information of one process only,
 short black arrows are used to indicate outgoing communication. Clicking
 on message lines or arrows shows message details like sender process,
 receiver process, message length, message duration, and message tag in
-the \ *Context View* display.
+the�\ *Context View*�display.
 
 **Counter Data Timeline**
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -710,15 +708,15 @@ an iterative approximation of the final result. Counters are defined
 during the instrumentation of the application and can be individually
 assigned to processes.
 
-|image64|
+.. image: images/Counter_data_timeline.png
 
 **Counter Data Timeline**
 
 The chart is restricted to one counter at a time. It shows the selected
-counter for one process. Using multiple instances of the \ *Counter Data
+counter for one process. Using multiple instances of the�\ *Counter Data
 Timeline,* counters or processes can be compared easily. The context
-menu entry \ *Set Counter* allows you to choose the displayed counter
-directly from a drop-down list. The entry \ *Set Process* selects the
+menu entry�\ *Set Counter*�allows you to choose the displayed counter
+directly from a drop-down list. The entry�\ *Set Process*�selects the
 particular process for which the counter is shown.
 
 **Performance Radar**
@@ -726,26 +724,26 @@ particular process for which the counter is shown.
 
 The Performance Radar chart provides the search of function occurrences
 in the trace file and the extended visualization of counters. It can
-happen that a function is not shown in \ *Master* and *Process
-Timeline* due to a short runtime. An alternative to zooming is the
-option \ *Find Function...*. A color-coded timeline indicates the
+happen that a function is not shown in�\ *Master*�and�*Process
+Timeline*�due to a short runtime. An alternative to zooming is the
+option�\ *Find Function...*. A color-coded timeline indicates the
 intervals in which the function is executed.
 
-|image65|
+.. image: images/performance_radar_find_function.png
 
 **Performance Radar Timeline - Search of Functions**
 
 By default, the Performance Radar shows the values of one counter for
 each process (thread). In this mode the user can choose between *Line
-Plot* and *Color Coded* drawing. In the latter case, a color scale on
+Plot*�and�*Color Coded*�drawing. In the latter case, a color scale on
 the bottom provides information about the range of values. Clicking
-on \ *Set Counter...* leads to a dialog that offers the option of
+on \ *Set Counter...*�leads to a dialog that offers the option of
 choosing another counter and calculating the sum or average values.
 Summarizing means that the values of the selected counter of all
 processes are summed up. The average is this sum divided by the number
 of processes. Both options provide a single graph.
 
-|image66|
+.. image: images/performance_radar_set_counter.png
 
 **Performance Radar Timeline - Visualization of Counters**
 
@@ -760,13 +758,13 @@ functions in a tree representation. The display reveals information
 about the number of invocations of a given function, the time spent in
 the different calls, and the caller-callee relationship.
 
-|image67|
+.. image: images/Call_tree.png
 
 **Call Tree**
 
-The entries of the \ *Call Tree* can be sorted in various ways. Simply
+The entries of the�\ *Call Tree*�can be sorted in various ways. Simply
 click on one header of the tree representation to use its characteristic
-to resort the \ *Call Tree*. Please note that not all available
+to resort the�\ *Call Tree*. Please note that not all available
 characteristics are enabled by default. To add or remove
 characteristics, a context menu is accessible by right-clicking on any
 of the tree headers. To leaf through the different function calls, it is
@@ -777,15 +775,15 @@ functions, which is hardly obvious in the tree representation.
 Therefore, a relation view shows all callers and callees of the
 currently selected function in two separated lists, as shown in the
 lower area. To find a certain function by its name, Vampir provides a
-search option accessible with the context menu entry \ *Show Find View*.
+search option accessible with the context menu entry�\ *Show Find View*.
 The entered keyword has to be confirmed by pressing the Return key.
-The \ *Previous* and *Next* buttons can be used to flip through the
+The�\ *Previous*�and�*Next*�buttons can be used to flip through the
 results afterwards.
 
 **Function Summary**
 ~~~~~~~~~~~~~~~~~~~~
 
-The \ *Function Summary* chart gives an overview of the accumulated time
+The�\ *Function Summary*�chart gives an overview of the accumulated time
 consumption across all function groups and functions. For example every
 time a process calls the MPI\_Send() function, the elapsed time of that
 function is added to the MPI function group time. The chart gives a
@@ -793,41 +791,41 @@ condensed view on the execution of the application and a comparison
 between the different function groups can be made so that dominant
 function groups can be distinguished easily.
 
-|image68|
+.. image: images/Function_summary.png
 
 **Function Summary**
 
 It is possible to change the information displayed via the context menu
-entry \ *Set Metric*, which offers values like \ *Average Exclusive
-Time*, *Number of Invocations*, \ *Accumulated Inclusive Time* and
-others. Note: \ *Inclusive* means the amount of time spent in a function
-and all of its subroutines. *Exclusive* means the amount of time just
-spent in this function. The context menu entry \ *Set Event
-Category* specifies whether either function groups or functions should
+entry�\ *Set Metric*, which offers values like�\ *Average Exclusive
+Time*, *Number of Invocations*,�\ *Accumulated Inclusive Time*�and
+others. Note:�\ *Inclusive*�means the amount of time spent in a function
+and all of its subroutines.�*Exclusive*�means the amount of time just
+spent in this function. The context menu entry�\ *Set Event
+Category*�specifies whether either function groups or functions should
 be displayed in the chart. The functions own the color of their function
 group. It is possible to hide functions and function groups from the
-displayed information with the context menu entry \ *Filter*. To mark
+displayed information with the context menu entry�\ *Filter*. To mark
 the function or function group to be filtered, click the associated
-label or color representation in the chart. Using the \ *Process
-Filter* allows you to restrict this view to a set of processes. As a
+label or color representation in the chart. Using the�\ *Process
+Filter*�allows you to restrict this view to a set of processes. As a
 result, only the consumed time of these processes is displayed for each
 function group or function. Instead of using the filter (which affects
 all other displays by hiding processes), it is possible to select a
-single process via \ *Set Process* in the context menu of the *Function
+single process via�\ *Set Process*�in the context menu of the *Function
 Summary*. This does not have any effect on other timeline displays.
-The \ *Function Summary* can be shown as a \ *Histogram* (a bar chart,
-as in timeline charts) or as a \ *Pie Chart*. To switch between these
-representations, use the \ *Set Chart Mode* entry of the context menu.
+The�\ *Function Summary*�can be shown as a�\ *Histogram*�(a bar chart,
+as in timeline charts) or as a�\ *Pie Chart*. To switch between these
+representations, use the�\ *Set Chart Mode*�entry of the context menu.
 The shown functions or function groups can be sorted by name or value
-via the context menu option \ *Sort By*.
+via the context menu option�\ *Sort By*.
 
 **Process Summary**
 ~~~~~~~~~~~~~~~~~~~
 
-The \ *Process Summary* is similar to the \ *Function Summary* but shows
+The�\ *Process Summary*�is similar to the�\ *Function Summary*�but shows
 the information for every process independently.
 
-|image69|
+.. image: images/Process_summary.png
 
 **Process Summary**
 
@@ -835,55 +833,55 @@ This is useful for analyzing the balance between processes to reveal
 bottlenecks. For instance, finding that one process spends a
 significantly high time performing the calculations could indicate an
 unbalanced distribution of work that can slow down the entire
-application. The context menu entry \ *Set Event Category* specifies
+application. The context menu entry�\ *Set Event Category*�specifies
 whether either function groups or functions should be displayed in the
 chart. The functions own the color of their function group. The chart
-can calculate the analysis based on \ *Exclusive Time* or *Inclusive
+can calculate the analysis based on \ *Exclusive Time*�or�*Inclusive
 Time*. To change between these two modes, use the context menu
-entry \ *Set Metric*. It is possible to hide functions and function
+entry�\ *Set Metric*. It is possible to hide functions and function
 groups from the displayed information with the context menu
-entry \ *Filter*. To mark the function or function group to be filtered,
+entry�\ *Filter*. To mark the function or function group to be filtered,
 click on the associated color representation in the chart. Using
-the \ *Process Filter* allows you to restrict this view to a set of
+the�\ *Process Filter*�allows you to restrict this view to a set of
 processes.
 
 **Message Summary**
 ~~~~~~~~~~~~~~~~~~~
 
-The \ *Message Summary* is a statistical chart showing an overview of
+The�\ *Message Summary*�is a statistical chart showing an overview of
 the different messages grouped by certain characteristics.
 
-|image70|
+.. image: images/Messagesummary.png
 
-**Message Summary Chart with metric set to \ *Message Transfer
-Rate* showing the average transfer rate (A), and the minimal/maximal
-transfer rate (B)**
+**Message Summary Chart with metric set to�\ *Message Transfer
+Rate*�showing the average transfer rate�(A), and the minimal/maximal
+transfer rate�(B)**
 
 All values are represented in a bar chart fashion. The number next to
 each bar is the group base, while the number inside a bar depicts the
-different values depending on the chosen metric. Therefore, the \ *Set
-Metric* sub-menu of the context menu can be used to switch between
-*Aggregated Message Volume*, \ *Message Size*, \ *Number of Messages*,
+different values depending on the chosen metric. Therefore, the�\ *Set
+Metric*�sub-menu of the context menu can be used to switch between
+*Aggregated Message Volume*,�\ *Message Size*,�\ *Number of Messages*,
 and \ *Message Transfer Rate*. The group base can be changed via the
-context menu entry \ *Group By*. It is possible to choose
-between \ *Message Size*, \ *Message Tag*, and \ *Communicator (MPI)*.
+context menu entry�\ *Group By*. It is possible to choose
+between \ *Message Size*,�\ *Message Tag*, and�\ *Communicator (MPI)*.
 
 **Note**: There will be one bar for every occurring group. However,
-if metric is set to \ *Message Transfer Rate*, the minimal and the
+if metric is set to�\ *Message Transfer Rate*, the minimal and the
 maximal transfer rate is given in an additional bar beneath the one
 showing the average transfer rate. The additional bar starts at the
 minimal rate and ends at the maximal one. To filter out messages, click
 on the associated label or color representation in the chart and
-choose \ *Filter* from the context menu afterwards.
+choose \ *Filter*�from the context menu afterwards.
 
 **Communication Matrix View**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The \ *Communication Matrix View* is another way of analyzing
+The \ *Communication Matrix View*�is another way of analyzing
 communication imbalances. It shows information about messages sent
 between processes.
 
-|image71|
+.. image: images/Communication_matrix_view.png
 
 **Communication Matrix View**
 
@@ -894,8 +892,8 @@ information, the color legend changes. It is possible to change the type
 of displayed values. Different metrics like the average duration of
 messages passed from sender to recipient or minimum and maximum
 bandwidth are offered. To change the type of value that is displayed,
-use the context menu option \ *Set Metric*. Use the \ *Process
-Filter* to define which processes/groups should be displayed.
+use the context menu option�\ *Set Metric*. Use the�\ *Process
+Filter*�to define which processes/groups should be displayed.
 
 **Note**: A high duration is not automatically caused by a slow
 communication path between two processes, but can also be due to the
@@ -911,30 +909,30 @@ divided by the duration, to decrease accordingly.
 **Function Legend**
 -------------------
 
-The \ *Function Legend* lists all visible function groups of the loaded
+The�\ *Function Legend*�lists all visible function groups of the loaded
 trace file along with its corresponding color.
 
-|image72|
+.. image: images/Function_legend.png
 
 **Function Legend**
 
 If colors of functions are changed, they appear in a tree-like fashion
 under their respective function group as well.
 
-|image73|
+.. image: images/Marker_view.png
 
 **A chosen marker (A) and its representation in the Marker View (B)**
 
 The display is given in a tree-like fashion and organizes the marker
 events in their respective groups and types. Additional information,
 like the time of occurrence in the trace file and its description, is
-provided for each marker. By clicking on a marker event in the \ *Marker
+provided for each marker. By clicking on a marker event in the�\ *Marker
 View*, this event gets selected in the timeline displays that are
 currently open, and vice-versa. If this marker event is not visible, the
 zooming area jumps to this event automatically. It is possible to select
 markers and types. Then all events belonging to that marker or type get
-selected in the \ *Master Timeline* and the \ *Process Timeline*.
-If \ *Ctrl* or *Shift* is pressed, the user can highlight several
+selected in the�\ *Master Timeline*�and the�\ *Process Timeline*.
+If�\ *Ctrl*�or�*Shift*�is pressed, the user can highlight several
 events. In this case, the user can fit the borders of the zooming area
 in the timeline charts to the timestamps of the two marker events that
 were chosen at last.
@@ -942,25 +940,25 @@ were chosen at last.
 **Context View**
 ~~~~~~~~~~~~~~~~
 
-|image74|
+.. image: images/Context_view.png
 
 **Context View, showing context information (B) of a selected function
 (A)**
 
-As implied by its name, the \ *Context View* provides more detailed
+As implied by its name, the \ *Context View*�provides more detailed
 information of a selected object compared to its graphical
 representation. An object, e.g., a function, function group, message, or
 message burst, can be selected directly in a chart by clicking its
 graphical representation. For different types of objects, different
-context information is provided by the \ *Context View*. For example,
+context information is provided by the�\ *Context View*. For example,
 the object-specific information for functions holds properties
-like \ *Interval Begin*, \ *Interval End*, and \ *Duration*.
-The \ *Context View* may contain several tabs, and a new empty one can
-be added by clicking on the \ *add*-symbol on the right hand side. If an
+like�\ *Interval Begin*,�\ *Interval End*, and�\ *Duration*.
+The�\ *Context View*�may contain several tabs, and a new empty one can
+be added by clicking on the�\ *add*-symbol on the right hand side. If an
 object in another chart is selected, its information is displayed in the
-current tab. If the \ *Context View* is closed, it opens automatically
-in that moment. The \ *Context View* offers a comparison between the
-information that is displayed in different tabs. Just use the \ *=* on
+current tab. If the�\ *Context View*�is closed, it opens automatically
+in that moment. The�\ *Context View*�offers a comparison between the
+information that is displayed in different tabs. Just use the�\ *=*�on
 the left hand side and choose two objects in the emerged dialog. It is
 possible to compare different elements from different charts, which can
 be useful in some cases. The comparison shows a list of common
@@ -968,7 +966,7 @@ properties. The corresponding values are displayed, along with their
 difference if the values are numbers. The first line always shows the
 names of the displays.
 
-|image75|
+.. image: images/context_compare.png
 
 **Comparison between Context Information**
 
@@ -988,25 +986,25 @@ also the *Zoom Toolbar. The different filters can be reached via
 the *\ Filter *entry in the main menu.*
 
 The example below shows a typical process representation in
-the \ *Process Filter* window. This kind of representation is equal to
-all other filters. Processes can be filtered by their \ *Process
-Group*, \ *Communicators* and *Process Hierarchy*. Items to be filtered
+the \ *Process Filter*�window. This kind of representation is equal to
+all other filters. Processes can be filtered by their�\ *Process
+Group*,�\ *Communicators*�and�*Process Hierarchy*. Items to be filtered
 are arranged in a spreadsheet representation. In addition to selecting
 or deselecting an entire group of processes, it is certainly possible to
 filter single processes.
 
-|image76|
+.. image: images/process_filter.png
 
 **Process Filter**
 
 Different selection methods can be used in a filter. The check
-box \ *Include/Exclude All* either selects or deselects every item.
+box \ *Include/Exclude All*�either selects or deselects every item.
 Specific items can be selected/deselected by clicking the check box next
 to it. Furthermore, it is possible to select/deselect multiple items at
 once; mark the desired entries by clicking their names while holding
-either the \ *Shift* or the \ *Ctrl* key. By holding the \ *Shift* key
+either the�\ *Shift*�or the \ *Ctrl*�key. By holding the�\ *Shift*�key
 every item in between the two clicked items will be marked. Holding
-the \ *Ctrl* key, on the other hand, enables you to add or remove
+the \ *Ctrl*�key, on the other hand, enables you to add or remove
 specific items from/to the marked ones. Clicking the check box of one of
 the marked entries will cause selection/deselection for all of them.
 
@@ -1045,19 +1043,19 @@ The appearance of the trace file and various other application settings
 can be altered in the preferences accessible via the main menu entry
 *File->Preferences*. Settings concerning the trace file itself, e.g.,
 layout or function group colors, are saved individually next to the
-tracefile in a file, whose end is \ *.vsettings*. In this way, it is
+tracefile in a file, whose end is�\ *.vsettings*. In this way, it is
 possible to adjust the colors for one trace file without interfering
-with other trace files. The options *Import Preferences* and *Export
-Preferences* provide the loading and saving of preferences of arbitrary
+with other trace files. The options *Import Preferences*�and�*Export
+Preferences*�provide the loading and saving of preferences of arbitrary
 tracefiles.
 
 **General Preferences**
 -----------------------
 
-The \ *General* settings allow you to change application and trace
+The�\ *General*�settings allow you to change application and trace
 specific values.
 
-|image77|
+.. image: images/pref_general.png
 
 **General Settings**
 
@@ -1070,14 +1068,14 @@ respective source file. In order to open a source file, first click on
 the intended function in the \ *Master Timeline* and then on the source
 code path in the \ *Context View*. For the source code location to work
 properly, you need a trace file with source code location support. The
-path of the source file can be adjusted in \ *Preferences*. A limit for
+path of the source file can be adjusted in�\ *Preferences*. A limit for
 the size of the file can be set, too. Finally, the user can decide if he
 wants Vampir to automatically check for new versions.
 
 **Appearance**
 --------------
 
-In the \ *Appearance* settings of the \ *Preferences* dialog, there are
+In the�\ *Appearance*�settings of the�\ *Preferences*�dialog, there are
 six different objects for which the color options can be changed: the
 functions/function groups, markers, counters, collectives, messages and
 I/O events. Choose an entry and click on its color to make a
@@ -1085,7 +1083,7 @@ modification. A color picker dialog opens where it is possible to adjust
 the color. For messages and collectives, a change of the line width is
 also available.
 
-|image78|
+.. image: images/pref_appearance.png
 
 **Appearance Settings**
 
@@ -1096,25 +1094,25 @@ the bottom of the dialog.
 -----------------
 
 Vampir detects whenever changes to the various settings are made. In
-the \ *Saving Policy* dialog it is possible to adjust the saving
+the�\ *Saving Policy*�dialog it is possible to adjust the saving
 behavior of the different components to your own needs.
 
- 
+�
 
 **Saving Policy Settings**
 
-| In the dialog \ *Saving Behavior* you tell Vampir what to do in the
+| In the dialog�\ *Saving Behavior*�you tell Vampir what to do in the
 case of changed preferences. The user can choose the categories of
 settings (e.g., layout) that should be treated. Possible options are
-that the application automatically \ *Always* or *Never* saves changes.
+that the application automatically�\ *Always*�or�*Never*�saves changes.
 The default option is to have Vampir asking you whether to save or
 discard changes. Usually the settings are stored in the folder of the
 tracefile. If the user has no access to it, it is possible to place them
-in the \ *Application Data Folder*. They are listed in the
-tab \ *Locally Stored Preferences* with creation and modification date.
+in the�\ *Application Data Folder*. They are listed in the
+tab�\ *Locally Stored Preferences*�with creation and modification date.
 | 
-**Note**: On loading, Vampir favors settings in the \ *Application
-Data Folder*. *Default Preferences* offers to save preferences of the
+**Note**: On loading, Vampir favors settings in the�\ *Application
+Data Folder*.�*Default Preferences*�offers to save preferences of the
 current trace file as default settings, where they are then used for
 tracefiles without settings. Another option is to restore the default
 settings; in this case, the current preferences of the tracefile are
@@ -1126,13 +1124,13 @@ reverted.
 Additional links that might be of interest to the reader:
 
 ...
-(OTF) `http://www.tu-dresden.de/zih/otf <http://www.tu-dresden.de/zih/otf>`__
+(OTF)�`http://www.tu-dresden.de/zih/otf <http://www.tu-dresden.de/zih/otf>`__
 
 ...
-WindowsHPC \ `http://resourcekit.windowshpc.net/MORE\_INFO/TracingMPIApplications.html <http://resourcekit.windowshpc.net/MORE_INFO/TracingMPIApplications.html>`__
+WindowsHPC�\ `http://resourcekit.windowshpc.net/MORE\_INFO/TracingMPIApplications.html <http://resourcekit.windowshpc.net/MORE_INFO/TracingMPIApplications.html>`__
 
 ...
-Manual \ `http://www.tu-dresden.de/zih/vampirtrace <http://www.tu-dresden.de/zih/vampirtrace>`__
+Manual�\ `http://www.tu-dresden.de/zih/vampirtrace <http://www.tu-dresden.de/zih/vampirtrace>`__
 
 Retrieved from
 "`https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir <https://wiki.futuregrid.org/index.php/Docs/Performance/Vampir>`__\ "
@@ -1143,7 +1141,6 @@ Retrieved from
 VampirTrace
 ===========
 
-�
 
 VampirTrace consists of a tool set and a runtime library for
 instrumentation and tracing of software applications. It is particularly
@@ -1317,26 +1314,26 @@ MPI instrumentation is always handled by means of the PMPI interface,
 which is part of the MPI standard. This requires the compiler wrapper to
 link with an MPI-aware version of the VampirTrace library. If your MPI
 implementation uses special MPI compilers (e.g. mpicc, mpxlf90), you
-will need to tell VampirTrace’s wrapper to use this compiler instead of
+will need to tell VampirTrace's wrapper to use this compiler instead of
 the serial one:
 
- 
+::
 
-original:             mpicc hello.c -o hello           
+   original:             mpicc hello.c -o        hello
 
-with instrumentation: **vtcc -vt:cc mpicc** hello.c -o hello
+   with instrumentation: **vtcc -vt:cc mpicc** hello.c -o hello
 
- 
 
 MPI implementations without their own compilers require the user to link
 the MPI library manually. In this case, simply replace the compiler by
-VampirTrace’s compiler wrapper:
+VampirTrace's compiler wrapper:
 
-original:             icc hello.c -o hello –lmpi
+::
 
-with instrumentation: **vtcc** hello.c -o hello -lmpi
+   original:             icc hello.c -o hello –lmpi
 
- 
+   with instrumentation: **vtcc** hello.c -o hello -lmpi
+
 
 If you want to instrument MPI events only (this creates smaller trace
 files and less overhead), use the option *-vt:inst manual* to disable
@@ -1348,16 +1345,15 @@ When VampirTrace detects OpenMP or Pthread flags on the command line,
 special instrumentation calls are invoked. For OpenMP events, OPARI is
 invoked for automatic source code instrumentation.
 
- 
+::
 
-original:             ifort <-openmp\|-pthread> hello.f90 -o hello
+    original:             ifort <-openmp\|-pthread> hello.f90 -o hello
 
-with instrumentation: **vtf90** <-openmp\|-pthread> hello.f90 -o hello
+    with instrumentation: **vtf90** <-openmp\|-pthread> hello.f90 -o hello
 
- 
 
 For more information about OPARI, read the documentation available in
-VampirTrace’s installation directory at:
+VampirTrace's installation directory at:
 `share/vampirtrace/doc/opari/Readme.html <http://share/vampirtrace/doc/opari/Readme.html%20>`__
 
 -  Hybrid MPI/Threaded parallel programs
@@ -1365,13 +1361,12 @@ VampirTrace’s installation directory at:
 With a combination of the above mentioned approaches, hybrid
 applications can be instrumented:
 
-original:             mpif90 <-openmp\|-pthread> hello.F90 -o
-hello             
+::
 
-with instrumentation: **vtf90 -vt:f90 mpif90** <-openmp\|-pthread>
-hello.F90 -o hello
+   original:             mpif90 <-openmp\|-pthread> hello.F90 -o hello             
 
- 
+    with instrumentation: **vtf90 -vt:f90 mpif90** <-openmp\|-pthread> hello.F90 -o hello
+
 
 The VampirTrace compiler wrappers automatically try to detect which
 parallelization method is used by means of the compiler flags (e.g.,
@@ -1396,16 +1391,12 @@ programs only.
 
 **Instrumentation Types**
 
- 
-
 The wrapper option *-vt:inst <insttype>* specifies the instrumentation
 type to be used. The following values for *<insttype>* are possible:
 
 -  compinst
 
 Fully-automatic instrumentation by the compiler
-
- 
 
 -  manual
 
@@ -1414,13 +1405,14 @@ modifications)
 
 **Automatic Instrumentation**
 
- 
 
 Automatic instrumentation is the most convenient method to instrument
 your program. If available, simply use the compiler wrappers without any
 parameters, e.g.:
 
-vtf90 hello.f90 -o hello
+::
+
+   vtf90 hello.f90 -o hello
 
 **Notes for Using the GNU or Intel Compiler**
 
@@ -1436,7 +1428,9 @@ Should any problems emerge to get symbol information automatically, then
 the environment variable VT GNU NMFILE can be set to a symbol list file,
 which is created with the command nm, like:
 
-nm hello > hello.nm
+::
+
+   nm hello > hello.nm
 
 To get the source code line for the application functions use nm -l (on
 Linux systems). VampirTrace will include this information in the trace.
@@ -1453,7 +1447,9 @@ can prevent these particular functions from being instrumented by
 appending the following attribute to function declarations, hence making
 them able to be inlined (this works only for C/C++):
 
-\_\_attribute\_\_ ((\_\_no\_instrument\_function\_\_))
+:: 
+
+   \_\_attribute\_\_ ((\_\_no\_instrument\_function\_\_))
 
 The PGI and IBM compilers prefer inlining over instrumentation when
 compiling with enabled inlining. Thus, one needs to disable inlining to
@@ -1463,7 +1459,7 @@ The bottom line is that a function cannot be inlined and instrumented at
 the same time. Note that you can also use the option *-vt:inst manual*
 with non-instrumented sources. Binaries created in this manner only
 contain MPI and OpenMP instrumentation, which might be desirable in some
-cases. For more on how to inline functions, read your compiler’s manual.
+cases. For more on how to inline functions, read your compiler's manual.
 
 **Manual Instrumentation**
 
@@ -1474,21 +1470,19 @@ user-defined sequence of statements.
 
 Fortran
 
- 
+::
 
-#include "vt\_user.inc"
+  #include "vt\_user.inc"
 
-VT\_USER\_START(’name’)
+  VT\_USER\_START(’name’)
 
-...
+  ...
 
-VT\_USER\_END(’name’)
+  VT\_USER\_END(’name’)
 
- 
 
 C
 
- 
 
 #include "vt\_user.h"
 
@@ -1507,15 +1501,17 @@ detected automatically when C++ deletes scope-local variables.
 
 C++
 
-#include "vt\_user.h"
+::
 
-{
+  #include "vt\_user.h"
 
-    VT\_TRACER("name");
+  {
 
-    ...
+� VT\_TRACER("name");
 
-}
+� ...
+
+  }
 
 The instrumented sources have to be compiled with -DVTRACE for all three
 languages; otherwise the VT \* calls are ignored. Note that Fortran
@@ -1524,20 +1520,23 @@ source files instrumented this way have to be preprocessed, too.
 In addition, you can combine this particular instrumentation type with
 all other types. In such a way, all user functions can be instrumented
 by a compiler while special source code regions (e.g., loops) can be
-instrumented by VT’s API.
+instrumented by VT's API.
 
-Use VT’s compiler wrapper (described above) for compiling and linking
+Use VT's compiler wrapper (described above) for compiling and linking
 the instrumented source code, such as:
 
 -  combined with automatic compiler instrumentation:
 
-vtcc **-DVTRACE** hello.c -o hello
+:: 
 
- 
+   vtcc **-DVTRACE** hello.c -o hello
+
 
 -  without compiler instrumentation:
 
-vtcc -vt:inst manual **-DVTRACE** hello.c -o hello
+::
+
+   vtcc -vt:inst manual **-DVTRACE** hello.c -o hello
 
 Note that you can also use the option -vt:inst manual with
 non-instrumented sources. Binaries created in this manner only contain
@@ -1596,7 +1595,7 @@ must also be compiled with -DVTRACE\_NO\_CONTROL.
 **Tracing Calls to 3rd-Party Libraries**
 
 VampirTrace is also capable of tracing calls to third-party libraries
-which come with at least one C header file, even without the library’s
+which come with at least one C header file, even without the library's
 source code. If VampirTrace was built with support for library tracing,
 the tool vtlibwrapgen can be used to generate a wrapper library to
 intercept each call to the actual library functions. This wrapper
@@ -1606,7 +1605,9 @@ library is done using the vtlibwrapgen command and consists of two
 steps. The first step generates a C source file, providing the wrapped
 functions of the library header file:
 
-vtlibwrapgen -g SDL -o SDLwrap.c /usr/include/SDL/\*.h
+::
+
+   vtlibwrapgen -g SDL -o SDLwrap.c /usr/include/SDL/\*.h
 
 This generates the source file *SDLwrap.c* that contains
 wrapper-functions for all library functions found in the header-files
@@ -1623,13 +1624,17 @@ include functions) are allowed.
 
 The second step is to compile the generated source file:
 
-vtlibwrapgen --build --shared -o libSDLwrap SDLwrap.c
+::
+
+  vtlibwrapgen --build --shared -o libSDLwrap SDLwrap.c
 
 This builds the shared library *libSDLwrap.so*, which can be linked to
 the application or preloaded by using the environment variable LD
 PRELOAD:
 
-LD\_PRELOAD=$PWD/libSDLwrap.so <executable>
+::
+
+  LD\_PRELOAD=$PWD/libSDLwrap.so <executable>
 
 **Runtime Measurement**
 
@@ -1681,7 +1686,6 @@ CheatSheet and Doku-PDF)
 
 **Default**
 
- 
 
 Global Settings
 
@@ -1763,11 +1767,11 @@ Level of VampirTrace related information messages: Quiet (0), Critical
 
 1
 
- 
+
 
 Optional Features
 
- 
+
 
 VT\_CPUIDTRACE
 
@@ -1870,11 +1874,9 @@ Minimum buffer fill level for synchronized buffer flush in percent.
 
 80
 
- 
 
 Counters
 
- 
 
 VT\_METRICS
 
@@ -1895,11 +1897,9 @@ Sample interval for recording resource usage counters in ms.
 
 100
 
- 
 
 Filtering, Grouping
 
- 
 
 VT\_DYN\_BLACKLIST
 
@@ -1917,7 +1917,6 @@ VT\_FILTER\_SPEC
 
 Name of function/region filter file.
 
- 
 
 VT\_GROUPS\_SPEC
 
@@ -1943,11 +1942,9 @@ Maximum number of stack level to be traced. (0 = unlimited)
 
 0
 
- 
 
 Demangle, Symbol List
 
- 
 
 VT\_GNU\_DEMANGLE
 
@@ -2027,16 +2024,19 @@ VT\_UNIFY is set to no, and in the case of certain other circumstances,
 it will be necessary to perform unification of local traces manually. To
 do this, use the following command:
 
-vtunify <nproc> <prefix>
+::
+
+  vtunify <nproc> <prefix>
 
 If VampirTrace was built with support for OpenMP and/or MPI, it is
 possible to speedup the unification of local traces significantly. To
 distribute the unificationon multible processes, the MPI parallel
 version vtunify-mpi can be used as follows:
 
-mpirun -np <nranks> vtunify-mpi <nproc> <prefix>
+::
 
- 
+  mpirun -np <nranks> vtunify-mpi <nproc> <prefix>
+
 
 Furthermore, both tools vtunify and vtunify-mpi are capable of opening
 additional OpenMP threads for unification. The number of threads can be
@@ -2124,7 +2124,9 @@ If the PAPI library is used to access hardware performance counters,
 metric names can be any PAPI preset names or PAPI native counter names.
 For example, set
 
-VT\_METRICS=PAPI\_FP\_OPS:PAPI\_L2\_TCM
+:: 
+
+  VT\_METRICS=PAPI\_FP\_OPS:PAPI\_L2\_TCM
 
 to record the number of floating point instructions and level 2 cache
 misses.
@@ -2141,7 +2143,9 @@ enable tracing of specific resource counters by setting the environment
 variable VT\_RUSAGE to a colon-separated list of counter names. For
 example, set
 
-VT\_RUSAGE=ru\_stime:ru\_majflt
+::
+
+  VT\_RUSAGE=ru\_stime:ru\_majflt
 
 to record the system time consumed by each process and the number of
 page faults. Alternatively, one can set this variable to the value all
@@ -2190,11 +2194,11 @@ instrumented sources with -DVTRACE PTHREAD.
 
 C/C++
 
- 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-vtcc **-DVTRACE\_PTHREAD** hello.c -o hello
+  vtcc **-DVTRACE\_PTHREAD** hello.c -o hello
 
 **I/O Calls**
 
@@ -2298,11 +2302,6 @@ write
 
 writev
 
- 
-
- 
-
- 
 
 The gathered information will be saved as I/O event records in the trace
 file. This feature has to be activated for each tracing run by setting
@@ -2315,7 +2314,7 @@ runtime the shared libraries from the glibc version used for linking.
 This is ok as long as the mentioned libraries are available for running
 the application.
 
-If you’d like to experiment with some other I/O library, set the
+If you'd like to experiment with some other I/O library, set the
 environment variable VT\_IOLIB\_PATHNAME to the alternative one. Beware
 that this library must provide all I/O functions mentioned above;
 otherwise VampirTrace will abort.
@@ -2393,29 +2392,28 @@ instrumentation calls can be used to define counter groups and counters:
 
 Fortran
 
- 
+::
 
-#include "vt\_user.inc"
+  #include "vt\_user.inc"
 
-integer :: id, gid
+  integer :: id, gid
 
-VT\_COUNT\_GROUP\_DEF(’name’, gid)
+  VT\_COUNT\_GROUP\_DEF(’name’, gid)
 
-VT\_COUNT\_DEF(’name’, ’unit’, type, gid, id)
+  VT\_COUNT\_DEF(’name’, ’unit’, type, gid, id)
 
- 
 
 C/C++
 
- 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-unsigned int id, gid;
+  unsigned int id, gid;
 
-gid = VT\_COUNT\_GROUP\_DEF("name");
+  gid = VT\_COUNT\_GROUP\_DEF("name");
 
-id = VT\_COUNT\_DEF("name", "unit", type, gid);
+  id = VT\_COUNT\_DEF("name", "unit", type, gid);
 
 The definition of a counter group is optional. If no special counter
 group is desired, the default group "User" can be used. In this case,
@@ -2426,9 +2424,6 @@ corresponding instrumentation call VT\_COUNT \* VAL must be invoked.
 
 **Fortran:**
 
- 
-
- 
 
 **Type**
 
@@ -2563,35 +2558,35 @@ marker is identified by its name and type.
 
 Fortran
 
- 
+::
 
-#include "vt\_user.inc"
+  #include "vt\_user.inc"
 
-integer :: mid
+  integer�:: mid
 
-VT\_MARKER\_DEF(’name’, type, mid)
+  VT\_MARKER\_DEF(’name’, type, mid)
 
-VT\_MARKER(mid, ’text’)
+  VT\_MARKER(mid, ’text’)
 
- 
+
 
 C/C++
 
- 
+::
 
-#include "vt\_user.h"
+  #include "vt\_user.h"
 
-unsigned int mid;
+  unsigned int mid;
 
-mid = VT\_MARKER\_DEF("name",type);
+  mid = VT\_MARKER\_DEF("name",type);
 
-VT\_MARKER(mid, "text");
+  VT\_MARKER(mid, "text");
 
- 
+
 
 Types for Fortran/C/C++
 
- 
+�
 
 VT\_MARKER\_TYPE\_ERROR
 

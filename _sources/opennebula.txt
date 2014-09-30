@@ -1,3 +1,16 @@
+
+.. _s-opennebula:
+
+**********************************************************************
+OpenNebula 2.0 Tutorial
+**********************************************************************
+
+.. sidebar:: Page Contents
+
+   .. contents::
+      :local:
+
+
 OpenNebula 2.0 Tutorial
 =======================
 
@@ -49,7 +62,7 @@ RHEL or CentOS
 
 Be sure that the virtualization features of your machine are enabled in
 the BIOS. If they are, you should be able to load the KVM
-modules        
+modules
 
 ::
 
@@ -82,7 +95,6 @@ command:
 
     kvm -no-acpi -m 512 machine_name.img
 
- 
 
 Contextualize VM
 ----------------
@@ -91,11 +103,9 @@ There are two contextualization mechanisms available in OpenNebula: the
 automatic IP assignment, and a more generic way to give any file and
 configuration parameters. You can use any of them individually, or both.
 Nevertheless, we need to prepare the VM image to use this mechanism
-(`http://www.opennebula.org/documentation:rel2.0:cong <http://www.opennebula.org/documentation:rel2.0:cong>`__).  
+(`http://www.opennebula.org/documentation:rel2.0:cong <http://www.opennebula.org/documentation:rel2.0:cong>`__).
 
- 
-
-First, download the vmcontext.sh  file in your machine. This file depend
+First, download the vmcontext.sh� file in your machine. This file depend
 of your linux distribution.
 
 ::
@@ -251,7 +261,7 @@ file <http://www.opennebula.org/documentation:rel2.0:template>`__
 reference for details on all the sections.
 
 A basic VM template to be run using KVM could be this:
- 
+
 
 ::
 
@@ -285,7 +295,7 @@ A basic VM template to be run using KVM could be this:
 
 In the previous template KVM will asume that the image is RAW. If you
 have a image with the qcow2 format, you have to add the following to the
-DISK description:       
+DISK description: 
 
 ::
 
@@ -412,7 +422,6 @@ The disks can be saved even if they were defined from a local disk file
 template <http://www.opennebula.org/documentation:rel2.0:template>`__
 reference guide for more information on the different kinds of disks).
 
- 
 
 Managing Physical Hosts and Clusters
 ====================================
@@ -509,7 +518,6 @@ And specific information about a host with ``show``:
 
 If you want not to use a given host you can temporarily disable it:
 
- 
 
 .. code:: xterm
 
@@ -518,22 +526,19 @@ If you want not to use a given host you can temporarily disable it:
 A disabled host should be listed with ``STAT off`` by ``onehost list``.
 You can also remove a host permanently with:
 
- 
 
 .. code:: xterm
 
     $ onehost delete host01
 
- 
 
 |:!:| Detailed information of the ``onehost`` utility can be found `in
 the Command Line
 Reference <http://www.opennebula.org/documentation:rel2.0:cli#onehost>`__
 
- 
 
 If you use the ``onecluster list`` command you will see that the
-“default” cluster is created automatically.
+default cluster is created automatically.
 
 .. code:: xterm
 
@@ -554,7 +559,6 @@ containing important services for you business, from the virtual
 machines running a development version of your software. The OpenNebula
 administrator can do so with these commands:
 
- 
 
 .. code:: xterm
 
@@ -577,16 +581,13 @@ From this point, the newly created machines can use this cluster names
 as a `placement
 requirement <http://www.opennebula.org/documentation:rel2.0:template#placement_section>`__:
 
- 
 
 .. code:: xterm
 
     REQUIREMENTS = "CLUSTER = \"testing\""
 
-Once your development cycle is finished, this “testing” and “production”
-clusters may not be useful any more. Let's delete the testing cluster.
+Once your development cycle is finished, this testing� and production clusters may not be useful any more. Let's delete the testing cluster.
 
- 
 
 .. code:: xterm
 
@@ -606,9 +607,7 @@ moved to the “default” one.
 the `Command Line
 Reference <http://www.opennebula.org/documentation:rel2.0:cli#onecluster>`__
 
- 
 
- 
 
 Managing Virtual Networks
 =========================
@@ -635,7 +634,6 @@ There are two types of Virtual Networks in OpenNebula:
 |:!:| Virtual Networks created by ``oneadmin`` can be used by every
 other user.
 
- 
 
 Fixed Virtual Network
 ~~~~~~~~~~~~~~~~~~~~~
@@ -663,7 +661,6 @@ following rule: ``MAC = MAC_PREFFIX:IP``. So, for example, from IP
 10.0.0.1 and MAC\_PREFFIX 00:16, we get 00:16:0a:00:00:01. Defining only
 a MAC address with no associated IP is not allowed.
 
- 
 
 Ranged Virtual Network
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -817,7 +814,7 @@ Obtaining accounting information for host
        admin  00:00:05  00:00:02    1
         hugo  00:00:02 194:25:30    1
 
-  Virtual Resources
+Virtual Resources
 -------------------
 
 Accounting information for Virtual Machines can be obtained for a given
@@ -863,7 +860,7 @@ Obtaining the accounting information for a given user
 
 In this last example columns show aggregated transfer and running times.
 
- 
+
 
 User Management
 ===============
@@ -963,7 +960,6 @@ you can issue this command:
     Enter PEM pass phrase:
     export ONE_AUTH=/home/test/.one/one_ssh
 
- 
 
 Quota
 -----
@@ -1023,4 +1019,4 @@ are as follows:
 
     $ oneauth quota set 1 20 10000000
 
- 
+
