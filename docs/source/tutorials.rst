@@ -147,8 +147,8 @@ Tutorial Topic 7:  Storage
 Other Tutorials and Educational Materials
 -----------------------------------------
 
--  :portal:`Additional tutorials on FutureGrid-related
-   technologies <additional_tutorials>`
+-  :ref:`Additional tutorials on FutureGrid-related
+   technologies <s-additional>`
 -  `More tutorials are available <tutorials_2.html>`__
 -  :ref:`FutureGrid community educational
    materials <s-community-edu-materials>`
