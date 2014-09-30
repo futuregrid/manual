@@ -50,6 +50,20 @@ CloudCom 2010 Tutorials/Screencasts
 
 -  `List of CloudCom 2010 tutorials <http://www.computer.org/portal/web/csmediacenter/cloudcom2010/tutorials>`__
 
+
+.. list-table::
+
+    * - Title
+      - Type
+      - Last Update
+    * - Overview of FutureGrid
+      - .. image:: images/doc_logo-50x46.png
+				:target: https://docs.google.com/presentation/d/1NJuc3uZXVmnfFdOVTMLCbfd3FMxM6Nb1c4yx6aNegEc/edit
+      - 01/15/2011
+	 
+
+that's a start. see how that looks when it is built
+
 +-------------------------+-------------------------+-------------------------+
 | Title                   | Type                    | Last Update             |
 | -----                   | ----                    | -----------             |
