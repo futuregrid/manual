@@ -71,12 +71,14 @@ uploaded images with the nova image-list command::
 
 You will see an output similar to::
 
-       +--------------------------------------+-------------------------+--------+--------+
-       | ID                                   | Name                    | Status | Server |
-       +--------------------------------------+-------------------------+--------+--------+
-       | 18c437e5-d65e-418f-a739-9604cef8ab33 | futuregrid/fedora-18    | ACTIVE |        |
-       | 1a5fd55e-79b9-4dd5-ae9b-ea10ef3156e9 | futuregrid/ubuntu-12.04 | ACTIVE |        |
-       +--------------------------------------+-------------------------+--------+--------+   
+       +--------------------------------------+----------------------------+--------+--------+
+       | ID                                   | Name                       | Status | Server |
+       +--------------------------------------+----------------------------+--------+--------+
+       | 05a7e78f-d105-4c32-84c8-75562f61cfff | futuresystems/centos-7     | ACTIVE |        |
+       | b1bab925-6eaa-4928-bced-47d7607103c8 | futuresystems/fedora-21    | ACTIVE |        |
+       | c2a9788a-89f5-463d-96e5-61e144e05ba6 | futuresystems/ubuntu-12.04 | ACTIVE |        |
+       | 04a6d3aa-026b-4679-bd6b-7fef8a98e4be | futuresystems/ubuntu-14.04 | ACTIVE |        |
+       +--------------------------------------+----------------------------+--------+--------+
 
 .. sidebar :: Hint
 
@@ -187,11 +189,27 @@ command and monitor the Status field in the table::
        | 6291bba7-4810-4344-b92f-ea252565cfaf | <USER>-001  | ACTIVE | None       | Running     | int-net=10.23.0.31                  |
        +--------------------------------------+-------------+--------+------------+-------------+-------------------------------------+
 
-Once it has changed from for example BUILD to ACTIVE, you can log
-in. Pleas use the IP address provided under networks. Note that the
-first address is private and can not be reached from outside sierra::
+Once the Status becomes ACTIVE your instance should be ready.
 
-       $ ssh -l ubuntu -i ~/.ssh/$USER-key 10.35.23.18
+Set up a floating IP address
+----------------------------
+
+Create floating ip address.::
+
+       $ nova floating-ip-create ext-net
+       +-----------------+-------------+----------+---------+
+       | Ip              | Instance Id | Fixed Ip | Pool    |
+       +-----------------+-------------+----------+---------+
+       | 149.165.158.136 | None        | None     | ext-net |
+       +-----------------+-------------+----------+---------+
+
+Attach the floating IP address to your instance.::
+
+       $ nova add-floating-ip $USER-001 149.165.158.136
+
+Now, you should be able to login to your instance with::
+
+       $ ssh ubuntu@149.165.158.136
 
 If you see a warning similar to::
 
